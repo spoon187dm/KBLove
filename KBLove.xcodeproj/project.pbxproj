@@ -14,6 +14,7 @@
 		BC2174C94598908500F457C5 /* BoundPersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2174C04598908500F457C5 /* BoundPersonInfoController.m */; };
 		BC2174CA4598908500F457C5 /* BoundPetInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2174C24598908500F457C5 /* BoundPetInfoController.m */; };
 		BC2174CB4598908500F457C5 /* HeaderImageSelecterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2174C44598908500F457C5 /* HeaderImageSelecterController.m */; };
+		BCA8AC9119E9227D000CA3DC /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA8AC8D19E9227D000CA3DC /* RegisterViewController.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
 		F91A0C8D19E7880C009ADB44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8C19E7880C009ADB44 /* CoreGraphics.framework */; };
 		F91A0C8F19E7880C009ADB44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8E19E7880C009ADB44 /* UIKit.framework */; };
@@ -230,6 +231,9 @@
 		BC2174C24598908500F457C5 /* BoundPetInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundPetInfoController.m; sourceTree = "<group>"; };
 		BC2174C34598908500F457C5 /* HeaderImageSelecterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderImageSelecterController.h; sourceTree = "<group>"; };
 		BC2174C44598908500F457C5 /* HeaderImageSelecterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderImageSelecterController.m; sourceTree = "<group>"; };
+		BCA8AC8C19E9227D000CA3DC /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		BCA8AC8D19E9227D000CA3DC /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		BCA8AC8E19E9227D000CA3DC /* DxConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DxConnection.h; path = "KBLove/Classes/引导界面/DxConnection.h"; sourceTree = SOURCE_ROOT; };
 		F91A0C8719E7880C009ADB44 /* KBLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91A0C8A19E7880C009ADB44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F91A0C8C19E7880C009ADB44 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -530,6 +534,32 @@
 			);
 			name = "绑定信息";
 			sourceTree = "<group>";
+		};
+		BCA8AC8B19E9227D000CA3DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCA8AC8C19E9227D000CA3DC /* RegisterViewController.h */,
+				BCA8AC8D19E9227D000CA3DC /* RegisterViewController.m */,
+			);
+			name = Controllers;
+			path = "KBLove/Classes/引导界面/Controllers";
+			sourceTree = SOURCE_ROOT;
+		};
+		BCA8AC8F19E9227D000CA3DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "KBLove/Classes/引导界面/Model";
+			sourceTree = SOURCE_ROOT;
+		};
+		BCA8AC9019E9227D000CA3DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = "KBLove/Classes/引导界面/View";
+			sourceTree = SOURCE_ROOT;
 		};
 		F91A0C7E19E7880C009ADB44 = {
 			isa = PBXGroup;
@@ -1133,6 +1163,10 @@
 		F985460019E9004F006F5226 /* 注册 */ = {
 			isa = PBXGroup;
 			children = (
+				BCA8AC8B19E9227D000CA3DC /* Controllers */,
+				BCA8AC8E19E9227D000CA3DC /* DxConnection.h */,
+				BCA8AC8F19E9227D000CA3DC /* Model */,
+				BCA8AC9019E9227D000CA3DC /* View */,
 			);
 			path = "注册";
 			sourceTree = "<group>";
@@ -1406,6 +1440,7 @@
 				BC2174C94598908500F457C5 /* BoundPersonInfoController.m in Sources */,
 				F91A0CEC19E788F5009ADB44 /* AFSecurityPolicy.m in Sources */,
 				F91A0D7419E78E0A009ADB44 /* NSFileManager+pathMethod.m in Sources */,
+				BCA8AC9119E9227D000CA3DC /* RegisterViewController.m in Sources */,
 				F91A0D7519E78E0A009ADB44 /* NSString+WLTooll.m in Sources */,
 				F91A0CE819E788F5009ADB44 /* AFHTTPRequestOperation.m in Sources */,
 				F91A0DA119E795C6009ADB44 /* split.c in Sources */,
