@@ -10,7 +10,7 @@
 
 @interface BoundEquipmentDetailController : UIViewController
 
-@property (nonatomic,strong)NSString *EquipmentIMEINumString;
+//@property (nonatomic,strong)NSString *EquipmentIMEINumString;
 
 @property (weak, nonatomic) IBOutlet UILabel *EquipmentIMEINum;
 
