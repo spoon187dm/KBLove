@@ -12,13 +12,17 @@
 #import "BoundPersonInfoController.h"
 #import "BoundPetInfoController.h"
 @interface BoundEquipmentDetailController ()
-
+{
+    BoundEquipmentInfo *_equipment;
+}
 @end
 
 @implementation BoundEquipmentDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _equipment=[BoundEquipmentInfo sharedInstance];
+    self.EquipmentIMEINum.text=_equipment.EquipmentIMEINum;
     // Do any additional setup after loading the view.
 }
 
@@ -35,7 +39,7 @@
 
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
-    BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
+    
     _equipment.EquipmentSIMNum=self.EquipmentSIMNum.text;
     _equipment.EquipmentIponeNum=self.LinkmanPhoneNum.text;
     
