@@ -74,8 +74,12 @@
                     NSString *token=[dic objectForKey:@""];
                     NSString *user_id=[dic objectForKey:@"user_id"];
                     if ([ret intValue]) {
-                        //注册成功 跳转到 成功界面
-                        
+                        //注册成功 存储信息 跳转到 成功界面
+                        KBUserInfo *user=[KBUserInfo sharedInfo];
+                        user.token=token;
+                        user.userName=_userNameTextfiled.text;
+                        user.userId=user_id;
+                        user.passWord=_passwordTextFiled.text;
                     }else
                     {
                         //失败 打印 描述信息
