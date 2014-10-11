@@ -27,9 +27,24 @@
 
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
-    BoundEquipmentDetailController *boundEquipment=[[BoundEquipmentDetailController alloc]init];
-    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
-    [self.navigationController pushViewController:boundEquipment animated:YES];
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)backNavBarButtonClick:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)click_QECode:(id)sender {
+}
+
+- (IBAction)click_help:(id)sender {
+}
+
+- (IBAction)click_missDevice:(id)sender {
+}
+
+- (IBAction)click_changeUser:(id)sender {
 }
 /*
 #pragma mark - Navigation

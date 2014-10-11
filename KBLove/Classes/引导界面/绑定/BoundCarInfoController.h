@@ -23,6 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *CarType;
 
 - (IBAction)rightNavBarButtonClick:(id)sender;
-
+- (IBAction)backNavBarButtonClick:(id)sender;
 
 @end

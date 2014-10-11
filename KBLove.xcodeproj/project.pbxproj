@@ -204,6 +204,7 @@
 		F985460719E9004F006F5226 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F985460319E9004F006F5226 /* BannerView.m */; };
 		F985460819E9004F006F5226 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F985460519E9004F006F5226 /* LoginViewController.m */; };
 		F9C290CE19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */; };
+		F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FDF61419E92C8800D235E7 /* nav_Bacground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -494,6 +495,7 @@
 		F985460419E9004F006F5226 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F985460519E9004F006F5226 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F9C290CD19E8E28700AA0ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Regist_Login_Storyboard.storyboard; sourceTree = "<group>"; };
+		F9FDF61419E92C8800D235E7 /* nav_Bacground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Bacground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -997,6 +999,7 @@
 			isa = PBXGroup;
 			children = (
 				F91A0DDB19E7AACF009ADB44 /* background@2x.png */,
+				F9FDF61419E92C8800D235E7 /* nav_Bacground.png */,
 				F91A0DDC19E7AACF009ADB44 /* images */,
 				F91A0DDE19E7AACF009ADB44 /* lg@2x.png */,
 				F91A0DDF19E7AACF009ADB44 /* lgblankspace@2x.png */,
@@ -1371,6 +1374,7 @@
 				F91A0E8019E7AACF009ADB44 /* infoItemSelected.png in Resources */,
 				F91A0E4819E7AACF009ADB44 /* mmm.png in Resources */,
 				F91A0E7419E7AACF009ADB44 /* savepass_check@2x.png in Resources */,
+				F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */,
 				F91A0E8419E7AACF009ADB44 /* tabbarBG@2x.png in Resources */,
 				F91A0E8E19E7AACF009ADB44 /* blue_iOS6_navBar.png in Resources */,
 				F91A0E4919E7AACF009ADB44 /* other0.png in Resources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -64,7 +64,7 @@
         <!--注册-->
         <scene sceneID="9tJ-kp-2ff">
             <objects>
-                <viewController id="Mkb-Tj-0ME" userLabel="注册" sceneMemberID="viewController">
+                <viewController id="Mkb-Tj-0ME" userLabel="注册" customClass="RegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9f-5h-fR0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,7 +74,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="7Ir-Bs-Cs5">
-                                <rect key="frame" x="10" y="95" width="299.99999906825161" height="40"/>
+                                <rect key="frame" x="10" y="95" width="299.99999906881936" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ji-hS-xeK">
@@ -84,14 +84,20 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="phoneRegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="bUP-nl-JIy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9h3-Dd-NTm">
-                                        <rect key="frame" x="150" y="5" width="99.999999627300639" height="30"/>
+                                        <rect key="frame" x="150" y="5" width="99.999999627527743" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="邮箱注册" backgroundImage="mailregisterbtn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mailRegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="1ci-DA-aoi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -167,6 +173,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="RegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="l28-i3-V70"/>
                                     <segue destination="lLk-3H-kEp" kind="modal" id="KCy-KE-Op2"/>
                                 </connections>
                             </button>
@@ -177,10 +184,22 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnClicked:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="g5E-Y2-5fV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="RegisterButton" destination="Vy1-v5-fDD" id="mv5-xO-pLJ"/>
+                        <outlet property="loginButton" destination="XGn-A0-Mpf" id="gSg-5U-hUt"/>
+                        <outlet property="mailRegisterButton" destination="9h3-Dd-NTm" id="ldM-Oh-kgD"/>
+                        <outlet property="passwordTextFiled" destination="0fq-9k-cVD" id="4Rm-tX-c5H"/>
+                        <outlet property="phoneRegisterButton" destination="7ji-hS-xeK" id="F58-Pm-K0s"/>
+                        <outlet property="userNameTextfiled" destination="aFQ-qM-vz3" id="BZr-7S-Edc"/>
+                        <outlet property="verifyPasswordTextfiled" destination="Ojo-Pb-GgM" id="2Nl-fy-TmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7N-Co-8d5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -362,10 +381,10 @@
             </objects>
             <point key="canvasLocation" x="177" y="594"/>
         </scene>
-        <!--View Controller - 绑定设备-->
+        <!--Bound Add Equipment Controller - 绑定设备-->
         <scene sceneID="bik-5S-Irc">
             <objects>
-                <viewController id="sFa-1H-aMC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoundAddEquipmentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sFa-1H-aMC" customClass="BoundAddEquipmentController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aj5-ru-GAy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -406,6 +425,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_QECode:" destination="sFa-1H-aMC" eventType="touchUpInside" id="3t0-3R-PAU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9tq-oL-V7Q">
                                 <rect key="frame" x="26" y="260" width="105" height="30"/>
@@ -413,6 +435,9 @@
                                 <state key="normal" title="！添加设备帮助">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_help:" destination="sFa-1H-aMC" eventType="touchUpInside" id="hp5-iN-6SL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QlT-ww-buO">
                                 <rect key="frame" x="20" y="320" width="100" height="30"/>
@@ -420,6 +445,9 @@
                                 <state key="normal" title="没有设备" backgroundImage="buttonbackground.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_missDevice:" destination="sFa-1H-aMC" eventType="touchUpInside" id="5K4-Jv-t9J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bJT-F6-7GZ">
                                 <rect key="frame" x="181" y="320" width="107" height="30"/>
@@ -428,6 +456,9 @@
                                 <state key="normal" title="切换账户" backgroundImage="buttonbackground.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_changeUser:" destination="sFa-1H-aMC" eventType="touchUpInside" id="pgA-lQ-DfJ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="typefaceimage.png" id="BXB-V0-Ekq">
                                 <rect key="frame" x="187" y="327" width="20" height="15"/>
@@ -445,6 +476,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="W1a-Wf-ghh"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="gVd-l9-IHz">
@@ -456,20 +490,23 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QtX-hG-AFZ" kind="push" id="wy9-1X-wFF"/>
+                                    <action selector="rightNavBarButtonClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="aMI-wL-ITr"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="EquipmentIMEINum" destination="X2C-ms-yJf" id="6fv-lZ-U0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLh-bo-CO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="594"/>
         </scene>
-        <!--View Controller - 绑定设备-->
+        <!--Bound Equipment Detail Controller - 绑定设备-->
         <scene sceneID="pXV-s4-6qN">
             <objects>
-                <viewController id="QtX-hG-AFZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoundEquipmentDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtX-hG-AFZ" customClass="BoundEquipmentDetailController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="37d-XB-qkx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -499,18 +536,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备号：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="56B-Xu-UDl">
-                                <rect key="frame" x="20" y="92" width="68" height="21"/>
+                                <rect key="frame" x="20" y="96" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="tR6-7l-pV8">
-                                <rect key="frame" x="78" y="88" width="222" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完成下列信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ptB-j9-MaV">
                                 <rect key="frame" x="104" y="151" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -551,6 +582,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备号：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="waQ-AI-4Mv">
+                                <rect key="frame" x="79" y="96" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -563,6 +601,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="QtX-hG-AFZ" eventType="touchUpInside" id="E0U-rD-o3Y"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="eHA-QC-Err">
@@ -574,20 +615,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="I1o-G5-ueS" kind="push" id="9CH-UO-glt"/>
+                                    <action selector="rightNavBarButtonClick:" destination="QtX-hG-AFZ" eventType="touchUpInside" id="zaK-Eh-oOx"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="EquipmentIMEINum" destination="waQ-AI-4Mv" id="CJ6-J3-iIZ"/>
+                        <outlet property="EquipmentSIMNum" destination="Ebn-uQ-lWD" id="1lt-JA-xBC"/>
+                        <outlet property="LinkmanPhoneNum" destination="hOI-5j-Eos" id="a5w-zb-XE4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEQ-73-vxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="880" y="594"/>
         </scene>
-        <!--View Controller - 确认车辆信息-->
+        <!--Bound Car Info Controller - 确认车辆信息-->
         <scene sceneID="srd-h2-RpZ">
             <objects>
-                <viewController id="I1o-G5-ueS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoundCarInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I1o-G5-ueS" customClass="BoundCarInfoController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KIO-Gc-JtZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -644,7 +690,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆型号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clh-EH-vjE">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆品牌" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clh-EH-vjE">
                                 <rect key="frame" x="15" y="288" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -677,6 +723,23 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="F6y-15-xQi">
+                                <rect key="frame" x="10" y="369" width="300" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆类型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8p8-l9-q8j">
+                                <rect key="frame" x="15" y="335" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="X0Q-t2-jPG">
+                                <rect key="frame" x="88" y="331" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -689,6 +752,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="I1o-G5-ueS" eventType="touchUpInside" id="zWZ-F9-HtN"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xSd-7F-hsv">
@@ -700,11 +766,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7DL-1Y-ruq" kind="push" id="6St-1p-mcc"/>
+                                    <action selector="rightNavBarButtonClick:" destination="I1o-G5-ueS" eventType="touchUpInside" id="jiQ-n2-Lfk"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="CarBrand" destination="XRb-ui-8fo" id="DvQ-zj-1do"/>
+                        <outlet property="CarHeadImage" destination="85G-E2-qC1" id="bR1-ty-jgi"/>
+                        <outlet property="CarName" destination="bgf-ff-lnX" id="ZPD-bE-PLF"/>
+                        <outlet property="CarNum" destination="j8y-pW-Xxo" id="NKC-ZH-d4V"/>
+                        <outlet property="CarType" destination="X0Q-t2-jPG" id="5Mz-lH-ccz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEY-CY-hHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -730,10 +803,10 @@
             </objects>
             <point key="canvasLocation" x="-216" y="594"/>
         </scene>
-        <!--View Controller - 确认宠物信息-->
+        <!--Bound Pet Info Controller - 确认宠物信息-->
         <scene sceneID="hjx-oR-kDE">
             <objects>
-                <viewController id="Ptb-02-qjX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoundPetInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ptb-02-qjX" customClass="BoundPetInfoController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AOZ-zs-Uqj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -903,6 +976,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="Ptb-02-qjX" eventType="touchUpInside" id="4aS-YZ-feb"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Oot-zR-XVV">
@@ -913,18 +989,31 @@
                                 <state key="normal" backgroundImage="tickoff.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rightNavBarButtonClick:" destination="Ptb-02-qjX" eventType="touchUpInside" id="f3o-fD-EiZ"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PetBithday" destination="j9d-wT-YOr" id="DgW-dy-pvS"/>
+                        <outlet property="PetBreed" destination="dMS-hD-VKJ" id="vez-Of-VYb"/>
+                        <outlet property="PetHeadImage" destination="yYe-UJ-m2P" id="tga-xU-Wxh"/>
+                        <outlet property="PetHeight" destination="7vD-0e-p8f" id="5sH-KX-owg"/>
+                        <outlet property="PetName" destination="Yqm-lw-krf" id="Rde-Ep-ByO"/>
+                        <outlet property="PetSex" destination="Bdp-Ub-cJH" id="yi0-Kf-Lda"/>
+                        <outlet property="PetType" destination="E0P-cU-mWs" id="0aD-kP-eWV"/>
+                        <outlet property="PetWeight" destination="PxR-TE-cQa" id="qFv-CK-zHz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tx6-ZT-gix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="1046"/>
         </scene>
-        <!--View Controller - 确认用户信息-->
+        <!--Bound Person Info Controller - 确认用户信息-->
         <scene sceneID="21a-Qz-nyN">
             <objects>
-                <viewController id="7DL-1Y-ruq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BoundPersonInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7DL-1Y-ruq" customClass="BoundPersonInfoController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oet-at-zLQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1060,6 +1149,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="7DL-1Y-ruq" eventType="touchUpInside" id="taa-7o-lSU"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="o5g-Za-IXt">
@@ -1071,11 +1163,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ptb-02-qjX" kind="push" id="2nC-lH-Gpo"/>
+                                    <action selector="rightNavBarButtonClick:" destination="7DL-1Y-ruq" eventType="touchUpInside" id="jJK-PH-HR2"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PersonBirthday" destination="7gk-uX-f3F" id="DOC-Fp-d5p"/>
+                        <outlet property="PersonHeadImage" destination="RwW-Tg-pJW" id="XpV-7m-GYz"/>
+                        <outlet property="PersonHeight" destination="UK6-Sc-kY1" id="yX7-qD-feI"/>
+                        <outlet property="PersonName" destination="mhX-Zq-vL6" id="X7R-Kr-J0k"/>
+                        <outlet property="PersonSex" destination="wWe-6i-8Sa" id="xF0-Eq-hul"/>
+                        <outlet property="PersonWeight" destination="NyZ-YD-n8x" id="7M5-oU-DRu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9PQ-sj-Zb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

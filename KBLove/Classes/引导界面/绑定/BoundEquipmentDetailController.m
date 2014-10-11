@@ -25,9 +25,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backNavBarButtonClick:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
-    BoundCarInfoController *boundcar=[[BoundCarInfoController alloc]init];
+    BoundCarInfoController *boundcar= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundCarInfoController"];
     NSMutableDictionary *bounderInfo=[[NSMutableDictionary alloc]init];
     [bounderInfo setObject:self.EquipmentIMEINumString forKey:@"IMEIstring"];
     [bounderInfo setObject:self.EquipmentSIMNum.text forKey:@"SIMNum"];

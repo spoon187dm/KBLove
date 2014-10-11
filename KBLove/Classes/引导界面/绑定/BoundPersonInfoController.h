@@ -26,5 +26,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *PersonWeight;
 
 - (IBAction)rightNavBarButtonClick:(id)sender;
-
+- (IBAction)backNavBarButtonClick:(id)sender;
 @end

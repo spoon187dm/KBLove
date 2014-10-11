@@ -14,5 +14,10 @@
 
 //右上方确定按钮 点击事件
 - (IBAction)rightNavBarButtonClick:(id)sender;
+- (IBAction)click_QECode:(id)sender;
+- (IBAction)click_help:(id)sender;
+- (IBAction)click_missDevice:(id)sender;
+- (IBAction)click_changeUser:(id)sender;
 
+- (IBAction)backNavBarButtonClick:(id)sender;
 @end

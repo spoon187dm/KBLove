@@ -20,5 +20,5 @@
 
 //右上方 点击事件
 - (IBAction)rightNavBarButtonClick:(id)sender;
-
+- (IBAction)backNavBarButtonClick:(id)sender;
 @end

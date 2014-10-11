@@ -31,6 +31,6 @@
 
 
 - (IBAction)rightNavBarButtonClick:(id)sender;
-
+- (IBAction)backNavBarButtonClick:(id)sender;
 
 @end
