@@ -7,7 +7,8 @@
 //
 
 #import "BoundPersonInfoController.h"
-
+#import "BoundEquipmentInfo.h"
+#import "WLHttpRequestTool.h"
 @interface BoundPersonInfoController ()
 
 @end

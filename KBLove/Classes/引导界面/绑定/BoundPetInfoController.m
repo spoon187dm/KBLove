@@ -7,7 +7,8 @@
 //
 
 #import "BoundPetInfoController.h"
-
+#import "BoundEquipmentInfo.h"
+#import "WLHttpRequestTool.h"
 @interface BoundPetInfoController ()
 
 @end

@@ -8,6 +8,9 @@
 
 #import "BoundEquipmentDetailController.h"
 #import "BoundCarInfoController.h"
+#import "BoundEquipmentInfo.h"
+#import "BoundPersonInfoController.h"
+#import "BoundPetInfoController.h"
 @interface BoundEquipmentDetailController ()
 
 @end
@@ -21,7 +24,8 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    self.EquipmentIMEINum.text=self.EquipmentIMEINumString;
+//    self.EquipmentIMEINum.text=self.EquipmentIMEINumString;
+    
     // Dispose of any resources that can be recreated.
 }
 

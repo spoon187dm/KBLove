@@ -8,6 +8,7 @@
 
 #import "BoundAddEquipmentController.h"
 #import "BoundEquipmentDetailController.h"
+#import "BoundEquipmentInfo.h"
 @interface BoundAddEquipmentController ()
 
 @end
