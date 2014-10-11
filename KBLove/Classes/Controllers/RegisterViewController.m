@@ -66,6 +66,27 @@
         [[WLHttpRequestTool sharedInstance] request:[REGRSTER_URL,_registertype,_userNameTextfiled.text,_passwordTextFiled.text] requestType:WLHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
             if (IsSuccess) {
                //注册成功
+                if ([result isKindOfClass:[NSDictionary class]]) {
+                    NSLog(@"resultDic:%@",result);
+                    NSDictionary *dic=result;
+                    NSNumber *ret=[dic objectForKey:@"ret"];
+                    NSString *des=[dic objectForKey:@"desc"];
+                    NSString *token=[dic objectForKey:@""];
+                    NSString *user_id=[dic objectForKey:@"user_id"];
+                    if ([ret intValue]) {
+                        //注册成功 跳转到 成功界面
+                        
+                    }else
+                    {
+                        //失败 打印 描述信息
+                        NSLog(@"%@",des);
+                        [self showAlertWithTitle:@"温馨提示" AndMessage:des];
+                    }
+                }else if ([result isKindOfClass:[NSData class]]){
+                    NSLog(@"resultData:%@",result);
+                }
+                
+                
             }else{
             
                 
