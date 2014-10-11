@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>94285A12-C906-4333-AF3B-14F1F9B11624</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KBLove</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E2794E68-44ED-4FEE-B660-FF3290DF4692</key>
+		<string>https://github.com/blockdate/KBLove.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KBLove.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E2794E68-44ED-4FEE-B660-FF3290DF4692</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/blockdate/KBLove.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E2794E68-44ED-4FEE-B660-FF3290DF4692</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2794E68-44ED-4FEE-B660-FF3290DF4692</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KBLove</string>
+		</dict>
+	</array>
+</dict>
+</plist>
