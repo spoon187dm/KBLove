@@ -24,7 +24,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)backNavBarButtonClick:(id)sender{
+
+- (IBAction)rightNavBarButtonClick:(id)sender
+{
+    BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
+    WLHttpRequestTool *httptool=[WLHttpRequestTool sharedInstance];
+    NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
+    [dic setObject: _equipment.EquipmentIMEINum forKey:@""];
+    [dic setObject:@"7" forKey:@"cmd"];
+    [dic setObject:@"1" forKey:@"operate"];
+    //token  user_id
+    [dic setObject:_equipment.EquipmentIMEINum forKey:@"device_sn"];
+    [dic setObject:_equipment.EquipmentIponeNum forKey:@"phone"];
+    [dic setObject:self.CarName.text forKey:@"name"];
+    [dic setObject:@"" forKey:@"icon"];
+    [dic setObject:self.CarNum.text forKey:@"car"];
+    NSString *urlstr=@"http://118.194.192.104:8080/api/device.edit.do?";
+    [httptool request:urlstr requestType:0 params:dic overBlock:^(BOOL IsSuccess, id result) {
+        if (IsSuccess) {
+            NSLog(@"%@",result);
+        }
+    }];
+}
+
+- (void)backNavBarButtonClick:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
 /*

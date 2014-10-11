@@ -35,13 +35,26 @@
 
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
-    BoundCarInfoController *boundcar= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundCarInfoController"];
-    NSMutableDictionary *bounderInfo=[[NSMutableDictionary alloc]init];
-    [bounderInfo setObject:self.EquipmentIMEINumString forKey:@"IMEIstring"];
-    [bounderInfo setObject:self.EquipmentSIMNum.text forKey:@"SIMNum"];
-    [bounderInfo setObject:self.LinkmanPhoneNum.text forKey:@"PhoneNum"];
-    boundcar.bounderInfoDic=bounderInfo;
-    [self.navigationController pushViewController:boundcar animated:YES];
+    BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
+    _equipment.EquipmentSIMNum=self.EquipmentSIMNum.text;
+    _equipment.EquipmentIponeNum=self.LinkmanPhoneNum.text;
+    
+    NSString *aimController ;
+    UIViewController *vc;
+    NSString *imeiNum_sub2=[_equipment.EquipmentIMEINum substringToIndex:2];
+    NSInteger num=[imeiNum_sub2 integerValue];
+    if ((num>=1&&num<=20)||(num>=51&&num<=54))
+    {//车辆
+        aimController = @"BoundCarInfoController";
+    }else if ((num>=21&&num<=35)||(num>=55&&num<=57))
+    {//个人
+        aimController = @"BoundPersonInfoController";
+    }else if ((num>=36&&num<=50)||(num>=58&&num<=60))
+    {//宠物
+        aimController = @"BoundPetInfoController";
+    }
+    vc = [self.storyboard instantiateViewControllerWithIdentifier:aimController];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 /*
 #pragma mark - Navigation

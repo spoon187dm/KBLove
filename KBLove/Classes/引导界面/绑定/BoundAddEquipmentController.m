@@ -28,8 +28,12 @@
 
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
-    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    //
+    BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
+    BoundEquipmentDetailController *boundEquipment= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
+    _equipment.EquipmentIMEINum=self.EquipmentIMEINum.text;
+//    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
+    [self.navigationController pushViewController:boundEquipment animated:YES];
 }
 
 - (IBAction)backNavBarButtonClick:(id)sender{
