@@ -199,6 +199,7 @@
 		F985460719E9004F006F5226 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F985460319E9004F006F5226 /* BannerView.m */; };
 		F985460819E9004F006F5226 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F985460519E9004F006F5226 /* LoginViewController.m */; };
 		F9C290CE19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */; };
+		F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FDF61419E92C8800D235E7 /* nav_Bacground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -478,6 +479,7 @@
 		F985460419E9004F006F5226 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		F985460519E9004F006F5226 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F9C290CD19E8E28700AA0ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Regist_Login_Storyboard.storyboard; sourceTree = "<group>"; };
+		F9FDF61419E92C8800D235E7 /* nav_Bacground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Bacground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -967,6 +969,7 @@
 			isa = PBXGroup;
 			children = (
 				F91A0DDB19E7AACF009ADB44 /* background@2x.png */,
+				F9FDF61419E92C8800D235E7 /* nav_Bacground.png */,
 				F91A0DDC19E7AACF009ADB44 /* images */,
 				F91A0DDE19E7AACF009ADB44 /* lg@2x.png */,
 				F91A0DDF19E7AACF009ADB44 /* lgblankspace@2x.png */,
@@ -1134,6 +1137,10 @@
 		F985460019E9004F006F5226 /* 注册 */ = {
 			isa = PBXGroup;
 			children = (
+				BCA8AC8B19E9227D000CA3DC /* Controllers */,
+				BCA8AC8E19E9227D000CA3DC /* DxConnection.h */,
+				BCA8AC8F19E9227D000CA3DC /* Model */,
+				BCA8AC9019E9227D000CA3DC /* View */,
 			);
 			path = "注册";
 			sourceTree = "<group>";
@@ -1152,6 +1159,19 @@
 		F985460619E9004F006F5226 /* 绑定 */ = {
 			isa = PBXGroup;
 			children = (
+				BC2174CC459890A500F457C5 /* 绑定信息 */,
+				BC2174B74598908500F457C5 /* BoundAddEquipmentController.h */,
+				BC2174B84598908500F457C5 /* BoundAddEquipmentController.m */,
+				BC2174BB4598908500F457C5 /* BoundEquipmentDetailController.h */,
+				BC2174BC4598908500F457C5 /* BoundEquipmentDetailController.m */,
+				BC2174B94598908500F457C5 /* BoundCarInfoController.h */,
+				BC2174BA4598908500F457C5 /* BoundCarInfoController.m */,
+				BC2174BF4598908500F457C5 /* BoundPersonInfoController.h */,
+				BC2174C04598908500F457C5 /* BoundPersonInfoController.m */,
+				BC2174C14598908500F457C5 /* BoundPetInfoController.h */,
+				BC2174C24598908500F457C5 /* BoundPetInfoController.m */,
+				BC2174C34598908500F457C5 /* HeaderImageSelecterController.h */,
+				BC2174C44598908500F457C5 /* HeaderImageSelecterController.m */,
 			);
 			path = "绑定";
 			sourceTree = "<group>";
@@ -1326,6 +1346,7 @@
 				F91A0E8019E7AACF009ADB44 /* infoItemSelected.png in Resources */,
 				F91A0E4819E7AACF009ADB44 /* mmm.png in Resources */,
 				F91A0E7419E7AACF009ADB44 /* savepass_check@2x.png in Resources */,
+				F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */,
 				F91A0E8419E7AACF009ADB44 /* tabbarBG@2x.png in Resources */,
 				F91A0E8E19E7AACF009ADB44 /* blue_iOS6_navBar.png in Resources */,
 				F91A0E4919E7AACF009ADB44 /* other0.png in Resources */,
@@ -1390,10 +1411,13 @@
 				F91A0CED19E788F5009ADB44 /* AFURLConnectionOperation.m in Sources */,
 				F91A0CF319E788F5009ADB44 /* UIAlertView+AFNetworking.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* WLReachability.m in Sources */,
+				BC2174C54598908500F457C5 /* BoundAddEquipmentController.m in Sources */,
 				F91A0D9C19E795C6009ADB44 /* QRCodeGenerator.m in Sources */,
 				F985460719E9004F006F5226 /* BannerView.m in Sources */,
+				BC2174C94598908500F457C5 /* BoundPersonInfoController.m in Sources */,
 				F91A0CEC19E788F5009ADB44 /* AFSecurityPolicy.m in Sources */,
 				F91A0D7419E78E0A009ADB44 /* NSFileManager+pathMethod.m in Sources */,
+				BCA8AC9119E9227D000CA3DC /* RegisterViewController.m in Sources */,
 				F91A0D7519E78E0A009ADB44 /* NSString+WLTooll.m in Sources */,
 				F91A0CE819E788F5009ADB44 /* AFHTTPRequestOperation.m in Sources */,
 				F91A0DA119E795C6009ADB44 /* split.c in Sources */,
@@ -1405,19 +1429,24 @@
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F985460819E9004F006F5226 /* LoginViewController.m in Sources */,
 				F91A0D7719E78E0A009ADB44 /* UIImageView+WLTool.m in Sources */,
+				BC2174CA4598908500F457C5 /* BoundPetInfoController.m in Sources */,
 				F91A0D9B19E795C6009ADB44 /* mask.c in Sources */,
 				F91A0D7619E78E0A009ADB44 /* UIButton+WLTool.m in Sources */,
 				6EA222E319E914F40073274D /* LoginRequest.m in Sources */,
 				F91A0D8219E78F8E009ADB44 /* WLImagePickerTool.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* WLHttpRequestTool.m in Sources */,
+				BC2174C84598908500F457C5 /* BoundEquipmentInfo.m in Sources */,
 				F91A0D9F19E795C6009ADB44 /* qrspec.c in Sources */,
 				F91A0CF619E788F5009ADB44 /* UIProgressView+AFNetworking.m in Sources */,
+				BC2174C64598908500F457C5 /* BoundCarInfoController.m in Sources */,
 				F91A0CEA19E788F5009ADB44 /* AFHTTPSessionManager.m in Sources */,
 				F91A0CF119E788F5009ADB44 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F91A0CE919E788F5009ADB44 /* AFHTTPRequestOperationManager.m in Sources */,
 				F91A0CF519E788F5009ADB44 /* UIImageView+AFNetworking.m in Sources */,
 				F91A0CF419E788F5009ADB44 /* UIButton+AFNetworking.m in Sources */,
+				BC2174CB4598908500F457C5 /* HeaderImageSelecterController.m in Sources */,
 				F91A0CF719E788F5009ADB44 /* UIRefreshControl+AFNetworking.m in Sources */,
+				BC2174C74598908500F457C5 /* BoundEquipmentDetailController.m in Sources */,
 				F91A0CF819E788F5009ADB44 /* UIWebView+AFNetworking.m in Sources */,
 				F91A0CEB19E788F5009ADB44 /* AFNetworkReachabilityManager.m in Sources */,
 				F91A0CFA19E788F5009ADB44 /* SVProgressHUD.m in Sources */,
