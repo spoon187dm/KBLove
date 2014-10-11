@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x9g-8d-UOM">
-                                        <rect key="frame" x="190" y="10" width="100" height="30"/>
+                                        <rect key="frame" x="190.0000005364418" y="10" width="100" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="注册">
@@ -73,7 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="7Ir-Bs-Cs5">
-                                <rect key="frame" x="10" y="95" width="299.99999908017526" height="40"/>
+                                <rect key="frame" x="10" y="95" width="299.99999906863013" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ji-hS-xeK">
@@ -88,7 +88,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9h3-Dd-NTm">
-                                        <rect key="frame" x="150" y="5" width="99.999999632070086" height="30"/>
+                                        <rect key="frame" x="150" y="5" width="99.999999627452056" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="邮箱注册" backgroundImage="mailregisterbtn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -233,7 +233,7 @@
                                         <rect key="frame" x="8" y="10" width="23" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名/邮箱" minimumFontSize="17" id="lV9-nC-Zmk">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账号" minimumFontSize="17" id="lV9-nC-Zmk">
                                         <rect key="frame" x="51" y="5" width="236" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -302,24 +302,14 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zDf-1U-IzA">
-                                <rect key="frame" x="10" y="364" width="300" height="40"/>
+                                <rect key="frame" x="10" y="357" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="login.png">
-                                    <color key="titleColor" red="0.38746925360000001" green="0.75348159920000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="loginBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="Hro-8i-77y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wf7-3x-5Z5">
-                                <rect key="frame" x="0.0" y="522" width="320" height="48"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" backgroundImage="Register.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="GI5-Oy-uAW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mNa-u8-KcX">
@@ -347,6 +337,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgetPwdBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="Qsf-RU-EiI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wf7-3x-5Z5">
+                                <rect key="frame" x="0.0" y="522" width="320" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" backgroundImage="Register.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="GI5-Oy-uAW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -354,6 +357,7 @@
                     <connections>
                         <outlet property="bannerView" destination="Hvu-56-hYo" id="t2g-8y-cem"/>
                         <outlet property="demoLoginBtn" destination="2vi-A8-9U6" id="er3-8Q-0Pd"/>
+                        <outlet property="forgetPwdBtn" destination="BEy-jU-fjq" id="pqH-Wv-Ajc"/>
                         <outlet property="isPwdRemeberBtn" destination="mNa-u8-KcX" id="oLI-A7-Pn1"/>
                         <outlet property="loginBtn" destination="zDf-1U-IzA" id="D3r-cS-tLL"/>
                         <outlet property="passWordTF" destination="EAL-6v-zai" id="4vR-KS-3fm"/>
@@ -407,7 +411,7 @@
             </objects>
             <point key="canvasLocation" x="177" y="594"/>
         </scene>
-        <!--Bound Add Equipment Controller - 绑定设备-->
+        <!--绑定设备-->
         <scene sceneID="bik-5S-Irc">
             <objects>
                 <viewController storyboardIdentifier="BoundAddEquipmentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sFa-1H-aMC" customClass="BoundAddEquipmentController" sceneMemberID="viewController">
@@ -529,7 +533,7 @@
             </objects>
             <point key="canvasLocation" x="524" y="594"/>
         </scene>
-        <!--Bound Equipment Detail Controller - 绑定设备-->
+        <!--绑定设备-->
         <scene sceneID="pXV-s4-6qN">
             <objects>
                 <viewController storyboardIdentifier="BoundEquipmentDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtX-hG-AFZ" customClass="BoundEquipmentDetailController" sceneMemberID="viewController">
@@ -656,7 +660,7 @@
             </objects>
             <point key="canvasLocation" x="880" y="594"/>
         </scene>
-        <!--Bound Car Info Controller - 确认车辆信息-->
+        <!--确认车辆信息-->
         <scene sceneID="srd-h2-RpZ">
             <objects>
                 <viewController storyboardIdentifier="BoundCarInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I1o-G5-ueS" customClass="BoundCarInfoController" sceneMemberID="viewController">
@@ -829,7 +833,7 @@
             </objects>
             <point key="canvasLocation" x="-216" y="594"/>
         </scene>
-        <!--Bound Pet Info Controller - 确认宠物信息-->
+        <!--确认宠物信息-->
         <scene sceneID="hjx-oR-kDE">
             <objects>
                 <viewController storyboardIdentifier="BoundPetInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ptb-02-qjX" customClass="BoundPetInfoController" sceneMemberID="viewController">
@@ -1036,7 +1040,7 @@
             </objects>
             <point key="canvasLocation" x="1244" y="1046"/>
         </scene>
-        <!--Bound Person Info Controller - 确认用户信息-->
+        <!--确认用户信息-->
         <scene sceneID="21a-Qz-nyN">
             <objects>
                 <viewController storyboardIdentifier="BoundPersonInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7DL-1Y-ruq" customClass="BoundPersonInfoController" sceneMemberID="viewController">
@@ -1209,7 +1213,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NVBar_arrow_left.png" width="51" height="51"/>
+        <image name="NVBar_arrow_right.png" width="51" height="51"/>
         <image name="Register.png" width="641" height="108"/>
+        <image name="RegisterFisihed1.png" width="319" height="98"/>
+        <image name="RegisterFisihed2.png" width="320" height="98"/>
         <image name="background.png" width="320" height="568"/>
         <image name="buttonbackground.png" width="237" height="56"/>
         <image name="circleframe.png" width="572" height="86"/>
@@ -1222,6 +1230,7 @@
         <image name="loginQQ.png" width="42" height="42"/>
         <image name="loginsina.png" width="42" height="42"/>
         <image name="mailregisterbtn.png" width="121" height="38"/>
+        <image name="or.png" width="44" height="44"/>
         <image name="pwd.png" width="39" height="39"/>
         <image name="telregisterbtn.png" width="121" height="38"/>
         <image name="tickoff.png" width="50" height="50"/>

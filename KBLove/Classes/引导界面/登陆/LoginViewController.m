@@ -90,6 +90,9 @@
         _isRemBtnPressed = NO;
     }
 }
+//忘记密码
+- (IBAction)forgetPwdBtnClicked:(id)sender {
+}
 
 #pragma mark - 注册
 - (IBAction)registerBtnClicked:(id)sender {
@@ -109,5 +112,6 @@
     [super didReceiveMemoryWarning];
     
 }
+
 
 @end

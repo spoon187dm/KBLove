@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *qqLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *weiBoLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *demoLoginBtn;
+//忘记密码
+@property (weak, nonatomic) IBOutlet UIButton *forgetPwdBtn;
 
 //登陆
 - (IBAction)loginBtnClicked:(id)sender;
@@ -36,5 +38,7 @@
 - (IBAction)demoLoginClicked:(id)sender;
 //记住密码点击
 - (IBAction)isPwdRemeberBtnClicked:(id)sender;
+//忘记密码
+- (IBAction)forgetPwdBtnClicked:(id)sender;
 
 @end
