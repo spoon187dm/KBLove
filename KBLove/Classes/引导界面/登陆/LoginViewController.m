@@ -7,9 +7,13 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginRequest.h"
 
 @interface LoginViewController ()
-
+{
+    BOOL _isRemBtnPressed;//记录 记录密码按键是否被点击
+    KBUserInfo *_userInfo;
+}
 @end
 
 @implementation LoginViewController
@@ -20,6 +24,20 @@
     NSArray *imageArray = @[@"bj.png",@"bj.png",@"bj.png",@"bj.png",@"bj.png"];
     [_bannerView setImageWithArray:imageArray andIsAutoScroll:YES];
     
+    _isRemBtnPressed = NO;//默认为no
+    
+    //判断是否记录密码
+    _userInfo = [KBUserInfo sharedInfo];
+    if (_userInfo.isPasswordRecord == NO) {
+        _isRemBtnPressed = _userInfo.isPasswordRecord;
+        _userNameTF.text = _userInfo.userName;
+        [_isPwdRemeberBtn setBackgroundImage:[UIImage imageNamed:@"pwd"] forState:UIControlStateNormal];
+    } else if (_userInfo.isPasswordRecord == YES) {
+        _isRemBtnPressed = _userInfo.isPasswordRecord;
+        _userNameTF.text = _userInfo.userName;
+        _passWordTF.text = _userInfo.passWord;
+        [_isPwdRemeberBtn setBackgroundImage:[UIImage imageNamed:@"pwdRem"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -27,31 +45,73 @@
 }
 
 #pragma mark - 登陆
-- (void)loginBtnClicked:(id)sender {
+- (IBAction)loginBtnClicked:(id)sender {
+    //判断是否用户名是否合法
+    if ([_userNameTF.text isValidateEmail] || [_userNameTF.text isValidateMobile]) {
+        //发起登陆请求
+        [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
+            //成功后跳转
+#warning 登陆后跳转
+            NSLog(@"登陆成功");
+        } andLoginFaildeBlock:^(NSString *desc) {
+            //展示错误信息
+            [self createAlertViewWithTitile:@"温馨提示" andMessage:desc];
+        }];
+
+    } else {
+        
+        [self createAlertViewWithTitile:@"温馨提示" andMessage:@"用户名或密码错误"];
+    }
+    
+}
+
+- (IBAction)qqLoginBtnClicked:(id)sender {
 
 }
 
-- (void)qqLoginBtnClicked:(id)sender {
+- (IBAction)weiBoLoginClicked:(id)sender {
 
 }
 
-- (void)weiBoLoginClicked:(id)sender {
+- (IBAction)demoLoginClicked:(id)sender {
 
 }
-
-- (void)demoLoginClicked:(id)sender {
-
+//记住密码
+- (IBAction)isPwdRemeberBtnClicked:(id)sender {
+    if (!_isRemBtnPressed) {
+        [_isPwdRemeberBtn setBackgroundImage:[UIImage imageNamed:@"pwdRem"] forState:UIControlStateNormal];
+        _userInfo.isPasswordRecord = YES;
+        [_userInfo save];
+        _isRemBtnPressed = YES;
+    } else if (_isRemBtnPressed) {
+        [_isPwdRemeberBtn setBackgroundImage:[UIImage imageNamed:@"pwd"] forState:UIControlStateNormal];
+        _userInfo.isPasswordRecord = NO;
+        [_userInfo save];
+        _isRemBtnPressed = NO;
+    }
+}
+//忘记密码
+- (IBAction)forgetPwdBtnClicked:(id)sender {
 }
 
 #pragma mark - 注册
-- (void)registerBtnClicked:(id)sender {
-
+- (IBAction)registerBtnClicked:(id)sender {
+#warning 注册跳转
 }
+
+#pragma mark - 登陆结果提示
+- (void)createAlertViewWithTitile:(NSString *)title andMessage:(NSString *)message
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alertView show];
+}
+
 
 #pragma mark - 内存警告
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
+
 
 @end
