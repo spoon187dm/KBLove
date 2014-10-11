@@ -23,6 +23,12 @@
 @property (nonatomic, copy) NSString *qqId;
 @property (nonatomic, copy) NSString *sinaId;
 @property (nonatomic, copy) NSString *rrId;
+@property (nonatomic, copy) NSString *user_id;
+//---------------------------------------
+@property (nonatomic, copy) NSString *ret;//登陆返回结果
+@property (nonatomic, copy) NSString *desc;//登陆返回描述
+@property (nonatomic, copy) NSString *allinchina;
+@property (nonatomic, copy) NSString *type;
 
 + (KBUserInfo *)sharedInfo;
 

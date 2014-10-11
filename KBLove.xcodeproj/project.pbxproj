@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
+		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
+		6EA222E319E914F40073274D /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA222E219E914F40073274D /* LoginRequest.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
 		F91A0C8D19E7880C009ADB44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8C19E7880C009ADB44 /* CoreGraphics.framework */; };
 		F91A0C8F19E7880C009ADB44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8E19E7880C009ADB44 /* UIKit.framework */; };
@@ -209,6 +212,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6EA222DB19E90EEB0073274D /* pwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwd.png; sourceTree = "<group>"; };
+		6EA222DC19E90EEB0073274D /* pwdRem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdRem.png; sourceTree = "<group>"; };
+		6EA222E119E914F40073274D /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		6EA222E219E914F40073274D /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		6EA222E419E91EAE0073274D /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		6EA222E619E920480073274D /* KBLove-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KBLove-Prefix.pch"; sourceTree = "<group>"; };
 		F91A0C8719E7880C009ADB44 /* KBLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91A0C8A19E7880C009ADB44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F91A0C8C19E7880C009ADB44 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -501,6 +510,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EA222DF19E914980073274D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F985460419E9004F006F5226 /* LoginViewController.h */,
+				F985460519E9004F006F5226 /* LoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6EA222E019E914A20073274D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F985460219E9004F006F5226 /* BannerView.h */,
+				F985460319E9004F006F5226 /* BannerView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		F91A0C7E19E7880C009ADB44 = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +575,7 @@
 		F91A0C9119E7880C009ADB44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6EA222E619E920480073274D /* KBLove-Prefix.pch */,
 				F98545F619E9000D006F5226 /* OtherSource */,
 				F91A0C9C19E7880C009ADB44 /* Images.xcassets */,
 				F91A0DB419E7AACF009ADB44 /* images */,
@@ -929,6 +957,8 @@
 				F91A0DD719E7AACF009ADB44 /* Text.png */,
 				F91A0DD819E7AACF009ADB44 /* xz.png */,
 				F91A0DD919E7AACF009ADB44 /* zhuce.png */,
+				6EA222DB19E90EEB0073274D /* pwd.png */,
+				6EA222DC19E90EEB0073274D /* pwdRem.png */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1075,6 +1105,7 @@
 			children = (
 				F98545F719E9000D006F5226 /* AppDelegate.h */,
 				F98545F819E9000D006F5226 /* AppDelegate.m */,
+				6EA222E419E91EAE0073274D /* Header.h */,
 				F98545F919E9000D006F5226 /* Help.h */,
 				F98545FA19E9000D006F5226 /* Log.h */,
 				F98545FB19E9000D006F5226 /* main.m */,
@@ -1110,10 +1141,10 @@
 		F985460119E9004F006F5226 /* 登陆 */ = {
 			isa = PBXGroup;
 			children = (
-				F985460219E9004F006F5226 /* BannerView.h */,
-				F985460319E9004F006F5226 /* BannerView.m */,
-				F985460419E9004F006F5226 /* LoginViewController.h */,
-				F985460519E9004F006F5226 /* LoginViewController.m */,
+				6EA222E019E914A20073274D /* View */,
+				6EA222DF19E914980073274D /* Controller */,
+				6EA222E119E914F40073274D /* LoginRequest.h */,
+				6EA222E219E914F40073274D /* LoginRequest.m */,
 			);
 			path = "登陆";
 			sourceTree = "<group>";
@@ -1234,6 +1265,7 @@
 				F91A0E5919E7AACF009ADB44 /* lgtoolbar@2x.png in Resources */,
 				F91A0E7019E7AACF009ADB44 /* cutEquipment.png in Resources */,
 				F91A0E6319E7AACF009ADB44 /* GroupNavItemNormal.png in Resources */,
+				6EA222DD19E90EEB0073274D /* pwd.png in Resources */,
 				F91A0E5619E7AACF009ADB44 /* lgremcode@2x.png in Resources */,
 				F91A0D4619E78CAF009ADB44 /* qrcode_scan_bar@2x.png in Resources */,
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
@@ -1324,6 +1356,7 @@
 				F91A0D4D19E78CAF009ADB44 /* qrcode_scan_btn_photo_down@2x.png in Resources */,
 				F91A0E3E19E7AACF009ADB44 /* or.png in Resources */,
 				F91A0E4A19E7AACF009ADB44 /* other1.png in Resources */,
+				6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */,
 				F91A0E4419E7AACF009ADB44 /* roundLoadingContent.png in Resources */,
 				F91A0E7F19E7AACF009ADB44 /* infoItemNormal.png in Resources */,
 				F91A0E6C19E7AACF009ADB44 /* RegisterFisihed2.png in Resources */,
@@ -1374,6 +1407,7 @@
 				F91A0D7719E78E0A009ADB44 /* UIImageView+WLTool.m in Sources */,
 				F91A0D9B19E795C6009ADB44 /* mask.c in Sources */,
 				F91A0D7619E78E0A009ADB44 /* UIButton+WLTool.m in Sources */,
+				6EA222E319E914F40073274D /* LoginRequest.m in Sources */,
 				F91A0D8219E78F8E009ADB44 /* WLImagePickerTool.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* WLHttpRequestTool.m in Sources */,
 				F91A0D9F19E795C6009ADB44 /* qrspec.c in Sources */,

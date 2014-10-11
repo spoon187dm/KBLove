@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passWordTF;
 //首页滚动横幅
 @property (weak, nonatomic) IBOutlet BannerView *bannerView;
-
+//是否记住密码
+@property (weak, nonatomic) IBOutlet UIButton *isPwdRemeberBtn;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @property (weak, nonatomic) IBOutlet UIButton *qqLoginBtn;
@@ -33,5 +34,7 @@
 - (IBAction)weiBoLoginClicked:(id)sender;
 //试用登陆
 - (IBAction)demoLoginClicked:(id)sender;
+//记住密码点击
+- (IBAction)isPwdRemeberBtnClicked:(id)sender;
 
 @end

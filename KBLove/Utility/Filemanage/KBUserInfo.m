@@ -38,6 +38,7 @@ KBUserInfo *info = nil;
     _qqId = [ud objectForKey:@"qqId"];
     _sinaId = [ud objectForKey:@"sinaId"];
     _rrId = [ud objectForKey:@"rrId"];
+    _user_id = [ud objectForKey:@"user_id"];
 }
 
 - (void)save{
@@ -46,6 +47,7 @@ KBUserInfo *info = nil;
     [ud setObject:_passWord forKey:@"password"];
     [ud setObject:[NSNumber numberWithBool:_isPasswordRecord] forKey:@"isPasswordRecord"];
     [ud setObject:_token forKey:@"token"];
+    [ud setObject:_user_id forKey:@"user_id"];
     
     [ud setObject:_phone forKey:@"phone"];
     [ud setObject:_email forKey:@"email"];
@@ -53,6 +55,11 @@ KBUserInfo *info = nil;
     [ud setObject:_sinaId forKey:@"sinaId"];
     [ud setObject:_rrId forKey:@"rrId"];
     [ud synchronize];
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+
 }
 
 @end
