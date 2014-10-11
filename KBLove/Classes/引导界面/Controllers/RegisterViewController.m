@@ -117,6 +117,7 @@
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    //手键盘
     [self.view endEditing:YES];
 }
 - (void)didReceiveMemoryWarning {
