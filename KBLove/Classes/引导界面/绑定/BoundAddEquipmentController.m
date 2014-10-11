@@ -8,6 +8,7 @@
 
 #import "BoundAddEquipmentController.h"
 #import "BoundEquipmentDetailController.h"
+#import "BoundEquipmentInfo.h"
 @interface BoundAddEquipmentController ()
 
 @end
@@ -27,8 +28,11 @@
 
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
+    //
+    BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
     BoundEquipmentDetailController *boundEquipment=[[BoundEquipmentDetailController alloc]init];
-    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
+    _equipment.EquipmentIMEINum=self.EquipmentIMEINum.text;
+//    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
     [self.navigationController pushViewController:boundEquipment animated:YES];
 }
 /*
