@@ -36,6 +36,7 @@
     _userNameTextfiled.placeholder=@"邮箱注册";
     _registertype=email;
 }
+
 //注册
 - (IBAction)RegisterButton:(id)sender
 {
@@ -113,6 +114,11 @@
 - (IBAction)loginBtnClicked:(id)sender
 {
     //跳转到登陆界面
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    //手键盘
+    [self.view endEditing:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
