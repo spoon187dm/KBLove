@@ -16,13 +16,20 @@
 @property (nonatomic, copy) NSString *passWord;
 
 @property (nonatomic, assign) BOOL isPasswordRecord;
-
+//用户唯一标识 addByDX
+@property (nonatomic,copy)NSString *userId;
 @property (nonatomic, copy) NSString *token;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *qqId;
 @property (nonatomic, copy) NSString *sinaId;
 @property (nonatomic, copy) NSString *rrId;
+@property (nonatomic, copy) NSString *user_id;
+//---------------------------------------
+@property (nonatomic, copy) NSString *ret;//登陆返回结果
+@property (nonatomic, copy) NSString *desc;//登陆返回描述
+@property (nonatomic, copy) NSString *allinchina;
+@property (nonatomic, copy) NSString *type;
 
 + (KBUserInfo *)sharedInfo;
 

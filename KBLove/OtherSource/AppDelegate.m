@@ -16,8 +16,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor colorWithRed:1.000 green:0.329 blue:0.380 alpha:1.000];
     
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_Bacground"] forBarMetrics:UIBarMetricsDefault];
+    
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
-    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelComeViewController"];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
 

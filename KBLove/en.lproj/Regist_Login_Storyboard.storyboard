@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--欢迎引导界面-->
         <scene sceneID="gjO-iO-b1x">
             <objects>
-                <viewController storyboardIdentifier="WelComeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aye-qa-Sr5" userLabel="欢迎引导界面" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aye-qa-Sr5" userLabel="欢迎引导界面" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LuE-et-7Y4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -26,7 +27,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x9g-8d-UOM">
+<<<<<<< HEAD
                                         <rect key="frame" x="190" y="10" width="100" height="30"/>
+=======
+                                        <rect key="frame" x="190.00000112837756" y="10" width="100" height="30"/>
+>>>>>>> gpdevelop
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="注册">
@@ -34,7 +39,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Mkb-Tj-0ME" kind="modal" id="vz9-oS-XNt"/>
+                                            <segue destination="Mkb-Tj-0ME" kind="modal" identifier="toregist" id="vz9-oS-XNt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Snt-TT-nDv">
@@ -46,7 +51,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jPO-8L-cUE" kind="modal" id="mPc-tb-TNH"/>
+                                            <segue destination="jPO-8L-cUE" kind="modal" identifier="tologin" id="mPc-tb-TNH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -63,7 +68,7 @@
         <!--注册-->
         <scene sceneID="9tJ-kp-2ff">
             <objects>
-                <viewController id="Mkb-Tj-0ME" userLabel="注册" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mkb-Tj-0ME" userLabel="注册" customClass="RegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9f-5h-fR0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,7 +78,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="7Ir-Bs-Cs5">
+<<<<<<< HEAD
                                 <rect key="frame" x="10" y="95" width="299.99999908017526" height="40"/>
+=======
+                                <rect key="frame" x="10" y="95" width="299.99999906292879" height="40"/>
+>>>>>>> gpdevelop
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ji-hS-xeK">
@@ -83,14 +92,24 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="phoneRegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="bUP-nl-JIy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9h3-Dd-NTm">
+<<<<<<< HEAD
                                         <rect key="frame" x="150" y="5" width="99.999999632070114" height="30"/>
+=======
+                                        <rect key="frame" x="150" y="5" width="99.999999625171512" height="30"/>
+>>>>>>> gpdevelop
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="邮箱注册" backgroundImage="mailregisterbtn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mailRegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="1ci-DA-aoi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -162,33 +181,53 @@
                                 <rect key="frame" x="10" y="392" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="注册" backgroundImage="lgloginbg.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.062745098039215685" green="0.49803921568627452" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="lLk-3H-kEp" kind="modal" id="KCy-KE-Op2"/>
+=======
+                                    <action selector="RegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="l28-i3-V70"/>
+>>>>>>> gpdevelop
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XGn-A0-Mpf">
                                 <rect key="frame" x="10" y="440" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="登陆" backgroundImage="lgloginbg.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.062745098039215685" green="0.49803921568627452" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnClicked:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="g5E-Y2-5fV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="RegisterButton" destination="Vy1-v5-fDD" id="mv5-xO-pLJ"/>
+                        <outlet property="loginButton" destination="XGn-A0-Mpf" id="gSg-5U-hUt"/>
+                        <outlet property="mailRegisterButton" destination="9h3-Dd-NTm" id="ldM-Oh-kgD"/>
+                        <outlet property="passwordTextFiled" destination="0fq-9k-cVD" id="4Rm-tX-c5H"/>
+                        <outlet property="phoneRegisterButton" destination="7ji-hS-xeK" id="F58-Pm-K0s"/>
+                        <outlet property="userNameTextfiled" destination="aFQ-qM-vz3" id="BZr-7S-Edc"/>
+                        <outlet property="verifyPasswordTextfiled" destination="Ojo-Pb-GgM" id="2Nl-fy-TmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7N-Co-8d5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-10" y="-87"/>
+=======
+            <point key="canvasLocation" x="-18" y="-811"/>
+>>>>>>> gpdevelop
         </scene>
         <!--登陆-->
         <scene sceneID="XZj-vb-olz">
             <objects>
-                <viewController id="jPO-8L-cUE" userLabel="登陆" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jPO-8L-cUE" userLabel="登陆" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V5t-gI-pdD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -239,7 +278,7 @@
                                         <rect key="frame" x="51" y="5" width="236" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -282,10 +321,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zDf-1U-IzA">
-                                <rect key="frame" x="10" y="335" width="300" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zDf-1U-IzA">
+                                <rect key="frame" x="10" y="357" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登陆" backgroundImage="lgloginbg.png">
+                                <state key="normal" backgroundImage="login.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -293,10 +332,39 @@
                                     <action selector="loginBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="Hro-8i-77y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wf7-3x-5Z5">
-                                <rect key="frame" x="10" y="528" width="300" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mNa-u8-KcX">
+                                <rect key="frame" x="19" y="317" width="20" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pwd.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="isPwdRemeberBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="yZb-n7-t7C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记住密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jcz-6P-vRz">
+                                <rect key="frame" x="46" y="316" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BEy-jU-fjq">
+                                <rect key="frame" x="223" y="312" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="忘记密码?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgetPwdBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="Qsf-RU-EiI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wf7-3x-5Z5">
+                                <rect key="frame" x="0.0" y="522" width="320" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="注册" backgroundImage="lgblankspace.png">
+                                <state key="normal" backgroundImage="Register.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -309,6 +377,8 @@
                     <connections>
                         <outlet property="bannerView" destination="Hvu-56-hYo" id="t2g-8y-cem"/>
                         <outlet property="demoLoginBtn" destination="2vi-A8-9U6" id="er3-8Q-0Pd"/>
+                        <outlet property="forgetPwdBtn" destination="BEy-jU-fjq" id="pqH-Wv-Ajc"/>
+                        <outlet property="isPwdRemeberBtn" destination="mNa-u8-KcX" id="oLI-A7-Pn1"/>
                         <outlet property="loginBtn" destination="zDf-1U-IzA" id="D3r-cS-tLL"/>
                         <outlet property="passWordTF" destination="EAL-6v-zai" id="4vR-KS-3fm"/>
                         <outlet property="qqLoginBtn" destination="VR9-qg-ka2" id="Vys-ht-DUX"/>
@@ -324,7 +394,11 @@
         <!--注册成功-->
         <scene sceneID="6wP-Rs-HJ6">
             <objects>
+<<<<<<< HEAD
                 <viewController id="Bhc-OS-c4t" userLabel="注册成功" sceneMemberID="viewController">
+=======
+                <viewController storyboardIdentifier="RegistFinishViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bhc-OS-c4t" userLabel="注册成功" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <view key="view" contentMode="scaleToFill" id="fYv-Qv-fC1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -361,10 +435,17 @@
             </objects>
             <point key="canvasLocation" x="177" y="594"/>
         </scene>
+<<<<<<< HEAD
         <!--View Controller - 绑定设备-->
         <scene sceneID="bik-5S-Irc">
             <objects>
                 <viewController id="sFa-1H-aMC" sceneMemberID="viewController">
+=======
+        <!--Bound Add Equipment Controller - 绑定设备-->
+        <scene sceneID="bik-5S-Irc">
+            <objects>
+                <viewController storyboardIdentifier="BoundAddEquipmentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sFa-1H-aMC" customClass="BoundAddEquipmentController" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <view key="view" contentMode="scaleToFill" id="aj5-ru-GAy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -405,6 +486,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="click_QECode:" destination="sFa-1H-aMC" eventType="touchUpInside" id="3t0-3R-PAU"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9tq-oL-V7Q">
                                 <rect key="frame" x="26" y="260" width="105" height="30"/>
@@ -412,6 +499,12 @@
                                 <state key="normal" title="！添加设备帮助">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="click_help:" destination="sFa-1H-aMC" eventType="touchUpInside" id="hp5-iN-6SL"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QlT-ww-buO">
                                 <rect key="frame" x="20" y="320" width="100" height="30"/>
@@ -419,6 +512,12 @@
                                 <state key="normal" title="没有设备" backgroundImage="buttonbackground.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="click_missDevice:" destination="sFa-1H-aMC" eventType="touchUpInside" id="5K4-Jv-t9J"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bJT-F6-7GZ">
                                 <rect key="frame" x="181" y="320" width="107" height="30"/>
@@ -427,6 +526,12 @@
                                 <state key="normal" title="切换账户" backgroundImage="buttonbackground.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="click_changeUser:" destination="sFa-1H-aMC" eventType="touchUpInside" id="pgA-lQ-DfJ"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="typefaceimage.png" id="BXB-V0-Ekq">
                                 <rect key="frame" x="187" y="327" width="20" height="15"/>
@@ -444,6 +549,12 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="W1a-Wf-ghh"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="gVd-l9-IHz">
@@ -455,20 +566,37 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="QtX-hG-AFZ" kind="push" id="wy9-1X-wFF"/>
+=======
+                                    <action selector="rightNavBarButtonClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="aMI-wL-ITr"/>
+>>>>>>> gpdevelop
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+<<<<<<< HEAD
+=======
+                    <connections>
+                        <outlet property="EquipmentIMEINum" destination="X2C-ms-yJf" id="6fv-lZ-U0r"/>
+                    </connections>
+>>>>>>> gpdevelop
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLh-bo-CO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="594"/>
         </scene>
+<<<<<<< HEAD
         <!--View Controller - 绑定设备-->
         <scene sceneID="pXV-s4-6qN">
             <objects>
                 <viewController id="QtX-hG-AFZ" sceneMemberID="viewController">
+=======
+        <!--Bound Equipment Detail Controller - 绑定设备-->
+        <scene sceneID="pXV-s4-6qN">
+            <objects>
+                <viewController storyboardIdentifier="BoundEquipmentDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtX-hG-AFZ" customClass="BoundEquipmentDetailController" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <view key="view" contentMode="scaleToFill" id="37d-XB-qkx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -498,18 +626,25 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备号：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="56B-Xu-UDl">
+<<<<<<< HEAD
                                 <rect key="frame" x="20" y="92" width="68" height="21"/>
+=======
+                                <rect key="frame" x="20" y="96" width="68" height="21"/>
+>>>>>>> gpdevelop
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="tR6-7l-pV8">
                                 <rect key="frame" x="78" y="88" width="222" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+=======
+>>>>>>> gpdevelop
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完成下列信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ptB-j9-MaV">
                                 <rect key="frame" x="104" y="151" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -550,6 +685,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
+=======
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备号：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="waQ-AI-4Mv">
+                                <rect key="frame" x="79" y="96" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+>>>>>>> gpdevelop
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -562,6 +707,12 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="QtX-hG-AFZ" eventType="touchUpInside" id="E0U-rD-o3Y"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="eHA-QC-Err">
@@ -573,20 +724,39 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="I1o-G5-ueS" kind="push" id="9CH-UO-glt"/>
+=======
+                                    <action selector="rightNavBarButtonClick:" destination="QtX-hG-AFZ" eventType="touchUpInside" id="zaK-Eh-oOx"/>
+>>>>>>> gpdevelop
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+<<<<<<< HEAD
+=======
+                    <connections>
+                        <outlet property="EquipmentIMEINum" destination="waQ-AI-4Mv" id="CJ6-J3-iIZ"/>
+                        <outlet property="EquipmentSIMNum" destination="Ebn-uQ-lWD" id="1lt-JA-xBC"/>
+                        <outlet property="LinkmanPhoneNum" destination="hOI-5j-Eos" id="a5w-zb-XE4"/>
+                    </connections>
+>>>>>>> gpdevelop
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEQ-73-vxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="880" y="594"/>
         </scene>
+<<<<<<< HEAD
         <!--View Controller - 确认车辆信息-->
         <scene sceneID="srd-h2-RpZ">
             <objects>
                 <viewController id="I1o-G5-ueS" sceneMemberID="viewController">
+=======
+        <!--Bound Car Info Controller - 确认车辆信息-->
+        <scene sceneID="srd-h2-RpZ">
+            <objects>
+                <viewController storyboardIdentifier="BoundCarInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I1o-G5-ueS" customClass="BoundCarInfoController" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <view key="view" contentMode="scaleToFill" id="KIO-Gc-JtZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -643,7 +813,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆型号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clh-EH-vjE">
+=======
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆品牌" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clh-EH-vjE">
+>>>>>>> gpdevelop
                                 <rect key="frame" x="15" y="288" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -676,6 +850,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+<<<<<<< HEAD
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="F6y-15-xQi">
+                                <rect key="frame" x="10" y="369" width="300" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆类型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8p8-l9-q8j">
+                                <rect key="frame" x="15" y="335" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="X0Q-t2-jPG">
+                                <rect key="frame" x="88" y="331" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+>>>>>>> gpdevelop
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -688,6 +882,12 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="I1o-G5-ueS" eventType="touchUpInside" id="zWZ-F9-HtN"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="xSd-7F-hsv">
@@ -699,11 +899,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="7DL-1Y-ruq" kind="push" id="6St-1p-mcc"/>
+=======
+                                    <action selector="rightNavBarButtonClick:" destination="I1o-G5-ueS" eventType="touchUpInside" id="jiQ-n2-Lfk"/>
+>>>>>>> gpdevelop
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+<<<<<<< HEAD
+=======
+                    <connections>
+                        <outlet property="CarBrand" destination="XRb-ui-8fo" id="DvQ-zj-1do"/>
+                        <outlet property="CarHeadImage" destination="85G-E2-qC1" id="bR1-ty-jgi"/>
+                        <outlet property="CarName" destination="bgf-ff-lnX" id="ZPD-bE-PLF"/>
+                        <outlet property="CarNum" destination="j8y-pW-Xxo" id="NKC-ZH-d4V"/>
+                        <outlet property="CarType" destination="X0Q-t2-jPG" id="5Mz-lH-ccz"/>
+                    </connections>
+>>>>>>> gpdevelop
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEY-CY-hHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -712,8 +926,12 @@
         <!--Navigation Controller-->
         <scene sceneID="YkN-iY-BFX">
             <objects>
+<<<<<<< HEAD
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-NI-p7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lLk-3H-kEp" sceneMemberID="viewController">
+=======
+                <navigationController storyboardIdentifier="RegistFinishNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lLk-3H-kEp" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="847-xR-gu5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -726,6 +944,7 @@
                         <segue destination="Bhc-OS-c4t" kind="relationship" relationship="rootViewController" id="p74-Wl-wVu"/>
                     </connections>
                 </navigationController>
+<<<<<<< HEAD
             </objects>
             <point key="canvasLocation" x="-216" y="594"/>
         </scene>
@@ -733,6 +952,16 @@
         <scene sceneID="hjx-oR-kDE">
             <objects>
                 <viewController id="Ptb-02-qjX" sceneMemberID="viewController">
+=======
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPc-NI-p7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216" y="594"/>
+        </scene>
+        <!--Bound Pet Info Controller - 确认宠物信息-->
+        <scene sceneID="hjx-oR-kDE">
+            <objects>
+                <viewController storyboardIdentifier="BoundPetInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ptb-02-qjX" customClass="BoundPetInfoController" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <view key="view" contentMode="scaleToFill" id="AOZ-zs-Uqj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -902,6 +1131,12 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="Ptb-02-qjX" eventType="touchUpInside" id="4aS-YZ-feb"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Oot-zR-XVV">
@@ -912,18 +1147,44 @@
                                 <state key="normal" backgroundImage="tickoff.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
                             </button>
                         </barButtonItem>
                     </navigationItem>
+=======
+                                <connections>
+                                    <action selector="rightNavBarButtonClick:" destination="Ptb-02-qjX" eventType="touchUpInside" id="f3o-fD-EiZ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="PetBithday" destination="j9d-wT-YOr" id="DgW-dy-pvS"/>
+                        <outlet property="PetBreed" destination="dMS-hD-VKJ" id="vez-Of-VYb"/>
+                        <outlet property="PetHeadImage" destination="yYe-UJ-m2P" id="tga-xU-Wxh"/>
+                        <outlet property="PetHeight" destination="7vD-0e-p8f" id="5sH-KX-owg"/>
+                        <outlet property="PetName" destination="Yqm-lw-krf" id="Rde-Ep-ByO"/>
+                        <outlet property="PetSex" destination="Bdp-Ub-cJH" id="yi0-Kf-Lda"/>
+                        <outlet property="PetType" destination="E0P-cU-mWs" id="0aD-kP-eWV"/>
+                        <outlet property="PetWeight" destination="PxR-TE-cQa" id="qFv-CK-zHz"/>
+                    </connections>
+>>>>>>> gpdevelop
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tx6-ZT-gix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="1046"/>
         </scene>
+<<<<<<< HEAD
         <!--View Controller - 确认用户信息-->
         <scene sceneID="21a-Qz-nyN">
             <objects>
                 <viewController id="7DL-1Y-ruq" sceneMemberID="viewController">
+=======
+        <!--Bound Person Info Controller - 确认用户信息-->
+        <scene sceneID="21a-Qz-nyN">
+            <objects>
+                <viewController storyboardIdentifier="BoundPersonInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7DL-1Y-ruq" customClass="BoundPersonInfoController" sceneMemberID="viewController">
+>>>>>>> gpdevelop
                     <view key="view" contentMode="scaleToFill" id="oet-at-zLQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1059,6 +1320,12 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+<<<<<<< HEAD
+=======
+                                <connections>
+                                    <action selector="backNavBarButtonClick:" destination="7DL-1Y-ruq" eventType="touchUpInside" id="taa-7o-lSU"/>
+                                </connections>
+>>>>>>> gpdevelop
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="o5g-Za-IXt">
@@ -1070,11 +1337,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+<<<<<<< HEAD
                                     <segue destination="Ptb-02-qjX" kind="push" id="2nC-lH-Gpo"/>
+=======
+                                    <action selector="rightNavBarButtonClick:" destination="7DL-1Y-ruq" eventType="touchUpInside" id="jJK-PH-HR2"/>
+>>>>>>> gpdevelop
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+<<<<<<< HEAD
+=======
+                    <connections>
+                        <outlet property="PersonBirthday" destination="7gk-uX-f3F" id="DOC-Fp-d5p"/>
+                        <outlet property="PersonHeadImage" destination="RwW-Tg-pJW" id="XpV-7m-GYz"/>
+                        <outlet property="PersonHeight" destination="UK6-Sc-kY1" id="yX7-qD-feI"/>
+                        <outlet property="PersonName" destination="mhX-Zq-vL6" id="X7R-Kr-J0k"/>
+                        <outlet property="PersonSex" destination="wWe-6i-8Sa" id="xF0-Eq-hul"/>
+                        <outlet property="PersonWeight" destination="NyZ-YD-n8x" id="7M5-oU-DRu"/>
+                    </connections>
+>>>>>>> gpdevelop
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9PQ-sj-Zb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1084,21 +1366,29 @@
     <resources>
         <image name="NVBar_arrow_left.png" width="51" height="51"/>
         <image name="NVBar_arrow_right.png" width="51" height="51"/>
+<<<<<<< HEAD
+=======
+        <image name="Register.png" width="641" height="108"/>
+>>>>>>> gpdevelop
         <image name="RegisterFisihed1.png" width="319" height="98"/>
         <image name="RegisterFisihed2.png" width="320" height="98"/>
         <image name="background.png" width="320" height="568"/>
         <image name="buttonbackground.png" width="237" height="56"/>
         <image name="circleframe.png" width="572" height="86"/>
         <image name="lg.png" width="42" height="42"/>
-        <image name="lgblankspace.png" width="320" height="125"/>
         <image name="lgcode.png" width="18" height="18"/>
         <image name="lgloginbg.png" width="242" height="38"/>
         <image name="lgtextfield.png" width="487" height="79"/>
         <image name="lgusername.png" width="20" height="16"/>
+        <image name="login.png" width="288" height="46"/>
         <image name="loginQQ.png" width="42" height="42"/>
         <image name="loginsina.png" width="42" height="42"/>
         <image name="mailregisterbtn.png" width="121" height="38"/>
         <image name="or.png" width="44" height="44"/>
+<<<<<<< HEAD
+=======
+        <image name="pwd.png" width="39" height="39"/>
+>>>>>>> gpdevelop
         <image name="telregisterbtn.png" width="121" height="38"/>
         <image name="tickoff.png" width="50" height="50"/>
         <image name="typefaceimage.png" width="36" height="23"/>

@@ -10,18 +10,24 @@
 #import "BannerView.h"
 
 @interface LoginViewController : UIViewController
+
+@property (nonatomic, assign) BOOL isModalFromRegist;
+
 //用户名tf
 @property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 //密码tf
 @property (weak, nonatomic) IBOutlet UITextField *passWordTF;
 //首页滚动横幅
 @property (weak, nonatomic) IBOutlet BannerView *bannerView;
-
+//是否记住密码
+@property (weak, nonatomic) IBOutlet UIButton *isPwdRemeberBtn;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @property (weak, nonatomic) IBOutlet UIButton *qqLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *weiBoLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *demoLoginBtn;
+//忘记密码
+@property (weak, nonatomic) IBOutlet UIButton *forgetPwdBtn;
 
 //登陆
 - (IBAction)loginBtnClicked:(id)sender;
@@ -33,5 +39,9 @@
 - (IBAction)weiBoLoginClicked:(id)sender;
 //试用登陆
 - (IBAction)demoLoginClicked:(id)sender;
+//记住密码点击
+- (IBAction)isPwdRemeberBtnClicked:(id)sender;
+//忘记密码
+- (IBAction)forgetPwdBtnClicked:(id)sender;
 
 @end
