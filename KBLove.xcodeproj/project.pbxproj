@@ -194,6 +194,15 @@
 		F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2E19E7AACF009ADB44 /* red_theme.png */; };
 		F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */; };
 		F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E3019E7AACF009ADB44 /* themeSelected.png */; };
+		F97E349919EA39AA00283443 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349719EA39AA00283443 /* RegisterViewController.m */; };
+		F97E34A819EA39B800283443 /* BoundAddEquipmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349B19EA39B800283443 /* BoundAddEquipmentController.m */; };
+		F97E34A919EA39B800283443 /* BoundCarInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349D19EA39B800283443 /* BoundCarInfoController.m */; };
+		F97E34AA19EA39B800283443 /* BoundEquipmentDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349F19EA39B800283443 /* BoundEquipmentDetailController.m */; };
+		F97E34AB19EA39B800283443 /* BoundEquipmentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E34A119EA39B800283443 /* BoundEquipmentInfo.m */; };
+		F97E34AC19EA39B800283443 /* BoundPersonInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E34A319EA39B800283443 /* BoundPersonInfoController.m */; };
+		F97E34AD19EA39B800283443 /* BoundPetInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E34A519EA39B800283443 /* BoundPetInfoController.m */; };
+		F97E34AE19EA39B800283443 /* HeaderImageSelecterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E34A719EA39B800283443 /* HeaderImageSelecterController.m */; };
+		F97E34B219EA444D00283443 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E34B119EA444D00283443 /* WelcomeViewController.m */; };
 		F98545FC19E9000D006F5226 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98545F819E9000D006F5226 /* AppDelegate.m */; };
 		F98545FD19E9000D006F5226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F98545FB19E9000D006F5226 /* main.m */; };
 		F985460719E9004F006F5226 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F985460319E9004F006F5226 /* BannerView.m */; };
@@ -469,6 +478,25 @@
 		F91A0E2E19E7AACF009ADB44 /* red_theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_theme.png; sourceTree = "<group>"; };
 		F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_theme@2x.png"; sourceTree = "<group>"; };
 		F91A0E3019E7AACF009ADB44 /* themeSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themeSelected.png; sourceTree = "<group>"; };
+		F97E349619EA39AA00283443 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		F97E349719EA39AA00283443 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		F97E349819EA39AA00283443 /* DxConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DxConnection.h; sourceTree = "<group>"; };
+		F97E349A19EA39B800283443 /* BoundAddEquipmentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundAddEquipmentController.h; sourceTree = "<group>"; };
+		F97E349B19EA39B800283443 /* BoundAddEquipmentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundAddEquipmentController.m; sourceTree = "<group>"; };
+		F97E349C19EA39B800283443 /* BoundCarInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundCarInfoController.h; sourceTree = "<group>"; };
+		F97E349D19EA39B800283443 /* BoundCarInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundCarInfoController.m; sourceTree = "<group>"; };
+		F97E349E19EA39B800283443 /* BoundEquipmentDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundEquipmentDetailController.h; sourceTree = "<group>"; };
+		F97E349F19EA39B800283443 /* BoundEquipmentDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundEquipmentDetailController.m; sourceTree = "<group>"; };
+		F97E34A019EA39B800283443 /* BoundEquipmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundEquipmentInfo.h; sourceTree = "<group>"; };
+		F97E34A119EA39B800283443 /* BoundEquipmentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundEquipmentInfo.m; sourceTree = "<group>"; };
+		F97E34A219EA39B800283443 /* BoundPersonInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundPersonInfoController.h; sourceTree = "<group>"; };
+		F97E34A319EA39B800283443 /* BoundPersonInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundPersonInfoController.m; sourceTree = "<group>"; };
+		F97E34A419EA39B800283443 /* BoundPetInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundPetInfoController.h; sourceTree = "<group>"; };
+		F97E34A519EA39B800283443 /* BoundPetInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundPetInfoController.m; sourceTree = "<group>"; };
+		F97E34A619EA39B800283443 /* HeaderImageSelecterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderImageSelecterController.h; sourceTree = "<group>"; };
+		F97E34A719EA39B800283443 /* HeaderImageSelecterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderImageSelecterController.m; sourceTree = "<group>"; };
+		F97E34B019EA444D00283443 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		F97E34B119EA444D00283443 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		F98545F719E9000D006F5226 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F98545F819E9000D006F5226 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F98545F919E9000D006F5226 /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
@@ -1103,6 +1131,24 @@
 			path = themeImages;
 			sourceTree = "<group>";
 		};
+		F97E349519EA39AA00283443 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F97E349619EA39AA00283443 /* RegisterViewController.h */,
+				F97E349719EA39AA00283443 /* RegisterViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F97E34AF19EA443500283443 /* 欢迎 */ = {
+			isa = PBXGroup;
+			children = (
+				F97E34B019EA444D00283443 /* WelcomeViewController.h */,
+				F97E34B119EA444D00283443 /* WelcomeViewController.m */,
+			);
+			path = "欢迎";
+			sourceTree = "<group>";
+		};
 		F98545F619E9000D006F5226 /* OtherSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,6 +1173,7 @@
 		F98545FF19E9004F006F5226 /* 引导界面 */ = {
 			isa = PBXGroup;
 			children = (
+				F97E34AF19EA443500283443 /* 欢迎 */,
 				F985460019E9004F006F5226 /* 注册 */,
 				F985460119E9004F006F5226 /* 登陆 */,
 				F985460619E9004F006F5226 /* 绑定 */,
@@ -1137,10 +1184,8 @@
 		F985460019E9004F006F5226 /* 注册 */ = {
 			isa = PBXGroup;
 			children = (
-				BCA8AC8B19E9227D000CA3DC /* Controllers */,
-				BCA8AC8E19E9227D000CA3DC /* DxConnection.h */,
-				BCA8AC8F19E9227D000CA3DC /* Model */,
-				BCA8AC9019E9227D000CA3DC /* View */,
+				F97E349519EA39AA00283443 /* Controllers */,
+				F97E349819EA39AA00283443 /* DxConnection.h */,
 			);
 			path = "注册";
 			sourceTree = "<group>";
@@ -1159,19 +1204,20 @@
 		F985460619E9004F006F5226 /* 绑定 */ = {
 			isa = PBXGroup;
 			children = (
-				BC2174CC459890A500F457C5 /* 绑定信息 */,
-				BC2174B74598908500F457C5 /* BoundAddEquipmentController.h */,
-				BC2174B84598908500F457C5 /* BoundAddEquipmentController.m */,
-				BC2174BB4598908500F457C5 /* BoundEquipmentDetailController.h */,
-				BC2174BC4598908500F457C5 /* BoundEquipmentDetailController.m */,
-				BC2174B94598908500F457C5 /* BoundCarInfoController.h */,
-				BC2174BA4598908500F457C5 /* BoundCarInfoController.m */,
-				BC2174BF4598908500F457C5 /* BoundPersonInfoController.h */,
-				BC2174C04598908500F457C5 /* BoundPersonInfoController.m */,
-				BC2174C14598908500F457C5 /* BoundPetInfoController.h */,
-				BC2174C24598908500F457C5 /* BoundPetInfoController.m */,
-				BC2174C34598908500F457C5 /* HeaderImageSelecterController.h */,
-				BC2174C44598908500F457C5 /* HeaderImageSelecterController.m */,
+				F97E349A19EA39B800283443 /* BoundAddEquipmentController.h */,
+				F97E349B19EA39B800283443 /* BoundAddEquipmentController.m */,
+				F97E349C19EA39B800283443 /* BoundCarInfoController.h */,
+				F97E349D19EA39B800283443 /* BoundCarInfoController.m */,
+				F97E349E19EA39B800283443 /* BoundEquipmentDetailController.h */,
+				F97E349F19EA39B800283443 /* BoundEquipmentDetailController.m */,
+				F97E34A019EA39B800283443 /* BoundEquipmentInfo.h */,
+				F97E34A119EA39B800283443 /* BoundEquipmentInfo.m */,
+				F97E34A219EA39B800283443 /* BoundPersonInfoController.h */,
+				F97E34A319EA39B800283443 /* BoundPersonInfoController.m */,
+				F97E34A419EA39B800283443 /* BoundPetInfoController.h */,
+				F97E34A519EA39B800283443 /* BoundPetInfoController.m */,
+				F97E34A619EA39B800283443 /* HeaderImageSelecterController.h */,
+				F97E34A719EA39B800283443 /* HeaderImageSelecterController.m */,
 			);
 			path = "绑定";
 			sourceTree = "<group>";
@@ -1405,52 +1451,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91A0DAD19E7A429009ADB44 /* UIViewController+NavigationItemSettingTool.m in Sources */,
+				F97E34AA19EA39B800283443 /* BoundEquipmentDetailController.m in Sources */,
 				F91A0D9D19E795C6009ADB44 /* qrencode.c in Sources */,
 				F91A0CEE19E788F5009ADB44 /* AFURLRequestSerialization.m in Sources */,
 				F91A0D9E19E795C6009ADB44 /* qrinput.c in Sources */,
 				F91A0CED19E788F5009ADB44 /* AFURLConnectionOperation.m in Sources */,
 				F91A0CF319E788F5009ADB44 /* UIAlertView+AFNetworking.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* WLReachability.m in Sources */,
-				BC2174C54598908500F457C5 /* BoundAddEquipmentController.m in Sources */,
 				F91A0D9C19E795C6009ADB44 /* QRCodeGenerator.m in Sources */,
 				F985460719E9004F006F5226 /* BannerView.m in Sources */,
-				BC2174C94598908500F457C5 /* BoundPersonInfoController.m in Sources */,
 				F91A0CEC19E788F5009ADB44 /* AFSecurityPolicy.m in Sources */,
 				F91A0D7419E78E0A009ADB44 /* NSFileManager+pathMethod.m in Sources */,
-				BCA8AC9119E9227D000CA3DC /* RegisterViewController.m in Sources */,
+				F97E349919EA39AA00283443 /* RegisterViewController.m in Sources */,
 				F91A0D7519E78E0A009ADB44 /* NSString+WLTooll.m in Sources */,
 				F91A0CE819E788F5009ADB44 /* AFHTTPRequestOperation.m in Sources */,
+				F97E34AC19EA39B800283443 /* BoundPersonInfoController.m in Sources */,
 				F91A0DA119E795C6009ADB44 /* split.c in Sources */,
 				F91A0CF019E788F5009ADB44 /* AFURLSessionManager.m in Sources */,
 				F91A0D7819E78E0A009ADB44 /* UILabel+WLTool.m in Sources */,
+				F97E34A919EA39B800283443 /* BoundCarInfoController.m in Sources */,
+				F97E34AD19EA39B800283443 /* BoundPetInfoController.m in Sources */,
 				F91A0D7E19E78E79009ADB44 /* KBUserInfo.m in Sources */,
 				F91A0CEF19E788F5009ADB44 /* AFURLResponseSerialization.m in Sources */,
 				F91A0DA019E795C6009ADB44 /* rscode.c in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F985460819E9004F006F5226 /* LoginViewController.m in Sources */,
 				F91A0D7719E78E0A009ADB44 /* UIImageView+WLTool.m in Sources */,
-				BC2174CA4598908500F457C5 /* BoundPetInfoController.m in Sources */,
+				F97E34A819EA39B800283443 /* BoundAddEquipmentController.m in Sources */,
 				F91A0D9B19E795C6009ADB44 /* mask.c in Sources */,
+				F97E34B219EA444D00283443 /* WelcomeViewController.m in Sources */,
 				F91A0D7619E78E0A009ADB44 /* UIButton+WLTool.m in Sources */,
 				6EA222E319E914F40073274D /* LoginRequest.m in Sources */,
 				F91A0D8219E78F8E009ADB44 /* WLImagePickerTool.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* WLHttpRequestTool.m in Sources */,
-				BC2174C84598908500F457C5 /* BoundEquipmentInfo.m in Sources */,
 				F91A0D9F19E795C6009ADB44 /* qrspec.c in Sources */,
 				F91A0CF619E788F5009ADB44 /* UIProgressView+AFNetworking.m in Sources */,
-				BC2174C64598908500F457C5 /* BoundCarInfoController.m in Sources */,
 				F91A0CEA19E788F5009ADB44 /* AFHTTPSessionManager.m in Sources */,
 				F91A0CF119E788F5009ADB44 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F91A0CE919E788F5009ADB44 /* AFHTTPRequestOperationManager.m in Sources */,
 				F91A0CF519E788F5009ADB44 /* UIImageView+AFNetworking.m in Sources */,
 				F91A0CF419E788F5009ADB44 /* UIButton+AFNetworking.m in Sources */,
-				BC2174CB4598908500F457C5 /* HeaderImageSelecterController.m in Sources */,
 				F91A0CF719E788F5009ADB44 /* UIRefreshControl+AFNetworking.m in Sources */,
-				BC2174C74598908500F457C5 /* BoundEquipmentDetailController.m in Sources */,
 				F91A0CF819E788F5009ADB44 /* UIWebView+AFNetworking.m in Sources */,
 				F91A0CEB19E788F5009ADB44 /* AFNetworkReachabilityManager.m in Sources */,
 				F91A0CFA19E788F5009ADB44 /* SVProgressHUD.m in Sources */,
 				F91A0DA419E7960B009ADB44 /* WLQRCodeTool.m in Sources */,
+				F97E34AE19EA39B800283443 /* HeaderImageSelecterController.m in Sources */,
+				F97E34AB19EA39B800283443 /* BoundEquipmentInfo.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F91A0D9A19E795C6009ADB44 /* bitstream.c in Sources */,
 				F91A0D5319E78CAF009ADB44 /* ZCZBarViewController.mm in Sources */,

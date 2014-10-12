@@ -10,6 +10,9 @@
 #import "BannerView.h"
 
 @interface LoginViewController : UIViewController
+
+@property (nonatomic, assign) BOOL isModalFromRegist;
+
 //用户名tf
 @property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 //密码tf

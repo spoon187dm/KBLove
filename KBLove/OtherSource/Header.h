@@ -8,10 +8,12 @@
 //CustomUserLocationViewController.m
 #ifndef KBLove_Header_h
 #define KBLove_Header_h
+
+#define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
 // wap服务器地址前缀
 #define SERVER_URL @"http://118.194.192.104:8080"
 //注册
-#define REGRSTER_URL NSString stringWithFormat:@"%@/api/register.do?type=%@&name=%@&pwd=%@",SERVER_URL
+#define REGRSTER_URL NSString stringWithFormat:@"%@/api/register.do?type=%d&name=%@&pwd=%@",SERVER_URL
 //登陆
 #define LOGIN_URL  NSString stringWithFormat:@"%@/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d",SERVER_URL
 //修改密码

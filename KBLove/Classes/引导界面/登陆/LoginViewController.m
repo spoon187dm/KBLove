@@ -96,7 +96,18 @@
 
 #pragma mark - 注册
 - (IBAction)registerBtnClicked:(id)sender {
-#warning 注册跳转
+//跳转到注册页面
+    if (_isModalFromRegist) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }else{
+        LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        vc.isModalFromRegist = YES;
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+    }
 }
 
 #pragma mark - 登陆结果提示
