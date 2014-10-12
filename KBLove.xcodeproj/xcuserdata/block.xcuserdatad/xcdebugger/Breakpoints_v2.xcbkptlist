@@ -38,7 +38,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/&#x5f15;&#x5bfc;&#x754c;&#x9762;/&#x7ed1;&#x5b9a;/BoundEquipmentDetailController.m"
@@ -54,7 +54,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/&#x5f15;&#x5bfc;&#x754c;&#x9762;/&#x7ed1;&#x5b9a;/BoundEquipmentDetailController.m"
@@ -70,7 +70,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/&#x5f15;&#x5bfc;&#x754c;&#x9762;/&#x6ce8;&#x518c;/Controllers/RegisterViewController.m"

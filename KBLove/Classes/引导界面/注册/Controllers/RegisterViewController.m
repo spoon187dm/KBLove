@@ -23,6 +23,11 @@
     [super viewDidLoad];
     //默认电话注册
     _registertype=phone;
+    _verifyPasswordTextfiled.secureTextEntry=YES;
+    _passwordTextFiled.secureTextEntry=YES;
+    _userNameTextfiled.clearButtonMode=UITextFieldViewModeAlways;
+    _passwordTextFiled.clearButtonMode=UITextFieldViewModeAlways;
+    _verifyPasswordTextfiled.clearButtonMode=UITextFieldViewModeAlways;
     // Do any additional setup after loading the view.
 }
 //电话注册
@@ -51,8 +56,9 @@
             case phone:{
                 if (![_userNameTextfiled.text isValidateMobile]) {
                     [self showAlertWithTitle:@"温馨提示" AndMessage:@"手机号不合法"];
+                     return;
                 }
-                return;
+               
                 
             }break;
             case email:{
@@ -87,7 +93,9 @@
                         user.userId=user_id;
                         user.passWord=_passwordTextFiled.text;
                         
-                        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistFinishViewController"];
+                        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistFinishNavigationController"];
+
+                        
                         [self presentViewController:vc animated:YES completion:^{
                             
                         }];
