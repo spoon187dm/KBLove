@@ -5,50 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>74996171-6F1E-4B44-8971-0DE217E7BFEF</string>
-=======
-	<string>71F114C9-412F-47CB-A6A9-92A86C7B31B8</string>
->>>>>>> gpdevelop
+	<string>07490070-5698-40F2-A4BB-360E139E9D24</string>
 	<key>IDESourceControlProjectName</key>
 	<string>KBLove</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
-		<string>https://github.com/blockdate/KBLove.git</string>
-		<key>E2794E68-44ED-4FEE-B660-FF3290DF4692</key>
+		<key>18CAE6EF-A833-4655-ABD3-4706164A79BC</key>
 		<string>https://github.com/blockdate/KBLove.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>KBLove.xcodeproj</string>
+	<string>KBLove.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
+		<key>18CAE6EF-A833-4655-ABD3-4706164A79BC</key>
 		<string>../..</string>
-		<key>E2794E68-44ED-4FEE-B660-FF3290DF4692</key>
-		<string>../../../KBLove</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/blockdate/KBLove.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>111</integer>
+	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
+	<string>18CAE6EF-A833-4655-ABD3-4706164A79BC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
-			<key>IDESourceControlWCCName</key>
-			<string>gpdevelop</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E2794E68-44ED-4FEE-B660-FF3290DF4692</string>
+			<string>18CAE6EF-A833-4655-ABD3-4706164A79BC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KBLove</string>
 		</dict>
