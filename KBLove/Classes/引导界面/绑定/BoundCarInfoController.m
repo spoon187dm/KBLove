@@ -30,16 +30,18 @@
     BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
     WLHttpRequestTool *httptool=[WLHttpRequestTool sharedInstance];
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
-    [dic setObject: _equipment.EquipmentIMEINum forKey:@""];
     [dic setObject:@"7" forKey:@"cmd"];
     [dic setObject:@"1" forKey:@"operate"];
-    //token  user_id
+    KBUserInfo *user=[KBUserInfo sharedInfo];
+    [dic setObject:user.token forKey:@"token"];
+    [dic setObject:user.userId forKeyedSubscript:@"user_id"];
     [dic setObject:_equipment.EquipmentIMEINum forKey:@"device_sn"];
     [dic setObject:_equipment.EquipmentIponeNum forKey:@"phone"];
     [dic setObject:self.CarName.text forKey:@"name"];
-    [dic setObject:@"" forKey:@"icon"];
+//    [dic setObject:@"" forKey:@"icon"];//尚未添加头像
     [dic setObject:self.CarNum.text forKey:@"car"];
     NSString *urlstr=@"http://118.194.192.104:8080/api/device.edit.do?";
+    NSLog(@"------%@",dic);
     [httptool request:urlstr requestType:0 params:dic overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             NSLog(@"%@",result);
