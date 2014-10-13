@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginRequest.h"
+#import <SVProgressHUD.h>
 
 @interface LoginViewController ()
 {
@@ -49,17 +50,20 @@
     //判断是否用户名是否合法
     if ([_userNameTF.text isValidateEmail] || [_userNameTF.text isValidateMobile]) {
         //发起登陆请求
+        [SVProgressHUD showWithStatus:@"登录中..." maskType:SVProgressHUDMaskTypeBlack];
         [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
             //成功后跳转
 #warning 登陆后跳转
+            [SVProgressHUD dismiss];
             NSLog(@"登陆成功");
         } andLoginFaildeBlock:^(NSString *desc) {
+            [SVProgressHUD dismiss];
             //展示错误信息
             [self createAlertViewWithTitile:@"温馨提示" andMessage:desc];
         }];
 
     } else {
-        
+        [SVProgressHUD dismiss];
         [self createAlertViewWithTitile:@"温馨提示" andMessage:@"用户名或密码错误"];
     }
     
