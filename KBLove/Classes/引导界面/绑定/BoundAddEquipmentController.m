@@ -47,6 +47,7 @@
             
         }
     }];
+    vc.ScanResult = nil;
     [self presentViewController:vc animated:YES completion:nil];
 }
 

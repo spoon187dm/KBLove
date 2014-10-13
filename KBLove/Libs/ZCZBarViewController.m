@@ -53,7 +53,7 @@
     }
     [self.view addSubview:bgImageView];
 //    [bgImageView release];
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 280, 320, 40)];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 320, 320, 40)];
     label.text = @"将取景框对准二维码，即可自动扫描。";
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
@@ -77,8 +77,8 @@
     scanImageView.userInteractionEnabled=YES;
     [self.view addSubview:scanImageView];
 //    [scanImageView release];
-    NSArray*unSelectImageNames=@[@"qrcode_scan_btn_photo_nor.png",@"qrcode_scan_btn_flash_nor.png",@"qrcode_scan_btn_myqrcode_nor.png"];
-    NSArray*selectImageNames=@[@"qrcode_scan_btn_photo_down.png",@"qrcode_scan_btn_flash_down.png",@"qrcode_scan_btn_myqrcode_down.png"];
+    NSArray*unSelectImageNames=@[@"qrcode_scan_btn_flash_nor.png",@"qrcode_scan_btn_myqrcode_nor.png"];
+    NSArray*selectImageNames=@[@"qrcode_scan_btn_flash_down.png",@"qrcode_scan_btn_myqrcode_down.png"];
     
     for (int i=0; i<unSelectImageNames.count; i++) {
         UIButton*button=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -86,13 +86,11 @@
         [button setImage:[UIImage imageNamed:selectImageNames[i]] forState:UIControlStateHighlighted];
         button.frame=CGRectMake(320/3*i, 0, 320/3, 100);
         [scanImageView addSubview:button];
+
         if (i==0) {
-            [button addTarget:self action:@selector(pressPhotoLibraryButton:) forControlEvents:UIControlEventTouchUpInside];
-        }
-        if (i==1) {
             [button addTarget:self action:@selector(flashLightClick) forControlEvents:UIControlEventTouchUpInside];
         }
-        if (i==2) {
+        if (i==1) {
             button.hidden=YES;
         }
         
@@ -332,38 +330,38 @@
 #pragma mark 对图像进行解码
 - (void)decodeImage:(UIImage *)image
 {
-    
-    self.isScanning = NO;
-    ZBarSymbol *symbol = nil;
-    
-    ZBarReaderController* read = [ZBarReaderController new];
-    
-    read.readerDelegate = self;
-    
-    CGImageRef cgImageRef = image.CGImage;
-    
-    for(symbol in [read scanImage:cgImageRef])break;
-    
-    if (symbol!=nil) {
-        if (timer) {
-            [timer invalidate];
-            timer=nil;
-        }
-        
-        _line.frame = CGRectMake(50, 50, 220, 2);
-        num = 0;
-        upOrdown = NO;
-        self.ScanResult(symbol.data,YES);
-        [self.captureSession stopRunning];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }else{
-        timer = [NSTimer scheduledTimerWithTimeInterval:.02 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
-        num = 0;
-        upOrdown = NO;
-        self.isScanning = YES;
-        [self.captureSession startRunning];
-
-    }
+//    
+//    self.isScanning = NO;
+//    ZBarSymbol *symbol = nil;
+//    
+//    ZBarReaderController* read = [ZBarReaderController new];
+//    
+//    read.readerDelegate = self;
+//    
+//    CGImageRef cgImageRef = image.CGImage;
+//    
+//    for(symbol in [read scanImage:cgImageRef])break;
+//    
+//    if (symbol!=nil) {
+//        if (timer) {
+//            [timer invalidate];
+//            timer=nil;
+//        }
+//        
+//        _line.frame = CGRectMake(50, 50, 220, 2);
+//        num = 0;
+//        upOrdown = NO;
+//        self.ScanResult(symbol.data,YES);
+//        [self.captureSession stopRunning];
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }else{
+//        timer = [NSTimer scheduledTimerWithTimeInterval:.02 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
+//        num = 0;
+//        upOrdown = NO;
+//        self.isScanning = YES;
+//        [self.captureSession startRunning];
+//
+//    }
     
     
     
