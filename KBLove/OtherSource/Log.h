@@ -9,7 +9,8 @@
 #ifndef KBLove_Log_h
 #define KBLove_Log_h
 /**
- *  10月11日
+ *  10月13日
+ *  登陆界面
  *
  */
 
