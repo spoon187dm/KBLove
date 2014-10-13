@@ -47,6 +47,10 @@
             
         }
     }];
+<<<<<<< HEAD
+=======
+    vc.ScanResult = nil;
+>>>>>>> gpdevelop
     [self presentViewController:vc animated:YES completion:nil];
 }
 

@@ -9,6 +9,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "KBLove/Utility/Tools/WLQRCodeTool.m"
             timestampString = "434885457.721752"
             startingColumnNumber = "9223372036854775807"
@@ -25,11 +26,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+=======
+>>>>>>> gpdevelop
             filePath = "KBLove/Classes/&#x5f15;&#x5bfc;&#x754c;&#x9762;/&#x7ed1;&#x5b9a;/BoundAddEquipmentController.m"
             timestampString = "434885501.969729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
+<<<<<<< HEAD
             endingLineNumber = "48"
 <<<<<<< HEAD
             landmarkName = "-click_missDevice:"
@@ -37,6 +41,15 @@
             landmarkName = "-click_QECode:"
 >>>>>>> wl
             landmarkType = "5">
+=======
+<<<<<<< Updated upstream
+            endingLineNumber = "48"
+            landmarkName = "-click_QECode:"
+            landmarkType = "5">
+=======
+            endingLineNumber = "48">
+>>>>>>> Stashed changes
+>>>>>>> gpdevelop
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
