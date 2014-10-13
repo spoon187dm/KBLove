@@ -369,7 +369,7 @@
 		F98545F719E9000D006F5226 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F98545F819E9000D006F5226 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F98545F919E9000D006F5226 /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
-		F98545FA19E9000D006F5226 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		F98545FA19E9000D006F5226 /* WMBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBLog.h; sourceTree = "<group>"; };
 		F98545FB19E9000D006F5226 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F985460219E9004F006F5226 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		F985460319E9004F006F5226 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
@@ -409,6 +409,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E9BFFC119EBCF9600B8F40C /* 消息中心 */ = {
+			isa = PBXGroup;
+			children = (
+				6E9BFFC219EBCF9600B8F40C /* 圈子 */,
+				6E9BFFC319EBCF9600B8F40C /* 好友 */,
+			);
+			path = "消息中心";
+			sourceTree = "<group>";
+		};
+		6E9BFFC219EBCF9600B8F40C /* 圈子 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "圈子";
+			sourceTree = "<group>";
+		};
+		6E9BFFC319EBCF9600B8F40C /* 好友 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "好友";
+			sourceTree = "<group>";
+		};
 		6EA222DF19E914980073274D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,7 +880,7 @@
 				F98545F819E9000D006F5226 /* AppDelegate.m */,
 				6EA222E419E91EAE0073274D /* Header.h */,
 				F98545F919E9000D006F5226 /* Help.h */,
-				F98545FA19E9000D006F5226 /* Log.h */,
+				F98545FA19E9000D006F5226 /* WMBLog.h */,
 				F98545FB19E9000D006F5226 /* main.m */,
 			);
 			path = OtherSource;
@@ -866,6 +889,7 @@
 		F98545FE19E9004F006F5226 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6E9BFFC119EBCF9600B8F40C /* 消息中心 */,
 				F98545FF19E9004F006F5226 /* 引导界面 */,
 			);
 			path = Classes;

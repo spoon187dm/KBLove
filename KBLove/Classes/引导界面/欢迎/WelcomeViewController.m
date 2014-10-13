@@ -9,7 +9,6 @@
 #import "WelcomeViewController.h"
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
-#import <SVProgressHUD.h>
 
 @interface WelcomeViewController ()
 
