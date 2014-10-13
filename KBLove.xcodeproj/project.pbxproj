@@ -151,6 +151,8 @@
 		F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2E19E7AACF009ADB44 /* red_theme.png */; };
 		F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */; };
 		F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E3019E7AACF009ADB44 /* themeSelected.png */; };
+		F974107819EBE87900E12633 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F974107719EBE87900E12633 /* MainViewController.m */; };
+		F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */; };
 		F97E349919EA39AA00283443 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349719EA39AA00283443 /* RegisterViewController.m */; };
 		F97E34A819EA39B800283443 /* BoundAddEquipmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349B19EA39B800283443 /* BoundAddEquipmentController.m */; };
 		F97E34A919EA39B800283443 /* BoundCarInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97E349D19EA39B800283443 /* BoundCarInfoController.m */; };
@@ -347,6 +349,10 @@
 		F91A0E2E19E7AACF009ADB44 /* red_theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_theme.png; sourceTree = "<group>"; };
 		F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_theme@2x.png"; sourceTree = "<group>"; };
 		F91A0E3019E7AACF009ADB44 /* themeSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themeSelected.png; sourceTree = "<group>"; };
+		F974107619EBE87900E12633 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F974107719EBE87900E12633 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F974107B19EBE96B00E12633 /* wulei.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wulei.h; sourceTree = "<group>"; };
 		F97E349619EA39AA00283443 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		F97E349719EA39AA00283443 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		F97E349819EA39AA00283443 /* DxConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DxConnection.h; sourceTree = "<group>"; };
@@ -501,6 +507,7 @@
 			children = (
 				F98545FE19E9004F006F5226 /* Classes */,
 				F91A0C9119E7880C009ADB44 /* Supporting Files */,
+				F974107B19EBE96B00E12633 /* wulei.h */,
 			);
 			path = KBLove;
 			sourceTree = "<group>";
@@ -516,6 +523,7 @@
 				F91A0CB919E788CF009ADB44 /* Libs */,
 				F91A0C9319E7880C009ADB44 /* InfoPlist.strings */,
 				F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */,
+				F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -855,6 +863,64 @@
 			path = themeImages;
 			sourceTree = "<group>";
 		};
+		F974107519EBE86500E12633 /* 主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				F974107619EBE87900E12633 /* MainViewController.h */,
+				F974107719EBE87900E12633 /* MainViewController.m */,
+			);
+			path = "主界面";
+			sourceTree = "<group>";
+		};
+		F974107E19EC280200E12633 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F974107F19EC280200E12633 /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		F974108019EC280200E12633 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F974108119EC280200E12633 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		F974108219EC280200E12633 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F974108319EC280200E12633 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		F974108419EC280200E12633 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
 		F97E349519EA39AA00283443 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +955,14 @@
 		F98545FE19E9004F006F5226 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F974107E19EC280200E12633 /* AppDelegate */,
+				F974107F19EC280200E12633 /* General */,
+				F974108019EC280200E12633 /* Helpers */,
+				F974108119EC280200E12633 /* Macro */,
+				F974108219EC280200E12633 /* Models */,
+				F974108319EC280200E12633 /* Sections */,
+				F974108419EC280200E12633 /* Vendors */,
+				F974107519EBE86500E12633 /* 主界面 */,
 				6E9BFFC119EBCF9600B8F40C /* 消息中心 */,
 				F98545FF19E9004F006F5226 /* 引导界面 */,
 			);
@@ -1085,6 +1159,7 @@
 				F91A0E7E19E7AACF009ADB44 /* image1.png in Resources */,
 				F91A0E6119E7AACF009ADB44 /* clearNavItemNormal.png in Resources */,
 				F91A0E9919E7AACF009ADB44 /* red_iOS7_navBar@2x.png in Resources */,
+				F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */,
 				F91A0E9719E7AACF009ADB44 /* red_iOS6_navBar@2x.png in Resources */,
 				F91A0E6719E7AACF009ADB44 /* ReturnItem.png in Resources */,
 				F91A0E4B19E7AACF009ADB44 /* other2.png in Resources */,
@@ -1205,6 +1280,7 @@
 				F97E34AD19EA39B800283443 /* BoundPetInfoController.m in Sources */,
 				F91A0D7E19E78E79009ADB44 /* KBUserInfo.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
+				F974107819EBE87900E12633 /* MainViewController.m in Sources */,
 				F985460819E9004F006F5226 /* LoginViewController.m in Sources */,
 				F91A0D7719E78E0A009ADB44 /* UIImageView+WLTool.m in Sources */,
 				F97E34A819EA39B800283443 /* BoundAddEquipmentController.m in Sources */,
