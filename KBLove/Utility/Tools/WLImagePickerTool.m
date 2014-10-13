@@ -102,12 +102,12 @@ static WLImagePickerTool *tool = nil;
     picker.allowsEditing = YES;
     //
 
-//    if (_vc) {
-//        [_vc presentViewController:picker animated:YES completion:nil];
-//    }
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:picker animated:YES completion:^{
-//
-    }];
+    if (_vc) {
+        [_vc presentViewController:picker animated:YES completion:nil];
+    }
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:picker animated:YES completion:^{
+////
+//    }];
 }
 
 - (void)showAlterWithMessage:(NSString *)message{
