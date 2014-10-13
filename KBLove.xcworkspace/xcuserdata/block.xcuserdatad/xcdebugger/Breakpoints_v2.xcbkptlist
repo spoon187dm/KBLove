@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KBLove/Utility/Tools/WLQRCodeTool.m"
-            timestampString = "434885457.721752"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-showQrScanViewWithBlock:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/&#x5f15;&#x5bfc;&#x754c;&#x9762;/&#x7ed1;&#x5b9a;/BoundAddEquipmentController.m"
             timestampString = "434885501.969729"
             startingColumnNumber = "9223372036854775807"
