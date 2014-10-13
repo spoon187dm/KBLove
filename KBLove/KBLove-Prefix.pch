@@ -15,11 +15,13 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "WLCategorys.h"
-//    #import "UIImageView+AFNetworking.h"
     #import "UIView+JMFrame.h"
-//    #import "SVProgressHUD.h"
     #import "KBUserInfo.h"
-    #import "WLImagePickerTool.h"
-    #import "WLQRCodeTool.h"
-    #import "Header.h"
+    #import "ImagePickerTool.h"
+    #import "QRCodeTool.h"
+    #import "NetWorkingMacro.h"
+    #import "VendorsMacro.h"
+    #import "UtilsMacro.h"
+    #import "BlockMacro.h"
+
 #endif
