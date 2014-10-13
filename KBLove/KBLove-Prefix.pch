@@ -1,4 +1,4 @@
-//
+///
 //  Prefix header
 //
 //  The contents of this file are implicitly included at the beginning of every source file.
@@ -15,9 +15,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "WLCategorys.h"
-    #import "UIImageView+AFNetworking.h"
+//    #import "UIImageView+AFNetworking.h"
     #import "UIView+JMFrame.h"
-    #import "SVProgressHUD.h"
+//    #import "SVProgressHUD.h"
     #import "KBUserInfo.h"
     #import "WLImagePickerTool.h"
     #import "WLQRCodeTool.h"
