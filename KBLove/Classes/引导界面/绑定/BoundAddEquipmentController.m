@@ -9,6 +9,7 @@
 #import "BoundAddEquipmentController.h"
 #import "BoundEquipmentDetailController.h"
 #import "BoundEquipmentInfo.h"
+#import "ZCZBarViewController.h"
 @interface BoundAddEquipmentController ()
 
 @end
@@ -41,6 +42,12 @@
 }
 
 - (IBAction)click_QECode:(id)sender {
+    ZCZBarViewController*vc=[[ZCZBarViewController alloc]initWithBlock:^(NSString *str, BOOL isScceed) {
+        if (isScceed) {
+            
+        }
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)click_help:(id)sender {
