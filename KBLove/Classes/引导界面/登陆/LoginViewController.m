@@ -57,7 +57,6 @@
         [SVProgressHUD showWithStatus:@"登录中..." maskType:SVProgressHUDMaskTypeBlack];
         [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
             //成功后跳转
-#warning 登陆后跳转
             [SVProgressHUD dismiss];
             NSLog(@"登陆成功");
         } andLoginFaildeBlock:^(NSString *desc) {
