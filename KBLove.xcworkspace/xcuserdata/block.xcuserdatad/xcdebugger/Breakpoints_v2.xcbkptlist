@@ -14,9 +14,13 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
+<<<<<<< Updated upstream
             endingLineNumber = "48"
             landmarkName = "-click_QECode:"
             landmarkType = "5">
+=======
+            endingLineNumber = "48">
+>>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
