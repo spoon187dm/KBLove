@@ -44,13 +44,9 @@
 - (IBAction)click_QECode:(id)sender {
     ZCZBarViewController*vc=[[ZCZBarViewController alloc]initWithBlock:^(NSString *str, BOOL isScceed) {
         if (isScceed) {
-            
+            self.EquipmentIMEINum.text = str;
         }
     }];
-<<<<<<< HEAD
-=======
-    vc.ScanResult = nil;
->>>>>>> gpdevelop
     [self presentViewController:vc animated:YES completion:nil];
 }
 

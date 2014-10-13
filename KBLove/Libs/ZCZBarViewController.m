@@ -383,6 +383,7 @@
     {
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         self.ScanResult(metadataObject.stringValue,YES);
+        self.ScanResult = nil;
     }
     
     [self.captureSession stopRunning];
