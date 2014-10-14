@@ -21,6 +21,7 @@
  *2014-10-14
  *在classes/General中 添加KBFreash加载类
  *在header.h文件中加入相应 头文件 
+ *实现 圈子页面 ，创建圈子页面 基本功能，导入相应搜索类库PinYin
  */
 
 #endif
