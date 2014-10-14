@@ -20,6 +20,7 @@
 		6EA2BFEF19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */; };
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
+		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC59835D19ECCC4300DAC76A /* FreashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59835A19ECCC4300DAC76A /* FreashManager.m */; };
 		BC59835E19ECCC4300DAC76A /* KBFreash.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59835C19ECCC4300DAC76A /* KBFreash.m */; };
 		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
@@ -224,6 +225,8 @@
 		6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFriendInfo.m; sourceTree = "<group>"; };
 		6ECC038219ECFCC60008ACAD /* AddFriendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendButton.h; sourceTree = "<group>"; };
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
+		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC59833319ECB3E600DAC76A /* DXLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXLog.h; sourceTree = "<group>"; };
 		BC59835919ECCC4300DAC76A /* FreashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreashManager.h; sourceTree = "<group>"; };
@@ -520,6 +523,8 @@
 				6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */,
 				6E16647919ECD4F90081EB4C /* AddFriendViewController.h */,
 				6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */,
+				6ECC038519ED05030008ACAD /* SearchResultViewController.h */,
+				6ECC038619ED05030008ACAD /* SearchResultViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1419,6 +1424,7 @@
 				6E16646E19ECCAFA0081EB4C /* DAContextMenuTableViewController.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
 				F974108C19EC2C8700E12633 /* BannerView.m in Sources */,
+				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
 				F97410E719EC322000E12633 /* MainViewController.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
