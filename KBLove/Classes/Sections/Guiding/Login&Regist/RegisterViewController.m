@@ -154,11 +154,11 @@
     //手键盘
     [self.view endEditing:YES];
     //测试圈子用 上线是需要关闭
-    CircleViewController *circle=[[CircleViewController alloc]init];
-    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:circle];
-    [self presentViewController:nav animated:YES completion:^{
-        
-    }];
+//    CircleViewController *circle=[[CircleViewController alloc]init];
+//    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:circle];
+//    [self presentViewController:nav animated:YES completion:^{
+//        
+//    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
