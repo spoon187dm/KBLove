@@ -543,6 +543,40 @@
 			path = Friends;
 			sourceTree = "<group>";
 		};
+        BC9DE24719ED44FB00916F9B /* Device-data */ = {
+			isa = PBXGroup;
+			children = (
+				BC9DE24819ED44FB00916F9B /* bluecircle.png */,
+				BC9DE24919ED44FB00916F9B /* chaosics.png */,
+				BC9DE24A19ED44FB00916F9B /* chaosucs.png */,
+				BC9DE24B19ED44FB00916F9B /* cscs.png */,
+				BC9DE24C19ED44FB00916F9B /* data_search.png */,
+				BC9DE24D19ED44FB00916F9B /* datalan.png */,
+				BC9DE24E19ED44FB00916F9B /* datalan2.png */,
+				BC9DE24F19ED44FB00916F9B /* graycircle1.png */,
+				BC9DE25019ED44FB00916F9B /* graycircle2.png */,
+				BC9DE25119ED44FB00916F9B /* graycircle3.png */,
+				BC9DE25219ED44FB00916F9B /* graystar.png */,
+				BC9DE25319ED44FB00916F9B /* greencircle.png */,
+				BC9DE25419ED44FB00916F9B /* jrlc.png */,
+				BC9DE25519ED44FB00916F9B /* licheng.png */,
+				BC9DE25619ED44FB00916F9B /* lichengpoint.png */,
+				BC9DE25719ED44FB00916F9B /* pingjunsdpng.png */,
+				BC9DE25819ED44FB00916F9B /* pingjunsudupoint.png */,
+				BC9DE25919ED44FB00916F9B /* pjsd.png */,
+				BC9DE25A19ED44FB00916F9B /* redcircle.png */,
+				BC9DE25B19ED44FB00916F9B /* whitecircle.png */,
+				BC9DE25C19ED44FB00916F9B /* xingshisj.png */,
+				BC9DE25D19ED44FB00916F9B /* xingshitime.png */,
+				BC9DE25E19ED44FB00916F9B /* xssj.png */,
+				BC9DE25F19ED44FB00916F9B /* yellowcircle.png */,
+				BC9DE26019ED44FB00916F9B /* yellowstar.png */,
+				BC9DE26119ED44FB00916F9B /* zgsd.png */,
+				BC9DE26219ED44FB00916F9B /* zlc.png */,
+			);
+			path = "Device-data";
+			sourceTree = "<group>";
+		};
 		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,6 +729,7 @@
 				F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */,
 				F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */,
 				6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */,
+				BC9DE28019ED491400916F9B /* Device_data.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1132,6 +1167,7 @@
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
 				BC59833319ECB3E600DAC76A /* DXLog.h */,
+				BC9DE28219ED569C00916F9B /* wangnan.h */,
 			);
 			path = WorkLog;
 			sourceTree = "<group>";
@@ -1402,6 +1438,7 @@
 				BC9DE27119ED44FB00916F9B /* lichengpoint.png in Resources */,
 				F91A0E8E19E7AACF009ADB44 /* blue_iOS6_navBar.png in Resources */,
 				6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */,
+				BC9DE27219ED44FB00916F9B /* pingjunsdpng.png in Resources */,
 				F91A0E4919E7AACF009ADB44 /* other0.png in Resources */,
 				F91A0E8919E7AACF009ADB44 /* black_iOS7_navBar@2x.png in Resources */,
 				F91A0E9119E7AACF009ADB44 /* blue_iOS7_navBar@2x.png in Resources */,
