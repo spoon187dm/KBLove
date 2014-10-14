@@ -17,15 +17,6 @@
 		6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */; };
 		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
 		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
-<<<<<<< HEAD
-		BC29301D19ECE7AA004A99D9 /* DeviceConfiguration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */; };
-		BC29302219ED0D8D004A99D9 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */; };
-		BC29302519ED0EDD004A99D9 /* ChangeInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */; };
-		BC29302819ED18DC004A99D9 /* RecteView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302719ED18DC004A99D9 /* RecteView.m */; };
-		BC29302B19ED3AE6004A99D9 /* CrawlAlertConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */; };
-		BC29303219ED4539004A99D9 /* ConfigPersonDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */; };
-		BC29303519ED459E004A99D9 /* ChangePersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */; };
-=======
 		6EA2BFEF19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */; };
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
@@ -50,7 +41,6 @@
 		BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */; };
 		BC59837419ECE71800DAC76A /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59837219ECE71800DAC76A /* CircleCell.m */; };
 		BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59837319ECE71800DAC76A /* CircleCell.xib */; };
->>>>>>> master-merg
 		F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505519EB70ED004F679A /* QRCodeScanViewController.m */; };
 		F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505819EB70FE004F679A /* QRCodeGenerator.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
@@ -240,6 +230,12 @@
 		F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */; };
 		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
 		F9C290CE19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */; };
+		F9E24F3219ED687500D83FEF /* DeviceConfiguration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E24F3119ED687500D83FEF /* DeviceConfiguration.storyboard */; };
+		F9E24F3E19ED68D100D83FEF /* ChangeInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3519ED68D100D83FEF /* ChangeInformationViewController.m */; };
+		F9E24F3F19ED68D100D83FEF /* ChangePersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3719ED68D100D83FEF /* ChangePersonDetailViewController.m */; };
+		F9E24F4019ED68D100D83FEF /* ConfigPersonDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3919ED68D100D83FEF /* ConfigPersonDeviceViewController.m */; };
+		F9E24F4119ED68D100D83FEF /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3B19ED68D100D83FEF /* ConfigurationViewController.m */; };
+		F9E24F4219ED68D100D83FEF /* CrawlAlertConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3D19ED68D100D83FEF /* CrawlAlertConfiguration.m */; };
 		F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FDF61419E92C8800D235E7 /* nav_Bacground.png */; };
 /* End PBXBuildFile section */
 
@@ -278,22 +274,6 @@
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceConfiguration.storyboard; sourceTree = "<group>"; };
-		BC29302019ED0D8D004A99D9 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
-		BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
-		BC29302319ED0EDD004A99D9 /* ChangeInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeInformationViewController.h; sourceTree = "<group>"; };
-		BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeInformationViewController.m; sourceTree = "<group>"; };
-		BC29302619ED18DC004A99D9 /* RecteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecteView.h; sourceTree = "<group>"; };
-		BC29302719ED18DC004A99D9 /* RecteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecteView.m; sourceTree = "<group>"; };
-		BC29302919ED3AE6004A99D9 /* CrawlAlertConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrawlAlertConfiguration.h; sourceTree = "<group>"; };
-		BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrawlAlertConfiguration.m; sourceTree = "<group>"; };
-		BC29303019ED4539004A99D9 /* ConfigPersonDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigPersonDeviceViewController.h; sourceTree = "<group>"; };
-		BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigPersonDeviceViewController.m; sourceTree = "<group>"; };
-		BC29303319ED459E004A99D9 /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
-		BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
-		BC29303619ED56BE004A99D9 /* ZhangXiuQiao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
-=======
 		BC0112D319ED537F0073EE48 /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
 		BC0112D419ED537F0073EE48 /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
 		BC0112D519ED537F0073EE48 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
@@ -332,7 +312,6 @@
 		BC59837119ECE71800DAC76A /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
 		BC59837219ECE71800DAC76A /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		BC59837319ECE71800DAC76A /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
->>>>>>> master-merg
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F911505419EB70ED004F679A /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
@@ -571,6 +550,18 @@
 		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
 		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
 		F9C290CD19E8E28700AA0ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Regist_Login_Storyboard.storyboard; sourceTree = "<group>"; };
+		F9E24F3119ED687500D83FEF /* DeviceConfiguration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceConfiguration.storyboard; sourceTree = "<group>"; };
+		F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
+		F9E24F3419ED68D100D83FEF /* ChangeInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeInformationViewController.h; sourceTree = "<group>"; };
+		F9E24F3519ED68D100D83FEF /* ChangeInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeInformationViewController.m; sourceTree = "<group>"; };
+		F9E24F3619ED68D100D83FEF /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
+		F9E24F3719ED68D100D83FEF /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
+		F9E24F3819ED68D100D83FEF /* ConfigPersonDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigPersonDeviceViewController.h; sourceTree = "<group>"; };
+		F9E24F3919ED68D100D83FEF /* ConfigPersonDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigPersonDeviceViewController.m; sourceTree = "<group>"; };
+		F9E24F3A19ED68D100D83FEF /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		F9E24F3B19ED68D100D83FEF /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
+		F9E24F3C19ED68D100D83FEF /* CrawlAlertConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrawlAlertConfiguration.h; sourceTree = "<group>"; };
+		F9E24F3D19ED68D100D83FEF /* CrawlAlertConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrawlAlertConfiguration.m; sourceTree = "<group>"; };
 		F9FDF61419E92C8800D235E7 /* nav_Bacground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Bacground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -604,55 +595,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
-		BC29301E19ED0C2B004A99D9 /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				BC29301F19ED0C62004A99D9 /* configuration */,
-			);
-			name = Device;
-			sourceTree = "<group>";
-		};
-		BC29301F19ED0C62004A99D9 /* configuration */ = {
-			isa = PBXGroup;
-			children = (
-				BC29302F19ED44B5004A99D9 /* pet */,
-				BC29302E19ED44A3004A99D9 /* person */,
-				BC29302D19ED448B004A99D9 /* car */,
-			);
-			name = configuration;
-			sourceTree = "<group>";
-		};
-		BC29302D19ED448B004A99D9 /* car */ = {
-			isa = PBXGroup;
-			children = (
-				BC29302019ED0D8D004A99D9 /* ConfigurationViewController.h */,
-				BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */,
-				BC29302319ED0EDD004A99D9 /* ChangeInformationViewController.h */,
-				BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */,
-				BC29302919ED3AE6004A99D9 /* CrawlAlertConfiguration.h */,
-				BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */,
-			);
-			name = car;
-			sourceTree = "<group>";
-		};
-		BC29302E19ED44A3004A99D9 /* person */ = {
-			isa = PBXGroup;
-			children = (
-				BC29303019ED4539004A99D9 /* ConfigPersonDeviceViewController.h */,
-				BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */,
-				BC29303319ED459E004A99D9 /* ChangePersonDetailViewController.h */,
-				BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */,
-			);
-			name = person;
-			sourceTree = "<group>";
-		};
-		BC29302F19ED44B5004A99D9 /* pet */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = pet;
-=======
 		6E16646619ECCAFA0081EB4C /* DAContextMenuTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,7 +733,6 @@
 				F92DBDA519ED5C1900BBE573 /* zlc.png */,
 			);
 			path = "Device-data";
->>>>>>> master-merg
 			sourceTree = "<group>";
 		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
@@ -853,6 +794,7 @@
 		F91A0C9119E7880C009ADB44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9E24F3119ED687500D83FEF /* DeviceConfiguration.storyboard */,
 				F92DBD8819ED5BFB00BBE573 /* Device_data.storyboard */,
 				6EA222E619E920480073274D /* KBLove-Prefix.pch */,
 				F974109219EC2E4500E12633 /* main.m */,
@@ -863,11 +805,7 @@
 				F91A0C9319E7880C009ADB44 /* InfoPlist.strings */,
 				F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */,
 				F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */,
-<<<<<<< HEAD
-				BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */,
-=======
 				6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */,
->>>>>>> master-merg
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1238,7 +1176,16 @@
 		F974108319EC280200E12633 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				BC29301E19ED0C2B004A99D9 /* Device */,
+				F9E24F3419ED68D100D83FEF /* ChangeInformationViewController.h */,
+				F9E24F3519ED68D100D83FEF /* ChangeInformationViewController.m */,
+				F9E24F3619ED68D100D83FEF /* ChangePersonDetailViewController.h */,
+				F9E24F3719ED68D100D83FEF /* ChangePersonDetailViewController.m */,
+				F9E24F3819ED68D100D83FEF /* ConfigPersonDeviceViewController.h */,
+				F9E24F3919ED68D100D83FEF /* ConfigPersonDeviceViewController.m */,
+				F9E24F3A19ED68D100D83FEF /* ConfigurationViewController.h */,
+				F9E24F3B19ED68D100D83FEF /* ConfigurationViewController.m */,
+				F9E24F3C19ED68D100D83FEF /* CrawlAlertConfiguration.h */,
+				F9E24F3D19ED68D100D83FEF /* CrawlAlertConfiguration.m */,
 				F97410C119EC322000E12633 /* Guiding */,
 				F97410DA19EC322000E12633 /* Main */,
 			);
@@ -1287,10 +1234,6 @@
 			children = (
 				F974108A19EC2C8700E12633 /* BannerView.h */,
 				F974108B19EC2C8700E12633 /* BannerView.m */,
-<<<<<<< HEAD
-				BC29302619ED18DC004A99D9 /* RecteView.h */,
-				BC29302719ED18DC004A99D9 /* RecteView.m */,
-=======
 				6E16647419ECD15D0081EB4C /* FriendsListCell.h */,
 				6E16647519ECD15D0081EB4C /* FriendsListCell.m */,
 				6E16647619ECD15D0081EB4C /* FriendsListCell.xib */,
@@ -1300,7 +1243,6 @@
 				BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */,
 				BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */,
 				BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */,
->>>>>>> master-merg
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1308,14 +1250,11 @@
 		F974108E19EC2DD000E12633 /* WorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */,
 				F92DBD8A19ED5C0400BBE573 /* wangnan.h */,
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
-<<<<<<< HEAD
-				BC29303619ED56BE004A99D9 /* ZhangXiuQiao.h */,
-=======
 				BC59833319ECB3E600DAC76A /* DXLog.h */,
->>>>>>> master-merg
 			);
 			path = WorkLog;
 			sourceTree = "<group>";
@@ -1527,7 +1466,6 @@
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
 				F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */,
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
-				BC29301D19ECE7AA004A99D9 /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
 				F92DBDB219ED5C1900BBE573 /* jrlc.png in Resources */,
 				F91A0E8619E7AACF009ADB44 /* black_iOS6_navBar.png in Resources */,
@@ -1558,6 +1496,7 @@
 				F91A0E9919E7AACF009ADB44 /* red_iOS7_navBar@2x.png in Resources */,
 				F92DBDBB19ED5C1900BBE573 /* xingshitime.png in Resources */,
 				F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */,
+				F9E24F3219ED687500D83FEF /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E9719E7AACF009ADB44 /* red_iOS6_navBar@2x.png in Resources */,
 				F91A0E6719E7AACF009ADB44 /* ReturnItem.png in Resources */,
 				F92DBDB919ED5C1900BBE573 /* whitecircle.png in Resources */,
@@ -1679,10 +1618,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				BC29303219ED4539004A99D9 /* ConfigPersonDeviceViewController.m in Sources */,
-=======
+				F9E24F4219ED68D100D83FEF /* CrawlAlertConfiguration.m in Sources */,
 				BC0112E819ED537F0073EE48 /* PinyinHelper.m in Sources */,
+				F9E24F3E19ED68D100D83FEF /* ChangeInformationViewController.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				6E16646F19ECCAFA0081EB4C /* DAOverlayView.m in Sources */,
 				BC59835D19ECCC4300DAC76A /* FreashManager.m in Sources */,
@@ -1690,31 +1628,25 @@
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				BC0112E619ED537F0073EE48 /* PinyinFormatter.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
->>>>>>> master-merg
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
+				F9E24F4019ED68D100D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
-				BC29302219ED0D8D004A99D9 /* ConfigurationViewController.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				F9E24F4119ED68D100D83FEF /* ConfigurationViewController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				BC59835E19ECCC4300DAC76A /* KBFreash.m in Sources */,
 				BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */,
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
-<<<<<<< HEAD
-				BC29302519ED0EDD004A99D9 /* ChangeInformationViewController.m in Sources */,
-=======
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
->>>>>>> master-merg
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
-				BC29302819ED18DC004A99D9 /* RecteView.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
-				BC29303519ED459E004A99D9 /* ChangePersonDetailViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
 				6E16646E19ECCAFA0081EB4C /* DAContextMenuTableViewController.m in Sources */,
@@ -1728,10 +1660,10 @@
 				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
 				F97410E719EC322000E12633 /* MainViewController.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
-				BC29302B19ED3AE6004A99D9 /* CrawlAlertConfiguration.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				6E16646D19ECCAFA0081EB4C /* DAContextMenuCell.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
+				F9E24F3F19ED68D100D83FEF /* ChangePersonDetailViewController.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				BC0112E319ED537F0073EE48 /* ChineseToPinyinResource.m in Sources */,
