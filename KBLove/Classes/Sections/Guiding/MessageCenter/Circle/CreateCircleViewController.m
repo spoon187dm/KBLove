@@ -16,9 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self CreateUI];
     // Do any additional setup after loading the view.
 }
-
+- (void)CreateUI
+{
+    self.navigationItem.titleView=[self makeTitleLable:@"创建圈子" AndFontSize:22 isBold:YES];
+    //返回
+    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
+}
+- (void)BackClick:(UIButton *)btn
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
