@@ -17,7 +17,7 @@
 
 @property (nonatomic, assign) BOOL isPasswordRecord;
 //用户唯一标识 addByDX
-@property (nonatomic,copy)NSString *userId;
+
 @property (nonatomic, copy) NSString *token;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *email;

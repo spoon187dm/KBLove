@@ -90,7 +90,7 @@
                         KBUserInfo *user=[KBUserInfo sharedInfo];
                         user.token=token;
                         user.userName=_userNameTextfiled.text;
-                        user.userId=user_id;
+                        user.user_id=user_id;
                         user.passWord=_passwordTextFiled.text;
                         
                         UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistFinishNavigationController"];

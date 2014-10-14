@@ -167,6 +167,7 @@
 		F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410FC19EC389800E12633 /* UIImageView+WLTool.m */; };
 		F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410FE19EC389800E12633 /* UILabel+WLTool.m */; };
 		F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */; };
+		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
 		F9C290CE19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */; };
 		F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FDF61419E92C8800D235E7 /* nav_Bacground.png */; };
 /* End PBXBuildFile section */
@@ -387,6 +388,8 @@
 		F97410FF19EC389800E12633 /* UIViewController+NavigationItemSettingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationItemSettingTool.h"; sourceTree = "<group>"; };
 		F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItemSettingTool.m"; sourceTree = "<group>"; };
 		F974110119EC389800E12633 /* WLCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCategorys.h; sourceTree = "<group>"; };
+		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
+		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
 		F9C290CD19E8E28700AA0ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Regist_Login_Storyboard.storyboard; sourceTree = "<group>"; };
 		F9FDF61419E92C8800D235E7 /* nav_Bacground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Bacground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -879,6 +882,8 @@
 				F97410FF19EC389800E12633 /* UIViewController+NavigationItemSettingTool.h */,
 				F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */,
 				F974110119EC389800E12633 /* WLCategorys.h */,
+				F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */,
+				F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1259,6 +1264,7 @@
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
+				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F97410E219EC322000E12633 /* BoundPetInfoController.m in Sources */,
 			);
