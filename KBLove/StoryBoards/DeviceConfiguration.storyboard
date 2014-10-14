@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzk-Tf-QMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-324" y="-411"/>
+            <point key="canvasLocation" x="-708" y="-715"/>
         </scene>
         <!--Configuration View Controller - 设备设置-->
         <scene sceneID="SX1-n9-uni">
@@ -39,7 +39,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" id="Zkw-Gc-RZf" customClass="RecteView">
-                                <rect key="frame" x="20" y="250.00000060484132" width="280" height="306"/>
+                                <rect key="frame" x="20" y="250.00000091708728" width="280" height="306"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="ujr-kd-aXb">
@@ -211,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAe-PL-ZoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-575"/>
+            <point key="canvasLocation" x="-112" y="-715"/>
         </scene>
         <!--Change Information View Controller - 信息修改-->
         <scene sceneID="kac-1N-Zds">
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdy-UK-f36" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592" y="-570"/>
+            <point key="canvasLocation" x="476" y="-715"/>
         </scene>
         <!--Crawl Alert Configuration - 设备围栏-->
         <scene sceneID="0UX-V3-cc5">
@@ -466,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPB-cS-Swb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="-430"/>
+            <point key="canvasLocation" x="1033" y="-382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fvg-KH-mxc">
@@ -481,7 +481,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhu-9h-3Gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-439" y="-22"/>
+            <point key="canvasLocation" x="-703" y="-30"/>
         </scene>
         <!--Config Person Device View Controller - 设备设置-->
         <scene sceneID="1b8-yw-fjl">
@@ -503,7 +503,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" id="7qR-PF-pIk" customClass="RecteView">
-                                <rect key="frame" x="20" y="250.00000091708728" width="280" height="306"/>
+                                <rect key="frame" x="20" y="250" width="280" height="306"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="frH-i6-1as">
@@ -678,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJg-9x-yVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="-94"/>
+            <point key="canvasLocation" x="-112" y="-48"/>
         </scene>
         <!--View Controller - 设备设置-->
         <scene sceneID="fWg-o0-0Qm">
@@ -699,7 +699,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDL-Xi-WOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="336"/>
+            <point key="canvasLocation" x="-123" y="636"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Edd-oW-a8h">
@@ -714,7 +714,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QZ-5i-VQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-324" y="324"/>
+            <point key="canvasLocation" x="-703" y="636"/>
         </scene>
         <!--Change Person Detail View Controller - 信息修改-->
         <scene sceneID="csq-Vj-3RF">
@@ -933,7 +933,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGJ-5T-ozH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="-48"/>
+            <point key="canvasLocation" x="476" y="-48"/>
         </scene>
     </scenes>
     <resources>
@@ -947,6 +947,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wWC-9n-yNt"/>
+        <segue reference="RNA-dI-HPk"/>
     </inferredMetricsTieBreakers>
 </document>

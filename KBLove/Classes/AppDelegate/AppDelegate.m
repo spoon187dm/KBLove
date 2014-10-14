@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ImagePickerTool.h"
+#import "QRCodeTool.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -23,7 +24,7 @@
     
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
-
+    
     return YES;
 }
 
