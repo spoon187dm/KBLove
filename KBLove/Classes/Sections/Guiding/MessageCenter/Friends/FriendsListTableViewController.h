@@ -11,6 +11,9 @@
 
 @interface FriendsListTableViewController : DAContextMenuTableViewController
 
+//返回item
 - (IBAction)leftItemClicked:(id)sender;
+//添加好友item
+- (IBAction)addItemClicked:(id)sender;
 
 @end

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -12,6 +11,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Slr-NS-OlI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="mSX-Rb-qvy" kind="relationship" relationship="rootViewController" id="duy-jK-iKA"/>
@@ -19,9 +22,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKF-jv-e64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="34"/>
+            <point key="canvasLocation" x="-310" y="-396"/>
         </scene>
-        <!--Title-->
+        <!--好友-->
         <scene sceneID="4Ge-TU-Nv7">
             <objects>
                 <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="mSX-Rb-qvy" customClass="FriendsListTableViewController" sceneMemberID="viewController">
@@ -45,7 +48,7 @@
                             <outlet property="delegate" destination="mSX-Rb-qvy" id="TOd-C0-fap"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="3Iz-Vo-Ibm">
+                    <navigationItem key="navigationItem" title="好友" id="3Iz-Vo-Ibm">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Gnw-LG-JS1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gWd-cZ-Kp7">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
@@ -58,12 +61,46 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9PJ-Xj-yN0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u63-u2-XhC">
+                                <rect key="frame" x="274" y="7" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="添加">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <connections>
+                                <action selector="addItemClicked:" destination="mSX-Rb-qvy" id="3j7-XJ-Of9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3k-bV-KVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="40"/>
+            <point key="canvasLocation" x="103" y="-396"/>
+        </scene>
+        <!--添加好友-->
+        <scene sceneID="Q7d-XW-Xzo">
+            <objects>
+                <viewController id="5Y7-DB-6Of" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W9u-R2-Jm0"/>
+                        <viewControllerLayoutGuide type="bottom" id="vlc-8H-iCc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7y-0B-Op3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加好友" id="rYH-zL-9CZ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ni-5N-B65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="-396"/>
         </scene>
     </scenes>
     <resources>
@@ -74,5 +111,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

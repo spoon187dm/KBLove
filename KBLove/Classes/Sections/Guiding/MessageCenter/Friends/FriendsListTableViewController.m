@@ -26,13 +26,6 @@
     //初始化数组
     _friendsListArray = [[NSMutableArray alloc] init];
     
-    //title
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.text = @"好友";
-    self.navigationItem.titleView = titleLabel;
-    
     //向tableView注册cell
     UINib *nib = [UINib nibWithNibName:@"FriendsListCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"FriendsListCell"];
@@ -121,8 +114,14 @@
     
 }
 
+
 //返回item点击事件
 - (IBAction)leftItemClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)addItemClicked:(id)sender {
+    
+    
 }
 @end
