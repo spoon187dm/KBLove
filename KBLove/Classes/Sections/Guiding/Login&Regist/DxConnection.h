@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, RegisterType)
     renren
 };
 
-//#define  REGRSTER_URL NSString stringWithFormat:@"%@/api/register.do?type=%d&name=%@&pwd=%@",SERVER_URL
+#define  Circle_URL NSString stringWithFormat:@"%@/api/group.all.do?user_id=%@&token=%@",SERVER_URL
 
+#define ScreenWidth  self.view.frame.size.width
+#define ScreenHeight self.view.frame.size.height
 #endif
