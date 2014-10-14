@@ -11,7 +11,7 @@
 /**
  @Author block, 10-13 23:10
  
- 该头文件主要用于第三方SDK的常量记录，入百度mapSDK的key
+ 该头文件主要用于第三方SDK的常量记录，如百度mapSDK的key
  
  */
 
