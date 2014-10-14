@@ -49,4 +49,12 @@ static NSString *const LOGIN_URL = @"http://118.194.192.104:8080/api/logon.do?us
 //好友列表请求
 static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend.list.do?user_id=%@&token=%@&cmd=%d";
 
+
+/**
+ @Author block, 10-14 15:10
+ 
+ 请求设备，警报信息
+ */
+
+static NSString * const Url_GetDeviceList = @"http://118.194.192.104:8080/api/device.list.do";
 #endif
