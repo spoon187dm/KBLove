@@ -20,6 +20,7 @@
     
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+    
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
 
