@@ -34,7 +34,7 @@
     [dic setObject:@"1" forKey:@"operate"];
     KBUserInfo *user=[KBUserInfo sharedInfo];
     [dic setObject:user.token forKey:@"token"];
-    [dic setObject:user.userId forKeyedSubscript:@"user_id"];
+    [dic setObject:user.user_id forKeyedSubscript:@"user_id"];
     [dic setObject:_equipment.EquipmentIMEINum forKey:@"device_sn"];
     [dic setObject:_equipment.EquipmentIponeNum forKey:@"phone"];
     [dic setObject:self.CarName.text forKey:@"name"];

@@ -36,7 +36,7 @@
     //token  user_id  缺少
     KBUserInfo *user=[KBUserInfo sharedInfo];
     [dic setObject:user.token forKey:@"token"];
-    [dic setObject:user.userId forKeyedSubscript:@"user_id"];
+    [dic setObject:user.user_id forKeyedSubscript:@"user_id"];
     [dic setObject:_equipment.EquipmentIMEINum forKey:@"device_sn"];
     //头像
 //    [dic setObject:@"" forKey:@"icon"];//尚未添加

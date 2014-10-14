@@ -12,6 +12,9 @@
 #define  SERVER_URL @"http://118.194.192.104:8080"
 
 #define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
+//测试账号 董新加
+#define kTRIAL_ACCOUNT_NAME @"demo@capcare.com.cn"
+#define kTRIAL_ACCOUNT_PWD @"123456"
 // wap服务器地址前缀
 #define SERVER_URL @"http://118.194.192.104:8080"
 //注册
