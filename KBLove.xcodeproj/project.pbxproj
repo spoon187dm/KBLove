@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
+		6E16646D19ECCAFA0081EB4C /* DAContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16646819ECCAFA0081EB4C /* DAContextMenuCell.m */; };
+		6E16646E19ECCAFA0081EB4C /* DAContextMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16646A19ECCAFA0081EB4C /* DAContextMenuTableViewController.m */; };
+		6E16646F19ECCAFA0081EB4C /* DAOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16646C19ECCAFA0081EB4C /* DAOverlayView.m */; };
+		6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */; };
+		6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647519ECD15D0081EB4C /* FriendsListCell.m */; };
+		6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16647619ECD15D0081EB4C /* FriendsListCell.xib */; };
+		6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */; };
 		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
 		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
+		6EA2BFEF19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */; };
+		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505519EB70ED004F679A /* QRCodeScanViewController.m */; };
 		F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505819EB70FE004F679A /* QRCodeGenerator.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
@@ -183,9 +192,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E16646719ECCAFA0081EB4C /* DAContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAContextMenuCell.h; sourceTree = "<group>"; };
+		6E16646819ECCAFA0081EB4C /* DAContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAContextMenuCell.m; sourceTree = "<group>"; };
+		6E16646919ECCAFA0081EB4C /* DAContextMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAContextMenuTableViewController.h; sourceTree = "<group>"; };
+		6E16646A19ECCAFA0081EB4C /* DAContextMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAContextMenuTableViewController.m; sourceTree = "<group>"; };
+		6E16646B19ECCAFA0081EB4C /* DAOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOverlayView.h; sourceTree = "<group>"; };
+		6E16646C19ECCAFA0081EB4C /* DAOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOverlayView.m; sourceTree = "<group>"; };
+		6E16647119ECD1420081EB4C /* FriendsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewController.h; sourceTree = "<group>"; };
+		6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewController.m; sourceTree = "<group>"; };
+		6E16647419ECD15D0081EB4C /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
+		6E16647519ECD15D0081EB4C /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
+		6E16647619ECD15D0081EB4C /* FriendsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
+		6E16647919ECD4F90081EB4C /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		6EA222DB19E90EEB0073274D /* pwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwd.png; sourceTree = "<group>"; };
 		6EA222DC19E90EEB0073274D /* pwdRem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdRem.png; sourceTree = "<group>"; };
 		6EA222E619E920480073274D /* KBLove-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KBLove-Prefix.pch"; sourceTree = "<group>"; };
+		6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FriendsStoryBoard.storyboard; sourceTree = "<group>"; };
+		6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFriendInfo.h; sourceTree = "<group>"; };
+		6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFriendInfo.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -424,6 +449,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E16646619ECCAFA0081EB4C /* DAContextMenuTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6E16646719ECCAFA0081EB4C /* DAContextMenuCell.h */,
+				6E16646819ECCAFA0081EB4C /* DAContextMenuCell.m */,
+				6E16646919ECCAFA0081EB4C /* DAContextMenuTableViewController.h */,
+				6E16646A19ECCAFA0081EB4C /* DAContextMenuTableViewController.m */,
+				6E16646B19ECCAFA0081EB4C /* DAOverlayView.h */,
+				6E16646C19ECCAFA0081EB4C /* DAOverlayView.m */,
+			);
+			name = DAContextMenuTableViewController;
+			path = KBLove/Classes/General/DAContextMenuTableViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		6E16647019ECD1270081EB4C /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				6E16647119ECD1420081EB4C /* FriendsListTableViewController.h */,
+				6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */,
+				6E16647919ECD4F90081EB4C /* AddFriendViewController.h */,
+				6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E16647019ECD1270081EB4C /* Friends */,
+			);
+			path = MessageCenter;
+			sourceTree = "<group>";
+		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +550,7 @@
 				F91A0C9319E7880C009ADB44 /* InfoPlist.strings */,
 				F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */,
 				F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */,
+				6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -846,6 +905,8 @@
 				F97410E919EC33CE00E12633 /* KBUserInfo.m */,
 				F97410EB19EC34CA00E12633 /* KBAccount.h */,
 				F97410EC19EC34CA00E12633 /* KBAccount.m */,
+				6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */,
+				6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -891,6 +952,7 @@
 		F974108819EC2C8700E12633 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6E16646619ECCAFA0081EB4C /* DAContextMenuTableViewController */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -900,6 +962,9 @@
 			children = (
 				F974108A19EC2C8700E12633 /* BannerView.h */,
 				F974108B19EC2C8700E12633 /* BannerView.m */,
+				6E16647419ECD15D0081EB4C /* FriendsListCell.h */,
+				6E16647519ECD15D0081EB4C /* FriendsListCell.m */,
+				6E16647619ECD15D0081EB4C /* FriendsListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -916,6 +981,7 @@
 		F97410C119EC322000E12633 /* Guiding */ = {
 			isa = PBXGroup;
 			children = (
+				6EA2BFED19ECB4E50024E6A2 /* MessageCenter */,
 				F97410C219EC322000E12633 /* Bounding */,
 				F97410D119EC322000E12633 /* Login&Regist */,
 				F97410D719EC322000E12633 /* Welcome */,
@@ -1124,6 +1190,7 @@
 				F91A0E6919E7AACF009ADB44 /* mailregisterbtn@2x.png in Resources */,
 				F91A0E8119E7AACF009ADB44 /* mineItemNormal.png in Resources */,
 				F91A0E3C19E7AACF009ADB44 /* equipmenttypeface.png in Resources */,
+				6EA2BFEF19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard in Resources */,
 				F91A0E7E19E7AACF009ADB44 /* image1.png in Resources */,
 				F91A0E6119E7AACF009ADB44 /* clearNavItemNormal.png in Resources */,
 				F91A0E9919E7AACF009ADB44 /* red_iOS7_navBar@2x.png in Resources */,
@@ -1153,6 +1220,7 @@
 				F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */,
 				F91A0E8419E7AACF009ADB44 /* tabbarBG@2x.png in Resources */,
 				F91A0E8E19E7AACF009ADB44 /* blue_iOS6_navBar.png in Resources */,
+				6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */,
 				F91A0E4919E7AACF009ADB44 /* other0.png in Resources */,
 				F91A0E8919E7AACF009ADB44 /* black_iOS7_navBar@2x.png in Resources */,
 				F91A0E9119E7AACF009ADB44 /* blue_iOS7_navBar@2x.png in Resources */,
@@ -1235,10 +1303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
+				6E16646F19ECCAFA0081EB4C /* DAOverlayView.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
@@ -1249,11 +1320,13 @@
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
+				6E16646E19ECCAFA0081EB4C /* DAContextMenuTableViewController.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
 				F974108C19EC2C8700E12633 /* BannerView.m in Sources */,
 				F97410E719EC322000E12633 /* MainViewController.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
+				6E16646D19ECCAFA0081EB4C /* DAContextMenuCell.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
@@ -1261,12 +1334,14 @@
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
+				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F97410E219EC322000E12633 /* BoundPetInfoController.m in Sources */,
+				6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
