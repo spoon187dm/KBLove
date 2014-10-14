@@ -12,6 +12,8 @@
 	<dict>
 		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
 		<string>https://github.com/blockdate/KBLove.git</string>
+		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
+		<string>https://github.com/blockdate/KBLove.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>KBLove.xcworkspace</string>
@@ -35,6 +37,14 @@
 			<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KBLove</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KBLove0.1</string>
 		</dict>
 	</array>
 </dict>
