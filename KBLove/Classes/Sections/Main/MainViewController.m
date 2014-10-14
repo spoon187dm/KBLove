@@ -68,6 +68,11 @@
 }
 
 - (IBAction)click_friends:(id)sender{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)click_circle:(id)sender{
