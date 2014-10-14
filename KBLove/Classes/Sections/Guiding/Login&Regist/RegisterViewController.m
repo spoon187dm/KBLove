@@ -11,6 +11,7 @@
 #import "DxConnection.h"
 #import "KBHttpRequestTool.h"
 #import "NSString+WLTooll.h"
+#import "CircleViewController.h"
 @interface RegisterViewController ()
 {
     RegisterType _registertype;
@@ -46,7 +47,7 @@
     [_phoneRegisterButton setBackgroundImage:[UIImage imageNamed:@"mailregisterbtnSelected"] forState:UIControlStateNormal];
     [_mailRegisterButton setBackgroundImage:[UIImage imageNamed:@"telregisterbtnNormal"] forState:UIControlStateNormal];
 }
-
+#pragma mark - 注册
 //注册
 - (IBAction)RegisterButton:(id)sender
 {
@@ -75,7 +76,7 @@
             return;
             }
         //信息没有错误 进行 注册
-        [[KBHttpRequestTool sharedInstance] request:[REGRSTER_URL,_registertype,_userNameTextfiled.text,_passwordTextFiled.text] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,_registertype,_userNameTextfiled.text,_passwordTextFiled.text] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
             if (IsSuccess) {
                //注册成功
                 if ([result isKindOfClass:[NSDictionary class]]) {
@@ -124,11 +125,13 @@
     }
   
 }
+
 - (void)showAlertWithTitle:(NSString *)title AndMessage:(NSString *)msg
 {
     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
     [alert show];
 }
+#pragma mark - 登陆
 //登陆
 - (IBAction)loginBtnClicked:(id)sender
 {
@@ -145,10 +148,17 @@
         }];
     }
 }
+#pragma  mark - 测试接口
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //手键盘
     [self.view endEditing:YES];
+    //测试圈子用 上线是需要关闭
+//    CircleViewController *circle=[[CircleViewController alloc]init];
+//    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:circle];
+//    [self presentViewController:nav animated:YES completion:^{
+//        
+//    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

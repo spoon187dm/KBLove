@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
+		6E16646D19ECCAFA0081EB4C /* DAContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16646819ECCAFA0081EB4C /* DAContextMenuCell.m */; };
+		6E16646E19ECCAFA0081EB4C /* DAContextMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16646A19ECCAFA0081EB4C /* DAContextMenuTableViewController.m */; };
+		6E16646F19ECCAFA0081EB4C /* DAOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16646C19ECCAFA0081EB4C /* DAOverlayView.m */; };
+		6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */; };
+		6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647519ECD15D0081EB4C /* FriendsListCell.m */; };
+		6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16647619ECD15D0081EB4C /* FriendsListCell.xib */; };
+		6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */; };
 		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
 		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
+<<<<<<< HEAD
 		BC29301D19ECE7AA004A99D9 /* DeviceConfiguration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */; };
 		BC29302219ED0D8D004A99D9 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */; };
 		BC29302519ED0EDD004A99D9 /* ChangeInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */; };
@@ -17,6 +25,32 @@
 		BC29302B19ED3AE6004A99D9 /* CrawlAlertConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */; };
 		BC29303219ED4539004A99D9 /* ConfigPersonDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */; };
 		BC29303519ED459E004A99D9 /* ChangePersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */; };
+=======
+		6EA2BFEF19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */; };
+		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
+		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
+		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
+		BC0112E219ED537F0073EE48 /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112D419ED537F0073EE48 /* ChineseInclude.m */; };
+		BC0112E319ED537F0073EE48 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112D619ED537F0073EE48 /* ChineseToPinyinResource.m */; };
+		BC0112E419ED537F0073EE48 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112D819ED537F0073EE48 /* HanyuPinyinOutputFormat.m */; };
+		BC0112E519ED537F0073EE48 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112DA19ED537F0073EE48 /* NSString+PinYin4Cocoa.m */; };
+		BC0112E619ED537F0073EE48 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112DC19ED537F0073EE48 /* PinyinFormatter.m */; };
+		BC0112E719ED537F0073EE48 /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112DE19ED537F0073EE48 /* PinYinForObjc.m */; };
+		BC0112E819ED537F0073EE48 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112E019ED537F0073EE48 /* PinyinHelper.m */; };
+		BC0112E919ED537F0073EE48 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC0112E119ED537F0073EE48 /* unicode_to_hanyu_pinyin.txt */; };
+		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
+		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
+		BC59835D19ECCC4300DAC76A /* FreashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59835A19ECCC4300DAC76A /* FreashManager.m */; };
+		BC59835E19ECCC4300DAC76A /* KBFreash.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59835C19ECCC4300DAC76A /* KBFreash.m */; };
+		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
+		BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836319ECCE9800DAC76A /* CircleViewController.m */; };
+		BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */; };
+		BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */; };
+		BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */; };
+		BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */; };
+		BC59837419ECE71800DAC76A /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59837219ECE71800DAC76A /* CircleCell.m */; };
+		BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59837319ECE71800DAC76A /* CircleCell.xib */; };
+>>>>>>> master-merg
 		F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505519EB70ED004F679A /* QRCodeScanViewController.m */; };
 		F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505819EB70FE004F679A /* QRCodeGenerator.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
@@ -148,6 +182,36 @@
 		F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2E19E7AACF009ADB44 /* red_theme.png */; };
 		F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */; };
 		F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E3019E7AACF009ADB44 /* themeSelected.png */; };
+		F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */ = {isa = PBXBuildFile; fileRef = F92DBD8219ECFDAA00BBE573 /* KBDevices.m */; };
+		F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F92DBD8519ED3FAE00BBE573 /* KBDevicesStatus.m */; };
+		F92DBD8919ED5BFB00BBE573 /* Device_data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD8819ED5BFB00BBE573 /* Device_data.storyboard */; };
+		F92DBDA619ED5C1900BBE573 /* bluecircle.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD8B19ED5C1900BBE573 /* bluecircle.png */; };
+		F92DBDA719ED5C1900BBE573 /* chaosics.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD8C19ED5C1900BBE573 /* chaosics.png */; };
+		F92DBDA819ED5C1900BBE573 /* chaosucs.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD8D19ED5C1900BBE573 /* chaosucs.png */; };
+		F92DBDA919ED5C1900BBE573 /* cscs.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD8E19ED5C1900BBE573 /* cscs.png */; };
+		F92DBDAA19ED5C1900BBE573 /* data_search.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD8F19ED5C1900BBE573 /* data_search.png */; };
+		F92DBDAB19ED5C1900BBE573 /* datalan.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9019ED5C1900BBE573 /* datalan.png */; };
+		F92DBDAC19ED5C1900BBE573 /* datalan2.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9119ED5C1900BBE573 /* datalan2.png */; };
+		F92DBDAD19ED5C1900BBE573 /* graycircle1.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9219ED5C1900BBE573 /* graycircle1.png */; };
+		F92DBDAE19ED5C1900BBE573 /* graycircle2.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9319ED5C1900BBE573 /* graycircle2.png */; };
+		F92DBDAF19ED5C1900BBE573 /* graycircle3.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9419ED5C1900BBE573 /* graycircle3.png */; };
+		F92DBDB019ED5C1900BBE573 /* graystar.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9519ED5C1900BBE573 /* graystar.png */; };
+		F92DBDB119ED5C1900BBE573 /* greencircle.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9619ED5C1900BBE573 /* greencircle.png */; };
+		F92DBDB219ED5C1900BBE573 /* jrlc.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9719ED5C1900BBE573 /* jrlc.png */; };
+		F92DBDB319ED5C1900BBE573 /* licheng.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9819ED5C1900BBE573 /* licheng.png */; };
+		F92DBDB419ED5C1900BBE573 /* lichengpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9919ED5C1900BBE573 /* lichengpoint.png */; };
+		F92DBDB519ED5C1900BBE573 /* pingjunsdpng.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9A19ED5C1900BBE573 /* pingjunsdpng.png */; };
+		F92DBDB619ED5C1900BBE573 /* pingjunsudupoint.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9B19ED5C1900BBE573 /* pingjunsudupoint.png */; };
+		F92DBDB719ED5C1900BBE573 /* pjsd.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9C19ED5C1900BBE573 /* pjsd.png */; };
+		F92DBDB819ED5C1900BBE573 /* redcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9D19ED5C1900BBE573 /* redcircle.png */; };
+		F92DBDB919ED5C1900BBE573 /* whitecircle.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9E19ED5C1900BBE573 /* whitecircle.png */; };
+		F92DBDBA19ED5C1900BBE573 /* xingshisj.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBD9F19ED5C1900BBE573 /* xingshisj.png */; };
+		F92DBDBB19ED5C1900BBE573 /* xingshitime.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA019ED5C1900BBE573 /* xingshitime.png */; };
+		F92DBDBC19ED5C1900BBE573 /* xssj.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA119ED5C1900BBE573 /* xssj.png */; };
+		F92DBDBD19ED5C1900BBE573 /* yellowcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA219ED5C1900BBE573 /* yellowcircle.png */; };
+		F92DBDBE19ED5C1900BBE573 /* yellowstar.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA319ED5C1900BBE573 /* yellowstar.png */; };
+		F92DBDBF19ED5C1900BBE573 /* zgsd.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA419ED5C1900BBE573 /* zgsd.png */; };
+		F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA519ED5C1900BBE573 /* zlc.png */; };
 		F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */; };
 		F974108C19EC2C8700E12633 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974108B19EC2C8700E12633 /* BannerView.m */; };
 		F974109119EC2E2600E12633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109019EC2E2600E12633 /* AppDelegate.m */; };
@@ -190,10 +254,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E16646719ECCAFA0081EB4C /* DAContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAContextMenuCell.h; sourceTree = "<group>"; };
+		6E16646819ECCAFA0081EB4C /* DAContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAContextMenuCell.m; sourceTree = "<group>"; };
+		6E16646919ECCAFA0081EB4C /* DAContextMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAContextMenuTableViewController.h; sourceTree = "<group>"; };
+		6E16646A19ECCAFA0081EB4C /* DAContextMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAContextMenuTableViewController.m; sourceTree = "<group>"; };
+		6E16646B19ECCAFA0081EB4C /* DAOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAOverlayView.h; sourceTree = "<group>"; };
+		6E16646C19ECCAFA0081EB4C /* DAOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAOverlayView.m; sourceTree = "<group>"; };
+		6E16647119ECD1420081EB4C /* FriendsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewController.h; sourceTree = "<group>"; };
+		6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewController.m; sourceTree = "<group>"; };
+		6E16647419ECD15D0081EB4C /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
+		6E16647519ECD15D0081EB4C /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
+		6E16647619ECD15D0081EB4C /* FriendsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
+		6E16647919ECD4F90081EB4C /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
 		6EA222DB19E90EEB0073274D /* pwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwd.png; sourceTree = "<group>"; };
 		6EA222DC19E90EEB0073274D /* pwdRem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdRem.png; sourceTree = "<group>"; };
 		6EA222E619E920480073274D /* KBLove-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KBLove-Prefix.pch"; sourceTree = "<group>"; };
+		6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FriendsStoryBoard.storyboard; sourceTree = "<group>"; };
+		6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFriendInfo.h; sourceTree = "<group>"; };
+		6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFriendInfo.m; sourceTree = "<group>"; };
+		6ECC038219ECFCC60008ACAD /* AddFriendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendButton.h; sourceTree = "<group>"; };
+		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
+		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceConfiguration.storyboard; sourceTree = "<group>"; };
 		BC29302019ED0D8D004A99D9 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
 		BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
@@ -208,6 +293,46 @@
 		BC29303319ED459E004A99D9 /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
 		BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
 		BC29303619ED56BE004A99D9 /* ZhangXiuQiao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
+=======
+		BC0112D319ED537F0073EE48 /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		BC0112D419ED537F0073EE48 /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		BC0112D519ED537F0073EE48 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		BC0112D619ED537F0073EE48 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		BC0112D719ED537F0073EE48 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		BC0112D819ED537F0073EE48 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		BC0112D919ED537F0073EE48 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		BC0112DA19ED537F0073EE48 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		BC0112DB19ED537F0073EE48 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		BC0112DC19ED537F0073EE48 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		BC0112DD19ED537F0073EE48 /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		BC0112DE19ED537F0073EE48 /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		BC0112DF19ED537F0073EE48 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		BC0112E019ED537F0073EE48 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		BC0112E119ED537F0073EE48 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
+		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
+		BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleFriendCell.xib; sourceTree = "<group>"; };
+		BC59833319ECB3E600DAC76A /* DXLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXLog.h; sourceTree = "<group>"; };
+		BC59835919ECCC4300DAC76A /* FreashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreashManager.h; sourceTree = "<group>"; };
+		BC59835A19ECCC4300DAC76A /* FreashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreashManager.m; sourceTree = "<group>"; };
+		BC59835B19ECCC4300DAC76A /* KBFreash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFreash.h; sourceTree = "<group>"; };
+		BC59835C19ECCC4300DAC76A /* KBFreash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFreash.m; sourceTree = "<group>"; };
+		BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRootViewController.h; sourceTree = "<group>"; };
+		BC59836019ECCE8500DAC76A /* CircleRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRootViewController.m; sourceTree = "<group>"; };
+		BC59836219ECCE9800DAC76A /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
+		BC59836319ECCE9800DAC76A /* CircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
+		BC59836519ECCEA900DAC76A /* CreateCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCircleViewController.h; sourceTree = "<group>"; };
+		BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCircleViewController.m; sourceTree = "<group>"; };
+		BC59836819ECCF0200DAC76A /* CircleTalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTalkViewController.h; sourceTree = "<group>"; };
+		BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTalkViewController.m; sourceTree = "<group>"; };
+		BC59836B19ECCF1100DAC76A /* CircleSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSettingViewController.h; sourceTree = "<group>"; };
+		BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSettingViewController.m; sourceTree = "<group>"; };
+		BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteCircleManagerViewController.h; sourceTree = "<group>"; };
+		BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteCircleManagerViewController.m; sourceTree = "<group>"; };
+		BC59837119ECE71800DAC76A /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
+		BC59837219ECE71800DAC76A /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
+		BC59837319ECE71800DAC76A /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
+>>>>>>> master-merg
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F911505419EB70ED004F679A /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
@@ -350,6 +475,40 @@
 		F91A0E2E19E7AACF009ADB44 /* red_theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_theme.png; sourceTree = "<group>"; };
 		F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_theme@2x.png"; sourceTree = "<group>"; };
 		F91A0E3019E7AACF009ADB44 /* themeSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themeSelected.png; sourceTree = "<group>"; };
+		F92DBD8119ECFDAA00BBE573 /* KBDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDevices.h; sourceTree = "<group>"; };
+		F92DBD8219ECFDAA00BBE573 /* KBDevices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDevices.m; sourceTree = "<group>"; };
+		F92DBD8419ED3FAE00BBE573 /* KBDevicesStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDevicesStatus.h; sourceTree = "<group>"; };
+		F92DBD8519ED3FAE00BBE573 /* KBDevicesStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDevicesStatus.m; sourceTree = "<group>"; };
+		F92DBD8719ED449000BBE573 /* ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorCode.h; sourceTree = "<group>"; };
+		F92DBD8819ED5BFB00BBE573 /* Device_data.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Device_data.storyboard; sourceTree = "<group>"; };
+		F92DBD8A19ED5C0400BBE573 /* wangnan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wangnan.h; sourceTree = "<group>"; };
+		F92DBD8B19ED5C1900BBE573 /* bluecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecircle.png; sourceTree = "<group>"; };
+		F92DBD8C19ED5C1900BBE573 /* chaosics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chaosics.png; sourceTree = "<group>"; };
+		F92DBD8D19ED5C1900BBE573 /* chaosucs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chaosucs.png; sourceTree = "<group>"; };
+		F92DBD8E19ED5C1900BBE573 /* cscs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cscs.png; sourceTree = "<group>"; };
+		F92DBD8F19ED5C1900BBE573 /* data_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = data_search.png; sourceTree = "<group>"; };
+		F92DBD9019ED5C1900BBE573 /* datalan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datalan.png; sourceTree = "<group>"; };
+		F92DBD9119ED5C1900BBE573 /* datalan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datalan2.png; sourceTree = "<group>"; };
+		F92DBD9219ED5C1900BBE573 /* graycircle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graycircle1.png; sourceTree = "<group>"; };
+		F92DBD9319ED5C1900BBE573 /* graycircle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graycircle2.png; sourceTree = "<group>"; };
+		F92DBD9419ED5C1900BBE573 /* graycircle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graycircle3.png; sourceTree = "<group>"; };
+		F92DBD9519ED5C1900BBE573 /* graystar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graystar.png; sourceTree = "<group>"; };
+		F92DBD9619ED5C1900BBE573 /* greencircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greencircle.png; sourceTree = "<group>"; };
+		F92DBD9719ED5C1900BBE573 /* jrlc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jrlc.png; sourceTree = "<group>"; };
+		F92DBD9819ED5C1900BBE573 /* licheng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = licheng.png; sourceTree = "<group>"; };
+		F92DBD9919ED5C1900BBE573 /* lichengpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lichengpoint.png; sourceTree = "<group>"; };
+		F92DBD9A19ED5C1900BBE573 /* pingjunsdpng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pingjunsdpng.png; sourceTree = "<group>"; };
+		F92DBD9B19ED5C1900BBE573 /* pingjunsudupoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pingjunsudupoint.png; sourceTree = "<group>"; };
+		F92DBD9C19ED5C1900BBE573 /* pjsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pjsd.png; sourceTree = "<group>"; };
+		F92DBD9D19ED5C1900BBE573 /* redcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redcircle.png; sourceTree = "<group>"; };
+		F92DBD9E19ED5C1900BBE573 /* whitecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitecircle.png; sourceTree = "<group>"; };
+		F92DBD9F19ED5C1900BBE573 /* xingshisj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xingshisj.png; sourceTree = "<group>"; };
+		F92DBDA019ED5C1900BBE573 /* xingshitime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xingshitime.png; sourceTree = "<group>"; };
+		F92DBDA119ED5C1900BBE573 /* xssj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xssj.png; sourceTree = "<group>"; };
+		F92DBDA219ED5C1900BBE573 /* yellowcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowcircle.png; sourceTree = "<group>"; };
+		F92DBDA319ED5C1900BBE573 /* yellowstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowstar.png; sourceTree = "<group>"; };
+		F92DBDA419ED5C1900BBE573 /* zgsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zgsd.png; sourceTree = "<group>"; };
+		F92DBDA519ED5C1900BBE573 /* zlc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zlc.png; sourceTree = "<group>"; };
 		F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F974108519EC2B0C00E12633 /* VendorsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorsMacro.h; sourceTree = "<group>"; };
 		F974108619EC2B8A00E12633 /* UtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
@@ -445,6 +604,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
 		BC29301E19ED0C2B004A99D9 /* Device */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +652,146 @@
 			children = (
 			);
 			name = pet;
+=======
+		6E16646619ECCAFA0081EB4C /* DAContextMenuTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6E16646719ECCAFA0081EB4C /* DAContextMenuCell.h */,
+				6E16646819ECCAFA0081EB4C /* DAContextMenuCell.m */,
+				6E16646919ECCAFA0081EB4C /* DAContextMenuTableViewController.h */,
+				6E16646A19ECCAFA0081EB4C /* DAContextMenuTableViewController.m */,
+				6E16646B19ECCAFA0081EB4C /* DAOverlayView.h */,
+				6E16646C19ECCAFA0081EB4C /* DAOverlayView.m */,
+			);
+			name = DAContextMenuTableViewController;
+			path = KBLove/Classes/General/DAContextMenuTableViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		6E16647019ECD1270081EB4C /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				6ECC038119ECFC710008ACAD /* Views */,
+				6ECC038019ECFC5D0008ACAD /* Controllers */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E16647019ECD1270081EB4C /* Friends */,
+			);
+			path = MessageCenter;
+			sourceTree = "<group>";
+		};
+		6ECC038019ECFC5D0008ACAD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E16647119ECD1420081EB4C /* FriendsListTableViewController.h */,
+				6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */,
+				6E16647919ECD4F90081EB4C /* AddFriendViewController.h */,
+				6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */,
+				6ECC038519ED05030008ACAD /* SearchResultViewController.h */,
+				6ECC038619ED05030008ACAD /* SearchResultViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6ECC038119ECFC710008ACAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6ECC038219ECFCC60008ACAD /* AddFriendButton.h */,
+				6ECC038319ECFCC60008ACAD /* AddFriendButton.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BC0112D219ED537F0073EE48 /* PinYin */ = {
+			isa = PBXGroup;
+			children = (
+				BC0112D319ED537F0073EE48 /* ChineseInclude.h */,
+				BC0112D419ED537F0073EE48 /* ChineseInclude.m */,
+				BC0112D519ED537F0073EE48 /* ChineseToPinyinResource.h */,
+				BC0112D619ED537F0073EE48 /* ChineseToPinyinResource.m */,
+				BC0112D719ED537F0073EE48 /* HanyuPinyinOutputFormat.h */,
+				BC0112D819ED537F0073EE48 /* HanyuPinyinOutputFormat.m */,
+				BC0112D919ED537F0073EE48 /* NSString+PinYin4Cocoa.h */,
+				BC0112DA19ED537F0073EE48 /* NSString+PinYin4Cocoa.m */,
+				BC0112DB19ED537F0073EE48 /* PinyinFormatter.h */,
+				BC0112DC19ED537F0073EE48 /* PinyinFormatter.m */,
+				BC0112DD19ED537F0073EE48 /* PinYinForObjc.h */,
+				BC0112DE19ED537F0073EE48 /* PinYinForObjc.m */,
+				BC0112DF19ED537F0073EE48 /* PinyinHelper.h */,
+				BC0112E019ED537F0073EE48 /* PinyinHelper.m */,
+				BC0112E119ED537F0073EE48 /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = PinYin;
+			sourceTree = "<group>";
+		};
+		BC59833519ECB52800DAC76A /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */,
+				BC59836019ECCE8500DAC76A /* CircleRootViewController.m */,
+				BC59836219ECCE9800DAC76A /* CircleViewController.h */,
+				BC59836319ECCE9800DAC76A /* CircleViewController.m */,
+				BC59836519ECCEA900DAC76A /* CreateCircleViewController.h */,
+				BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */,
+				BC59836819ECCF0200DAC76A /* CircleTalkViewController.h */,
+				BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */,
+				BC59836B19ECCF1100DAC76A /* CircleSettingViewController.h */,
+				BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */,
+				BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */,
+				BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */,
+			);
+			name = Circle;
+			path = MessageCenter/Circle;
+			sourceTree = "<group>";
+		};
+		BC59835819ECCC3C00DAC76A /* KBFreash */ = {
+			isa = PBXGroup;
+			children = (
+				BC59835919ECCC4300DAC76A /* FreashManager.h */,
+				BC59835A19ECCC4300DAC76A /* FreashManager.m */,
+				BC59835B19ECCC4300DAC76A /* KBFreash.h */,
+				BC59835C19ECCC4300DAC76A /* KBFreash.m */,
+			);
+			path = KBFreash;
+			sourceTree = "<group>";
+		};
+		BC9DE24719ED44FB00916F9B /* Device-data */ = {
+			isa = PBXGroup;
+			children = (
+				F92DBD8B19ED5C1900BBE573 /* bluecircle.png */,
+				F92DBD8C19ED5C1900BBE573 /* chaosics.png */,
+				F92DBD8D19ED5C1900BBE573 /* chaosucs.png */,
+				F92DBD8E19ED5C1900BBE573 /* cscs.png */,
+				F92DBD8F19ED5C1900BBE573 /* data_search.png */,
+				F92DBD9019ED5C1900BBE573 /* datalan.png */,
+				F92DBD9119ED5C1900BBE573 /* datalan2.png */,
+				F92DBD9219ED5C1900BBE573 /* graycircle1.png */,
+				F92DBD9319ED5C1900BBE573 /* graycircle2.png */,
+				F92DBD9419ED5C1900BBE573 /* graycircle3.png */,
+				F92DBD9519ED5C1900BBE573 /* graystar.png */,
+				F92DBD9619ED5C1900BBE573 /* greencircle.png */,
+				F92DBD9719ED5C1900BBE573 /* jrlc.png */,
+				F92DBD9819ED5C1900BBE573 /* licheng.png */,
+				F92DBD9919ED5C1900BBE573 /* lichengpoint.png */,
+				F92DBD9A19ED5C1900BBE573 /* pingjunsdpng.png */,
+				F92DBD9B19ED5C1900BBE573 /* pingjunsudupoint.png */,
+				F92DBD9C19ED5C1900BBE573 /* pjsd.png */,
+				F92DBD9D19ED5C1900BBE573 /* redcircle.png */,
+				F92DBD9E19ED5C1900BBE573 /* whitecircle.png */,
+				F92DBD9F19ED5C1900BBE573 /* xingshisj.png */,
+				F92DBDA019ED5C1900BBE573 /* xingshitime.png */,
+				F92DBDA119ED5C1900BBE573 /* xssj.png */,
+				F92DBDA219ED5C1900BBE573 /* yellowcircle.png */,
+				F92DBDA319ED5C1900BBE573 /* yellowstar.png */,
+				F92DBDA419ED5C1900BBE573 /* zgsd.png */,
+				F92DBDA519ED5C1900BBE573 /* zlc.png */,
+			);
+			path = "Device-data";
+>>>>>>> master-merg
 			sourceTree = "<group>";
 		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
@@ -553,6 +853,7 @@
 		F91A0C9119E7880C009ADB44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F92DBD8819ED5BFB00BBE573 /* Device_data.storyboard */,
 				6EA222E619E920480073274D /* KBLove-Prefix.pch */,
 				F974109219EC2E4500E12633 /* main.m */,
 				F91A0C9C19E7880C009ADB44 /* Images.xcassets */,
@@ -562,7 +863,11 @@
 				F91A0C9319E7880C009ADB44 /* InfoPlist.strings */,
 				F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */,
 				F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */,
+<<<<<<< HEAD
 				BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */,
+=======
+				6EA2BFEE19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard */,
+>>>>>>> master-merg
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -640,6 +945,7 @@
 			children = (
 				F91A0DB519E7AACF009ADB44 /* BoundEquipment */,
 				F91A0DBC19E7AACF009ADB44 /* Codeback */,
+				BC9DE24719ED44FB00916F9B /* Device-data */,
 				F91A0DC019E7AACF009ADB44 /* equipmentImages */,
 				F91A0DCA19E7AACF009ADB44 /* Loading */,
 				F91A0DCE19E7AACF009ADB44 /* Login */,
@@ -879,6 +1185,7 @@
 		F974107F19EC280200E12633 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				BC59835819ECCC3C00DAC76A /* KBFreash */,
 				F974108719EC2C8700E12633 /* Categories */,
 				F974108819EC2C8700E12633 /* Classes */,
 				F974108919EC2C8700E12633 /* Views */,
@@ -889,6 +1196,7 @@
 		F974108019EC280200E12633 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BC0112D219ED537F0073EE48 /* PinYin */,
 				F97410EF19EC385800E12633 /* ImagePickerTool.h */,
 				F97410F019EC385800E12633 /* ImagePickerTool.m */,
 				F97410F119EC385800E12633 /* QRCodeTool.h */,
@@ -917,6 +1225,12 @@
 				F97410E919EC33CE00E12633 /* KBUserInfo.m */,
 				F97410EB19EC34CA00E12633 /* KBAccount.h */,
 				F97410EC19EC34CA00E12633 /* KBAccount.m */,
+				6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */,
+				6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */,
+				F92DBD8119ECFDAA00BBE573 /* KBDevices.h */,
+				F92DBD8219ECFDAA00BBE573 /* KBDevices.m */,
+				F92DBD8419ED3FAE00BBE573 /* KBDevicesStatus.h */,
+				F92DBD8519ED3FAE00BBE573 /* KBDevicesStatus.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -963,6 +1277,7 @@
 		F974108819EC2C8700E12633 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6E16646619ECCAFA0081EB4C /* DAContextMenuTableViewController */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -972,8 +1287,20 @@
 			children = (
 				F974108A19EC2C8700E12633 /* BannerView.h */,
 				F974108B19EC2C8700E12633 /* BannerView.m */,
+<<<<<<< HEAD
 				BC29302619ED18DC004A99D9 /* RecteView.h */,
 				BC29302719ED18DC004A99D9 /* RecteView.m */,
+=======
+				6E16647419ECD15D0081EB4C /* FriendsListCell.h */,
+				6E16647519ECD15D0081EB4C /* FriendsListCell.m */,
+				6E16647619ECD15D0081EB4C /* FriendsListCell.xib */,
+				BC59837119ECE71800DAC76A /* CircleCell.h */,
+				BC59837219ECE71800DAC76A /* CircleCell.m */,
+				BC59837319ECE71800DAC76A /* CircleCell.xib */,
+				BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */,
+				BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */,
+				BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */,
+>>>>>>> master-merg
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -981,9 +1308,14 @@
 		F974108E19EC2DD000E12633 /* WorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				F92DBD8A19ED5C0400BBE573 /* wangnan.h */,
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
+<<<<<<< HEAD
 				BC29303619ED56BE004A99D9 /* ZhangXiuQiao.h */,
+=======
+				BC59833319ECB3E600DAC76A /* DXLog.h */,
+>>>>>>> master-merg
 			);
 			path = WorkLog;
 			sourceTree = "<group>";
@@ -991,6 +1323,8 @@
 		F97410C119EC322000E12633 /* Guiding */ = {
 			isa = PBXGroup;
 			children = (
+				6EA2BFED19ECB4E50024E6A2 /* MessageCenter */,
+				BC59833519ECB52800DAC76A /* Circle */,
 				F97410C219EC322000E12633 /* Bounding */,
 				F97410D119EC322000E12633 /* Login&Regist */,
 				F97410D719EC322000E12633 /* Welcome */,
@@ -1053,6 +1387,7 @@
 			isa = PBXGroup;
 			children = (
 				F97410C019EC308700E12633 /* ProjectNote.h */,
+				F92DBD8719ED449000BBE573 /* ErrorCode.h */,
 				F974107E19EC280200E12633 /* AppDelegate */,
 				F974107F19EC280200E12633 /* General */,
 				F974108019EC280200E12633 /* Helpers */,
@@ -1145,27 +1480,37 @@
 				F91A0E7B19E7AACF009ADB44 /* dynamicItemNormal.png in Resources */,
 				F91A0E9B19E7AACF009ADB44 /* red_tabbar@2x.png in Resources */,
 				F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */,
+				F92DBDB819ED5C1900BBE573 /* redcircle.png in Resources */,
+				BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */,
 				F91A0E3F19E7AACF009ADB44 /* tickoff.png in Resources */,
 				F91A0E4F19E7AACF009ADB44 /* zhuce.png in Resources */,
 				F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */,
+				F92DBDA619ED5C1900BBE573 /* bluecircle.png in Resources */,
 				F91A0E6019E7AACF009ADB44 /* clearNavItemNoneUse.png in Resources */,
 				F91A0E3B19E7AACF009ADB44 /* equipmentregister.png in Resources */,
+				F92DBDB319ED5C1900BBE573 /* licheng.png in Resources */,
 				F91A0E3419E7AACF009ADB44 /* NVBar_arrow_right.png in Resources */,
 				F91A0C9519E7880C009ADB44 /* InfoPlist.strings in Resources */,
+				F92DBDAF19ED5C1900BBE573 /* graycircle3.png in Resources */,
+				F92DBDA719ED5C1900BBE573 /* chaosics.png in Resources */,
 				F91A0E9619E7AACF009ADB44 /* red_iOS6_navBar.png in Resources */,
 				F91A0E5019E7AACF009ADB44 /* background@2x.png in Resources */,
+				BC0112E919ED537F0073EE48 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				F91A0E8219E7AACF009ADB44 /* mineItemSelected.png in Resources */,
 				F91A0E5819E7AACF009ADB44 /* lgtextfield@2x.png in Resources */,
 				F91A0E6219E7AACF009ADB44 /* clearNavItemSelected.png in Resources */,
 				F91A0E5419E7AACF009ADB44 /* lgcode@2x.png in Resources */,
+				F92DBDBE19ED5C1900BBE573 /* yellowstar.png in Resources */,
 				F91A0E4719E7AACF009ADB44 /* mm.png in Resources */,
 				F91A0E3719E7AACF009ADB44 /* navi@2x.png in Resources */,
 				F91A0E4519E7AACF009ADB44 /* bj.png in Resources */,
 				F91A0E5219E7AACF009ADB44 /* lg@2x.png in Resources */,
 				F91A0E5719E7AACF009ADB44 /* lgremcodew@2x.png in Resources */,
 				F91A0E7519E7AACF009ADB44 /* savepass_uncheck.png in Resources */,
+				F92DBD8919ED5BFB00BBE573 /* Device_data.storyboard in Resources */,
 				F91A0E3A19E7AACF009ADB44 /* circleframe.png in Resources */,
 				F91A0E7619E7AACF009ADB44 /* savepass_uncheck@2x.png in Resources */,
+				F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */,
 				F91A0E4119E7AACF009ADB44 /* whiteline.png in Resources */,
 				F91A0E9519E7AACF009ADB44 /* blue_theme@2x.png in Resources */,
 				F91A0E5919E7AACF009ADB44 /* lgtoolbar@2x.png in Resources */,
@@ -1176,6 +1521,7 @@
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
 				F91A0E4619E7AACF009ADB44 /* login.png in Resources */,
 				F91A0E9019E7AACF009ADB44 /* blue_iOS7_navBar.png in Resources */,
+				F92DBDB519ED5C1900BBE573 /* pingjunsdpng.png in Resources */,
 				F91A0E7D19E7AACF009ADB44 /* image0.png in Resources */,
 				F91A0E4E19E7AACF009ADB44 /* xz.png in Resources */,
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
@@ -1183,11 +1529,15 @@
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
 				BC29301D19ECE7AA004A99D9 /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
+				F92DBDB219ED5C1900BBE573 /* jrlc.png in Resources */,
 				F91A0E8619E7AACF009ADB44 /* black_iOS6_navBar.png in Resources */,
 				F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */,
 				F91A0E3619E7AACF009ADB44 /* SIM_2.png in Resources */,
 				F91A0E3119E7AACF009ADB44 /* BoundEquipment_round.png in Resources */,
 				F91A0E4319E7AACF009ADB44 /* roundLoadingBg.png in Resources */,
+				F92DBDBD19ED5C1900BBE573 /* yellowcircle.png in Resources */,
+				F92DBDB419ED5C1900BBE573 /* lichengpoint.png in Resources */,
+				F92DBDAC19ED5C1900BBE573 /* datalan2.png in Resources */,
 				F91A0E8719E7AACF009ADB44 /* black_iOS6_navBar@2x.png in Resources */,
 				F91A0E9319E7AACF009ADB44 /* blue_tabbar@2x.png in Resources */,
 				F91A0E7719E7AACF009ADB44 /* appItemNormal.png in Resources */,
@@ -1196,16 +1546,21 @@
 				F9C290CE19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard in Resources */,
 				F91A0E8C19E7AACF009ADB44 /* black_theme.png in Resources */,
 				F91A0E8B19E7AACF009ADB44 /* black_tabbar@2x.png in Resources */,
+				F92DBDB019ED5C1900BBE573 /* graystar.png in Resources */,
 				F91A0E6819E7AACF009ADB44 /* arrow.png in Resources */,
 				F91A0E6919E7AACF009ADB44 /* mailregisterbtn@2x.png in Resources */,
 				F91A0E8119E7AACF009ADB44 /* mineItemNormal.png in Resources */,
 				F91A0E3C19E7AACF009ADB44 /* equipmenttypeface.png in Resources */,
+				6EA2BFEF19ECB51F0024E6A2 /* FriendsStoryBoard.storyboard in Resources */,
 				F91A0E7E19E7AACF009ADB44 /* image1.png in Resources */,
+				F92DBDB719ED5C1900BBE573 /* pjsd.png in Resources */,
 				F91A0E6119E7AACF009ADB44 /* clearNavItemNormal.png in Resources */,
 				F91A0E9919E7AACF009ADB44 /* red_iOS7_navBar@2x.png in Resources */,
+				F92DBDBB19ED5C1900BBE573 /* xingshitime.png in Resources */,
 				F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */,
 				F91A0E9719E7AACF009ADB44 /* red_iOS6_navBar@2x.png in Resources */,
 				F91A0E6719E7AACF009ADB44 /* ReturnItem.png in Resources */,
+				F92DBDB919ED5C1900BBE573 /* whitecircle.png in Resources */,
 				F91A0E4B19E7AACF009ADB44 /* other2.png in Resources */,
 				F91A0E7319E7AACF009ADB44 /* savepass_check.png in Resources */,
 				F91A0E9819E7AACF009ADB44 /* red_iOS7_navBar.png in Resources */,
@@ -1226,26 +1581,38 @@
 				F91A0E8019E7AACF009ADB44 /* infoItemSelected.png in Resources */,
 				F91A0E4819E7AACF009ADB44 /* mmm.png in Resources */,
 				F91A0E7419E7AACF009ADB44 /* savepass_check@2x.png in Resources */,
+				BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */,
 				F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */,
 				F91A0E8419E7AACF009ADB44 /* tabbarBG@2x.png in Resources */,
 				F91A0E8E19E7AACF009ADB44 /* blue_iOS6_navBar.png in Resources */,
+				F92DBDBA19ED5C1900BBE573 /* xingshisj.png in Resources */,
+				6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */,
 				F91A0E4919E7AACF009ADB44 /* other0.png in Resources */,
+				F92DBDAB19ED5C1900BBE573 /* datalan.png in Resources */,
+				F92DBDAE19ED5C1900BBE573 /* graycircle2.png in Resources */,
 				F91A0E8919E7AACF009ADB44 /* black_iOS7_navBar@2x.png in Resources */,
+				F92DBDA919ED5C1900BBE573 /* cscs.png in Resources */,
 				F91A0E9119E7AACF009ADB44 /* blue_iOS7_navBar@2x.png in Resources */,
 				F91A0E7A19E7AACF009ADB44 /* contactsItemSelected.png in Resources */,
 				F91A0E7819E7AACF009ADB44 /* appItemSelected.png in Resources */,
 				F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */,
+				F92DBDBF19ED5C1900BBE573 /* zgsd.png in Resources */,
 				F91A0E7C19E7AACF009ADB44 /* dynamicItemSelected.png in Resources */,
 				F91A0E6619E7AACF009ADB44 /* moreNavItemSelected.png in Resources */,
 				F91A0E3319E7AACF009ADB44 /* NVBar_arrow_left.png in Resources */,
+				F92DBDAD19ED5C1900BBE573 /* graycircle1.png in Resources */,
 				F91A0E3519E7AACF009ADB44 /* SIM_1.png in Resources */,
 				F91A0E5F19E7AACF009ADB44 /* addNavItemSelected.png in Resources */,
 				F91A0E6B19E7AACF009ADB44 /* RegisterFisihed1.png in Resources */,
 				F91A0E5B19E7AACF009ADB44 /* lgusername@2x.png in Resources */,
 				F91A0E6519E7AACF009ADB44 /* moreNavItemNormal.png in Resources */,
+				F92DBDA819ED5C1900BBE573 /* chaosucs.png in Resources */,
 				F91A0E4C19E7AACF009ADB44 /* Register.png in Resources */,
 				F91A0E3919E7AACF009ADB44 /* buttonbackground.png in Resources */,
 				F91A0E7119E7AACF009ADB44 /* end.png in Resources */,
+				F92DBDB119ED5C1900BBE573 /* greencircle.png in Resources */,
+				F92DBDAA19ED5C1900BBE573 /* data_search.png in Resources */,
+				F92DBDB619ED5C1900BBE573 /* pingjunsudupoint.png in Resources */,
 				F91A0E9A19E7AACF009ADB44 /* red_tabbar.png in Resources */,
 				F91A0E8519E7AACF009ADB44 /* unreadRedIndicator.png in Resources */,
 				F91A0E8819E7AACF009ADB44 /* black_iOS7_navBar.png in Resources */,
@@ -1260,6 +1627,7 @@
 				F91A0E3819E7AACF009ADB44 /* navileft@2x.png in Resources */,
 				F91A0C9D19E7880C009ADB44 /* Images.xcassets in Resources */,
 				F91A0E5D19E7AACF009ADB44 /* loginsina@2x.png in Resources */,
+				F92DBDBC19ED5C1900BBE573 /* xssj.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1311,15 +1679,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				BC29303219ED4539004A99D9 /* ConfigPersonDeviceViewController.m in Sources */,
+=======
+				BC0112E819ED537F0073EE48 /* PinyinHelper.m in Sources */,
+				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
+				6E16646F19ECCAFA0081EB4C /* DAOverlayView.m in Sources */,
+				BC59835D19ECCC4300DAC76A /* FreashManager.m in Sources */,
+				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
+				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
+				BC0112E619ED537F0073EE48 /* PinyinFormatter.m in Sources */,
+				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
+>>>>>>> master-merg
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				BC29302219ED0D8D004A99D9 /* ConfigurationViewController.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
+				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
+				BC59835E19ECCC4300DAC76A /* KBFreash.m in Sources */,
+				BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */,
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
+<<<<<<< HEAD
 				BC29302519ED0EDD004A99D9 /* ChangeInformationViewController.m in Sources */,
+=======
+				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
+>>>>>>> master-merg
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
@@ -1330,25 +1717,40 @@
 				BC29303519ED459E004A99D9 /* ChangePersonDetailViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
+				6E16646E19ECCAFA0081EB4C /* DAContextMenuTableViewController.m in Sources */,
+				BC0112E719ED537F0073EE48 /* PinYinForObjc.m in Sources */,
+				BC0112E519ED537F0073EE48 /* NSString+PinYin4Cocoa.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
 				F974108C19EC2C8700E12633 /* BannerView.m in Sources */,
+				BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */,
+				BC0112E419ED537F0073EE48 /* HanyuPinyinOutputFormat.m in Sources */,
+				BC0112E219ED537F0073EE48 /* ChineseInclude.m in Sources */,
+				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
 				F97410E719EC322000E12633 /* MainViewController.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				BC29302B19ED3AE6004A99D9 /* CrawlAlertConfiguration.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
+				6E16646D19ECCAFA0081EB4C /* DAContextMenuCell.m in Sources */,
+				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
+				BC0112E319ED537F0073EE48 /* ChineseToPinyinResource.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
+				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
+				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
+				BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F97410E219EC322000E12633 /* BoundPetInfoController.m in Sources */,
+				6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */,
+				6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
