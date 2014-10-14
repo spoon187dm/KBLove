@@ -5,76 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< Updated upstream
-	<string>74C54D9B-29FE-467C-85F8-D7043A5CF6D0</string>
-=======
-	<string>F1A50533-DC77-43AD-A894-0AFEBF078795</string>
->>>>>>> Stashed changes
+	<string>9EB55031-05B9-4210-9F87-49258AB9C456</string>
 	<key>IDESourceControlProjectName</key>
 	<string>KBLove</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< Updated upstream
-		<key>9FD6225A-926B-4571-88A9-C5A600DAC93D</key>
-
-		<key>148ECF45-407C-4775-9158-BC4B57101440</key>
->>>>>>> Stashed changes
-		<string>https://github.com/blockdate/KBLove.git</string>
-		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
+		<key>EC42678F-3891-41D6-AC12-FE7EA622BA68</key>
 		<string>https://github.com/blockdate/KBLove.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>KBLove.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>18CAE6EF-A833-4655-ABD3-4706164A79BC</key>
-		<string>../../KBLove</string>
-		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
-=======
-<<<<<<< Updated upstream
-		<key>9FD6225A-926B-4571-88A9-C5A600DAC93D</key>
-=======
-		<key>148ECF45-407C-4775-9158-BC4B57101440</key>
->>>>>>> Stashed changes
->>>>>>> gpdevelop
+		<key>EC42678F-3891-41D6-AC12-FE7EA622BA68</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/blockdate/KBLove.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>111</integer>
+	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-<<<<<<< HEAD
-	<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
-=======
-<<<<<<< Updated upstream
-	<string>9FD6225A-926B-4571-88A9-C5A600DAC93D</string>
-=======
-	<string>148ECF45-407C-4775-9158-BC4B57101440</string>
->>>>>>> Stashed changes
->>>>>>> gpdevelop
+	<string>EC42678F-3891-41D6-AC12-FE7EA622BA68</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< Updated upstream
-			<string>9FD6225A-926B-4571-88A9-C5A600DAC93D</string>
-=======
-			<string>148ECF45-407C-4775-9158-BC4B57101440</string>
->>>>>>> Stashed changes
+			<string>EC42678F-3891-41D6-AC12-FE7EA622BA68</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KBLove</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
-			<key>IDESourceControlWCCName</key>
-			<string>KBLove0.1</string>
 		</dict>
 	</array>
 </dict>
