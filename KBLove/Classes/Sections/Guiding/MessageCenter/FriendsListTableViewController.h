@@ -11,4 +11,6 @@
 
 @interface FriendsListTableViewController : DAContextMenuTableViewController
 
+- (IBAction)leftItemClicked:(id)sender;
+
 @end

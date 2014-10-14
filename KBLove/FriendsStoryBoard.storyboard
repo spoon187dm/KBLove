@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="222" y="34"/>
         </scene>
-        <!--Friends List Table View Controller-->
+        <!--Title-->
         <scene sceneID="4Ge-TU-Nv7">
             <objects>
                 <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="mSX-Rb-qvy" customClass="FriendsListTableViewController" sceneMemberID="viewController">
@@ -45,17 +45,34 @@
                             <outlet property="delegate" destination="mSX-Rb-qvy" id="TOd-C0-fap"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9gB-HN-Sa2"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Title" id="3Iz-Vo-Ibm">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Gnw-LG-JS1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gWd-cZ-Kp7">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="NVBar_arrow_left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftItemClicked:" destination="mSX-Rb-qvy" eventType="touchUpInside" id="CMy-dj-E0s"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3k-bV-KVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="593" y="40"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NVBar_arrow_left.png" width="51" height="51"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

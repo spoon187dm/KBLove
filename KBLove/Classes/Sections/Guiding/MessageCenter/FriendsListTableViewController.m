@@ -121,4 +121,8 @@
     
 }
 
+//返回item点击事件
+- (IBAction)leftItemClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--欢迎引导界面-->
@@ -27,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x9g-8d-UOM">
-                                        <rect key="frame" x="190.00000178154804" y="10" width="100" height="30"/>
+                                        <rect key="frame" x="190" y="10" width="100" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="注册">
@@ -74,7 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="7Ir-Bs-Cs5">
-                                <rect key="frame" x="10" y="95" width="299.99999922393329" height="40"/>
+                                <rect key="frame" x="10" y="95" width="299.99999901692547" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ji-hS-xeK">
@@ -89,7 +88,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9h3-Dd-NTm">
-                                        <rect key="frame" x="150" y="5" width="99.999999689573301" height="30"/>
+                                        <rect key="frame" x="150" y="5" width="99.999999606770174" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="邮箱注册" backgroundImage="mailregisterbtn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -411,7 +410,7 @@
             </objects>
             <point key="canvasLocation" x="177" y="594"/>
         </scene>
-        <!--Bound Add Equipment Controller - 绑定设备-->
+        <!--绑定设备-->
         <scene sceneID="bik-5S-Irc">
             <objects>
                 <viewController storyboardIdentifier="BoundAddEquipmentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sFa-1H-aMC" customClass="BoundAddEquipmentController" sceneMemberID="viewController">
@@ -533,7 +532,7 @@
             </objects>
             <point key="canvasLocation" x="524" y="594"/>
         </scene>
-        <!--Bound Equipment Detail Controller - 绑定设备-->
+        <!--绑定设备-->
         <scene sceneID="pXV-s4-6qN">
             <objects>
                 <viewController storyboardIdentifier="BoundEquipmentDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtX-hG-AFZ" customClass="BoundEquipmentDetailController" sceneMemberID="viewController">
@@ -660,7 +659,7 @@
             </objects>
             <point key="canvasLocation" x="880" y="594"/>
         </scene>
-        <!--Bound Car Info Controller - 确认车辆信息-->
+        <!--确认车辆信息-->
         <scene sceneID="srd-h2-RpZ">
             <objects>
                 <viewController storyboardIdentifier="BoundCarInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I1o-G5-ueS" customClass="BoundCarInfoController" sceneMemberID="viewController">
@@ -833,7 +832,7 @@
             </objects>
             <point key="canvasLocation" x="-216" y="594"/>
         </scene>
-        <!--Bound Pet Info Controller - 确认宠物信息-->
+        <!--确认宠物信息-->
         <scene sceneID="hjx-oR-kDE">
             <objects>
                 <viewController storyboardIdentifier="BoundPetInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ptb-02-qjX" customClass="BoundPetInfoController" sceneMemberID="viewController">
@@ -1040,7 +1039,7 @@
             </objects>
             <point key="canvasLocation" x="1244" y="1046"/>
         </scene>
-        <!--Bound Person Info Controller - 确认用户信息-->
+        <!--确认用户信息-->
         <scene sceneID="21a-Qz-nyN">
             <objects>
                 <viewController storyboardIdentifier="BoundPersonInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7DL-1Y-ruq" customClass="BoundPersonInfoController" sceneMemberID="viewController">
