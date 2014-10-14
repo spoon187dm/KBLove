@@ -7,8 +7,10 @@
 //
 
 #import "MainViewController.h"
-
+#import "KBDevices.h"
+#import "KBAccount.h"
 @interface MainViewController ()
+
 - (IBAction)click_car:(id)sender;
 - (IBAction)click_person:(id)sender;
 - (IBAction)click_pet:(id)sender;
@@ -18,6 +20,7 @@
 - (IBAction)click_devicesList:(id)sender;
 - (IBAction)click_message:(id)sender;
 - (IBAction)click_mine:(id)sender;
+
 @end
 
 @implementation MainViewController
@@ -43,17 +46,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)click_car:(id)sender {
 }
 
@@ -65,6 +57,12 @@
 }
 
 - (IBAction)click_allDevices:(id)sender{
+    [[KBAccount sharedAccount]getDevicesStatus:^(BOOL isSuccess) {
+        if (isSuccess) {
+            NSArray *array = [KBAccount sharedAccount].devicesArray;
+            NSLog(@"%@",array);
+        }
+    }];
 }
 
 - (IBAction)click_friends:(id)sender{
@@ -74,6 +72,13 @@
 }
 
 - (IBAction)click_devicesList:(id)sender{
+    
+    [[KBAccount sharedAccount] getDevicesArrayWithpageNumber:1 pageSize:10 block:^(BOOL isSuccess, NSArray *deviceArray) {
+        if (isSuccess) {
+            
+        }
+    }];
+    
 }
 
 - (IBAction)click_message:(id)sender{

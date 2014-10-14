@@ -8,10 +8,15 @@
 
 #import "KBDevices.h"
 #import "KBHttpRequestTool.h"
+#import "KBDevicesStatus.h"
 @implementation KBDevices
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
     NSLog(@"%@--%s--:%@",[self class],__func__,key);
+    if ([key isEqualToString:@"position"]) {
+        _devicesStatus = [[ KBDevicesStatus alloc]init];
+        [_devicesStatus setValuesForKeysWithDictionary:value];
+    }
 }
 
 

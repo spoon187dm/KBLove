@@ -44,7 +44,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
-            endingLineNumber = "119">
+            endingLineNumber = "119"
+            landmarkName = "-freshDevicesStatus"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -59,7 +61,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "-loadDevicesArrayWithpageNumber:pageSize:block:"
+            landmarkName = "-getDevicesArrayWithpageNumber:pageSize:block:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -91,7 +93,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "-loadDevicesArrayWithpageNumber:pageSize:block:"
+            landmarkName = "-getDevicesArrayWithpageNumber:pageSize:block:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
