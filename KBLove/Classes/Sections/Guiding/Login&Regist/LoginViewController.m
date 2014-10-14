@@ -113,6 +113,14 @@
 - (IBAction)forgetPwdBtnClicked:(id)sender {
 }
 
+- (void)gotoMainVireController{
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainViewController"];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
+
 #pragma mark - 注册
 - (IBAction)registerBtnClicked:(id)sender {
 //跳转到注册页面
