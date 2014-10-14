@@ -61,6 +61,7 @@
             //成功后跳转
             
             [SVProgressHUD dismiss];
+            [self gotoMainVireController];
             NSLog(@"登陆成功");
         } andLoginFaildeBlock:^(NSString *desc) {
             [SVProgressHUD dismiss];

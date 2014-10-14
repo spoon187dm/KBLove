@@ -11,4 +11,13 @@
 
 typedef void (^requestBlock)(BOOL isSuccess, id result);
 
+/**
+ @Author block, 10-14 15:10
+ 
+ 用于设备列表获取回调
+ 
+ @param isSuccess   是否成功
+ @param deviceArray 设备列表
+ */
+typedef void (^devicesListLoadBlock)(BOOL isSuccess, NSArray *deviceArray);
 #endif
