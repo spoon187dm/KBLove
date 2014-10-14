@@ -207,6 +207,7 @@
 		BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigPersonDeviceViewController.m; sourceTree = "<group>"; };
 		BC29303319ED459E004A99D9 /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
 		BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
+		BC29303619ED56BE004A99D9 /* ZhangXiuQiao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F911505419EB70ED004F679A /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
@@ -982,6 +983,7 @@
 			children = (
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
+				BC29303619ED56BE004A99D9 /* ZhangXiuQiao.h */,
 			);
 			path = WorkLog;
 			sourceTree = "<group>";

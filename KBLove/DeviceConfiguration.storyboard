@@ -938,44 +938,7 @@
     </scenes>
     <resources>
         <image name="arrow.png" width="14" height="30"/>
-        <image name="arrow.png" width="14" height="30"/>
         <image name="navileft.png" width="22" height="22"/>
-        <image name="navileft.png" width="22" height="22"/>
-        <image name="navileft.png" width="22" height="22"/>
-        <image name="navileft.png" width="22" height="22"/>
-        <image name="navileft.png" width="22" height="22"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
-        <image name="whiteline.png" width="260" height="1"/>
         <image name="whiteline.png" width="260" height="1"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
