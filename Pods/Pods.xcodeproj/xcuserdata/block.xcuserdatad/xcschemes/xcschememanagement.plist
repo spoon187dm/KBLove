@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-SVProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ZBarSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>175049ACF2CCA4FA50B55137</key>
+		<key>0EB16440D6B0F52A61125A65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1D259C1E414178417F7F9047</key>
+		<key>23E61E3A297206042440FCE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FF1032A7D064829D8C74309</key>
+		<key>3C71F8DE51C9670DD0C1337B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A83A4809A78597C87CEEAB95</key>
+		<key>B141428F871B585158ADD2AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABEF5AAAD51D34C2BED272CC</key>
+		<key>CD4FECF86FED610B9B9E18C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDEBF3C4CAF4BF4218611B6D</key>
+		<key>ECCC289E3DD889561D214877</key>
 		<dict>
 			<key>primary</key>
 			<true/>
