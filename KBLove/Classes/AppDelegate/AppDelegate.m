@@ -18,8 +18,9 @@
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_Bacground"] forBarMetrics:UIBarMetricsDefault];
     
-    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
-    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"DeviceConfiguration" bundle:nil];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"DeviceConfigPerson"];
+    
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
 

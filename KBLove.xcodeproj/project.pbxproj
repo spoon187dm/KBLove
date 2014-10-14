@@ -10,6 +10,13 @@
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
 		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
 		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
+		BC29301D19ECE7AA004A99D9 /* DeviceConfiguration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */; };
+		BC29302219ED0D8D004A99D9 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */; };
+		BC29302519ED0EDD004A99D9 /* ChangeInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */; };
+		BC29302819ED18DC004A99D9 /* RecteView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302719ED18DC004A99D9 /* RecteView.m */; };
+		BC29302B19ED3AE6004A99D9 /* CrawlAlertConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */; };
+		BC29303219ED4539004A99D9 /* ConfigPersonDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */; };
+		BC29303519ED459E004A99D9 /* ChangePersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */; };
 		F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505519EB70ED004F679A /* QRCodeScanViewController.m */; };
 		F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505819EB70FE004F679A /* QRCodeGenerator.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
@@ -187,6 +194,19 @@
 		6EA222DC19E90EEB0073274D /* pwdRem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pwdRem.png; sourceTree = "<group>"; };
 		6EA222E619E920480073274D /* KBLove-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KBLove-Prefix.pch"; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceConfiguration.storyboard; sourceTree = "<group>"; };
+		BC29302019ED0D8D004A99D9 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
+		BC29302319ED0EDD004A99D9 /* ChangeInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeInformationViewController.h; sourceTree = "<group>"; };
+		BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeInformationViewController.m; sourceTree = "<group>"; };
+		BC29302619ED18DC004A99D9 /* RecteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecteView.h; sourceTree = "<group>"; };
+		BC29302719ED18DC004A99D9 /* RecteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecteView.m; sourceTree = "<group>"; };
+		BC29302919ED3AE6004A99D9 /* CrawlAlertConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrawlAlertConfiguration.h; sourceTree = "<group>"; };
+		BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrawlAlertConfiguration.m; sourceTree = "<group>"; };
+		BC29303019ED4539004A99D9 /* ConfigPersonDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigPersonDeviceViewController.h; sourceTree = "<group>"; };
+		BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigPersonDeviceViewController.m; sourceTree = "<group>"; };
+		BC29303319ED459E004A99D9 /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
+		BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F911505419EB70ED004F679A /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
@@ -424,6 +444,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC29301E19ED0C2B004A99D9 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				BC29301F19ED0C62004A99D9 /* configuration */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		BC29301F19ED0C62004A99D9 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BC29302F19ED44B5004A99D9 /* pet */,
+				BC29302E19ED44A3004A99D9 /* person */,
+				BC29302D19ED448B004A99D9 /* car */,
+			);
+			name = configuration;
+			sourceTree = "<group>";
+		};
+		BC29302D19ED448B004A99D9 /* car */ = {
+			isa = PBXGroup;
+			children = (
+				BC29302019ED0D8D004A99D9 /* ConfigurationViewController.h */,
+				BC29302119ED0D8D004A99D9 /* ConfigurationViewController.m */,
+				BC29302319ED0EDD004A99D9 /* ChangeInformationViewController.h */,
+				BC29302419ED0EDD004A99D9 /* ChangeInformationViewController.m */,
+				BC29302919ED3AE6004A99D9 /* CrawlAlertConfiguration.h */,
+				BC29302A19ED3AE6004A99D9 /* CrawlAlertConfiguration.m */,
+			);
+			name = car;
+			sourceTree = "<group>";
+		};
+		BC29302E19ED44A3004A99D9 /* person */ = {
+			isa = PBXGroup;
+			children = (
+				BC29303019ED4539004A99D9 /* ConfigPersonDeviceViewController.h */,
+				BC29303119ED4539004A99D9 /* ConfigPersonDeviceViewController.m */,
+				BC29303319ED459E004A99D9 /* ChangePersonDetailViewController.h */,
+				BC29303419ED459E004A99D9 /* ChangePersonDetailViewController.m */,
+			);
+			name = person;
+			sourceTree = "<group>";
+		};
+		BC29302F19ED44B5004A99D9 /* pet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = pet;
+			sourceTree = "<group>";
+		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +561,7 @@
 				F91A0C9319E7880C009ADB44 /* InfoPlist.strings */,
 				F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */,
 				F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */,
+				BC29301C19ECE7AA004A99D9 /* DeviceConfiguration.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -853,6 +923,7 @@
 		F974108319EC280200E12633 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				BC29301E19ED0C2B004A99D9 /* Device */,
 				F97410C119EC322000E12633 /* Guiding */,
 				F97410DA19EC322000E12633 /* Main */,
 			);
@@ -900,6 +971,8 @@
 			children = (
 				F974108A19EC2C8700E12633 /* BannerView.h */,
 				F974108B19EC2C8700E12633 /* BannerView.m */,
+				BC29302619ED18DC004A99D9 /* RecteView.h */,
+				BC29302719ED18DC004A99D9 /* RecteView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1106,6 +1179,7 @@
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
 				F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */,
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
+				BC29301D19ECE7AA004A99D9 /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
 				F91A0E8619E7AACF009ADB44 /* black_iOS6_navBar.png in Resources */,
 				F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */,
@@ -1235,24 +1309,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC29303219ED4539004A99D9 /* ConfigPersonDeviceViewController.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
+				BC29302219ED0D8D004A99D9 /* ConfigurationViewController.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
+				BC29302519ED0EDD004A99D9 /* ChangeInformationViewController.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
+				BC29302819ED18DC004A99D9 /* RecteView.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
+				BC29303519ED459E004A99D9 /* ChangePersonDetailViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
 				F974108C19EC2C8700E12633 /* BannerView.m in Sources */,
 				F97410E719EC322000E12633 /* MainViewController.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
+				BC29302B19ED3AE6004A99D9 /* CrawlAlertConfiguration.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
