@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginRequest.h"
 #import <SVProgressHUD.h>
+#import "RegisterViewController.h"
 
 @interface LoginViewController ()
 {
@@ -111,8 +112,8 @@
             
         }];
     }else{
-        LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        vc.isModalFromRegist = YES;
+        RegisterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegisterViewController"];
+        vc.isModalFromLogin = YES;
         [self presentViewController:vc animated:YES completion:^{
             
         }];

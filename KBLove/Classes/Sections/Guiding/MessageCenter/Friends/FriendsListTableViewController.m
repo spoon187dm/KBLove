@@ -13,7 +13,7 @@
 
 @interface FriendsListTableViewController ()
 {
-    NSMutableArray *_friendsListArray;
+    NSMutableArray *_friendsListArray;//好友列表数据源
 }
 
 @end
@@ -51,6 +51,7 @@
                     [friendInfo setValuesForKeysWithDictionary:dic];
                     [_friendsListArray addObject:friendInfo];
                 }
+                //刷新表
                 [self.tableView reloadData];
             } else {//如果返回的结果不是dic
             
