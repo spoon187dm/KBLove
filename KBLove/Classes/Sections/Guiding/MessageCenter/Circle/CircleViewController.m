@@ -65,6 +65,7 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+//下载数据
 - (void)loadData
 {
     if (!_dataArray) {
