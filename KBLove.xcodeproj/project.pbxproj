@@ -18,6 +18,8 @@
 		BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */; };
 		BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */; };
 		BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */; };
+		BC59837419ECE71800DAC76A /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59837219ECE71800DAC76A /* CircleCell.m */; };
+		BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59837319ECE71800DAC76A /* CircleCell.xib */; };
 		F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505519EB70ED004F679A /* QRCodeScanViewController.m */; };
 		F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505819EB70FE004F679A /* QRCodeGenerator.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
@@ -212,6 +214,9 @@
 		BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSettingViewController.m; sourceTree = "<group>"; };
 		BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteCircleManagerViewController.h; sourceTree = "<group>"; };
 		BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteCircleManagerViewController.m; sourceTree = "<group>"; };
+		BC59837119ECE71800DAC76A /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
+		BC59837219ECE71800DAC76A /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
+		BC59837319ECE71800DAC76A /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F911505419EB70ED004F679A /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
@@ -449,14 +454,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC59833419ECB52800DAC76A /* MessageCenter */ = {
-			isa = PBXGroup;
-			children = (
-				BC59833519ECB52800DAC76A /* Circle */,
-			);
-			path = MessageCenter;
-			sourceTree = "<group>";
-		};
 		BC59833519ECB52800DAC76A /* Circle */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,7 +470,8 @@
 				BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */,
 				BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */,
 			);
-			path = Circle;
+			name = Circle;
+			path = MessageCenter/Circle;
 			sourceTree = "<group>";
 		};
 		BC59835819ECCC3C00DAC76A /* KBFreash */ = {
@@ -964,6 +962,9 @@
 			children = (
 				F974108A19EC2C8700E12633 /* BannerView.h */,
 				F974108B19EC2C8700E12633 /* BannerView.m */,
+				BC59837119ECE71800DAC76A /* CircleCell.h */,
+				BC59837219ECE71800DAC76A /* CircleCell.m */,
+				BC59837319ECE71800DAC76A /* CircleCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -981,7 +982,7 @@
 		F97410C119EC322000E12633 /* Guiding */ = {
 			isa = PBXGroup;
 			children = (
-				BC59833419ECB52800DAC76A /* MessageCenter */,
+				BC59833519ECB52800DAC76A /* Circle */,
 				F97410C219EC322000E12633 /* Bounding */,
 				F97410D119EC322000E12633 /* Login&Regist */,
 				F97410D719EC322000E12633 /* Welcome */,
@@ -1216,6 +1217,7 @@
 				F91A0E8019E7AACF009ADB44 /* infoItemSelected.png in Resources */,
 				F91A0E4819E7AACF009ADB44 /* mmm.png in Resources */,
 				F91A0E7419E7AACF009ADB44 /* savepass_check@2x.png in Resources */,
+				BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */,
 				F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */,
 				F91A0E8419E7AACF009ADB44 /* tabbarBG@2x.png in Resources */,
 				F91A0E8E19E7AACF009ADB44 /* blue_iOS6_navBar.png in Resources */,
@@ -1303,6 +1305,7 @@
 			files = (
 				BC59835D19ECCC4300DAC76A /* FreashManager.m in Sources */,
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
+				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
