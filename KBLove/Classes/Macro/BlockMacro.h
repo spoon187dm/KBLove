@@ -11,6 +11,8 @@
 
 typedef void (^requestBlock)(BOOL isSuccess, id result);
 
+typedef void (^boolReturnBlock)(BOOL isSuccess);
+
 /**
  @Author block, 10-14 15:10
  

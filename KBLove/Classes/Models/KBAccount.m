@@ -9,7 +9,7 @@
 #import "KBAccount.h"
 #import "KBHttpRequestTool.h"
 #import "KBDevices.h"
-
+#import "KBDevicesStatus.h"
 @interface KBAccount ()
 
 @property (nonatomic, strong) KBUserInfo *userInfo;
@@ -49,7 +49,7 @@ static KBAccount *account = nil;
     
 }
 
-- (void)loadDevicesArrayWithpageNumber:(NSInteger)pagenum pageSize:(NSInteger)size block:(devicesListLoadBlock)block{
+- (void)getDevicesArrayWithpageNumber:(NSInteger)pagenum pageSize:(NSInteger)size block:(devicesListLoadBlock)block{
     NSString *userid = _userInfo.user_id;
     NSString *token = _userInfo.token;
     
@@ -57,8 +57,8 @@ static KBAccount *account = nil;
     NSParameterAssert(token);
     
     NSDictionary *params = @{@"user_id":userid,
-                             @"page_number":@(pagenum),
-                             @"page_size":@(size),
+                             @"page_number":@(kPageNumber),
+                             @"page_size":@(kPageSize),
                              @"token":token
                              };
     
@@ -81,8 +81,43 @@ static KBAccount *account = nil;
     }];
 }
 
+- (void)getDevicesStatus:(boolReturnBlock)block{
+    if (!_devicesArray) {
+//        设备列表未获取
+        [self getDevicesArrayWithpageNumber:kPageNumber pageSize:kPageSize block:^(BOOL isSuccess, NSArray *deviceArray) {
+            if (isSuccess) {
+                [self freshDevicesStatus];
+            }else{
+                [UIAlertView showWithTitle:@"抱歉" Message:@"设备列表获取失败" cancle:@"确定" otherbutton:nil block:nil];
+            }
+        }];
+    }else{
+        [self freshDevicesStatus];
+    }
+}
+
 - (void)freshDevicesStatus{
+    NSString *userid = _userInfo.user_id;
+    NSString *token = _userInfo.token;
     
+    NSParameterAssert(userid);
+    NSParameterAssert(token);
+    NSParameterAssert(_devicesArray);
+    NSDictionary *params = @{@"user_id":userid,
+                             @"app_name":app_name,
+                             @"token":token
+                             };
+    [[KBHttpRequestTool sharedInstance] request:Url_GetDeviceStatus requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+        if (IsSuccess) {
+            NSArray *statusArray = [result objectForKey:@"statuss"];
+            for(NSInteger i =0 ; i < statusArray.count; i++){
+                NSDictionary *perDic = statusArray[i];
+                KBDevicesStatus *status = [[KBDevicesStatus alloc]init];
+                [status setValuesForKeysWithDictionary:perDic];
+                [[_devicesArray objectAtIndex:i] setValue:status forKey:@"devicesStatus"];
+            }
+        }
+    }];
 }
 
 @end
