@@ -10,4 +10,7 @@
 
 @interface AddFriendViewController : UIViewController
 
+//返回item
+- (IBAction)leftItemClicked:(id)sender;
+
 @end

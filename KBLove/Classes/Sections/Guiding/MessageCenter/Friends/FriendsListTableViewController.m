@@ -121,7 +121,9 @@
 }
 
 - (IBAction)addItemClicked:(id)sender {
-    
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"AddFriendViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 @end

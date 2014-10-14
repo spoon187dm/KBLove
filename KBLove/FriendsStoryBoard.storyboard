@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -70,10 +70,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addItemClicked:" destination="mSX-Rb-qvy" eventType="touchUpInside" id="s1N-6A-xkr"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="addItemClicked:" destination="mSX-Rb-qvy" id="3j7-XJ-Of9"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -85,7 +85,7 @@
         <!--添加好友-->
         <scene sceneID="Q7d-XW-Xzo">
             <objects>
-                <viewController id="5Y7-DB-6Of" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddFriendViewController" id="5Y7-DB-6Of" customClass="AddFriendViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9u-R2-Jm0"/>
                         <viewControllerLayoutGuide type="bottom" id="vlc-8H-iCc"/>
@@ -95,7 +95,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="添加好友" id="rYH-zL-9CZ"/>
+                    <navigationItem key="navigationItem" title="添加好友" id="rYH-zL-9CZ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="5u7-yx-kMF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9gw-PD-mjG">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="NVBar_arrow_left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftItemClicked:" destination="5Y7-DB-6Of" eventType="touchUpInside" id="xBS-A9-l22"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ni-5N-B65" userLabel="First Responder" sceneMemberID="firstResponder"/>
