@@ -230,6 +230,12 @@
 		F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */; };
 		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
 		F9C290CE19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C290CC19E8E28700AA0ABC /* Regist_Login_Storyboard.storyboard */; };
+		F9E24F3219ED687500D83FEF /* DeviceConfiguration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E24F3119ED687500D83FEF /* DeviceConfiguration.storyboard */; };
+		F9E24F3E19ED68D100D83FEF /* ChangeInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3519ED68D100D83FEF /* ChangeInformationViewController.m */; };
+		F9E24F3F19ED68D100D83FEF /* ChangePersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3719ED68D100D83FEF /* ChangePersonDetailViewController.m */; };
+		F9E24F4019ED68D100D83FEF /* ConfigPersonDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3919ED68D100D83FEF /* ConfigPersonDeviceViewController.m */; };
+		F9E24F4119ED68D100D83FEF /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3B19ED68D100D83FEF /* ConfigurationViewController.m */; };
+		F9E24F4219ED68D100D83FEF /* CrawlAlertConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F3D19ED68D100D83FEF /* CrawlAlertConfiguration.m */; };
 		F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FDF61419E92C8800D235E7 /* nav_Bacground.png */; };
 /* End PBXBuildFile section */
 
@@ -544,6 +550,18 @@
 		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
 		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
 		F9C290CD19E8E28700AA0ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Regist_Login_Storyboard.storyboard; sourceTree = "<group>"; };
+		F9E24F3119ED687500D83FEF /* DeviceConfiguration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceConfiguration.storyboard; sourceTree = "<group>"; };
+		F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
+		F9E24F3419ED68D100D83FEF /* ChangeInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeInformationViewController.h; sourceTree = "<group>"; };
+		F9E24F3519ED68D100D83FEF /* ChangeInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeInformationViewController.m; sourceTree = "<group>"; };
+		F9E24F3619ED68D100D83FEF /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
+		F9E24F3719ED68D100D83FEF /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
+		F9E24F3819ED68D100D83FEF /* ConfigPersonDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigPersonDeviceViewController.h; sourceTree = "<group>"; };
+		F9E24F3919ED68D100D83FEF /* ConfigPersonDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigPersonDeviceViewController.m; sourceTree = "<group>"; };
+		F9E24F3A19ED68D100D83FEF /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		F9E24F3B19ED68D100D83FEF /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
+		F9E24F3C19ED68D100D83FEF /* CrawlAlertConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrawlAlertConfiguration.h; sourceTree = "<group>"; };
+		F9E24F3D19ED68D100D83FEF /* CrawlAlertConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrawlAlertConfiguration.m; sourceTree = "<group>"; };
 		F9FDF61419E92C8800D235E7 /* nav_Bacground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_Bacground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -776,6 +794,7 @@
 		F91A0C9119E7880C009ADB44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9E24F3119ED687500D83FEF /* DeviceConfiguration.storyboard */,
 				F92DBD8819ED5BFB00BBE573 /* Device_data.storyboard */,
 				6EA222E619E920480073274D /* KBLove-Prefix.pch */,
 				F974109219EC2E4500E12633 /* main.m */,
@@ -1157,6 +1176,16 @@
 		F974108319EC280200E12633 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F9E24F3419ED68D100D83FEF /* ChangeInformationViewController.h */,
+				F9E24F3519ED68D100D83FEF /* ChangeInformationViewController.m */,
+				F9E24F3619ED68D100D83FEF /* ChangePersonDetailViewController.h */,
+				F9E24F3719ED68D100D83FEF /* ChangePersonDetailViewController.m */,
+				F9E24F3819ED68D100D83FEF /* ConfigPersonDeviceViewController.h */,
+				F9E24F3919ED68D100D83FEF /* ConfigPersonDeviceViewController.m */,
+				F9E24F3A19ED68D100D83FEF /* ConfigurationViewController.h */,
+				F9E24F3B19ED68D100D83FEF /* ConfigurationViewController.m */,
+				F9E24F3C19ED68D100D83FEF /* CrawlAlertConfiguration.h */,
+				F9E24F3D19ED68D100D83FEF /* CrawlAlertConfiguration.m */,
 				F97410C119EC322000E12633 /* Guiding */,
 				F97410DA19EC322000E12633 /* Main */,
 			);
@@ -1221,6 +1250,7 @@
 		F974108E19EC2DD000E12633 /* WorkLog */ = {
 			isa = PBXGroup;
 			children = (
+				F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */,
 				F92DBD8A19ED5C0400BBE573 /* wangnan.h */,
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
@@ -1466,6 +1496,7 @@
 				F91A0E9919E7AACF009ADB44 /* red_iOS7_navBar@2x.png in Resources */,
 				F92DBDBB19ED5C1900BBE573 /* xingshitime.png in Resources */,
 				F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */,
+				F9E24F3219ED687500D83FEF /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E9719E7AACF009ADB44 /* red_iOS6_navBar@2x.png in Resources */,
 				F91A0E6719E7AACF009ADB44 /* ReturnItem.png in Resources */,
 				F92DBDB919ED5C1900BBE573 /* whitecircle.png in Resources */,
@@ -1587,7 +1618,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E24F4219ED68D100D83FEF /* CrawlAlertConfiguration.m in Sources */,
 				BC0112E819ED537F0073EE48 /* PinyinHelper.m in Sources */,
+				F9E24F3E19ED68D100D83FEF /* ChangeInformationViewController.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				6E16646F19ECCAFA0081EB4C /* DAOverlayView.m in Sources */,
 				BC59835D19ECCC4300DAC76A /* FreashManager.m in Sources */,
@@ -1596,10 +1629,12 @@
 				BC0112E619ED537F0073EE48 /* PinyinFormatter.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
+				F9E24F4019ED68D100D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				F9E24F4119ED68D100D83FEF /* ConfigurationViewController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				BC59835E19ECCC4300DAC76A /* KBFreash.m in Sources */,
 				BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */,
@@ -1628,6 +1663,7 @@
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				6E16646D19ECCAFA0081EB4C /* DAContextMenuCell.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
+				F9E24F3F19ED68D100D83FEF /* ChangePersonDetailViewController.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				BC0112E319ED537F0073EE48 /* ChineseToPinyinResource.m in Sources */,
