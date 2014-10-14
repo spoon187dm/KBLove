@@ -18,9 +18,9 @@
 // wap服务器地址前缀
 #define SERVER_URL @"http://118.194.192.104:8080"
 //注册
-#define REGRSTER_URL NSString stringWithFormat:@"%@/api/register.do?type=%d&name=%@&pwd=%@",SERVER_URL
+static NSString *const REGRSTER_URL = @"http://118.194.192.104:8080/api/register.do?type=%d&name=%@&pwd=%@";
 //登陆
-#define LOGIN_URL  NSString stringWithFormat:@"%@/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d",SERVER_URL
+static NSString *const LOGIN_URL = @"http://118.194.192.104:8080/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d";
 //修改密码
 #define ALTER_PASSWORD_URL  NSString stringWithFormat:@"%@/api/update.pwd.do?user_id=%@&password=%@&ts=%@&new_password=%@",SERVER_URL
 //修改昵称
@@ -45,5 +45,8 @@
 /*轨迹回放接口*/
 /*报警模块接口*/
 /*所有警告接口*/
+
+//好友列表请求
+static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend.list.do?user_id=%@&token=%@&cmd=%d";
 
 #endif
