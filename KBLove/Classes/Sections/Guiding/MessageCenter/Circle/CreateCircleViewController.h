@@ -8,6 +8,6 @@
 
 #import "CircleRootViewController.h"
 
-@interface CreateCircleViewController : CircleRootViewController
+@interface CreateCircleViewController : CircleRootViewController<UISearchBarDelegate>
 
 @end
