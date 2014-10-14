@@ -12,10 +12,50 @@
 @interface KBAccount : NSObject
 
 @property (nonatomic, strong, readonly) KBUserInfo *userInfo;
+@property (nonatomic, strong, readonly) NSMutableArray *devicesArray;
 
+
++ (KBAccount *)sharedAccount;
+
+/**
+ @Author block, 10-14 15:10
+ 
+ 用户直接登录
+ 
+ @param block 登陆结果回调
+ */
 - (void)login:(requestBlock)block;
+
+/**
+ @Author block, 10-14 15:10
+ 
+ 用户登出
+ 
+ @param block 登出结果回调
+ */
 - (void)logOut:(requestBlock)block;
 
+/**
+ @Author block, 10-14 15:10
+ 
+ 修改用户密码
+ 
+ @param newPassword 新密码
+ @param block       修改结果回调
+ */
+- (void)changePassword:(NSString *)newPassword finish:(requestBlock)block;
+/**
+ @Author block, 10-14 15:10
+ 
+ 获取设备列表
+ 
+ @param userid  用户id
+ @param pagenum 获取第几页
+ @param size    回去数据个数
+ @param token   用户token
+ @param block   结果回调
+ */
+- (void)loadDevicesArrayWithpageNumber:(NSInteger)pagenum pageSize:(NSInteger)size block:(devicesListLoadBlock)block;
 
-
+- (void)freshDevicesStatus;
 @end

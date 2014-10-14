@@ -60,6 +60,7 @@
             //成功后跳转
             
             [SVProgressHUD dismiss];
+            [self gotoMainVireController];
             NSLog(@"登陆成功");
         } andLoginFaildeBlock:^(NSString *desc) {
             [SVProgressHUD dismiss];
@@ -121,6 +122,14 @@
             
         }];
     }
+}
+
+- (void)gotoMainVireController{
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainViewController"];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark - 登陆结果提示
