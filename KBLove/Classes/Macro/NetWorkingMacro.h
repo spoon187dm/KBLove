@@ -51,7 +51,7 @@ static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend
 //好友搜索请求
 static NSString *const SEARCHFRIEND_URL = @"http://118.194.192.104:8080/api/friend.res.do?user_id=%@&token=%@&friend_name=%@&cmd=%d";
 //发送验证信息
-static NSString *const VERIFYMESSAGE_URL = @"http://118.194.192.104:8080/api/friend.verify.message.do?user_id=%@&token=%@&friend_id=%@&is_pass=1";
+static NSString *const VERIFYMESSAGE_URL = @"http://118.194.192.104:8080/api/friend.verify.message.do?user_id=%@&token=%@&friend_id=%@&is_pass=1&cmd=%d";
 
 
 /**

@@ -41,7 +41,7 @@
                 NSDictionary *root = (NSDictionary *)result;
                 
                 //如果成功获得查询数据则弹出modal视图展示
-                if ([root[@"ret"] integerValue] == 1) {//成功返回结果
+                if ([root[@"ret"] integerValue] == 1) {//返回结果为成功
                     if (root[@"user"] != [NSNull null]) {//user不为空
                         KBFriendInfo *info = [[KBFriendInfo alloc] init];
                         [info setValuesForKeysWithDictionary:root[@"user"]];
