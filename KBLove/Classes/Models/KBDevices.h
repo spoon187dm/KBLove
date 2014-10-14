@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-
+@class KBDevicesStatus;
 
 @interface KBDevices : NSObject
+
+//注：表示设备状态, 源字段中为position
+@property (nonatomic, strong) KBDevicesStatus *devicesStatus;
 
 @property (nonatomic, copy) NSString *sn; //设备ID
 
@@ -30,7 +33,6 @@
 
 @property (nonatomic, copy) id fence;//所属围栏
 
-@property (nonatomic, copy) id status;//设备运行状态
 
 @property (nonatomic, copy) NSString *email;
 
@@ -78,6 +80,63 @@
 @property (nonatomic, copy) NSString *age; //年龄
 
 
+//{
+//    age = 0;
+//    appName = "M2616_BD";
+//    battery = "<null>";
+//    begin = "<null>";
+//    birth = 0;
+//    car = "\U664bE\Uff0d77388";
+//    contact = 13935694818;
+//    dogBreed = "\U65e0";
+//    dogFigure = "\U65e0";
+//    email = "<null>";
+//    enableFeeCheck = 0;
+//    enableSmsAlarm = 0;
+//    end = "<null>";
+//    feeCheckCmd = "";
+//    feeCheckNo = "";
+//    fence = "<null>";
+//    fenceJson = "<null>";
+//    fenceSwitch = 1;
+//    flow = "<null>";
+//    gender = "<null>";
+//    hardware = M2616;
+//    height = 0;
+//    icon = "354188047172916.png";
+//    isobd = 0;
+//    month = 0;
+//    moveSwitch = 1;
+//    name = "\U897f\U897f";
+//    phone = 18459116617;
+//    polygonFenceSwitch = 2;
+//    position =     {
+//        alarm = 0;
+//        battery = 0;
+//        deviceSn = 354188047172916;
+//        direction = 0;
+//        flow = 0;
+//        info = "<null>";
+//        lat = "39.9798650053";
+//        lng = "116.4985916018";
+//        mode = "<null>";
+//        receive = 1409825194945;
+//        speed = 0;
+//        stamp = "<null>";
+//        status = 2;
+//        stayed = 0;
+//        systime = 1409825194945;
+//    };
+//    sage = "0\U5c81";
+//    sn = 354188047172916;
+//    sosNum = 13935694818;
+//    speedThreshold = 120;
+//    speedingSwitch = 1;
+//    stamp = 1406889411942;
+//    tick = 30;
+//    type = 1;
+//    weight = 0;
+//}
 
 
 @end

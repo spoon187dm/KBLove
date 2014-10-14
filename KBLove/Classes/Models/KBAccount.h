@@ -55,7 +55,14 @@
  @param token   用户token
  @param block   结果回调
  */
-- (void)loadDevicesArrayWithpageNumber:(NSInteger)pagenum pageSize:(NSInteger)size block:(devicesListLoadBlock)block;
+- (void)getDevicesArrayWithpageNumber:(NSInteger)pagenum pageSize:(NSInteger)size block:(devicesListLoadBlock)block;
 
-- (void)freshDevicesStatus;
+/**
+ @Author block, 10-14 19:10
+ 
+ 此方法用于获取设备状态，没有数据返回，数据会自动更新到设备数组中的每个设备中，返回yes表示状态更新成功
+ 
+ @param block 结果状态返回
+ */
+- (void)getDevicesStatus:(boolReturnBlock)block;
 @end

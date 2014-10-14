@@ -119,6 +119,11 @@ static KBHttpRequestTool *tool = nil;
     
     WLCacheStrategy *strategy = cacheBlock(YES);
     
+    if (_httpState == WLHttpConnectStatueInternetNotAvaliable) {
+        block(NO, [NSError errorWithDomain:@"no visiable net connection" code:999 userInfo:nil]);
+        return;
+    }
+    
     if (![NSFileManager isTimeOutWithPath:[self cachePathForUrl:urlString] time:strategy.cacheEffectTimeTravel]) {
         NSData *date = [NSData dataWithContentsOfFile:[self cachePathForUrl:urlString]];
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:date options:NSJSONReadingMutableContainers error:nil];
