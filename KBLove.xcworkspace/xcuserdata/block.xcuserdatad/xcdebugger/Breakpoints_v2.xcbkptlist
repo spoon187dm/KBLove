@@ -28,9 +28,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-requestWithUserName:andPassWord:andLoginFinishedBlock:andLoginFaildeBlock:"
-            landmarkType = "5">
+            endingLineNumber = "54">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
