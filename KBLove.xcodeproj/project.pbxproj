@@ -162,6 +162,7 @@
 		F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2E19E7AACF009ADB44 /* red_theme.png */; };
 		F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */; };
 		F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E3019E7AACF009ADB44 /* themeSelected.png */; };
+		F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */ = {isa = PBXBuildFile; fileRef = F92DBD8219ECFDAA00BBE573 /* KBDevices.m */; };
 		F974107A19EBE8AE00E12633 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */; };
 		F974108C19EC2C8700E12633 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974108B19EC2C8700E12633 /* BannerView.m */; };
 		F974109119EC2E2600E12633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109019EC2E2600E12633 /* AppDelegate.m */; };
@@ -390,6 +391,8 @@
 		F91A0E2E19E7AACF009ADB44 /* red_theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_theme.png; sourceTree = "<group>"; };
 		F91A0E2F19E7AACF009ADB44 /* red_theme@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_theme@2x.png"; sourceTree = "<group>"; };
 		F91A0E3019E7AACF009ADB44 /* themeSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themeSelected.png; sourceTree = "<group>"; };
+		F92DBD8119ECFDAA00BBE573 /* KBDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDevices.h; sourceTree = "<group>"; };
+		F92DBD8219ECFDAA00BBE573 /* KBDevices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDevices.m; sourceTree = "<group>"; };
 		F974107919EBE8AE00E12633 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F974108519EC2B0C00E12633 /* VendorsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorsMacro.h; sourceTree = "<group>"; };
 		F974108619EC2B8A00E12633 /* UtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
@@ -995,6 +998,8 @@
 				F97410EC19EC34CA00E12633 /* KBAccount.m */,
 				6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */,
 				6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */,
+				F92DBD8119ECFDAA00BBE573 /* KBDevices.h */,
+				F92DBD8219ECFDAA00BBE573 /* KBDevices.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1435,6 +1440,7 @@
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
+				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
 				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,

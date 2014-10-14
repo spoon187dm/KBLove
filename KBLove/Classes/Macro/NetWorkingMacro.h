@@ -52,4 +52,13 @@ static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend
 static NSString *const SEARCHFRIEND_URL = @"http://118.194.192.104:8080/api/friend.res.do?user_id=%@&token=%@&friend_name=%@&cmd=%d";
 //发送验证信息
 static NSString *const VERIFYMESSAGE_URL = @"http://118.194.192.104:8080/api/friend.verify.message.do?user_id=%@&token=%@&friend_id=%@&is_pass=1";
+
+
+/**
+ @Author block, 10-14 15:10
+ 
+ 请求设备，警报信息
+ */
+
+static NSString * const Url_GetDeviceList = @"http://118.194.192.104:8080/api/device.list.do";
 #endif
