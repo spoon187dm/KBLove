@@ -19,6 +19,8 @@
 	<string>KBLove.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>28203A6E-D371-4803-B576-8469E1DB5E8A</key>
+		<string>../../KBLove</string>
 		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
 		<string>..</string>
 	</dict>
