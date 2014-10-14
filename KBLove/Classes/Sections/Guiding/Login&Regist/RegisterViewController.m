@@ -75,7 +75,7 @@
             return;
             }
         //信息没有错误 进行 注册
-        [[KBHttpRequestTool sharedInstance] request:[REGRSTER_URL,_registertype,_userNameTextfiled.text,_passwordTextFiled.text] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,_registertype,_userNameTextfiled.text,_passwordTextFiled.text] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
             if (IsSuccess) {
                //注册成功
                 if ([result isKindOfClass:[NSDictionary class]]) {
