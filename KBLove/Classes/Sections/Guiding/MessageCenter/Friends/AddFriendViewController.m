@@ -9,6 +9,7 @@
 #import "AddFriendViewController.h"
 #import "KBHttpRequestTool.h"
 #import "KBFriendInfo.h"
+#import "SearchResultViewController.h"
 
 @interface AddFriendViewController ()
 
@@ -38,13 +39,26 @@
         if (IsSuccess) {//如果成功
             if ([result isKindOfClass:[NSDictionary class]]) {//如果是字典类型
                 NSDictionary *root = (NSDictionary *)result;
-                KBFriendInfo *info = [[KBFriendInfo alloc] init];
-                [info setValuesForKeysWithDictionary:root[@"user"]];
                 
                 //如果成功获得查询数据则弹出modal视图展示
-                UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
-                UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
-                [self.navigationController pushViewController:vc animated:YES];
+                if ([root[@"ret"] integerValue] == 1) {//成功返回结果
+                    if (root[@"user"] != [NSNull null]) {//user不为空
+                        KBFriendInfo *info = [[KBFriendInfo alloc] init];
+                        [info setValuesForKeysWithDictionary:root[@"user"]];
+                        //弹出结果视图
+                        UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
+                        SearchResultViewController *vc = [stb instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
+                        vc.userName = info.name;
+                        vc.friendId = info.id;
+                        [self.navigationController pushViewController:vc animated:YES];
+                    } else {//user为空说明不存在此用户
+                        [UIAlertView showWithTitle:@"温馨提示" Message:@"不存在此用户" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            if (index == 0) {
+                                _userNameTextField.text = @"";
+                            }
+                        }];
+                    }
+                }
                 
             } else {//如果不是字典类型
             
@@ -73,6 +87,10 @@
 - (IBAction)searchBtnClicked:(id)sender {
     if (_userNameTextField.text.length != 0) {
         [self loadData];
+    } else {
+        [UIAlertView showWithTitle:@"温馨提示" Message:@"输入用户名不能为空" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
     }
     
 }

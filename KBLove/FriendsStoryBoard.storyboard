@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -229,8 +230,8 @@
                                 <rect key="frame" x="10" y="85" width="65" height="65"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="userName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3U-Cp-S1e">
-                                <rect key="frame" x="87" y="107" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="87" y="107" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -256,15 +257,15 @@
                                 <state key="normal" title="Button" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="leftItemClicked:" destination="fRU-Dn-h7P" eventType="touchUpInside" id="TAi-MV-npB"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="leftItemClicked:" destination="fRU-Dn-h7P" id="BNc-TN-WWd"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="userImage" destination="0Oe-YN-Uup" id="tE9-Mk-pvi"/>
+                        <outlet property="userImageView" destination="0Oe-YN-Uup" id="Bpi-9z-0dL"/>
                         <outlet property="userNameLabel" destination="q3U-Cp-S1e" id="HmM-OJ-KME"/>
                     </connections>
                 </viewController>
