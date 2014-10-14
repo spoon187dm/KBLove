@@ -77,7 +77,7 @@
 - (IBAction)qqLoginBtnClicked:(id)sender {
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
-    [vc presentViewController:vc animated:YES completion:^{
+    [self presentViewController:vc animated:YES completion:^{
         
     }];
 }

@@ -48,5 +48,6 @@ static NSString *const LOGIN_URL = @"http://118.194.192.104:8080/api/logon.do?us
 
 //好友列表请求
 static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend.list.do?user_id=%@&token=%@&cmd=%d";
-
+//好友搜索请求
+static NSString *const SEARCHFRIEND_URL = @"http://118.194.192.104:8080/api/friend.res.do?user_id=%@&token=%@&friend_name=%@&cmd=%d";
 #endif
