@@ -27,7 +27,7 @@
 
 @interface DAContextMenuCell : UITableViewCell
 
-@property (weak, nonatomic)IBOutlet UIView *actualContentView;
+@property (weak, nonatomic) UIView *actualContentView;
 
 
 @property (readonly, assign, nonatomic, getter = isContextMenuHidden) BOOL contextMenuHidden;
@@ -42,5 +42,5 @@
 
 - (CGFloat)contextMenuWidth;
 - (void)setMenuOptionsViewHidden:(BOOL)hidden animated:(BOOL)animated completionHandler:(void (^)(void))completionHandler;
-- (void)setUp;
+
 @end

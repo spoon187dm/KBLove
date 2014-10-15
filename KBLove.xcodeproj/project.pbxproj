@@ -187,12 +187,6 @@
 		F92DBDBE19ED5C1900BBE573 /* yellowstar.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA319ED5C1900BBE573 /* yellowstar.png */; };
 		F92DBDBF19ED5C1900BBE573 /* zgsd.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA419ED5C1900BBE573 /* zgsd.png */; };
 		F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA519ED5C1900BBE573 /* zlc.png */; };
-		F93352CE19EE165400503869 /* TrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F93352CC19EE165400503869 /* TrackCell.m */; };
-		F93352CF19EE165400503869 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93352CD19EE165400503869 /* TrackCell.xib */; };
-		F93352D319EE167100503869 /* DevicesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F93352D119EE167100503869 /* DevicesCell.m */; };
-		F93352D819EE174800503869 /* AlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F93352D619EE174800503869 /* AlarmCell.m */; };
-		F93352D919EE174800503869 /* AlarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93352D719EE174800503869 /* AlarmCell.xib */; };
-		F93352DC19EE197F00503869 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93352DB19EE197F00503869 /* DeviceTableViewController.m */; };
 		F974108C19EC2C8700E12633 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974108B19EC2C8700E12633 /* BannerView.m */; };
 		F974109119EC2E2600E12633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109019EC2E2600E12633 /* AppDelegate.m */; };
 		F974109319EC2E4500E12633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109219EC2E4500E12633 /* main.m */; };
@@ -467,16 +461,6 @@
 		F92DBDA319ED5C1900BBE573 /* yellowstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowstar.png; sourceTree = "<group>"; };
 		F92DBDA419ED5C1900BBE573 /* zgsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zgsd.png; sourceTree = "<group>"; };
 		F92DBDA519ED5C1900BBE573 /* zlc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zlc.png; sourceTree = "<group>"; };
-		F93352CB19EE165400503869 /* TrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackCell.h; sourceTree = "<group>"; };
-		F93352CC19EE165400503869 /* TrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackCell.m; sourceTree = "<group>"; };
-		F93352CD19EE165400503869 /* TrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
-		F93352D019EE167100503869 /* DevicesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesCell.h; sourceTree = "<group>"; };
-		F93352D119EE167100503869 /* DevicesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesCell.m; sourceTree = "<group>"; };
-		F93352D519EE174800503869 /* AlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmCell.h; sourceTree = "<group>"; };
-		F93352D619EE174800503869 /* AlarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmCell.m; sourceTree = "<group>"; };
-		F93352D719EE174800503869 /* AlarmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmCell.xib; sourceTree = "<group>"; };
-		F93352DA19EE197F00503869 /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
-		F93352DB19EE197F00503869 /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
 		F974108519EC2B0C00E12633 /* VendorsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorsMacro.h; sourceTree = "<group>"; };
 		F974108619EC2B8A00E12633 /* UtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
 		F974108A19EC2C8700E12633 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
@@ -1182,14 +1166,6 @@
 				BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */,
 				BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */,
 				BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */,
-				F93352CB19EE165400503869 /* TrackCell.h */,
-				F93352CC19EE165400503869 /* TrackCell.m */,
-				F93352CD19EE165400503869 /* TrackCell.xib */,
-				F93352D019EE167100503869 /* DevicesCell.h */,
-				F93352D119EE167100503869 /* DevicesCell.m */,
-				F93352D519EE174800503869 /* AlarmCell.h */,
-				F93352D619EE174800503869 /* AlarmCell.m */,
-				F93352D719EE174800503869 /* AlarmCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1265,8 +1241,6 @@
 			children = (
 				F97410DB19EC322000E12633 /* MainViewController.h */,
 				F97410DC19EC322000E12633 /* MainViewController.m */,
-				F93352DA19EE197F00503869 /* DeviceTableViewController.h */,
-				F93352DB19EE197F00503869 /* DeviceTableViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1484,7 +1458,6 @@
 				F91A0E9619E7AACF009ADB44 /* red_iOS6_navBar.png in Resources */,
 				F91A0E5019E7AACF009ADB44 /* background@2x.png in Resources */,
 				F91A0E8219E7AACF009ADB44 /* mineItemSelected.png in Resources */,
-				F93352D919EE174800503869 /* AlarmCell.xib in Resources */,
 				F9E24F6719ED725900D83FEF /* unicode_to_hanyu_pinyin.txt in Resources */,
 				F91A0E5819E7AACF009ADB44 /* lgtextfield@2x.png in Resources */,
 				F91A0E6219E7AACF009ADB44 /* clearNavItemSelected.png in Resources */,
@@ -1509,7 +1482,6 @@
 				F91A0E7019E7AACF009ADB44 /* cutEquipment.png in Resources */,
 				F91A0E6319E7AACF009ADB44 /* GroupNavItemNormal.png in Resources */,
 				6EA222DD19E90EEB0073274D /* pwd.png in Resources */,
-				F93352CF19EE165400503869 /* TrackCell.xib in Resources */,
 				F91A0E5619E7AACF009ADB44 /* lgremcode@2x.png in Resources */,
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
 				F91A0E4619E7AACF009ADB44 /* login.png in Resources */,
@@ -1674,16 +1646,13 @@
 				F9E24FA119ED74DD00D83FEF /* ChangeInformationViewController.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
-				F93352CE19EE165400503869 /* TrackCell.m in Sources */,
 				F9E24F7619ED729700D83FEF /* DAContextMenuTableViewController.m in Sources */,
-				F93352D819EE174800503869 /* AlarmCell.m in Sources */,
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
 				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
-				F93352D319EE167100503869 /* DevicesCell.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
@@ -1723,7 +1692,6 @@
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
-				F93352DC19EE197F00503869 /* DeviceTableViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
 				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
