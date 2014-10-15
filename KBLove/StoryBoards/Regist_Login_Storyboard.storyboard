@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aye-qa-Sr5">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--欢迎引导界面-->
@@ -421,7 +421,7 @@
             </objects>
             <point key="canvasLocation" x="177" y="594"/>
         </scene>
-        <!--绑定设备-->
+        <!--Bound Add Equipment Controller - 绑定设备-->
         <scene sceneID="bik-5S-Irc">
             <objects>
                 <viewController storyboardIdentifier="BoundAddEquipmentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sFa-1H-aMC" customClass="BoundAddEquipmentController" sceneMemberID="viewController">
@@ -543,7 +543,7 @@
             </objects>
             <point key="canvasLocation" x="524" y="594"/>
         </scene>
-        <!--绑定设备-->
+        <!--Bound Equipment Detail Controller - 绑定设备-->
         <scene sceneID="pXV-s4-6qN">
             <objects>
                 <viewController storyboardIdentifier="BoundEquipmentDetailController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtX-hG-AFZ" customClass="BoundEquipmentDetailController" sceneMemberID="viewController">
@@ -670,7 +670,7 @@
             </objects>
             <point key="canvasLocation" x="880" y="594"/>
         </scene>
-        <!--确认车辆信息-->
+        <!--Bound Car Info Controller - 确认车辆信息-->
         <scene sceneID="srd-h2-RpZ">
             <objects>
                 <viewController storyboardIdentifier="BoundCarInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I1o-G5-ueS" customClass="BoundCarInfoController" sceneMemberID="viewController">
@@ -843,7 +843,7 @@
             </objects>
             <point key="canvasLocation" x="-216" y="594"/>
         </scene>
-        <!--确认宠物信息-->
+        <!--Bound Pet Info Controller - 确认宠物信息-->
         <scene sceneID="hjx-oR-kDE">
             <objects>
                 <viewController storyboardIdentifier="BoundPetInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ptb-02-qjX" customClass="BoundPetInfoController" sceneMemberID="viewController">
@@ -1050,7 +1050,7 @@
             </objects>
             <point key="canvasLocation" x="1244" y="1046"/>
         </scene>
-        <!--确认用户信息-->
+        <!--Bound Person Info Controller - 确认用户信息-->
         <scene sceneID="21a-Qz-nyN">
             <objects>
                 <viewController storyboardIdentifier="BoundPersonInfoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7DL-1Y-ruq" customClass="BoundPersonInfoController" sceneMemberID="viewController">
