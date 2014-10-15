@@ -81,7 +81,7 @@
 
     KBFriendInfo *friendInfo = _friendsListArray[indexPath.row];
     cell.friendNameLabel.text = friendInfo.name;
-    
+    [cell setMoreOptionsButtonBg:@"bluecircle.png" anddeleteButtonBg:@"yellowcircle.png"];
     cell.delegate = self;
     return cell;
 }
@@ -118,7 +118,9 @@
 
 //返回item点击事件
 - (IBAction)leftItemClicked:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)addItemClicked:(id)sender {

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ImagePickerTool.h"
+#import "QRCodeTool.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,9 +21,10 @@
     
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+    
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
-
+    
     return YES;
 }
 

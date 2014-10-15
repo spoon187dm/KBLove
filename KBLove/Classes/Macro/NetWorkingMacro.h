@@ -9,14 +9,14 @@
 #ifndef KBLove_NetWorkingMacro_h
 #define KBLove_NetWorkingMacro_h
 
+#define app_name @"m2616_BD"
 #define  SERVER_URL @"http://118.194.192.104:8080"
 
 #define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
 //测试账号 董新加
 #define kTRIAL_ACCOUNT_NAME @"demo@capcare.com.cn"
 #define kTRIAL_ACCOUNT_PWD @"123456"
-// wap服务器地址前缀
-#define SERVER_URL @"http://118.194.192.104:8080"
+
 //注册
 static NSString *const REGRSTER_URL = @"http://118.194.192.104:8080/api/register.do?type=%d&name=%@&pwd=%@";
 //登陆
@@ -48,5 +48,22 @@ static NSString *const LOGIN_URL = @"http://118.194.192.104:8080/api/logon.do?us
 
 //好友列表请求
 static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend.list.do?user_id=%@&token=%@&cmd=%d";
+//好友搜索请求
+static NSString *const SEARCHFRIEND_URL = @"http://118.194.192.104:8080/api/friend.res.do?user_id=%@&token=%@&friend_name=%@&cmd=%d";
+//发送验证信息
+static NSString *const VERIFYMESSAGE_URL = @"http://118.194.192.104:8080/api/friend.verify.message.do?user_id=%@&token=%@&friend_id=%@&is_pass=1&cmd=%d";
 
+
+/**
+ @Author block, 10-14 15:10
+ 
+ 请求设备，警报信息
+ 
+ */
+
+static int const kPageNumber = 1;
+static int const kPageSize = 20;
+//获取设备列表
+static NSString * const Url_GetDeviceList = @"http://118.194.192.104:8080/api/device.list.do";
+static NSString * const Url_GetDeviceStatus = @"http://118.194.192.104:8080/api/get.last.do";
 #endif

@@ -10,31 +10,39 @@
 	<string>KBLove</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>28203A6E-D371-4803-B576-8469E1DB5E8A</key>
+		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
 		<string>https://github.com/blockdate/KBLove.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>KBLove.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>28203A6E-D371-4803-B576-8469E1DB5E8A</key>
-		<string>..</string>
+		<key>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</key>
+		<string>../../KBLove</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/blockdate/KBLove.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>28203A6E-D371-4803-B576-8469E1DB5E8A</string>
+	<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>28203A6E-D371-4803-B576-8469E1DB5E8A</string>
+			<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
 			<key>IDESourceControlWCCName</key>
 			<string>KBLove</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D0EAE4FD7193EF9FC5DAA2E5FC72385FC350BC51</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KBLove0.1</string>
 		</dict>
 	</array>
 </dict>

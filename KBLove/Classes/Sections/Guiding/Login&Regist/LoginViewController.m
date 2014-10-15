@@ -56,30 +56,32 @@
     if ([_userNameTF.text isValidateEmail] || [_userNameTF.text isValidateMobile]) {
         //发起登陆请求
         [SVProgressHUD showWithStatus:@"登录中..." maskType:SVProgressHUDMaskTypeBlack];
+        
         [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
             //成功后跳转
             
             [SVProgressHUD dismiss];
+            [self gotoMainVireController];
             NSLog(@"登陆成功");
         } andLoginFaildeBlock:^(NSString *desc) {
             [SVProgressHUD dismiss];
             //展示错误信息
-            [self createAlertViewWithTitile:@"温馨提示" andMessage:desc];
+            [UIAlertView showWithTitle:@"温馨提示" Message:desc cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                
+            }];
         }];
 
     } else {
         [SVProgressHUD dismiss];
-        [self createAlertViewWithTitile:@"温馨提示" andMessage:@"用户名或密码错误"];
+        [UIAlertView showWithTitle:@"温馨提示" Message:@"用户名或密码错误" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
     }
     
 }
 
 - (IBAction)qqLoginBtnClicked:(id)sender {
-    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
-    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
-    [vc presentViewController:vc animated:YES completion:^{
-        
-    }];
+ 
 }
 
 - (IBAction)weiBoLoginClicked:(id)sender {
@@ -107,6 +109,14 @@
 - (IBAction)forgetPwdBtnClicked:(id)sender {
 }
 
+- (void)gotoMainVireController{
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainViewController"];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
+
 #pragma mark - 注册
 - (IBAction)registerBtnClicked:(id)sender {
 //跳转到注册页面
@@ -122,14 +132,6 @@
         }];
     }
 }
-
-#pragma mark - 登陆结果提示
-- (void)createAlertViewWithTitile:(NSString *)title andMessage:(NSString *)message
-{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alertView show];
-}
-
 
 #pragma mark - 内存警告
 - (void)didReceiveMemoryWarning {
