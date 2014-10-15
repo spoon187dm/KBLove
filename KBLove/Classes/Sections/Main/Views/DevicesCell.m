@@ -9,6 +9,13 @@
 #import "DevicesCell.h"
 #import "KBDevices.h"
 #import "DeviceInfoView.h"
+#import "KBDevicesStatus.h"
+@interface DevicesCell (){
+
+}
+
+@end
+
 @implementation DevicesCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -26,21 +33,25 @@
     if (!self) {
         return nil;
     }
-//    self.backgroundColor = [UIColor clearColor];
-//    self.contentView.backgroundColor = [UIColor clearColor];
+//    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     return self;
 }
 
+- (void)setSelected:(BOOL)selected{
+    [super setSelected:selected];
+    if (selected) {
+        self.backgroundColor = [UIColor colorWithRed:0.000 green:0.481 blue:0.519 alpha:1.000];
+    }else{
+        self.backgroundColor = [UIColor clearColor];
+    }
+}
+
 - (UIView *)ViewForCellContent{
-//    UIView *view = [[UIView alloc] init];
-//    view.backgroundColor = [UIColor whiteColor];
-//    view.frame = self.bounds;
-//    [self.contentView addSubview:view];
-    
+
     DeviceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"DeviceInfoView" owner:self options:nil] lastObject];
     infoView.frame = self.bounds;
     infoView.backgroundColor = SYSTEM_COLOR;
-//    [self.contentView addSubview:infoView];
+
     return infoView;
 }
 
@@ -50,30 +61,28 @@
     view.backgroundColor = [UIColor clearColor];
     
     for (int i = 0; i < count; i++) {
-        //        UIView *bgView = [[UIView alloc] init];
-        //        bgView.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
-        //        bgView.frame = CGRectMake(80*i, 0, 80, 80);
-        //        [view addSubview:bgView];
-        
         UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        
         menuBtn.tag = i;
         [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        
         menuBtn.frame = CGRectMake(80*i, 0, 80, 100);
-        //        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
-        //        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
-        [menuBtn setTitle:@"test" forState:UIControlStateNormal];
-        [menuBtn setBackgroundColor:[UIColor blackColor]];
-        //        [bgView addSubview:menuBtn];
+        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
+        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
         [view addSubview:menuBtn];
     }
     
     return view;
 }
 
-
-- (void)configData:(KBDevices *)devices{
+- (void)setData:(KBDevices *)devices{
+    DeviceInfoView *view = (DeviceInfoView *)self.cellView;
+    view.deveiceNameLabel.text = devices.name;
+    view.deviceSnLabel.text = devices.sn;
+    view.deviceLocationLabel.text = @"";
+    NSDateFormatter *formate = [[NSDateFormatter alloc]init];
+    [formate setDateFormat:@"hh-mm"];
+    NSDate *dateString = [NSDate dateWithTimeIntervalSince1970:[devices.devicesStatus.systime floatValue]];
+    view.timeLabel.text = [formate stringFromDate:dateString];
+    
     
 }
 

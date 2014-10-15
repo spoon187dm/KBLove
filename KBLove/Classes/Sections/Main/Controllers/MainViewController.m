@@ -87,12 +87,6 @@
 
 - (IBAction)click_devicesList:(id)sender{
     
-//    [[KBAccount sharedAccount] getDevicesArrayWithpageNumber:1 pageSize:10 block:^(BOOL isSuccess, NSArray *deviceArray) {
-//        if (isSuccess) {
-//            
-//        }
-//    }];
-    
 }
 
 - (IBAction)click_message:(id)sender{

@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DeviceInfoView : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *deviceImageView;
+@property (weak, nonatomic) IBOutlet UILabel *deveiceNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *deviceSnLabel;
+@property (weak, nonatomic) IBOutlet UILabel *deviceLocationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end

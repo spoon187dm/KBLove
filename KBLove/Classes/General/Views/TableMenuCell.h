@@ -21,7 +21,9 @@
 - (void)menuChooseIndex:(NSInteger)cellIndexNum menuIndexNum:(NSInteger)menuIndexNum;
 @end
 
-@interface TableMenuCell : UITableViewCell<UIGestureRecognizerDelegate>
+@interface TableMenuCell : UITableViewCell<UIGestureRecognizerDelegate>{
+    NSArray *_menuData;
+}
 @property (nonatomic, strong) UIView *cellView;
 @property (nonatomic, assign) float startX;
 @property (nonatomic, assign) float cellX;

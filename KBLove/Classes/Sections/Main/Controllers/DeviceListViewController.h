@@ -12,4 +12,8 @@
 
 -(void)menuChooseIndex:(NSInteger)cellIndexNum menuIndexNum:(NSInteger)menuIndexNum;
 
+- (IBAction)click_back:(UIButton *)sender;
+- (IBAction)click_dropList:(id)sender;
+
+
 @end

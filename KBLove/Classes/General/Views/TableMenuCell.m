@@ -71,15 +71,15 @@
     for (int i = 0; i < count; i++) {
         UIView *bgView = [[UIView alloc] init];
         bgView.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
-        bgView.frame = CGRectMake(80*i, 0, 80, 80);
+        bgView.frame = CGRectMake(80*i, 0, 80, _frame.size.height);
         [view addSubview:bgView];
         
         UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         menuBtn.tag = i;
         [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        menuBtn.frame = CGRectMake(0, 0, 80, 80);
-//        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
-//        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
+        menuBtn.frame = CGRectMake(0, 0, 80, _frame.size.height);
+        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
+        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
         [menuBtn setTitle:@"test" forState:UIControlStateNormal];
         [menuBtn setBackgroundColor:[UIColor blackColor]];
         [bgView addSubview:menuBtn];
@@ -91,6 +91,7 @@
 -(void)configWithData:(NSIndexPath *)indexPath menuData:(NSArray *)menuData cellFrame:(CGRect)cellFrame{
     indexpathNum = indexPath;
     _frame = cellFrame;
+    _menuData = menuData;
     menuCount = [menuData count];
     if (self.cellView) {
         [self.cellView removeFromSuperview];

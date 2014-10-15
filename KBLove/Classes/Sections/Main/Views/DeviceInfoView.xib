@@ -31,7 +31,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DHf-oZ-MaZ">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DHf-oZ-MaZ">
                     <rect key="frame" x="258" y="65" width="42" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -44,6 +44,13 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deveiceNameLabel" destination="tbY-Mn-yoX" id="fFg-8k-d7F"/>
+                <outlet property="deviceImageView" destination="jUb-V9-E7m" id="BdY-ZL-cAc"/>
+                <outlet property="deviceLocationLabel" destination="Elc-Ps-YfQ" id="WTY-h7-ZsA"/>
+                <outlet property="deviceSnLabel" destination="FAi-qG-4UX" id="ZVb-YN-Rpu"/>
+                <outlet property="timeLabel" destination="DHf-oZ-MaZ" id="Pi2-nD-i7T"/>
+            </connections>
         </view>
     </objects>
 </document>

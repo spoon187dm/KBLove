@@ -132,14 +132,30 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="设备列表" id="a7V-A9-xm7">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="fsV-Xq-66c">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e8Q-0g-bwV">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="yo3-kl-1V0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V1Z-RI-hDo">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_back:" destination="Y8Q-6q-USb" eventType="touchUpInside" id="2jH-af-ZiZ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fsV-Xq-66c">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e8Q-0g-bwV">
+                                <rect key="frame" x="244" y="2" width="60" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="addNavItemNormal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_dropList:" destination="Y8Q-6q-USb" eventType="touchUpInside" id="Ugw-ml-2N1"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -172,6 +188,7 @@
     </scenes>
     <resources>
         <image name="NVBar_arrow_left.png" width="51" height="51"/>
+        <image name="addNavItemNormal.png" width="132" height="88"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

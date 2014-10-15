@@ -10,12 +10,6 @@
 @class KBDevices;
 @interface DevicesCell : TableMenuCell
 
-@property (nonatomic, strong) UILabel *deviceNameLabel;
-@property (nonatomic, strong) UILabel *deviceSnLabel;
-@property (nonatomic, strong) UILabel *timeLabel;
-@property (nonatomic, strong) UIImageView *deveiceImageView;
-@property (nonatomic, strong) UIImageView *deveiceStatusImageView;
-
-- (void)configData:(KBDevices *)devices;
+- (void)setData:(KBDevices *)devices;
 
 @end
