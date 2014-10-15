@@ -649,6 +649,7 @@
 		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
+				BC59833519ECB52800DAC76A /* Circle */,
 				6E16647019ECD1270081EB4C /* Friends */,
 			);
 			path = MessageCenter;
@@ -692,8 +693,7 @@
 				BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */,
 				BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */,
 			);
-			name = Circle;
-			path = MessageCenter/Circle;
+			path = Circle;
 			sourceTree = "<group>";
 		};
 		BC9DE24719ED44FB00916F9B /* Device-data */ = {
@@ -1237,7 +1237,6 @@
 			isa = PBXGroup;
 			children = (
 				6EA2BFED19ECB4E50024E6A2 /* MessageCenter */,
-				BC59833519ECB52800DAC76A /* Circle */,
 				F97410C219EC322000E12633 /* Bounding */,
 				F97410D119EC322000E12633 /* Login&Regist */,
 				F97410D719EC322000E12633 /* Welcome */,
