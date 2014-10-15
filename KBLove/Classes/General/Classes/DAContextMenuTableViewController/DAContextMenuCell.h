@@ -27,6 +27,9 @@
 
 @interface DAContextMenuCell : UITableViewCell
 
+@property (copy, nonatomic) NSString *moreOptionsButtonBg;
+@property (copy, nonatomic) NSString *deleteButtonBg;
+
 @property (weak, nonatomic) UIView *actualContentView;
 
 
@@ -42,5 +45,7 @@
 
 - (CGFloat)contextMenuWidth;
 - (void)setMenuOptionsViewHidden:(BOOL)hidden animated:(BOOL)animated completionHandler:(void (^)(void))completionHandler;
+
+- (void)setMoreOptionsButtonBg:(NSString *)moreOptionsButtonBg anddeleteButtonBg:(NSString *)deleteButtonBg;
 
 @end

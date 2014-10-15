@@ -47,8 +47,10 @@
     self.contextMenuHidden = self.contextMenuView.hidden = YES;
     self.shouldDisplayContextMenuView = NO;
     self.editable = YES;
+    
     self.moreOptionsButtonTitle = @"More";
     self.deleteButtonTitle = @"Delete";
+    
     self.menuOptionButtonTitlePadding = 25.;
     self.menuOptionsAnimationDuration = 0.3;
     self.bounceValue = 30.;
@@ -226,14 +228,21 @@
     [self setMenuOptionsViewHidden:YES animated:NO completionHandler:nil];
 }
 
+- (void)setMoreOptionsButtonBg:(NSString *)moreOptionsButtonBg anddeleteButtonBg:(NSString *)deleteButtonBg {
+    _moreOptionsButtonBg = moreOptionsButtonBg;
+    _deleteButtonBg = deleteButtonBg;
+}
+
 #pragma mark * Lazy getters
 
 - (UIButton *)moreOptionsButton
 {
     if (!_moreOptionsButton) {
-        CGRect frame = CGRectMake(0., 0., 100., CGRectGetHeight(self.actualContentView.frame));
+        CGRect frame = CGRectMake(0., 0., 100, CGRectGetHeight(self.actualContentView.frame));
         _moreOptionsButton = [[UIButton alloc] initWithFrame:frame];
-        _moreOptionsButton.backgroundColor = [UIColor lightGrayColor];
+        [_moreOptionsButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+//        _moreOptionsButton.backgroundColor = [UIColor lightGrayColor];
+        [_moreOptionsButton setBackgroundImage:[UIImage imageNamed:_moreOptionsButtonBg] forState:UIControlStateNormal];
         [self.contextMenuView addSubview:_moreOptionsButton];
         [_moreOptionsButton addTarget:self action:@selector(moreButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -246,7 +255,9 @@
         if (!_deleteButton) {
             CGRect frame = CGRectMake(0., 0., 100., CGRectGetHeight(self.actualContentView.frame));
             _deleteButton = [[UIButton alloc] initWithFrame:frame];
-            _deleteButton.backgroundColor = [UIColor colorWithRed:251./255. green:34./255. blue:38./255. alpha:1.];
+            [_deleteButton setBackgroundImage:[UIImage imageNamed:_deleteButtonBg] forState:UIControlStateNormal];
+            [_deleteButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//            _deleteButton.backgroundColor = [UIColor colorWithRed:251./255. green:34./255. blue:38./255. alpha:1.];
             [self.contextMenuView addSubview:_deleteButton];
             [_deleteButton addTarget:self action:@selector(deleteButtonTapped) forControlEvents:UIControlEventTouchUpInside];
         }

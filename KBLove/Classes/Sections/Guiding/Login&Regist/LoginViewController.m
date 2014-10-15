@@ -81,11 +81,7 @@
 }
 
 - (IBAction)qqLoginBtnClicked:(id)sender {
-    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
-    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+ 
 }
 
 - (IBAction)weiBoLoginClicked:(id)sender {
