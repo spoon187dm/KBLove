@@ -201,7 +201,6 @@
 		F97410E419EC322000E12633 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410D419EC322000E12633 /* LoginViewController.m */; };
 		F97410E519EC322000E12633 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410D619EC322000E12633 /* RegisterViewController.m */; };
 		F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410D919EC322000E12633 /* WelcomeViewController.m */; };
-		F97410E719EC322000E12633 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410DC19EC322000E12633 /* MainViewController.m */; };
 		F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410E919EC33CE00E12633 /* KBUserInfo.m */; };
 		F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410EC19EC34CA00E12633 /* KBAccount.m */; };
 		F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410F019EC385800E12633 /* ImagePickerTool.m */; };
@@ -212,6 +211,17 @@
 		F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410FC19EC389800E12633 /* UIImageView+WLTool.m */; };
 		F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410FE19EC389800E12633 /* UILabel+WLTool.m */; };
 		F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */; };
+		F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5819EE44DA00D13D86 /* OverLayView.m */; };
+		F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5A19EE44DA00D13D86 /* RecteView.m */; };
+		F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5C19EE44DA00D13D86 /* TableMenuCell.m */; };
+		F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5E19EE44DA00D13D86 /* TableMenuViewController.m */; };
+		F975FE6719EE452100D13D86 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE6519EE452100D13D86 /* MainViewController.m */; };
+		F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE6919EE453200D13D86 /* DevicesCell.m */; };
+		F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE6C19EE45A500D13D86 /* DeviceListViewController.m */; };
+		F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE6F19EE4FDE00D13D86 /* DeviceInfoView.m */; };
+		F975FE7419EE503800D13D86 /* DeviceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F975FE7319EE503800D13D86 /* DeviceInfoView.xib */; };
+		F975FE7619EE5FA900D13D86 /* DeviceTableHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F975FE7519EE5FA900D13D86 /* DeviceTableHeadView.xib */; };
+		F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE7819EE5FCF00D13D86 /* DeviceTableHeadView.m */; };
 		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
 		F9E24F6019ED725900D83FEF /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5219ED725900D83FEF /* ChineseInclude.m */; };
 		F9E24F6119ED725900D83FEF /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5419ED725900D83FEF /* ChineseToPinyinResource.m */; };
@@ -495,8 +505,6 @@
 		F97410D619EC322000E12633 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		F97410D819EC322000E12633 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		F97410D919EC322000E12633 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		F97410DB19EC322000E12633 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		F97410DC19EC322000E12633 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F97410E819EC33CE00E12633 /* KBUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBUserInfo.h; sourceTree = "<group>"; };
 		F97410E919EC33CE00E12633 /* KBUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBUserInfo.m; sourceTree = "<group>"; };
 		F97410EB19EC34CA00E12633 /* KBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAccount.h; sourceTree = "<group>"; };
@@ -519,6 +527,26 @@
 		F97410FF19EC389800E12633 /* UIViewController+NavigationItemSettingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationItemSettingTool.h"; sourceTree = "<group>"; };
 		F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItemSettingTool.m"; sourceTree = "<group>"; };
 		F974110119EC389800E12633 /* WLCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCategorys.h; sourceTree = "<group>"; };
+		F975FE5719EE44DA00D13D86 /* OverLayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverLayView.h; sourceTree = "<group>"; };
+		F975FE5819EE44DA00D13D86 /* OverLayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverLayView.m; sourceTree = "<group>"; };
+		F975FE5919EE44DA00D13D86 /* RecteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecteView.h; sourceTree = "<group>"; };
+		F975FE5A19EE44DA00D13D86 /* RecteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecteView.m; sourceTree = "<group>"; };
+		F975FE5B19EE44DA00D13D86 /* TableMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableMenuCell.h; sourceTree = "<group>"; };
+		F975FE5C19EE44DA00D13D86 /* TableMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableMenuCell.m; sourceTree = "<group>"; };
+		F975FE5D19EE44DA00D13D86 /* TableMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableMenuViewController.h; sourceTree = "<group>"; };
+		F975FE5E19EE44DA00D13D86 /* TableMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableMenuViewController.m; sourceTree = "<group>"; };
+		F975FE6419EE452100D13D86 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F975FE6519EE452100D13D86 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F975FE6819EE453200D13D86 /* DevicesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesCell.h; sourceTree = "<group>"; };
+		F975FE6919EE453200D13D86 /* DevicesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesCell.m; sourceTree = "<group>"; };
+		F975FE6B19EE45A500D13D86 /* DeviceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceListViewController.h; sourceTree = "<group>"; };
+		F975FE6C19EE45A500D13D86 /* DeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceListViewController.m; sourceTree = "<group>"; };
+		F975FE6E19EE4FDE00D13D86 /* DeviceInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoView.h; sourceTree = "<group>"; };
+		F975FE6F19EE4FDE00D13D86 /* DeviceInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoView.m; sourceTree = "<group>"; };
+		F975FE7319EE503800D13D86 /* DeviceInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceInfoView.xib; sourceTree = "<group>"; };
+		F975FE7519EE5FA900D13D86 /* DeviceTableHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceTableHeadView.xib; sourceTree = "<group>"; };
+		F975FE7719EE5FCF00D13D86 /* DeviceTableHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableHeadView.h; sourceTree = "<group>"; };
+		F975FE7819EE5FCF00D13D86 /* DeviceTableHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableHeadView.m; sourceTree = "<group>"; };
 		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
 		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
 		F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
@@ -1155,6 +1183,14 @@
 		F974108919EC2C8700E12633 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F975FE5719EE44DA00D13D86 /* OverLayView.h */,
+				F975FE5819EE44DA00D13D86 /* OverLayView.m */,
+				F975FE5919EE44DA00D13D86 /* RecteView.h */,
+				F975FE5A19EE44DA00D13D86 /* RecteView.m */,
+				F975FE5B19EE44DA00D13D86 /* TableMenuCell.h */,
+				F975FE5C19EE44DA00D13D86 /* TableMenuCell.m */,
+				F975FE5D19EE44DA00D13D86 /* TableMenuViewController.h */,
+				F975FE5E19EE44DA00D13D86 /* TableMenuViewController.m */,
 				F974108A19EC2C8700E12633 /* BannerView.h */,
 				F974108B19EC2C8700E12633 /* BannerView.m */,
 				6E16647419ECD15D0081EB4C /* FriendsListCell.h */,
@@ -1239,10 +1275,36 @@
 		F97410DA19EC322000E12633 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F97410DB19EC322000E12633 /* MainViewController.h */,
-				F97410DC19EC322000E12633 /* MainViewController.m */,
+				F975FE6319EE452100D13D86 /* Controllers */,
+				F975FE6619EE452100D13D86 /* Views */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		F975FE6319EE452100D13D86 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F975FE6419EE452100D13D86 /* MainViewController.h */,
+				F975FE6519EE452100D13D86 /* MainViewController.m */,
+				F975FE6B19EE45A500D13D86 /* DeviceListViewController.h */,
+				F975FE6C19EE45A500D13D86 /* DeviceListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F975FE6619EE452100D13D86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F975FE6819EE453200D13D86 /* DevicesCell.h */,
+				F975FE6919EE453200D13D86 /* DevicesCell.m */,
+				F975FE6E19EE4FDE00D13D86 /* DeviceInfoView.h */,
+				F975FE6F19EE4FDE00D13D86 /* DeviceInfoView.m */,
+				F975FE7319EE503800D13D86 /* DeviceInfoView.xib */,
+				F975FE7719EE5FCF00D13D86 /* DeviceTableHeadView.h */,
+				F975FE7819EE5FCF00D13D86 /* DeviceTableHeadView.m */,
+				F975FE7519EE5FA900D13D86 /* DeviceTableHeadView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F98545FE19E9004F006F5226 /* Classes */ = {
@@ -1439,6 +1501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F975FE7619EE5FA900D13D86 /* DeviceTableHeadView.xib in Resources */,
 				F91A0E7B19E7AACF009ADB44 /* dynamicItemNormal.png in Resources */,
 				F91A0E9B19E7AACF009ADB44 /* red_tabbar@2x.png in Resources */,
 				F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */,
@@ -1561,6 +1624,7 @@
 				F91A0E7C19E7AACF009ADB44 /* dynamicItemSelected.png in Resources */,
 				F91A0E6619E7AACF009ADB44 /* moreNavItemSelected.png in Resources */,
 				F91A0E3319E7AACF009ADB44 /* NVBar_arrow_left.png in Resources */,
+				F975FE7419EE503800D13D86 /* DeviceInfoView.xib in Resources */,
 				F92DBDAD19ED5C1900BBE573 /* graycircle1.png in Resources */,
 				F91A0E3519E7AACF009ADB44 /* SIM_1.png in Resources */,
 				F91A0E5F19E7AACF009ADB44 /* addNavItemSelected.png in Resources */,
@@ -1655,22 +1719,30 @@
 				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
+				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
 				F9E24FA419ED74DD00D83FEF /* ConfigurationViewController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
+				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
 				BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */,
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
+				F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */,
+				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
 				F9E24F6419ED725900D83FEF /* PinyinFormatter.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */,
+				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
+				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
+				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
+				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
@@ -1679,9 +1751,9 @@
 				BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */,
 				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
 				F9E24F7919ED729700D83FEF /* KBFreash.m in Sources */,
-				F97410E719EC322000E12633 /* MainViewController.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
+				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F9E24F6519ED725900D83FEF /* PinYinForObjc.m in Sources */,

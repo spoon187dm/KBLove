@@ -115,7 +115,7 @@
 
 - (void)gotoMainVireController{
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainViewController"];
+    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
     [self presentViewController:vc animated:YES completion:^{
         
     }];
