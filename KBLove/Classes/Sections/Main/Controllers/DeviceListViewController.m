@@ -12,6 +12,7 @@
 #import "DeviceTableHeadView.h"
 #import "KBAccount.h"
 #import "DropListView.h"
+#import "DeviceDetailViewController.h"
 @interface DeviceListViewController (){
     NSMutableArray *_dataArray;
     DeviceTableHeadView *_headView;
@@ -149,6 +150,9 @@
             return;
         }
     }
+    
+    DeviceDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceDetailViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
