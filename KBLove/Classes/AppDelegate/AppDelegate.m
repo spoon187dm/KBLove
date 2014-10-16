@@ -15,7 +15,6 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor colorWithRed:1.000 green:0.329 blue:0.380 alpha:1.000];
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_Bacground"] forBarMetrics:UIBarMetricsDefault];
     [[UITableView appearance] setBackgroundColor:SYSTEM_COLOR];

@@ -12,6 +12,7 @@
 #import "CircleFriendCell.h"
 #import "ChineseInclude.h"
 #import "PinYinForObjc.h"
+#import "CreateCircleBottomView.h"
 @interface CreateCircleViewController ()
 {
     UISearchBar *_searchBar;//搜索条
@@ -19,6 +20,7 @@
     NSMutableArray *_resultArray;//存放搜索结果
     NSMutableArray *_selectArray;
     NSMutableArray *_allDataArray;
+    CreateCircleBottomView *_bottomView;
 }
 @end
 
@@ -36,8 +38,7 @@
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
     
-    
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight-64) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"background.png"]];
@@ -54,7 +55,12 @@
     //此时程序中有两个TableView；
     _playCintroller.searchResultsDelegate=self;
     _playCintroller.searchResultsDataSource=self;
+    _playCintroller.searchResultsTableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"background.png"]];
     _selectArray =[[NSMutableArray alloc]init];
+    _bottomView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0, _tableView.frame.size.height, ScreenWidth, 0)];
+    _bottomView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    [self.view addSubview:_bottomView];
+    
 }
 
 - (void)BackClick:(UIButton *)btn
@@ -64,15 +70,32 @@
 #pragma mark - 下载数据
 - (void)loadData
 {
-    if (!_dataArray) {
-        _dataArray=[NSMutableArray array];
-        //        for (NSInteger i='A'; i<='Z'; i++) {
-        //            [_dataArray addObject:[NSMutableArray array]];
-        //        }
-        
-    }
     if (!_allDataArray) {
         _allDataArray=[[NSMutableArray alloc]init];
+    }
+    if (!_dataArray) {
+        _dataArray=[NSMutableArray array];
+     for (NSInteger i='A'; i<='Z'+1; i++) {
+        [_dataArray addObject:[NSMutableArray array]];
+         KBFriendInfo *finfo=[[KBFriendInfo alloc]init];
+         if (i<='Z') {
+             //此处是假数据 上线时需删掉
+             
+             finfo.name=[NSString stringWithFormat:@"%c",(unichar)i];
+             //[_dataArray[i-'A'] addObject:finfo];
+             
+         }else
+         {
+           finfo.name=@"董新";
+         }
+         [_allDataArray addObject:finfo
+          ];
+                }
+        
+         //[_dataArray addObject:[NSMutableArray array]];
+    }
+    if (!_selectArray) {
+        _selectArray=[[NSMutableArray alloc]init];
     }
     if (!_resultArray) {
         _resultArray=[[NSMutableArray alloc]init];
@@ -91,6 +114,8 @@
                         [info setValuesForKeysWithDictionary:infoDic];
                         [_allDataArray addObject:info];
                     }
+                    [self ConfigData:_allDataArray];
+                    
                 }else
                 {
                     [UIAlertView showWithTitle:@"提示" Message:@"数据请求失败"  cancle:@"确定" otherbutton:nil     block:^(NSInteger index) {
@@ -110,7 +135,7 @@
             }];
         }
         [KBFreash StopRefreshinView:_tableView];
-        [_tableView reloadData];
+       // [_tableView reloadData];
     }];
 }
 //将数据分类
@@ -118,32 +143,40 @@
 - (void)ConfigData:(NSArray *)array
 {
     for (int i=0; i<array.count; i++) {
+        BOOL IsIn=NO;
         KBFriendInfo *finfo=array[i];
         for (int j='A'; j<='Z'; j++) {
-            if ([finfo.name hasPrefix:[NSString stringWithFormat:@"%c",j]]) {
+            NSString *sotr=[[PinYinForObjc chineseConvertToPinYin:finfo.name] lowercaseString];
+            if ([sotr hasPrefix:[[NSString stringWithFormat:@"%c",j] lowercaseString]]) {
+                
                 [_dataArray[j-'A'] addObject:finfo];
+                IsIn=YES;
             }
+        }
+        if (!IsIn) {
+            [[_dataArray lastObject] addObject:finfo];
         }
     }
     [_tableView reloadData];
 }
 #pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
     if (_tableView==tableView) {
         return _dataArray.count;
+        // return _allDataArray.count;
     }else
     {
+        
         return 1;
     }
-    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // return 0;
     if (_tableView==tableView) {
-        return _allDataArray.count;
+        return [_dataArray[section] count];
+       
     }else
     {
         
@@ -160,14 +193,65 @@
     }
     
     if (_tableView==tableView) {
-        KBFriendInfo *finfo=_allDataArray[indexPath.row];
-        cell.CircleFriendName.text=finfo.name;
+        KBFriendInfo *finfo=_dataArray[indexPath.section][indexPath.row];
+        [cell configUIWithModel:finfo Path:indexPath isSleect:[_selectArray containsObject:finfo] andBlock:^(NSIndexPath *patn, BOOL isselect) {
+            
+            KBFriendInfo *ff=_dataArray[patn.section][patn.row];
+            if (isselect) {
+                
+                if (![_selectArray containsObject:ff]) {
+                    [_selectArray addObject:ff];
+                }
+                //添加移动动画
+                
+                
+            }else
+            {
+                [_selectArray removeObject:ff];
+            }
+            [self refreshBottomWithArray];
+        }];      //  cell.CircleFriendName.text=finfo.name;
+        
     }else
     {
         KBFriendInfo *finfo=_resultArray[indexPath.row];
-        cell.CircleFriendName.text=finfo.name;
+        //cell.CircleFriendName.text=finfo.name;
+        [cell configUIWithModel:finfo Path:indexPath isSleect:[_selectArray containsObject:finfo] andBlock:^(NSIndexPath *patn, BOOL isselect) {
+            KBFriendInfo *ff=_resultArray[patn.row];
+            if (isselect) {
+                
+                if (![_selectArray containsObject:ff]) {
+                    [_selectArray addObject:ff];
+                }
+                
+            }else
+            {
+                [_selectArray removeObject:ff];
+            }
+            [self refreshBottomWithArray];
+        }];
+       
+        
     }
+    
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
+}
+- (void)refreshBottomWithArray
+{
+//    [_bottomView ConfigUIWith:_selectArray AndBlock:^(NSInteger tag) {
+//        NSLog(@"%ld",tag);
+//    }];
+    [_tableView reloadData];
+    [_bottomView ConfigUIWith:_selectArray AndBlock:^(NSInteger tag) {
+        KBFriendInfo *finf=_selectArray[tag];
+        [_selectArray removeObject:finf];
+        [self refreshBottomWithArray];
+        
+    } AndFinishedBlock:^{
+        NSLog(@"创建群组");
+    }];
+    _tableView.frame= CGRectMake(0, 0,ScreenWidth,ScreenHeight-_bottomView.frame.size.height);
 }
 #pragma mark - UITableViewDelegate
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
@@ -183,13 +267,25 @@
     }
     return arr;
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *la=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
     la.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
-    la.text=[NSString stringWithFormat:@"%c",section+'A'];
-    
+    la.text=[NSString stringWithFormat:@"%c",(UniChar )(section+'A')];
+    if (section==26) {
+        la.text=@"其他";
+    }
     return la;
+}
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
+{
+    if(tableView==_tableView&&[_dataArray[section] count]>0)
+    {
+
+    return 20;
+    }
+    return 0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -215,12 +311,18 @@
                 NSString *tempPinYinStr = [PinYinForObjc chineseConvertToPinYin:searchstr];
                 NSRange titleResult=[tempPinYinStr rangeOfString:_searchBar.text options:NSCaseInsensitiveSearch];
                 if (titleResult.length>0) {
-                    [_resultArray addObject:info];
+                    
+                    if (![_resultArray containsObject:info]) {
+                        [_resultArray addObject:info];
+                    }
                 }
                 NSString *tempPinYinHeadStr = [PinYinForObjc chineseConvertToPinYinHead:searchstr];
                 NSRange titleHeadResult=[tempPinYinHeadStr rangeOfString:_searchBar.text options:NSCaseInsensitiveSearch];
                 if (titleHeadResult.length>0) {
-                    [_resultArray addObject:info];
+                    if (![_resultArray containsObject:info]) {
+                        [_resultArray addObject:info];
+                    }
+                    
                 }
             }
             else {
@@ -240,7 +342,12 @@
         }
     }
 }
-
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    //返回正确的下标，Title是被选中的索引标题，index是索引标题数组的下标
+    //return -1不会引起滚动
+    return  index-1;
+}
 /*
  #pragma mark - Navigation
  

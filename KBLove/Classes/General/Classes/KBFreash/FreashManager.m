@@ -33,10 +33,12 @@ static FreashManager *manager;
 }
 - (void)addFreash:(KBFreash *)freash andKey:(NSString *)key
 {
+    
     [_freashList setObject:freash forKey:key];
 }
 - (void)removeFreashWithKey:(NSString *)key
 {
+    NSLog(@"%@",key);
     KBFreash *freash=[_freashList objectForKey:key];
     [freash StopRefresh];
     [_freashList removeObjectForKey:key];

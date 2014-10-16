@@ -18,13 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self Login];
+    //[self Login];
     [self CreateUI];
    // [self loadData];
     // Do any additional setup after loading the view.
 }
 -  (void)CreateUI
 {
+    self.navigationController.navigationBarHidden=NO;
     self.navigationItem.titleView=[self makeTitleLable:@"圈子" AndFontSize:22 isBold:YES];
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
@@ -32,7 +33,7 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddClick:)];
     self.navigationItem.rightBarButtonItem.tintColor=[UIColor whiteColor];
     //初始化 Tableview
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight-64) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     [self.view addSubview:_tableView];

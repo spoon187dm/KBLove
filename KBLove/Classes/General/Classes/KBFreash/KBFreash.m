@@ -31,7 +31,8 @@
 + (void)startRefreshWithTitle:(NSString *)title inView:(UIView *)view
 {
     KBFreash *freash=[[KBFreash alloc]init];
-    [[FreashManager DefaultManager]addFreash:freash andKey:view.description];
+    NSLog(@"%@",[view.description componentsSeparatedByString:@";"][0]);
+    [[FreashManager DefaultManager]addFreash:freash andKey:[[view.description componentsSeparatedByString:@";"][0] componentsSeparatedByString:@" "][1]];
     [freash startRefreshWithTitle:title inView:view];
 }
 - (void)startRefreshinView:(UIView *)view
@@ -59,7 +60,8 @@
 }
 + (void)StopRefreshinView:(UIView *)view
 {
-   [[FreashManager DefaultManager]removeFreashWithKey:view.description];
+   
+   [[FreashManager DefaultManager]removeFreashWithKey:[[view.description componentsSeparatedByString:@";"][0] componentsSeparatedByString:@" "][1]];
 }
 - (void)StopRefresh
 {

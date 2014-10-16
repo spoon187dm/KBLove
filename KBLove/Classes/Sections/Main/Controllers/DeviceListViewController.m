@@ -51,7 +51,7 @@
         NSLog(@"选择 %@",index);
         
     }];
-    
+    self.view.backgroundColor = SYSTEM_COLOR;
 }
 
 - (void)loadData{

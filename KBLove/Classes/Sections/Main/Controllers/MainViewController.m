@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "KBDevices.h"
 #import "KBAccount.h"
+#import "CircleViewController.h"
 @interface MainViewController ()
 
 - (IBAction)click_car:(id)sender;
@@ -83,6 +84,8 @@
 }
 
 - (IBAction)click_circle:(id)sender{
+    CircleViewController *vc = [[CircleViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)click_devicesList:(id)sender{
