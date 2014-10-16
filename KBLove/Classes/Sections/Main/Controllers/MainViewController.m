@@ -38,6 +38,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,12 +86,6 @@
 }
 
 - (IBAction)click_devicesList:(id)sender{
-    
-    [[KBAccount sharedAccount] getDevicesArrayWithpageNumber:1 pageSize:10 block:^(BOOL isSuccess, NSArray *deviceArray) {
-        if (isSuccess) {
-            
-        }
-    }];
     
 }
 

@@ -81,7 +81,7 @@
 
     KBFriendInfo *friendInfo = _friendsListArray[indexPath.row];
     cell.friendNameLabel.text = friendInfo.name;
-    
+    [cell setMoreOptionsButtonBg:@"bluecircle.png" anddeleteButtonBg:@"yellowcircle.png"];
     cell.delegate = self;
     return cell;
 }
