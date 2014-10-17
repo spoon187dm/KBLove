@@ -17,6 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configUI];
+    [self loadData];
+}
+
+#pragma mark - loadData
+//从本地NSUserDefault中读取信息
+- (void)loadData {
+    KBUserInfo *info = [KBUserInfo sharedInfo];
+    _nickNameTextField.text = info.nick;
+//    _birthdayBtn setTitle:info. forState:<#(UIControlState)#>
+    
+}
+
+#pragma mark - configUI
+- (void)configUI {
     //设定日期选择器frame
     _birthdayPicker.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height + _alertBirthdayBtn.bounds.size.height, _birthdayPicker.bounds.size.width, _birthdayPicker.bounds.size.height);
     _alertBirthdayBtn.frame = CGRectMake(_alertBirthdayBtn.frame.origin.x, [UIScreen mainScreen].bounds.size.height, _alertBirthdayBtn.bounds.size.width, _alertBirthdayBtn.bounds.size.height);

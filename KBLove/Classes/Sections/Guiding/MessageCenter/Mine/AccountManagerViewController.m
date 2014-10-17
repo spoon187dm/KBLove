@@ -2,7 +2,7 @@
 //  AccountManagerViewController.m
 //  KBLove
 //
-//  Created by 吴铭博 on 14-10-17.
+//  Created by 吴铭博 on 14/10/17.
 //  Copyright (c) 2014年 block. All rights reserved.
 //
 
@@ -16,22 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self loadData];
 }
 
+#pragma mark - configUI
+//从NSUSerDefault中读取信息
+- (void)loadData {
+    KBUserInfo *info = [KBUserInfo sharedInfo];
+    _emailLabel.text = info.email;
+    _phoneLabel.text = info.phone;
+}
+
+#pragma mark - 内存警告
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)backItemClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
-*/
-
 @end
