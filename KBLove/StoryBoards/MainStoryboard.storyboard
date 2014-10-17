@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Oi8-16-FWF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Oi8-16-FWF">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="522" y="65"/>
         </scene>
-        <!--设备-->
+        <!--Device Detail View Controller - 设备-->
         <scene sceneID="Ku5-Hq-UMg">
             <objects>
                 <viewController storyboardIdentifier="DeviceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r5l-1J-MQv" customClass="DeviceDetailViewController" sceneMemberID="viewController">
@@ -156,7 +156,6 @@
                                         </state>
                                         <connections>
                                             <action selector="click_alarm:" destination="r5l-1J-MQv" eventType="touchUpInside" id="dK0-y3-k0U"/>
-                                            <segue destination="OQh-V9-hkM" kind="push" id="LC3-37-Up9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eY-G6-iC9">
@@ -177,6 +176,7 @@
                                         </state>
                                         <connections>
                                             <action selector="click_setting:" destination="r5l-1J-MQv" eventType="touchUpInside" id="aAk-lt-zHB"/>
+                                            <segue destination="OQh-V9-hkM" kind="push" id="EEQ-iK-RxX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orC-xa-qqQ">
@@ -238,18 +238,20 @@
             </objects>
             <point key="canvasLocation" x="1271" y="65"/>
         </scene>
-        <!--报警列表-->
+        <!--Alarm List View Controller - 报警列表-->
         <scene sceneID="csz-8w-I4h">
             <objects>
-                <tableViewController id="OQh-V9-hkM" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AlarmListViewController" id="OQh-V9-hkM" customClass="AlarmListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jNa-6g-RvV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="exe-7r-Rhc">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exe-7r-Rhc" id="6hj-gD-qhh">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -269,7 +271,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="click_back:" destination="r5l-1J-MQv" eventType="touchUpInside" id="3Fe-Aw-vEd"/>
+                                    <action selector="click_back:" destination="OQh-V9-hkM" eventType="touchUpInside" id="Vn1-mP-7CE"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -286,6 +288,7 @@
                                         </state>
                                         <connections>
                                             <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="QqZ-vA-UBM"/>
+                                            <action selector="click_menu:" destination="OQh-V9-hkM" eventType="touchUpInside" id="N0c-Br-iIc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPf-ab-Pgc">
@@ -295,6 +298,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="click_home:" destination="OQh-V9-hkM" eventType="touchUpInside" id="Akl-jl-erM"/>
                                             <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="gb8-Nc-OPN"/>
                                         </connections>
                                     </button>
@@ -308,7 +312,7 @@
             </objects>
             <point key="canvasLocation" x="1630" y="5"/>
         </scene>
-        <!--设备列表-->
+        <!--Device List View Controller - 设备列表-->
         <scene sceneID="3fY-iS-cK1">
             <objects>
                 <tableViewController storyboardIdentifier="DeviceListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y8Q-6q-USb" customClass="DeviceListViewController" sceneMemberID="viewController">

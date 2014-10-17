@@ -8,6 +8,7 @@
 
 #import "DeviceDetailViewController.h"
 #import "KBAlarmManager.h"
+#import "AlarmListViewController.h"
 @interface DeviceDetailViewController ()
 
 @end
@@ -56,9 +57,9 @@
 
 //报警
 - (IBAction)click_alarm:(UIButton *)sender{
-    [[KBAlarmManager sharedManager] getAlarmInfoForDevice:_device finishblock:^(BOOL isSuccess, id result) {
-        
-    }];
+    AlarmListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AlarmListViewController"];
+    vc.device = _device;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //数据

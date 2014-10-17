@@ -7,7 +7,8 @@
 //
 
 #import "AlarmCell.h"
-
+#import "KBAlarmInfoView.h"
+#import "KBAlarm.h"
 @implementation AlarmCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -38,13 +39,10 @@
     }
 }
 
+
 - (UIView *)ViewForCellContent{
-    
-//    DeviceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"DeviceInfoView" owner:self options:nil] lastObject];
-//    infoView.frame = self.bounds;
-//    infoView.backgroundColor = SYSTEM_COLOR;
-//    
-    return nil;
+    KBAlarmInfoView *infoView = [[KBAlarmInfoView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 70)];
+    return infoView;
 }
 
 - (UIView *)menuViewForMenuCount:(NSInteger)count{
@@ -56,7 +54,7 @@
         UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         menuBtn.tag = i;
         [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        menuBtn.frame = CGRectMake(80*i, 0, 80, 100);
+        menuBtn.frame = CGRectMake(80*i, 0, 80, 70);
         [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
         [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
         [view addSubview:menuBtn];
@@ -64,6 +62,28 @@
     
     return view;
 }
+
+- (void)startMyEdit:(BOOL)edit{
+    KBAlarmInfoView *view = (KBAlarmInfoView*)self.cellView;
+//    view.frame = CGRectMake(20, 0, view.width, view.height);
+//    [view startMyEdit:edit];
+    view.selectCicleImageView.hidden = !edit;
+}
+
+- (void)setMySelected:(BOOL)selected{
+    KBAlarmInfoView *view = (KBAlarmInfoView*)self.cellView;
+    [view setMySelected:selected];
+}
+
+//- (void)setEditing:(BOOL)editing{
+//    [super setEditing:editing];
+//    KBAlarmInfoView *view = (KBAlarmInfoView*)self.cellView;
+//    if (editing) {
+//        view.frame = CGRectMake(20, 0, view.width, view.height);
+//    }else{
+//        view.frame = CGRectMake(0, 0, view.width, view.height);
+//    }
+//}
 
 - (void)setData:(KBAlarm *)alarm{
 //    DeviceInfoView *view = (DeviceInfoView *)self.cellView;
@@ -74,8 +94,9 @@
 //    [formate setDateFormat:@"hh-mm"];
 //    NSDate *dateString = [NSDate dateWithTimeIntervalSince1970:[devices.devicesStatus.systime floatValue]];
 //    view.timeLabel.text = [formate stringFromDate:dateString];
-//    
-    
+    KBAlarmInfoView *view = (KBAlarmInfoView*)self.cellView;
+    view.alarmTypeLabel.text = [alarm getTypeString];
+    view.alarmLocationLabel.text = [alarm info];
 }
 
 @end

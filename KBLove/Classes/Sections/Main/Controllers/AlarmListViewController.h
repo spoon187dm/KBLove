@@ -7,7 +7,11 @@
 //
 
 #import "TableMenuViewController.h"
-
+@class KBDevices;
 @interface AlarmListViewController : TableMenuViewController
+@property (nonatomic, strong) KBDevices *device;
+- (IBAction)click_back:(UIButton *)sender ;
+- (IBAction)click_menu:(id)sender;
+- (IBAction)click_home:(UIButton *)sender;
 
 @end

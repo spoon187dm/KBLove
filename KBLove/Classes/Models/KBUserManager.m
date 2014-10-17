@@ -62,7 +62,7 @@ static KBUserManager *account = nil;
                              @"token":token
                              };
     
-    [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+    [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params cacheType:WLHttpCacheTypeAlways overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             NSMutableArray *resultArray = [NSMutableArray array];
             NSArray *devicesArray = [result objectForKey:@"devices"];
@@ -79,6 +79,23 @@ static KBUserManager *account = nil;
             block(NO, nil);
         }
     }];
+//    [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+//        if (IsSuccess) {
+//            NSMutableArray *resultArray = [NSMutableArray array];
+//            NSArray *devicesArray = [result objectForKey:@"devices"];
+//            for (NSDictionary *perDic in devicesArray) {
+//                KBDevices *device = [[KBDevices alloc]init];
+//                [device setValuesForKeysWithDictionary:perDic];
+//                [resultArray addObject:device];
+//            }
+//            [KBUserManager sharedAccount].devicesArray = [NSMutableArray arrayWithArray:resultArray];
+//            if (block) {
+//                block(YES, [resultArray copy]);
+//            }
+//        }else{
+//            block(NO, nil);
+//        }
+//    }];
 }
 
 - (void)getDevicesStatus:(boolReturnBlock)block{

@@ -110,6 +110,10 @@
 }
 
 - (IBAction)click_mine:(id)sender{
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Me_StoryBoardN" bundle:nil];
+
+    UIViewController *vc =[stb instantiateViewControllerWithIdentifier:@"MySettingViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

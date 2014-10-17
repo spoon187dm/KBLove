@@ -10,4 +10,16 @@
 
 @interface KBAlarmInfoView : UIView
 
+@property (nonatomic, assign) BOOL isChecked;
+
+
+@property (nonatomic, strong) UIImageView *alarmImageView;
+@property (nonatomic, strong) UILabel *alarmTypeLabel;
+@property (nonatomic, strong) UILabel *alarmLocationLabel;
+@property (nonatomic, strong) UILabel *alarmTImeLabel;
+@property (nonatomic, strong) UIImageView *selectCicleImageView;
+- (void)setMySelected:(BOOL)selected;
+
+//- (void)startMyEdit:(BOOL)edit;
+
 @end

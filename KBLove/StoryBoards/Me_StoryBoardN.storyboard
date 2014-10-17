@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-459" y="-16"/>
         </scene>
-        <!--我的-->
+        <!--View Controller - 我的-->
         <scene sceneID="T0l-Zd-HtX">
             <objects>
                 <viewController id="zEt-At-QfN" sceneMemberID="viewController">
@@ -254,7 +254,7 @@
             </objects>
             <point key="canvasLocation" x="1" y="-16"/>
         </scene>
-        <!--个人资料-->
+        <!--View Controller - 个人资料-->
         <scene sceneID="29g-Wi-gxQ">
             <objects>
                 <viewController id="qGE-hH-rU4" sceneMemberID="viewController">
@@ -377,7 +377,7 @@
             </objects>
             <point key="canvasLocation" x="499" y="-1368"/>
         </scene>
-        <!--消息提醒-->
+        <!--View Controller - 消息提醒-->
         <scene sceneID="xJS-Yk-ww0">
             <objects>
                 <viewController id="b1G-NJ-a7X" sceneMemberID="viewController">
@@ -480,7 +480,7 @@
             </objects>
             <point key="canvasLocation" x="515" y="-253"/>
         </scene>
-        <!--隐私设置-->
+        <!--View Controller - 隐私设置-->
         <scene sceneID="ESQ-Nb-7iD">
             <objects>
                 <viewController id="HfM-EH-tvQ" sceneMemberID="viewController">
@@ -552,7 +552,7 @@
             </objects>
             <point key="canvasLocation" x="537" y="795"/>
         </scene>
-        <!--关于凯步-->
+        <!--View Controller - 关于凯步-->
         <scene sceneID="Tgu-Ng-APU">
             <objects>
                 <viewController id="vp3-YV-0hd" sceneMemberID="viewController">
@@ -697,7 +697,7 @@
             </objects>
             <point key="canvasLocation" x="521" y="1818"/>
         </scene>
-        <!--意见反馈-->
+        <!--View Controller - 意见反馈-->
         <scene sceneID="gZ9-lv-LCG">
             <objects>
                 <viewController id="tQJ-rX-bLW" sceneMemberID="viewController">
@@ -746,7 +746,7 @@
             </objects>
             <point key="canvasLocation" x="537" y="1314"/>
         </scene>
-        <!--通用设置-->
+        <!--View Controller - 通用设置-->
         <scene sceneID="teP-sT-ofu">
             <objects>
                 <viewController id="ljh-7X-hlY" sceneMemberID="viewController">
@@ -869,7 +869,7 @@
             </objects>
             <point key="canvasLocation" x="531" y="380"/>
         </scene>
-        <!--地图选择-->
+        <!--View Controller - 地图选择-->
         <scene sceneID="ZYV-9F-VWQ">
             <objects>
                 <viewController id="Smj-xA-u9q" sceneMemberID="viewController">
@@ -956,7 +956,7 @@
             </objects>
             <point key="canvasLocation" x="1131" y="201"/>
         </scene>
-        <!--语言选择-->
+        <!--View Controller - 语言选择-->
         <scene sceneID="V86-xN-2td">
             <objects>
                 <viewController id="qsC-s9-3Qd" sceneMemberID="viewController">
@@ -1015,7 +1015,7 @@
             </objects>
             <point key="canvasLocation" x="1147" y="834"/>
         </scene>
-        <!--账号管理-->
+        <!--View Controller - 账号管理-->
         <scene sceneID="HJT-9D-vbe">
             <objects>
                 <viewController id="Iix-ey-Pyi" sceneMemberID="viewController">
@@ -1172,7 +1172,7 @@
             </objects>
             <point key="canvasLocation" x="507" y="-717"/>
         </scene>
-        <!--密码修改-->
+        <!--View Controller - 密码修改-->
         <scene sceneID="StA-6g-cEz">
             <objects>
                 <viewController id="5OD-ag-eig" sceneMemberID="viewController">
@@ -1271,7 +1271,7 @@
             </objects>
             <point key="canvasLocation" x="1116" y="-403"/>
         </scene>
-        <!--绑定邮箱-->
+        <!--View Controller - 绑定邮箱-->
         <scene sceneID="9wc-Ma-S7F">
             <objects>
                 <viewController id="sPV-qd-eV1" sceneMemberID="viewController">
