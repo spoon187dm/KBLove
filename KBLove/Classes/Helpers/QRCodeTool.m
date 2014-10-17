@@ -35,7 +35,7 @@ static QRCodeTool *tool = nil;
         }
     }];
     [vc presentViewController:qrViewcontroller animated:YES completion:^{
-        _block = nil;
+//        _block = nil;
     }];
 }
 

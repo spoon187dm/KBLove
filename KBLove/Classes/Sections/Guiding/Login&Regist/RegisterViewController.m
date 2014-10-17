@@ -20,6 +20,7 @@
 
 @implementation RegisterViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //默认电话注册
@@ -153,6 +154,12 @@
 {
     //手键盘
     [self.view endEditing:YES];
+    UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistFinishNavigationController"];
+    
+    
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
     //测试圈子用 上线是需要关闭
 //    CircleViewController *circle=[[CircleViewController alloc]init];
 //    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:circle];

@@ -8,9 +8,12 @@
 
 #import "MainViewController.h"
 #import "KBDevices.h"
-#import "KBAccount.h"
+#import "KBUserManager.h"
 #import "CircleViewController.h"
-@interface MainViewController ()
+
+@interface MainViewController (){
+    CLLocationManager *_manager;
+}
 
 - (IBAction)click_car:(id)sender;
 - (IBAction)click_person:(id)sender;
@@ -40,6 +43,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES];
+    [_mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading];
+    _manager = [[CLLocationManager alloc]init];
+    _manager.distanceFilter = kCLLocationAccuracyBest;
+//    _manager.delegate = self;
+    [_manager startUpdatingLocation];
+    
+    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    MKCoordinateRegion re = MKCoordinateRegionMake(cl2d, span);
+    [_mapView setRegion:re];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -67,9 +81,9 @@
 }
 
 - (IBAction)click_allDevices:(id)sender{
-    [[KBAccount sharedAccount]getDevicesStatus:^(BOOL isSuccess) {
+    [[KBUserManager sharedAccount]getDevicesStatus:^(BOOL isSuccess) {
         if (isSuccess) {
-            NSArray *array = [KBAccount sharedAccount].devicesArray;
+            NSArray *array = [KBUserManager sharedAccount].devicesArray;
             NSLog(@"%@",array);
         }
     }];

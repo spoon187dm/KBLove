@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class KBUserInfo;
-@interface KBAccount : NSObject
+@interface KBUserManager : NSObject
 
 @property (nonatomic, strong, readonly) KBUserInfo *userInfo;
 @property (nonatomic, strong, readonly) NSMutableArray *devicesArray;
 
 
-+ (KBAccount *)sharedAccount;
++ (KBUserManager *)sharedAccount;
 
 /**
  @Author block, 10-14 15:10

@@ -10,7 +10,7 @@
 #import "DevicesCell.h"
 #import <ReactiveCocoa.h>
 #import "DeviceTableHeadView.h"
-#import "KBAccount.h"
+#import "KBUserManager.h"
 #import "DropListView.h"
 #import "DeviceDetailViewController.h"
 @interface DeviceListViewController (){
@@ -55,7 +55,7 @@
 }
 
 - (void)loadData{
-    [[KBAccount sharedAccount] getDevicesArrayWithpageNumber:1 pageSize:10 block:^(BOOL isSuccess, NSArray *deviceArray) {
+    [[KBUserManager sharedAccount] getDevicesArrayWithpageNumber:1 pageSize:10 block:^(BOOL isSuccess, NSArray *deviceArray) {
         if (isSuccess) {
             _dataArray = [deviceArray mutableCopy];
             [self.tableView reloadData];
@@ -86,8 +86,6 @@
 }
 
 - (IBAction)click_dropList:(id)sender {
-
-    
     self.isDrop = !_isDrop;
     self.dropListView.hidden = !_isDrop;
 }
@@ -152,6 +150,7 @@
     }
     
     DeviceDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceDetailViewController"];
+    vc.device = _dataArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

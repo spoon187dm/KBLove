@@ -203,7 +203,7 @@
 		F97410E519EC322000E12633 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410D619EC322000E12633 /* RegisterViewController.m */; };
 		F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410D919EC322000E12633 /* WelcomeViewController.m */; };
 		F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410E919EC33CE00E12633 /* KBUserInfo.m */; };
-		F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410EC19EC34CA00E12633 /* KBAccount.m */; };
+		F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410EC19EC34CA00E12633 /* KBUserManager.m */; };
 		F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410F019EC385800E12633 /* ImagePickerTool.m */; };
 		F97410F419EC385800E12633 /* QRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410F219EC385800E12633 /* QRCodeTool.m */; };
 		F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410F619EC389800E12633 /* NSFileManager+pathMethod.m */; };
@@ -212,6 +212,25 @@
 		F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410FC19EC389800E12633 /* UIImageView+WLTool.m */; };
 		F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F97410FE19EC389800E12633 /* UILabel+WLTool.m */; };
 		F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */; };
+		F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */ = {isa = PBXBuildFile; fileRef = F9748CD519EF83AF0064FCC7 /* KBFence.m */; };
+		F9748CD919EF84FF0064FCC7 /* KBAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = F9748CD819EF84FF0064FCC7 /* KBAlarm.m */; };
+		F9748CDC19EF85950064FCC7 /* KBSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = F9748CDB19EF85950064FCC7 /* KBSpot.m */; };
+		F9748CDF19EF861E0064FCC7 /* KBHardWare.m in Sources */ = {isa = PBXBuildFile; fileRef = F9748CDE19EF861E0064FCC7 /* KBHardWare.m */; };
+		F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9748CE119EF87CD0064FCC7 /* KBAlarmManager.m */; };
+		F9748CF119EFA5CD0064FCC7 /* qrcode_scan_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CE419EFA5CD0064FCC7 /* qrcode_scan_bar@2x.png */; };
+		F9748CF219EFA5CD0064FCC7 /* qrcode_scan_bg_Green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CE519EFA5CD0064FCC7 /* qrcode_scan_bg_Green@2x.png */; };
+		F9748CF319EFA5CD0064FCC7 /* qrcode_scan_bg_Green_iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CE619EFA5CD0064FCC7 /* qrcode_scan_bg_Green_iphone5@2x.png */; };
+		F9748CF419EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CE719EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png */; };
+		F9748CF519EFA5CD0064FCC7 /* qrcode_scan_btn_flash_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CE819EFA5CD0064FCC7 /* qrcode_scan_btn_flash_nor@2x.png */; };
+		F9748CF619EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CE919EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_down@2x.png */; };
+		F9748CF719EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CEA19EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_nor@2x.png */; };
+		F9748CF819EFA5CD0064FCC7 /* qrcode_scan_btn_photo_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CEB19EFA5CD0064FCC7 /* qrcode_scan_btn_photo_down@2x.png */; };
+		F9748CF919EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CEC19EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png */; };
+		F9748CFA19EFA5CD0064FCC7 /* qrcode_scan_btn_scan_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CED19EFA5CD0064FCC7 /* qrcode_scan_btn_scan_off@2x.png */; };
+		F9748CFB19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CEE19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png */; };
+		F9748CFC19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CEF19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_nor@2x.png */; };
+		F9748CFD19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9748CF019EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png */; };
+		F9748CFF19EFA6860064FCC7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9748CFE19EFA6860064FCC7 /* MapKit.framework */; };
 		F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5819EE44DA00D13D86 /* OverLayView.m */; };
 		F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5A19EE44DA00D13D86 /* RecteView.m */; };
 		F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE5C19EE44DA00D13D86 /* TableMenuCell.m */; };
@@ -516,8 +535,8 @@
 		F97410D919EC322000E12633 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		F97410E819EC33CE00E12633 /* KBUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBUserInfo.h; sourceTree = "<group>"; };
 		F97410E919EC33CE00E12633 /* KBUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBUserInfo.m; sourceTree = "<group>"; };
-		F97410EB19EC34CA00E12633 /* KBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAccount.h; sourceTree = "<group>"; };
-		F97410EC19EC34CA00E12633 /* KBAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAccount.m; sourceTree = "<group>"; };
+		F97410EB19EC34CA00E12633 /* KBUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBUserManager.h; sourceTree = "<group>"; };
+		F97410EC19EC34CA00E12633 /* KBUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBUserManager.m; sourceTree = "<group>"; };
 		F97410EE19EC358200E12633 /* BlockMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockMacro.h; sourceTree = "<group>"; };
 		F97410EF19EC385800E12633 /* ImagePickerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerTool.h; sourceTree = "<group>"; };
 		F97410F019EC385800E12633 /* ImagePickerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTool.m; sourceTree = "<group>"; };
@@ -536,6 +555,30 @@
 		F97410FF19EC389800E12633 /* UIViewController+NavigationItemSettingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationItemSettingTool.h"; sourceTree = "<group>"; };
 		F974110019EC389800E12633 /* UIViewController+NavigationItemSettingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationItemSettingTool.m"; sourceTree = "<group>"; };
 		F974110119EC389800E12633 /* WLCategorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCategorys.h; sourceTree = "<group>"; };
+		F9748CD419EF83AF0064FCC7 /* KBFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFence.h; sourceTree = "<group>"; };
+		F9748CD519EF83AF0064FCC7 /* KBFence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFence.m; sourceTree = "<group>"; };
+		F9748CD719EF84FF0064FCC7 /* KBAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAlarm.h; sourceTree = "<group>"; };
+		F9748CD819EF84FF0064FCC7 /* KBAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAlarm.m; sourceTree = "<group>"; };
+		F9748CDA19EF85950064FCC7 /* KBSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSpot.h; sourceTree = "<group>"; };
+		F9748CDB19EF85950064FCC7 /* KBSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSpot.m; sourceTree = "<group>"; };
+		F9748CDD19EF861E0064FCC7 /* KBHardWare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBHardWare.h; sourceTree = "<group>"; };
+		F9748CDE19EF861E0064FCC7 /* KBHardWare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBHardWare.m; sourceTree = "<group>"; };
+		F9748CE019EF87CD0064FCC7 /* KBAlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAlarmManager.h; sourceTree = "<group>"; };
+		F9748CE119EF87CD0064FCC7 /* KBAlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAlarmManager.m; sourceTree = "<group>"; };
+		F9748CE419EFA5CD0064FCC7 /* qrcode_scan_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_bar@2x.png"; sourceTree = "<group>"; };
+		F9748CE519EFA5CD0064FCC7 /* qrcode_scan_bg_Green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_bg_Green@2x.png"; sourceTree = "<group>"; };
+		F9748CE619EFA5CD0064FCC7 /* qrcode_scan_bg_Green_iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_bg_Green_iphone5@2x.png"; sourceTree = "<group>"; };
+		F9748CE719EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_flash_down@2x.png"; sourceTree = "<group>"; };
+		F9748CE819EFA5CD0064FCC7 /* qrcode_scan_btn_flash_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_flash_nor@2x.png"; sourceTree = "<group>"; };
+		F9748CE919EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_myqrcode_down@2x.png"; sourceTree = "<group>"; };
+		F9748CEA19EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_myqrcode_nor@2x.png"; sourceTree = "<group>"; };
+		F9748CEB19EFA5CD0064FCC7 /* qrcode_scan_btn_photo_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_photo_down@2x.png"; sourceTree = "<group>"; };
+		F9748CEC19EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_photo_nor@2x.png"; sourceTree = "<group>"; };
+		F9748CED19EFA5CD0064FCC7 /* qrcode_scan_btn_scan_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_btn_scan_off@2x.png"; sourceTree = "<group>"; };
+		F9748CEE19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_light_green@2x.png"; sourceTree = "<group>"; };
+		F9748CEF19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_titlebar_back_nor@2x.png"; sourceTree = "<group>"; };
+		F9748CF019EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scan_titlebar_back_pressed@2x.png"; sourceTree = "<group>"; };
+		F9748CFE19EFA6860064FCC7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F975FE5719EE44DA00D13D86 /* OverLayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverLayView.h; sourceTree = "<group>"; };
 		F975FE5819EE44DA00D13D86 /* OverLayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverLayView.m; sourceTree = "<group>"; };
 		F975FE5919EE44DA00D13D86 /* RecteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecteView.h; sourceTree = "<group>"; };
@@ -615,6 +658,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9748CFF19EFA6860064FCC7 /* MapKit.framework in Frameworks */,
 				F91A0D5D19E78D00009ADB44 /* libiconv.dylib in Frameworks */,
 				F91A0D5B19E78CF2009ADB44 /* QuartzCore.framework in Frameworks */,
 				F91A0D5919E78CEA009ADB44 /* CoreVideo.framework in Frameworks */,
@@ -765,6 +809,7 @@
 		F91A0C8919E7880C009ADB44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9748CFE19EFA6860064FCC7 /* MapKit.framework */,
 				F91A0D5C19E78D00009ADB44 /* libiconv.dylib */,
 				F91A0D5A19E78CF2009ADB44 /* QuartzCore.framework */,
 				F91A0D5819E78CEA009ADB44 /* CoreVideo.framework */,
@@ -875,6 +920,7 @@
 		F91A0DB419E7AACF009ADB44 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F9748CE319EFA5CD0064FCC7 /* ZbarImage */,
 				F975FE7A19EE6C3300D13D86 /* Deviceslist */,
 				F91A0DB519E7AACF009ADB44 /* BoundEquipment */,
 				F91A0DBC19E7AACF009ADB44 /* Codeback */,
@@ -1154,14 +1200,24 @@
 			children = (
 				F97410E819EC33CE00E12633 /* KBUserInfo.h */,
 				F97410E919EC33CE00E12633 /* KBUserInfo.m */,
-				F97410EB19EC34CA00E12633 /* KBAccount.h */,
-				F97410EC19EC34CA00E12633 /* KBAccount.m */,
+				F97410EB19EC34CA00E12633 /* KBUserManager.h */,
+				F97410EC19EC34CA00E12633 /* KBUserManager.m */,
 				6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */,
 				6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */,
 				F92DBD8119ECFDAA00BBE573 /* KBDevices.h */,
 				F92DBD8219ECFDAA00BBE573 /* KBDevices.m */,
 				F92DBD8419ED3FAE00BBE573 /* KBDevicesStatus.h */,
 				F92DBD8519ED3FAE00BBE573 /* KBDevicesStatus.m */,
+				F9748CD419EF83AF0064FCC7 /* KBFence.h */,
+				F9748CD519EF83AF0064FCC7 /* KBFence.m */,
+				F9748CD719EF84FF0064FCC7 /* KBAlarm.h */,
+				F9748CD819EF84FF0064FCC7 /* KBAlarm.m */,
+				F9748CE019EF87CD0064FCC7 /* KBAlarmManager.h */,
+				F9748CE119EF87CD0064FCC7 /* KBAlarmManager.m */,
+				F9748CDA19EF85950064FCC7 /* KBSpot.h */,
+				F9748CDB19EF85950064FCC7 /* KBSpot.m */,
+				F9748CDD19EF861E0064FCC7 /* KBHardWare.h */,
+				F9748CDE19EF861E0064FCC7 /* KBHardWare.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1298,6 +1354,26 @@
 				F975FE6619EE452100D13D86 /* Views */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		F9748CE319EFA5CD0064FCC7 /* ZbarImage */ = {
+			isa = PBXGroup;
+			children = (
+				F9748CE419EFA5CD0064FCC7 /* qrcode_scan_bar@2x.png */,
+				F9748CE519EFA5CD0064FCC7 /* qrcode_scan_bg_Green@2x.png */,
+				F9748CE619EFA5CD0064FCC7 /* qrcode_scan_bg_Green_iphone5@2x.png */,
+				F9748CE719EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png */,
+				F9748CE819EFA5CD0064FCC7 /* qrcode_scan_btn_flash_nor@2x.png */,
+				F9748CE919EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_down@2x.png */,
+				F9748CEA19EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_nor@2x.png */,
+				F9748CEB19EFA5CD0064FCC7 /* qrcode_scan_btn_photo_down@2x.png */,
+				F9748CEC19EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png */,
+				F9748CED19EFA5CD0064FCC7 /* qrcode_scan_btn_scan_off@2x.png */,
+				F9748CEE19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png */,
+				F9748CEF19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_nor@2x.png */,
+				F9748CF019EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png */,
+			);
+			path = ZbarImage;
 			sourceTree = "<group>";
 		};
 		F975FE6319EE452100D13D86 /* Controllers */ = {
@@ -1535,7 +1611,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9748CF519EFA5CD0064FCC7 /* qrcode_scan_btn_flash_nor@2x.png in Resources */,
 				F975FE7619EE5FA900D13D86 /* DeviceTableHeadView.xib in Resources */,
+				F9748CF719EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_nor@2x.png in Resources */,
 				F91A0E7B19E7AACF009ADB44 /* dynamicItemNormal.png in Resources */,
 				F91A0E9B19E7AACF009ADB44 /* red_tabbar@2x.png in Resources */,
 				F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */,
@@ -1545,6 +1623,7 @@
 				F91A0E4F19E7AACF009ADB44 /* zhuce.png in Resources */,
 				F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */,
 				F92DBDA619ED5C1900BBE573 /* bluecircle.png in Resources */,
+				F9748CFD19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png in Resources */,
 				F91A0E6019E7AACF009ADB44 /* clearNavItemNoneUse.png in Resources */,
 				F91A0E3B19E7AACF009ADB44 /* equipmentregister.png in Resources */,
 				F92DBDB319ED5C1900BBE573 /* licheng.png in Resources */,
@@ -1561,6 +1640,8 @@
 				F91A0E5419E7AACF009ADB44 /* lgcode@2x.png in Resources */,
 				F92DBDBE19ED5C1900BBE573 /* yellowstar.png in Resources */,
 				F9E24F9019ED733200D83FEF /* Device_data.storyboard in Resources */,
+				F9748CFB19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png in Resources */,
+				F9748CF419EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png in Resources */,
 				F9E24F9119ED733200D83FEF /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E4719E7AACF009ADB44 /* mm.png in Resources */,
 				F91A0E3719E7AACF009ADB44 /* navi@2x.png in Resources */,
@@ -1582,6 +1663,7 @@
 				6EA222DD19E90EEB0073274D /* pwd.png in Resources */,
 				F91A0E5619E7AACF009ADB44 /* lgremcode@2x.png in Resources */,
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
+				F9748CF119EFA5CD0064FCC7 /* qrcode_scan_bar@2x.png in Resources */,
 				F91A0E4619E7AACF009ADB44 /* login.png in Resources */,
 				F91A0E9019E7AACF009ADB44 /* blue_iOS7_navBar.png in Resources */,
 				F92DBDB519ED5C1900BBE573 /* pingjunsdpng.png in Resources */,
@@ -1589,6 +1671,7 @@
 				F91A0E4E19E7AACF009ADB44 /* xz.png in Resources */,
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
 				F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */,
+				F9748CF819EFA5CD0064FCC7 /* qrcode_scan_btn_photo_down@2x.png in Resources */,
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
 				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
 				F92DBDB219ED5C1900BBE573 /* jrlc.png in Resources */,
@@ -1596,6 +1679,7 @@
 				F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */,
 				F91A0E3619E7AACF009ADB44 /* SIM_2.png in Resources */,
 				F91A0E3119E7AACF009ADB44 /* BoundEquipment_round.png in Resources */,
+				F9748CF919EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png in Resources */,
 				F91A0E4319E7AACF009ADB44 /* roundLoadingBg.png in Resources */,
 				F92DBDBD19ED5C1900BBE573 /* yellowcircle.png in Resources */,
 				F92DBDB419ED5C1900BBE573 /* lichengpoint.png in Resources */,
@@ -1622,6 +1706,8 @@
 				F92DBDB919ED5C1900BBE573 /* whitecircle.png in Resources */,
 				F91A0E4B19E7AACF009ADB44 /* other2.png in Resources */,
 				F91A0E7319E7AACF009ADB44 /* savepass_check.png in Resources */,
+				F9748CF619EFA5CD0064FCC7 /* qrcode_scan_btn_myqrcode_down@2x.png in Resources */,
+				F9748CF219EFA5CD0064FCC7 /* qrcode_scan_bg_Green@2x.png in Resources */,
 				F91A0E9819E7AACF009ADB44 /* red_iOS7_navBar.png in Resources */,
 				F91A0E5519E7AACF009ADB44 /* lgloginbg@2x.png in Resources */,
 				F91A0E5C19E7AACF009ADB44 /* loginQQ@2x.png in Resources */,
@@ -1654,6 +1740,7 @@
 				F91A0E8919E7AACF009ADB44 /* black_iOS7_navBar@2x.png in Resources */,
 				F92DBDA919ED5C1900BBE573 /* cscs.png in Resources */,
 				F91A0E9119E7AACF009ADB44 /* blue_iOS7_navBar@2x.png in Resources */,
+				F9748CF319EFA5CD0064FCC7 /* qrcode_scan_bg_Green_iphone5@2x.png in Resources */,
 				F91A0E7A19E7AACF009ADB44 /* contactsItemSelected.png in Resources */,
 				F91A0E7819E7AACF009ADB44 /* appItemSelected.png in Resources */,
 				F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */,
@@ -1663,6 +1750,7 @@
 				F91A0E3319E7AACF009ADB44 /* NVBar_arrow_left.png in Resources */,
 				F975FE7419EE503800D13D86 /* DeviceInfoView.xib in Resources */,
 				F92DBDAD19ED5C1900BBE573 /* graycircle1.png in Resources */,
+				F9748CFC19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_nor@2x.png in Resources */,
 				F91A0E3519E7AACF009ADB44 /* SIM_1.png in Resources */,
 				F91A0E5F19E7AACF009ADB44 /* addNavItemSelected.png in Resources */,
 				F975FE8019EE741D00D13D86 /* icon_menu.png in Resources */,
@@ -1690,6 +1778,7 @@
 				F91A0E4219E7AACF009ADB44 /* roundLoadimg.png in Resources */,
 				F91A0E3819E7AACF009ADB44 /* navileft@2x.png in Resources */,
 				F91A0C9D19E7880C009ADB44 /* Images.xcassets in Resources */,
+				F9748CFA19EFA5CD0064FCC7 /* qrcode_scan_btn_scan_off@2x.png in Resources */,
 				F91A0E5D19E7AACF009ADB44 /* loginsina@2x.png in Resources */,
 				F92DBDBC19ED5C1900BBE573 /* xssj.png in Resources */,
 			);
@@ -1770,17 +1859,20 @@
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
 				F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */,
+				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
+				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
 				F9E24F6419ED725900D83FEF /* PinyinFormatter.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
-				F97410ED19EC34CA00E12633 /* KBAccount.m in Sources */,
+				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
+				F9748CDC19EF85950064FCC7 /* KBSpot.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
@@ -1791,6 +1883,7 @@
 				BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */,
 				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
 				F9E24F7919ED729700D83FEF /* KBFreash.m in Sources */,
+				F9748CDF19EF861E0064FCC7 /* KBHardWare.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
@@ -1802,6 +1895,7 @@
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F975FE8819EE7F6700D13D86 /* DeviceDetailViewController.m in Sources */,
+				F9748CD919EF84FF0064FCC7 /* KBAlarm.m in Sources */,
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,

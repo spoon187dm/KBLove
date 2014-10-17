@@ -22,6 +22,12 @@
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
     
+//    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
+//    [self presentViewController:vc animated:YES completion:^{
+//        
+//    }];
+    
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     

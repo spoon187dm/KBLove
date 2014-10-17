@@ -7,7 +7,7 @@
 //
 
 #import "DeviceDetailViewController.h"
-
+#import "KBAlarmManager.h"
 @interface DeviceDetailViewController ()
 
 @end
@@ -53,4 +53,32 @@
 - (IBAction)click_home:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+//报警
+- (IBAction)click_alarm:(UIButton *)sender{
+    [[KBAlarmManager sharedManager] getAlarmInfoForDevice:_device finishblock:^(BOOL isSuccess, id result) {
+        
+    }];
+}
+
+//数据
+- (IBAction)click_data:(UIButton *)sender{
+    
+}
+
+//轨迹
+- (IBAction)click_track:(UIButton *)sender{
+    
+}
+
+//删除
+- (IBAction)click_delete:(UIButton *)sender{
+    
+}
+
+//设置
+- (IBAction)click_setting:(UIButton *)sender{
+    
+}
+
 @end

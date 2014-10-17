@@ -65,5 +65,9 @@ static int const kPageNumber = 1;
 static int const kPageSize = 20;
 //获取设备列表
 static NSString * const Url_GetDeviceList = @"http://118.194.192.104:8080/api/device.list.do";
+//获取设备状态
 static NSString * const Url_GetDeviceStatus = @"http://118.194.192.104:8080/api/get.last.do";
+//获取设备警告
+static NSString * const Url_GetAlarmInfo = @"http://118.194.192.104:8080/api/alarm.list.do";
+static NSString * const Url_DeleteAlarmInfo = @"http://118.194.192.104:8080/api/alarm.edit.do";
 #endif

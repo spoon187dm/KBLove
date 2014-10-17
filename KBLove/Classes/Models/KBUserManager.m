@@ -6,18 +6,18 @@
 //  Copyright (c) 2014年 block. All rights reserved.
 //
 
-#import "KBAccount.h"
+#import "KBUserManager.h"
 #import "KBHttpRequestTool.h"
 #import "KBDevices.h"
 #import "KBDevicesStatus.h"
-@interface KBAccount ()
+@interface KBUserManager ()
 
 @property (nonatomic, strong) KBUserInfo *userInfo;
 @property (nonatomic, strong) NSMutableArray *devicesArray;
 
 @end
 
-@implementation KBAccount
+@implementation KBUserManager
 
 - (id)init{
     self = [super init];
@@ -28,8 +28,8 @@
     return self;
 }
 
-static KBAccount *account = nil;
-+ (KBAccount *)sharedAccount{
+static KBUserManager *account = nil;
++ (KBUserManager *)sharedAccount{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         account = [[self alloc]init];
@@ -71,7 +71,7 @@ static KBAccount *account = nil;
                 [device setValuesForKeysWithDictionary:perDic];
                 [resultArray addObject:device];
             }
-            [KBAccount sharedAccount].devicesArray = [NSMutableArray arrayWithArray:resultArray];
+            [KBUserManager sharedAccount].devicesArray = [NSMutableArray arrayWithArray:resultArray];
             if (block) {
                 block(YES, [resultArray copy]);
             }

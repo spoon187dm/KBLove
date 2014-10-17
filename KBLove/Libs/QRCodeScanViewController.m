@@ -52,7 +52,7 @@
         bgImageView.userInteractionEnabled=YES;
     }
     [self.view addSubview:bgImageView];
-//    [bgImageView release];
+
     UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0, 320, 320, 40)];
     label.text = @"将取景框对准二维码，即可自动扫描。";
     label.textColor = [UIColor whiteColor];
@@ -76,7 +76,6 @@
     scanImageView.image=[UIImage imageNamed:@"qrcode_scan_bar.png"];
     scanImageView.userInteractionEnabled=YES;
     [self.view addSubview:scanImageView];
-//    [scanImageView release];
     NSArray*unSelectImageNames=@[@"qrcode_scan_btn_flash_nor.png",@"qrcode_scan_btn_myqrcode_nor.png"];
     NSArray*selectImageNames=@[@"qrcode_scan_btn_flash_down.png",@"qrcode_scan_btn_myqrcode_down.png"];
     
@@ -383,7 +382,7 @@
     {
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         self.ScanResult(metadataObject.stringValue,YES);
-        self.ScanResult = nil;
+//        self.ScanResult = nil;
     }
     
     [self.captureSession stopRunning];
