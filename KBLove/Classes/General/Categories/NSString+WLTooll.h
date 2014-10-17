@@ -48,7 +48,7 @@
 
 - (NSString *)MD5Hash;
 
-
+@end
 /*董新扩展2014-10-16*/
 @interface NSString (WMString_Utilities)
 /*!
@@ -76,6 +76,5 @@
 //生成当前时间戳,两种格式
 +(NSString*)TimeJab;
 + (long long int)TimeJabLong;
-@end
 
 @end

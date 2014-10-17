@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FMDB.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,97 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EB16440D6B0F52A61125A65</key>
+		<key>0C4BCAACC37560753715E304</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>23E61E3A297206042440FCE5</key>
+		<key>836073885670ECF0693031F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25B200AA37A0E3C25907CA55</key>
+		<key>95EF465F982D0EABFED5E7E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C71F8DE51C9670DD0C1337B</key>
+		<key>D6A648A1F0517F9489269E5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59064E477CE73F917726DCF7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E3111FF4EB7445D37A7DC30</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FF1032A7D064829D8C74309</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>70FC59EC87A627F95350B228</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>845CAE400B848DA3DACBBBA9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9288B46FE1F8717B73B79911</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A1747700AF55E9504CCE77D4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B141428F871B585158ADD2AB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8D16D121CDD923480CF2322</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C17EA165B01BFB53CFF7B72D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C9FDE075295AF8D1E8F81126</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CD4FECF86FED610B9B9E18C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DBE8DE9F2C727FC9EBA9411C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ECCC289E3DD889561D214877</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD68FE777065E2982060A199</key>
+		<key>F5181DC032F98CD4B28432AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
