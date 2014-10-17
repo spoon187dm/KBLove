@@ -17,6 +17,7 @@
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		6EC2CD0119F0B22C000B1ADA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0019F0B22C000B1ADA /* MineViewController.m */; };
 		6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */; };
+		6EC2CD0719F0EEC6000B1ADA /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
@@ -305,6 +306,8 @@
 		6EC2CD0019F0B22C000B1ADA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		6EC2CD0219F0B611000B1ADA /* AlterUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlterUserDataViewController.h; sourceTree = "<group>"; };
 		6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlterUserDataViewController.m; sourceTree = "<group>"; };
+		6EC2CD0519F0EEC6000B1ADA /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
+		6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
 		6ECC038219ECFCC60008ACAD /* AddFriendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendButton.h; sourceTree = "<group>"; };
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
@@ -718,6 +721,8 @@
 				6EC2CD0019F0B22C000B1ADA /* MineViewController.m */,
 				6EC2CD0219F0B611000B1ADA /* AlterUserDataViewController.h */,
 				6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */,
+				6EC2CD0519F0EEC6000B1ADA /* AccountManagerViewController.h */,
+				6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1886,6 +1891,7 @@
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
+				6EC2CD0719F0EEC6000B1ADA /* AccountManagerViewController.m in Sources */,
 				F9E24F6419ED725900D83FEF /* PinyinFormatter.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
