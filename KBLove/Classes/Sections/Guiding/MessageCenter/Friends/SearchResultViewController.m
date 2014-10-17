@@ -37,7 +37,9 @@
                 if ([root[@"ret"] integerValue] == 1) {
                     [UIAlertView showWithTitle:@"温馨提示" Message:@"添加成功!" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
                         if (index == 0) {
-                            [self.navigationController popToRootViewControllerAnimated:YES];
+                            NSArray *viewControllers = self.navigationController.viewControllers;//好友列表的控制器
+                            
+                            [self.navigationController popToViewController:viewControllers[1] animated:YES];
                         }
                     }];
                 } else if ([root[@"ret"] integerValue] == 2) {

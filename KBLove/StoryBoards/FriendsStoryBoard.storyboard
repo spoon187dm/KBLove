@@ -1,33 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="aZ1-fa-qId">
-            <objects>
-                <navigationController storyboardIdentifier="FriendsListTableViewController" id="J4Q-Tb-fTL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Slr-NS-OlI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mSX-Rb-qvy" kind="relationship" relationship="rootViewController" id="duy-jK-iKA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RKF-jv-e64" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-310" y="-396"/>
-        </scene>
-        <!--Friends List Table View Controller - 好友-->
+        <!--好友-->
         <scene sceneID="4Ge-TU-Nv7">
             <objects>
-                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="mSX-Rb-qvy" customClass="FriendsListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FriendsListTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mSX-Rb-qvy" customClass="FriendsListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RVM-m3-39s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="103" y="-396"/>
         </scene>
-        <!--Add Friend View Controller - 添加好友-->
+        <!--添加好友-->
         <scene sceneID="Q7d-XW-Xzo">
             <objects>
                 <viewController storyboardIdentifier="AddFriendViewController" id="5Y7-DB-6Of" customClass="AddFriendViewController" sceneMemberID="viewController">
@@ -183,7 +163,7 @@
             </objects>
             <point key="canvasLocation" x="466" y="-376"/>
         </scene>
-        <!--Search Result View Controller - 搜索结果-->
+        <!--搜索结果-->
         <scene sceneID="Vuu-Eg-Clk">
             <objects>
                 <viewController storyboardIdentifier="SearchResultViewController" id="fRU-Dn-h7P" customClass="SearchResultViewController" sceneMemberID="viewController">
@@ -280,10 +260,10 @@
         <image name="lgusername.png" width="20" height="16"/>
         <image name="pwdRem.png" width="31" height="31"/>
     </resources>
-    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

@@ -92,9 +92,7 @@
 - (IBAction)click_friends:(id)sender{
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
     UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)click_circle:(id)sender{
@@ -110,6 +108,10 @@
 }
 
 - (IBAction)click_mine:(id)sender{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Me_StoryBoardN" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"MineViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end

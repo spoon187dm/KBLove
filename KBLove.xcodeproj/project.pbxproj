@@ -15,6 +15,8 @@
 		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
 		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
+		6EC2CD0119F0B22C000B1ADA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0019F0B22C000B1ADA /* MineViewController.m */; };
+		6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
@@ -299,6 +301,10 @@
 		6EA222E619E920480073274D /* KBLove-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KBLove-Prefix.pch"; sourceTree = "<group>"; };
 		6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFriendInfo.h; sourceTree = "<group>"; };
 		6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFriendInfo.m; sourceTree = "<group>"; };
+		6EC2CCFF19F0B22C000B1ADA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		6EC2CD0019F0B22C000B1ADA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		6EC2CD0219F0B611000B1ADA /* AlterUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlterUserDataViewController.h; sourceTree = "<group>"; };
+		6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlterUserDataViewController.m; sourceTree = "<group>"; };
 		6ECC038219ECFCC60008ACAD /* AddFriendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendButton.h; sourceTree = "<group>"; };
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
@@ -698,10 +704,22 @@
 		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
+				6EC2CCFE19F0B212000B1ADA /* Mine */,
 				BC59833519ECB52800DAC76A /* Circle */,
 				6E16647019ECD1270081EB4C /* Friends */,
 			);
 			path = MessageCenter;
+			sourceTree = "<group>";
+		};
+		6EC2CCFE19F0B212000B1ADA /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2CCFF19F0B22C000B1ADA /* MineViewController.h */,
+				6EC2CD0019F0B22C000B1ADA /* MineViewController.m */,
+				6EC2CD0219F0B611000B1ADA /* AlterUserDataViewController.h */,
+				6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		6ECC038019ECFC5D0008ACAD /* Controllers */ = {
@@ -1846,6 +1864,7 @@
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
+				6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
@@ -1873,6 +1892,7 @@
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
+				6EC2CD0119F0B22C000B1ADA /* MineViewController.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
