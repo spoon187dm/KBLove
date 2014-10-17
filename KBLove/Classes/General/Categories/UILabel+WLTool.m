@@ -30,4 +30,98 @@
     frame.size = size;
     self.frame = frame;
 }
+-(void)AdjustFontSizeWithMinSize:(CGFloat) min AndMaxSize:(CGFloat) max IsFull:(BOOL)isfull
+{
+    
+    self.numberOfLines=0;
+    self.lineBreakMode=NSLineBreakByCharWrapping;
+    NSLog(@"%f",self.frame.size.width);
+    
+//    CGSize Allsize=[self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.frame.size.width, 1000) lineBreakMode:NSLineBreakByCharWrapping];
+    NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:self.font,NSFontAttributeName, nil];
+    
+    CGSize Allsize=[self getSizeWithattributes:dic];
+
+    if (Allsize.height>self.frame.size.height) {
+        [self AdjustFontSizeWithMinSize:min AndMaxSize:max];
+    }else
+    {
+        if (isfull) {
+            [self AdjustFontSizeWithMinSize:min AndMaxSize:max];
+        }
+    }
+    
+}
+- (void)AdjustCurrentAttributeTextWithLineSpacing:(NSInteger)space
+{
+    if (self.text) {
+        self.numberOfLines=0;
+        self.lineBreakMode=NSLineBreakByCharWrapping;
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        
+        [paragraphStyle setLineSpacing:space];//调整行间距
+        //
+        [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [self.text length])];
+        self.attributedText = attributedString;
+        
+        NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:self.font,NSFontAttributeName,paragraphStyle,NSParagraphStyleAttributeName, nil];
+        
+        CGSize Allsize=[self getSizeWithattributes:dic];
+
+        self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y, Allsize.width, Allsize.height);
+        
+    }else
+    {
+        
+    }
+}
+- (void)AdjustCurrentFont
+{
+    [self AdjustWithFont:self.font];
+}
+- (void)AdjustWithFont:(UIFont *)font
+{
+    self.numberOfLines=0;
+    self.font=font;
+    NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:self.font,NSFontAttributeName, nil];
+    
+    CGSize Allsize=[self getSizeWithattributes:dic];
+    NSLog(@"%@",self.text);
+    self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y, Allsize.width, Allsize.height);
+    self.lineBreakMode=NSLineBreakByCharWrapping;
+    
+}
+- (CGSize)getSizeWithattributes:(NSDictionary *)dic
+{
+    CGSize Allsize=[self.text boundingRectWithSize:CGSizeMake(self.frame.size.width, 1990) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin|
+                    NSStringDrawingUsesFontLeading       attributes:dic context:nil].size;
+    return Allsize;
+}
+- (void)SetBorderWithcornerRadius:(CGFloat)radius BorderWith:(CGFloat)width AndBorderColor:(UIColor *)color
+{
+    self.layer.cornerRadius=radius;
+    self.layer.borderWidth=width;
+    self.layer.borderColor=[color CGColor];
+}
+-(void)AdjustFontSizeWithMinSize:(CGFloat) min AndMaxSize:(CGFloat) max
+{
+    BOOL isad=NO;
+    
+    for (CGFloat i=max; i>=min; i--) {
+            NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:self.font,NSFontAttributeName, nil];
+        CGSize Allsize=[self getSizeWithattributes:dic];
+        if (Allsize.height<=self.frame.size.height) {
+            isad=YES;
+            self.font=[UIFont systemFontOfSize:i];
+            break;
+        }
+    }
+    if (!isad) {
+        self.font=[UIFont systemFontOfSize:min];
+    }
+}
+
+
+
 @end
