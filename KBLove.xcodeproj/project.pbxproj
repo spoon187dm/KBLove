@@ -22,6 +22,11 @@
 		BC2BA01D19F0B45D00843A6A /* KBDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA01C19F0B45D00843A6A /* KBDBManager.m */; };
 		BC2BA02119F0B4F900843A6A /* KBMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02019F0B4F900843A6A /* KBMessageInfo.m */; };
 		BC2BA02319F0EE7800843A6A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2BA02219F0EE7800843A6A /* libsqlite3.dylib */; };
+		BC2BA02F19F10E0400843A6A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02619F10E0400843A6A /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC2BA03019F10E0400843A6A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02819F10E0400843A6A /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC2BA03119F10E0400843A6A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02A19F10E0400843A6A /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC2BA03219F10E0400843A6A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02C19F10E0400843A6A /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC2BA03319F10E0400843A6A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02E19F10E0400843A6A /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
 		BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836319ECCE9800DAC76A /* CircleViewController.m */; };
 		BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */; };
@@ -319,6 +324,16 @@
 		BC2BA01F19F0B4F900843A6A /* KBMessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBMessageInfo.h; sourceTree = "<group>"; };
 		BC2BA02019F0B4F900843A6A /* KBMessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBMessageInfo.m; sourceTree = "<group>"; };
 		BC2BA02219F0EE7800843A6A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BC2BA02519F10E0400843A6A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		BC2BA02619F10E0400843A6A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		BC2BA02719F10E0400843A6A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		BC2BA02819F10E0400843A6A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		BC2BA02919F10E0400843A6A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		BC2BA02A19F10E0400843A6A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		BC2BA02B19F10E0400843A6A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BC2BA02C19F10E0400843A6A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BC2BA02D19F10E0400843A6A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		BC2BA02E19F10E0400843A6A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		BC59833319ECB3E600DAC76A /* DXLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXLog.h; sourceTree = "<group>"; };
 		BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRootViewController.h; sourceTree = "<group>"; };
 		BC59836019ECCE8500DAC76A /* CircleRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRootViewController.m; sourceTree = "<group>"; };
@@ -754,6 +769,23 @@
 				BC2BA01C19F0B45D00843A6A /* KBDBManager.m */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		BC2BA02419F10E0400843A6A /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				BC2BA02519F10E0400843A6A /* FMDatabase.h */,
+				BC2BA02619F10E0400843A6A /* FMDatabase.m */,
+				BC2BA02719F10E0400843A6A /* FMDatabaseAdditions.h */,
+				BC2BA02819F10E0400843A6A /* FMDatabaseAdditions.m */,
+				BC2BA02919F10E0400843A6A /* FMDatabasePool.h */,
+				BC2BA02A19F10E0400843A6A /* FMDatabasePool.m */,
+				BC2BA02B19F10E0400843A6A /* FMDatabaseQueue.h */,
+				BC2BA02C19F10E0400843A6A /* FMDatabaseQueue.m */,
+				BC2BA02D19F10E0400843A6A /* FMResultSet.h */,
+				BC2BA02E19F10E0400843A6A /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		BC59833519ECB52800DAC76A /* Circle */ = {
@@ -1479,6 +1511,7 @@
 		F9E24F4F19ED725900D83FEF /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				BC2BA02419F10E0400843A6A /* fmdb */,
 				F9E24F5019ED725900D83FEF /* PinYin */,
 			);
 			path = Vendors;
@@ -1895,6 +1928,7 @@
 				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				BC2BA02119F0B4F900843A6A /* KBMessageInfo.m in Sources */,
 				BC2BA01D19F0B45D00843A6A /* KBDBManager.m in Sources */,
+				BC2BA03219F10E0400843A6A /* FMDatabaseQueue.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
@@ -1909,6 +1943,7 @@
 				F974109319EC2E4500E12633 /* main.m in Sources */,
 				F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */,
 				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
+				BC2BA02F19F10E0400843A6A /* FMDatabase.m in Sources */,
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
@@ -1925,6 +1960,7 @@
 				F93DB8AD19F0B8F400196735 /* KBAlarmInfoView.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
+				BC2BA03019F10E0400843A6A /* FMDatabaseAdditions.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
@@ -1943,6 +1979,7 @@
 				F93DB8A719F0B69600196735 /* AlarmDetailViewController.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				F9E24FA219ED74DD00D83FEF /* ChangePersonDetailViewController.m in Sources */,
+				BC2BA03119F10E0400843A6A /* FMDatabasePool.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F975FE8819EE7F6700D13D86 /* DeviceDetailViewController.m in Sources */,
@@ -1960,6 +1997,7 @@
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F9E24F7719ED729700D83FEF /* DAOverlayView.m in Sources */,
+				BC2BA03319F10E0400843A6A /* FMResultSet.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F97410E219EC322000E12633 /* BoundPetInfoController.m in Sources */,
 				6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */,
