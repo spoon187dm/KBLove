@@ -19,6 +19,9 @@
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
+		BC2BA01D19F0B45D00843A6A /* KBDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA01C19F0B45D00843A6A /* KBDBManager.m */; };
+		BC2BA02119F0B4F900843A6A /* KBMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BA02019F0B4F900843A6A /* KBMessageInfo.m */; };
+		BC2BA02319F0EE7800843A6A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2BA02219F0EE7800843A6A /* libsqlite3.dylib */; };
 		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
 		BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836319ECCE9800DAC76A /* CircleViewController.m */; };
 		BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */; };
@@ -312,6 +315,11 @@
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
 		BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleFriendCell.xib; sourceTree = "<group>"; };
+		BC2BA01B19F0B45D00843A6A /* KBDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBDBManager.h; path = ../KBDBManager.h; sourceTree = "<group>"; };
+		BC2BA01C19F0B45D00843A6A /* KBDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBDBManager.m; path = ../KBDBManager.m; sourceTree = "<group>"; };
+		BC2BA01F19F0B4F900843A6A /* KBMessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBMessageInfo.h; sourceTree = "<group>"; };
+		BC2BA02019F0B4F900843A6A /* KBMessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBMessageInfo.m; sourceTree = "<group>"; };
+		BC2BA02219F0EE7800843A6A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BC59833319ECB3E600DAC76A /* DXLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXLog.h; sourceTree = "<group>"; };
 		BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRootViewController.h; sourceTree = "<group>"; };
 		BC59836019ECCE8500DAC76A /* CircleRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRootViewController.m; sourceTree = "<group>"; };
@@ -674,6 +682,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2BA02319F0EE7800843A6A /* libsqlite3.dylib in Frameworks */,
 				F9748CFF19EFA6860064FCC7 /* MapKit.framework in Frameworks */,
 				F91A0D5D19E78D00009ADB44 /* libiconv.dylib in Frameworks */,
 				F91A0D5B19E78CF2009ADB44 /* QuartzCore.framework in Frameworks */,
@@ -738,6 +747,15 @@
 				6ECC038319ECFCC60008ACAD /* AddFriendButton.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		BC2BA01E19F0B4A800843A6A /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BC2BA01B19F0B45D00843A6A /* KBDBManager.h */,
+				BC2BA01C19F0B45D00843A6A /* KBDBManager.m */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		BC59833519ECB52800DAC76A /* Circle */ = {
@@ -825,6 +843,7 @@
 		F91A0C8919E7880C009ADB44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC2BA02219F0EE7800843A6A /* libsqlite3.dylib */,
 				F9748CFE19EFA6860064FCC7 /* MapKit.framework */,
 				F91A0D5C19E78D00009ADB44 /* libiconv.dylib */,
 				F91A0D5A19E78CF2009ADB44 /* QuartzCore.framework */,
@@ -1234,6 +1253,8 @@
 				F9748CDB19EF85950064FCC7 /* KBSpot.m */,
 				F9748CDD19EF861E0064FCC7 /* KBHardWare.h */,
 				F9748CDE19EF861E0064FCC7 /* KBHardWare.m */,
+				BC2BA01F19F0B4F900843A6A /* KBMessageInfo.h */,
+				BC2BA02019F0B4F900843A6A /* KBMessageInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1491,6 +1512,7 @@
 		F9E24F6819ED729700D83FEF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC2BA01E19F0B4A800843A6A /* DataBase */,
 				F9E24F6919ED729700D83FEF /* DAContextMenuTableViewController */,
 				F9E24F7019ED729700D83FEF /* KBFreash */,
 			);
@@ -1875,6 +1897,8 @@
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
 				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
+				BC2BA02119F0B4F900843A6A /* KBMessageInfo.m in Sources */,
+				BC2BA01D19F0B45D00843A6A /* KBDBManager.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
