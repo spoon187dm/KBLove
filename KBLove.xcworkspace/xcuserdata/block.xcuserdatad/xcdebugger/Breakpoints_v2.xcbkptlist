@@ -167,12 +167,12 @@
                   symbolName = "-[KBAlarmManager getAlarmInfoForDevice:finishblock:]"
                   moduleName = "KBLove"
                   urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Models/KBAlarmManager.m"
-                  timestampString = "435137022.19325"
+                  timestampString = "435224451.510211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
                   endingLineNumber = "38"
-                  offsetFromSymbolStart = "518">
+                  offsetFromSymbolStart = "444">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -181,12 +181,12 @@
                   symbolName = "__52-[KBAlarmManager getAlarmInfoForDevice:finishblock:]_block_invoke"
                   moduleName = "KBLove"
                   urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Models/KBAlarmManager.m"
-                  timestampString = "435137022.193487"
+                  timestampString = "435224451.51054"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
                   endingLineNumber = "38"
-                  offsetFromSymbolStart = "62">
+                  offsetFromSymbolStart = "67">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -198,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/Sections/Guiding/Bounding/BoundAddEquipmentController.m"
-            timestampString = "435135327.318756"
+            timestampString = "435224177.427937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-click_QECode:"
             landmarkType = "5">
          </BreakpointContent>

@@ -39,6 +39,14 @@
     [dic setObject:user.user_id forKeyedSubscript:@"user_id"];
     [dic setObject:_equipment.EquipmentIMEINum forKey:@"device_sn"];
     //头像
+    
+    if (self.PetName.text.length<=0 || self.PetBreed.text.length<=0 ||self.PetType.text.length<=0 || self.PetBithday.text.length<=0 ||self.PetSex.text.length<=0 ||self.PetHeight.text.length<=0 ||self.PetWeight.text.length<=0) {
+        [UIAlertView showWithTitle:@"提示" Message:@"请补全信息后提交" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+        return;
+    }
+    
 //    [dic setObject:@"" forKey:@"icon"];//尚未添加
     [dic setObject:self.PetName.text forKey:@"name"];
     [dic setObject:self.PetBreed.text forKey:@"dog_breed"];

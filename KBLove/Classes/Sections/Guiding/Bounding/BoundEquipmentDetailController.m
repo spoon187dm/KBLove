@@ -40,8 +40,16 @@
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
     
+    if (!self.EquipmentIMEINum.text || self.EquipmentIMEINum.text.length<=2 || !self.LinkmanPhoneNum.text || self.LinkmanPhoneNum.text.length<=0) {
+        [UIAlertView showWithTitle:@"提示" Message:@"请补全信息后提交" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+        return;
+    }
+    
     _equipment.EquipmentSIMNum=self.EquipmentSIMNum.text;
     _equipment.EquipmentIponeNum=self.LinkmanPhoneNum.text;
+    
     
     NSString *aimController ;
     UIViewController *vc;
