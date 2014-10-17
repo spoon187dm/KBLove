@@ -188,6 +188,7 @@
 		F92DBDBE19ED5C1900BBE573 /* yellowstar.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA319ED5C1900BBE573 /* yellowstar.png */; };
 		F92DBDBF19ED5C1900BBE573 /* zgsd.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA419ED5C1900BBE573 /* zgsd.png */; };
 		F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA519ED5C1900BBE573 /* zlc.png */; };
+		F93DB8A119F0AC4300196735 /* Me_StoryBoardN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */; };
 		F974108C19EC2C8700E12633 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974108B19EC2C8700E12633 /* BannerView.m */; };
 		F974109119EC2E2600E12633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109019EC2E2600E12633 /* AppDelegate.m */; };
 		F974109319EC2E4500E12633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109219EC2E4500E12633 /* main.m */; };
@@ -499,6 +500,7 @@
 		F92DBDA319ED5C1900BBE573 /* yellowstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowstar.png; sourceTree = "<group>"; };
 		F92DBDA419ED5C1900BBE573 /* zgsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zgsd.png; sourceTree = "<group>"; };
 		F92DBDA519ED5C1900BBE573 /* zlc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zlc.png; sourceTree = "<group>"; };
+		F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me_StoryBoardN.storyboard; sourceTree = "<group>"; };
 		F974108519EC2B0C00E12633 /* VendorsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorsMacro.h; sourceTree = "<group>"; };
 		F974108619EC2B8A00E12633 /* UtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
 		F974108A19EC2C8700E12633 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
@@ -1499,6 +1501,7 @@
 		F9E24F8A19ED733200D83FEF /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */,
 				F9E24F8B19ED733200D83FEF /* Device_data.storyboard */,
 				F9E24F8C19ED733200D83FEF /* DeviceConfiguration.storyboard */,
 				F9E24F8D19ED733200D83FEF /* FriendsStoryBoard.storyboard */,
@@ -1621,6 +1624,7 @@
 				BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */,
 				F91A0E3F19E7AACF009ADB44 /* tickoff.png in Resources */,
 				F91A0E4F19E7AACF009ADB44 /* zhuce.png in Resources */,
+				F93DB8A119F0AC4300196735 /* Me_StoryBoardN.storyboard in Resources */,
 				F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */,
 				F92DBDA619ED5C1900BBE573 /* bluecircle.png in Resources */,
 				F9748CFD19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png in Resources */,

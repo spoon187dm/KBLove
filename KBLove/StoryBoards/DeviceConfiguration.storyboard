@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rE2-5b-z9X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rE2-5b-z9X">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-708" y="-715"/>
         </scene>
-        <!--Configuration View Controller - 设备设置-->
+        <!--设备设置-->
         <scene sceneID="SX1-n9-uni">
             <objects>
                 <viewController storyboardIdentifier="ConfigurationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uci-r3-hdh" customClass="ConfigurationViewController" sceneMemberID="viewController">
@@ -39,7 +40,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" id="Zkw-Gc-RZf" customClass="RecteView">
-                                <rect key="frame" x="20" y="250.00000029919195" width="280" height="306"/>
+                                <rect key="frame" x="20" y="250.00000060484132" width="280" height="306"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="ujr-kd-aXb">
@@ -213,7 +214,7 @@
             </objects>
             <point key="canvasLocation" x="-112" y="-715"/>
         </scene>
-        <!--Change Information View Controller - 信息修改-->
+        <!--信息修改-->
         <scene sceneID="kac-1N-Zds">
             <objects>
                 <viewController storyboardIdentifier="ChangeInformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="39p-ND-mon" customClass="ChangeInformationViewController" sceneMemberID="viewController">
@@ -394,7 +395,7 @@
             </objects>
             <point key="canvasLocation" x="476" y="-715"/>
         </scene>
-        <!--Crawl Alert Configuration - 设备围栏-->
+        <!--设备围栏-->
         <scene sceneID="0UX-V3-cc5">
             <objects>
                 <viewController storyboardIdentifier="CrawlAlertConfiguration" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C90-oN-JkV" customClass="CrawlAlertConfiguration" sceneMemberID="viewController">
@@ -483,7 +484,7 @@
             </objects>
             <point key="canvasLocation" x="-703" y="-30"/>
         </scene>
-        <!--Config Person Device View Controller - 设备设置-->
+        <!--设备设置-->
         <scene sceneID="1b8-yw-fjl">
             <objects>
                 <viewController storyboardIdentifier="ConfigPersonDeviceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="plO-3J-xnk" customClass="ConfigPersonDeviceViewController" sceneMemberID="viewController">
@@ -503,7 +504,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" id="7qR-PF-pIk" customClass="RecteView">
-                                <rect key="frame" x="20" y="250.00000060484132" width="280" height="306"/>
+                                <rect key="frame" x="20" y="250.00000091708728" width="280" height="306"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="frH-i6-1as">
@@ -680,7 +681,7 @@
             </objects>
             <point key="canvasLocation" x="-112" y="-48"/>
         </scene>
-        <!--View Controller - 设备设置-->
+        <!--设备设置-->
         <scene sceneID="fWg-o0-0Qm">
             <objects>
                 <viewController id="xfO-ad-ImQ" sceneMemberID="viewController">
@@ -716,7 +717,7 @@
             </objects>
             <point key="canvasLocation" x="-703" y="636"/>
         </scene>
-        <!--Change Person Detail View Controller - 信息修改-->
+        <!--信息修改-->
         <scene sceneID="csq-Vj-3RF">
             <objects>
                 <viewController storyboardIdentifier="ChangePersonDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZKe-So-tf5" customClass="ChangePersonDetailViewController" sceneMemberID="viewController">
