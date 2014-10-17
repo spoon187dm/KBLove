@@ -49,7 +49,6 @@
 - (NSString *)MD5Hash;
 
 
-@end
 /*董新扩展2014-10-16*/
 @interface NSString (WMString_Utilities)
 /*!
@@ -79,3 +78,4 @@
 + (long long int)TimeJabLong;
 @end
 
+@end
