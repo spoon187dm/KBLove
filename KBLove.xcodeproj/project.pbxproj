@@ -189,6 +189,11 @@
 		F92DBDBF19ED5C1900BBE573 /* zgsd.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA419ED5C1900BBE573 /* zgsd.png */; };
 		F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA519ED5C1900BBE573 /* zlc.png */; };
 		F93DB8A119F0AC4300196735 /* Me_StoryBoardN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */; };
+		F93DB8A419F0B63E00196735 /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DB8A319F0B63E00196735 /* AlarmListViewController.m */; };
+		F93DB8A719F0B69600196735 /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DB8A619F0B69600196735 /* AlarmDetailViewController.m */; };
+		F93DB8AA19F0B6DE00196735 /* AlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DB8A919F0B6DE00196735 /* AlarmCell.m */; };
+		F93DB8AD19F0B8F400196735 /* KBAlarmInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F93DB8AC19F0B8F400196735 /* KBAlarmInfoView.m */; };
+		F93DB8AF19F0B8FD00196735 /* KBAlarmInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93DB8AE19F0B8FD00196735 /* KBAlarmInfoView.xib */; };
 		F974108C19EC2C8700E12633 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974108B19EC2C8700E12633 /* BannerView.m */; };
 		F974109119EC2E2600E12633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109019EC2E2600E12633 /* AppDelegate.m */; };
 		F974109319EC2E4500E12633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109219EC2E4500E12633 /* main.m */; };
@@ -501,6 +506,15 @@
 		F92DBDA419ED5C1900BBE573 /* zgsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zgsd.png; sourceTree = "<group>"; };
 		F92DBDA519ED5C1900BBE573 /* zlc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zlc.png; sourceTree = "<group>"; };
 		F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me_StoryBoardN.storyboard; sourceTree = "<group>"; };
+		F93DB8A219F0B63E00196735 /* AlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListViewController.h; sourceTree = "<group>"; };
+		F93DB8A319F0B63E00196735 /* AlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListViewController.m; sourceTree = "<group>"; };
+		F93DB8A519F0B69600196735 /* AlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDetailViewController.h; sourceTree = "<group>"; };
+		F93DB8A619F0B69600196735 /* AlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDetailViewController.m; sourceTree = "<group>"; };
+		F93DB8A819F0B6DE00196735 /* AlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmCell.h; sourceTree = "<group>"; };
+		F93DB8A919F0B6DE00196735 /* AlarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmCell.m; sourceTree = "<group>"; };
+		F93DB8AB19F0B8F400196735 /* KBAlarmInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAlarmInfoView.h; sourceTree = "<group>"; };
+		F93DB8AC19F0B8F400196735 /* KBAlarmInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAlarmInfoView.m; sourceTree = "<group>"; };
+		F93DB8AE19F0B8FD00196735 /* KBAlarmInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KBAlarmInfoView.xib; sourceTree = "<group>"; };
 		F974108519EC2B0C00E12633 /* VendorsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorsMacro.h; sourceTree = "<group>"; };
 		F974108619EC2B8A00E12633 /* UtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
 		F974108A19EC2C8700E12633 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
@@ -1387,6 +1401,10 @@
 				F975FE6C19EE45A500D13D86 /* DeviceListViewController.m */,
 				F975FE8619EE7F6700D13D86 /* DeviceDetailViewController.h */,
 				F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */,
+				F93DB8A219F0B63E00196735 /* AlarmListViewController.h */,
+				F93DB8A319F0B63E00196735 /* AlarmListViewController.m */,
+				F93DB8A519F0B69600196735 /* AlarmDetailViewController.h */,
+				F93DB8A619F0B69600196735 /* AlarmDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1405,6 +1423,11 @@
 				F975FE8119EE74CB00D13D86 /* DropListView.h */,
 				F975FE8219EE74CB00D13D86 /* DropListView.m */,
 				F975FE8419EE74DD00D13D86 /* DropListView.xib */,
+				F93DB8A819F0B6DE00196735 /* AlarmCell.h */,
+				F93DB8A919F0B6DE00196735 /* AlarmCell.m */,
+				F93DB8AB19F0B8F400196735 /* KBAlarmInfoView.h */,
+				F93DB8AC19F0B8F400196735 /* KBAlarmInfoView.m */,
+				F93DB8AE19F0B8FD00196735 /* KBAlarmInfoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1771,6 +1794,7 @@
 				F91A0E9A19E7AACF009ADB44 /* red_tabbar.png in Resources */,
 				F91A0E8519E7AACF009ADB44 /* unreadRedIndicator.png in Resources */,
 				F91A0E8819E7AACF009ADB44 /* black_iOS7_navBar.png in Resources */,
+				F93DB8AF19F0B8FD00196735 /* KBAlarmInfoView.xib in Resources */,
 				F91A0E5119E7AACF009ADB44 /* lgtextfield.png in Resources */,
 				F91A0E3E19E7AACF009ADB44 /* or.png in Resources */,
 				F91A0E4A19E7AACF009ADB44 /* other1.png in Resources */,
@@ -1846,6 +1870,7 @@
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
+				F93DB8A419F0B63E00196735 /* AlarmListViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
@@ -1877,6 +1902,7 @@
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
 				F9748CDC19EF85950064FCC7 /* KBSpot.m in Sources */,
+				F93DB8AD19F0B8F400196735 /* KBAlarmInfoView.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
@@ -1894,6 +1920,7 @@
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F9E24F6519ED725900D83FEF /* PinYinForObjc.m in Sources */,
+				F93DB8A719F0B69600196735 /* AlarmDetailViewController.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				F9E24FA219ED74DD00D83FEF /* ChangePersonDetailViewController.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
@@ -1905,6 +1932,7 @@
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
 				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
+				F93DB8AA19F0B6DE00196735 /* AlarmCell.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
 				BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */,

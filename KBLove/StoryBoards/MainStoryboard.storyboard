@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Oi8-16-FWF">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -128,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="522" y="65"/>
         </scene>
-        <!--Device Detail View Controller-->
+        <!--设备-->
         <scene sceneID="Ku5-Hq-UMg">
             <objects>
                 <viewController storyboardIdentifier="DeviceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r5l-1J-MQv" customClass="DeviceDetailViewController" sceneMemberID="viewController">
@@ -155,6 +156,7 @@
                                         </state>
                                         <connections>
                                             <action selector="click_alarm:" destination="r5l-1J-MQv" eventType="touchUpInside" id="dK0-y3-k0U"/>
+                                            <segue destination="OQh-V9-hkM" kind="push" id="LC3-37-Up9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eY-G6-iC9">
@@ -203,7 +205,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="y5r-D0-X6v">
+                    <navigationItem key="navigationItem" title="设备" id="y5r-D0-X6v">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="0dm-fx-ASo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iag-MU-qcZ">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
@@ -235,6 +237,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYB-cv-lOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1271" y="65"/>
+        </scene>
+        <!--报警列表-->
+        <scene sceneID="csz-8w-I4h">
+            <objects>
+                <tableViewController id="OQh-V9-hkM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jNa-6g-RvV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="exe-7r-Rhc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exe-7r-Rhc" id="6hj-gD-qhh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OQh-V9-hkM" id="v0E-n2-gey"/>
+                            <outlet property="delegate" destination="OQh-V9-hkM" id="q6C-kU-LDr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="报警列表" id="qlv-UL-ZVG">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="8Zj-15-IYk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MKB-ra-tRl">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="NVBar_arrow_left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_back:" destination="r5l-1J-MQv" eventType="touchUpInside" id="3Fe-Aw-vEd"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hzE-Oe-yON">
+                            <view key="customView" contentMode="scaleToFill" id="jUI-2P-w9c">
+                                <rect key="frame" x="234" y="5" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81D-YL-EBx">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" backgroundImage="icon_menu.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="QqZ-vA-UBM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPf-ab-Pgc">
+                                        <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" backgroundImage="icon_home.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="gb8-Nc-OPN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bM6-gE-jVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="5"/>
         </scene>
         <!--设备列表-->
         <scene sceneID="3fY-iS-cK1">
@@ -276,6 +348,9 @@
                                     <action selector="click_dropList:" destination="Y8Q-6q-USb" eventType="touchUpInside" id="Ugw-ml-2N1"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="r5l-1J-MQv" kind="push" id="8Us-dp-AOp"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -309,6 +384,7 @@
         <image name="NVBar_arrow_left.png" width="51" height="51"/>
         <image name="addNavItemNormal.png" width="132" height="88"/>
         <image name="icon_home.png" width="50" height="43"/>
+        <image name="icon_menu.png" width="35" height="37"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
