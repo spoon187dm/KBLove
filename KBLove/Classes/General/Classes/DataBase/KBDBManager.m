@@ -7,8 +7,6 @@
 //
 
 #import "KBDBManager.h"
-#import "KBMessageInfo.h"
-#import "FMDatabase.h"
 @implementation KBDBManager
 {
     FMDatabase *_dataBase;
@@ -55,7 +53,7 @@ static KBDBManager *manager;
     
 }
 //删除指定类型数据
-- (void)DeleteKBMessageWithType:(KBMessageType )msgtype
+- (void)DeleteKBMessageWithType:(KBMessageType)msgtype
 {
     NSString *deleteCmd=@"delete from KBMessageList where MessageType=?";
     if (![_dataBase executeUpdate:deleteCmd,msgtype]) {
@@ -88,7 +86,7 @@ static KBDBManager *manager;
         msginf.text=[set stringForColumn:@"text"];
         msginf.image=[UIImage imageWithData:[[set stringForColumn:@"image"] dataUsingEncoding:NSUTF8StringEncoding]];
         msginf.time=[set longLongIntForColumn:@"time"];
-        
+        [resultarr addObject:msginf];
     }
     return  resultarr;
 }
