@@ -59,7 +59,7 @@ typedef NS_ENUM(NSInteger, KBMessageNotificationType)
 //消息类型
 @property (nonatomic,assign) KBMessageType MessageType;
 //状态
-@property (nonatomic,assign) KBMessageStatus *status;
+@property (nonatomic,assign) KBMessageStatus status;
 //群ID
 @property (nonatomic,copy) NSString *Circle_id;
 //来自 参数为用户ID
