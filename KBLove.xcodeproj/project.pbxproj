@@ -33,6 +33,13 @@
 		BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */; };
 		BC59837419ECE71800DAC76A /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59837219ECE71800DAC76A /* CircleCell.m */; };
 		BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59837319ECE71800DAC76A /* CircleCell.xib */; };
+		BCB42E1919F1416200A141C3 /* KBDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E1819F1416200A141C3 /* KBDBManager.m */; };
+		BCB42E2819F1425B00A141C3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E1F19F1425B00A141C3 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2119F1425B00A141C3 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2319F1425B00A141C3 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2519F1425B00A141C3 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BCB42E2C19F1425B00A141C3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2719F1425B00A141C3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BCB42E2E19F1430F00A141C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */; };
 		F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505519EB70ED004F679A /* QRCodeScanViewController.m */; };
 		F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F911505819EB70FE004F679A /* QRCodeGenerator.m */; };
 		F91A0C8B19E7880C009ADB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91A0C8A19E7880C009ADB44 /* Foundation.framework */; };
@@ -346,6 +353,19 @@
 		BC59837119ECE71800DAC76A /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
 		BC59837219ECE71800DAC76A /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		BC59837319ECE71800DAC76A /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
+		BCB42E1719F1416200A141C3 /* KBDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDBManager.h; sourceTree = "<group>"; };
+		BCB42E1819F1416200A141C3 /* KBDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDBManager.m; sourceTree = "<group>"; };
+		BCB42E1E19F1425B00A141C3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		BCB42E1F19F1425B00A141C3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		BCB42E2019F1425B00A141C3 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		BCB42E2119F1425B00A141C3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		BCB42E2219F1425B00A141C3 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		BCB42E2319F1425B00A141C3 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		BCB42E2419F1425B00A141C3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BCB42E2519F1425B00A141C3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BCB42E2619F1425B00A141C3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		BCB42E2719F1425B00A141C3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F911505419EB70ED004F679A /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
@@ -693,6 +713,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB42E2E19F1430F00A141C3 /* libsqlite3.dylib in Frameworks */,
 				F9748CFF19EFA6860064FCC7 /* MapKit.framework in Frameworks */,
 				F91A0D5D19E78D00009ADB44 /* libiconv.dylib in Frameworks */,
 				F91A0D5B19E78CF2009ADB44 /* QuartzCore.framework in Frameworks */,
@@ -828,6 +849,32 @@
 			path = "Device-data";
 			sourceTree = "<group>";
 		};
+		BCB42E1619F1415600A141C3 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BCB42E1719F1416200A141C3 /* KBDBManager.h */,
+				BCB42E1819F1416200A141C3 /* KBDBManager.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		BCB42E1D19F1425B00A141C3 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				BCB42E1E19F1425B00A141C3 /* FMDatabase.h */,
+				BCB42E1F19F1425B00A141C3 /* FMDatabase.m */,
+				BCB42E2019F1425B00A141C3 /* FMDatabaseAdditions.h */,
+				BCB42E2119F1425B00A141C3 /* FMDatabaseAdditions.m */,
+				BCB42E2219F1425B00A141C3 /* FMDatabasePool.h */,
+				BCB42E2319F1425B00A141C3 /* FMDatabasePool.m */,
+				BCB42E2419F1425B00A141C3 /* FMDatabaseQueue.h */,
+				BCB42E2519F1425B00A141C3 /* FMDatabaseQueue.m */,
+				BCB42E2619F1425B00A141C3 /* FMResultSet.h */,
+				BCB42E2719F1425B00A141C3 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +907,7 @@
 		F91A0C8919E7880C009ADB44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */,
 				F9748CFE19EFA6860064FCC7 /* MapKit.framework */,
 				F91A0D5C19E78D00009ADB44 /* libiconv.dylib */,
 				F91A0D5A19E78CF2009ADB44 /* QuartzCore.framework */,
@@ -1501,6 +1549,7 @@
 		F9E24F4F19ED725900D83FEF /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				BCB42E1D19F1425B00A141C3 /* fmdb */,
 				F9E24F5019ED725900D83FEF /* PinYin */,
 			);
 			path = Vendors;
@@ -1531,6 +1580,7 @@
 		F9E24F6819ED729700D83FEF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BCB42E1619F1415600A141C3 /* DataBase */,
 				F9E24F6919ED729700D83FEF /* DAContextMenuTableViewController */,
 				F9E24F7019ED729700D83FEF /* KBFreash */,
 			);
@@ -1912,6 +1962,7 @@
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
 				6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */,
+				BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */,
 				F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
@@ -1926,12 +1977,15 @@
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
+				BCB42E2819F1425B00A141C3 /* FMDatabase.m in Sources */,
 				BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */,
+				BCB42E2C19F1425B00A141C3 /* FMResultSet.m in Sources */,
 				F97410E419EC322000E12633 /* LoginViewController.m in Sources */,
 				F974109319EC2E4500E12633 /* main.m in Sources */,
 				F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */,
 				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
 				F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */,
+				BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */,
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
@@ -1962,6 +2016,7 @@
 				F9748CDF19EF861E0064FCC7 /* KBHardWare.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
+				BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,
@@ -1983,6 +2038,7 @@
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
 				BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */,
 				F9E24F7819ED729700D83FEF /* FreashManager.m in Sources */,
+				BCB42E1919F1416200A141C3 /* KBDBManager.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F9E24F7719ED729700D83FEF /* DAOverlayView.m in Sources */,
