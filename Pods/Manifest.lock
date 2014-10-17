@@ -20,6 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FMDB (2.4):
+    - FMDB/standard
+  - FMDB/common (2.4)
+  - FMDB/standard (2.4):
+    - FMDB/common
   - libqrencode (3.4.2)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
@@ -32,12 +37,14 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - FMDB
   - libqrencode
   - ReactiveCocoa
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
   libqrencode: ebfece8f6983de7a4a6d33c3a30e2910ecf43b7c
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50

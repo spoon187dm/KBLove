@@ -37,14 +37,6 @@
     [dic setObject:user.user_id forKeyedSubscript:@"user_id"];
     [dic setObject:_equipment.EquipmentIMEINum forKey:@"device_sn"];
     [dic setObject:_equipment.EquipmentIponeNum forKey:@"phone"];
-    
-    if (!self.CarName.text || self.CarName.text.length<=0 || !self.CarNum.text || self.CarNum.text.length<=0) {
-        [UIAlertView showWithTitle:@"提示" Message:@"请补全信息后提交" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-            
-        }];
-        return;
-    }
-    
     [dic setObject:self.CarName.text forKey:@"name"];
 //    [dic setObject:@"" forKey:@"icon"];//尚未添加头像
     [dic setObject:self.CarNum.text forKey:@"car"];

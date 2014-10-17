@@ -30,21 +30,8 @@
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
     //
-    if (!self.EquipmentIMEINum.text || self.EquipmentIMEINum.text.length<=0 ) {
-        [UIAlertView showWithTitle:@"提示" Message:@"请补全信息后提交" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-            
-        }];
-        return;
-    }
-    if (!self.EquipmentIMEINum.text || self.EquipmentIMEINum.text.length<=2 ) {
-        [UIAlertView showWithTitle:@"提示" Message:@"IMEI错误" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-            
-        }];
-        return;
-    }
     BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
     BoundEquipmentDetailController *boundEquipment= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
-    
     _equipment.EquipmentIMEINum=self.EquipmentIMEINum.text;
 //    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
     [self.navigationController pushViewController:boundEquipment animated:YES];

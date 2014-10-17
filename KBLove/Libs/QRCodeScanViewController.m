@@ -66,7 +66,7 @@
 
     
     
-    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 60, 220, 2)];
+    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 220, 2)];
     _line.image = [UIImage imageNamed:@"qrcode_scan_light_green.png"];
     [bgImageView addSubview:_line];
    
@@ -127,10 +127,10 @@
 
     [UIView animateWithDuration:2 animations:^{
         
-         _line.frame = CGRectMake(50, 60+240, 220, 2);
+         _line.frame = CGRectMake(50, 50+200, 220, 2);
     }completion:^(BOOL finished) {
         [UIView animateWithDuration:2 animations:^{
-          _line.frame = CGRectMake(50, 60, 220, 2);
+          _line.frame = CGRectMake(50, 50, 220, 2);
         }];
     
     }];
@@ -172,7 +172,7 @@
     [timer invalidate];
     timer=nil;
 }
-    _line.frame = CGRectMake(50, 60, 220, 2);
+    _line.frame = CGRectMake(50, 50, 220, 2);
     num = 0;
     upOrdown = NO;
     
@@ -197,7 +197,7 @@
         [timer invalidate];
         timer=nil;
     }
-    _line.frame = CGRectMake(50, 60, 220, 2);
+    _line.frame = CGRectMake(50, 50, 220, 2);
     num = 0;
     upOrdown = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -386,7 +386,7 @@
     }
     
     [self.captureSession stopRunning];
-    _line.frame = CGRectMake(50, 60, 220, 2);
+    _line.frame = CGRectMake(50, 50, 220, 2);
     num = 0;
     upOrdown = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -404,7 +404,7 @@
         [timer invalidate];
         timer=nil;
     }
-    _line.frame = CGRectMake(50, 60, 220, 2);
+    _line.frame = CGRectMake(50, 50, 220, 2);
     num = 0;
     upOrdown = NO;
     UIImage *image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
@@ -419,7 +419,7 @@
         [timer invalidate];
         timer=nil;
     }
-    _line.frame = CGRectMake(50, 60, 220, 2);
+    _line.frame = CGRectMake(50, 50, 220, 2);
     num = 0;
     upOrdown = NO;
     timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(animation1) userInfo:nil repeats:YES];

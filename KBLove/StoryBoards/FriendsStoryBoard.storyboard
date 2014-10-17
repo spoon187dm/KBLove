@@ -4,30 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="aZ1-fa-qId">
-            <objects>
-                <navigationController storyboardIdentifier="FriendsListTableViewController" id="J4Q-Tb-fTL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Slr-NS-OlI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mSX-Rb-qvy" kind="relationship" relationship="rootViewController" id="duy-jK-iKA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RKF-jv-e64" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-310" y="-396"/>
-        </scene>
         <!--好友-->
         <scene sceneID="4Ge-TU-Nv7">
             <objects>
-                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="mSX-Rb-qvy" customClass="FriendsListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FriendsListTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mSX-Rb-qvy" customClass="FriendsListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RVM-m3-39s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
