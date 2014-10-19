@@ -9,7 +9,9 @@
 #import "CircleSettingViewController.h"
 
 @interface CircleSettingViewController ()
-
+{
+    NSString *_circleId;
+}
 @end
 
 @implementation CircleSettingViewController
@@ -18,7 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+//初始化id
+- (void)setCircle_id:(NSString *)cid
+{
+    _circleId=cid;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

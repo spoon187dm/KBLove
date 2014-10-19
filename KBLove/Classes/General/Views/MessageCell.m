@@ -31,7 +31,7 @@
     UILabel *rightTitle;
     //右边图片
     UIImageView *rightphotoImageView;
-
+    MessageClickBlock _msgBlock;
 }
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -61,7 +61,11 @@
     [self.contentView addSubview:leftheaderImageView];
     //气泡,大小根据内容制定
     leftBubbleImageView=[UIImageView imageViewWithFrame:CGRectMake(0, 0, 0, 0) image:nil];
-    
+    leftBubbleImageView.userInteractionEnabled=YES;
+    //添加点击事件
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]init];
+    [tap addTarget:self action:@selector(TapClick:)];
+    [leftBubbleImageView addGestureRecognizer:tap];
     [self.contentView addSubview:leftBubbleImageView];
     //图片 图片来源于主题气泡图片
     UIImage *image=[UIImage imageNamed:@"chat_send_nor_pic"];
@@ -88,6 +92,10 @@
     [self.contentView addSubview:rightheaderImageView];
     //气泡,大小根据内容制定
     rightBubbleImageView=[UIImageView imageViewWithFrame:CGRectZero image:nil];
+    rightBubbleImageView.userInteractionEnabled=YES;
+    UITapGestureRecognizer *tapr=[[UITapGestureRecognizer alloc]init];
+    [tapr addTarget:self action:@selector(TapClick:)];
+    [rightBubbleImageView addGestureRecognizer:tapr];
     [self.contentView addSubview:rightBubbleImageView];
     //图片 图片来源于主题气泡图片
     UIImage *image1=[UIImage imageNamed:@"chat_send_nor_pic.png"];
@@ -102,16 +110,22 @@
     [rightBubbleImageView addSubview:rightTitle];
     
 }
-- (void)configleftImage:(UIImage *)leftimage rightImage:(UIImage *)rightimage Message:(KBMessageInfo *)obj
+- (void)configleftImage:(UIImage *)leftimage rightImage:(UIImage *)rightimage Message:(KBMessageInfo *)obj WithPath:(NSIndexPath *)path AndBlock:(MessageClickBlock)block
+
 {
+    _path=path;
+    if (_msgBlock!=block) {
+        _msgBlock=nil;
+        _msgBlock=block;
+    }
     float y=[UIScreen mainScreen].bounds.size.width;
     leftheaderImageView.image=leftimage;
     rightheaderImageView.image=rightimage;
     //获取文字信息
     //NSString *message;
     
-    NSLog(@"%@",obj.FromUser_id);
-    NSLog(@"%@",[KBUserInfo sharedInfo].user_id);
+//    NSLog(@"%@",obj.FromUser_id);
+//    NSLog(@"%@",[KBUserInfo sharedInfo].user_id);
     
     if ([[NSString stringWithFormat:@"%@",obj.FromUser_id] isEqualToString:[NSString stringWithFormat:@"%@",[KBUserInfo sharedInfo].user_id]]) {
         //自己
@@ -180,7 +194,7 @@
 }
 - (CGFloat)getHightWithMOdel:(KBMessageInfo *)obj
 {
-    [self configleftImage:nil rightImage:nil Message:obj];
+    [self configleftImage:nil rightImage:nil Message:obj WithPath:_path AndBlock:_msgBlock];
     if ([[NSString stringWithFormat:@"%@",obj.FromUser_id] isEqualToString:[NSString stringWithFormat:@"%@",[KBUserInfo sharedInfo].user_id]])
     {
         if (rightBubbleImageView.frame.size.height<30) {
@@ -197,7 +211,12 @@
     }
     return leftBubbleImageView.frame.size.height+20;
 }
-
+- (void)TapClick:(UITapGestureRecognizer *)tap
+{
+    if (_msgBlock) {
+        _msgBlock(_path);
+    }
+}
 - (void)awakeFromNib {
     // Initialization code
 }

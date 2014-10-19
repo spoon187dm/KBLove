@@ -116,7 +116,7 @@
 }
 
 - (IBAction)SendTextClick:(id)sender {
-    if (_SendMsgTextFiled.text) {
+    if (_SendMsgTextFiled.text.length>=1) {
     KBMessageInfo *msginfo=[[KBMessageInfo alloc]init];
         msginfo.text=_SendMsgTextFiled.text;
         _sendBlock(msginfo);
@@ -127,6 +127,6 @@
         }];
     }
     _SendMsgTextFiled.text=nil;
-    [_SendMsgTextFiled resignFirstResponder];
+   // [_SendMsgTextFiled resignFirstResponder];
 }
 @end

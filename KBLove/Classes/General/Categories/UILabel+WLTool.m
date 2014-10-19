@@ -87,7 +87,7 @@
     NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:self.font,NSFontAttributeName, nil];
     
     CGSize Allsize=[self getSizeWithattributes:dic];
-    NSLog(@"%@",self.text);
+   // NSLog(@"%@",self.text);
     self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y, Allsize.width, Allsize.height);
     self.lineBreakMode=NSLineBreakByCharWrapping;
     
