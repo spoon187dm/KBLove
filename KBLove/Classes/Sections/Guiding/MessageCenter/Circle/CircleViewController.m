@@ -10,6 +10,7 @@
 #import "CreateCircleViewController.h"
 #import "LoginRequest.h"
 #import "KBHttpRequestTool.h"
+#import "CircleTalkViewController.h"
 @interface CircleViewController ()
 
 @end
@@ -58,8 +59,12 @@
 //添加群组
 - (void)AddClick:(UIBarButtonItem *)item
 {
+//    //测试接口
+//    CircleTalkViewController * cvc=[[CircleTalkViewController alloc]init];
+//    [self.navigationController pushViewController:cvc animated:YES];
     CreateCircleViewController *cvc=[[CreateCircleViewController alloc]init];
     [self.navigationController pushViewController:cvc animated:YES];
+    
 }
 //返回按钮
 - (void)BackClick:(UIButton *)btn

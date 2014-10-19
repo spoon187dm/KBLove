@@ -33,5 +33,6 @@
 -(void)AdjustFontSizeWithMinSize:(CGFloat) min AndMaxSize:(CGFloat) max IsFull:(BOOL)isfull;
 //设置边框弧度，宽度，颜色
 - (void)SetBorderWithcornerRadius:(CGFloat)radius BorderWith:(CGFloat)width AndBorderColor:(UIColor *)color;
-
+//获取SIZE
++ (CGSize)SizeWithText:(NSString *)text Width:(CGFloat)width andFont:(UIFont *)font;
 @end

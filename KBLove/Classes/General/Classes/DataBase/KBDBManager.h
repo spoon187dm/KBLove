@@ -20,6 +20,8 @@
 - (void)DeleteKBMessageWithType:(KBMessageType )msgtype;
 //删除与某人的聊天记录
 - (void)DeleteKBMessageWithEnvironment:(KBTalkEnvironmentType)talkType AndUserID:(NSString *)user_id;
-//获取与某人的聊天信息
+//获取与某人的聊天信息,倒叙排列
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number;
+//更新信息
+- (void)updateKBMessageWithModel:(KBMessageInfo *)msg;
 @end

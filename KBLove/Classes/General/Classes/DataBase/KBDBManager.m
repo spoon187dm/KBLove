@@ -69,11 +69,21 @@ static KBDBManager *manager;
     }
     
 }
+- (void)updateKBMessageWithModel:(KBMessageInfo *)msg
+{
+    NSString *imgStr=[[NSString alloc]initWithData:UIImagePNGRepresentation(msg.image) encoding:NSUTF8StringEncoding];
+    NSString *updateSQL=@"update KBMessageList set TalkEnvironmentType=?,MessageType=?,status=?,Circle_id=?,FromUser_id=?,ToUser_id=?,text=?,image=? where time=?";
+    if(![_dataBase executeUpdate:updateSQL,msg.TalkEnvironmentType,msg.MessageType,msg.status,msg.Circle_id,msg.FromUser_id,msg.ToUser_id,msg.text,imgStr,msg.time])
+    {
+        NSLog(@"update KBMessageList error:%@",_dataBase.lastErrorMessage);
+    }
+    
+}
 //获取与某人的聊天信息
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number
 {
     NSMutableArray *resultarr=[[NSMutableArray alloc]init];
-    NSString *selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and FromUser_id=? limit ?,?";
+    NSString *selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and FromUser_id=? limit ?,? in(select * from KBMessageList order by time desc)";
     FMResultSet *set=[_dataBase executeQuery:selectSQL,talkType,user_id,page*number,number];
     if ([set next]) {
         KBMessageInfo *msginf=[[KBMessageInfo alloc]init];

@@ -59,6 +59,7 @@
 }
 - (void)FinishedClick:(UIButton *)btn
 {
+    
     _fblock();
 }
 - (void)TapClick:(UITapGestureRecognizer *)tap

@@ -25,6 +25,16 @@
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
+		BC44AD7519F166440067764F /* SendMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7419F166440067764F /* SendMessageView.xib */; };
+		BC44AD7D19F169CC0067764F /* chat_bg_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7719F169CC0067764F /* chat_bg_default.jpg */; };
+		BC44AD7E19F169CC0067764F /* chat_bottom_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */; };
+		BC44AD7F19F169CC0067764F /* chat_bottom_up_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7919F169CC0067764F /* chat_bottom_up_nor@2x.png */; };
+		BC44AD8019F169CC0067764F /* chat_send_press_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7A19F169CC0067764F /* chat_send_press_pic@2x.png */; };
+		BC44AD8119F169CC0067764F /* common_button_blue_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7B19F169CC0067764F /* common_button_blue_nor@2x.png */; };
+		BC44AD8219F169CC0067764F /* groupshare_image_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7C19F169CC0067764F /* groupshare_image_normal@2x.png */; };
+		BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC44AD8419F16BFE0067764F /* SendMessageView.m */; };
+		BC45C13919F22AD3000CB559 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC45C13819F22AD3000CB559 /* MessageCell.m */; };
+		BC45C13B19F22D23000CB559 /* chat_send_nor_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC45C13A19F22D23000CB559 /* chat_send_nor_pic@2x.png */; };
 		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
 		BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836319ECCE9800DAC76A /* CircleViewController.m */; };
 		BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */; };
@@ -337,6 +347,18 @@
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
 		BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleFriendCell.xib; sourceTree = "<group>"; };
+		BC44AD7419F166440067764F /* SendMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageView.xib; sourceTree = "<group>"; };
+		BC44AD7719F169CC0067764F /* chat_bg_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_bg_default.jpg; sourceTree = "<group>"; };
+		BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bottom_bg@2x.png"; sourceTree = "<group>"; };
+		BC44AD7919F169CC0067764F /* chat_bottom_up_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bottom_up_nor@2x.png"; sourceTree = "<group>"; };
+		BC44AD7A19F169CC0067764F /* chat_send_press_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_send_press_pic@2x.png"; sourceTree = "<group>"; };
+		BC44AD7B19F169CC0067764F /* common_button_blue_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_button_blue_nor@2x.png"; sourceTree = "<group>"; };
+		BC44AD7C19F169CC0067764F /* groupshare_image_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groupshare_image_normal@2x.png"; sourceTree = "<group>"; };
+		BC44AD8319F16BFE0067764F /* SendMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageView.h; sourceTree = "<group>"; };
+		BC44AD8419F16BFE0067764F /* SendMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageView.m; sourceTree = "<group>"; };
+		BC45C13719F22AD3000CB559 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		BC45C13819F22AD3000CB559 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		BC45C13A19F22D23000CB559 /* chat_send_nor_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_send_nor_pic@2x.png"; sourceTree = "<group>"; };
 		BC59833319ECB3E600DAC76A /* DXLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXLog.h; sourceTree = "<group>"; };
 		BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRootViewController.h; sourceTree = "<group>"; };
 		BC59836019ECCE8500DAC76A /* CircleRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRootViewController.m; sourceTree = "<group>"; };
@@ -796,6 +818,20 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		BC44AD7619F169CC0067764F /* ChatTestImage */ = {
+			isa = PBXGroup;
+			children = (
+				BC45C13A19F22D23000CB559 /* chat_send_nor_pic@2x.png */,
+				BC44AD7719F169CC0067764F /* chat_bg_default.jpg */,
+				BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */,
+				BC44AD7919F169CC0067764F /* chat_bottom_up_nor@2x.png */,
+				BC44AD7A19F169CC0067764F /* chat_send_press_pic@2x.png */,
+				BC44AD7B19F169CC0067764F /* common_button_blue_nor@2x.png */,
+				BC44AD7C19F169CC0067764F /* groupshare_image_normal@2x.png */,
+			);
+			path = ChatTestImage;
+			sourceTree = "<group>";
+		};
 		BC59833519ECB52800DAC76A /* Circle */ = {
 			isa = PBXGroup;
 			children = (
@@ -936,6 +972,7 @@
 		F91A0C9119E7880C009ADB44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC44AD7619F169CC0067764F /* ChatTestImage */,
 				F9E24F8A19ED733200D83FEF /* StoryBoards */,
 				6EA222E619E920480073274D /* KBLove-Prefix.pch */,
 				F974109219EC2E4500E12633 /* main.m */,
@@ -1379,6 +1416,11 @@
 				BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */,
 				BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */,
 				BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */,
+				BC44AD8319F16BFE0067764F /* SendMessageView.h */,
+				BC44AD8419F16BFE0067764F /* SendMessageView.m */,
+				BC44AD7419F166440067764F /* SendMessageView.xib */,
+				BC45C13719F22AD3000CB559 /* MessageCell.h */,
+				BC45C13819F22AD3000CB559 /* MessageCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1743,6 +1785,8 @@
 				F93DB8A119F0AC4300196735 /* Me_StoryBoardN.storyboard in Resources */,
 				F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */,
 				F92DBDA619ED5C1900BBE573 /* bluecircle.png in Resources */,
+				BC45C13B19F22D23000CB559 /* chat_send_nor_pic@2x.png in Resources */,
+				BC44AD7F19F169CC0067764F /* chat_bottom_up_nor@2x.png in Resources */,
 				F9748CFD19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_pressed@2x.png in Resources */,
 				F91A0E6019E7AACF009ADB44 /* clearNavItemNoneUse.png in Resources */,
 				F91A0E3B19E7AACF009ADB44 /* equipmentregister.png in Resources */,
@@ -1762,6 +1806,7 @@
 				F9E24F9019ED733200D83FEF /* Device_data.storyboard in Resources */,
 				F9748CFB19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png in Resources */,
 				F9748CF419EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png in Resources */,
+				BC44AD7E19F169CC0067764F /* chat_bottom_bg@2x.png in Resources */,
 				F9E24F9119ED733200D83FEF /* DeviceConfiguration.storyboard in Resources */,
 				F91A0E4719E7AACF009ADB44 /* mm.png in Resources */,
 				F91A0E3719E7AACF009ADB44 /* navi@2x.png in Resources */,
@@ -1771,6 +1816,7 @@
 				F91A0E7519E7AACF009ADB44 /* savepass_uncheck.png in Resources */,
 				F91A0E3A19E7AACF009ADB44 /* circleframe.png in Resources */,
 				F91A0E7619E7AACF009ADB44 /* savepass_uncheck@2x.png in Resources */,
+				BC44AD8219F169CC0067764F /* groupshare_image_normal@2x.png in Resources */,
 				F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */,
 				F91A0E4119E7AACF009ADB44 /* whiteline.png in Resources */,
 				F9E24F9319ED733200D83FEF /* MainStoryboard.storyboard in Resources */,
@@ -1845,9 +1891,12 @@
 				F91A0E3D19E7AACF009ADB44 /* leftpoint.png in Resources */,
 				F91A0E8F19E7AACF009ADB44 /* blue_iOS6_navBar@2x.png in Resources */,
 				F91A0E7219E7AACF009ADB44 /* notEquipment.png in Resources */,
+				BC44AD7D19F169CC0067764F /* chat_bg_default.jpg in Resources */,
 				F91A0E8019E7AACF009ADB44 /* infoItemSelected.png in Resources */,
+				BC44AD8019F169CC0067764F /* chat_send_press_pic@2x.png in Resources */,
 				F91A0E4819E7AACF009ADB44 /* mmm.png in Resources */,
 				F91A0E7419E7AACF009ADB44 /* savepass_check@2x.png in Resources */,
+				BC44AD7519F166440067764F /* SendMessageView.xib in Resources */,
 				BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */,
 				F9FDF61519E92C8800D235E7 /* nav_Bacground.png in Resources */,
 				F91A0E8419E7AACF009ADB44 /* tabbarBG@2x.png in Resources */,
@@ -1878,6 +1927,7 @@
 				F91A0E5B19E7AACF009ADB44 /* lgusername@2x.png in Resources */,
 				F91A0E6519E7AACF009ADB44 /* moreNavItemNormal.png in Resources */,
 				F92DBDA819ED5C1900BBE573 /* chaosucs.png in Resources */,
+				BC44AD8119F169CC0067764F /* common_button_blue_nor@2x.png in Resources */,
 				F91A0E4C19E7AACF009ADB44 /* Register.png in Resources */,
 				F91A0E3919E7AACF009ADB44 /* buttonbackground.png in Resources */,
 				F91A0E7119E7AACF009ADB44 /* end.png in Resources */,
@@ -1953,6 +2003,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E24FA519ED74DD00D83FEF /* CrawlAlertConfiguration.m in Sources */,
+				BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */,
 				F9E24F6619ED725900D83FEF /* PinyinHelper.m in Sources */,
 				6EC2CD0D19F0F1ED000B1ADA /* CommonSettingViewController.m in Sources */,
 				F9E24FA119ED74DD00D83FEF /* ChangeInformationViewController.m in Sources */,
@@ -2036,6 +2087,7 @@
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
+				BC45C13919F22AD3000CB559 /* MessageCell.m in Sources */,
 				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,

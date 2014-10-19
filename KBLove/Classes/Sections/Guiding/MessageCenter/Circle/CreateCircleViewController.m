@@ -13,6 +13,7 @@
 #import "ChineseInclude.h"
 #import "PinYinForObjc.h"
 #import "CreateCircleBottomView.h"
+#import "CircleTalkViewController.h"
 @interface CreateCircleViewController ()
 {
     UISearchBar *_searchBar;//搜索条
@@ -222,7 +223,13 @@
         [self refreshBottomWithArray];
         
     } AndFinishedBlock:^{
+        
+
         NSLog(@"创建群组");
+        //成功后跳转
+        CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
+        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:@"14777"];
+        [self.navigationController pushViewController:cvc animated:YES];
     }];
     _tableView.frame= CGRectMake(0, 0,ScreenWidth,ScreenHeight-_bottomView.frame.size.height);
 }
