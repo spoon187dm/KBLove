@@ -10,7 +10,7 @@
 
 @implementation CircleFriendCell
 {
-    FriendCellSelectBtnClickBlock _block;
+    //FriendCellSelectBtnClickBlock _block;
 }
 - (void)awakeFromNib {
     // Initialization code
@@ -30,14 +30,14 @@
     }
     return  self;
 }
-- (void)configUIWithModel:(KBFriendInfo *)finfo Path:(NSIndexPath *)path isSleect:(BOOL) iss andBlock:(FriendCellSelectBtnClickBlock)block
+- (void)configUIWithModel:(KBFriendInfo *)finfo Path:(NSIndexPath *)path isSleect:(BOOL) iss
 {
     _CircleFriendImageView.image=[UIImage imageNamed:@"loginQQ"];
     _CircleFriendImageView.layer.cornerRadius=20;
     _CircleFriendImageView.layer.masksToBounds=YES;
     _CircleFriendName.text=finfo.name;
     _path=path;
-    _block=block;
+   // _block=block;
     [_SelectBtn setBackgroundImage:[UIImage imageNamed:@"pwd"] forState:UIControlStateNormal];
     [_SelectBtn setBackgroundImage:[UIImage imageNamed:@"pwdRem"] forState:UIControlStateSelected];
     if (iss) {
@@ -48,8 +48,8 @@
     }
 }
 - (IBAction)SelectBtnClick:(id)sender {
-    UIButton *btn=sender;
-    btn.selected=!btn.selected;
-    _block(_path,btn.selected);
+//    UIButton *btn=sender;
+//    btn.selected=!btn.selected;
+//    _block(_path,btn.selected);
 }
 @end
