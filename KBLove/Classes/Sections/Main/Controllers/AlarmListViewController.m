@@ -34,9 +34,9 @@
 }
 
 - (void)loadData{
-//    [[KBAlarmManager sharedManager] getAlarmInfoForDevice:_device finishblock:^(BOOL isSuccess, id result) {
+    [[KBAlarmManager sharedManager] getAlarmInfoForDevice:_device finishblock:^(BOOL isSuccess, id result) {
 //        _dataArray = [NSMutableArray arrayWithArray:result];
-//    }];
+    }];
     
     _dataArray = [NSMutableArray array];
     _selectedArray = [NSMutableArray array];
