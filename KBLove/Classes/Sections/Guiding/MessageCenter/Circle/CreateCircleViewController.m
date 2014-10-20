@@ -13,6 +13,7 @@
 #import "ChineseInclude.h"
 #import "PinYinForObjc.h"
 #import "CreateCircleBottomView.h"
+#import "CircleTalkViewController.h"
 @interface CreateCircleViewController ()
 {
     UISearchBar *_searchBar;//搜索条
@@ -194,42 +195,13 @@
     
     if (_tableView==tableView) {
         KBFriendInfo *finfo=_dataArray[indexPath.section][indexPath.row];
-        [cell configUIWithModel:finfo Path:indexPath isSleect:[_selectArray containsObject:finfo] andBlock:^(NSIndexPath *patn, BOOL isselect) {
-            
-            KBFriendInfo *ff=_dataArray[patn.section][patn.row];
-            if (isselect) {
-                
-                if (![_selectArray containsObject:ff]) {
-                    [_selectArray addObject:ff];
-                }
-                //添加移动动画
-                
-                
-            }else
-            {
-                [_selectArray removeObject:ff];
-            }
-            [self refreshBottomWithArray];
-        }];      //  cell.CircleFriendName.text=finfo.name;
+        [cell configUIWithModel:finfo Path:indexPath isSleect:[_selectArray containsObject:finfo]];      //  cell.CircleFriendName.text=finfo.name;
         
     }else
     {
         KBFriendInfo *finfo=_resultArray[indexPath.row];
         //cell.CircleFriendName.text=finfo.name;
-        [cell configUIWithModel:finfo Path:indexPath isSleect:[_selectArray containsObject:finfo] andBlock:^(NSIndexPath *patn, BOOL isselect) {
-            KBFriendInfo *ff=_resultArray[patn.row];
-            if (isselect) {
-                
-                if (![_selectArray containsObject:ff]) {
-                    [_selectArray addObject:ff];
-                }
-                
-            }else
-            {
-                [_selectArray removeObject:ff];
-            }
-            [self refreshBottomWithArray];
-        }];
+        [cell configUIWithModel:finfo Path:indexPath isSleect:[_selectArray containsObject:finfo]];
        
         
     }
@@ -242,18 +214,44 @@
 //    [_bottomView ConfigUIWith:_selectArray AndBlock:^(NSInteger tag) {
 //        NSLog(@"%ld",tag);
 //    }];
+    
     [_tableView reloadData];
+    [_playCintroller.searchResultsTableView reloadData];
     [_bottomView ConfigUIWith:_selectArray AndBlock:^(NSInteger tag) {
         KBFriendInfo *finf=_selectArray[tag];
         [_selectArray removeObject:finf];
         [self refreshBottomWithArray];
         
     } AndFinishedBlock:^{
+        
+
         NSLog(@"创建群组");
+        //成功后跳转
+        CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
+        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:@"14777"];
+        [self.navigationController pushViewController:cvc animated:YES];
     }];
     _tableView.frame= CGRectMake(0, 0,ScreenWidth,ScreenHeight-_bottomView.frame.size.height);
 }
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    KBFriendInfo *finfo;
+    if (tableView==_tableView) {
+        finfo=_dataArray[indexPath.section][indexPath.row];
+
+    }else
+    {
+        finfo=_resultArray[indexPath.row];
+    }
+    if ([_selectArray containsObject:finfo]) {
+        [_selectArray removeObject:finfo];
+    }else
+    {
+        [_selectArray addObject:finfo];
+    }
+    [self refreshBottomWithArray];
+}
 -(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     if (tableView!=_tableView) {

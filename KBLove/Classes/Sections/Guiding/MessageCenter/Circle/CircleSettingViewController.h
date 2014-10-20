@@ -9,5 +9,5 @@
 #import "CircleRootViewController.h"
 
 @interface CircleSettingViewController : CircleRootViewController
-
+- (void)setCircle_id:(NSString *)cid;
 @end

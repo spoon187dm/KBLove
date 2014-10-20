@@ -7,7 +7,7 @@
 //
 
 #import "CircleRootViewController.h"
-
+#import "KBMessageInfo.h"
 @interface CircleTalkViewController : CircleRootViewController
-
+- (void)setTalkEnvironment:(KBTalkEnvironmentType)type andId:(NSString *)tid;
 @end

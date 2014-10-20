@@ -87,7 +87,7 @@
     NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:self.font,NSFontAttributeName, nil];
     
     CGSize Allsize=[self getSizeWithattributes:dic];
-    NSLog(@"%@",self.text);
+   // NSLog(@"%@",self.text);
     self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y, Allsize.width, Allsize.height);
     self.lineBreakMode=NSLineBreakByCharWrapping;
     
@@ -103,6 +103,13 @@
     self.layer.cornerRadius=radius;
     self.layer.borderWidth=width;
     self.layer.borderColor=[color CGColor];
+}
++ (CGSize)SizeWithText:(NSString *)text Width:(CGFloat)width andFont:(UIFont *)font
+{
+    NSDictionary *dic =[NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName, nil];
+    CGSize Allsize=[text boundingRectWithSize:CGSizeMake(width, 1990) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin|
+                    NSStringDrawingUsesFontLeading       attributes:dic context:nil].size;
+    return Allsize;
 }
 -(void)AdjustFontSizeWithMinSize:(CGFloat) min AndMaxSize:(CGFloat) max
 {
