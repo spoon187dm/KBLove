@@ -111,13 +111,10 @@
 }
 
 - (IBAction)click_mine:(id)sender{
-    
-    
-    
-    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Me_StoryBoardN" bundle:nil];
-
-    UIViewController *vc =[stb instantiateViewControllerWithIdentifier:@"MineViewController"];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Me_StoryBoardN" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"MineViewController"];
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end
