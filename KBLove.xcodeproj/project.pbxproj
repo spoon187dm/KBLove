@@ -1935,6 +1935,7 @@
 				6EE0243219F1519000F96359 /* CommonSettingViewController.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
 				6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */,
+				F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				6EE0243419F1519000F96359 /* MineViewController.m in Sources */,

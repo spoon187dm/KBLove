@@ -93,6 +93,9 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
     UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
     [self.navigationController pushViewController:vc animated:YES];
+//    [self presentViewController:vc animated:YES completion:^{
+//        
+//    }];
 }
 
 - (IBAction)click_circle:(id)sender{
