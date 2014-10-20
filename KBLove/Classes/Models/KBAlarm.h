@@ -22,4 +22,7 @@
 @property (nonatomic, copy) NSNumber *flow;
 @property (nonatomic, copy) NSNumber *level;
 
+- (NSString *)getTypeString;
+//- (NSString *)get
+
 @end

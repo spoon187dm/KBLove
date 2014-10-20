@@ -20,6 +20,12 @@
 		6EC2CD0719F0EEC6000B1ADA /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
+		6EE0243019F1519000F96359 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0242519F1519000F96359 /* AccountManagerViewController.m */; };
+		6EE0243119F1519000F96359 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0242719F1519000F96359 /* AlterUserDataViewController.m */; };
+		6EE0243219F1519000F96359 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0242919F1519000F96359 /* CommonSettingViewController.m */; };
+		6EE0243319F1519000F96359 /* MessageAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0242B19F1519000F96359 /* MessageAlertViewController.m */; };
+		6EE0243419F1519000F96359 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0242D19F1519000F96359 /* MineViewController.m */; };
+		6EE0243519F1519000F96359 /* PrivacySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0242F19F1519000F96359 /* PrivacySettingViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
 		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
@@ -253,6 +259,11 @@
 		F975FE8519EE74DD00D13D86 /* DropListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F975FE8419EE74DD00D13D86 /* DropListView.xib */; };
 		F975FE8819EE7F6700D13D86 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */; };
 		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
+		F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B019F121A3005B93CA /* AlarmDetailViewController.m */; };
+		F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B219F121A3005B93CA /* AlarmListViewController.m */; };
+		F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B619F121B0005B93CA /* KBMessageInfo.m */; };
+		F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B919F121BC005B93CA /* AlarmCell.m */; };
+		F9D4C8BD19F121BC005B93CA /* KBAlarmInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */; };
 		F9E24F6019ED725900D83FEF /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5219ED725900D83FEF /* ChineseInclude.m */; };
 		F9E24F6119ED725900D83FEF /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5419ED725900D83FEF /* ChineseToPinyinResource.m */; };
 		F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5619ED725900D83FEF /* HanyuPinyinOutputFormat.m */; };
@@ -312,6 +323,18 @@
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		6EE0242419F1519000F96359 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
+		6EE0242519F1519000F96359 /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
+		6EE0242619F1519000F96359 /* AlterUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlterUserDataViewController.h; sourceTree = "<group>"; };
+		6EE0242719F1519000F96359 /* AlterUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlterUserDataViewController.m; sourceTree = "<group>"; };
+		6EE0242819F1519000F96359 /* CommonSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSettingViewController.h; sourceTree = "<group>"; };
+		6EE0242919F1519000F96359 /* CommonSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSettingViewController.m; sourceTree = "<group>"; };
+		6EE0242A19F1519000F96359 /* MessageAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAlertViewController.h; sourceTree = "<group>"; };
+		6EE0242B19F1519000F96359 /* MessageAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAlertViewController.m; sourceTree = "<group>"; };
+		6EE0242C19F1519000F96359 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		6EE0242D19F1519000F96359 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		6EE0242E19F1519000F96359 /* PrivacySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacySettingViewController.h; sourceTree = "<group>"; };
+		6EE0242F19F1519000F96359 /* PrivacySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacySettingViewController.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
@@ -620,6 +643,16 @@
 		F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
 		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
+		F9D4C8AF19F121A3005B93CA /* AlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDetailViewController.h; sourceTree = "<group>"; };
+		F9D4C8B019F121A3005B93CA /* AlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDetailViewController.m; sourceTree = "<group>"; };
+		F9D4C8B119F121A3005B93CA /* AlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListViewController.h; sourceTree = "<group>"; };
+		F9D4C8B219F121A3005B93CA /* AlarmListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListViewController.m; sourceTree = "<group>"; };
+		F9D4C8B519F121B0005B93CA /* KBMessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBMessageInfo.h; sourceTree = "<group>"; };
+		F9D4C8B619F121B0005B93CA /* KBMessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBMessageInfo.m; sourceTree = "<group>"; };
+		F9D4C8B819F121BC005B93CA /* AlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmCell.h; sourceTree = "<group>"; };
+		F9D4C8B919F121BC005B93CA /* AlarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmCell.m; sourceTree = "<group>"; };
+		F9D4C8BA19F121BC005B93CA /* KBAlarmInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAlarmInfoView.h; sourceTree = "<group>"; };
+		F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAlarmInfoView.m; sourceTree = "<group>"; };
 		F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
 		F9E24F5119ED725900D83FEF /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
 		F9E24F5219ED725900D83FEF /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
@@ -747,6 +780,25 @@
 				6ECC038319ECFCC60008ACAD /* AddFriendButton.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		6EE0242319F1519000F96359 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				6EE0242419F1519000F96359 /* AccountManagerViewController.h */,
+				6EE0242519F1519000F96359 /* AccountManagerViewController.m */,
+				6EE0242619F1519000F96359 /* AlterUserDataViewController.h */,
+				6EE0242719F1519000F96359 /* AlterUserDataViewController.m */,
+				6EE0242819F1519000F96359 /* CommonSettingViewController.h */,
+				6EE0242919F1519000F96359 /* CommonSettingViewController.m */,
+				6EE0242A19F1519000F96359 /* MessageAlertViewController.h */,
+				6EE0242B19F1519000F96359 /* MessageAlertViewController.m */,
+				6EE0242C19F1519000F96359 /* MineViewController.h */,
+				6EE0242D19F1519000F96359 /* MineViewController.m */,
+				6EE0242E19F1519000F96359 /* PrivacySettingViewController.h */,
+				6EE0242F19F1519000F96359 /* PrivacySettingViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		BC59833519ECB52800DAC76A /* Circle */ = {
@@ -1223,6 +1275,8 @@
 		F974108219EC280200E12633 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9D4C8B519F121B0005B93CA /* KBMessageInfo.h */,
+				F9D4C8B619F121B0005B93CA /* KBMessageInfo.m */,
 				F97410E819EC33CE00E12633 /* KBUserInfo.h */,
 				F97410E919EC33CE00E12633 /* KBUserInfo.m */,
 				F97410EB19EC34CA00E12633 /* KBUserManager.h */,
@@ -1322,6 +1376,7 @@
 		F97410C119EC322000E12633 /* Guiding */ = {
 			isa = PBXGroup;
 			children = (
+				6EE0242319F1519000F96359 /* Mine */,
 				6EA2BFED19ECB4E50024E6A2 /* MessageCenter */,
 				F97410C219EC322000E12633 /* Bounding */,
 				F97410D119EC322000E12633 /* Login&Regist */,
@@ -1404,6 +1459,10 @@
 		F975FE6319EE452100D13D86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9D4C8AF19F121A3005B93CA /* AlarmDetailViewController.h */,
+				F9D4C8B019F121A3005B93CA /* AlarmDetailViewController.m */,
+				F9D4C8B119F121A3005B93CA /* AlarmListViewController.h */,
+				F9D4C8B219F121A3005B93CA /* AlarmListViewController.m */,
 				F975FE6419EE452100D13D86 /* MainViewController.h */,
 				F975FE6519EE452100D13D86 /* MainViewController.m */,
 				F975FE6B19EE45A500D13D86 /* DeviceListViewController.h */,
@@ -1417,6 +1476,10 @@
 		F975FE6619EE452100D13D86 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F9D4C8B819F121BC005B93CA /* AlarmCell.h */,
+				F9D4C8B919F121BC005B93CA /* AlarmCell.m */,
+				F9D4C8BA19F121BC005B93CA /* KBAlarmInfoView.h */,
+				F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */,
 				F975FE6819EE453200D13D86 /* DevicesCell.h */,
 				F975FE6919EE453200D13D86 /* DevicesCell.m */,
 				F975FE6E19EE4FDE00D13D86 /* DeviceInfoView.h */,
@@ -1867,11 +1930,14 @@
 				F975FE8319EE74CB00D13D86 /* DropListView.m in Sources */,
 				F9E24F7619ED729700D83FEF /* DAContextMenuTableViewController.m in Sources */,
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
+				6EE0243119F1519000F96359 /* AlterUserDataViewController.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
+				6EE0243219F1519000F96359 /* CommonSettingViewController.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
 				6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
+				6EE0243419F1519000F96359 /* MineViewController.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
 				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
@@ -1888,6 +1954,7 @@
 				F974109319EC2E4500E12633 /* main.m in Sources */,
 				F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */,
 				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
+				F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */,
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
@@ -1904,6 +1971,7 @@
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
 				F9748CDC19EF85950064FCC7 /* KBSpot.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
+				F9D4C8BD19F121BC005B93CA /* KBAlarmInfoView.m in Sources */,
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
@@ -1918,12 +1986,16 @@
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
+				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
+				6EE0243319F1519000F96359 /* MessageAlertViewController.m in Sources */,
 				F9E24F6519ED725900D83FEF /* PinYinForObjc.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				F9E24FA219ED74DD00D83FEF /* ChangePersonDetailViewController.m in Sources */,
+				6EE0243519F1519000F96359 /* PrivacySettingViewController.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
+				F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */,
 				F975FE8819EE7F6700D13D86 /* DeviceDetailViewController.m in Sources */,
 				F9748CD919EF84FF0064FCC7 /* KBAlarm.m in Sources */,
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
@@ -1934,6 +2006,7 @@
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
 				BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */,
+				6EE0243019F1519000F96359 /* AccountManagerViewController.m in Sources */,
 				F9E24F7819ED729700D83FEF /* FreashManager.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
@@ -2002,7 +2075,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2020,6 +2094,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2040,7 +2115,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2051,6 +2127,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2062,6 +2139,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
@@ -2093,6 +2171,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2104,6 +2183,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
@@ -2135,6 +2215,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2144,6 +2225,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KBLove.app/KBLove";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2157,6 +2239,7 @@
 				);
 				INFOPLIST_FILE = "KBLoveTests/KBLoveTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -2166,6 +2249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KBLove.app/KBLove";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2175,6 +2259,7 @@
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLoveTests/KBLoveTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

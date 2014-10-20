@@ -118,9 +118,7 @@
 
 //返回item点击事件
 - (IBAction)leftItemClicked:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)addItemClicked:(id)sender {
