@@ -15,12 +15,6 @@
 		6EA222DD19E90EEB0073274D /* pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DB19E90EEB0073274D /* pwd.png */; };
 		6EA222DE19E90EEB0073274D /* pwdRem.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA222DC19E90EEB0073274D /* pwdRem.png */; };
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
-		6EC2CD0119F0B22C000B1ADA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0019F0B22C000B1ADA /* MineViewController.m */; };
-		6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */; };
-		6EC2CD0719F0EEC6000B1ADA /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */; };
-		6EC2CD0A19F0F16B000B1ADA /* MessageAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0919F0F16B000B1ADA /* MessageAlertViewController.m */; };
-		6EC2CD0D19F0F1ED000B1ADA /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0C19F0F1ED000B1ADA /* CommonSettingViewController.m */; };
-		6EC2CD1019F0F249000B1ADA /* PrivacySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2CD0F19F0F249000B1ADA /* PrivacySettingViewController.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
@@ -279,6 +273,12 @@
 		F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B619F121B0005B93CA /* KBMessageInfo.m */; };
 		F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B919F121BC005B93CA /* AlarmCell.m */; };
 		F9D4C8BD19F121BC005B93CA /* KBAlarmInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */; };
+		F9D4F80F19F53F1600DF83EA /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4F80419F53F1600DF83EA /* AccountManagerViewController.m */; };
+		F9D4F81019F53F1600DF83EA /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4F80619F53F1600DF83EA /* AlterUserDataViewController.m */; };
+		F9D4F81119F53F1600DF83EA /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4F80819F53F1600DF83EA /* CommonSettingViewController.m */; };
+		F9D4F81219F53F1600DF83EA /* MessageAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4F80A19F53F1600DF83EA /* MessageAlertViewController.m */; };
+		F9D4F81319F53F1600DF83EA /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4F80C19F53F1600DF83EA /* MineViewController.m */; };
+		F9D4F81419F53F1600DF83EA /* PrivacySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4F80E19F53F1600DF83EA /* PrivacySettingViewController.m */; };
 		F9E24F6019ED725900D83FEF /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5219ED725900D83FEF /* ChineseInclude.m */; };
 		F9E24F6119ED725900D83FEF /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5419ED725900D83FEF /* ChineseToPinyinResource.m */; };
 		F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F5619ED725900D83FEF /* HanyuPinyinOutputFormat.m */; };
@@ -328,18 +328,6 @@
 		6EA222E619E920480073274D /* KBLove-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KBLove-Prefix.pch"; sourceTree = "<group>"; };
 		6EA2C01519ECBC060024E6A2 /* KBFriendInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBFriendInfo.h; sourceTree = "<group>"; };
 		6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBFriendInfo.m; sourceTree = "<group>"; };
-		6EC2CCFF19F0B22C000B1ADA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		6EC2CD0019F0B22C000B1ADA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		6EC2CD0219F0B611000B1ADA /* AlterUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlterUserDataViewController.h; sourceTree = "<group>"; };
-		6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlterUserDataViewController.m; sourceTree = "<group>"; };
-		6EC2CD0519F0EEC6000B1ADA /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
-		6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
-		6EC2CD0819F0F16B000B1ADA /* MessageAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAlertViewController.h; sourceTree = "<group>"; };
-		6EC2CD0919F0F16B000B1ADA /* MessageAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAlertViewController.m; sourceTree = "<group>"; };
-		6EC2CD0B19F0F1ED000B1ADA /* CommonSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSettingViewController.h; sourceTree = "<group>"; };
-		6EC2CD0C19F0F1ED000B1ADA /* CommonSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSettingViewController.m; sourceTree = "<group>"; };
-		6EC2CD0E19F0F249000B1ADA /* PrivacySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacySettingViewController.h; sourceTree = "<group>"; };
-		6EC2CD0F19F0F249000B1ADA /* PrivacySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacySettingViewController.m; sourceTree = "<group>"; };
 		6ECC038219ECFCC60008ACAD /* AddFriendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendButton.h; sourceTree = "<group>"; };
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
@@ -688,6 +676,18 @@
 		F9D4C8B919F121BC005B93CA /* AlarmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmCell.m; sourceTree = "<group>"; };
 		F9D4C8BA19F121BC005B93CA /* KBAlarmInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAlarmInfoView.h; sourceTree = "<group>"; };
 		F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAlarmInfoView.m; sourceTree = "<group>"; };
+		F9D4F80319F53F1600DF83EA /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
+		F9D4F80419F53F1600DF83EA /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
+		F9D4F80519F53F1600DF83EA /* AlterUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlterUserDataViewController.h; sourceTree = "<group>"; };
+		F9D4F80619F53F1600DF83EA /* AlterUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlterUserDataViewController.m; sourceTree = "<group>"; };
+		F9D4F80719F53F1600DF83EA /* CommonSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSettingViewController.h; sourceTree = "<group>"; };
+		F9D4F80819F53F1600DF83EA /* CommonSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSettingViewController.m; sourceTree = "<group>"; };
+		F9D4F80919F53F1600DF83EA /* MessageAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAlertViewController.h; sourceTree = "<group>"; };
+		F9D4F80A19F53F1600DF83EA /* MessageAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAlertViewController.m; sourceTree = "<group>"; };
+		F9D4F80B19F53F1600DF83EA /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		F9D4F80C19F53F1600DF83EA /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F9D4F80D19F53F1600DF83EA /* PrivacySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacySettingViewController.h; sourceTree = "<group>"; };
+		F9D4F80E19F53F1600DF83EA /* PrivacySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacySettingViewController.m; sourceTree = "<group>"; };
 		F9E24F3319ED68B500D83FEF /* ZhangXiuQiao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhangXiuQiao.h; sourceTree = "<group>"; };
 		F9E24F5119ED725900D83FEF /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
 		F9E24F5219ED725900D83FEF /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
@@ -776,26 +776,10 @@
 		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
-				6EC2CCFE19F0B212000B1ADA /* Mine */,
 				BC59833519ECB52800DAC76A /* Circle */,
 				6E16647019ECD1270081EB4C /* Friends */,
 			);
 			path = MessageCenter;
-			sourceTree = "<group>";
-		};
-		6EC2CCFE19F0B212000B1ADA /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				6EC2CCFF19F0B22C000B1ADA /* MineViewController.h */,
-				6EC2CD0019F0B22C000B1ADA /* MineViewController.m */,
-				6EC2CD0219F0B611000B1ADA /* AlterUserDataViewController.h */,
-				6EC2CD0319F0B611000B1ADA /* AlterUserDataViewController.m */,
-				6EC2CD0519F0EEC6000B1ADA /* AccountManagerViewController.h */,
-				6EC2CD0619F0EEC6000B1ADA /* AccountManagerViewController.m */,
-				6EC2CD0819F0F16B000B1ADA /* MessageAlertViewController.h */,
-				6EC2CD0919F0F16B000B1ADA /* MessageAlertViewController.m */,
-			);
-			path = Mine;
 			sourceTree = "<group>";
 		};
 		6ECC038019ECFC5D0008ACAD /* Controllers */ = {
@@ -1443,6 +1427,7 @@
 		F97410C119EC322000E12633 /* Guiding */ = {
 			isa = PBXGroup;
 			children = (
+				F9D4F80219F53F1600DF83EA /* Mine */,
 				6EA2BFED19ECB4E50024E6A2 /* MessageCenter */,
 				F97410C219EC322000E12633 /* Bounding */,
 				F97410D119EC322000E12633 /* Login&Regist */,
@@ -1535,10 +1520,6 @@
 				F975FE6C19EE45A500D13D86 /* DeviceListViewController.m */,
 				F975FE8619EE7F6700D13D86 /* DeviceDetailViewController.h */,
 				F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */,
-				6EC2CD0B19F0F1ED000B1ADA /* CommonSettingViewController.h */,
-				6EC2CD0C19F0F1ED000B1ADA /* CommonSettingViewController.m */,
-				6EC2CD0E19F0F249000B1ADA /* PrivacySettingViewController.h */,
-				6EC2CD0F19F0F249000B1ADA /* PrivacySettingViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1589,6 +1570,25 @@
 				F9E24F4F19ED725900D83FEF /* Vendors */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		F9D4F80219F53F1600DF83EA /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				F9D4F80319F53F1600DF83EA /* AccountManagerViewController.h */,
+				F9D4F80419F53F1600DF83EA /* AccountManagerViewController.m */,
+				F9D4F80519F53F1600DF83EA /* AlterUserDataViewController.h */,
+				F9D4F80619F53F1600DF83EA /* AlterUserDataViewController.m */,
+				F9D4F80719F53F1600DF83EA /* CommonSettingViewController.h */,
+				F9D4F80819F53F1600DF83EA /* CommonSettingViewController.m */,
+				F9D4F80919F53F1600DF83EA /* MessageAlertViewController.h */,
+				F9D4F80A19F53F1600DF83EA /* MessageAlertViewController.m */,
+				F9D4F80B19F53F1600DF83EA /* MineViewController.h */,
+				F9D4F80C19F53F1600DF83EA /* MineViewController.m */,
+				F9D4F80D19F53F1600DF83EA /* PrivacySettingViewController.h */,
+				F9D4F80E19F53F1600DF83EA /* PrivacySettingViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		F9E24F4F19ED725900D83FEF /* Vendors */ = {
@@ -2009,9 +2009,7 @@
 				F9E24FA519ED74DD00D83FEF /* CrawlAlertConfiguration.m in Sources */,
 				BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */,
 				F9E24F6619ED725900D83FEF /* PinyinHelper.m in Sources */,
-				6EC2CD0D19F0F1ED000B1ADA /* CommonSettingViewController.m in Sources */,
 				F9E24FA119ED74DD00D83FEF /* ChangeInformationViewController.m in Sources */,
-				6EC2CD0A19F0F16B000B1ADA /* MessageAlertViewController.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
 				F975FE8319EE74CB00D13D86 /* DropListView.m in Sources */,
@@ -2019,8 +2017,8 @@
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
-				6EC2CD0419F0B611000B1ADA /* AlterUserDataViewController.m in Sources */,
 				BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */,
+				F9D4F81319F53F1600DF83EA /* MineViewController.m in Sources */,
 				F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
@@ -2033,6 +2031,7 @@
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
 				F9E24FA419ED74DD00D83FEF /* ConfigurationViewController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				F9D4F81419F53F1600DF83EA /* PrivacySettingViewController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
 				BCB42E2819F1425B00A141C3 /* FMDatabase.m in Sources */,
@@ -2047,21 +2046,20 @@
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
-				6EC2CD0719F0EEC6000B1ADA /* AccountManagerViewController.m in Sources */,
 				F9E24F6419ED725900D83FEF /* PinyinFormatter.m in Sources */,
+				F9D4F81019F53F1600DF83EA /* AlterUserDataViewController.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
-				6EC2CD0119F0B22C000B1ADA /* MineViewController.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
+				F9D4F80F19F53F1600DF83EA /* AccountManagerViewController.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
 				F9748CDC19EF85950064FCC7 /* KBSpot.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
 				F9D4C8BD19F121BC005B93CA /* KBAlarmInfoView.m in Sources */,
-				6EC2CD1019F0F249000B1ADA /* PrivacySettingViewController.m in Sources */,
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
@@ -2071,10 +2069,12 @@
 				BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */,
 				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
 				F9E24F7919ED729700D83FEF /* KBFreash.m in Sources */,
+				F9D4F81219F53F1600DF83EA /* MessageAlertViewController.m in Sources */,
 				F9748CDF19EF861E0064FCC7 /* KBHardWare.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */,
+				F9D4F81119F53F1600DF83EA /* CommonSettingViewController.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,
