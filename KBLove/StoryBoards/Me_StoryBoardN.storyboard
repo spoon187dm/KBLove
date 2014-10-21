@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1139" y="-1480"/>
         </scene>
-        <!--我的-->
+        <!--Mine View Controller - 我的-->
         <scene sceneID="T0l-Zd-HtX">
             <objects>
                 <viewController storyboardIdentifier="MineViewController" id="zEt-At-QfN" customClass="MineViewController" sceneMemberID="viewController">
@@ -615,7 +615,7 @@
         <!--设置-->
         <scene sceneID="b3t-Qb-aGB">
             <objects>
-                <tableViewController id="MWE-Nd-TEm" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommonSettingViewController" id="MWE-Nd-TEm" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="Ace-oI-PZH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -977,7 +977,7 @@
         <!--账号管理-->
         <scene sceneID="GI0-AA-CKD">
             <objects>
-                <tableViewController id="iyC-qZ-aMr" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AccountManagerViewController" id="iyC-qZ-aMr" customClass="AccountManagerViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="oQq-Mz-rGn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1133,15 +1133,22 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backItemClicked:" destination="iyC-qZ-aMr" eventType="touchUpInside" id="wvm-ma-zbg"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="W4w-7Y-rVg" id="iOh-5X-FFq"/>
+                        <outlet property="phoneLabel" destination="zsE-Lo-GjA" id="MHv-4p-t1b"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5x-vI-TIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1120" y="-40"/>
         </scene>
-        <!--绑定邮箱-->
+        <!--View Controller - 绑定邮箱-->
         <scene sceneID="9wc-Ma-S7F">
             <objects>
                 <viewController id="sPV-qd-eV1" sceneMemberID="viewController">
@@ -1211,7 +1218,7 @@
             </objects>
             <point key="canvasLocation" x="-1068" y="713"/>
         </scene>
-        <!--语言选择-->
+        <!--Table View Controller - 语言选择-->
         <scene sceneID="AjM-V1-aVV">
             <objects>
                 <tableViewController id="hxG-4p-C7I" sceneMemberID="viewController">
@@ -1286,10 +1293,10 @@
             </objects>
             <point key="canvasLocation" x="-48" y="713"/>
         </scene>
-        <!--隐私设置-->
+        <!--Table View Controller - 隐私设置-->
         <scene sceneID="KTK-5L-j5a">
             <objects>
-                <tableViewController id="wrl-9n-ZUb" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PrivacySettingViewController" id="wrl-9n-ZUb" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="NUF-8l-pu1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1386,7 +1393,7 @@
             </objects>
             <point key="canvasLocation" x="245" y="-40"/>
         </scene>
-        <!--关于凯步-->
+        <!--Table View Controller - 关于凯步-->
         <scene sceneID="4TO-80-2rb">
             <objects>
                 <tableViewController id="pdN-Nw-roz" sceneMemberID="viewController">

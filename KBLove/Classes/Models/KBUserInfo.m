@@ -59,7 +59,7 @@ KBUserInfo *info = nil;
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-
+    
 }
 
 @end
