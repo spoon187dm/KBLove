@@ -14,7 +14,15 @@
     SelectViewBlock _block;
     CreateFinishedBlock _fblock;
 }
-
+- (id)initWithFrame:(CGRect)frame
+{
+    self=[super initWithFrame:frame];
+    if (self) {
+        _FinishedBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+   
+    }
+    return self;
+}
 - (void)ConfigUIWith:(NSArray *)array AndBlock:(SelectViewBlock)block AndFinishedBlock:(CreateFinishedBlock )fblock
 {
     
@@ -45,11 +53,10 @@
         la.textAlignment=NSTextAlignmentCenter;
         [self addSubview:imgv];
     }
-    UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btn.frame=CGRectMake(260, (array.count/6*50)+10, 50, 30);
-    [btn setTitle:@"创建" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(FinishedClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:btn];
+        _FinishedBtn.frame=CGRectMake(260, (array.count/6*50)+10, 50, 30);
+   // [_FinishedBtn setTitle:@"创建" forState:UIControlStateNormal];
+    [_FinishedBtn addTarget:self action:@selector(FinishedClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_FinishedBtn];
     CGRect fr=self.frame;
     self.frame=CGRectMake(fr.origin.x,fr.origin.y+fr.size.height-(array.count/6+1)*50-5,fr.size.width, (array.count/6+1)*50+5);
     if (array.count==0) {

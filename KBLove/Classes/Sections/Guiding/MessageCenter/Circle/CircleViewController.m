@@ -11,6 +11,8 @@
 #import "LoginRequest.h"
 #import "KBHttpRequestTool.h"
 #import "CircleTalkViewController.h"
+#import "KBCircleInfo.h"
+#import "CircleCell.h"
 @interface CircleViewController ()
 
 @end
@@ -21,7 +23,7 @@
     [super viewDidLoad];
     //[self Login];
     [self CreateUI];
-   // [self loadData];
+    [self loadData];
     // Do any additional setup after loading the view.
 }
 -  (void)CreateUI
@@ -31,7 +33,8 @@
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
     //添加群组按钮
-    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddClick:)];
+    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:[self MakeButtonWithBgImgName:@"contactsItemNormal" SelectedImg:@"contactsItemSelected" Frame:CGRectMake(0, 0, 44, 44) target:self Sel:@selector(AddClick:) AndTag:100]];
+//    self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddClick:)];
     self.navigationItem.rightBarButtonItem.tintColor=[UIColor whiteColor];
     //初始化 Tableview
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
@@ -57,7 +60,7 @@
     }];
 }
 //添加群组
-- (void)AddClick:(UIBarButtonItem *)item
+- (void)AddClick:(UIButton *)item
 {
 //    //测试接口
 //    CircleTalkViewController * cvc=[[CircleTalkViewController alloc]init];
@@ -79,6 +82,28 @@
     }
     KBUserInfo *user=[KBUserInfo sharedInfo];
     NSLog(@"%@",[Circle_URL,user.user_id,user.token]);
+    [[KBHttpRequestTool sharedInstance] request:[Circle_URL,user.user_id,user.token] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+        if (IsSuccess) {
+            if ([result isKindOfClass:[NSDictionary class]]) {
+                NSDictionary *dic=(NSDictionary *)result;
+                NSArray *CircleList=[dic objectForKey:@"group"];
+                for (NSDictionary *sdic in CircleList) {
+                    KBCircleInfo *cinf=[[KBCircleInfo alloc]init];
+                    [cinf setValuesForKeysWithDictionary:sdic];
+                    [_dataArray addObject:cinf];
+                    
+                }
+                [_tableView reloadData];
+            }else
+            {
+                NSLog(@"非字典类型");
+            }
+        }else
+        {
+            NSError *error=(NSError *)result;
+            NSLog(@"%@",error.localizedDescription);
+        }
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -91,6 +116,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return  nil;
 }
 #pragma mark - UITableDelegate
