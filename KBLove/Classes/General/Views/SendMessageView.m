@@ -37,6 +37,7 @@
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    textField.textColor=[UIColor blackColor];
     _SendTextBtn.hidden=NO;
     _SendPositionBtn.hidden=YES;
 }

@@ -12,5 +12,5 @@ typedef void (^SelectViewBlock)(NSInteger tag);
 typedef void (^CreateFinishedBlock)();
 @interface CreateCircleBottomView : UIView
 - (void)ConfigUIWith:(NSArray *)array AndBlock:(SelectViewBlock)block AndFinishedBlock:(CreateFinishedBlock )fblock;
-
+@property (strong,nonatomic) UIButton *FinishedBtn;
 @end

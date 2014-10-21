@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CircleCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *Circle_headerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *Circle_NameLable;
+@property (weak, nonatomic) IBOutlet UILabel *CircleLastMessageLable;
+@property (weak, nonatomic) IBOutlet UILabel *CircleMessageTimeLable;
 
 @end

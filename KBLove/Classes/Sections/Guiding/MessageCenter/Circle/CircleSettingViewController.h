@@ -8,6 +8,6 @@
 
 #import "CircleRootViewController.h"
 
-@interface CircleSettingViewController : CircleRootViewController
+@interface CircleSettingViewController : CircleRootViewController<UIAlertViewDelegate>
 - (void)setCircle_id:(NSString *)cid;
 @end
