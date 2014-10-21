@@ -13,7 +13,12 @@
 - (void)awakeFromNib {
     // Initialization code
 }
-
+- (void)ConfigWithModel:(KBCircleInfo *)cModel
+{
+    _Circle_headerImageView.image=[UIImage imageNamed:@"loginQQ"];
+    _Circle_NameLable.text=cModel.name;
+    
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

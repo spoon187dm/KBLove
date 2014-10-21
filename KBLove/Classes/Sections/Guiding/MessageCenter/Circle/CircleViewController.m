@@ -116,6 +116,14 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *cellTag=@"CircleCell";
+    CircleCell *cell=[tableView dequeueReusableCellWithIdentifier:cellTag];
+    if (cell==nil) {
+        cell=[[[NSBundle mainBundle]loadNibNamed:cellTag owner:self options:nil]lastObject];
+        
+    }
+    
+    KBCircleInfo *cinf=_dataArray[indexPath.row];
     
     return  nil;
 }
