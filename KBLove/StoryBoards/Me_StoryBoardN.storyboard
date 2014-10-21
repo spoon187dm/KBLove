@@ -275,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="-1128" y="-719"/>
         </scene>
-        <!--个人资料-->
+        <!--Alter User Data View Controller - 个人资料-->
         <scene sceneID="29g-Wi-gxQ">
             <objects>
                 <viewController storyboardIdentifier="AlterUserDataViewController" id="qGE-hH-rU4" customClass="AlterUserDataViewController" sceneMemberID="viewController">
@@ -466,7 +466,7 @@
             </objects>
             <point key="canvasLocation" x="-1619" y="-47"/>
         </scene>
-        <!--消息提醒-->
+        <!--Table View Controller - 消息提醒-->
         <scene sceneID="LQv-NI-sJA">
             <objects>
                 <tableViewController id="7FJ-uT-iCA" sceneMemberID="viewController">
@@ -612,7 +612,7 @@
             </objects>
             <point key="canvasLocation" x="-656" y="-47"/>
         </scene>
-        <!--设置-->
+        <!--Table View Controller - 设置-->
         <scene sceneID="b3t-Qb-aGB">
             <objects>
                 <tableViewController storyboardIdentifier="CommonSettingViewController" id="MWE-Nd-TEm" sceneMemberID="viewController">
@@ -730,7 +730,7 @@
             </objects>
             <point key="canvasLocation" x="-256" y="-40"/>
         </scene>
-        <!--意见反馈-->
+        <!--View Controller - 意见反馈-->
         <scene sceneID="gZ9-lv-LCG">
             <objects>
                 <viewController id="tQJ-rX-bLW" sceneMemberID="viewController">
@@ -781,7 +781,7 @@
             </objects>
             <point key="canvasLocation" x="680" y="-40"/>
         </scene>
-        <!--地图选择-->
+        <!--Table View Controller - 地图选择-->
         <scene sceneID="6Jl-tf-2OI">
             <objects>
                 <tableViewController id="pAX-1F-6Mr" sceneMemberID="viewController">
@@ -873,7 +873,7 @@
             </objects>
             <point key="canvasLocation" x="-495" y="719"/>
         </scene>
-        <!--密码修改-->
+        <!--View Controller - 密码修改-->
         <scene sceneID="StA-6g-cEz">
             <objects>
                 <viewController id="5OD-ag-eig" sceneMemberID="viewController">
@@ -974,7 +974,7 @@
             </objects>
             <point key="canvasLocation" x="-1532" y="713"/>
         </scene>
-        <!--账号管理-->
+        <!--Account Manager View Controller - 账号管理-->
         <scene sceneID="GI0-AA-CKD">
             <objects>
                 <tableViewController storyboardIdentifier="AccountManagerViewController" id="iyC-qZ-aMr" customClass="AccountManagerViewController" sceneMemberID="viewController">
