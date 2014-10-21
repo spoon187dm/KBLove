@@ -90,7 +90,7 @@
     //添加圈子设置按钮，如果是圈子则点击
     if(_talkType==KBTalkEnvironmentTypeCircle)
     {
-        UIButton *btn1=[self MakeButtonWithBgImgName:@"chat_setting" SelectedImg:nil Frame:CGRectMake(0, 0, 30, 30) target:self Sel:@selector(SettingClick:) AndTag:100];
+        UIButton *btn1=[self MakeButtonWithBgImgName:@"contactsItemNormal" SelectedImg:@"contactsItemSelected" Frame:CGRectMake(0, 0, 44, 44) target:self Sel:@selector(SettingClick:) AndTag:100];
         self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn1];
         
     }

@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     // Do any additional setup after loading the view.
 }
 - (UIButton *)MakeButtonWithBgImgName:(NSString *)img SelectedImg:(NSString *)simg  Frame:(CGRect)frame target:(id)tar Sel:(SEL)selector AndTag:(NSInteger) tag
@@ -23,7 +24,7 @@
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn.frame=frame;
     [btn setBackgroundImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
-    [btn setBackgroundImage:[UIImage imageNamed:simg] forState:UIControlStateSelected];
+    [btn setBackgroundImage:[UIImage imageNamed:simg] forState:UIControlStateHighlighted];
     btn.tag=tag;
     [btn addTarget:tar action:selector forControlEvents:UIControlEventTouchUpInside];
     return  btn;

@@ -14,6 +14,7 @@
 #import "PinYinForObjc.h"
 #import "CreateCircleBottomView.h"
 #import "CircleTalkViewController.h"
+#import "KBCircleInfo.h"
 @interface CreateCircleViewController ()
 {
     UISearchBar *_searchBar;//搜索条
@@ -58,8 +59,10 @@
     _playCintroller.searchResultsDataSource=self;
     _playCintroller.searchResultsTableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"background.png"]];
     _selectArray =[[NSMutableArray alloc]init];
-    _bottomView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0, _tableView.frame.size.height, ScreenWidth, 0)];
+    _bottomView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0,_tableView.frame.size.height, ScreenWidth, 0)];
+    
     _bottomView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    [_bottomView.FinishedBtn setTitle:@"创建" forState:UIControlStateNormal];
     [self.view addSubview:_bottomView];
     
 }
@@ -78,20 +81,20 @@
         _dataArray=[NSMutableArray array];
      for (NSInteger i='A'; i<='Z'+1; i++) {
         [_dataArray addObject:[NSMutableArray array]];
-         KBFriendInfo *finfo=[[KBFriendInfo alloc]init];
-         if (i<='Z') {
-             //此处是假数据 上线时需删掉
-             
-             finfo.name=[NSString stringWithFormat:@"%c",(unichar)i];
-             //[_dataArray[i-'A'] addObject:finfo];
-             
-         }else
-         {
-           finfo.name=@"董新";
-         }
-         [_allDataArray addObject:finfo
-          ];
-                }
+//         KBFriendInfo *finfo=[[KBFriendInfo alloc]init];
+//         if (i<='Z') {
+//             //此处是假数据 上线时需删掉
+//             
+//             finfo.name=[NSString stringWithFormat:@"%c",(unichar)i];
+//             //[_dataArray[i-'A'] addObject:finfo];
+//             
+//         }else
+//         {
+//           finfo.name=@"董新";
+//         }
+//         [_allDataArray addObject:finfo
+//          ];
+        }
         
          //[_dataArray addObject:[NSMutableArray array]];
     }
@@ -226,10 +229,44 @@
         
 
         NSLog(@"创建群组");
-        //成功后跳转
-        CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
-        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:@"14777"];
-        [self.navigationController pushViewController:cvc animated:YES];
+        KBUserInfo *user=[KBUserInfo sharedInfo];
+        NSMutableString *memberStr=[NSMutableString string];
+        for (KBFriendInfo *finf in _selectArray) {
+            if ([_selectArray indexOfObject:finf]==_selectArray.count-1) {
+              [memberStr appendString:[NSString stringWithFormat:@"%@",finf.id]];
+            }else
+            {
+                [memberStr appendString:[NSString stringWithFormat:@"%@,",finf.id]];
+            }
+            
+        }
+    NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1]);
+        [[KBHttpRequestTool sharedInstance]request:[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+
+            if (IsSuccess) {
+                if ([result isKindOfClass:[NSDictionary class]]) {
+                    if ([[result objectForKey:@"ret"] integerValue]==1) {
+                        NSDictionary *circle=[result objectForKey:@"group"];
+                        KBCircleInfo *kci=[[KBCircleInfo alloc]init];
+                        [kci setValuesForKeysWithDictionary:circle];
+                        //成功后跳转
+                        CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
+                        
+                        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:[kci.id stringValue]];
+                        [self.navigationController pushViewController:cvc animated:YES];
+                    }
+                    
+                    
+                }else
+                {
+                    NSLog(@"非字典数据类型");
+                }
+            }else
+            {
+                
+            }
+        }];
+
     }];
     _tableView.frame= CGRectMake(0, 0,ScreenWidth,ScreenHeight-_bottomView.frame.size.height);
 }
