@@ -93,7 +93,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "248"
             endingLineNumber = "248"
-            landmarkName = "-deleteButton"
+            landmarkName = "-moreOptionsButton"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

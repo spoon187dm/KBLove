@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1139" y="-1480"/>
         </scene>
-        <!--Mine View Controller - 我的-->
+        <!--我的-->
         <scene sceneID="T0l-Zd-HtX">
             <objects>
                 <viewController storyboardIdentifier="MineViewController" id="zEt-At-QfN" customClass="MineViewController" sceneMemberID="viewController">
@@ -275,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="-1128" y="-719"/>
         </scene>
-        <!--Alter User Data View Controller - 个人资料-->
+        <!--个人资料-->
         <scene sceneID="29g-Wi-gxQ">
             <objects>
                 <viewController storyboardIdentifier="AlterUserDataViewController" id="qGE-hH-rU4" customClass="AlterUserDataViewController" sceneMemberID="viewController">
@@ -466,7 +466,7 @@
             </objects>
             <point key="canvasLocation" x="-1619" y="-47"/>
         </scene>
-        <!--Table View Controller - 消息提醒-->
+        <!--消息提醒-->
         <scene sceneID="LQv-NI-sJA">
             <objects>
                 <tableViewController id="7FJ-uT-iCA" sceneMemberID="viewController">
@@ -612,7 +612,7 @@
             </objects>
             <point key="canvasLocation" x="-656" y="-47"/>
         </scene>
-        <!--Table View Controller - 设置-->
+        <!--设置-->
         <scene sceneID="b3t-Qb-aGB">
             <objects>
                 <tableViewController id="MWE-Nd-TEm" sceneMemberID="viewController">
@@ -730,7 +730,7 @@
             </objects>
             <point key="canvasLocation" x="-256" y="-40"/>
         </scene>
-        <!--View Controller - 意见反馈-->
+        <!--意见反馈-->
         <scene sceneID="gZ9-lv-LCG">
             <objects>
                 <viewController id="tQJ-rX-bLW" sceneMemberID="viewController">
@@ -781,7 +781,7 @@
             </objects>
             <point key="canvasLocation" x="680" y="-40"/>
         </scene>
-        <!--Table View Controller - 地图选择-->
+        <!--地图选择-->
         <scene sceneID="6Jl-tf-2OI">
             <objects>
                 <tableViewController id="pAX-1F-6Mr" sceneMemberID="viewController">
@@ -873,7 +873,7 @@
             </objects>
             <point key="canvasLocation" x="-495" y="719"/>
         </scene>
-        <!--View Controller - 密码修改-->
+        <!--密码修改-->
         <scene sceneID="StA-6g-cEz">
             <objects>
                 <viewController id="5OD-ag-eig" sceneMemberID="viewController">
@@ -974,7 +974,7 @@
             </objects>
             <point key="canvasLocation" x="-1532" y="713"/>
         </scene>
-        <!--Table View Controller - 账号管理-->
+        <!--账号管理-->
         <scene sceneID="GI0-AA-CKD">
             <objects>
                 <tableViewController id="iyC-qZ-aMr" sceneMemberID="viewController">
@@ -1141,7 +1141,7 @@
             </objects>
             <point key="canvasLocation" x="-1120" y="-40"/>
         </scene>
-        <!--View Controller - 绑定邮箱-->
+        <!--绑定邮箱-->
         <scene sceneID="9wc-Ma-S7F">
             <objects>
                 <viewController id="sPV-qd-eV1" sceneMemberID="viewController">
@@ -1211,7 +1211,7 @@
             </objects>
             <point key="canvasLocation" x="-1068" y="713"/>
         </scene>
-        <!--Table View Controller - 语言选择-->
+        <!--语言选择-->
         <scene sceneID="AjM-V1-aVV">
             <objects>
                 <tableViewController id="hxG-4p-C7I" sceneMemberID="viewController">
@@ -1286,7 +1286,7 @@
             </objects>
             <point key="canvasLocation" x="-48" y="713"/>
         </scene>
-        <!--Table View Controller - 隐私设置-->
+        <!--隐私设置-->
         <scene sceneID="KTK-5L-j5a">
             <objects>
                 <tableViewController id="wrl-9n-ZUb" sceneMemberID="viewController">
@@ -1386,7 +1386,7 @@
             </objects>
             <point key="canvasLocation" x="245" y="-40"/>
         </scene>
-        <!--Table View Controller - 关于凯步-->
+        <!--关于凯步-->
         <scene sceneID="4TO-80-2rb">
             <objects>
                 <tableViewController id="pdN-Nw-roz" sceneMemberID="viewController">
