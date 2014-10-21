@@ -23,6 +23,7 @@
 
 @property (nonatomic, assign) BOOL isDrop;
 @property (nonatomic, strong) DropListView *dropListView;
+
 @end
 #define CELLFRAME CGRectMake(0, 0, 320, 100)
 @implementation DeviceListViewController
