@@ -15,8 +15,11 @@
 }
 - (void)ConfigWithModel:(KBCircleInfo *)cModel
 {
-    _Circle_headerImageView.image=[UIImage imageNamed:@"loginQQ"];
+    _Circle_headerImageView.image=[UIImage imageNamed:@"userimage"];
     _Circle_NameLable.text=cModel.name;
+    _CircleLastMessageLable.textColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.6];
+    //从数据库读取消息
+    _CircleMessageTimeLable.text=[NSString timeStampWithHM:[NSString stringWithFormat:@"%d",[cModel.time integerValue]/1000]];
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

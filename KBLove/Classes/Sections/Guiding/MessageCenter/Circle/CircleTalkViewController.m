@@ -37,8 +37,8 @@
 {
     //self.automaticallyAdjustsScrollViewInsets=YES;
     //返回
-    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
-    self.navigationItem.titleView=[self makeTitleLable:@"好友" AndFontSize:14 isBold:YES];
+    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
+    self.navigationItem.titleView=[self makeTitleLable:@"北航吃货群" AndFontSize:18 isBold:NO];
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     _sendMsgView=[[[NSBundle mainBundle]loadNibNamed:@"SendMessageView" owner:self options:nil]lastObject];
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
@@ -78,6 +78,10 @@
     _tableView.dataSource=self;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     //_tableView.backgroundColor=[UIColor clearColor];
+    UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
+    bgimgv.frame=_tableView.bounds;
+    _tableView.backgroundView=bgimgv;
+
     [self.view addSubview:_tableView];
     [self.view addSubview:_sendMsgView];
     //注册通知中心接受消息
@@ -90,7 +94,7 @@
     //添加圈子设置按钮，如果是圈子则点击
     if(_talkType==KBTalkEnvironmentTypeCircle)
     {
-        UIButton *btn1=[self MakeButtonWithBgImgName:@"contactsItemNormal" SelectedImg:@"contactsItemSelected" Frame:CGRectMake(0, 0, 44, 44) target:self Sel:@selector(SettingClick:) AndTag:100];
+        UIButton *btn1=[self MakeButtonWithBgImgName:@"圈子位置2_03" SelectedImg:@"" Frame:CGRectMake(0, 0, 30, 24) target:self Sel:@selector(SettingClick:) AndTag:100];
         self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn1];
         
     }
@@ -176,7 +180,7 @@
     if (cell==nil) {
         cell=[[MessageCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellTag];
     }
-    [cell configleftImage:[UIImage imageNamed:@"loginQQ"]  rightImage:[UIImage imageNamed:@"loginQQ"]  Message:_dataArray[indexPath.row] WithPath:indexPath AndBlock:^(NSIndexPath *path) {
+    [cell configleftImage:[UIImage imageNamed:@"userimage"]  rightImage:[UIImage imageNamed:@"userimage"]  Message:_dataArray[indexPath.row] WithPath:indexPath AndBlock:^(NSIndexPath *path) {
         KBMessageInfo *msgin=_dataArray[path.row];
         if (msgin.MessageType==KBMessageTypeTalkText) {
             NSLog(@"%@被点击了",msgin.text);

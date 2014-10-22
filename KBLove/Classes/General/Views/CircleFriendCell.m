@@ -32,14 +32,14 @@
 }
 - (void)configUIWithModel:(KBFriendInfo *)finfo Path:(NSIndexPath *)path isSleect:(BOOL) iss
 {
-    _CircleFriendImageView.image=[UIImage imageNamed:@"loginQQ"];
-    _CircleFriendImageView.layer.cornerRadius=20;
-    _CircleFriendImageView.layer.masksToBounds=YES;
+    _CircleFriendImageView.image=[UIImage imageNamed:@"userimage"];
+//    _CircleFriendImageView.layer.cornerRadius=20;
+//    _CircleFriendImageView.layer.masksToBounds=YES;
     _CircleFriendName.text=finfo.name;
     _path=path;
    // _block=block;
-    [_SelectBtn setBackgroundImage:[UIImage imageNamed:@"pwd"] forState:UIControlStateNormal];
-    [_SelectBtn setBackgroundImage:[UIImage imageNamed:@"pwdRem"] forState:UIControlStateSelected];
+    [_SelectBtn setBackgroundImage:[UIImage imageNamed:@"圈子创建_13"] forState:UIControlStateNormal];
+    [_SelectBtn setBackgroundImage:[UIImage imageNamed:@"圈子创建_17"] forState:UIControlStateSelected];
     if (iss) {
         _SelectBtn.selected=YES;
     }else

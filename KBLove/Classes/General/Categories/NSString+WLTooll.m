@@ -239,6 +239,13 @@
     [formatter setDateFormat:@"yyyy-MM-dd"];
     return [formatter stringFromDate:detaildate];
 }
++ (NSString*)timeStampWithHM:(NSString *)stamp{
+    NSTimeInterval time=[stamp doubleValue];
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm"];
+    return [formatter stringFromDate:detaildate];
+}
 
 //生成时间戳
 //获取当前时间戳

@@ -19,6 +19,7 @@
     self=[super initWithFrame:frame];
     if (self) {
         _FinishedBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+        
    
     }
     return self;
@@ -43,7 +44,7 @@
         imgv.tag=i;
         [tap addTarget:self action:@selector(TapClick:)];
         [imgv addGestureRecognizer:tap];
-        imgv.image=[UIImage imageNamed:@"loginQQ"];
+        imgv.image=[UIImage imageNamed:@"userimage"];
         imgv.userInteractionEnabled=YES;
         UILabel *la=[[UILabel alloc]initWithFrame:CGRectMake(0, 40, 40, 10)];
         [imgv addSubview:la];
@@ -53,7 +54,7 @@
         la.textAlignment=NSTextAlignmentCenter;
         [self addSubview:imgv];
     }
-        _FinishedBtn.frame=CGRectMake(260, (array.count/6*50)+10, 50, 30);
+        _FinishedBtn.frame=CGRectMake(260, (array.count/6*50)+10, 30, 30);
    // [_FinishedBtn setTitle:@"创建" forState:UIControlStateNormal];
     [_FinishedBtn addTarget:self action:@selector(FinishedClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_FinishedBtn];

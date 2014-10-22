@@ -16,6 +16,7 @@
     UILabel *Circle_Name_Lable;
     UILabel *Circle_NickName_Lable;
     UISwitch *Circle_Switch;
+    UISwitch *Circle_TalkMessageSwitch;
 }
 @end
 
@@ -38,10 +39,15 @@
     //self.view.backgroundColor=[UIColor redColor];
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
+    [self addBarItemWithImageName:@"Circle_setting" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(SettingClick:) isLeft:NO];
     self.navigationItem.titleView=[self makeTitleLable:@"圈子详情 " AndFontSize:14 isBold:YES];
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStyleGrouped];
     _tableView.delegate=self;
     _tableView.dataSource=self;
+    UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
+    bgimgv.frame=_tableView.bounds;
+    _tableView.backgroundView=bgimgv;
+
     _tableView.backgroundColor=[UIColor clearColor];
     _tableView.separatorColor=[UIColor
                                whiteColor];
@@ -50,7 +56,8 @@
     scr.bounces=NO;
     [self.view addSubview:_tableView];
     _headerView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
-    [_headerView.FinishedBtn setTitle:@"邀请" forState:UIControlStateNormal];
+    [_headerView.FinishedBtn setBackgroundImage:[UIImage imageNamed:@"圈子3_13"] forState:UIControlStateNormal];
+    //[_headerView.FinishedBtn setTitle:@"邀请" forState:UIControlStateNormal];
     //_tableView.tableHeaderView=_headerView;
     
 
@@ -60,9 +67,16 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+#pragma mark - 设置
+- (void)SettingClick:(UIButton *)btn
+{
+    //跳转到删除好友界面
+    
+}
 - (void)loadData
 {
     //加载群信息
+    
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -71,13 +85,18 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section==1) {
-        return 2;
-    }
-    return 1;
+    return section+1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    switch (indexPath.section) {
+        case 0:
+            return _headerView.frame.size.height;
+            break;
+            
+        default:
+            break;
+    }
     return 70;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,6 +105,7 @@
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellTag];
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellTag];
+        
         if (indexPath.section==1) {
             switch (indexPath.row) {
                 case 0:{
@@ -110,12 +130,25 @@
             }
         }else if(indexPath.section==2)
         {
-            cell.textLabel.text=@"消息免打扰";
-            Circle_Switch=[[UISwitch alloc]initWithFrame:CGRectMake(ScreenWidth-80, 20, 100, 20)];
-            [cell.contentView addSubview:Circle_Switch];
+            if (indexPath.row==0) {
+              cell.textLabel.text=@"消息免打扰";
+                Circle_Switch=[[UISwitch alloc]initWithFrame:CGRectMake(ScreenWidth-80, 20, 100, 20)];
+                //Circle_Switch.
+                [cell.contentView addSubview:Circle_Switch];
+
+            }else if(indexPath.row==1)
+            {
+              cell.textLabel.text=@"聊天记录";
+                Circle_TalkMessageSwitch=[[UISwitch alloc]initWithFrame:CGRectMake(ScreenWidth-80, 20, 100, 20)];
+                [cell.contentView addSubview:Circle_TalkMessageSwitch];
+            }else
+            {
+               cell.textLabel.text=@"发起位置共享";
+            }
+            
         }else
         {
-            cell.textLabel.text=@"删除成员";
+           // cell.textLabel.text=@"删除成员";
 
         }
     }
@@ -151,20 +184,20 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section==0) {
-        return 100;
+        return 30;
     }
     return 20;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if (section==0) {
-        return _headerView;
-    }
-    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
-    view.backgroundColor=[UIColor
-                          clearColor];
-    return view;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    if (section==0) {
+//        return _headerView;
+//    }
+//    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
+//    view.backgroundColor=[UIColor
+//                          clearColor];
+//    return view;
+//}
 //- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
 //{
 //
