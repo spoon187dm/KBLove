@@ -7,7 +7,8 @@
 //
 
 #import "CircleRootViewController.h"
-
+#import "KBCircleInfo.h"
 @interface CircleSettingViewController : CircleRootViewController<UIAlertViewDelegate>
 - (void)setCircle_id:(NSString *)cid;
+- (void)setCircleModel:(KBCircleInfo *)model;
 @end

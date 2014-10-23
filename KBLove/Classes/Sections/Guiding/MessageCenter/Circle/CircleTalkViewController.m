@@ -13,8 +13,10 @@
 @interface CircleTalkViewController ()
 {
     KBTalkEnvironmentType _talkType;
-    NSString *_tid;
+   // NSString *_tid;
     SendMessageView *_sendMsgView;
+    KBCircleInfo *_circle_info;
+    KBFriendInfo *_friend_info;
 }
 @end
 
@@ -29,7 +31,36 @@
 - (void)setTalkEnvironment:(KBTalkEnvironmentType)type andId:(NSString *)tid
 {
     _talkType=type;
-    _tid=tid;
+   // _tid=tid;
+    switch (_talkType) {
+        case KBTalkEnvironmentTypeCircle:{
+            _circle_info=[[KBCircleInfo alloc]init];
+            _circle_info.id=[NSNumber numberWithInteger:[tid integerValue]];
+        }break;
+        case KBTalkEnvironmentTypeFriend:{
+            _friend_info=[[KBFriendInfo alloc]init];
+            _friend_info.id=tid;
+        }break;
+    
+        default:
+            break;
+    }
+    [self CreateUI];
+    [self loadData];
+}
+- (void)setTalkEnvironment:(KBTalkEnvironmentType)type andModel:(id )model
+{
+    switch (_talkType) {
+        case KBTalkEnvironmentTypeCircle:{
+            _circle_info=(KBCircleInfo *)model;
+        }break;
+        case KBTalkEnvironmentTypeFriend:{
+            _friend_info=(KBFriendInfo *)model;
+        }break;
+            
+        default:
+            break;
+    }
     [self CreateUI];
     [self loadData];
 }
@@ -38,7 +69,7 @@
     //self.automaticallyAdjustsScrollViewInsets=YES;
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
-    self.navigationItem.titleView=[self makeTitleLable:@"北航吃货群" AndFontSize:18 isBold:NO];
+    self.navigationItem.titleView=[self makeTitleLable:_circle_info.name AndFontSize:18 isBold:NO];
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     _sendMsgView=[[[NSBundle mainBundle]loadNibNamed:@"SendMessageView" owner:self options:nil]lastObject];
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
@@ -108,7 +139,7 @@
 {
     //跳转到相应界面
     CircleSettingViewController *cvc=[[CircleSettingViewController alloc]init];
-    [cvc setCircle_id:_tid];
+    [cvc setCircleModel:_circle_info];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 #pragma mark - 修改Title

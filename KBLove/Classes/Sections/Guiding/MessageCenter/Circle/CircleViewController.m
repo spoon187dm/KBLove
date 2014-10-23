@@ -148,7 +148,7 @@
     KBCircleInfo *cinf=_dataArray[indexPath.row];
     CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
     
-    [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:[cinf.id stringValue]];
+    [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andModel:cinf];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 /*

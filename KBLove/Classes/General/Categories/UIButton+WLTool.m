@@ -16,6 +16,7 @@
 
 + (UIButton *)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target Action:(SEL)selector{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame=frame;
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];

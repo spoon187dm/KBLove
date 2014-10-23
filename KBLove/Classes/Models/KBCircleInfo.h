@@ -25,5 +25,6 @@
 @property (nonatomic,copy)NSNumber *type;
 //创建者ID
 @property (nonatomic,copy)NSNumber *userId;
-
+//群成员
+@property (nonatomic,copy)NSString *members;
 @end

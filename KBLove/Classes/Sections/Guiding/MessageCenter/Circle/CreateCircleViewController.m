@@ -262,7 +262,7 @@
                         //成功后跳转
                         CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
                         
-                        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:[kci.id stringValue]];
+                        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andModel:kci];
                         [self.navigationController pushViewController:cvc animated:YES];
                     }
                     
