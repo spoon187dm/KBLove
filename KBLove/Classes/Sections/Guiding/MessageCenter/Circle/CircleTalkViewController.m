@@ -10,6 +10,7 @@
 #import "SendMessageView.h"
 #import "MessageCell.h"
 #import "CircleSettingViewController.h"
+#import "KBHttpRequestTool.h"
 @interface CircleTalkViewController ()
 {
     KBTalkEnvironmentType _talkType;
@@ -86,18 +87,27 @@
             
         }else if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeCircle)
         {
+            
             //发送给圈子
-            [_dataArray addObject:msg];
-            KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-            msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-            msginf.FromUser_id=@"14022";
-            msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-            msginf.text=@"圈子测试返回信息";
-            [_dataArray addObject:msginf];
-            [_tableView reloadData];
-            if (_dataArray.count) {
-                [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-            }
+            KBUserInfo *user=[KBUserInfo sharedInfo];
+            NSString *sendStr=[Circle_SendCircleMessage_URL,user.user_id,user.token,[_circle_info.id stringValue],msg.text,1];
+            [[KBHttpRequestTool sharedInstance]request:sendStr requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+                if (IsSuccess) {
+                    NSLog(@"SendSucess");
+                    [_dataArray addObject:msg];
+                    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+                    msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
+                    msginf.FromUser_id=@"14022";
+                    msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
+                    msginf.text=@"圈子测试返回信息";
+                    [_dataArray addObject:msginf];
+                    [_tableView reloadData];
+                    if (_dataArray.count) {
+                        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+                    }
+
+                }
+            }];
 
 
         }
