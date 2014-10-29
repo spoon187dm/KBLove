@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (Localized)
-
+//获取本地化字符串
 + (NSString *)stringForLocalizedKey:(NSString *)key{
     return NSLocalizedStringFromTable(key, @"InfoPlist", nil);
 }

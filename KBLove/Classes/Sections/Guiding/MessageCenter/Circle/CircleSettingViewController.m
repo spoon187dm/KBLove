@@ -72,8 +72,6 @@
     _headerView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 110)];
     [_headerView.FinishedBtn setBackgroundImage:[UIImage imageNamed:@"圈子3_13"] forState:UIControlStateNormal];
     
-    //[_headerView.FinishedBtn setTitle:@"邀请" forState:UIControlStateNormal];
-    //_tableView.tableHeaderView=_headerView;
     UIView *BottomView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 60)];
     UIButton *bottomBtn=[UIButton buttonWithFrame:CGRectMake(ScreenWidth/2-125, 20, 250, 40) title:@"退出圈子" target:self Action:@selector(QuitClick:)];
     [bottomBtn setTitleColor:[UIColor colorWithRed:19/255.0 green:136/255.0 blue:141/255.0 alpha:1] forState:UIControlStateNormal];
@@ -90,15 +88,76 @@
 #pragma  mark - 退出
 - (void)QuitClick:(UIButton *)btn
 {
+    KBUserInfo *info = [KBUserInfo sharedInfo];
     NSLog(@"点击了退出");
-    if ([[KBUserInfo sharedInfo].user_id isEqualToString:[circle_info.userId stringValue]]) {
+    NSString *Myid=[NSString stringWithFormat:@"%@",info.user_id];
+   // NSLog(@"%@",Myid);
+    NSString *createID=[NSString stringWithFormat:@"%@",[circle_info.userId stringValue]];
+  //  NSLog(@"%@",createID);
+    if ([Myid isEqualToString:createID]) {
         //是创建者 删除群
-        
+        [self DeleteCircle];
     }else
     {
         //不是创建者 退出群
         //判断是不是剩下一个人 如果是则删除群
+        if (members.count>1) {
+            //执行删除群组操作
+            [self DeleteCircle];
+        }else
+        {
+            //删除某个成员
+            [self DeleteSeleFromCirclr];
+        }
     }
+    
+}
+- (void)DeleteCircle
+{
+    KBUserInfo *user=[KBUserInfo sharedInfo];
+    NSString *deleteUrlStr=[Circle_Delete_URL,user.user_id,user.token,circle_info.id];
+    NSLog(@"Delete:%@",deleteUrlStr);
+    [[KBHttpRequestTool sharedInstance] request:deleteUrlStr requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+        if (IsSuccess) {
+         //成功删除 进行跳转
+            [self goToCirclrListViewController];
+        }else
+        {
+            NSError *error=(NSError *)result;
+            [UIAlertView showWithTitle:@"温馨提示" Message:error.localizedDescription cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                
+            }];
+        }
+    }];
+
+}
+- (void)DeleteSeleFromCirclr
+{
+    KBUserInfo *user=[KBUserInfo sharedInfo];
+    NSString *deletestr=[Circle_DeleteMember_URL,user.user_id,user.token,circle_info.id,user.user_id];
+    [[KBHttpRequestTool sharedInstance] request:deletestr requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+        if (IsSuccess) {
+            //删除好友成功
+            if ([[result objectForKey:@"ret"] integerValue]==1) {
+                //成功删除进行跳转
+                [self goToCirclrListViewController];
+            }else
+            {
+            }
+        }else
+        {
+            NSError *error=(NSError *)result;
+          [UIAlertView showWithTitle:@"温馨提示" Message:error.localizedDescription     cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+              
+          }];
+        }
+    }];
+}
+#pragma mark - 跳转到圈子界面
+- (void)goToCirclrListViewController
+{
+    
+    [self.navigationController popToViewController: self.navigationController.childViewControllers[1] animated:YES];
 }
 #pragma mark - 返回
 - (void)BackClick:(UIButton *)btn
@@ -110,8 +169,9 @@
 {
     //跳转到删除好友界面
     DeleteCircleManagerViewController *dvc=[[DeleteCircleManagerViewController alloc]init];
+    [dvc setCircleModel:circle_info];
     [self.navigationController pushViewController:dvc animated:YES];
-
+    
     
 }
 
@@ -299,20 +359,7 @@
     }
     return 15;
 }
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    if (section==0) {
-//        return _headerView;
-//    }
-//    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
-//    view.backgroundColor=[UIColor
-//                          clearColor];
-//    return view;
-//}
-//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
-//{
-//
-//}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     

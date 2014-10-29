@@ -41,10 +41,14 @@
 		BC5A136219F7586900DDD36C /* TalkBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136119F7586900DDD36C /* TalkBullet.png */; };
 		BC5A136419F759CE00DDD36C /* Bullue.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136319F759CE00DDD36C /* Bullue.png */; };
 		BC5A136819F7644900DDD36C /* Circle_ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */; };
-		BC5A136919F7644900DDD36C /* Circle_ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136719F7644900DDD36C /* Circle_ShareViewController.xib */; };
 		BC5A136B19F7D1BE00DDD36C /* Circle_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136A19F7D1BE00DDD36C /* Circle_setting.png */; };
 		BC5D8C2419F8B1D7005AEC7C /* DXSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */; };
 		BC71103F19F62E8400485D6B /* KBCircleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71103E19F62E8400485D6B /* KBCircleInfo.m */; };
+		BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6DB19F9538C00692533 /* CircledeleteFriendCell.m */; };
+		BC71E6DE19F9538C00692533 /* CircledeleteFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC71E6DC19F9538C00692533 /* CircledeleteFriendCell.xib */; };
+		BC71E6E219F9666A00692533 /* PositionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6E019F9666A00692533 /* PositionCell.m */; };
+		BC71E6E319F9666A00692533 /* PositionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC71E6E119F9666A00692533 /* PositionCell.xib */; };
+		BC71E6E919F96A3000692533 /* KBPositionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6E819F96A3000692533 /* KBPositionInfo.m */; };
 		BC7910D419F6BE24000EEA0C /* userimage.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7910D319F6BE24000EEA0C /* userimage.png */; };
 		BC7910D619F6C362000EEA0C /* Nav_Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7910D519F6C362000EEA0C /* Nav_Circle.png */; };
 		BCA4B3A319F675C200B2AAAC /* NVBar_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = BCA4B3A219F675C200B2AAAC /* NVBar_arrow_down.png */; };
@@ -769,12 +773,19 @@
 		BC5A136319F759CE00DDD36C /* Bullue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bullue.png; sourceTree = "<group>"; };
 		BC5A136519F7644900DDD36C /* Circle_ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle_ShareViewController.h; sourceTree = "<group>"; };
 		BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle_ShareViewController.m; sourceTree = "<group>"; };
-		BC5A136719F7644900DDD36C /* Circle_ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Circle_ShareViewController.xib; sourceTree = "<group>"; };
 		BC5A136A19F7D1BE00DDD36C /* Circle_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle_setting.png; sourceTree = "<group>"; };
 		BC5D8C2219F8B1D7005AEC7C /* DXSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXSwitch.h; path = ../../Sections/Guiding/MessageCenter/Circle/DXSwitch.h; sourceTree = "<group>"; };
 		BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXSwitch.m; path = ../../Sections/Guiding/MessageCenter/Circle/DXSwitch.m; sourceTree = "<group>"; };
 		BC71103D19F62E8400485D6B /* KBCircleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBCircleInfo.h; sourceTree = "<group>"; };
 		BC71103E19F62E8400485D6B /* KBCircleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBCircleInfo.m; sourceTree = "<group>"; };
+		BC71E6DA19F9538C00692533 /* CircledeleteFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircledeleteFriendCell.h; sourceTree = "<group>"; };
+		BC71E6DB19F9538C00692533 /* CircledeleteFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircledeleteFriendCell.m; sourceTree = "<group>"; };
+		BC71E6DC19F9538C00692533 /* CircledeleteFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircledeleteFriendCell.xib; sourceTree = "<group>"; };
+		BC71E6DF19F9666A00692533 /* PositionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionCell.h; sourceTree = "<group>"; };
+		BC71E6E019F9666A00692533 /* PositionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionCell.m; sourceTree = "<group>"; };
+		BC71E6E119F9666A00692533 /* PositionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionCell.xib; sourceTree = "<group>"; };
+		BC71E6E719F96A3000692533 /* KBPositionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBPositionInfo.h; sourceTree = "<group>"; };
+		BC71E6E819F96A3000692533 /* KBPositionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBPositionInfo.m; sourceTree = "<group>"; };
 		BC7910D319F6BE24000EEA0C /* userimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userimage.png; path = ../../../Classes/Helpers/userimage.png; sourceTree = "<group>"; };
 		BC7910D519F6C362000EEA0C /* Nav_Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_Circle.png; sourceTree = "<group>"; };
 		BCA4B3A219F675C200B2AAAC /* NVBar_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NVBar_arrow_down.png; sourceTree = "<group>"; };
@@ -1648,7 +1659,6 @@
 				BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */,
 				BC5A136519F7644900DDD36C /* Circle_ShareViewController.h */,
 				BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */,
-				BC5A136719F7644900DDD36C /* Circle_ShareViewController.xib */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -1685,6 +1695,15 @@
 				F92DBDA519ED5C1900BBE573 /* zlc.png */,
 			);
 			path = "Device-data";
+			sourceTree = "<group>";
+		};
+		BCA6060919FFCBFC00D967ED /* DXSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				BC5D8C2219F8B1D7005AEC7C /* DXSwitch.h */,
+				BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */,
+			);
+			name = DXSwitch;
 			sourceTree = "<group>";
 		};
 		BCB42E1619F1415600A141C3 /* DataBase */ = {
@@ -2181,6 +2200,8 @@
 				F9748CDE19EF861E0064FCC7 /* KBHardWare.m */,
 				BC71103D19F62E8400485D6B /* KBCircleInfo.h */,
 				BC71103E19F62E8400485D6B /* KBCircleInfo.m */,
+				BC71E6E719F96A3000692533 /* KBPositionInfo.h */,
+				BC71E6E819F96A3000692533 /* KBPositionInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2220,8 +2241,6 @@
 		F974108919EC2C8700E12633 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BC5D8C2219F8B1D7005AEC7C /* DXSwitch.h */,
-				BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */,
 				F9A38FCC19F61B0D0043594F /* Chart */,
 				F91C0C0E19EF766200F4F8CE /* CreateCircleBottomView.h */,
 				F91C0C0F19EF766200F4F8CE /* CreateCircleBottomView.m */,
@@ -2252,6 +2271,12 @@
 				BCA4B3A419F67FC100B2AAAC /* SearchView.h */,
 				BCA4B3A519F67FC100B2AAAC /* SearchView.m */,
 				BCA4B3A719F67FED00B2AAAC /* SearchView.xib */,
+				BC71E6DA19F9538C00692533 /* CircledeleteFriendCell.h */,
+				BC71E6DB19F9538C00692533 /* CircledeleteFriendCell.m */,
+				BC71E6DC19F9538C00692533 /* CircledeleteFriendCell.xib */,
+				BC71E6DF19F9666A00692533 /* PositionCell.h */,
+				BC71E6E019F9666A00692533 /* PositionCell.m */,
+				BC71E6E119F9666A00692533 /* PositionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2481,6 +2506,7 @@
 		F9E24F6819ED729700D83FEF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BCA6060919FFCBFC00D967ED /* DXSwitch */,
 				BCB42E1619F1415600A141C3 /* DataBase */,
 				F9E24F6919ED729700D83FEF /* DAContextMenuTableViewController */,
 				F9E24F7019ED729700D83FEF /* KBFreash */,
@@ -4227,6 +4253,7 @@
 						DevelopmentTeam = W2QU362M8R;
 					};
 					F91A0CA119E7880C009ADB44 = {
+						DevelopmentTeam = W2QU362M8R;
 						TestTargetID = F91A0C8619E7880C009ADB44;
 					};
 				};
@@ -4432,6 +4459,7 @@
 				F9F3AF1619F63E5800E0A0F9 /* 报警模块4_02.png in Resources */,
 				F9F3AF8819F63E5800E0A0F9 /* 登录_20.png in Resources */,
 				F9F3AF4319F63E5800E0A0F9 /* 数据031_09.png in Resources */,
+				BC71E6E319F9666A00692533 /* PositionCell.xib in Resources */,
 				F9F3AFB519F63E5800E0A0F9 /* 设置01_06.png in Resources */,
 				F91A0E5919E7AACF009ADB44 /* lgtoolbar@2x.png in Resources */,
 				F9F3AF0219F63E5800E0A0F9 /* 总_07.png in Resources */,
@@ -4454,7 +4482,6 @@
 				F91A0E5619E7AACF009ADB44 /* lgremcode@2x.png in Resources */,
 				F9F3AEE419F63E5800E0A0F9 /* 好友4_03.png in Resources */,
 				F9F3AFA519F63E5800E0A0F9 /* 页面列表1_12.png in Resources */,
-				BC5A136919F7644900DDD36C /* Circle_ShareViewController.xib in Resources */,
 				F9F3AEC919F63E5800E0A0F9 /* 圈子位置2_03.png in Resources */,
 				F9F3AE8919F63E5800E0A0F9 /* 总1_07.png in Resources */,
 				F9F3AF8219F63E5800E0A0F9 /* 登录1_14.png in Resources */,
@@ -4727,6 +4754,7 @@
 				F91A0E6619E7AACF009ADB44 /* moreNavItemSelected.png in Resources */,
 				F91A0E3319E7AACF009ADB44 /* NVBar_arrow_left.png in Resources */,
 				F9F3AEBB19F63E5800E0A0F9 /* 圈子2-未输入_03.png in Resources */,
+				BC71E6DE19F9538C00692533 /* CircledeleteFriendCell.xib in Resources */,
 				F975FE7419EE503800D13D86 /* DeviceInfoView.xib in Resources */,
 				F9F3AEF319F63E5800E0A0F9 /* 个人资料_19.png in Resources */,
 				F9F3AF1419F63E5800E0A0F9 /* 报警模块1_18.png in Resources */,
@@ -4889,12 +4917,14 @@
 				BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */,
 				F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
+				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
 				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
+				BC71E6E219F9666A00692533 /* PositionCell.m in Sources */,
 				F9A38FE119F61B1B0043594F /* PNBarChart.m in Sources */,
 				F90F6F0E19F563E400671113 /* PrivacySettingViewController.m in Sources */,
 				F9A38FE219F61B1B0043594F /* PNChart.m in Sources */,
@@ -4913,6 +4943,7 @@
 				F974109319EC2E4500E12633 /* main.m in Sources */,
 				F975FE7019EE4FDE00D13D86 /* DeviceInfoView.m in Sources */,
 				F9A38FD219F61B0D0043594F /* PCPieChart.m in Sources */,
+				BC71E6E919F96A3000692533 /* KBPositionInfo.m in Sources */,
 				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
 				F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */,
 				BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */,
@@ -5109,8 +5140,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Jian (TDRQ65N65B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Jian (TDRQ65N65B)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
@@ -5142,7 +5173,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bef9cfd7-35a2-4940-85aa-e46f4a208589";
+				PROVISIONING_PROFILE = "8d199f75-a0ef-4b49-804e-e612e7e909fe";
 				VALID_ARCHS = "armv7 armv7s ";
 				WRAPPER_EXTENSION = app;
 			};
@@ -5154,8 +5185,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Jian (TDRQ65N65B)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Jian (TDRQ65N65B)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
@@ -5187,7 +5218,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bef9cfd7-35a2-4940-85aa-e46f4a208589";
+				PROVISIONING_PROFILE = "8d199f75-a0ef-4b49-804e-e612e7e909fe";
 				VALID_ARCHS = "armv7 armv7s ";
 				WRAPPER_EXTENSION = app;
 			};
@@ -5197,7 +5228,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KBLove.app/KBLove";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -5211,7 +5243,7 @@
 				);
 				INFOPLIST_FILE = "KBLoveTests/KBLoveTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -5221,7 +5253,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KBLove.app/KBLove";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -5231,7 +5264,7 @@
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLoveTests/KBLoveTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

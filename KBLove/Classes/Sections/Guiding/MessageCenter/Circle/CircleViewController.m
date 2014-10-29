@@ -151,6 +151,10 @@
     [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andModel:cinf];
     [self.navigationController pushViewController:cvc animated:YES];
 }
+- (void)deleteCircleWithId:(NSString *)circle_id
+{
+    
+}
 /*
 #pragma mark - Navigation
 

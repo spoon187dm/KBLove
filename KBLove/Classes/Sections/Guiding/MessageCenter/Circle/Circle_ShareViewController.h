@@ -7,7 +7,8 @@
 //
 
 #import "CircleRootViewController.h"
-
+#import "KBPositionInfo.h"
+typedef void (^SharePositionBlock)(KBPositionInfo *pos);
 @interface Circle_ShareViewController : CircleRootViewController
-
+- (void)setBlock:(SharePositionBlock)block;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "CircleRootViewController.h"
-
-@interface CircleViewController : CircleRootViewController
+#import "CircleSettingViewController.h"
+@interface CircleViewController : CircleRootViewController<DeleteCircleDelegate>
 
 @end
