@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (Localized)
-
+//获取本地化字符串
 + (NSString *)stringForLocalizedKey:(NSString *)key{
     return NSLocalizedStringFromTable(key, @"InfoPlist", nil);
 }
@@ -237,6 +237,13 @@
     NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
+    return [formatter stringFromDate:detaildate];
+}
++ (NSString*)timeStampWithHM:(NSString *)stamp{
+    NSTimeInterval time=[stamp doubleValue];
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm"];
     return [formatter stringFromDate:detaildate];
 }
 

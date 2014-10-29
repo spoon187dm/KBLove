@@ -73,6 +73,7 @@
 //时间戳转化为时间字符串
 +(NSString*)timeStamp:(NSString *)stamp;
 +(NSString*)timeStampWithYMD:(NSString *)stamp;
++ (NSString*)timeStampWithHM:(NSString *)stamp;
 //生成当前时间戳,两种格式
 +(NSString*)TimeJab;
 + (long long int)TimeJabLong;

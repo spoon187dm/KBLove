@@ -10,11 +10,14 @@
 #import "SendMessageView.h"
 #import "MessageCell.h"
 #import "CircleSettingViewController.h"
+#import "KBHttpRequestTool.h"
 @interface CircleTalkViewController ()
 {
     KBTalkEnvironmentType _talkType;
-    NSString *_tid;
+   // NSString *_tid;
     SendMessageView *_sendMsgView;
+    KBCircleInfo *_circle_info;
+    KBFriendInfo *_friend_info;
 }
 @end
 
@@ -29,7 +32,36 @@
 - (void)setTalkEnvironment:(KBTalkEnvironmentType)type andId:(NSString *)tid
 {
     _talkType=type;
-    _tid=tid;
+   // _tid=tid;
+    switch (_talkType) {
+        case KBTalkEnvironmentTypeCircle:{
+            _circle_info=[[KBCircleInfo alloc]init];
+            _circle_info.id=[NSNumber numberWithInteger:[tid integerValue]];
+        }break;
+        case KBTalkEnvironmentTypeFriend:{
+            _friend_info=[[KBFriendInfo alloc]init];
+            _friend_info.id=tid;
+        }break;
+    
+        default:
+            break;
+    }
+    [self CreateUI];
+    [self loadData];
+}
+- (void)setTalkEnvironment:(KBTalkEnvironmentType)type andModel:(id )model
+{
+    switch (_talkType) {
+        case KBTalkEnvironmentTypeCircle:{
+            _circle_info=(KBCircleInfo *)model;
+        }break;
+        case KBTalkEnvironmentTypeFriend:{
+            _friend_info=(KBFriendInfo *)model;
+        }break;
+            
+        default:
+            break;
+    }
     [self CreateUI];
     [self loadData];
 }
@@ -37,8 +69,8 @@
 {
     //self.automaticallyAdjustsScrollViewInsets=YES;
     //返回
-    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
-    self.navigationItem.titleView=[self makeTitleLable:@"好友" AndFontSize:14 isBold:YES];
+    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
+    self.navigationItem.titleView=[self makeTitleLable:_circle_info.name AndFontSize:18 isBold:NO];
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     _sendMsgView=[[[NSBundle mainBundle]loadNibNamed:@"SendMessageView" owner:self options:nil]lastObject];
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
@@ -55,18 +87,27 @@
             
         }else if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeCircle)
         {
+            
             //发送给圈子
-            [_dataArray addObject:msg];
-            KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-            msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-            msginf.FromUser_id=@"14022";
-            msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-            msginf.text=@"圈子测试返回信息";
-            [_dataArray addObject:msginf];
-            [_tableView reloadData];
-            if (_dataArray.count) {
-                [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-            }
+            KBUserInfo *user=[KBUserInfo sharedInfo];
+            NSString *sendStr=[Circle_SendCircleMessage_URL,user.user_id,user.token,[_circle_info.id stringValue],msg.text,1];
+            [[KBHttpRequestTool sharedInstance]request:sendStr requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+                if (IsSuccess) {
+                    NSLog(@"SendSucess");
+                    [_dataArray addObject:msg];
+                    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+                    msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
+                    msginf.FromUser_id=@"14022";
+                    msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
+                    msginf.text=@"圈子测试返回信息";
+                    [_dataArray addObject:msginf];
+                    [_tableView reloadData];
+                    if (_dataArray.count) {
+                        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+                    }
+
+                }
+            }];
 
 
         }
@@ -78,6 +119,10 @@
     _tableView.dataSource=self;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     //_tableView.backgroundColor=[UIColor clearColor];
+    UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
+    bgimgv.frame=_tableView.bounds;
+    _tableView.backgroundView=bgimgv;
+
     [self.view addSubview:_tableView];
     [self.view addSubview:_sendMsgView];
     //注册通知中心接受消息
@@ -90,7 +135,7 @@
     //添加圈子设置按钮，如果是圈子则点击
     if(_talkType==KBTalkEnvironmentTypeCircle)
     {
-        UIButton *btn1=[self MakeButtonWithBgImgName:@"contactsItemNormal" SelectedImg:@"contactsItemSelected" Frame:CGRectMake(0, 0, 44, 44) target:self Sel:@selector(SettingClick:) AndTag:100];
+        UIButton *btn1=[self MakeButtonWithBgImgName:@"圈子位置2_03" SelectedImg:@"" Frame:CGRectMake(0, 0, 30, 24) target:self Sel:@selector(SettingClick:) AndTag:100];
         self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn1];
         
     }
@@ -104,7 +149,7 @@
 {
     //跳转到相应界面
     CircleSettingViewController *cvc=[[CircleSettingViewController alloc]init];
-    [cvc setCircle_id:_tid];
+    [cvc setCircleModel:_circle_info];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 #pragma mark - 修改Title
@@ -176,7 +221,7 @@
     if (cell==nil) {
         cell=[[MessageCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellTag];
     }
-    [cell configleftImage:[UIImage imageNamed:@"loginQQ"]  rightImage:[UIImage imageNamed:@"loginQQ"]  Message:_dataArray[indexPath.row] WithPath:indexPath AndBlock:^(NSIndexPath *path) {
+    [cell configleftImage:[UIImage imageNamed:@"userimage"]  rightImage:[UIImage imageNamed:@"userimage"]  Message:_dataArray[indexPath.row] WithPath:indexPath AndBlock:^(NSIndexPath *path) {
         KBMessageInfo *msgin=_dataArray[path.row];
         if (msgin.MessageType==KBMessageTypeTalkText) {
             NSLog(@"%@被点击了",msgin.text);

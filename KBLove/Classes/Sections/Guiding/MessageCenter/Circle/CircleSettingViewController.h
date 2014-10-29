@@ -7,7 +7,15 @@
 //
 
 #import "CircleRootViewController.h"
+#import "KBCircleInfo.h"
+@protocol DeleteCircleDelegate <NSObject>
 
+- (void)deleteCircleWithId:(NSString *)circle_id;
+
+
+@end
 @interface CircleSettingViewController : CircleRootViewController<UIAlertViewDelegate>
+@property (nonatomic,weak) id<DeleteCircleDelegate>  delegate;
 - (void)setCircle_id:(NSString *)cid;
+- (void)setCircleModel:(KBCircleInfo *)model;
 @end

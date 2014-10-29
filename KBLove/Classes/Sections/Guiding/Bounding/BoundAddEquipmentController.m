@@ -30,11 +30,17 @@
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
     //
+    if (_EquipmentIMEINum.text.length!=15) {
+        [UIAlertView showWithTitle:@"提示" Message:@"请输入正确设备号" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+    }else{
     BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
     BoundEquipmentDetailController *boundEquipment= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
     _equipment.EquipmentIMEINum=self.EquipmentIMEINum.text;
 //    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
     [self.navigationController pushViewController:boundEquipment animated:YES];
+    }
 }
 
 - (IBAction)backNavBarButtonClick:(id)sender{
