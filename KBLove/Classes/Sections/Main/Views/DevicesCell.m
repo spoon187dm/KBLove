@@ -39,18 +39,18 @@
 
 - (void)setSelected:(BOOL)selected{
     [super setSelected:selected];
-    if (selected) {
-        self.backgroundColor = [UIColor colorWithRed:0.000 green:0.481 blue:0.519 alpha:1.000];
-    }else{
-        self.backgroundColor = [UIColor clearColor];
-    }
+//    if (selected) {
+//        self.backgroundColor = [UIColor colorWithRed:0.000 green:0.481 blue:0.519 alpha:1.000];
+//    }else{
+//        self.backgroundColor = [UIColor clearColor];
+//    }
 }
 
 - (UIView *)ViewForCellContent{
 
     DeviceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"DeviceInfoView" owner:self options:nil] lastObject];
     infoView.frame = self.bounds;
-    infoView.backgroundColor = SYSTEM_COLOR;
+//    infoView.backgroundColor = SYSTEM_COLOR;
 
     return infoView;
 }

@@ -65,7 +65,7 @@
     _alarmLocationLabel = contentLabel;
     _alarmTImeLabel = timeLabel;
     _selectCicleImageView = selectImageView;
-    self.backgroundColor = [UIColor lightGrayColor];
+//    self.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)setMySelected:(BOOL)selected{

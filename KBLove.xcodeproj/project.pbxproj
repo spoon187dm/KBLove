@@ -291,6 +291,13 @@
 		F975FE8519EE74DD00D13D86 /* DropListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F975FE8419EE74DD00D13D86 /* DropListView.xib */; };
 		F975FE8819EE7F6700D13D86 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */; };
 		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
+		F99E76211A00D3A8002FCB1F /* CarDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76141A00D3A8002FCB1F /* CarDetailSettingViewController.m */; };
+		F99E76221A00D3A8002FCB1F /* CarSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76161A00D3A8002FCB1F /* CarSettingViewController.m */; };
+		F99E76231A00D3A8002FCB1F /* PersonDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76181A00D3A8002FCB1F /* PersonDetailSettingViewController.m */; };
+		F99E76241A00D3A8002FCB1F /* PersonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761A1A00D3A8002FCB1F /* PersonSettingViewController.m */; };
+		F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761C1A00D3A8002FCB1F /* PetDetailSettingViewController.m */; };
+		F99E76261A00D3A8002FCB1F /* PetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */; };
+		F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */; };
 		F9A38FD119F61B0D0043594F /* KBGoalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FCE19F61B0D0043594F /* KBGoalBar.m */; };
 		F9A38FD219F61B0D0043594F /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD019F61B0D0043594F /* PCPieChart.m */; };
 		F9A38FE019F61B1B0043594F /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD519F61B1B0043594F /* PNBar.m */; };
@@ -322,11 +329,6 @@
 		F9E24F9219ED733200D83FEF /* FriendsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E24F8D19ED733200D83FEF /* FriendsStoryBoard.storyboard */; };
 		F9E24F9319ED733200D83FEF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E24F8E19ED733200D83FEF /* MainStoryboard.storyboard */; };
 		F9E24F9419ED733200D83FEF /* Regist_Login_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E24F8F19ED733200D83FEF /* Regist_Login_Storyboard.storyboard */; };
-		F9E24FA119ED74DD00D83FEF /* ChangeInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F9819ED74DD00D83FEF /* ChangeInformationViewController.m */; };
-		F9E24FA219ED74DD00D83FEF /* ChangePersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F9A19ED74DD00D83FEF /* ChangePersonDetailViewController.m */; };
-		F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F9C19ED74DD00D83FEF /* ConfigPersonDeviceViewController.m */; };
-		F9E24FA419ED74DD00D83FEF /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24F9E19ED74DD00D83FEF /* ConfigurationViewController.m */; };
-		F9E24FA519ED74DD00D83FEF /* CrawlAlertConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E24FA019ED74DD00D83FEF /* CrawlAlertConfiguration.m */; };
 		F9F3AE7B19F63E5800E0A0F9 /* 主界面011_03.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AC6919F63E5700E0A0F9 /* 主界面011_03.png */; };
 		F9F3AE7C19F63E5800E0A0F9 /* 主界面011_07.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AC6A19F63E5700E0A0F9 /* 主界面011_07.png */; };
 		F9F3AE7D19F63E5800E0A0F9 /* 主界面011_09.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AC6B19F63E5700E0A0F9 /* 主界面011_09.png */; };
@@ -1106,6 +1108,20 @@
 		F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
 		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
+		F99E76131A00D3A8002FCB1F /* CarDetailSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetailSettingViewController.h; sourceTree = "<group>"; };
+		F99E76141A00D3A8002FCB1F /* CarDetailSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDetailSettingViewController.m; sourceTree = "<group>"; };
+		F99E76151A00D3A8002FCB1F /* CarSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSettingViewController.h; sourceTree = "<group>"; };
+		F99E76161A00D3A8002FCB1F /* CarSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSettingViewController.m; sourceTree = "<group>"; };
+		F99E76171A00D3A8002FCB1F /* PersonDetailSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailSettingViewController.h; sourceTree = "<group>"; };
+		F99E76181A00D3A8002FCB1F /* PersonDetailSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailSettingViewController.m; sourceTree = "<group>"; };
+		F99E76191A00D3A8002FCB1F /* PersonSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonSettingViewController.h; sourceTree = "<group>"; };
+		F99E761A1A00D3A8002FCB1F /* PersonSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonSettingViewController.m; sourceTree = "<group>"; };
+		F99E761B1A00D3A8002FCB1F /* PetDetailSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailSettingViewController.h; sourceTree = "<group>"; };
+		F99E761C1A00D3A8002FCB1F /* PetDetailSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailSettingViewController.m; sourceTree = "<group>"; };
+		F99E761D1A00D3A8002FCB1F /* PetSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetSettingViewController.h; sourceTree = "<group>"; };
+		F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetSettingViewController.m; sourceTree = "<group>"; };
+		F99E761F1A00D3A8002FCB1F /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		F9A38FCD19F61B0D0043594F /* KBGoalBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBGoalBar.h; sourceTree = "<group>"; };
 		F9A38FCE19F61B0D0043594F /* KBGoalBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBGoalBar.m; sourceTree = "<group>"; };
 		F9A38FCF19F61B0D0043594F /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
@@ -1163,16 +1179,6 @@
 		F9E24F8D19ED733200D83FEF /* FriendsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FriendsStoryBoard.storyboard; sourceTree = "<group>"; };
 		F9E24F8E19ED733200D83FEF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F9E24F8F19ED733200D83FEF /* Regist_Login_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Regist_Login_Storyboard.storyboard; sourceTree = "<group>"; };
-		F9E24F9719ED74DD00D83FEF /* ChangeInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeInformationViewController.h; sourceTree = "<group>"; };
-		F9E24F9819ED74DD00D83FEF /* ChangeInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeInformationViewController.m; sourceTree = "<group>"; };
-		F9E24F9919ED74DD00D83FEF /* ChangePersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePersonDetailViewController.h; sourceTree = "<group>"; };
-		F9E24F9A19ED74DD00D83FEF /* ChangePersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePersonDetailViewController.m; sourceTree = "<group>"; };
-		F9E24F9B19ED74DD00D83FEF /* ConfigPersonDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigPersonDeviceViewController.h; sourceTree = "<group>"; };
-		F9E24F9C19ED74DD00D83FEF /* ConfigPersonDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigPersonDeviceViewController.m; sourceTree = "<group>"; };
-		F9E24F9D19ED74DD00D83FEF /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
-		F9E24F9E19ED74DD00D83FEF /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
-		F9E24F9F19ED74DD00D83FEF /* CrawlAlertConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrawlAlertConfiguration.h; sourceTree = "<group>"; };
-		F9E24FA019ED74DD00D83FEF /* CrawlAlertConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrawlAlertConfiguration.m; sourceTree = "<group>"; };
 		F9F3AC6919F63E5700E0A0F9 /* 主界面011_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主界面011_03.png"; sourceTree = "<group>"; };
 		F9F3AC6A19F63E5700E0A0F9 /* 主界面011_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主界面011_07.png"; sourceTree = "<group>"; };
 		F9F3AC6B19F63E5700E0A0F9 /* 主界面011_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主界面011_09.png"; sourceTree = "<group>"; };
@@ -2209,7 +2215,7 @@
 		F974108319EC280200E12633 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				F9E24F9519ED74DD00D83FEF /* Devices */,
+				F99E76121A00D3A8002FCB1F /* DeviceSetting */,
 				F97410C119EC322000E12633 /* Guiding */,
 				F97410DA19EC322000E12633 /* Main */,
 			);
@@ -2441,6 +2447,27 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		F99E76121A00D3A8002FCB1F /* DeviceSetting */ = {
+			isa = PBXGroup;
+			children = (
+				F99E76131A00D3A8002FCB1F /* CarDetailSettingViewController.h */,
+				F99E76141A00D3A8002FCB1F /* CarDetailSettingViewController.m */,
+				F99E76151A00D3A8002FCB1F /* CarSettingViewController.h */,
+				F99E76161A00D3A8002FCB1F /* CarSettingViewController.m */,
+				F99E76171A00D3A8002FCB1F /* PersonDetailSettingViewController.h */,
+				F99E76181A00D3A8002FCB1F /* PersonDetailSettingViewController.m */,
+				F99E76191A00D3A8002FCB1F /* PersonSettingViewController.h */,
+				F99E761A1A00D3A8002FCB1F /* PersonSettingViewController.m */,
+				F99E761B1A00D3A8002FCB1F /* PetDetailSettingViewController.h */,
+				F99E761C1A00D3A8002FCB1F /* PetDetailSettingViewController.m */,
+				F99E761D1A00D3A8002FCB1F /* PetSettingViewController.h */,
+				F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */,
+				F99E761F1A00D3A8002FCB1F /* SettingTableViewController.h */,
+				F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */,
+			);
+			path = DeviceSetting;
+			sourceTree = "<group>";
+		};
 		F9A38FCC19F61B0D0043594F /* Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -2549,31 +2576,6 @@
 				F9E24F8F19ED733200D83FEF /* Regist_Login_Storyboard.storyboard */,
 			);
 			path = StoryBoards;
-			sourceTree = "<group>";
-		};
-		F9E24F9519ED74DD00D83FEF /* Devices */ = {
-			isa = PBXGroup;
-			children = (
-				F9E24F9619ED74DD00D83FEF /* Setting */,
-			);
-			path = Devices;
-			sourceTree = "<group>";
-		};
-		F9E24F9619ED74DD00D83FEF /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				F9E24F9719ED74DD00D83FEF /* ChangeInformationViewController.h */,
-				F9E24F9819ED74DD00D83FEF /* ChangeInformationViewController.m */,
-				F9E24F9919ED74DD00D83FEF /* ChangePersonDetailViewController.h */,
-				F9E24F9A19ED74DD00D83FEF /* ChangePersonDetailViewController.m */,
-				F9E24F9B19ED74DD00D83FEF /* ConfigPersonDeviceViewController.h */,
-				F9E24F9C19ED74DD00D83FEF /* ConfigPersonDeviceViewController.m */,
-				F9E24F9D19ED74DD00D83FEF /* ConfigurationViewController.h */,
-				F9E24F9E19ED74DD00D83FEF /* ConfigurationViewController.m */,
-				F9E24F9F19ED74DD00D83FEF /* CrawlAlertConfiguration.h */,
-				F9E24FA019ED74DD00D83FEF /* CrawlAlertConfiguration.m */,
-			);
-			path = Setting;
 			sourceTree = "<group>";
 		};
 		F9F3AC6519F63E5700E0A0F9 /* png */ = {
@@ -4902,10 +4904,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E24FA519ED74DD00D83FEF /* CrawlAlertConfiguration.m in Sources */,
 				BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */,
 				F9E24F6619ED725900D83FEF /* PinyinHelper.m in Sources */,
-				F9E24FA119ED74DD00D83FEF /* ChangeInformationViewController.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
 				F975FE8319EE74CB00D13D86 /* DropListView.m in Sources */,
@@ -4920,7 +4920,6 @@
 				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
-				F9E24FA319ED74DD00D83FEF /* ConfigPersonDeviceViewController.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
@@ -4930,7 +4929,6 @@
 				F9A38FE219F61B1B0043594F /* PNChart.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
-				F9E24FA419ED74DD00D83FEF /* ConfigurationViewController.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
@@ -4949,6 +4947,7 @@
 				BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */,
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
+				F99E76261A00D3A8002FCB1F /* PetSettingViewController.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
 				F9E24F6419ED725900D83FEF /* PinyinFormatter.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
@@ -4957,11 +4956,13 @@
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
+				F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
 				F974110619EC389800E12633 /* UILabel+WLTool.m in Sources */,
 				F9748CDC19EF85950064FCC7 /* KBSpot.m in Sources */,
 				F90F6F0C19F563E400671113 /* MessageAlertViewController.m in Sources */,
+				F99E76221A00D3A8002FCB1F /* CarSettingViewController.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
 				F9D4C8BD19F121BC005B93CA /* KBAlarmInfoView.m in Sources */,
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
@@ -4973,6 +4974,7 @@
 				F9E24F6019ED725900D83FEF /* ChineseInclude.m in Sources */,
 				BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */,
 				6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */,
+				F99E76211A00D3A8002FCB1F /* CarDetailSettingViewController.m in Sources */,
 				F9E24F7919ED729700D83FEF /* KBFreash.m in Sources */,
 				F9748CDF19EF861E0064FCC7 /* KBHardWare.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
@@ -4987,7 +4989,6 @@
 				F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */,
 				F9E24F6519ED725900D83FEF /* PinYinForObjc.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
-				F9E24FA219ED74DD00D83FEF /* ChangePersonDetailViewController.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */,
@@ -4997,6 +4998,7 @@
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F9A38FE319F61B1B0043594F /* PNChartLabel.m in Sources */,
+				F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
 				BC45C13919F22AD3000CB559 /* MessageCell.m in Sources */,
@@ -5009,12 +5011,14 @@
 				F9E24F7819ED729700D83FEF /* FreashManager.m in Sources */,
 				BCB42E1919F1416200A141C3 /* KBDBManager.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
+				F99E76241A00D3A8002FCB1F /* PersonSettingViewController.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F9E24F7719ED729700D83FEF /* DAOverlayView.m in Sources */,
 				F90F6F0D19F563E400671113 /* MineViewController.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F97410E219EC322000E12633 /* BoundPetInfoController.m in Sources */,
 				6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */,
+				F99E76231A00D3A8002FCB1F /* PersonDetailSettingViewController.m in Sources */,
 				F9E24F6119ED725900D83FEF /* ChineseToPinyinResource.m in Sources */,
 				6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */,
 			);
