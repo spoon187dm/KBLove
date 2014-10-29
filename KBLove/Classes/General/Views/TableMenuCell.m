@@ -8,9 +8,7 @@
 
 #import "TableMenuCell.h"
 
-@interface TableMenuCell () {
-    CGRect _frame;
-}
+@interface TableMenuCell () 
 //@property (assign, nonatomic, getter = isMenuViewHidden) BOOL menuViewHidden;
 @end
 
@@ -33,7 +31,7 @@
     if (self) {
         // Initialization code
         menuCount = 0;
-        
+        self.backgroundColor = [UIColor clearColor];
         self.cellView = [[UIView alloc] init];
         self.cellView.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.cellView];
@@ -188,6 +186,9 @@
     }else if (x >= 50){
         x = 50;
     }
+    NSLog(@"%s--%f",__FUNCTION__,x);
+    self.menuView.alpha = -x/(menuCount*80+80);
+    NSLog(@"%s--alpha:%f",__FUNCTION__,self.menuView.alpha);
     self.cellView.frame = CGRectMake(x, 0, _frame.size.width, _frame.size.height);
     if (x == -(menuCount*80+20)) {
         [UIView animateWithDuration:0.2 animations:^{
@@ -211,6 +212,9 @@
     frame.origin.x = x;
     
     self.cellView.frame = frame;
+    
+//    menuCount*80+20
+//    self.menuView.alpha = x/(menuCount*80+20);
 }
 #pragma mark * UIPanGestureRecognizer delegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
@@ -247,8 +251,10 @@
     
     if (Hidden) {
         self.menuView.hidden = YES;
+        self.menuView.alpha = 0;
     }else{
         self.menuView.hidden = NO;
+        self.menuView.alpha = 1;
     }
 }
 

@@ -23,6 +23,7 @@
 
 @interface TableMenuCell : UITableViewCell<UIGestureRecognizerDelegate>{
     NSArray *_menuData;
+    CGRect _frame;
 }
 @property (nonatomic, strong) UIView *cellView;
 @property (nonatomic, assign) float startX;
