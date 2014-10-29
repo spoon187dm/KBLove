@@ -55,9 +55,9 @@
     float y=[UIScreen mainScreen].bounds.size.width;
 
     leftheaderImageView=[[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 30, 30)];
-    //圆角
-    leftheaderImageView.layer.cornerRadius=15;
-    leftheaderImageView.layer.masksToBounds=YES;
+//    //圆角
+//    leftheaderImageView.layer.cornerRadius=15;
+//    leftheaderImageView.layer.masksToBounds=YES;
     [self.contentView addSubview:leftheaderImageView];
     //气泡,大小根据内容制定
     leftBubbleImageView=[UIImageView imageViewWithFrame:CGRectMake(0, 0, 0, 0) image:nil];
@@ -68,7 +68,7 @@
     [leftBubbleImageView addGestureRecognizer:tap];
     [self.contentView addSubview:leftBubbleImageView];
     //图片 图片来源于主题气泡图片
-    UIImage *image=[UIImage imageNamed:@"chat_send_nor_pic"];
+    UIImage *image=[UIImage imageNamed:@"Bullue"];
     //我们需要把图像翻转180度
     image=[UIImage imageWithCGImage:image.CGImage scale:2 orientation:UIImageOrientationUpMirrored];
     //设置拉伸比例
@@ -86,9 +86,9 @@
     
     rightheaderImageView=[UIImageView imageViewWithFrame:CGRectMake(y-35, 5, 30, 30) image:nil];
     
-    //圆角
-    rightheaderImageView.layer.cornerRadius=15;
-    rightheaderImageView.layer.masksToBounds=YES;
+//    //圆角
+//    rightheaderImageView.layer.cornerRadius=15;
+//    rightheaderImageView.layer.masksToBounds=YES;
     [self.contentView addSubview:rightheaderImageView];
     //气泡,大小根据内容制定
     rightBubbleImageView=[UIImageView imageViewWithFrame:CGRectZero image:nil];
@@ -98,7 +98,7 @@
     [rightBubbleImageView addGestureRecognizer:tapr];
     [self.contentView addSubview:rightBubbleImageView];
     //图片 图片来源于主题气泡图片
-    UIImage *image1=[UIImage imageNamed:@"chat_send_nor_pic.png"];
+    UIImage *image1=[UIImage imageNamed:@"Bullue"];
     image1=[image1 stretchableImageWithLeftCapWidth:40 topCapHeight:28];
     rightBubbleImageView.image=image1;
     [self.contentView addSubview:rightBubbleImageView];
@@ -140,7 +140,7 @@
             rightTitle.hidden=NO;
             rightTitle.text=obj.text;
             CGSize size=[UILabel SizeWithText:obj.text Width:200 andFont:[UIFont systemFontOfSize:15]];
-            rightTitle.frame=CGRectMake(15, 10,size.width,size.height);
+            rightTitle.frame=CGRectMake(10, 10,size.width,size.height);
             rightTitle.font=[UIFont systemFontOfSize:15];
             [rightTitle AdjustCurrentFont];
             //设置气泡大小
@@ -151,7 +151,7 @@
             rightTitle.hidden=YES;
             UIImage *photoimage=obj.image;
             //计算大小
-            rightphotoImageView.frame=CGRectMake(15, 15, photoimage.size.width>200?200:photoimage.size.width, photoimage.size.height>200?200:photoimage.size.height);
+            rightphotoImageView.frame=CGRectMake(10, 15, photoimage.size.width>200?200:photoimage.size.width, photoimage.size.height>200?200:photoimage.size.height);
             rightphotoImageView.image=photoimage;
             rightBubbleImageView.frame=CGRectMake(y-40-rightphotoImageView.frame.size.width-20, 10, rightphotoImageView.frame.size.width+30, rightphotoImageView.frame.size.height+30);
             

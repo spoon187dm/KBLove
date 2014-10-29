@@ -54,6 +54,7 @@ static LoginRequest *login = nil;
                 info.user_id = dict[@"user_id"];
                 [info save];
                 finishedBlock();
+                NSLog(@"%@",dict);
             } else {//出现问题时
                 failedBlock(dict[@"desc"]);//讲错误描述传回
             }
@@ -87,7 +88,8 @@ static LoginRequest *login = nil;
     NSString * lastMD5 = [addTime MD5Hash];
     //得到url
     NSString * url = [NSString stringWithFormat:LOGIN_URL,userName, lastMD5, [self TimeJab], 3];
-    
+    //NSLog(@"pwd:%@",lastMD5);
+    NSLog(@"%@",url);
     return url;
 
 }

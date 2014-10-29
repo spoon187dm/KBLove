@@ -47,7 +47,41 @@
     NSLog(@"%@",dic);
     [httptool request:urlstr requestType:0 params:dic overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
+           // NSLog(@"%@",result);
             NSLog(@"%@",result);
+            
+            NSNumber *ret=[result objectForKey:@"ret"];
+            switch ([ret integerValue]) {
+                case 1:{
+                    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+                    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
+                    [self presentViewController:vc animated:YES completion:^{
+                        
+                    }];
+                }break;
+                case 2:{
+                    [UIAlertView showWithTitle:@"提示" Message:[result objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                        
+                    }];
+                }break;
+                case 3:{
+                    [UIAlertView showWithTitle:@"提示" Message:[result objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                        
+                    }];
+                    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+                    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
+                    [self presentViewController:vc animated:YES completion:^{
+                        
+                    }];
+
+                    
+                    
+                }break;
+                    
+                default:
+                    break;
+            }
+
         }
     }];
 /*

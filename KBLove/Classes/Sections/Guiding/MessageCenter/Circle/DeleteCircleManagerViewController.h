@@ -7,7 +7,7 @@
 //
 
 #import "CircleRootViewController.h"
-
+#import "KBCircleInfo.h"
 @interface DeleteCircleManagerViewController : CircleRootViewController
-
+- (void)setCircleModel:(KBCircleInfo *)info;
 @end

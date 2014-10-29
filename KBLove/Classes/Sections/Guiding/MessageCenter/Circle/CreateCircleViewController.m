@@ -15,8 +15,10 @@
 #import "CreateCircleBottomView.h"
 #import "CircleTalkViewController.h"
 #import "KBCircleInfo.h"
+#import "SearchView.h"
 @interface CreateCircleViewController ()
 {
+    SearchView *_searchView;
     UISearchBar *_searchBar;//搜索条
     UISearchDisplayController *_playCintroller;//搜索控制器
     NSMutableArray *_resultArray;//存放搜索结果
@@ -36,21 +38,27 @@
 }
 - (void)CreateUI
 {
-    self.navigationItem.titleView=[self makeTitleLable:@"创建圈子" AndFontSize:22 isBold:YES];
+    self.navigationItem.titleView=[self makeTitleLable:@"创建圈子" AndFontSize:18 isBold:NO];
     //返回
-    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 30, 30) Target:self Selector:@selector(BackClick:) isLeft:YES];
+    [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(BackClick:) isLeft:YES];
     
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
-    _tableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"background.png"]];
+    _tableView.separatorColor=[UIColor whiteColor];
+    UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
+    bgimgv.frame=_tableView.bounds;
+    _tableView.backgroundView=bgimgv;
+    _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
+    _searchView=[[[NSBundle mainBundle]loadNibNamed:@"SearchView" owner:self options:nil]lastObject];
+    _searchView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
     //设置头尾视图，显示在第一行的上方
     _searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 0, 44)]
     ;
     _searchBar.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     _searchBar.delegate=self;
-    _tableView.tableHeaderView=_searchBar;
+    _tableView.tableHeaderView=_searchView;
     //创建搜索控制器，传入一个搜索条，点击搜索条，可以触发VC的搜索模式，搜索模式作用在Self上,
     
     _playCintroller =[[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
@@ -61,8 +69,9 @@
     _selectArray =[[NSMutableArray alloc]init];
     _bottomView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0,_tableView.frame.size.height, ScreenWidth, 0)];
     
-    _bottomView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
-    [_bottomView.FinishedBtn setTitle:@"创建" forState:UIControlStateNormal];
+    _bottomView.backgroundColor=[UIColor colorWithRed:40.0/255 green:137.0/255 blue:140.0/255 alpha:1];
+    
+    [_bottomView.FinishedBtn setBackgroundImage:[UIImage imageNamed:@"圈子创建_23"] forState:UIControlStateNormal];
     [self.view addSubview:_bottomView];
     
 }
@@ -210,6 +219,7 @@
     }
     
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    cell.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
     return cell;
 }
 - (void)refreshBottomWithArray
@@ -252,7 +262,7 @@
                         //成功后跳转
                         CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
                         
-                        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andId:[kci.id stringValue]];
+                        [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andModel:kci];
                         [self.navigationController pushViewController:cvc animated:YES];
                     }
                     
@@ -289,42 +299,46 @@
     }
     [self refreshBottomWithArray];
 }
--(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    if (tableView!=_tableView) {
-        return nil;
-    }
-    NSMutableArray *arr=[[NSMutableArray alloc] init];
-    //系统预置字符串，tableview会把它处理成搜索小图标
-    [arr addObject:UITableViewIndexSearch];
-    for (int i='A'; i<='Z'; i++) {
-        [arr addObject:[NSString stringWithFormat:@"%c",i]];
-    }
-    return arr;
-}
+//-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+//{
+//    if (tableView!=_tableView) {
+//        return nil;
+//    }
+//    NSMutableArray *arr=[[NSMutableArray alloc] init];
+//    //系统预置字符串，tableview会把它处理成搜索小图标
+//    [arr addObject:UITableViewIndexSearch];
+//    for (int i='A'; i<='Z'; i++) {
+//        [arr addObject:[NSString stringWithFormat:@"%c",i]];
+//    }
+//    return arr;
+//}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *la=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
-    la.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
-    la.text=[NSString stringWithFormat:@"%c",(UniChar )(section+'A')];
+    UIImageView *BgView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 30)];
+    BgView.image=[UIImage imageNamed:@"圈子创建_10"];
+    UILabel *la=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 30)];
+    la.backgroundColor=[UIColor clearColor];
+    la.font=[UIFont systemFontOfSize:14];
+    [la setTextColor:[UIColor whiteColor]];
+    la.text=[NSString stringWithFormat:@"    %c",(UniChar )(section+'A')];
     if (section==26) {
         la.text=@"其他";
     }
-    return la;
+    [BgView addSubview:la];
+    return BgView;
 }
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if(tableView==_tableView&&[_dataArray[section] count]>0)
     {
-
-    return 20;
+        return 30;
     }
     return 0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 77;
+    return 50;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -377,12 +391,12 @@
         }
     }
 }
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-{
-    //返回正确的下标，Title是被选中的索引标题，index是索引标题数组的下标
-    //return -1不会引起滚动
-    return  index-1;
-}
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+//{
+//    //返回正确的下标，Title是被选中的索引标题，index是索引标题数组的下标
+//    //return -1不会引起滚动
+//    return  index-1;
+//}
 /*
  #pragma mark - Navigation
  

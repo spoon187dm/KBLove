@@ -76,8 +76,10 @@
             [self showAlertWithTitle:@"温馨提示" AndMessage:@"两次输入密码不一致"];
             return;
             }
+        [KBFreash startRefreshWithTitle:@"注册中..." inView:self.view];
         //信息没有错误 进行 注册
-        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,_registertype,_userNameTextfiled.text,_passwordTextFiled.text] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+            [KBFreash StopRefreshinView:self.view];
             if (IsSuccess) {
                //注册成功
                 if ([result isKindOfClass:[NSDictionary class]]) {
@@ -88,6 +90,13 @@
                     NSString *token=[dic objectForKey:@"token"];
                     NSString *user_id=[dic objectForKey:@"user_id"];
                     if ([ret intValue]) {
+                        if([ret intValue]==2)
+                        {
+                            [UIAlertView showWithTitle:@"提示" Message:[result objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                                
+                            }];
+                            return ;
+                        }
                         //注册成功 存储信息 跳转到 成功界面
                         KBUserInfo *user=[KBUserInfo sharedInfo];
                         user.token=token;
