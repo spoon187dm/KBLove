@@ -107,7 +107,7 @@
         
          //[_dataArray addObject:[NSMutableArray array]];
     }
-    if (!_selectArray) {
+    if (!_selectArray){
         _selectArray=[[NSMutableArray alloc]init];
     }
     if (!_resultArray) {

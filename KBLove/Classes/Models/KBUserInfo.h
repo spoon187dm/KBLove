@@ -19,6 +19,7 @@
 //用户唯一标识 addByDX
 
 @property (nonatomic, copy) NSString *token;
+@property (nonatomic, copy) NSString *ios_token;
 @property (nonatomic, copy) NSString *phone;
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *qqId;

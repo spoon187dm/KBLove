@@ -11,6 +11,8 @@
 #import "MessageCell.h"
 #import "CircleSettingViewController.h"
 #import "KBHttpRequestTool.h"
+#import "AFNetworking.h"
+
 @interface CircleTalkViewController ()
 {
     KBTalkEnvironmentType _talkType;
@@ -51,6 +53,7 @@
 }
 - (void)setTalkEnvironment:(KBTalkEnvironmentType)type andModel:(id )model
 {
+    _talkType=type;
     switch (_talkType) {
         case KBTalkEnvironmentTypeCircle:{
             _circle_info=(KBCircleInfo *)model;
@@ -70,46 +73,132 @@
     //self.automaticallyAdjustsScrollViewInsets=YES;
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
-    self.navigationItem.titleView=[self makeTitleLable:_circle_info.name AndFontSize:18 isBold:NO];
+    switch (_talkType) {
+        case KBTalkEnvironmentTypeCircle:
+            self.navigationItem.titleView=[self makeTitleLable:_circle_info.name AndFontSize:18 isBold:NO];
+            break;
+        case KBTalkEnvironmentTypeFriend:
+            self.navigationItem.titleView=[self makeTitleLable:_friend_info.name AndFontSize:18 isBold:NO];
+            break;
+
+            
+        default:
+            break;
+    }
+    
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     _sendMsgView=[[[NSBundle mainBundle]loadNibNamed:@"SendMessageView" owner:self options:nil]lastObject];
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
+    NSInteger tak=_talkType;
+    __weak KBFriendInfo *finf=_friend_info;
     [_sendMsgView setBlock:^(KBMessageInfo *msg) {
         //发送相应消息
         msg.FromUser_id=[KBUserInfo sharedInfo].user_id;
-        msg.TalkEnvironmentType=_talkType;
+        msg.TalkEnvironmentType=tak;
         msg.time=[NSString TimeJabLong];
         
         if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeFriend)
         {
-            //给好友发送信息
-            
-            
-        }else if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeCircle)
-        {
-            
-            //发送给圈子
+            //发送给朋友?user_id=%@&token=%@&friend_id=%@&content=%@&type=%d
             KBUserInfo *user=[KBUserInfo sharedInfo];
-            NSString *sendStr=[Circle_SendCircleMessage_URL,user.user_id,user.token,[_circle_info.id stringValue],msg.text,1];
-            [[KBHttpRequestTool sharedInstance]request:sendStr requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
-                if (IsSuccess) {
-                    NSLog(@"SendSucess");
-                    [_dataArray addObject:msg];
-                    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-                    msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-                    msginf.FromUser_id=@"14022";
-                    msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-                    msginf.text=@"圈子测试返回信息";
-                    [_dataArray addObject:msginf];
-                    [_tableView reloadData];
-                    if (_dataArray.count) {
-                        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+           // NSLog(@"%@",user.user_id);
+            __strong KBFriendInfo *sfinf=finf;
+            NSDictionary *dic1=@{@"user_id":user.user_id,@"token":user.token,@"friend_id":sfinf.id ,@"content":msg.text,@"type":@"1",@"app_name":@"M2616_BD"};
+            NSLog(@"%@",[dic1 objectForKey:@"user_id"]);
+            AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
+            [manager POST:SENDMSGTOFRIEND_URL parameters:dic1 constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+                [formData appendPartWithFormData:[msg.text dataUsingEncoding:NSUTF8StringEncoding] name:@"file"];
+            } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                if([responseObject isKindOfClass:[NSDictionary class]])
+                {
+                    NSNumber *ret=[responseObject objectForKey:@"ret"];
+                    if ([ret integerValue]==1) {
+                        //发送成功
+                        NSLog(@"SendSucess");
+                        [_dataArray addObject:msg];
+                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeFriend;
+                        msginf.FromUser_id=@"14022";
+                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
+                        msginf.text=@"朋友测试返回信息";
+                        [_dataArray addObject:msginf];
+                        [_tableView reloadData];
+                        if (_dataArray.count) {
+                            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+                        }
+                        
+                    }else
+                    {
+                        NSLog(@"%@",[responseObject objectForKey:@"desc"]);
+                        [UIAlertView showWithTitle:@"提示" Message:[responseObject objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            
+                        }];
+                        
                     }
-
+                }else
+                {
+                    [UIAlertView showWithTitle:@"提示" Message:@"数据解析错误" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                        
+                    }];
+                    
                 }
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [UIAlertView showWithTitle:@"提示" Message:error.localizedDescription cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                    
+                }];
+                
             }];
 
+        }else if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeCircle)
+        {
+            //发送给圈子
+            KBUserInfo *user=[KBUserInfo sharedInfo];
+            NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[_circle_info.id stringValue],@"content":msg.text,@"type":@"1",@"app_name":@"M2616_BD"};
 
+            AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
+            [manager POST:[Circle_SendCircleMessage_URL] parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+                [formData appendPartWithFormData:[msg.text dataUsingEncoding:NSUTF8StringEncoding] name:@"file"];
+            } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            if([responseObject isKindOfClass:[NSDictionary class]])
+                {
+                    NSNumber *ret=[responseObject objectForKey:@"ret"];
+                    if ([ret integerValue]==1) {
+                        //发送成功
+                        NSLog(@"SendSucess");
+                        [_dataArray addObject:msg];
+                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
+                        msginf.FromUser_id=@"14022";
+                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
+                        msginf.text=@"圈子测试返回信息";
+                        [_dataArray addObject:msginf];
+                        [_tableView reloadData];
+                        if (_dataArray.count) {
+                            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+                        }
+                        
+                    }else
+                    {
+                        NSLog(@"%@",[responseObject objectForKey:@"desc"]);
+                        [UIAlertView showWithTitle:@"提示" Message:[responseObject objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            
+                        }];
+                        
+                    }
+                }else
+                {
+                    [UIAlertView showWithTitle:@"提示" Message:@"数据解析错误" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                        
+                    }];
+                    
+                }
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [UIAlertView showWithTitle:@"提示" Message:error.localizedDescription cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                    
+                }];
+
+            }];
+        
         }
     } AndDelegate:self];
 

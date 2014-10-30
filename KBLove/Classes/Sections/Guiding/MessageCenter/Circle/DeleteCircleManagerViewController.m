@@ -85,8 +85,16 @@
                         [_allData removeObject:finf];
                     }
                     [_dataArray removeAllObjects];
-                    [self ConfigData:_allData];
+                    if (!_dataArray) {
+                        _dataArray=[[NSMutableArray alloc]init];
+                        //创建子数组
+                        for (int i=0; i<28; i++) {
+                            [_dataArray addObject:[NSMutableArray array]];
+                        }
+                    }
                     [_selectArray removeAllObjects];
+                    [self ConfigData:_allData];
+
                     
                    // [self loadData];
                 }else
@@ -175,21 +183,26 @@
     for (int i=0; i<array.count; i++) {
         BOOL IsIn=NO;
         KBFriendInfo *finfo=array[i];
+        if ([finfo.id integerValue]==[[KBUserInfo sharedInfo].user_id integerValue]) {
+            [_dataArray[0] addObject:finfo];
+            
+        }else{
         
         for (int j='A'; j<='Z'; j++) {
             NSString *sotr=[[PinYinForObjc chineseConvertToPinYin:finfo.name] lowercaseString];
             if ([sotr hasPrefix:[[NSString stringWithFormat:@"%c",j] lowercaseString]]) {
 //                NSString *fid=[NSString stringWithFormat:@"%@",finfo.id];
-//                NSString *str
-                if ([finfo.id integerValue]==[[KBUserInfo sharedInfo].user_id integerValue]) {
-                    [_dataArray[0] addObject:finfo];
-                }
-                [_dataArray[j-'A'+1] addObject:finfo];
+//                KBUserInfo *user=[[KBUserInfo alloc]init];
+//                NSLog(@"%ld",[finfo.id integerValue]);
+//                NSLog(@"%ld",[[KBUserInfo sharedInfo].user_id integerValue]);
+                //NSString *str
+                                [_dataArray[j-'A'+1] addObject:finfo];
                 IsIn=YES;
             }
         }
         if (!IsIn) {
             [[_dataArray lastObject] addObject:finfo];
+        }
         }
     }
     [_tableView reloadData];
@@ -230,6 +243,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(indexPath.section!=0){
     KBFriendInfo *finf=_dataArray[indexPath.section][indexPath.row];
     BOOL isc=[_selectArray containsObject:finf];
     if (!isc) {
@@ -239,6 +254,11 @@
         [_selectArray removeObject:finf];
     }
     [_tableView reloadData];
+    }else
+    {
+        
+    }
+   
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {

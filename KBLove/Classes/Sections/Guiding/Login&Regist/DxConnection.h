@@ -28,11 +28,11 @@ typedef NS_ENUM(NSInteger, RegisterType)
 //添加圈子成员
 #define  Circle_AddMember_URL NSString stringWithFormat:@"%@/api/group.member.add.do?user_id=%@&token=%@&group_id=%@&group_member=%@",SERVER_URL
 //删除成员信息
-#define  Circle_DeleteMember_URL NSString stringWithFormat:@"%@/api/group.member.del.do?user_id=%@&token=%@group_id=%@&group_member=%@",SERVER_URL
+#define  Circle_DeleteMember_URL NSString stringWithFormat:@"%@/api/group.member.del.do?user_id=%@&token=%@&group_id=%@&group_member=%@",SERVER_URL
 //获得所有群成员
 #define  Circle_GetAllMember_URL NSString stringWithFormat:@"%@/api/group.list.do?user_id=%@&token=%@&group_id=%@",SERVER_URL
 //发送群消息
-#define  Circle_SendCircleMessage_URL NSString stringWithFormat:@"%@/api/group.send.message.do?user_id=%@&token=%@&group_id=%@&content=%@&type=%d",SERVER_URL
+#define  Circle_SendCircleMessage_URL NSString stringWithFormat:@"%@/api/group.send.message.do",SERVER_URL
 
 
 #define ScreenWidth  self.view.frame.size.width
