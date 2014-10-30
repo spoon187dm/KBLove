@@ -43,6 +43,8 @@
 		BC5A136819F7644900DDD36C /* Circle_ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */; };
 		BC5A136B19F7D1BE00DDD36C /* Circle_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136A19F7D1BE00DDD36C /* Circle_setting.png */; };
 		BC5D8C2419F8B1D7005AEC7C /* DXSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */; };
+		BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5F373B1A025AE20088D0AB /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BC5F37401A025BC30088D0AB /* KBScoketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5F373F1A025BC30088D0AB /* KBScoketManager.m */; };
 		BC71103F19F62E8400485D6B /* KBCircleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71103E19F62E8400485D6B /* KBCircleInfo.m */; };
 		BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6DB19F9538C00692533 /* CircledeleteFriendCell.m */; };
 		BC71E6DE19F9538C00692533 /* CircledeleteFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC71E6DC19F9538C00692533 /* CircledeleteFriendCell.xib */; };
@@ -778,6 +780,10 @@
 		BC5A136A19F7D1BE00DDD36C /* Circle_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle_setting.png; sourceTree = "<group>"; };
 		BC5D8C2219F8B1D7005AEC7C /* DXSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXSwitch.h; path = ../../Sections/Guiding/MessageCenter/Circle/DXSwitch.h; sourceTree = "<group>"; };
 		BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXSwitch.m; path = ../../Sections/Guiding/MessageCenter/Circle/DXSwitch.m; sourceTree = "<group>"; };
+		BC5F373A1A025AE20088D0AB /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		BC5F373B1A025AE20088D0AB /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		BC5F373E1A025BC30088D0AB /* KBScoketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBScoketManager.h; sourceTree = "<group>"; };
+		BC5F373F1A025BC30088D0AB /* KBScoketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBScoketManager.m; sourceTree = "<group>"; };
 		BC71103D19F62E8400485D6B /* KBCircleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBCircleInfo.h; sourceTree = "<group>"; };
 		BC71103E19F62E8400485D6B /* KBCircleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBCircleInfo.m; sourceTree = "<group>"; };
 		BC71E6DA19F9538C00692533 /* CircledeleteFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircledeleteFriendCell.h; sourceTree = "<group>"; };
@@ -1669,6 +1675,24 @@
 			path = Circle;
 			sourceTree = "<group>";
 		};
+		BC5F37391A025AE20088D0AB /* TCPScoket */ = {
+			isa = PBXGroup;
+			children = (
+				BC5F373A1A025AE20088D0AB /* AsyncSocket.h */,
+				BC5F373B1A025AE20088D0AB /* AsyncSocket.m */,
+			);
+			path = TCPScoket;
+			sourceTree = "<group>";
+		};
+		BC5F373D1A025BC30088D0AB /* KBSCoketManager */ = {
+			isa = PBXGroup;
+			children = (
+				BC5F373E1A025BC30088D0AB /* KBScoketManager.h */,
+				BC5F373F1A025BC30088D0AB /* KBScoketManager.m */,
+			);
+			path = KBSCoketManager;
+			sourceTree = "<group>";
+		};
 		BC9DE24719ED44FB00916F9B /* Device-data */ = {
 			isa = PBXGroup;
 			children = (
@@ -2501,6 +2525,7 @@
 		F9E24F4F19ED725900D83FEF /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				BC5F37391A025AE20088D0AB /* TCPScoket */,
 				F9A38FD319F61B1B0043594F /* PNChart */,
 				BCB42E1D19F1425B00A141C3 /* fmdb */,
 				F9E24F5019ED725900D83FEF /* PinYin */,
@@ -2533,6 +2558,7 @@
 		F9E24F6819ED729700D83FEF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC5F373D1A025BC30088D0AB /* KBSCoketManager */,
 				BCA6060919FFCBFC00D967ED /* DXSwitch */,
 				BCB42E1619F1415600A141C3 /* DataBase */,
 				F9E24F6919ED729700D83FEF /* DAContextMenuTableViewController */,
@@ -4953,6 +4979,7 @@
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
+				BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */,
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
@@ -5005,6 +5032,7 @@
 				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
+				BC5F37401A025BC30088D0AB /* KBScoketManager.m in Sources */,
 				BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */,
 				BC5D8C2419F8B1D7005AEC7C /* DXSwitch.m in Sources */,
 				BC5A136819F7644900DDD36C /* Circle_ShareViewController.m in Sources */,
