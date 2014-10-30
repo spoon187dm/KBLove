@@ -9,6 +9,7 @@
 #import "AlarmCell.h"
 #import "KBAlarmInfoView.h"
 #import "KBAlarm.h"
+#import "TableMenuViewController.h"
 @implementation AlarmCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -68,6 +69,8 @@
 //    view.frame = CGRectMake(20, 0, view.width, view.height);
 //    [view startMyEdit:edit];
     view.selectCicleImageView.hidden = !edit;
+//    UITableView *tableView = self.superview;
+//    __block TableMenuViewController *tableViewMenu = tableView.delegate;
 }
 
 - (void)setMySelected:(BOOL)selected{

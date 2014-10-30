@@ -19,7 +19,7 @@ typedef void (^boolReturnBlock)(BOOL isSuccess);
  用于设备列表获取回调
  
  @param isSuccess   是否成功
- @param deviceArray 设备列表
+ @param deviceArray 列表
  */
-typedef void (^devicesListLoadBlock)(BOOL isSuccess, NSArray *deviceArray);
+typedef void (^ListLoadBlock)(BOOL isSuccess, NSArray *resultArray);
 #endif

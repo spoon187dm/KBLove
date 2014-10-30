@@ -19,4 +19,6 @@ typedef enum{
 
 @property(nonatomic, assign) IsAllowScroll isAllowScroll;
 @property(nonatomic, assign) NSInteger editingCellNum;
+
+- (void)hideMenuActive:(BOOL)aninated;
 @end

@@ -18,7 +18,7 @@
 
 @property (nonatomic, copy) NSString *device_sn;
 @property (nonatomic, copy) NSNumber *radius;
-@property (nonatomic, copy) id center;
+@property (nonatomic, assign) CGPoint centerPoint;
 @property (nonatomic, copy) NSNumber *type;
 @property (nonatomic, copy) NSNumber *out;
 @property (nonatomic, copy) id region;
