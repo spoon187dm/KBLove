@@ -35,7 +35,7 @@ static KBAlarmManager *manager = nil;
                              @"device_sn":deviceSn,
                              @"token":token
                              };
-    [[KBHttpRequestTool sharedInstance]request:Url_GetAlarmInfo requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+    [[KBHttpRequestTool sharedInstance]request:Url_GetAlarmList requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
         
         if (IsSuccess) {
             NSMutableArray *resultArray = [NSMutableArray array];
@@ -72,7 +72,7 @@ static KBAlarmManager *manager = nil;
                              
                              @"token":token
                              };
-    [[KBHttpRequestTool sharedInstance]request:Url_DeleteAlarmInfo requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+    [[KBHttpRequestTool sharedInstance]request:Url_EditAlarmInfo requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
         
     }];
 }

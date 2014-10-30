@@ -10,6 +10,7 @@
 #import "KBDevices.h"
 #import "DeviceInfoView.h"
 #import "KBDevicesStatus.h"
+#import <UIImageView+AFNetworking.h>
 @interface DevicesCell (){
 
 }
@@ -75,9 +76,15 @@
 
 - (void)setData:(KBDevices *)devices{
     DeviceInfoView *view = (DeviceInfoView *)self.cellView;
+    view.deviceTypeImageView.image = [devices getDeviceTypeImage];
+    view.alarmStatusImageView.image = [devices getDeviceAlarmStatusImage];
+    view.deviceMoveStatuImageView.image = [devices isMoving]?kImage_deviceStatusActive:kImage_deviceStatusDeactive;
     view.deveiceNameLabel.text = devices.name;
     view.deviceSnLabel.text = devices.sn;
-    view.deviceLocationLabel.text = @"";
+    view.deviceLocationLabel.text = @"locate";
+    
+    [view.deviceImageView setImageWithURL:[NSURL URLWithString:kImageUrlForName(devices.icon)] placeholderImage:[devices getDefaultHeadImage]];
+    WLLog(@"device head image url:%@",kImageUrlForName(devices.icon));
     NSDateFormatter *formate = [[NSDateFormatter alloc]init];
     [formate setDateFormat:@"hh-mm"];
     NSDate *dateString = [NSDate dateWithTimeIntervalSince1970:[devices.devicesStatus.systime floatValue]];

@@ -24,7 +24,8 @@
     #import "VendorsMacro.h"
     #import "UtilsMacro.h"
     #import "BlockMacro.h"
-    //加载界面 董新扩展 
+    #import "ImageMacro.h"
+    //加载界面 董新扩展
     #import "KBFreash.h"
 
 #endif

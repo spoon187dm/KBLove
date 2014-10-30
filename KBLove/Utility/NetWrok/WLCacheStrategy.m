@@ -82,7 +82,7 @@ static WLCacheStrategy *strategy = nil;
 
 - (void)read{
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    _cacheDirectory = [ud objectForKey:@"_wlcacheDirectory"];
+    _cacheDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"tmp/WLCache"];
     _cacheEffectTimeTravel = [[ud objectForKey:@"wlcacheEffectTimeTravel"] floatValue];
     _isWifyOnly = NO;
     _isSelfDelete = NO;

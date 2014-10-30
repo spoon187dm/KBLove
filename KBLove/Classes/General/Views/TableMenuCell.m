@@ -97,6 +97,10 @@
     }
     self.cellView = [self ViewForCellContent];
     [self.contentView addSubview:cellView];
+    if (self.menuView) {
+        [self.menuView removeFromSuperview];
+        self.menuView = nil;
+    }
     menuView = [self menuViewForMenuCount:menuData.count];
     [self.contentView insertSubview:menuView belowSubview:self.cellView];
     self.menuViewHidden = YES;
@@ -110,13 +114,6 @@
         [menuActionDelegate deleteCell:self];
     }
     [self.menuActionDelegate menuChooseIndex:indexpathNum.row menuIndexNum:btn.tag];
-    
-//    UITableViewCell *cell;
-//    if (ISIOS7) {
-//        cell = (UITableViewCell *)btn.superview.superview;
-//    }else{
-//        cell = (UITableViewCell *)btn.superview;
-//    }
 }
 
 -(void)cellPanGes:(UIPanGestureRecognizer *)panGes{
