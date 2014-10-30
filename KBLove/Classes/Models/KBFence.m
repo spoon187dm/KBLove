@@ -10,4 +10,11 @@
 
 @implementation KBFence
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    if ([key isEqualToString:@"center"]) {
+        _centerPoint.x = [[value objectAtIndex:0] floatValue];
+        _centerPoint.y = [[value objectAtIndex:1] floatValue];
+    }
+}
+
 @end

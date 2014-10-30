@@ -10,7 +10,7 @@
 #import "FriendsListCell.h"
 #import "KBFriendInfo.h"
 #import "KBHttpRequestTool.h"
-
+#import "CircleTalkViewController.h"
 @interface FriendsListTableViewController ()
 {
     NSMutableArray *_friendsListArray;//好友列表数据源
@@ -93,6 +93,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
+    [cvc setTalkEnvironment:KBTalkEnvironmentTypeFriend andModel:_friendsListArray[indexPath.row]];
+    [self.navigationController pushViewController:cvc animated:YES];
 }
 
 //row中删除按钮和设置按钮的代理方法

@@ -52,7 +52,7 @@ static NSString *const FriendList_URL = @"http://118.194.192.104:8080/api/friend
 static NSString *const SEARCHFRIEND_URL = @"http://118.194.192.104:8080/api/friend.res.do?user_id=%@&token=%@&friend_name=%@&cmd=%d";
 //发送验证信息
 static NSString *const VERIFYMESSAGE_URL = @"http://118.194.192.104:8080/api/friend.verify.message.do?user_id=%@&token=%@&friend_id=%@&is_pass=1&cmd=%d";
-
+static NSString *const SENDMSGTOFRIEND_URL = @"http://118.194.192.104:8080/api/friend.send.message.do";
 
 /**
  @Author block, 10-14 15:10
@@ -63,11 +63,27 @@ static NSString *const VERIFYMESSAGE_URL = @"http://118.194.192.104:8080/api/fri
 
 static int const kPageNumber = 1;
 static int const kPageSize = 20;
-//获取设备列表
+/**
+ 获取设备信息接口
+ */
+static NSString * const Url_GetDeviceInfo = @"http://118.194.192.104:8080/api/device.get.do";
+/**
+ 获取设备列表接口
+ */
 static NSString * const Url_GetDeviceList = @"http://118.194.192.104:8080/api/device.list.do";
-//获取设备状态
-static NSString * const Url_GetDeviceStatus = @"http://118.194.192.104:8080/api/get.last.do";
-//获取设备警告
-static NSString * const Url_GetAlarmInfo = @"http://118.194.192.104:8080/api/alarm.list.do";
-static NSString * const Url_DeleteAlarmInfo = @"http://118.194.192.104:8080/api/alarm.edit.do";
+/**
+ 获取设备状态接口
+ */
+static NSString * const Url_GetDeviceStatus = @"http://118.194.192.104:8080/api//get.status.do";
+/**
+ 获取设备警告接口
+ */
+static NSString * const Url_GetAlarmList = @"http://118.194.192.104:8080/api/alarm.list.do";
+
+static NSString * const Url_GetAllAlarmList = @"http://118.194.192.104:8080/api/alarm.all.do";
+
+/**
+ 修改围栏信息接口
+ */
+static NSString * const Url_EditAlarmInfo = @"http://118.194.192.104:8080/api/alarm.edit.do";
 #endif
