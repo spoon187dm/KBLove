@@ -72,6 +72,8 @@
 {
     //self.automaticallyAdjustsScrollViewInsets=YES;
     //返回
+    //添加消息通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getaMessage:) name:KBMessageTalkNotification object:nil];
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
     switch (_talkType) {
         case KBTalkEnvironmentTypeCircle:
@@ -115,17 +117,18 @@
                     if ([ret integerValue]==1) {
                         //发送成功
                         NSLog(@"SendSucess");
-                        [_dataArray addObject:msg];
-                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeFriend;
-                        msginf.FromUser_id=@"14022";
-                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-                        msginf.text=@"朋友测试返回信息";
-                        [_dataArray addObject:msginf];
-                        [_tableView reloadData];
-                        if (_dataArray.count) {
-                            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-                        }
+//                        [_dataArray addObject:msg];
+//                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+//                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeFriend;
+//                        msginf.MessageType=KBMessageTypeTalkText;
+//                        msginf.FromUser_id=@"14022";
+//                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
+//                        msginf.text=@"朋友测试返回信息";
+//                        [_dataArray addObject:msginf];
+//                        [_tableView reloadData];
+//                        if (_dataArray.count) {
+//                            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//                        }
                         
                     }else
                     {
@@ -165,17 +168,14 @@
                     if ([ret integerValue]==1) {
                         //发送成功
                         NSLog(@"SendSucess");
-                        [_dataArray addObject:msg];
-                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-                        msginf.FromUser_id=@"14022";
-                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-                        msginf.text=@"圈子测试返回信息";
-                        [_dataArray addObject:msginf];
-                        [_tableView reloadData];
-                        if (_dataArray.count) {
-                            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-                        }
+//                        [_dataArray addObject:msg];
+//                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+//                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
+//                        msginf.MessageType=KBMessageTypeTalkText;
+//                        msginf.FromUser_id=@"14022";
+//                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
+//                        msginf.text=@"圈子测试返回信息";
+//                        [_dataArray addObject:msginf];
                         
                     }else
                     {
@@ -229,9 +229,28 @@
         
     }
 }
+#pragma mark - 收信息
+- (void)getaMessage:(NSNotification *)not
+{
+    if (_talkType==KBTalkEnvironmentTypeCircle) {
+       KBMessageInfo *msginf=[[KBDBManager shareManager] getLastMsgWithEnvironment:_talkType AndFromID:[_circle_info.id stringValue]];
+        [_dataArray addObject:msginf];
+        
+    }else
+    {
+        KBMessageInfo *msginf=[[KBDBManager shareManager] getLastMsgWithEnvironment:_talkType AndFromID:_friend_info.id ];
+        [_dataArray addObject:msginf];
+    }
+    [_tableView reloadData];
+    if (_dataArray.count) {
+        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+
+}
 - (void)dealloc
 {
     [_sendMsgView removeObserver:self forKeyPath:@"frame"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:KBMessageTalkNotification object:nil];
 }
 #pragma mark - 设置界面
 - (void)SettingClick:(UIButton *)btn

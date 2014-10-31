@@ -63,6 +63,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Scoket登陆服务器
+    [[KBScoketManager ShareManager]startScoket];
+
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES];
     [self setupData];

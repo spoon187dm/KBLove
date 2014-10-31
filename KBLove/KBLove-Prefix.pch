@@ -27,5 +27,6 @@
     #import "ImageMacro.h"
     //加载界面 董新扩展
     #import "KBFreash.h"
-
+    #import "KBScoketManager.h"
+    #import "KBDBManager.h"
 #endif

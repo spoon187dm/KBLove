@@ -17,4 +17,19 @@
 {
     
 }
+- (id)init
+{
+    self=[super init];
+    if (self) {
+        _TalkEnvironmentType=0;
+        _MessageType=0;
+        _status=0;
+        _Circle_id=@"";
+        _FromUser_id=@"";
+        _ToUser_id=@"";
+        _text=@"";
+        _time=0;
+    }
+    return self;
+}
 @end

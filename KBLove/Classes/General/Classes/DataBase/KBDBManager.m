@@ -30,7 +30,8 @@ static KBDBManager *manager;
         _dataBase=[[FMDatabase alloc]initWithPath:path];
         if ([_dataBase open]) {
             //创建消息表
-            NSString *createMsgTable=@"create table if not exists KBMessageList(TalkEnvironmentType integer,MessageType integer,status integer,Circle_id char(255),FromUser_id char(255),ToUser_id char(255),text char(255),image varchar(2000),time bigint primary key)";
+            NSString *createMsgTable=@"create table if not exists KBMessageList(TalkEnvironmentType integer,MessageType integer,status integer,Circle_id char(255),FromUser_id char(255),ToUser_id char(255),text char(255),image varchar(2000),time  bigint primary key)";
+            NSLog(@"%@",createMsgTable);
             if(![_dataBase executeUpdate:createMsgTable]){
                 NSLog(@"create KBMessageList error:%@!",_dataBase.lastErrorMessage);
             }
@@ -45,8 +46,14 @@ static KBDBManager *manager;
     if ([obj isKindOfClass:[KBMessageInfo class]]) {
         KBMessageInfo *msgModel=(KBMessageInfo *)obj;
         NSString *insert=@"insert into KBMessageList values(?,?,?,?,?,?,?,?,?)";
-        NSString *imageStr=[[NSString alloc]initWithData:UIImagePNGRepresentation(msgModel.image) encoding:NSUTF8StringEncoding];
-        if (![_dataBase executeUpdate:insert,msgModel.TalkEnvironmentType,msgModel.MessageType,msgModel.status,msgModel.Circle_id,msgModel.FromUser_id,msgModel.ToUser_id,msgModel.text,imageStr,msgModel.time]) {
+        NSString *imageStr;
+       // NSInteger s=1;
+        if (msgModel.image) {
+          imageStr=[[NSString alloc]initWithData:UIImagePNGRepresentation(msgModel.image) encoding:NSUTF8StringEncoding];
+        }
+        imageStr=@"";
+        //NSLog(@"");
+        if (![_dataBase executeUpdate:insert,[NSNumber numberWithInteger:msgModel.TalkEnvironmentType],[NSNumber numberWithInteger:msgModel.MessageType],[NSNumber numberWithInteger:msgModel.status],msgModel.Circle_id,msgModel.FromUser_id,msgModel.ToUser_id,msgModel.text,imageStr,[NSNumber numberWithLongLong:msgModel.time]]) {
             NSLog(@"insert into KBMessageList error:%@!",_dataBase.lastErrorMessage);
         }
     }
@@ -79,6 +86,34 @@ static KBDBManager *manager;
     }
     
 }
+//获取最后一条聊天数据
+- (KBMessageInfo *)getLastMsgWithEnvironment:(KBTalkEnvironmentType)talkType AndFromID:(NSString *)user_id
+{
+    NSMutableArray *resultarr=[[NSMutableArray alloc]init];
+    
+    NSString *selectSQL;
+    if (talkType==KBTalkEnvironmentTypeCircle) {
+    selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and Circle_id=? order by time desc";
+    }else{
+    selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and FromUser_id=? order by time desc";
+    }
+    FMResultSet *set=[_dataBase executeQuery:selectSQL,[NSNumber numberWithInteger:talkType],user_id];
+    if ([set next]) {
+        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+        msginf.TalkEnvironmentType=[set intForColumn:@"TalkEnvironmentType"];
+        msginf.MessageType=[set intForColumn:@"MessageType"];
+        msginf.status=[set intForColumn:@"status"];
+        msginf.Circle_id=[set stringForColumn:@"Circle_id"];
+        msginf.FromUser_id=[set stringForColumn:@"FromUser_id"];
+        msginf.ToUser_id=[set stringForColumn:@"ToUser_id"];
+        msginf.text=[set stringForColumn:@"text"];
+        msginf.image=[UIImage imageWithData:[[set stringForColumn:@"image"] dataUsingEncoding:NSUTF8StringEncoding]];
+        msginf.time=[set longLongIntForColumn:@"time"];
+        [resultarr addObject:msginf];
+    }
+    return  [resultarr lastObject];
+
+}
 //获取与某人的聊天信息
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number
 {
@@ -100,4 +135,5 @@ static KBDBManager *manager;
     }
     return  resultarr;
 }
+
 @end
