@@ -15,6 +15,12 @@
  该头文件主要用于定义一些常用工具宏
  */
 
+#if DEBUG
+#define WLLog(fmt, ...) NSLog(fmt, ##__VA_ARGS__)
+#else
+#define WLLog(fmt, ...)
+#endif
+
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 

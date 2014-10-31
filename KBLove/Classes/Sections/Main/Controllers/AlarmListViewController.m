@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     self.isAllowScroll = TableIsForbiddenScroll;
     [self loadData];
-    [self.view setBackgroundColor:SYSTEM_COLOR];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +63,7 @@
 }
 
 - (IBAction)click_menu:(id)sender {
+    [self hideMenuActive:YES];
     _editing = !_editing;
     [self.tableView reloadData];
     [self changeNavigationItem];

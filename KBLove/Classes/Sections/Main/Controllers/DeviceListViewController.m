@@ -13,6 +13,7 @@
 #import "KBUserManager.h"
 #import "DropListView.h"
 #import "DeviceDetailViewController.h"
+#import "KBDeviceManager.h"
 @interface DeviceListViewController (){
     NSMutableArray *_dataArray;
     DeviceTableHeadView *_headView;
@@ -56,9 +57,9 @@
 }
 
 - (void)loadData{
-    [[KBUserManager sharedAccount] getDevicesArrayWithpageNumber:1 pageSize:10 block:^(BOOL isSuccess, NSArray *deviceArray) {
+    [KBDeviceManager getDeviceList:^(BOOL isSuccess, NSArray *resultArray) {
         if (isSuccess) {
-            _dataArray = [deviceArray mutableCopy];
+            _dataArray = [resultArray mutableCopy];
             [self.tableView reloadData];
         }
     }];

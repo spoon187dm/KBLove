@@ -89,8 +89,9 @@
     }
     KBUserInfo *user=[KBUserInfo sharedInfo];
     NSLog(@"%@",[Circle_URL,user.user_id,user.token]);
-    
+    [KBFreash startRefreshWithTitle:@"努力加载中..." inView:self.view];
     [[KBHttpRequestTool sharedInstance] request:[Circle_URL,user.user_id,user.token] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+        [KBFreash StopRefreshinView:self.view];
         if (IsSuccess) {
             if ([result isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *dic=(NSDictionary *)result;

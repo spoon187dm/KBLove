@@ -19,6 +19,14 @@
     return self;
 }
 
+- (void)layoutSubviews{
+
+    _deviceImageView.layer.masksToBounds = YES;
+    _deviceImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _deviceImageView.layer.borderWidth = 1;
+    _deviceImageView.layer.cornerRadius = _deviceImageView.width/2;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

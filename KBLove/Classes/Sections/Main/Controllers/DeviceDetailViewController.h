@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class KBDevices;
+@class KBDevicesStatus;
 @interface DeviceDetailViewController : UIViewController
 
+@property (nonatomic, strong) KBDevicesStatus *deviceStatus;
 @property (nonatomic, strong) KBDevices *device;
 
 - (IBAction)click_back:(UIButton *)sender;

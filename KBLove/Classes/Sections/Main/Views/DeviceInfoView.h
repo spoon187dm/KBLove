@@ -10,6 +10,9 @@
 
 @interface DeviceInfoView : UIView
 @property (weak, nonatomic) IBOutlet UIImageView *deviceImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *deviceTypeImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *alarmStatusImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *deviceMoveStatuImageView;
 @property (weak, nonatomic) IBOutlet UILabel *deveiceNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deviceSnLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deviceLocationLabel;
