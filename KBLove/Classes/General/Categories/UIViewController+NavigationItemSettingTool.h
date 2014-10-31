@@ -11,6 +11,8 @@
 #define CustomNavigationitemtag 983364
 @interface UIViewController (NavigationItemSettingTool)
 
+- (void)changeNavigationBarToClear;
+
 - (void)addCustomNavigationItemWithImageName:(NSString *)imageName;
 
 - (void)setNavigationTitle:(NSString *)title;

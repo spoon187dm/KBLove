@@ -51,9 +51,21 @@
     
     [RACObserve(_dropListView, index) subscribeNext:^(NSNumber *index){
         NSLog(@"选择 %@",index);
+        if ([index isEqualToNumber:@0] && _isDrop) {
+            UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
+            UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"BoundAddEquipmentController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            
+        }
+        self.isDrop = NO;
+        self.dropListView.hidden = YES;
         
     }];
     self.view.backgroundColor = SYSTEM_COLOR;
+    
+    [self changeNavigationBarToClear];
+    
 }
 
 - (void)loadData{

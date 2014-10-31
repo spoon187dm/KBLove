@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Capcare-->
+        <!--Main View Controller - Capcare-->
         <scene sceneID="amM-zK-BbY">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fIh-PB-heh" customClass="MainViewController" sceneMemberID="viewController">
@@ -147,7 +146,7 @@
             </objects>
             <point key="canvasLocation" x="-93" y="-891"/>
         </scene>
-        <!--设备-->
+        <!--Device Detail View Controller - 设备-->
         <scene sceneID="Ku5-Hq-UMg">
             <objects>
                 <viewController storyboardIdentifier="DeviceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r5l-1J-MQv" customClass="DeviceDetailViewController" sceneMemberID="viewController">
@@ -327,9 +326,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFe-I8-WbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517" y="1418"/>
+            <point key="canvasLocation" x="15" y="1418"/>
         </scene>
-        <!--报警列表-->
+        <!--Alarm List View Controller - 报警列表-->
         <scene sceneID="csz-8w-I4h">
             <objects>
                 <tableViewController storyboardIdentifier="AlarmListViewController" id="OQh-V9-hkM" customClass="AlarmListViewController" sceneMemberID="viewController">
@@ -358,7 +357,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="hzE-Oe-yON">
                             <view key="customView" contentMode="scaleToFill" id="jUI-2P-w9c">
-                                <rect key="frame" x="234" y="5" width="70" height="30"/>
+                                <rect key="frame" x="234" y="7" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="81D-YL-EBx">
@@ -373,16 +372,16 @@
                                             <action selector="click_menu:" destination="OQh-V9-hkM" eventType="touchUpInside" id="N0c-Br-iIc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pPf-ab-Pgc">
-                                        <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EXy-5S-mnK">
+                                        <rect key="frame" x="38" y="0.0" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" backgroundImage="icon_home.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="click_home:" destination="OQh-V9-hkM" eventType="touchUpInside" id="Akl-jl-erM"/>
-                                            <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="gb8-Nc-OPN"/>
+                                            <action selector="click_home:" destination="OQh-V9-hkM" eventType="touchUpInside" id="MER-eA-U3i"/>
+                                            <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="Uiw-vz-TbM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -393,9 +392,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM6-gE-jVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1248" y="1357"/>
+            <point key="canvasLocation" x="-668" y="1357"/>
         </scene>
-        <!--设备列表-->
+        <!--Device List View Controller - 设备列表-->
         <scene sceneID="3fY-iS-cK1">
             <objects>
                 <tableViewController storyboardIdentifier="DeviceListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y8Q-6q-USb" customClass="DeviceListViewController" sceneMemberID="viewController">
@@ -549,11 +548,96 @@
                     <connections>
                         <segue destination="fIh-PB-heh" kind="relationship" relationship="rootViewController" id="iaf-Ej-BTm"/>
                         <segue destination="Y8Q-6q-USb" kind="push" id="qav-7l-vOW"/>
+                        <segue destination="OQh-V9-hkM" kind="push" id="1aI-mm-DpG"/>
+                        <segue destination="RFH-p8-LP5" kind="push" id="BLR-6L-BOe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crz-s0-9DV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-680" y="-891"/>
+            <point key="canvasLocation" x="-1340" y="1477"/>
+        </scene>
+        <!--Alarm Detail View Controller - 报警信息-->
+        <scene sceneID="BDQ-fF-ap9">
+            <objects>
+                <viewController storyboardIdentifier="AlarmDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RFH-p8-LP5" customClass="AlarmDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tG8-cr-Nm6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2KM-bU-s2l">
+                                <rect key="frame" x="10" y="95" width="300" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zqW-cD-bkk">
+                                <rect key="frame" x="10" y="273" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sGF-Rd-ZYf">
+                                <rect key="frame" x="10" y="336" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kcm-FL-9T2">
+                                <rect key="frame" x="10" y="315" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="06n-yP-s5h">
+                                <rect key="frame" x="10" y="294" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="报警信息" id="Avf-us-l89">
+                        <barButtonItem key="leftBarButtonItem" id="rXL-cc-Zcg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1o9-yl-KZ2">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="NVBar_arrow_left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_back:" destination="RFH-p8-LP5" eventType="touchUpInside" id="hhA-YD-R73"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZZ8-qw-3ef">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pPf-ab-Pgc">
+                                <rect key="frame" x="274" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="icon_home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_home:" destination="r5l-1J-MQv" eventType="touchUpInside" id="gb8-Nc-OPN"/>
+                                    <action selector="click_home:" destination="RFH-p8-LP5" eventType="touchUpInside" id="pf1-av-ajN"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alarmInfoLabel" destination="sGF-Rd-ZYf" id="ztA-pf-9iV"/>
+                        <outlet property="alarmLocationLabel" destination="Kcm-FL-9T2" id="Z5e-L1-svh"/>
+                        <outlet property="alarmtimeLabel" destination="06n-yP-s5h" id="EpV-Q9-gpy"/>
+                        <outlet property="deviceNameLabel" destination="zqW-cD-bkk" id="2A9-co-W3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a22-9N-o7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1009" y="1418"/>
         </scene>
         <!--轨迹-->
         <scene sceneID="4Qu-Q9-egG">
@@ -594,7 +678,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XK3-Fu-SYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-902" y="1781"/>
+            <point key="canvasLocation" x="-370" y="1781"/>
         </scene>
         <!--车辆信息详细-->
         <scene sceneID="bLy-13-She">
@@ -818,7 +902,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUU-GV-rwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="1418"/>
+            <point key="canvasLocation" x="456" y="1418"/>
         </scene>
         <!--车辆设置-->
         <scene sceneID="Xae-RU-r6b">
@@ -1821,7 +1905,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hA1-9d-2YA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253" y="1418"/>
+            <point key="canvasLocation" x="785" y="1418"/>
         </scene>
         <!--人员信息详细-->
         <scene sceneID="mQJ-gp-9hG">
@@ -2069,7 +2153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29q-fj-QpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="1418"/>
+            <point key="canvasLocation" x="1116" y="1418"/>
         </scene>
     </scenes>
     <resources>

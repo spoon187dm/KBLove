@@ -56,6 +56,8 @@
     }else if ((num>=36&&num<=50)||(num>=58&&num<=60))
     {//宠物
         aimController = @"BoundPetInfoController";
+    }else{
+        aimController = @"BoundCarInfoController";
     }
     vc = [self.storyboard instantiateViewControllerWithIdentifier:aimController];
     [self.navigationController pushViewController:vc animated:YES];
