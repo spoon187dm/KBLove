@@ -165,10 +165,15 @@
             return;
         }
     }
-    NSNumber *value =  _selectedArray[indexPath.row];
-    value = @([value boolValue]?NO:YES);
-    [_selectedArray replaceObjectAtIndex:indexPath.row withObject:value];
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (_editing) {
+        NSNumber *value =  _selectedArray[indexPath.row];
+        value = @([value boolValue]?NO:YES);
+        [_selectedArray replaceObjectAtIndex:indexPath.row withObject:value];
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }else{
+        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AlarmDetailViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

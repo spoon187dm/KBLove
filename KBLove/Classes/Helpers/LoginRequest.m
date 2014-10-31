@@ -50,7 +50,7 @@ static LoginRequest *login = nil;
                 //成功后应该保存用户名 密码token user_id到本地
                 info.userName = userName;
                 info.passWord = passWord;
-                info.token = dict[@"token"];
+                info.token = [NSString stringWithFormat:@"%@",dict[@"token"]];
                 info.user_id = dict[@"user_id"];
                 [info save];
                 finishedBlock();
