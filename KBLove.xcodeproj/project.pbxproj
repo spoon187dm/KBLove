@@ -300,6 +300,10 @@
 		F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761C1A00D3A8002FCB1F /* PetDetailSettingViewController.m */; };
 		F99E76261A00D3A8002FCB1F /* PetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */; };
 		F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */; };
+		F9A262A21A03356100909E75 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A262A11A03356100909E75 /* bg2.png */; };
+		F9A262A41A03357800909E75 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A262A31A03357800909E75 /* bg1.png */; };
+		F9A262A61A0338A900909E75 /* TMD.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A262A51A0338A900909E75 /* TMD.png */; };
+		F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A262A81A033B7000909E75 /* UIView+WLTool.m */; };
 		F9A38FD119F61B0D0043594F /* KBGoalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FCE19F61B0D0043594F /* KBGoalBar.m */; };
 		F9A38FD219F61B0D0043594F /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD019F61B0D0043594F /* PCPieChart.m */; };
 		F9A38FE019F61B1B0043594F /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD519F61B1B0043594F /* PNBar.m */; };
@@ -480,7 +484,6 @@
 		F9F3AF0C19F63E5800E0A0F9 /* 手机注册_08.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD3819F63E5700E0A0F9 /* 手机注册_08.png */; };
 		F9F3AF0D19F63E5800E0A0F9 /* 找回密码_03.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD3B19F63E5700E0A0F9 /* 找回密码_03.png */; };
 		F9F3AF0E19F63E5800E0A0F9 /* 找回密码_06.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD3C19F63E5700E0A0F9 /* 找回密码_06.png */; };
-		F9F3AF0F19F63E5800E0A0F9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD3E19F63E5700E0A0F9 /* bg.png */; };
 		F9F3AF1019F63E5800E0A0F9 /* 报警模块1_03.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD4019F63E5700E0A0F9 /* 报警模块1_03.png */; };
 		F9F3AF1119F63E5800E0A0F9 /* 报警模块1_06.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD4119F63E5700E0A0F9 /* 报警模块1_06.png */; };
 		F9F3AF1219F63E5800E0A0F9 /* 报警模块1_09.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3AD4219F63E5700E0A0F9 /* 报警模块1_09.png */; };
@@ -608,7 +611,6 @@
 		F9F3AF8C19F63E5800E0A0F9 /* 登录_33.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADDE19F63E5700E0A0F9 /* 登录_33.png */; };
 		F9F3AF8D19F63E5800E0A0F9 /* 登录_35.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADDF19F63E5700E0A0F9 /* 登录_35.png */; };
 		F9F3AF8E19F63E5800E0A0F9 /* 登录_40.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADE019F63E5700E0A0F9 /* 登录_40.png */; };
-		F9F3AF8F19F63E5800E0A0F9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADE219F63E5700E0A0F9 /* bg.png */; };
 		F9F3AF9019F63E5800E0A0F9 /* 绑定设备1_02.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADE419F63E5700E0A0F9 /* 绑定设备1_02.png */; };
 		F9F3AF9119F63E5800E0A0F9 /* 绑定设备1_05.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADE519F63E5700E0A0F9 /* 绑定设备1_05.png */; };
 		F9F3AF9219F63E5800E0A0F9 /* 绑定设备1_07.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADE619F63E5700E0A0F9 /* 绑定设备1_07.png */; };
@@ -1129,6 +1131,11 @@
 		F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetSettingViewController.m; sourceTree = "<group>"; };
 		F99E761F1A00D3A8002FCB1F /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		F9A262A11A03356100909E75 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		F9A262A31A03357800909E75 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
+		F9A262A51A0338A900909E75 /* TMD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TMD.png; sourceTree = "<group>"; };
+		F9A262A71A033B7000909E75 /* UIView+WLTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WLTool.h"; sourceTree = "<group>"; };
+		F9A262A81A033B7000909E75 /* UIView+WLTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WLTool.m"; sourceTree = "<group>"; };
 		F9A38FCD19F61B0D0043594F /* KBGoalBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBGoalBar.h; sourceTree = "<group>"; };
 		F9A38FCE19F61B0D0043594F /* KBGoalBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBGoalBar.m; sourceTree = "<group>"; };
 		F9A38FCF19F61B0D0043594F /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
@@ -1337,7 +1344,6 @@
 		F9F3AD3819F63E5700E0A0F9 /* 手机注册_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机注册_08.png"; sourceTree = "<group>"; };
 		F9F3AD3B19F63E5700E0A0F9 /* 找回密码_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "找回密码_03.png"; sourceTree = "<group>"; };
 		F9F3AD3C19F63E5700E0A0F9 /* 找回密码_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "找回密码_06.png"; sourceTree = "<group>"; };
-		F9F3AD3E19F63E5700E0A0F9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		F9F3AD4019F63E5700E0A0F9 /* 报警模块1_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "报警模块1_03.png"; sourceTree = "<group>"; };
 		F9F3AD4119F63E5700E0A0F9 /* 报警模块1_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "报警模块1_06.png"; sourceTree = "<group>"; };
 		F9F3AD4219F63E5700E0A0F9 /* 报警模块1_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "报警模块1_09.png"; sourceTree = "<group>"; };
@@ -1465,7 +1471,6 @@
 		F9F3ADDE19F63E5700E0A0F9 /* 登录_33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录_33.png"; sourceTree = "<group>"; };
 		F9F3ADDF19F63E5700E0A0F9 /* 登录_35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录_35.png"; sourceTree = "<group>"; };
 		F9F3ADE019F63E5700E0A0F9 /* 登录_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录_40.png"; sourceTree = "<group>"; };
-		F9F3ADE219F63E5700E0A0F9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		F9F3ADE419F63E5700E0A0F9 /* 绑定设备1_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备1_02.png"; sourceTree = "<group>"; };
 		F9F3ADE519F63E5700E0A0F9 /* 绑定设备1_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备1_05.png"; sourceTree = "<group>"; };
 		F9F3ADE619F63E5700E0A0F9 /* 绑定设备1_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备1_07.png"; sourceTree = "<group>"; };
@@ -2059,6 +2064,7 @@
 		F91A0DEA19E7AACF009ADB44 /* navBarItemImages */ = {
 			isa = PBXGroup;
 			children = (
+				F9A262A51A0338A900909E75 /* TMD.png */,
 				F91A0DEB19E7AACF009ADB44 /* addNavItemNormal.png */,
 				F91A0DEC19E7AACF009ADB44 /* addNavItemSelected.png */,
 				F91A0DED19E7AACF009ADB44 /* clearNavItemNoneUse.png */,
@@ -2271,6 +2277,8 @@
 				F974110119EC389800E12633 /* WLCategorys.h */,
 				F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */,
 				F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */,
+				F9A262A71A033B7000909E75 /* UIView+WLTool.h */,
+				F9A262A81A033B7000909E75 /* UIView+WLTool.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -3340,7 +3348,7 @@
 		F9F3AD3D19F63E5700E0A0F9 /* 报警模块1 */ = {
 			isa = PBXGroup;
 			children = (
-				F9F3AD3E19F63E5700E0A0F9 /* bg.png */,
+				F9A262A11A03356100909E75 /* bg2.png */,
 				F9F3AD3F19F63E5700E0A0F9 /* images */,
 			);
 			path = "报警模块1";
@@ -3740,7 +3748,7 @@
 		F9F3ADE119F63E5700E0A0F9 /* 绑定设备1 */ = {
 			isa = PBXGroup;
 			children = (
-				F9F3ADE219F63E5700E0A0F9 /* bg.png */,
+				F9A262A31A03357800909E75 /* bg1.png */,
 				F9F3ADE319F63E5700E0A0F9 /* images */,
 			);
 			path = "绑定设备1";
@@ -4389,6 +4397,7 @@
 				F9F3AF7719F63E5800E0A0F9 /* 好友申请1_08.png in Resources */,
 				F9F3AF3119F63E5800E0A0F9 /* 数据01_31.png in Resources */,
 				F9F3AEAB19F63E5800E0A0F9 /* 图标_60.png in Resources */,
+				F9A262A41A03357800909E75 /* bg1.png in Resources */,
 				F9F3AF8519F63E5800E0A0F9 /* 登录_04.png in Resources */,
 				F9F3AEAD19F63E5800E0A0F9 /* 图标_72.png in Resources */,
 				F9F3AF4619F63E5800E0A0F9 /* 数据031_20.png in Resources */,
@@ -4443,6 +4452,7 @@
 				F9E24F9019ED733200D83FEF /* Device_data.storyboard in Resources */,
 				F9F3AF3E19F63E5800E0A0F9 /* 红.png in Resources */,
 				F9748CFB19EFA5CD0064FCC7 /* qrcode_scan_light_green@2x.png in Resources */,
+				F9A262A21A03356100909E75 /* bg2.png in Resources */,
 				F9F3AFD519F63E5800E0A0F9 /* 设置04创建围栏_27.png in Resources */,
 				F9F3AEA219F63E5800E0A0F9 /* 图标_31.png in Resources */,
 				F9748CF419EFA5CD0064FCC7 /* qrcode_scan_btn_flash_down@2x.png in Resources */,
@@ -4522,7 +4532,6 @@
 				F9F3AF8219F63E5800E0A0F9 /* 登录1_14.png in Resources */,
 				F9F3AF1819F63E5800E0A0F9 /* 报警模块2_06.png in Resources */,
 				F9F3AF2819F63E5800E0A0F9 /* 数据01_07.png in Resources */,
-				F9F3AF8F19F63E5800E0A0F9 /* bg.png in Resources */,
 				F9F3AF5C19F63E5800E0A0F9 /* 数据061_16.png in Resources */,
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
 				F9F3AF3819F63E5800E0A0F9 /* 数据02_12.png in Resources */,
@@ -4596,7 +4605,6 @@
 				F9F3AFAE19F63E5800E0A0F9 /* 页面列表31_17.png in Resources */,
 				F9F3AECD19F63E5800E0A0F9 /* 圈子创建_06.png in Resources */,
 				F9F3AFAC19F63E5800E0A0F9 /* 页面列表2_08.png in Resources */,
-				F9F3AF0F19F63E5800E0A0F9 /* bg.png in Resources */,
 				BC5A135E19F74DB700DDD36C /* sendBtn.png in Resources */,
 				F9F3AF1719F63E5800E0A0F9 /* 报警模块2_03.png in Resources */,
 				F9F3AF6919F63E5800E0A0F9 /* 数据07_30.png in Resources */,
@@ -4860,6 +4868,7 @@
 				F9F3AFD719F63E5800E0A0F9 /* 轨迹01_03.png in Resources */,
 				F9F3AF5D19F63E5800E0A0F9 /* 数据061_19.png in Resources */,
 				F91A0E6C19E7AACF009ADB44 /* RegisterFisihed2.png in Resources */,
+				F9A262A61A0338A900909E75 /* TMD.png in Resources */,
 				F9F3AEE119F63E5800E0A0F9 /* 好友2_19.png in Resources */,
 				F9E24F9419ED733200D83FEF /* Regist_Login_Storyboard.storyboard in Resources */,
 				F9F3AFCA19F63E5800E0A0F9 /* 设置04创建围栏1_27.png in Resources */,
@@ -4962,6 +4971,7 @@
 				F9A38FE219F61B1B0043594F /* PNChart.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
+				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
@@ -5180,8 +5190,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
@@ -5213,7 +5223,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8d199f75-a0ef-4b49-804e-e612e7e909fe";
+				PROVISIONING_PROFILE = "3ff628f7-5dfd-4f7e-b143-fd3cbe2e85f2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -5225,8 +5235,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
@@ -5258,7 +5268,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8d199f75-a0ef-4b49-804e-e612e7e909fe";
+				PROVISIONING_PROFILE = "3ff628f7-5dfd-4f7e-b143-fd3cbe2e85f2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

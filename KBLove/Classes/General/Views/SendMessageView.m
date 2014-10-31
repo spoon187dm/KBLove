@@ -119,6 +119,7 @@
 - (IBAction)SendTextClick:(id)sender {
     if (_SendMsgTextFiled.text.length>=1) {
     KBMessageInfo *msginfo=[[KBMessageInfo alloc]init];
+        msginfo.MessageType=KBMessageTypeTalkText;
         msginfo.text=_SendMsgTextFiled.text;
         _sendBlock(msginfo);
     }else

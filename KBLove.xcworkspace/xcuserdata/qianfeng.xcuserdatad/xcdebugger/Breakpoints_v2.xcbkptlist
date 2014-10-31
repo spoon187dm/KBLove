@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/General/Classes/KBSCoketManager/KBScoketManager.m"
-            timestampString = "436366302.638938"
+            timestampString = "436441976.91661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-onSocket:didReadData:withTag:"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "+analyseOneMessageWithtype:AndArray:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

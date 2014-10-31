@@ -10,7 +10,7 @@
 typedef NS_ENUM(NSInteger, KBMessageType)
 {
     //文本聊天信息
-    KBMessageTypeTalkText=0,
+    KBMessageTypeTalkText=1,
     //图片聊天信息
     KBMessageTypeTalkImage,
     //位置聊天信息
@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, KBMessageType)
 typedef NS_ENUM(NSInteger, KBTalkEnvironmentType)
 {
     //聊天环境为圈子
-    KBTalkEnvironmentTypeCircle=0,
+    KBTalkEnvironmentTypeCircle=1,
     //聊天环境为个人
     KBTalkEnvironmentTypeFriend
     //可扩展讨论组等其他聊天环境
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, KBTalkEnvironmentType)
 typedef NS_ENUM(NSInteger, KBMessageStatus)
 {
   //未读
-   KBMessageStatusUnRead=0,
+   KBMessageStatusUnRead=1,
    //已读
    KBMessageStatusHaveRead,
    //好友申请信息
@@ -43,15 +43,10 @@ typedef NS_ENUM(NSInteger, KBMessageStatus)
    //请求
    KBMessageStatusRequrest
 };
-typedef NS_ENUM(NSInteger, KBMessageNotificationType)
-{
-    //聊天通知
-    KBMessageTalkNotification,
-    //好友请求通知
-    KBMessageRequestNotification,
-    //其他通知待完善
-    KBMessageNotification
-};
+#define KBMessageTalkNotification @"KBMessageTalkNotification"
+#define KBMessageRequestNotification @"KBMessageRequestNotification"
+#define KBMessageNotification @"KBMessageNotification"
+
 
 @interface KBMessageInfo : NSObject
 //聊天环境
