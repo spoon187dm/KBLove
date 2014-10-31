@@ -121,12 +121,7 @@
     float y=[UIScreen mainScreen].bounds.size.width;
     leftheaderImageView.image=leftimage;
     rightheaderImageView.image=rightimage;
-    //获取文字信息
-    //NSString *message;
-    
-//    NSLog(@"%@",obj.FromUser_id);
-//    NSLog(@"%@",[KBUserInfo sharedInfo].user_id);
-    
+
     if ([[NSString stringWithFormat:@"%@",obj.FromUser_id] isEqualToString:[NSString stringWithFormat:@"%@",[KBUserInfo sharedInfo].user_id]]) {
         //自己
         leftheaderImageView.hidden=YES;
@@ -139,6 +134,7 @@
             rightphotoImageView.hidden=YES;
             rightTitle.hidden=NO;
             rightTitle.text=obj.text;
+            NSLog(@"%@",obj.text);
             CGSize size=[UILabel SizeWithText:obj.text Width:200 andFont:[UIFont systemFontOfSize:15]];
             rightTitle.frame=CGRectMake(10, 10,size.width,size.height);
             rightTitle.font=[UIFont systemFontOfSize:15];
@@ -165,6 +161,7 @@
         rightheaderImageView.hidden=YES;
         rightBubbleImageView.hidden=YES;
         //对方
+       // NSLog(@"%ld",obj.MessageType);
         if (obj.MessageType==KBMessageTypeTalkText) {
             leftphotoImageView.hidden=YES;
             leftTitle.hidden=NO;

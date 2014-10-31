@@ -24,4 +24,6 @@
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number;
 //更新信息
 - (void)updateKBMessageWithModel:(KBMessageInfo *)msg;
+//获取最后一条信息
+- (KBMessageInfo *)getLastMsgWithEnvironment:(KBTalkEnvironmentType)talkType AndFromID:(NSString *)user_id;
 @end
