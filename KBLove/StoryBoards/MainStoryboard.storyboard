@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -56,17 +56,6 @@
                                     <action selector="click_mine:" destination="fIh-PB-heh" eventType="touchUpInside" id="0sF-C7-JWO"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="9SF-RX-YaI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="jaZ-MA-XVY">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </mapView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dTW-dm-Pwa">
                                 <rect key="frame" x="16" y="480" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -113,6 +102,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" id="9SF-RX-YaI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -138,13 +132,10 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="mapView" destination="jaZ-MA-XVY" id="DM7-MP-9nE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cA8-Da-hIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="-891"/>
+            <point key="canvasLocation" x="-826" y="-890"/>
         </scene>
         <!--Device Detail View Controller - 设备-->
         <scene sceneID="Ku5-Hq-UMg">
@@ -554,7 +545,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crz-s0-9DV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1340" y="1477"/>
+            <point key="canvasLocation" x="-1190" y="57"/>
         </scene>
         <!--Alarm Detail View Controller - 报警信息-->
         <scene sceneID="BDQ-fF-ap9">
@@ -941,7 +932,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fUE-9g-pAV">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 &gt;">
+                                    <state key="normal" title="信息修改 >">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1199,7 +1190,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="btl-AF-KKy">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 &gt;">
+                                    <state key="normal" title="信息修改 >">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1416,7 +1407,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1dM-PR-ejR">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 &gt;">
+                                    <state key="normal" title="信息修改 >">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
