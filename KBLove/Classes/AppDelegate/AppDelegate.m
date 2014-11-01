@@ -48,6 +48,7 @@
             [UIApplication sharedApplication].applicationIconBadgeNumber = badge;
         }
     }
+    [KBUserInfo sharedInfo].token=@"";
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
     [[UIApplication sharedApplication] registerForRemoteNotifications];
