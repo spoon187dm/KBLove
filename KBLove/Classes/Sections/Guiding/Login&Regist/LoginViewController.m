@@ -110,7 +110,7 @@
 }
 
 - (void)gotoMainVireController{
-    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
     [self presentViewController:vc animated:YES completion:^{
         
