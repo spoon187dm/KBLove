@@ -29,7 +29,7 @@
 #pragma mark - loadData
 - (void)loadData {
     //获得当前user_id
-    NSInteger user_id = [KBUserInfo sharedInfo].user_id;
+    NSString *user_id = [KBUserInfo sharedInfo].user_id;
     //获得当前token
     NSString *token = [KBUserInfo sharedInfo].token;
     //拼接urlStr
