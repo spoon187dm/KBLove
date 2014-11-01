@@ -306,12 +306,6 @@
 		F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A262A81A033B7000909E75 /* UIView+WLTool.m */; };
 		F9A38FD119F61B0D0043594F /* KBGoalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FCE19F61B0D0043594F /* KBGoalBar.m */; };
 		F9A38FD219F61B0D0043594F /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD019F61B0D0043594F /* PCPieChart.m */; };
-		F9A38FE019F61B1B0043594F /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD519F61B1B0043594F /* PNBar.m */; };
-		F9A38FE119F61B1B0043594F /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD719F61B1B0043594F /* PNBarChart.m */; };
-		F9A38FE219F61B1B0043594F /* PNChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD919F61B1B0043594F /* PNChart.m */; };
-		F9A38FE319F61B1B0043594F /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FDB19F61B1B0043594F /* PNChartLabel.m */; };
-		F9A38FE419F61B1B0043594F /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FDD19F61B1B0043594F /* PNColor.m */; };
-		F9A38FE519F61B1B0043594F /* PNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FDF19F61B1B0043594F /* PNLineChart.m */; };
 		F9A3BBD11A01DA4400C2461F /* KBDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A3BBD01A01DA4400C2461F /* KBDeviceManager.m */; };
 		F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B019F121A3005B93CA /* AlarmDetailViewController.m */; };
 		F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B219F121A3005B93CA /* AlarmListViewController.m */; };
@@ -1140,18 +1134,6 @@
 		F9A38FCE19F61B0D0043594F /* KBGoalBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBGoalBar.m; sourceTree = "<group>"; };
 		F9A38FCF19F61B0D0043594F /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
 		F9A38FD019F61B0D0043594F /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
-		F9A38FD419F61B1B0043594F /* PNBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBar.h; sourceTree = "<group>"; };
-		F9A38FD519F61B1B0043594F /* PNBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBar.m; sourceTree = "<group>"; };
-		F9A38FD619F61B1B0043594F /* PNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBarChart.h; sourceTree = "<group>"; };
-		F9A38FD719F61B1B0043594F /* PNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBarChart.m; sourceTree = "<group>"; };
-		F9A38FD819F61B1B0043594F /* PNChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChart.h; sourceTree = "<group>"; };
-		F9A38FD919F61B1B0043594F /* PNChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChart.m; sourceTree = "<group>"; };
-		F9A38FDA19F61B1B0043594F /* PNChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartLabel.h; sourceTree = "<group>"; };
-		F9A38FDB19F61B1B0043594F /* PNChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChartLabel.m; sourceTree = "<group>"; };
-		F9A38FDC19F61B1B0043594F /* PNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNColor.h; sourceTree = "<group>"; };
-		F9A38FDD19F61B1B0043594F /* PNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNColor.m; sourceTree = "<group>"; };
-		F9A38FDE19F61B1B0043594F /* PNLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChart.h; sourceTree = "<group>"; };
-		F9A38FDF19F61B1B0043594F /* PNLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChart.m; sourceTree = "<group>"; };
 		F9A3BBCF1A01DA4400C2461F /* KBDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDeviceManager.h; sourceTree = "<group>"; };
 		F9A3BBD01A01DA4400C2461F /* KBDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDeviceManager.m; sourceTree = "<group>"; };
 		F9A3BBD21A02041000C2461F /* ImageMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMacro.h; sourceTree = "<group>"; };
@@ -2518,30 +2500,10 @@
 			path = Chart;
 			sourceTree = "<group>";
 		};
-		F9A38FD319F61B1B0043594F /* PNChart */ = {
-			isa = PBXGroup;
-			children = (
-				F9A38FD419F61B1B0043594F /* PNBar.h */,
-				F9A38FD519F61B1B0043594F /* PNBar.m */,
-				F9A38FD619F61B1B0043594F /* PNBarChart.h */,
-				F9A38FD719F61B1B0043594F /* PNBarChart.m */,
-				F9A38FD819F61B1B0043594F /* PNChart.h */,
-				F9A38FD919F61B1B0043594F /* PNChart.m */,
-				F9A38FDA19F61B1B0043594F /* PNChartLabel.h */,
-				F9A38FDB19F61B1B0043594F /* PNChartLabel.m */,
-				F9A38FDC19F61B1B0043594F /* PNColor.h */,
-				F9A38FDD19F61B1B0043594F /* PNColor.m */,
-				F9A38FDE19F61B1B0043594F /* PNLineChart.h */,
-				F9A38FDF19F61B1B0043594F /* PNLineChart.m */,
-			);
-			path = PNChart;
-			sourceTree = "<group>";
-		};
 		F9E24F4F19ED725900D83FEF /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
 				BC5F37391A025AE20088D0AB /* TCPScoket */,
-				F9A38FD319F61B1B0043594F /* PNChart */,
 				BCB42E1D19F1425B00A141C3 /* fmdb */,
 				F9E24F5019ED725900D83FEF /* PinYin */,
 			);
@@ -4952,7 +4914,6 @@
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
 				F975FE8319EE74CB00D13D86 /* DropListView.m in Sources */,
 				F9E24F7619ED729700D83FEF /* DAContextMenuTableViewController.m in Sources */,
-				F9A38FE519F61B1B0043594F /* PNLineChart.m in Sources */,
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
@@ -4966,9 +4927,7 @@
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
 				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
 				BC71E6E219F9666A00692533 /* PositionCell.m in Sources */,
-				F9A38FE119F61B1B0043594F /* PNBarChart.m in Sources */,
 				F90F6F0E19F563E400671113 /* PrivacySettingViewController.m in Sources */,
-				F9A38FE219F61B1B0043594F /* PNChart.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.m in Sources */,
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
@@ -5013,7 +4972,6 @@
 				F975FE6719EE452100D13D86 /* MainViewController.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
-				F9A38FE019F61B1B0043594F /* PNBar.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
 				F974108C19EC2C8700E12633 /* BannerView.m in Sources */,
 				F9E24F6019ED725900D83FEF /* ChineseInclude.m in Sources */,
@@ -5026,7 +4984,6 @@
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
-				F9A38FE419F61B1B0043594F /* PNColor.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
@@ -5042,7 +4999,6 @@
 				BCA4B3A619F67FC100B2AAAC /* SearchView.m in Sources */,
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
-				F9A38FE319F61B1B0043594F /* PNChartLabel.m in Sources */,
 				F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
