@@ -13,6 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
@@ -45,11 +48,16 @@
             [UIApplication sharedApplication].applicationIconBadgeNumber = badge;
         }
     }
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     NSLog(@"%@",NSHomeDirectory());
     UIUserNotificationSettings *s=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert categories:nil];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:s];
+#else
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge];
+#endif
     
     return YES;
 }
