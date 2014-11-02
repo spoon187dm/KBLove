@@ -39,6 +39,11 @@ KBUserInfo *info = nil;
     _sinaId = [ud objectForKey:@"sinaId"];
     _rrId = [ud objectForKey:@"rrId"];
     _user_id = [ud objectForKey:@"user_id"];
+    
+    _mapTypeName = [ud objectForKey:@"maptypename"];
+    if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] || ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
+        _mapTypeName = kMapTypeBaiduMap;
+    }
 }
 
 - (void)save{
@@ -54,6 +59,12 @@ KBUserInfo *info = nil;
     [ud setObject:_qqId forKey:@"qqId"];
     [ud setObject:_sinaId forKey:@"sinaId"];
     [ud setObject:_rrId forKey:@"rrId"];
+    
+    
+    if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] || ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
+        _mapTypeName = kMapTypeBaiduMap;
+    }
+    [ud setObject:_mapTypeName forKey:@"maptypename"];
     [ud synchronize];
 }
 

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const kMapTypeBaiduMap = @"kMapTypeBaiduMap";
+static NSString * const kMapTypeGaodeMap = @"kMapTypeGaodeMap";
+
 @interface KBUserInfo : NSObject
 
 @property (nonatomic, assign) long id;
@@ -16,6 +19,8 @@
 @property (nonatomic, copy) NSString *passWord;
 
 @property (nonatomic, assign) BOOL isPasswordRecord;
+
+@property (nonatomic, copy) NSString *mapTypeName;
 //用户唯一标识 addByDX
 
 @property (nonatomic, copy) NSString *token;

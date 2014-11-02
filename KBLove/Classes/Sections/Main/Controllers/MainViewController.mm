@@ -36,6 +36,9 @@
     BOOL _hasCarDevice;
     BOOL _hasPetDevice;
     BOOL _hasPersonDevice;
+    
+//    地图上点
+    NSMutableArray *_pointArray;
 }
 
 - (NSArray *)getFriendDeviceArray;
@@ -115,6 +118,7 @@
     _hasCarDevice = NO;
     _hasPersonDevice = NO;
     
+    _pointArray = [NSMutableArray array];
 }
 
 //加载设备数据
@@ -144,24 +148,45 @@
     /**
      百度地图
      */
-    baidu_mapview=[[BMKMapView alloc]init];
-    CGRect screen=[UIScreen mainScreen].bounds;
-//    baidu_mapview.frame=CGRectMake(screen.origin.x, screen.origin.y, screen.size.width, screen.size.height-69);
-////    [self.view addSubview:baidu_mapview];
-//    baidu_mapview.delegate=self;
-//    BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
+
+    baidu_MapView=[[BMKMapView alloc]init];
+    UIScreen *mainscreen=[UIScreen mainScreen];
+    baidu_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
+    [self.view addSubview:baidu_MapView];
+    baidu_MapView.delegate=self;
+    
+    /**
+     高德地图
+     */
+//    gaode_MapView=[[MAMapView alloc]init];
+//    UIScreen *mainscreen=[UIScreen mainScreen];
+//    gaode_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
+//    [self.view addSubview:gaode_MapView];
+//    gaode_MapView.delegate=self;
+//    
+//    MAPointAnnotation *p=[[MAPointAnnotation alloc]init];
 //    CLLocationCoordinate2D coor;
 //    coor.latitude = 39.915;
 //    coor.longitude = 116.404;
 //    p.coordinate = coor;
 //    p.title = @"test";
 //    p.subtitle = @"此Annotation可拖拽!";
-//    [baidu_MapView addAnnotation:p];
-//    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
-//    BMKPointAnnotation *point=[[BMKPointAnnotation alloc]init];
-//    point.coordinate=cl2d;
-//    [baidu_MapView addAnnotation:point];
+//    [gaode_MapView addAnnotation:p];
     
+    
+    
+    BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
+    CLLocationCoordinate2D coor;
+    coor.latitude = 39.915;
+    coor.longitude = 116.404;
+    p.coordinate = coor;
+    p.title = @"test";
+    p.subtitle = @"此Annotation可拖拽!";
+    [baidu_MapView addAnnotation:p];
+    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
+    BMKPointAnnotation *point=[[BMKPointAnnotation alloc]init];
+    point.coordinate=cl2d;
+    [baidu_MapView addAnnotation:point];
     
     
     
@@ -194,12 +219,42 @@
     }
 }
 
+#pragma mark -
+#pragma mark 地图操作
+
+- (NSArray *)getLastAnnotationArray{
+    return _pointArray;
+}
+
+- (void)setLastAnnotationArray:(NSArray *)array{
+    _pointArray = [NSMutableArray arrayWithArray:array];
+}
+
+- (void)clearMap{
+    
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:@""]) {
+        
+    }
+}
+
+- (void)addPoints:(NSArray *)array{
+    [_pointArray addObjectsFromArray:array];
+}
+
+- (void)showPoints:(NSArray *)array{
+    [self clearMap];
+}
+
+- (void)addPoint:(CGPoint)point toMap:(id)map{
+    
+}
 
 #pragma mammapview Delegate
 
 -(UIView *)mapView:(UIView *)mapView viewForAnnotation:(id)annotation
 {
     static NSString* annotationIdentifier = @"warningPin";
+//    百度
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
 //        if (annotation == Point) {
         BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
@@ -210,6 +265,7 @@
         
        
     }
+//    高德地图
     if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
 //        if (annotation == Point) {
         MAPinAnnotationView * annView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
