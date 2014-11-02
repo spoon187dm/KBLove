@@ -9,7 +9,8 @@
 #import "KBScoketManager.h"
 #import "AsyncSocket.h"
 #import "KBMessageInfo.h"
-
+#import "KBHttpRequestTool.h"
+#import "DxConnection.h"
 @implementation KBScoketManager
 {
     NSMutableString *newMsg;
@@ -29,10 +30,11 @@ static KBScoketManager *manager;
 }
 - (void)startScoket
 {
+    
     if (![_clientScoket isConnected]) {
         //链接对应接口
         _clientScoket=[[AsyncSocket alloc]initWithDelegate:self];
-        [_clientScoket connectToHost:@"demo.capcare.com.cn" onPort:60005 error:nil];
+        [_clientScoket connectToHost:@"demo.capcare.com.cn" onPort:60006 error:nil];
     }
 }
 - (void)stopScoket
@@ -47,6 +49,12 @@ static KBScoketManager *manager;
 }
 - (void)LoginToScoket
 {
+    if ([KBUserInfo sharedInfo].ios_token.length<5) {
+        [UIAlertView showWithTitle:@"提示" Message:@"虚拟机无法启用推送功能" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+    }
+    
     NSString *udid=[[UIDevice currentDevice] identifierForVendor].UUIDString;
     NSString *pversion=[UIDevice currentDevice].systemVersion;
     NSString *ptype=[UIDevice currentDevice].model;
@@ -81,16 +89,33 @@ static KBScoketManager *manager;
     NSRange start=[newMsg rangeOfString:@">"];
     NSRange end  =[newMsg rangeOfString:@"<" options:NSBackwardsSearch];
     if (start.location==5&&end.location>5) {
+        NSMutableArray *array=[[NSMutableArray alloc]init];
         NSLog(@"%d",start.location);
         NSLog(@"%d",end.location);
-
+        
         NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+1, end.location-start.location-1)];
+        
         NSLog(@"%@",msgdic);
-        NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:[msgdic dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
-        [KBScoketManager analyseMessage:dic];
-        newMsg=nil;
+        NSArray *arr=[msgdic componentsSeparatedByString:@"<push>"];
+        for (int i=0; i<arr.count; i++) {
+            [array addObjectsFromArray:[arr[i] componentsSeparatedByString:@"</push>"]];
+        }
+        
+        for (int i=0; i<array.count; i++) {
+            NSString *msgdic=array[i];
+            NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:[msgdic dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+            [self analyseMessage:dic];
+        }
+        if (newMsg.length>end.location+8) {
+            newMsg=[[NSMutableString alloc]init];
+            [newMsg appendString:[NSString stringWithFormat:@"%@",[newMsg substringWithRange:NSMakeRange(end.location+1+6, newMsg.length-end.location-1-6)]]];
+        }else
+        {
+            newMsg=nil;
+        }
+        
     }
-     [_clientScoket readDataWithTimeout:-1 tag:100];
+    [_clientScoket readDataWithTimeout:-1 tag:100];
 }
 
 - (void)onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag
@@ -104,7 +129,7 @@ static KBScoketManager *manager;
     
 }
 #pragma mark - 消息处理
-+ (void)analyseMessage:(NSDictionary *)msgDic
+- (void)analyseMessage:(NSDictionary *)msgDic
 {
     
     //分析数据存到数据库 发送通知
@@ -112,50 +137,50 @@ static KBScoketManager *manager;
     NSArray *arr=[msgDic objectForKey:@"protocol"];
     NSDictionary *dic=arr[0];
     NSNumber *cmd=[dic objectForKey:@"cmd"];
-    switch ([cmd integerValue]) {
-        case 0:{
-        //预留
-        }break;
-        case 1:{
-        //登陆返回信息
+    //创建回执消息数组
+    NSMutableArray *msg_idArray=[[NSMutableArray alloc]init];
+    //登陆返回信息
+    //处理位置信息
+    //处理报警信息
+    //处理群组信息
+    NSArray *textarr=[dic objectForKey:@"texts"];
+    if(textarr){
+        for (int i=0; i<textarr.count; i++) {
+            NSArray *msgArr=textarr[i];
+            [msg_idArray addObject:[msgArr lastObject]];
+            [self analyseOneMessageWithtype:[cmd integerValue] AndArray:msgArr];
+        }
+    }
+    //处理好友信息
+    NSArray *friend_textsarr=[dic objectForKey:@"friend_texts"];
+    if (friend_textsarr) {
+        for (int i=0; i<friend_textsarr.count; i++) {
+            NSArray *msgArr=friend_textsarr[i];
+            [msg_idArray addObject:[msgArr lastObject]];
+            [self analyseOneMessageWithtype:[cmd integerValue] AndArray:msgArr];
+        }
         
-        }break;
-        case 2:{
-         //位置信息
-        }break;
-        case 3:{
-        //报警消息
-        }break;
-        case 4:{
-        //群组消息
-            NSArray *textarr=[dic objectForKey:@"texts"];
-            for (int i=0; i<textarr.count; i++) {
-                [KBScoketManager analyseOneMessageWithtype:[cmd integerValue] AndArray:textarr[i]];
-            }
-
-        }break;
-        case 5:{
-         //好友消息
-            NSArray *friend_textsarr=[dic objectForKey:@"friend_texts"];
-            for (int i=0; i<friend_textsarr.count; i++) {
-                [KBScoketManager analyseOneMessageWithtype:[cmd integerValue] AndArray:friend_textsarr[i]];
-            }
-            
-            
-        }break;
-        case 6:{
-         //好友验证消息
-        }break;
-        case 7:{
-         //系统公告消息
-        }break;
-
-        default:
-            break;
     }
     
+    //好友验证信息
+    NSArray *friend_verifys=[dic objectForKey:@"friend_verifys"];
+    if (friend_verifys) {
+        for (int i=0; i<friend_verifys.count; i++) {
+            NSArray *msgArr=friend_textsarr[i];
+            [msg_idArray addObject:[msgArr lastObject]];
+            [self analyseOneMessageWithtype:[cmd integerValue] AndArray:msgArr];
+        }
+        
+    }
+    
+    //系统公告信息
+    
+    
+    //发送回执消息
+    [self sendBackMsgWithCmdTag:msg_idArray];
 }
-+ (void)analyseOneMessageWithtype:(NSInteger)type AndArray:(NSArray *)msgarr
+
+- (void)analyseOneMessageWithtype:(NSInteger)type AndArray:(NSArray *)msgarr
 {
     switch (type) {
         case 1:{
@@ -171,7 +196,7 @@ static KBScoketManager *manager;
             //群组消息
             KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
             msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-        
+            
             msginf.FromUser_id=msgarr[0];
             msginf.Circle_id=msgarr[1];
             msginf.time=[msgarr[2] longLongValue];
@@ -183,6 +208,7 @@ static KBScoketManager *manager;
             [manager insertDataWithModel:msginf];
             //发送通知
             [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageTalkNotification object:nil];
+            
         }break;
         case 5:{
             //好友消息
@@ -193,7 +219,7 @@ static KBScoketManager *manager;
             msginf.MessageType=[msgarr[2] integerValue];
             msginf.text=msgarr[3];
             msginf.status=KBMessageStatusUnRead;
-
+            
             //存储消息
             KBDBManager *manager=[KBDBManager shareManager];
             [manager insertDataWithModel:msginf];
@@ -202,7 +228,47 @@ static KBScoketManager *manager;
             
         }break;
         case 6:{
-            //好友验证消息
+            //好友验证消息<push>{"protocol":[{"ret":1,"cmd":6,"friend_verifys":[["10001","1411920502000","1","请求添加你为好友" ,"123"]]}]}</push>
+            KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+            msginf.TalkEnvironmentType=KBTalkEnvironmentTypeFriend;
+            msginf.FromUser_id=msgarr[0];
+            msginf.time=[msgarr[1] longLongValue];
+            msginf.MessageType=[msgarr[2] integerValue]+3;
+            msginf.text=msgarr[3];
+            msginf.status=KBMessageStatusUnRead;
+            
+            //存储消息
+            KBDBManager *manager=[KBDBManager shareManager];
+            [manager insertDataWithModel:msginf];
+            switch (msginf.MessageType) {
+                case KBMessageTypeAddFriend:{
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@%@",msgarr[0],msgarr[2]] cancle:@"同意" otherbutton:@"拒绝" block:^(NSInteger index) {
+                        
+                        KBUserInfo *user=[KBUserInfo sharedInfo];
+                        NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"app_name":app_name,@"friend_id":msginf.FromUser_id,@"is_pass":[NSNumber numberWithInteger:(index+1)]};
+                        [[KBHttpRequestTool sharedInstance] request:[Circle_SendIsAGreeFriendMessage_URL] requestType:KBHttpRequestTypePost params:dic cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+                            if (IsSuccess) {
+                                //已经同意修改信息状态
+                            }else
+                            {
+                                
+                            }
+                        }];
+                    }];
+                    
+                }break;
+                case KBMessageTypeRejectFriend:{
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@%@",msgarr[0],msgarr[2]] cancle:@"确定" otherbutton:nil  block:^(NSInteger index) {
+                    }];
+                }break;
+                case KBMessageTypeAgreeFriend:{
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@%@",msgarr[0],msgarr[2]] cancle:@"确定" otherbutton:nil  block:^(NSInteger index) {
+                    }];
+                    
+                }break;
+                default:
+                    break;
+            }
         }break;
         case 7:{
             //系统公告消息
@@ -211,12 +277,30 @@ static KBScoketManager *manager;
         default:
             break;
     }
-
+    
 }
 
 //发送回执信息
-- (void)sendBackMsg
+- (void)sendBackMsgWithCmdTag:(NSArray *)msg_idArray
 {
+    NSMutableString *msg_id=[[NSMutableString alloc]init];
+    for (int i =0; i<msg_idArray.count; i++) {
+        if (i<msg_idArray.count-1) {
+            [msg_id appendFormat:@"%@#",msg_idArray[i]];
+        }else
+        {
+            [msg_id appendFormat:@"%@",msg_idArray[i]];
+        }
+        
+    }
+    KBUserInfo *user=[KBUserInfo sharedInfo];
+    NSDictionary *dic=@{@"user_id":user.user_id,@"ios_token":user.ios_token,@"msg_id":msg_id,@"cmd":@"2",@"app_name":@"M2616_BD"};
+    NSString *str=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     
+    NSString *ss=[NSString stringWithFormat:@"<request>%@</request>",str];
+    NSLog(@"%@",ss);
+    [_clientScoket writeData:[ss dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:200];
+    
+    //<request>{"user_id":"10705","ios_token":"","msg_id":"1#2#3","cmd":2,"duid":"355066060855683","app_name":"M2616_BD"}</request>
 }
 @end

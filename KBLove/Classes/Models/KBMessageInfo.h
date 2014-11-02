@@ -15,8 +15,12 @@ typedef NS_ENUM(NSInteger, KBMessageType)
     KBMessageTypeTalkImage,
     //位置聊天信息
     KBMessageTypeTalkPosition,
-    //添加好友信息
-    KBMessageTypeAddFriend
+    //请求好友信息
+    KBMessageTypeAddFriend,
+    //拒绝好友消息
+    KBMessageTypeRejectFriend,
+    //同意好友消息
+    KBMessageTypeAgreeFriend
     //可扩展警告等其他信息类型
     
 };
@@ -32,16 +36,16 @@ typedef NS_ENUM(NSInteger, KBTalkEnvironmentType)
 };
 typedef NS_ENUM(NSInteger, KBMessageStatus)
 {
-  //未读
-   KBMessageStatusUnRead=1,
-   //已读
-   KBMessageStatusHaveRead,
-   //好友申请信息
-   KBMessageStatusAgree,
-   //拒绝
-   KBMessageStatusReject,
-   //请求
-   KBMessageStatusRequrest
+    //未读
+    KBMessageStatusUnRead=1,
+    //已读
+    KBMessageStatusHaveRead,
+    //好友申请信息
+    KBMessageStatusAgree,
+    //拒绝
+    KBMessageStatusReject,
+    //请求
+    KBMessageStatusRequrest
 };
 #define KBMessageTalkNotification @"KBMessageTalkNotification"
 #define KBMessageRequestNotification @"KBMessageRequestNotification"

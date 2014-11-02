@@ -5724,7 +5724,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3ff628f7-5dfd-4f7e-b143-fd3cbe2e85f2";
+				PROVISIONING_PROFILE = "d13209bf-1ccf-41ed-8597-11962f250573";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -5778,7 +5778,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3ff628f7-5dfd-4f7e-b143-fd3cbe2e85f2";
+				PROVISIONING_PROFILE = "d13209bf-1ccf-41ed-8597-11962f250573";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
