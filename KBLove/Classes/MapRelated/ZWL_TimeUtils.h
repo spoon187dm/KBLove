@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CCTimeUtils : NSObject
+@interface ZWL_TimeUtils : NSObject
 
 +(NSInteger)year:(NSDate*)aDate;
 +(NSInteger)month:(NSDate*)aDate;

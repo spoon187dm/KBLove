@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "
 #import "BMapKit.h"
 #import "CCJASONObject.h"
-//#import "CCGeoHelper.h"
+#import "ZWL_GeoHelper.h"
+//#import <MAMapKit/MAMapKit.h>
 
-@interface CCDeviceStatus : NSObject<CCJASONObject>
+@interface CCDeviceStatus : NSObject<CCJASONObject, CCGeoHelperDelegate>
 
 @property (nonatomic, assign) long long uid;            // 设备id
 @property (nonatomic, assign) NSInteger lang;           // 经度
@@ -29,9 +31,10 @@
 @property (nonatomic, assign) long long stamp;
 
 @property (nonatomic, assign) BMKGeoPoint point;
+//@property (nonatomic, assign) MAMapPoint gaode_point;
 @property (nonatomic, assign) BOOL addressRequested;
 
-//@property (nonatomic, strong) id<CCGeoHelperDelegate> geoDelegate;
+@property (nonatomic, strong) id<CCGeoHelperDelegate> geoDelegate;
 
 -(void) convertPoint;
 

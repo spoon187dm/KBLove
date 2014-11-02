@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 Capcare. All rights reserved.
 //
 
-#import "CCTimeUtils.h"
+#import "ZWL_TimeUtils.h"
 
-@implementation CCTimeUtils
+@implementation ZWL_TimeUtils
 
 +(NSInteger)year:(NSDate*)aDate
 {
@@ -68,18 +68,18 @@
 
 +(NSString*)getFullDate:(NSDate*)aTime
 {
-    return [CCTimeUtils formateDate:aTime aFormater:@"yyyy年MM月dd日 HH时mm分"];
+    return [ZWL_TimeUtils formateDate:aTime aFormater:@"yyyy年MM月dd日 HH时mm分"];
 }
 
 +(NSString*)getFullTime:(long long)aTime
 {
     //实例化一个NSDateFormatter对象
-    return [CCTimeUtils formateTime:aTime aFormater:@"yyyy年MM月dd日 HH时mm分"];
+    return [ZWL_TimeUtils formateTime:aTime aFormater:@"yyyy年MM月dd日 HH时mm分"];
 }
 
 +(NSString*)getDayAndTime:(long long)aTime
 {
-    return [CCTimeUtils formateTime:aTime aFormater:@"MM-dd HH:mm"];
+    return [ZWL_TimeUtils formateTime:aTime aFormater:@"MM-dd HH:mm"];
 }
 
 +(NSInteger) dayOfYear:(NSDate*)aTime
@@ -91,7 +91,7 @@
 
 +(NSString*)getHourTime:(long long)aTime
 {
-    return [CCTimeUtils formateTime:aTime aFormater:@"HH:mm"];
+    return [ZWL_TimeUtils formateTime:aTime aFormater:@"HH:mm"];
 }
 
 +(NSInteger)dayOfMonth:(NSDate*)aTime
@@ -105,29 +105,29 @@
 +(NSString*)getAppleTimeFormat:(long long)aTime
 {
     NSDate* time = [NSDate dateWithTimeIntervalSince1970:aTime / 1000.0];
-    int year = [CCTimeUtils year:time];
+    int year = [ZWL_TimeUtils year:time];
 //    int month = [CCTimeUtils month:time];
-    int dayY = [CCTimeUtils dayOfYear:time];
+    int dayY = [ZWL_TimeUtils dayOfYear:time];
 //    int dayM = [CCTimeUtils dayOfMonth:time];
 
     NSDate *today = [NSDate date];
-    int yearN = [CCTimeUtils year:today];
-    int dayN = [CCTimeUtils dayOfYear:today];
+    int yearN = [ZWL_TimeUtils year:today];
+    int dayN = [ZWL_TimeUtils dayOfYear:today];
     
     NSMutableString* ret = [[NSMutableString alloc]init];
     if (yearN > year) {
-        [ret appendString:[CCTimeUtils formateTime:aTime aFormater:@"yyyy.MM.dd"]];
+        [ret appendString:[ZWL_TimeUtils formateTime:aTime aFormater:@"yyyy.MM.dd"]];
     } else {
         if (dayN == dayY) {
             [ret appendString:@"今天"];
         } else if (dayN - dayY == 1) {
             [ret appendString:@"昨天"];
         } else {
-            [ret appendString:[CCTimeUtils formateTime:aTime aFormater:@"MM.dd"]];
+            [ret appendString:[ZWL_TimeUtils formateTime:aTime aFormater:@"MM.dd"]];
         }
     }
     
-    NSString* housrDes = [CCTimeUtils getHourTime:aTime];
+    NSString* housrDes = [ZWL_TimeUtils getHourTime:aTime];
     [ret appendString:@" "];
     [ret appendString:housrDes];
     return [NSString stringWithString:ret];

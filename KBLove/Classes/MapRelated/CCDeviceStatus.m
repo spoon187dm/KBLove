@@ -7,7 +7,7 @@
 //
 
 #import "CCDeviceStatus.h"
-#import "CCUtils.h"
+#import "ZWL_Utils.h"
 //#import "MapUtils.h"
 //#import "CCAccountManager.h"
 
@@ -46,30 +46,30 @@
         return;
     }
     
-    _uid = [CCUtils longLongValue:jason aKey:kID];
-    _lang = [CCUtils doubleValue:jason aKey:kLANG] * 1e6;
-    _lat = [CCUtils doubleValue:jason aKey:kLAT] * 1e6;
+    _uid = [ZWL_Utils longLongValue:jason aKey:kID];
+    _lang = [ZWL_Utils doubleValue:jason aKey:kLANG] * 1e6;
+    _lat = [ZWL_Utils doubleValue:jason aKey:kLAT] * 1e6;
 
-    _speed = [CCUtils floatValue:jason aKey:kSPEED];
-    _flowTotal = [CCUtils floatValue:jason aKey:kFLOW_TOTLE];
-    _flow = [CCUtils floatValue:jason aKey:kFLOW];
+    _speed = [ZWL_Utils floatValue:jason aKey:kSPEED];
+    _flowTotal = [ZWL_Utils floatValue:jason aKey:kFLOW_TOTLE];
+    _flow = [ZWL_Utils floatValue:jason aKey:kFLOW];
 
-    _battery = [CCUtils intValue:jason aKey:kBATTERY];
-    _status = [CCUtils intValue:jason aKey:kSTATUS];
+    _battery = [ZWL_Utils intValue:jason aKey:kBATTERY];
+    _status = [ZWL_Utils intValue:jason aKey:kSTATUS];
 
 //    _heading = [[jason valueForKey:kHEAD] longValue];
-    _heading = [CCUtils longValue:jason aKey:kDIRECTION];
-    _status = [CCUtils intValue:jason aKey:kSTATUS];
+    _heading = [ZWL_Utils longValue:jason aKey:kDIRECTION];
+    _status = [ZWL_Utils intValue:jason aKey:kSTATUS];
     _sn = [jason objectForKey:kSN];
-    if ([CCUtils isEmpty:_sn]) {
+    if ([ZWL_Utils isEmpty:_sn]) {
         _sn = [jason objectForKey:kDEVICESN];
     }
     
-    _receive = [CCUtils longLongValue:jason aKey:kRECEIVE];
-    _stayed = [CCUtils intValue:jason aKey:kSTAYED];
+    _receive = [ZWL_Utils longLongValue:jason aKey:kRECEIVE];
+    _stayed = [ZWL_Utils intValue:jason aKey:kSTAYED];
     _address = [jason objectForKey:kADDR];
     
-    _stamp = [CCUtils longLongValue:jason aKey:kSTAMP];
+    _stamp = [ZWL_Utils longLongValue:jason aKey:kSTAMP];
 
 //    CCAccount* ac = [[CCAccountManager sharedClient] getAccount];
 //    if(ac != nil) {
@@ -108,7 +108,7 @@
             CLLocationCoordinate2D coord;
             coord.longitude = _lang / 1e6;
             coord.latitude = _lat / 1e6;
-//            [[CCGeoHelper sharedClient] getAddress:coord delegate:self];
+//            [[ZWL_GeoHelper sharedClient] getAddress:coord delegate:self];
         }
         return addrString;
     }
@@ -118,9 +118,9 @@
 -(void)onGetAddress:(NSString *)address
 {
     _address = address;
-//    if(_geoDelegate) {
-//        [_geoDelegate performSelector:@selector(onGetAddress:) withObject:address];
-//    }
+    if(_geoDelegate) {
+        [_geoDelegate performSelector:@selector(onGetAddress:) withObject:address];
+    }
 }
 
 -(void)readFromArray:(id)array

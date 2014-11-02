@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "CSLinearLayoutView.h"
+//#import "CSLinearLayoutView.h"
 #import "CCDevice.h"
 
-@interface CCUtils : NSObject
+@interface ZWL_Utils : NSObject
 
 +(void) presentViewControllerCompat:(UIViewController*) controller viewControllerToPresent:(UIViewController *)viewControllerToPresent
                            animated:(BOOL)flag completion:(void (^)(void))completion;
@@ -136,10 +136,10 @@
 
 
 
-+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode horizontalAlignment:(CSLinearLayoutItemHorizontalAlignment)horizontalAlignment verticalAlignment:(CSLinearLayoutItemVerticalAlignment)verticalAlignment padding:(CSLinearLayoutItemPadding)padding;
-+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode;
-+ (void)linearLayoutAddChildViews:(CSLinearLayoutView *)linearLayout fillMode:(CSLinearLayoutItemFillMode)fillMode childs:(UIView *)childs,...;
-
+//+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode horizontalAlignment:(CSLinearLayoutItemHorizontalAlignment)horizontalAlignment verticalAlignment:(CSLinearLayoutItemVerticalAlignment)verticalAlignment padding:(CSLinearLayoutItemPadding)padding;
+//+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode;
+//+ (void)linearLayoutAddChildViews:(CSLinearLayoutView *)linearLayout fillMode:(CSLinearLayoutItemFillMode)fillMode childs:(UIView *)childs,...;
+//
 
 
 +(BOOL)isEmpty:(NSString*)aInput;

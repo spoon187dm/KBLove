@@ -7,8 +7,8 @@
 //
 
 #import "CCReplayAnnotationView.h"
-#import "CCUtils.h"
-#import "CCTrackerUtils.h"
+#import "ZWL_Utils.h"
+//#import "CCTrackerUtils.h"
 
 #define ANNOTATION_VIEW_WIDTH   182
 #define ANNOTATION_FONT         [UIFont systemFontOfSize:14]
@@ -60,7 +60,7 @@
         [self addSubview:_iconView];
         
         _bg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ANNOTATION_VIEW_WIDTH, 60)];
-        [CCUtils setUIImageViewStretchImage:_bg imageName:@"replay_name_bg.png" scaleIfNotRetina:NO
+        [ZWL_Utils setUIImageViewStretchImage:_bg imageName:@"replay_name_bg.png" scaleIfNotRetina:NO
                                        left:BG_PADDING_LEFT top:BG_PADDING_TOP right:BG_PADDING_RIGHT bottom:BG_PADDING_LEFT];
         [self addSubview:_bg];
         
@@ -72,7 +72,7 @@
         [self addSubview:_label];
         
         _arrow = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ARROW_WIDTH, ARROW_HEIGHT)];
-        _arrow.image = [CCTrackerUtils loadImageFromCache:@"name_background_arraw.png"];
+        _arrow.image =[UIImage imageNamed:@"name_background_arraw.png"] ;
         [self addSubview:_arrow];
     }
     
@@ -83,8 +83,8 @@
     _bg.hidden = YES;
     _label.hidden = YES;
     _arrow.hidden = YES;
-    CGFloat centerX = [CCUtils centerX:self];
-    CGFloat centerY = [CCUtils centerY:self];
+    CGFloat centerX = [ZWL_Utils centerX:self];
+    CGFloat centerY = [ZWL_Utils centerY:self];
     
     if (_icon) {
         _iconView.frame = CGRectMake(0, 0, ICON_SIZE/2.0f, ICON_SIZE/2.0f);
@@ -95,8 +95,8 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    CGFloat centerX = [CCUtils centerX:self];
-    CGFloat centerY = [CCUtils centerY:self];
+    CGFloat centerX = [ZWL_Utils centerX:self];
+    CGFloat centerY = [ZWL_Utils centerY:self];
     
     if (_icon) {
         _iconView.frame = CGRectMake(0, 0, ICON_SIZE/2.0f, ICON_SIZE/2.0f);
@@ -106,11 +106,11 @@
     [_label sizeToFit];
     _label.center = CGPointMake(centerX, - LABEL_OFFSET);
     
-    _bg.frame = [CCUtils extendRect:_label.bounds left:LABEL_PADDING_LEFT top:LABEL_PADDING_TOP right:LABEL_PADDING_RIGHT bottom:LABEL_PADDING_BUTTOM];
+    _bg.frame = [ZWL_Utils extendRect:_label.bounds left:LABEL_PADDING_LEFT top:LABEL_PADDING_TOP right:LABEL_PADDING_RIGHT bottom:LABEL_PADDING_BUTTOM];
     _bg.center = CGPointMake(centerX, centerY - LABEL_OFFSET + ANNOTATION_BG_PADDING);
     
     // 箭头
-    _arrow.center = CGPointMake(centerX, [CCUtils bottom:_bg] - [CCUtils centerY:_arrow]);
+    _arrow.center = CGPointMake(centerX, [ZWL_Utils bottom:_bg] - [ZWL_Utils centerY:_arrow]);
 }
 
 -(void)setContent:(NSString *)content
@@ -119,7 +119,7 @@
     if (_label) {
         _label.text = content;
         [_label sizeToFit];
-        _label.center = CGPointMake([CCUtils centerX:self], - LABEL_OFFSET);
+        _label.center = CGPointMake([ZWL_Utils centerX:self], - LABEL_OFFSET);
     }
 }
 
