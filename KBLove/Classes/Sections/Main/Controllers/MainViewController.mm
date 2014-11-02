@@ -12,8 +12,15 @@
 #import "KBUserManager.h"
 #import "CircleViewController.h"
 #import "KBDeviceManager.h"
+#import <MAMapKit/MAMapKit.h>
+
 
 @interface MainViewController (){
+    //百度地图
+    BMKMapView *baidu_MapView;
+    //高德地图
+    MAMapView *gaode_MapView;
+    
     CLLocationManager *_manager;
 //    三种设备类型按钮
     UIButton *_petButton;
@@ -29,7 +36,6 @@
     BOOL _hasCarDevice;
     BOOL _hasPetDevice;
     BOOL _hasPersonDevice;
-    BMKMapView *baidu_mapview;
 }
 
 - (NSArray *)getFriendDeviceArray;
@@ -150,18 +156,15 @@
 //    p.coordinate = coor;
 //    p.title = @"test";
 //    p.subtitle = @"此Annotation可拖拽!";
-//    [baidu_mapview addAnnotation:p];
+//    [baidu_MapView addAnnotation:p];
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
 //    BMKPointAnnotation *point=[[BMKPointAnnotation alloc]init];
 //    point.coordinate=cl2d;
-//    [baidu_mapview addAnnotation:point];
-
-//    
-//    [baidu_mapview setUserTrackingMode:MKUserTrackingModeFollowWithHeading];
-//    _manager = [[CLLocationManager alloc]init];
-//    _manager.distanceFilter = kCLLocationAccuracyBest;
-//    //    _manager.delegate = self;
-//    [_manager startUpdatingLocation];
+//    [baidu_MapView addAnnotation:point];
+    
+    
+    
+    
     
     //设置地图显示区域
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
@@ -198,10 +201,24 @@
 {
     static NSString* annotationIdentifier = @"warningPin";
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
+//        if (annotation == Point) {
         BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
                                                                          reuseIdentifier:annotationIdentifier];
-        annView.image =  [UIImage imageNamed:@"dt_start.png"];
+        annView.image =  [UIImage imageNamed:@"car.png"];
         return annView;
+//        }
+        
+       
+    }
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+//        if (annotation == Point) {
+        MAPinAnnotationView * annView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
+                                                                         reuseIdentifier:annotationIdentifier];
+        annView.image =  [UIImage imageNamed:@"endPoint.png"];
+        return annView;
+//        }
+        
+        
     }
     return nil;
 }
