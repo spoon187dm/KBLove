@@ -8,7 +8,7 @@
 
 #import "CCBaseRelation.h"
 
-#import "CCUtils.h"
+#import "ZWL_Utils.h"
 
 @implementation CCBaseRelation
 
@@ -39,7 +39,7 @@
     if ([jason isEqual:[NSNull null]]) {
         return;
     }
-    _age = [CCUtils intValue:jason aKey:kAGE];
+    _age = [ZWL_Utils intValue:jason aKey:kAGE];
     _description = [jason objectForKey:kDESC];
 }
 

@@ -58,7 +58,7 @@
 #define PRIVACY_PART_FRIENDS    3
 
 #define ADD 1
-#define DELETE 2
+#define _DELETE 2
 
 #define BIND 1
 #define UNBIND 2

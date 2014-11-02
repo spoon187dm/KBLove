@@ -8,8 +8,8 @@
 
 #import "CCFence.h"
 //#import "CCAccountManager.h"
-#import "CCUtils.h"
-#import "MapUtils.h"
+#import "ZWL_Utils.h"
+#import "ZWL_MapUtils.h"
 //#import "CCPointHelper.h"
 
 @implementation CCFence
@@ -87,14 +87,14 @@
         return;
     }
     
-    _type = [CCUtils intValue:jason aKey:kTYPE];
+    _type = [ZWL_Utils intValue:jason aKey:kTYPE];
     _name = [jason objectForKey:kNAME];
-    _outType = [CCUtils intValue:jason aKey:kOUTSTR];
+    _outType = [ZWL_Utils intValue:jason aKey:kOUTSTR];
     _sn = [jason objectForKey:kDEVICE_SN];
     if (_type == CIRCLE) {
-        _radius = [CCUtils intValue:jason aKey:kRADIUS];
+        _radius = [ZWL_Utils intValue:jason aKey:kRADIUS];
         NSArray* array = [jason objectForKey:kCENTER];
-        if (![CCUtils isNull:array] && array.count >= 2) {
+        if (![ZWL_Utils isNull:array] && array.count >= 2) {
             NSNumber* lng = [array objectAtIndex:0];
             if (![lng isEqual:[NSNull null]]) {
                 _lang = [lng doubleValue] * 1e6;
@@ -111,17 +111,17 @@
         
         [_points removeAllObjects];
         NSArray* array = [jason objectForKey:kREGION];
-        if (![CCUtils isNull:array]) {
+        if (![ZWL_Utils isNull:array]) {
             NSInteger size = array.count;
             for (NSInteger i = 0; i < size; i++) {
                 id obj = [array objectAtIndex:i];
                 NSDictionary* p;
-                if ([obj isKindOfClass:[NSDictionary class]] && ![CCUtils isNull:obj]) {
+                if ([obj isKindOfClass:[NSDictionary class]] && ![ZWL_Utils isNull:obj]) {
                     p = (NSDictionary*) obj;
                 }
                 
-                int lng = [CCUtils doubleValue:p aKey:kLANG] * 1e6;
-                int lat =  [CCUtils doubleValue:p aKey:kLAT] * 1e6;
+                int lng = [ZWL_Utils doubleValue:p aKey:kLANG] * 1e6;
+                int lat =  [ZWL_Utils doubleValue:p aKey:kLAT] * 1e6;
                 BMKGeoPoint point;
                 point.latitudeE6 = lat;
                 point.longitudeE6 = lng;
