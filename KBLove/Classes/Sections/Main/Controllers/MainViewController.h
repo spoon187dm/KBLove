@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 #import "BMapKit.h"
-@interface MainViewController : UIViewController<BMKMapViewDelegate>
+#import <MAMapKit/MAMapKit.h>
+
+@interface MainViewController : UIViewController<BMKMapViewDelegate,MAMapViewDelegate>
 //@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+//@property (weak, nonatomic) IBOutlet BMKMapView *baidu_MapView;
 
 @end

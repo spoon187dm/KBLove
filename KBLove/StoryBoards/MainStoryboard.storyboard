@@ -102,7 +102,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" id="9SF-RX-YaI">
+                            <view contentMode="scaleToFill" id="9SF-RX-YaI" customClass="BMKMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="433"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +132,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="baidu_MapView" destination="9SF-RX-YaI" id="qaQ-wo-4L4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cA8-Da-hIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

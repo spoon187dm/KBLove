@@ -12,8 +12,15 @@
 #import "KBUserManager.h"
 #import "CircleViewController.h"
 #import "KBDeviceManager.h"
+#import <MAMapKit/MAMapKit.h>
+
 
 @interface MainViewController (){
+    //百度地图
+    BMKMapView *baidu_MapView;
+    //高德地图
+    MAMapView *gaode_MapView;
+    
     CLLocationManager *_manager;
 //    三种设备类型按钮
     UIButton *_petButton;
@@ -29,7 +36,6 @@
     BOOL _hasCarDevice;
     BOOL _hasPetDevice;
     BOOL _hasPersonDevice;
-    BMKMapView *baidu_mapview;
 }
 
 - (NSArray *)getFriendDeviceArray;
@@ -66,7 +72,7 @@
     [super viewDidLoad];
     
     //Scoket登陆服务器
-    [[KBScoketManager ShareManager]startScoket];
+//    [[KBScoketManager ShareManager]startScoket];
 
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES];
@@ -138,11 +144,33 @@
     /**
      百度地图
      */
-//    baidu_mapview=[[BMKMapView alloc]init];
-//    CGRect screen=[UIScreen mainScreen].bounds;
-//    baidu_mapview.frame=CGRectMake(screen.origin.x, screen.origin.y, screen.size.width, screen.size.height-69);
-//    [self.view addSubview:baidu_mapview];
-//    baidu_mapview.delegate=self;
+
+//    baidu_MapView=[[BMKMapView alloc]init];
+//    UIScreen *mainscreen=[UIScreen mainScreen];
+//    baidu_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
+//    [self.view addSubview:baidu_MapView];
+//    baidu_MapView.delegate=self;
+    
+    /**
+     高德地图
+     */
+    gaode_MapView=[[MAMapView alloc]init];
+    UIScreen *mainscreen=[UIScreen mainScreen];
+    gaode_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
+    [self.view addSubview:gaode_MapView];
+    gaode_MapView.delegate=self;
+    
+    MAPointAnnotation *p=[[MAPointAnnotation alloc]init];
+    CLLocationCoordinate2D coor;
+    coor.latitude = 39.915;
+    coor.longitude = 116.404;
+    p.coordinate = coor;
+    p.title = @"test";
+    p.subtitle = @"此Annotation可拖拽!";
+    [gaode_MapView addAnnotation:p];
+    
+    
+    
 //    BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
 //    CLLocationCoordinate2D coor;
 //    coor.latitude = 39.915;
@@ -150,18 +178,15 @@
 //    p.coordinate = coor;
 //    p.title = @"test";
 //    p.subtitle = @"此Annotation可拖拽!";
-//    [baidu_mapview addAnnotation:p];
+//    [baidu_MapView addAnnotation:p];
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
 //    BMKPointAnnotation *point=[[BMKPointAnnotation alloc]init];
 //    point.coordinate=cl2d;
-//    [baidu_mapview addAnnotation:point];
-
-//    
-//    [baidu_mapview setUserTrackingMode:MKUserTrackingModeFollowWithHeading];
-//    _manager = [[CLLocationManager alloc]init];
-//    _manager.distanceFilter = kCLLocationAccuracyBest;
-//    //    _manager.delegate = self;
-//    [_manager startUpdatingLocation];
+//    [baidu_MapView addAnnotation:point];
+    
+    
+    
+    
     
     //设置地图显示区域
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
@@ -198,10 +223,24 @@
 {
     static NSString* annotationIdentifier = @"warningPin";
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
+//        if (annotation == Point) {
         BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
                                                                          reuseIdentifier:annotationIdentifier];
-        annView.image =  [UIImage imageNamed:@"dt_start.png"];
+        annView.image =  [UIImage imageNamed:@"car.png"];
         return annView;
+//        }
+        
+       
+    }
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+//        if (annotation == Point) {
+        MAPinAnnotationView * annView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
+                                                                         reuseIdentifier:annotationIdentifier];
+        annView.image =  [UIImage imageNamed:@"endPoint.png"];
+        return annView;
+//        }
+        
+        
     }
     return nil;
 }
