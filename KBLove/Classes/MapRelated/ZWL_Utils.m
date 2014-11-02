@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 Capcare. All rights reserved.
 //
 
-#import "CCUtils.h"
+#import "ZWL_Utils.h"
 //#import "MD5Utils.h"
 //#import "Toast+UIView.h"
 #import "CCTrackerUtils.h"
@@ -14,10 +14,10 @@
 #import <sys/utsname.h>
 
 
-@implementation CCUtils
+@implementation ZWL_Utils
 
 +(void)presentViewControllerCompat:(UIViewController *)controller viewControllerToPresent:(UIViewController *)viewControllerToPresent
-                          animated:(BOOL)flag completion:(void (^)())completion
+                          animated:(BOOL)flag completion:(void (^)(void))completion
 {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
     [controller presentModalViewController:viewControllerToPresent animated:flag];
@@ -53,7 +53,7 @@
 
 + (UIViewController *)topViewController
 {
-    return [CCUtils topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+    return [ZWL_Utils topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
 }
 
 +(void)hideKeyboard:(UIViewController *)controller
@@ -118,7 +118,7 @@
                       right:(NSInteger)right
                      bottom:(NSInteger)bottom
 {
-    UIImage *originalImage = [CCTrackerUtils loadImageFromCache:imageName];
+    UIImage *originalImage =[UIImage imageNamed:imageName];
     UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
     return [originalImage resizableImageWithCapInsets:insets];
 }
@@ -220,7 +220,7 @@
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn.imageView setContentMode: UIViewContentModeScaleAspectFit];
-    [CCUtils setBtnIconSelector:btn normalImageName:normalImageName
+    [ZWL_Utils setBtnIconSelector:btn normalImageName:normalImageName
                pressedImageName:pressedImageName
            scaleIfNotRetina:scaleIfNotRetina];
     UIImage* image = [btn backgroundImageForState:UIControlStateNormal];
@@ -233,7 +233,7 @@
                 scaleIfNotRetina:(BOOL)scaleIfNotRetina
                           target:(id)target action:(SEL)action
 {
-    UIButton* btn = [CCUtils genButtonFromResource:normalImageName pressedImageName:pressedImageName scaleIfNotRetina:scaleIfNotRetina];
+    UIButton* btn = [ZWL_Utils genButtonFromResource:normalImageName pressedImageName:pressedImageName scaleIfNotRetina:scaleIfNotRetina];
 //    btn.frame = CGRectMake(0, 0, NAVITEM_SIZE, NAVITEM_SIZE);
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
@@ -289,52 +289,52 @@
     UIGraphicsEndImageContext();
     view.backgroundColor=[UIColor colorWithPatternImage:resultImage];
 }
-
-+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode horizontalAlignment:(CSLinearLayoutItemHorizontalAlignment)horizontalAlignment verticalAlignment:(CSLinearLayoutItemVerticalAlignment)verticalAlignment padding:(CSLinearLayoutItemPadding)padding
-{
-    CSLinearLayoutItem* item = [CSLinearLayoutItem layoutItemForView:child];
-    item.horizontalAlignment = horizontalAlignment;
-    item.verticalAlignment = verticalAlignment;
-    item.fillMode = fillMode;
-    item.padding = padding;
-    [linearLayout addItem:item];
-}
-
-+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode
-{
-    CSLinearLayoutItem* item = [CSLinearLayoutItem layoutItemForView:child];
-    item.fillMode = fillMode;
-    [linearLayout addItem:item];
-}
-
-+ (void)linearLayoutAddChildViews:(CSLinearLayoutView *)linearLayout fillMode:(CSLinearLayoutItemFillMode)fillMode childs:(UIView *)childs,...
-{
-    //指向变参的指针
-    va_list list;
-    //使用第一个参数来初使化list指针
-    if (childs) {
-        [CCUtils linearLayoutAddChild:linearLayout child:childs fillMode:fillMode];
-    }
-    
-    va_start(list, childs);
-    while (YES)
-    {
-        //返回可变参数，va_arg第二个参数为可变参数类型，如果有多个可变参数，依次调用可获取各个参数
-        UIView *child = va_arg(list, UIView*);
-        if (!child) {
-            break;
-        }
-        
-        [CCUtils linearLayoutAddChild:linearLayout child:child fillMode:fillMode];
-    }
-    //结束可变参数的获取
-    va_end(list);
-}
+//
+//+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode horizontalAlignment:(CSLinearLayoutItemHorizontalAlignment)horizontalAlignment verticalAlignment:(CSLinearLayoutItemVerticalAlignment)verticalAlignment padding:(CSLinearLayoutItemPadding)padding
+//{
+//    CSLinearLayoutItem* item = [CSLinearLayoutItem layoutItemForView:child];
+//    item.horizontalAlignment = horizontalAlignment;
+//    item.verticalAlignment = verticalAlignment;
+//    item.fillMode = fillMode;
+//    item.padding = padding;
+//    [linearLayout addItem:item];
+//}
+//
+//+ (void)linearLayoutAddChild:(CSLinearLayoutView *)linearLayout child:(UIView*)child fillMode:(CSLinearLayoutItemFillMode)fillMode
+//{
+//    CSLinearLayoutItem* item = [CSLinearLayoutItem layoutItemForView:child];
+//    item.fillMode = fillMode;
+//    [linearLayout addItem:item];
+//}
+//
+//+ (void)linearLayoutAddChildViews:(CSLinearLayoutView *)linearLayout fillMode:(CSLinearLayoutItemFillMode)fillMode childs:(UIView *)childs,...
+//{
+//    //指向变参的指针
+//    va_list list;
+//    //使用第一个参数来初使化list指针
+//    if (childs) {
+//        [ZWL_Utils linearLayoutAddChild:linearLayout child:childs fillMode:fillMode];
+//    }
+//    
+//    va_start(list, childs);
+//    while (YES)
+//    {
+//        //返回可变参数，va_arg第二个参数为可变参数类型，如果有多个可变参数，依次调用可获取各个参数
+//        UIView *child = va_arg(list, UIView*);
+//        if (!child) {
+//            break;
+//        }
+//        
+//        [ZWL_Utils linearLayoutAddChild:linearLayout child:child fillMode:fillMode];
+//    }
+//    //结束可变参数的获取
+//    va_end(list);
+//}
 
 
 +(void)showConfirmDialog:(NSString*) message
 {
-    [CCUtils showAlertDialog:nil title:@"提示" message:message confirmText:@"确定" cancelText:nil];
+    [ZWL_Utils showAlertDialog:nil title:@"提示" message:message confirmText:@"确定" cancelText:nil];
 }
 
 
@@ -352,7 +352,7 @@
 
 + (BOOL)isEmpty:(NSString*)aInput
 {
-    if([CCUtils isNull:aInput] || [aInput length] == 0) { //string is empty or nil
+    if([ZWL_Utils isNull:aInput] || [aInput length] == 0) { //string is empty or nil
         return YES;
     }
     
@@ -381,7 +381,7 @@
 
 +(NSString*) dict2JsonString:(id)aDict
 {
-    NSData *registerData = [CCUtils dict2JsonData:aDict];
+    NSData *registerData = [ZWL_Utils dict2JsonData:aDict];
     if (registerData) {
 //        NSError *error;
         NSString* ret = [[NSString alloc] initWithData:registerData encoding:NSUTF8StringEncoding];
@@ -429,7 +429,7 @@
 +(NSInteger) intValue:(id)json aKey:(NSString*)aKey
 {
     NSNumber* number = [json objectForKey:aKey];
-    if (![CCUtils isNull:number]) {
+    if (![ZWL_Utils isNull:number]) {
         return [number intValue];
     }
     return 0;
@@ -438,7 +438,7 @@
 +(long) longValue:(id)json aKey:(NSString*)aKey
 {
     NSNumber* number = [json objectForKey:aKey];
-    if (![CCUtils isNull:number]) {
+    if (![ZWL_Utils isNull:number]) {
         return [number longValue];
     }
     return 0;
@@ -447,7 +447,7 @@
 +(long long) longLongValue:(id)json aKey:(NSString*)aKey
 {
     NSNumber* number = [json objectForKey:aKey];
-    if (![CCUtils isNull:number]) {
+    if (![ZWL_Utils isNull:number]) {
         return [number longLongValue];
     }
     return 0;
@@ -456,7 +456,7 @@
 +(float) floatValue:(id)json aKey:(NSString*)aKey
 {
     NSNumber* number = [json objectForKey:aKey];
-    if (![CCUtils isNull:number]) {
+    if (![ZWL_Utils isNull:number]) {
         return [number floatValue];
     }
     return 0;
@@ -481,7 +481,7 @@
 //    debugLog(@"wirteToFile data = %@, fileName = %@", data, fileName);
     //applications Documents dirctory path
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    if (![CCUtils isNull:paths] && paths.count > 0) {
+    if (![ZWL_Utils isNull:paths] && paths.count > 0) {
         NSString *documentsDirectory = [paths objectAtIndex:0];
         //file to write to
         NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fileName];
@@ -495,7 +495,7 @@
 {
     //application Documents dirctory path
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    if (![CCUtils isNull:paths] && paths.count > 0) {
+    if (![ZWL_Utils isNull:paths] && paths.count > 0) {
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSError *jsonError = nil;
         NSString *jsonFilePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fileName];
@@ -511,7 +511,7 @@
 //    debugLog(@"deleteFile fileName = %@", fileName);
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    if (![CCUtils isNull:paths] && paths.count > 0) {
+    if (![ZWL_Utils isNull:paths] && paths.count > 0) {
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *jsonFilePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory, fileName];
         [fileManager removeItemAtPath:jsonFilePath error:nil];

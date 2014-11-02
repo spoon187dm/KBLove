@@ -8,8 +8,8 @@
 
 #import "CCWarning.h"
 //#import "CCAccountManager.h"
-#import "CCTimeUtils.h"
-#import "CCUtils.h"
+#import "ZWL_TimeUtils.h"
+#import "ZWL_Utils.h"
 
 @implementation CCWarning
 
@@ -48,21 +48,21 @@
     if ([jason isEqual:[NSNull null]]) {
         return;
     }
-    _type = [CCUtils intValue:jason aKey:kTYPE];
-    _serialNum = [CCUtils longLongValue:jason aKey:kSERIALNUM];
-    _uid = [CCUtils longLongValue:jason aKey:kID];
-    _lang = [CCUtils doubleValue:jason aKey:kLANG] * 1e6;
-    _lat = [CCUtils doubleValue:jason aKey:kLAT] * 1e6;
-    _speed = [CCUtils floatValue:jason aKey:kSPEED];
+    _type = [ZWL_Utils intValue:jason aKey:kTYPE];
+    _serialNum = [ZWL_Utils longLongValue:jason aKey:kSERIALNUM];
+    _uid = [ZWL_Utils longLongValue:jason aKey:kID];
+    _lang = [ZWL_Utils doubleValue:jason aKey:kLANG] * 1e6;
+    _lat = [ZWL_Utils doubleValue:jason aKey:kLAT] * 1e6;
+    _speed = [ZWL_Utils floatValue:jason aKey:kSPEED];
 
     _info = [jason valueForKey:kINFO];
-    _level = [CCUtils intValue:jason aKey:kLEVEL];
-    _readState = [CCUtils intValue:jason aKey:kREADED];
+    _level = [ZWL_Utils intValue:jason aKey:kLEVEL];
+    _readState = [ZWL_Utils intValue:jason aKey:kREADED];
 
-    _time = [CCUtils longLongValue:jason aKey:kTIME];
+    _time = [ZWL_Utils longLongValue:jason aKey:kTIME];
     _sn = [jason valueForKey:kDEVICESN];
-    _battery = [CCUtils intValue:jason aKey:kBATTERY];
-    _flow = [CCUtils intValue:jason aKey:kFLOW];
+    _battery = [ZWL_Utils intValue:jason aKey:kBATTERY];
+    _flow = [ZWL_Utils intValue:jason aKey:kFLOW];
     _address = [jason valueForKey:kADDR];
 }
 
@@ -76,7 +76,7 @@
             CLLocationCoordinate2D coord;
             coord.longitude = _lang / 1e6;
             coord.latitude = _lat / 1e6;
-//            [[CCGeoHelper sharedClient] getAddress:coord delegate:self];
+//            [[ZWL_GeoHelper sharedClient] getAddress:coord delegate:self];
         }
         return addrString;
     }
@@ -86,15 +86,15 @@
 -(void) onAddressReset:(NSString*)address
 {
     _address = address;
-//    if(_geoDelegate) {
-//        [_geoDelegate performSelector:@selector(onGetAddress:) withObject:address];
-//    }
+    if(_geoDelegate) {
+        [_geoDelegate performSelector:@selector(onGetAddress:) withObject:address];
+    }
 }
 
 -(NSString*) getTimeStr
 {
     if (_timeStr == nil) {
-        _timeStr = [CCTimeUtils getAppleTimeFormat:_time];
+        _timeStr = [ZWL_TimeUtils getAppleTimeFormat:_time];
     }
     return  _timeStr;
 }
@@ -123,7 +123,7 @@
 {
     NSMutableString* ret = [[NSMutableString alloc]init];
     if (isFullTime) {
-        [ret appendString:[CCTimeUtils getFullTime:_time]];
+        [ret appendString:[ZWL_TimeUtils getFullTime:_time]];
     } else {
         [ret appendString:[self getTimeStr]];
     }
@@ -136,7 +136,7 @@
     [ret appendString:@"在"];
     
     NSString* addr = [self getAddress];
-    if (![CCUtils isEmpty:addr]) {
+    if (![ZWL_Utils isEmpty:addr]) {
         [ret appendString:[self getAddress]];
     }
 
@@ -205,7 +205,7 @@
 
 -(NSString*) getWarningDialogMessage:(NSString*)deviceName
 {
-    NSString* time = [CCTimeUtils getAppleTimeFormat:_time];
+    NSString* time = [ZWL_TimeUtils getAppleTimeFormat:_time];
     return [NSString stringWithFormat:@"设备 %@ 于 %@ 发生 %@", deviceName, time, [self getWarningTypeDes]];
 }
 
