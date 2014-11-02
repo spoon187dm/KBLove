@@ -1,23 +1,15 @@
 //
-//  DevicesCell.m
+//  TraceCell.m
 //  KBLove
 //
-//  Created by block on 14-10-15.
+//  Created by block on 14/11/2.
 //  Copyright (c) 2014年 block. All rights reserved.
 //
 
-#import "DevicesCell.h"
-#import "KBDevices.h"
-#import "DeviceInfoView.h"
-#import "KBDevicesStatus.h"
+#import "TraceCell.h"
 #import <UIImageView+AFNetworking.h>
-@interface DevicesCell (){
-
-}
-
-@end
-
-@implementation DevicesCell
+#import "TraceInfoView.h"
+@implementation TraceCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -42,8 +34,8 @@
 }
 
 - (UIView *)ViewForCellContent{
-
-    DeviceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"DeviceInfoView" owner:self options:nil] lastObject];
+    
+    TraceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
     infoView.frame = self.bounds;
     return infoView;
 }
@@ -64,25 +56,6 @@
     }
     
     return view;
-}
-
-- (void)setData:(KBDevices *)devices{
-    DeviceInfoView *view = (DeviceInfoView *)self.cellView;
-    view.deviceTypeImageView.image = [devices getDeviceTypeImage];
-    view.alarmStatusImageView.image = [devices getDeviceAlarmStatusImage];
-    view.deviceMoveStatuImageView.image = [devices isMoving]?kImage_deviceStatusActive:kImage_deviceStatusDeactive;
-    view.deveiceNameLabel.text = devices.name;
-    view.deviceSnLabel.text = devices.sn;
-    view.deviceLocationLabel.text = @"locate";
-    
-    [view.deviceImageView setImageWithURL:[NSURL URLWithString:kImageUrlForName(devices.icon)] placeholderImage:[devices getDefaultHeadImage]];
-    WLLog(@"device head image url:%@",kImageUrlForName(devices.icon));
-    NSDateFormatter *formate = [[NSDateFormatter alloc]init];
-    [formate setDateFormat:@"hh-mm"];
-    NSDate *dateString = [NSDate dateWithTimeIntervalSince1970:[devices.devicesStatus.systime floatValue]];
-    view.timeLabel.text = [formate stringFromDate:dateString];
-    
-    
 }
 
 @end

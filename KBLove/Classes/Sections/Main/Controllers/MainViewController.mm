@@ -123,11 +123,20 @@
 
 //加载设备数据
 - (void)loadData{
+    [SVProgressHUD showWithStatus:@"设备获取,.."];
     [KBDeviceManager getDeviceList:^(BOOL isSuccess, NSArray *resultArray) {
         if (isSuccess) {
             _allDeviceArray = resultArray;
             [self setupDeviceArray];
             [self showDevices:_allDeviceArray];
+            [SVProgressHUD dismiss];
+        }else{
+            [SVProgressHUD dismiss];
+            [UIAlertView showWithTitle:@"设备获取失败" Message:@"请检查网络连接后重试" cancle:@"取消" otherbutton:@"重试" block:^(NSInteger index) {
+                if (1 == index) {
+                    [self loadData];
+                }
+            }];
         }
     }];
 }

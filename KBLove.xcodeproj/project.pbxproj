@@ -362,6 +362,10 @@
 		F9A38FD119F61B0D0043594F /* KBGoalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FCE19F61B0D0043594F /* KBGoalBar.m */; };
 		F9A38FD219F61B0D0043594F /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A38FD019F61B0D0043594F /* PCPieChart.m */; };
 		F9A3BBD11A01DA4400C2461F /* KBDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A3BBD01A01DA4400C2461F /* KBDeviceManager.m */; };
+		F9AD8C071A060D44009A55D2 /* TraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AD8C061A060D44009A55D2 /* TraceCell.m */; };
+		F9AD8C0A1A060E69009A55D2 /* TraceInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AD8C091A060E69009A55D2 /* TraceInfoView.m */; };
+		F9AD8C0C1A060E81009A55D2 /* TraceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9AD8C0B1A060E81009A55D2 /* TraceInfoView.xib */; };
+		F9AD8C0F1A06118F009A55D2 /* TraceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AD8C0E1A06118F009A55D2 /* TraceListViewController.m */; };
 		F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B019F121A3005B93CA /* AlarmDetailViewController.m */; };
 		F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B219F121A3005B93CA /* AlarmListViewController.m */; };
 		F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B619F121B0005B93CA /* KBMessageInfo.m */; };
@@ -1349,6 +1353,13 @@
 		F9A3BBCF1A01DA4400C2461F /* KBDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBDeviceManager.h; sourceTree = "<group>"; };
 		F9A3BBD01A01DA4400C2461F /* KBDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBDeviceManager.m; sourceTree = "<group>"; };
 		F9A3BBD21A02041000C2461F /* ImageMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMacro.h; sourceTree = "<group>"; };
+		F9AD8C051A060D44009A55D2 /* TraceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceCell.h; sourceTree = "<group>"; };
+		F9AD8C061A060D44009A55D2 /* TraceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceCell.m; sourceTree = "<group>"; };
+		F9AD8C081A060E69009A55D2 /* TraceInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceInfoView.h; sourceTree = "<group>"; };
+		F9AD8C091A060E69009A55D2 /* TraceInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceInfoView.m; sourceTree = "<group>"; };
+		F9AD8C0B1A060E81009A55D2 /* TraceInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TraceInfoView.xib; sourceTree = "<group>"; };
+		F9AD8C0D1A06118F009A55D2 /* TraceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceListViewController.h; sourceTree = "<group>"; };
+		F9AD8C0E1A06118F009A55D2 /* TraceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceListViewController.m; sourceTree = "<group>"; };
 		F9D4C8AF19F121A3005B93CA /* AlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDetailViewController.h; sourceTree = "<group>"; };
 		F9D4C8B019F121A3005B93CA /* AlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDetailViewController.m; sourceTree = "<group>"; };
 		F9D4C8B119F121A3005B93CA /* AlarmListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListViewController.h; sourceTree = "<group>"; };
@@ -2851,6 +2862,8 @@
 				F975FE6C19EE45A500D13D86 /* DeviceListViewController.m */,
 				F975FE8619EE7F6700D13D86 /* DeviceDetailViewController.h */,
 				F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */,
+				F9AD8C0D1A06118F009A55D2 /* TraceListViewController.h */,
+				F9AD8C0E1A06118F009A55D2 /* TraceListViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2860,10 +2873,12 @@
 			children = (
 				F9D4C8B819F121BC005B93CA /* AlarmCell.h */,
 				F9D4C8B919F121BC005B93CA /* AlarmCell.m */,
-				F9D4C8BA19F121BC005B93CA /* KBAlarmInfoView.h */,
-				F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */,
 				F975FE6819EE453200D13D86 /* DevicesCell.h */,
 				F975FE6919EE453200D13D86 /* DevicesCell.m */,
+				F9AD8C051A060D44009A55D2 /* TraceCell.h */,
+				F9AD8C061A060D44009A55D2 /* TraceCell.m */,
+				F9D4C8BA19F121BC005B93CA /* KBAlarmInfoView.h */,
+				F9D4C8BB19F121BC005B93CA /* KBAlarmInfoView.m */,
 				F975FE6E19EE4FDE00D13D86 /* DeviceInfoView.h */,
 				F975FE6F19EE4FDE00D13D86 /* DeviceInfoView.m */,
 				F975FE7319EE503800D13D86 /* DeviceInfoView.xib */,
@@ -2873,6 +2888,9 @@
 				F975FE8119EE74CB00D13D86 /* DropListView.h */,
 				F975FE8219EE74CB00D13D86 /* DropListView.m */,
 				F975FE8419EE74DD00D13D86 /* DropListView.xib */,
+				F9AD8C081A060E69009A55D2 /* TraceInfoView.h */,
+				F9AD8C091A060E69009A55D2 /* TraceInfoView.m */,
+				F9AD8C0B1A060E81009A55D2 /* TraceInfoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -5058,6 +5076,7 @@
 				F9F3AF4B19F63E5800E0A0F9 /* 数据03_33.png in Resources */,
 				F91A0E8719E7AACF009ADB44 /* black_iOS6_navBar@2x.png in Resources */,
 				F91A0E9319E7AACF009ADB44 /* blue_tabbar@2x.png in Resources */,
+				F9AD8C0C1A060E81009A55D2 /* TraceInfoView.xib in Resources */,
 				F9F3AF8719F63E5800E0A0F9 /* 登录_15.png in Resources */,
 				F9F3AF8019F63E5800E0A0F9 /* bg.png in Resources */,
 				F91A0E7719E7AACF009ADB44 /* appItemNormal.png in Resources */,
@@ -5441,6 +5460,7 @@
 				BC71E6E219F9666A00692533 /* PositionCell.m in Sources */,
 				F90F6F0E19F563E400671113 /* PrivacySettingViewController.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
+				F9AD8C071A060D44009A55D2 /* TraceCell.m in Sources */,
 				BC59836419ECCE9800DAC76A /* CircleViewController.mm in Sources */,
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
@@ -5477,6 +5497,7 @@
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
+				F9AD8C0A1A060E69009A55D2 /* TraceInfoView.m in Sources */,
 				F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				BC777FC81A0507BC00349CCD /* CCFence.m in Sources */,
@@ -5514,6 +5535,7 @@
 				BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
 				BC777FD21A0507BC00349CCD /* NYSliderPopover.m in Sources */,
+				F9AD8C0F1A06118F009A55D2 /* TraceListViewController.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				BC777FCD1A0507BC00349CCD /* CCWarning.m in Sources */,
 				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,
