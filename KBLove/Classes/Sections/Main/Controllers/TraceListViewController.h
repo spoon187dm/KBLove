@@ -10,4 +10,7 @@
 
 @interface TraceListViewController : TableMenuViewController
 
+- (IBAction)click_back:(UIButton *)sender;
+- (IBAction)click_home:(id)sender;
+
 @end

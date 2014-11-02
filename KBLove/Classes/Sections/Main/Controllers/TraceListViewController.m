@@ -51,14 +51,26 @@
     
 }
 
+- (IBAction)click_back:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)click_home:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70;
+    return 150;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataArray.count;
-    //    return 10;
+//    return _dataArray.count;
+    return 10;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @" ";
 }
 
 
@@ -78,7 +90,7 @@
     
     //    KBAlarm *device = _dataArray[indexPath.row];
     //    [cell setEditing:YES];
-    [cell configWithData:indexPath menuData:menuImgArr cellFrame:CGRectMake(0, 0, 320, 70)];
+    [cell configWithData:indexPath menuData:menuImgArr cellFrame:CGRectMake(0, 0, 320, 150)];
 //    [cell startMyEdit:_editing];
 //    [cell setMySelected:[_selectedArray[indexPath.row] boolValue]];
     //    [cell setData:device];

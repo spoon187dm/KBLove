@@ -81,8 +81,6 @@
     [formate setDateFormat:@"hh-mm"];
     NSDate *dateString = [NSDate dateWithTimeIntervalSince1970:[devices.devicesStatus.systime floatValue]];
     view.timeLabel.text = [formate stringFromDate:dateString];
-    
-    
 }
 
 @end
