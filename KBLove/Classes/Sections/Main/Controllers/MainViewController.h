@@ -13,5 +13,9 @@
 @interface MainViewController : UIViewController<BMKMapViewDelegate,MAMapViewDelegate>
 //@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 //@property (weak, nonatomic) IBOutlet BMKMapView *baidu_MapView;
+- (IBAction)click_fresh:(UIButton *)sender;
+- (IBAction)click_Location:(UIButton *)sender;
+- (IBAction)click_zoomin:(UIButton *)sender;
+- (IBAction)click_zoomout:(UIButton *)sender;
 
 @end

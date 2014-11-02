@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMapKit.h"
+#import <MAMapKit/MAMapKit.h>
 @class KBDevices;
 @class KBDevicesStatus;
-@interface DeviceDetailViewController : UIViewController
+@interface DeviceDetailViewController : UIViewController<BMKMapViewDelegate,MAMapViewDelegate>
 
 @property (nonatomic, strong) KBDevicesStatus *deviceStatus;
 @property (nonatomic, strong) KBDevices *device;
+
+
+- (IBAction)click_refrash:(UIButton *)sender;
+- (IBAction)click_lacation:(UIButton *)sender;
+- (IBAction)click_zoomin:(UIButton *)sender;
+- (IBAction)click_zoomout:(UIButton *)sender;
 
 - (IBAction)click_back:(UIButton *)sender;
 - (IBAction)click_home:(id)sender;

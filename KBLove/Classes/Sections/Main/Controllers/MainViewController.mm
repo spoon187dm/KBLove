@@ -145,18 +145,19 @@
 
 //初始化地图
 - (void)setupMapView{
-
+    
+    UIView *blank=[self.view viewWithTag:21];
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         baidu_MapView=[[BMKMapView alloc]init];
         UIScreen *mainscreen=[UIScreen mainScreen];
         baidu_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
-        [self.view addSubview:baidu_MapView];
+        [blank addSubview:baidu_MapView];
         baidu_MapView.delegate=self;
     }else{
         gaode_MapView=[[MAMapView alloc]init];
         UIScreen *mainscreen=[UIScreen mainScreen];
         gaode_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
-        [self.view addSubview:gaode_MapView];
+        [blank addSubview:gaode_MapView];
         gaode_MapView.delegate=self;
     }
     
@@ -252,7 +253,7 @@
 //    高德地图
     if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
 //        if (annotation == Point) {
-        MAPinAnnotationView * annView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
+        MAAnnotationView * annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
                                                                          reuseIdentifier:annotationIdentifier];
         annView.image =  [UIImage imageNamed:@"endPoint.png"];
         return annView;
@@ -264,9 +265,58 @@
 }
 
 
+-(void)addAnnotationViewToMap:(CLLocationCoordinate2D)coordinate titleStr:(NSString *)title subtitle:(NSString *)subtitle  isMyselfLocation:(Boolean)type
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
+        p.coordinate = coordinate;
+        p.title = title;
+        p.subtitle =subtitle;
+        [baidu_MapView addAnnotation:p];
+    }else{
+        MAPointAnnotation *p=[[MAPointAnnotation alloc]init];
+        p.coordinate = coordinate;
+        p.title = title;
+        p.subtitle =subtitle;
+        [gaode_MapView addAnnotation:p];
+    }
+}
 
 #pragma mark -
 #pragma mark 界面点击事件
+
+- (IBAction)click_fresh:(UIButton *)sender
+{
+    
+}
+- (IBAction)click_Location:(UIButton *)sender
+{
+    CLLocationCoordinate2D coor;
+    coor.latitude = 39.615;
+    coor.longitude = 116.344;
+    [self addAnnotationViewToMap:coor titleStr:@"当前位置" subtitle:@"当前位置"  isMyselfLocation:YES];
+}
+- (IBAction)click_zoomin:(UIButton *)sender
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        float zoomlevel=baidu_MapView.zoomLevel;
+        baidu_MapView.zoomLevel=++zoomlevel;
+    }else{
+        float zoomlevel=gaode_MapView.zoomLevel;
+        gaode_MapView.zoomLevel=++zoomlevel;
+    }
+}
+- (IBAction)click_zoomout:(UIButton *)sender
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        float zoomlevel=baidu_MapView.zoomLevel;
+        baidu_MapView.zoomLevel=--zoomlevel;
+    }else{
+        float zoomlevel=gaode_MapView.zoomLevel;
+        gaode_MapView.zoomLevel=--zoomlevel;
+    }
+}
+
 - (IBAction)click_car:(id)sender {
     [self showDevices:_carDeviceArray];
 }
@@ -312,5 +362,6 @@
     [self.navigationController pushViewController:vc animated:YES];
     
 }
+
 
 @end
