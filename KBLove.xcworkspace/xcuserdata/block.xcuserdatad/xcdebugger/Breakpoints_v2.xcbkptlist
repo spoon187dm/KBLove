@@ -93,7 +93,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "-viewDidLoad"
+            landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -574,7 +574,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/Sections/Main/Controllers/AlarmListViewController.m"
@@ -590,17 +590,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KBLove/Classes/AppDelegate/AppDelegate.m"
-            timestampString = "436520290.961538"
+            filePath = "KBLove/Classes/Sections/Main/Controllers/MainViewController.mm"
+            timestampString = "436602823.358975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
-            landmarkType = "5">
+            startingLineNumber = "155"
+            endingLineNumber = "155">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -610,13 +608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KBLove/Classes/Sections/Main/Controllers/MainViewController.mm"
-            timestampString = "436599630.103792"
+            timestampString = "436602823.358975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "@implementation MainViewController"
-            landmarkType = "3">
+            startingLineNumber = "238"
+            endingLineNumber = "238">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -625,13 +621,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KBLove/Classes/Sections/Main/Controllers/MainViewController.mm"
-            timestampString = "436600187.158764"
+            filePath = "KBLove/Classes/Sections/Main/Controllers/TraceListViewController.m"
+            timestampString = "436607405.484513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "-showPointInMapView"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

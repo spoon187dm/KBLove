@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -400,7 +400,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFe-I8-WbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="1418"/>
+            <point key="canvasLocation" x="751" y="802"/>
         </scene>
         <!--Alarm List View Controller - 报警列表-->
         <scene sceneID="csz-8w-I4h">
@@ -711,12 +711,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a22-9N-o7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1009" y="1418"/>
+            <point key="canvasLocation" x="-1225" y="802"/>
         </scene>
         <!--轨迹-->
         <scene sceneID="4Qu-Q9-egG">
             <objects>
-                <tableViewController storyboardIdentifier="TraceInfoListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aam-Eu-3Fu" userLabel="轨迹" customClass="TraceInfoListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TraceListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aam-Eu-3Fu" userLabel="轨迹" customClass="TraceListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="N7H-GW-RkR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -736,6 +736,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_back:" destination="Aam-Eu-3Fu" eventType="touchUpInside" id="ESt-n2-uIQ"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="Ssh-i4-ia7">
@@ -746,13 +749,16 @@
                                 <state key="normal" backgroundImage="icon_home.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="click_home:" destination="Aam-Eu-3Fu" eventType="touchUpInside" id="I3k-8K-Ty4"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XK3-Fu-SYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-370" y="1781"/>
+            <point key="canvasLocation" x="113" y="1037"/>
         </scene>
         <!--车辆信息详细-->
         <scene sceneID="bLy-13-She">
@@ -976,7 +982,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUU-GV-rwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="1418"/>
+            <point key="canvasLocation" x="1192" y="802"/>
         </scene>
         <!--车辆设置-->
         <scene sceneID="Xae-RU-r6b">
@@ -1015,7 +1021,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fUE-9g-pAV">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 >">
+                                    <state key="normal" title="信息修改 &gt;">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1234,7 +1240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hC-68-R0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="808"/>
+            <point key="canvasLocation" x="660" y="192"/>
         </scene>
         <!--宠物设置-->
         <scene sceneID="hyy-YQ-iII">
@@ -1273,7 +1279,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="btl-AF-KKy">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 >">
+                                    <state key="normal" title="信息修改 &gt;">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1433,7 +1439,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81u-YQ-OMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253" y="808"/>
+            <point key="canvasLocation" x="989" y="192"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kj0-fV-TjI">
@@ -1490,7 +1496,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1dM-PR-ejR">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 >">
+                                    <state key="normal" title="信息修改 &gt;">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1683,7 +1689,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EV-JB-5PK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="808"/>
+            <point key="canvasLocation" x="1320" y="192"/>
         </scene>
         <!--宠物信息详细-->
         <scene sceneID="FhA-FF-m2p">
@@ -1979,7 +1985,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hA1-9d-2YA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="1418"/>
+            <point key="canvasLocation" x="1521" y="802"/>
         </scene>
         <!--人员信息详细-->
         <scene sceneID="mQJ-gp-9hG">
@@ -2227,7 +2233,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29q-fj-QpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="1418"/>
+            <point key="canvasLocation" x="1852" y="802"/>
         </scene>
     </scenes>
     <resources>

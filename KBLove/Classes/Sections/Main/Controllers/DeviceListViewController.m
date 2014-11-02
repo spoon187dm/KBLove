@@ -80,21 +80,9 @@
 #pragma mark -
 #pragma mark click 点击事件
 -(void)menuChooseIndex:(NSInteger)cellIndexNum menuIndexNum:(NSInteger)menuIndexNum{
-    NSLog(@"你选择了第 %ld 行第 %ld 个菜单",cellIndexNum+1,menuIndexNum+1);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"你选择了第 %ld 行第 %ld 个菜单",cellIndexNum+1,menuIndexNum+1] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-    [alert show];
+    
 }
 
-- (void)deleteCell:(TableMenuCell *)cell{
-    //    NSIndexPath *index = cell.indexpathNum;
-    //    [super deleteCell:cell];
-    //
-    //    [listData removeObjectAtIndex:index.row];
-    //
-    //    [self.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:cell]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    //
-    //    [self.tableView reloadData];
-}
 - (IBAction)click_back:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -138,10 +126,11 @@
         cell.menuActionDelegate = self;
     }
     NSMutableArray *menuImgArr = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 2; i++) {
-        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"icon_trash",@"stateNormal",@"icon_trash",@"stateHighLight", nil];
-        [menuImgArr addObject:dic];
-    }
+    NSMutableDictionary *dic1 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"页面列表3_09",@"stateNormal",@"页面列表3_09",@"stateHighLight", nil];
+    NSMutableDictionary *dic2 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"页面列表3_06",@"stateNormal",@"页面列表3_06",@"stateHighLight", nil];
+
+    [menuImgArr addObject:dic1];
+    [menuImgArr addObject:dic2];
     
     KBDevices *device = _dataArray[indexPath.row];
 
@@ -167,6 +156,10 @@
     vc.device = _dataArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark -
+#pragma mark 功能函数
+
 
 - (void)didReceiveMemoryWarning
 {

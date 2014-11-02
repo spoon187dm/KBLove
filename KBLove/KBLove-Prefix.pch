@@ -20,6 +20,7 @@
     #import "KBUserInfo.h"
     #import "ImagePickerTool.h"
     #import "QRCodeTool.h"
+    #import <SVProgressHUD.h>
     #import "NetWorkingMacro.h"
     #import "VendorsMacro.h"
     #import "UtilsMacro.h"
