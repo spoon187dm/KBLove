@@ -37,6 +37,7 @@
     
     TraceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
     infoView.frame = self.bounds;
+    self.backgroundColor = [UIColor clearColor];
     return infoView;
 }
 
