@@ -10,6 +10,7 @@
 #import "ImagePickerTool.h"
 #import "QRCodeTool.h"
 #import "BMapKit.h"
+#import <MAMapKit/MAMapKit.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -24,6 +25,8 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+    
+    [MAMapServices sharedServices].apiKey = @"d0818c7e92d2f86978158044c99fb47b";
     
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];

@@ -234,7 +234,7 @@
     }
     if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
 //        if (annotation == Point) {
-        MAPinAnnotationView * annView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
+        MAAnnotationView * annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
                                                                          reuseIdentifier:annotationIdentifier];
         annView.image =  [UIImage imageNamed:@"endPoint.png"];
         return annView;

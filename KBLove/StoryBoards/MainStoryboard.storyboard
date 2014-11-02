@@ -148,11 +148,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qvj-Qc-PAM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
                             <view contentMode="scaleToFill" id="FsI-dc-CeA">
                                 <rect key="frame" x="0.0" y="522" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -218,6 +213,46 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.062745098039215685" green="0.49803921568627452" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MBV-DK-o8R">
+                                <rect key="frame" x="270" y="415" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="zoomin.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_zoomin:" destination="r5l-1J-MQv" eventType="touchUpInside" id="gL1-0Q-Zr9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C2h-NE-7P3">
+                                <rect key="frame" x="273" y="338" width="23" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="device_op4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_refrash:" destination="r5l-1J-MQv" eventType="touchUpInside" id="GMZ-aH-lmq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V1N-gr-Kbu">
+                                <rect key="frame" x="271" y="375" width="29" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="device_op3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_lacation:" destination="r5l-1J-MQv" eventType="touchUpInside" id="EUi-RZ-cx9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="atB-TF-2Vt">
+                                <rect key="frame" x="270" y="456" width="32" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="zoomout.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_zoomout:" destination="r5l-1J-MQv" eventType="touchUpInside" id="OHe-xn-E3F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -2153,9 +2188,13 @@
     <resources>
         <image name="NVBar_arrow_left.png" width="51" height="51"/>
         <image name="addNavItemNormal.png" width="132" height="88"/>
+        <image name="device_op3.png" width="32" height="33"/>
+        <image name="device_op4.png" width="26" height="29"/>
         <image name="icon_home.png" width="50" height="43"/>
         <image name="icon_menu.png" width="35" height="37"/>
         <image name="nav_Bacground.png" width="640" height="98"/>
+        <image name="zoomin.png" width="78" height="84"/>
+        <image name="zoomout.png" width="78" height="84"/>
         <image name="图标_39.png" width="148" height="157"/>
         <image name="图标_57.png" width="180" height="180"/>
         <image name="图标_79.png" width="136" height="143"/>
@@ -2171,6 +2210,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="F4f-sn-qiZ"/>
+        <segue reference="xcl-nu-MnZ"/>
     </inferredMetricsTieBreakers>
 </document>
