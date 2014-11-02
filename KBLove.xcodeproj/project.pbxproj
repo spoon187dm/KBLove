@@ -2894,6 +2894,8 @@
 				F975FE8719EE7F6700D13D86 /* DeviceDetailViewController.m */,
 				F9AD8C0D1A06118F009A55D2 /* TraceListViewController.h */,
 				F9AD8C0E1A06118F009A55D2 /* TraceListViewController.m */,
+				BC256C941A06171A00EDFFBC /* TrackerReplayViewController.h */,
+				BC256C951A06171A00EDFFBC /* TrackerReplayViewController.mm */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
