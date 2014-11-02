@@ -66,7 +66,7 @@
     [super viewDidLoad];
     
     //Scoket登陆服务器
-    [[KBScoketManager ShareManager]startScoket];
+//    [[KBScoketManager ShareManager]startScoket];
 
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES];
@@ -138,10 +138,10 @@
     /**
      百度地图
      */
-//    baidu_mapview=[[BMKMapView alloc]init];
-//    CGRect screen=[UIScreen mainScreen].bounds;
+    baidu_mapview=[[BMKMapView alloc]init];
+    CGRect screen=[UIScreen mainScreen].bounds;
 //    baidu_mapview.frame=CGRectMake(screen.origin.x, screen.origin.y, screen.size.width, screen.size.height-69);
-//    [self.view addSubview:baidu_mapview];
+////    [self.view addSubview:baidu_mapview];
 //    baidu_mapview.delegate=self;
 //    BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
 //    CLLocationCoordinate2D coor;
