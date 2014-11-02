@@ -12,6 +12,7 @@
 #import "KBUserManager.h"
 #import "CircleViewController.h"
 #import "KBDeviceManager.h"
+#import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>
 
 
