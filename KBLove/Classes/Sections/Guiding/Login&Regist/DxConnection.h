@@ -33,6 +33,8 @@ typedef NS_ENUM(NSInteger, RegisterType)
 #define  Circle_GetAllMember_URL NSString stringWithFormat:@"%@/api/group.list.do?user_id=%@&token=%@&group_id=%@",SERVER_URL
 //发送群消息
 #define  Circle_SendCircleMessage_URL NSString stringWithFormat:@"%@/api/group.send.message.do",SERVER_URL
+//是否同意添加好友
+#define  Circle_SendIsAGreeFriendMessage_URL NSString stringWithFormat:@"%@/api/group.send.message.do",SERVER_URL
 
 
 #define ScreenWidth  self.view.frame.size.width

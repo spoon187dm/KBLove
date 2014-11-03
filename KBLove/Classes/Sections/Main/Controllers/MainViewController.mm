@@ -14,7 +14,7 @@
 #import "KBDeviceManager.h"
 #import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>
-
+#import "CircleAndFriendListViewController.h"
 
 @interface MainViewController (){
     //百度地图
@@ -81,7 +81,7 @@
     [super viewDidLoad];
     
     //Scoket登陆服务器
-//    [[KBScoketManager ShareManager]startScoket];
+    [[KBScoketManager ShareManager]startScoket];
 
     [self changeNavigationBarToClear];
     [self setupData];

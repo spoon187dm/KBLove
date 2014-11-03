@@ -7,10 +7,11 @@
 //
 
 #import "FriendsListTableViewController.h"
-#import "FriendsListCell.h"
 #import "KBFriendInfo.h"
 #import "KBHttpRequestTool.h"
 #import "CircleTalkViewController.h"
+
+
 @interface FriendsListTableViewController ()
 {
     NSMutableArray *_friendsListArray;//好友列表数据源
@@ -25,10 +26,10 @@
     [super viewDidLoad];
     //初始化数组
     _friendsListArray = [[NSMutableArray alloc] init];
-    
-    //向tableView注册cell
-    UINib *nib = [UINib nibWithNibName:@"FriendsListCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"FriendsListCell"];
+    self.isAllowScroll = TableIsForbiddenScroll;
+//    //向tableView注册cell
+//    UINib *nib = [UINib nibWithNibName:@"FriendListCell" bundle:[NSBundle mainBundle]];
+//    [self.tableView registerNib:nib forCellReuseIdentifier:@"FriendListCell"];
     //加载数据
     [self loadData];
     
@@ -42,7 +43,9 @@
     //拿到token
     NSString *token = [KBUserInfo sharedInfo].token;
     //请求好友列表
+    [KBFreash startRefreshWithTitle:@"加载..." inView:self.view];
     [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:FriendList_URL,user_id,token,53] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+        [KBFreash StopRefreshinView:self.view];
         if (IsSuccess) {//如果成功
             if ([result isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *root = (NSDictionary *)result;
@@ -76,13 +79,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"FriendsListCell";
-    FriendsListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"FriendListCell";
+    FriendListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier ];
+    if (cell==nil) {
+        cell=[[FriendListCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.menuActionDelegate=self;
+    }
 
     KBFriendInfo *friendInfo = _friendsListArray[indexPath.row];
-    cell.friendNameLabel.text = friendInfo.name;
-    [cell setMoreOptionsButtonBg:@"bluecircle.png" anddeleteButtonBg:@"yellowcircle.png"];
-    cell.delegate = self;
+    NSMutableArray *menuImgArr = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 2; i++) {
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"icon_trash",@"stateNormal",@"icon_trash",@"stateHighLight", nil];
+        [menuImgArr addObject:dic];
+    }
+    
+    //KBDevices *device = _dataArray[indexPath.row];
+    
+    [cell configWithData:indexPath menuData:menuImgArr cellFrame:CGRectMake(0, 0, 320, 70)];
+    [cell configDateWithModel:friendInfo];
     return cell;
 }
 
@@ -93,29 +107,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.isAllowScroll != TableIsScroll && self.isEditing) {
+        return;
+    }
+    if (self.isAllowScroll == TableIsScroll && self.isEditing) {
+        if (self.editingCellNum != -1 && indexPath.row == self.editingCellNum) {
+            return;
+        }
+    }
+
     CircleTalkViewController *cvc=[[CircleTalkViewController alloc]init];
     [cvc setTalkEnvironment:KBTalkEnvironmentTypeFriend andModel:_friendsListArray[indexPath.row]];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 
-//row中删除按钮和设置按钮的代理方法
-#pragma mark * DAContextMenuCell delegate
-//删除
-- (void)contextMenuCellDidSelectDeleteOption:(DAContextMenuCell *)cell
+#pragma mark - menuActionDelegate
+- (void)menuChooseIndex:(NSInteger)cellIndexNum menuIndexNum:(NSInteger)menuIndexNum
 {
-    [super contextMenuCellDidSelectDeleteOption:cell];
-    //删除cell所对应的数据
-    [_friendsListArray removeObjectAtIndex:[self.tableView indexPathForCell:cell].row];
-    //删除相应cell
-    [self.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:cell]] withRowAnimation:UITableViewRowAnimationAutomatic];
-#warning 同时向服务器发送消息删除该好友
-    //目前暂时没有接口
-    
-}
-//设置
-- (void)contextMenuCellDidSelectMoreOption:(DAContextMenuCell *)cell
-{
-    
+    NSLog(@"%d",menuIndexNum);
 }
 
 
