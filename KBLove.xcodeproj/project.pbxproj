@@ -364,6 +364,12 @@
 		F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761C1A00D3A8002FCB1F /* PetDetailSettingViewController.m */; };
 		F99E76261A00D3A8002FCB1F /* PetSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */; };
 		F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */; };
+		F99F925B1A0755DE00BBE96E /* icon_car.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F92581A0755DE00BBE96E /* icon_car.png */; };
+		F99F925C1A0755DE00BBE96E /* icon_person.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F92591A0755DE00BBE96E /* icon_person.png */; };
+		F99F925D1A0755DE00BBE96E /* icon_pet.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F925A1A0755DE00BBE96E /* icon_pet.png */; };
+		F99F925F1A07591300BBE96E /* icon_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F925E1A07591300BBE96E /* icon_alarm.png */; };
+		F99F92621A07808F00BBE96E /* BottomSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F99F92611A07808F00BBE96E /* BottomSelectView.m */; };
+		F99F92641A0780A000BBE96E /* BottomSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99F92631A0780A000BBE96E /* BottomSelectView.xib */; };
 		F9A262A21A03356100909E75 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A262A11A03356100909E75 /* bg2.png */; };
 		F9A262A41A03357800909E75 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A262A31A03357800909E75 /* bg1.png */; };
 		F9A262A61A0338A900909E75 /* TMD.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A262A51A0338A900909E75 /* TMD.png */; };
@@ -1362,6 +1368,13 @@
 		F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetSettingViewController.m; sourceTree = "<group>"; };
 		F99E761F1A00D3A8002FCB1F /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		F99F92581A0755DE00BBE96E /* icon_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_car.png; sourceTree = "<group>"; };
+		F99F92591A0755DE00BBE96E /* icon_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_person.png; sourceTree = "<group>"; };
+		F99F925A1A0755DE00BBE96E /* icon_pet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pet.png; sourceTree = "<group>"; };
+		F99F925E1A07591300BBE96E /* icon_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alarm.png; sourceTree = "<group>"; };
+		F99F92601A07808F00BBE96E /* BottomSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomSelectView.h; sourceTree = "<group>"; };
+		F99F92611A07808F00BBE96E /* BottomSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomSelectView.m; sourceTree = "<group>"; };
+		F99F92631A0780A000BBE96E /* BottomSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomSelectView.xib; sourceTree = "<group>"; };
 		F9A262A11A03356100909E75 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		F9A262A31A03357800909E75 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
 		F9A262A51A0338A900909E75 /* TMD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TMD.png; sourceTree = "<group>"; };
@@ -2123,6 +2136,10 @@
 		BC9B78731A04DE5900A666B7 /* MapViewImage */ = {
 			isa = PBXGroup;
 			children = (
+				F99F925E1A07591300BBE96E /* icon_alarm.png */,
+				F99F92581A0755DE00BBE96E /* icon_car.png */,
+				F99F92591A0755DE00BBE96E /* icon_person.png */,
+				F99F925A1A0755DE00BBE96E /* icon_pet.png */,
 				BC256C8A1A05F59000EDFFBC /* zoomin_select.png */,
 				BC256C8B1A05F59000EDFFBC /* zoomin.png */,
 				BC256C8C1A05F59000EDFFBC /* zoomout_select.png */,
@@ -2924,6 +2941,9 @@
 				F9AD8C081A060E69009A55D2 /* TraceInfoView.h */,
 				F9AD8C091A060E69009A55D2 /* TraceInfoView.m */,
 				F9AD8C0B1A060E81009A55D2 /* TraceInfoView.xib */,
+				F99F92601A07808F00BBE96E /* BottomSelectView.h */,
+				F99F92611A07808F00BBE96E /* BottomSelectView.m */,
+				F99F92631A0780A000BBE96E /* BottomSelectView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -4942,6 +4962,7 @@
 				F9F3AFD919F63E5800E0A0F9 /* 轨迹02_03.png in Resources */,
 				F9F3AFB119F63E5800E0A0F9 /* 页面列表3_09.png in Resources */,
 				F9F3AF3D19F63E5800E0A0F9 /* 数据02_26.png in Resources */,
+				F99F925B1A0755DE00BBE96E /* icon_car.png in Resources */,
 				F9F3AFEA19F63E5800E0A0F9 /* 轨迹08_04.png in Resources */,
 				F91A0E5019E7AACF009ADB44 /* background@2x.png in Resources */,
 				BC5A136B19F7D1BE00DDD36C /* Circle_setting.png in Resources */,
@@ -5075,6 +5096,7 @@
 				F9F3AEB419F63E5800E0A0F9 /* 图标_96.png in Resources */,
 				F9F3AFB819F63E5800E0A0F9 /* 设置01_17.png in Resources */,
 				F9F3AF9319F63E5800E0A0F9 /* 绑定设备1_12.png in Resources */,
+				F99F925C1A0755DE00BBE96E /* icon_person.png in Resources */,
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
 				F9F3AEC319F63E5800E0A0F9 /* 圈子3_25.png in Resources */,
 				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
@@ -5139,6 +5161,7 @@
 				F9F3AF0C19F63E5800E0A0F9 /* 手机注册_08.png in Resources */,
 				F91A0E8C19E7AACF009ADB44 /* black_theme.png in Resources */,
 				F9F3AE7E19F63E5800E0A0F9 /* 主界面011_14.png in Resources */,
+				F99F925F1A07591300BBE96E /* icon_alarm.png in Resources */,
 				BC9B788F1A04E72000A666B7 /* endPoint.png in Resources */,
 				F91A0E8B19E7AACF009ADB44 /* black_tabbar@2x.png in Resources */,
 				F92DBDB019ED5C1900BBE573 /* graystar.png in Resources */,
@@ -5330,6 +5353,7 @@
 				F9748CFC19EFA5CD0064FCC7 /* qrcode_scan_titlebar_back_nor@2x.png in Resources */,
 				F9F3AF1F19F63E5800E0A0F9 /* 报警模块41_11.png in Resources */,
 				F9F3AFC319F63E5800E0A0F9 /* 设置04修改围栏3_03.png in Resources */,
+				F99F92641A0780A000BBE96E /* BottomSelectView.xib in Resources */,
 				F91A0E3519E7AACF009ADB44 /* SIM_1.png in Resources */,
 				F9F3AFEF19F63E5800E0A0F9 /* 关于凯步1.png in Resources */,
 				F9F3AFD819F63E5800E0A0F9 /* 轨迹02_02.png in Resources */,
@@ -5409,6 +5433,7 @@
 				F9F3AF0A19F63E5800E0A0F9 /* 手机注册_03.png in Resources */,
 				F91A0C9D19E7880C009ADB44 /* Images.xcassets in Resources */,
 				F9F3AE9519F63E5800E0A0F9 /* 设备分享3psd_07.png in Resources */,
+				F99F925D1A0755DE00BBE96E /* icon_pet.png in Resources */,
 				F9748CFA19EFA5CD0064FCC7 /* qrcode_scan_btn_scan_off@2x.png in Resources */,
 				F9F3AF2119F63E5800E0A0F9 /* 报警模块5_03.png in Resources */,
 				F9F3AFC119F63E5800E0A0F9 /* 设置03车_03.png in Resources */,
@@ -5539,6 +5564,7 @@
 				F9AD8C0A1A060E69009A55D2 /* TraceInfoView.m in Sources */,
 				F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */,
 				BC256CB11A06194D00EDFFBC /* CCBaseRelation.m in Sources */,
+				F99F92621A07808F00BBE96E /* BottomSelectView.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
 				F99246711A048D5500599E74 /* PNPieChart.m in Sources */,
 				BC256CBA1A061AEE00EDFFBC /* CCDeviceStatus.m in Sources */,
@@ -5577,7 +5603,6 @@
 				F97410DE19EC322000E12633 /* BoundCarInfoController.m in Sources */,
 				BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
-				BC777FD21A0507BC00349CCD /* NYSliderPopover.m in Sources */,
 				F9AD8C0F1A06118F009A55D2 /* TraceListViewController.m in Sources */,
 				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,

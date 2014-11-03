@@ -118,11 +118,95 @@ static KBDeviceManager *sharedManager = nil;
 }
 
 + (void)getAlarmListForDevice:(NSString *)device_sn finishBlock:(ListLoadBlock)block{
-
+    NSAssert(device_sn, @"请求出错，设备号为空");
+    NSString *userid = [KBUserInfo sharedInfo].user_id;
+    NSString *token = [KBUserInfo sharedInfo].token;
+    NSDictionary *params = @{
+                             @"user_id":userid,
+                             @"device_sn":device_sn,
+                             @"token":token
+                             };
+    [[KBHttpRequestTool sharedInstance]request:Url_GetAlarmList requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+        
+        if (IsSuccess) {
+            NSMutableArray *resultArray = [NSMutableArray array];
+            NSDictionary *root = [NSDictionary dictionaryWithDictionary:result];
+            NSArray *alarms = [root objectForKey:@"alarms"];
+            for (NSDictionary *perAlarm in alarms) {
+                KBAlarm *alarm = [[KBAlarm alloc]init];
+                [alarm setValuesForKeysWithDictionary:perAlarm];
+                [resultArray addObject:alarm];
+            }
+            if (block) {
+                block(YES,resultArray);
+            }
+        }else{
+            if (block) {
+                block(NO, result);
+            }
+        }
+        
+    }];
 }
 
 + (void)getAllAlarmList:(ListLoadBlock)block{
-    
+    NSString *userId = [KBUserInfo sharedInfo].user_id;
+    NSString *token = [KBUserInfo sharedInfo].token;
+    NSDictionary *params = @{@"user_id":userId,
+                             @"app_name":app_name,
+                             @"begin":@(-1),
+                             @"end":@(-1),
+                             @"token":token
+                             };
+    [[KBHttpRequestTool sharedInstance]request:Url_GetAllAlarmList requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+        if (IsSuccess) {
+            NSMutableArray *resultArray = [NSMutableArray array];
+            NSDictionary *root = [NSDictionary dictionaryWithDictionary:result];
+            NSArray *alarms = [root objectForKey:@"alarms"];
+            for (NSDictionary *perAlarm in alarms) {
+                KBAlarm *alarm = [[KBAlarm alloc]init];
+                [alarm setValuesForKeysWithDictionary:perAlarm];
+                [resultArray addObject:alarm];
+            }
+            if (block) {
+                block(YES,resultArray);
+            }
+        }else{
+            if (block) {
+                block(NO, result);
+            }
+        }
+    }];
+}
+
++ (void)deleteAlarm:(KBAlarm *)alarm block:(requestBlock)block{
+    [self deleteAlarmList:@[alarm] block:block];
+}
+
++ (void)deleteAlarmList:(NSArray *)array block:(requestBlock)block{
+    [self operateAlarmList:array mode:@2 block:block];
+}
+
++ (void)readAlarm:(KBAlarm *)alarm block:(requestBlock)block{
+    [self readAlarmList:@[alarm] block:block];
+}
+
++ (void)readAlarmList:(NSArray *)array block:(requestBlock)block{
+    [self operateAlarmList:array mode:@1 block:block];
+}
+
++ (void)operateAlarmList:(NSArray *)array mode:(NSNumber *)mode block:(requestBlock)block{
+    NSMutableArray *alarmIdArray = [NSMutableArray array];
+    for (KBAlarm *alarm in array) {
+        [alarmIdArray addObject:alarm.id];
+    }
+    NSDictionary *params = @{@"user_id":[KBUserInfo sharedInfo].user_id,
+                             @"mode":mode,
+                             @"alarm_id":alarmIdArray,
+                             @"token":[KBUserInfo sharedInfo].token};
+    [[KBHttpRequestTool sharedInstance]request:Url_EditAlarmInfo requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+        
+    }];
 }
 
 @end

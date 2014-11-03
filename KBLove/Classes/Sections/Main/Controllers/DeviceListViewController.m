@@ -50,6 +50,8 @@
     [self.view addSubview:_dropListView];
     
     [RACObserve(_dropListView, index) subscribeNext:^(NSNumber *index){
+#pragma mark -
+#pragma mark 下拉列表菜单点击
         NSLog(@"选择 %@",index);
         if ([index isEqualToNumber:@0] && _isDrop) {
             UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
