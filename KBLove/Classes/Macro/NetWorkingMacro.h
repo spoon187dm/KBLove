@@ -10,7 +10,7 @@
 #define KBLove_NetWorkingMacro_h
 
 #define app_name @"m2616_BD"
-#define  SERVER_URL @"http://118.194.192.104:8080"
+#define  SERVER_URL @"http:/test.capcare.com.cn:8081"
 
 #define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
 //测试账号 董新加
@@ -83,7 +83,7 @@ static NSString * const Url_GetAlarmList = @"http://118.194.192.104:8080/api/ala
 static NSString * const Url_GetAllAlarmList = @"http://118.194.192.104:8080/api/alarm.all.do";
 
 /**
- 修改围栏信息接口
+ 修改警告信息接口
  */
 static NSString * const Url_EditAlarmInfo = @"http://118.194.192.104:8080/api/alarm.edit.do";
 #endif

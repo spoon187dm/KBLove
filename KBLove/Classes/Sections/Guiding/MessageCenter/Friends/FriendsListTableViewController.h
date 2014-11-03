@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DAContextMenuTableViewController.h"
-
-@interface FriendsListTableViewController : DAContextMenuTableViewController
-
+#import "FriendListCell.h"
+#import "TableMenuViewController.h"
+@interface FriendsListTableViewController : TableMenuViewController<UITableViewDataSource,UITableViewDelegate>
 //返回item
 - (IBAction)leftItemClicked:(id)sender;
 //添加好友item
 - (IBAction)addItemClicked:(id)sender;
+
 
 @end
