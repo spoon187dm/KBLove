@@ -13,7 +13,7 @@
 #import "CircleViewController.h"
 #import "KBDeviceManager.h"
 #import <MAMapKit/MAMapKit.h>
-
+#import "CircleAndFriendListViewController.h"
 
 @interface MainViewController (){
     //百度地图
@@ -311,7 +311,7 @@
 }
 
 - (IBAction)click_circle:(id)sender{
-    CircleViewController *vc = [[CircleViewController alloc]init];
+    CircleAndFriendListViewController *vc = [[CircleAndFriendListViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -85,18 +85,19 @@ static KBScoketManager *manager;
     }
     NSString * msg=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@************",msg);
+    if(msg){
     [newMsg appendString:msg];
     NSRange start=[newMsg rangeOfString:@"<push>"];
     NSRange end  =[newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
-    NSLog(@"%ld",start.location);
-    NSLog(@"%ld",end.location);
+    NSLog(@"%d",start.location);
+    NSLog(@"%d",end.location);
     
     if (start.location==0&&end.length>0) {
         NSMutableArray *array=[[NSMutableArray alloc]init];
                 //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
         NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+start.length, end.location-start.location-start.length)];
         
-        NSLog(@"%@",msgdic);
+      //  NSLog(@"%@",msgdic);
         NSArray *arr=[msgdic componentsSeparatedByString:@"<push>"];
         for (int i=0; i<arr.count; i++) {
             [array addObject:[arr[i] componentsSeparatedByString:@"</push>"][0]];
@@ -104,6 +105,7 @@ static KBScoketManager *manager;
         
         for (int i=0; i<array.count; i++) {
             NSString *msgdic=array[i];
+            NSLog(@"解析后:%@",msgdic);
             NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:[msgdic dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
             [self analyseMessage:dic];
         }
@@ -115,6 +117,7 @@ static KBScoketManager *manager;
             newMsg=nil;
         }
         
+    }
     }
     [_clientScoket readDataWithTimeout:-1 tag:100];
 }
@@ -134,10 +137,15 @@ static KBScoketManager *manager;
 {
     
     //分析数据存到数据库 发送通知
-    NSLog(@"%@",msgDic);
+    //NSLog(@"%@",msgDic);
     NSArray *arr=[msgDic objectForKey:@"protocol"];
     NSDictionary *dic=arr[0];
     NSNumber *cmd=[dic objectForKey:@"cmd"];
+    if([cmd integerValue]==0)
+    {
+        //说明是回执消息 无需解析
+        return;
+    }
     //创建回执消息数组
     NSMutableArray *msg_idArray=[[NSMutableArray alloc]init];
     //登陆返回信息
@@ -209,7 +217,13 @@ static KBScoketManager *manager;
             KBDBManager *manager=[KBDBManager shareManager];
             [manager insertDataWithModel:msginf];
             //发送通知
+            NSString *myuser_id=[NSString stringWithFormat:@"%@",[KBUserInfo sharedInfo].user_id];
+            NSString *getid=[NSString stringWithFormat:@"%@",msginf.FromUser_id];
+            if ([myuser_id isEqualToString:getid]) {
+                
+            }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageTalkNotification object:nil];
+            }
             
         }break;
         case 5:{
