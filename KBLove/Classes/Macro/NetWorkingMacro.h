@@ -83,7 +83,7 @@ static NSString * const Url_GetAlarmList = @"http://118.194.192.104:8080/api/ala
 static NSString * const Url_GetAllAlarmList = @"http://118.194.192.104:8080/api/alarm.all.do";
 
 /**
- 修改围栏信息接口
+ 修改警告信息接口
  */
 static NSString * const Url_EditAlarmInfo = @"http://118.194.192.104:8080/api/alarm.edit.do";
 #endif

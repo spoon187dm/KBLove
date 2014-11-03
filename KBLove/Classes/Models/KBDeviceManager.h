@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KBDevices.h"
+#import "KBAlarm.h"
 #import "KBDevicesStatus.h"
 @interface KBDeviceManager : NSObject
 
@@ -44,18 +45,50 @@
 + (void)getDeviceStatusList:(ListLoadBlock)block;
 
 /**
- 获取所有警报列表  已转至alarmManager
+ 获取所有警报列表
  
  @param block 结果回调
  */
 + (void)getAllAlarmList:(ListLoadBlock)block;
 
 /**
- 获取设备的所有警告信息列表 已转至alarmManager
+ 获取设备的所有警告信息列表
  
  @param device_sn 设备号
  @param block     结果回调
  */
 + (void)getAlarmListForDevice:(NSString *)device_sn finishBlock:(ListLoadBlock)block ;
+
+/**
+ 删除指定警告信息
+ 
+ @param alarm 警告
+ @param block 结果回调
+ */
++ (void)deleteAlarm:(KBAlarm *)alarm block:(requestBlock)block;
+
+/**
+ 删除一组警告信息
+ 
+ @param array 警告数组
+ @param block 结果回调
+ */
++ (void)deleteAlarmList:(NSArray *)array block:(requestBlock)block;
+
+/**
+ 设置指定警告信息为已读
+ 
+ @param alarm 警告信息
+ @param block 结果回调
+ */
++ (void)readAlarm:(KBAlarm *)alarm block:(requestBlock)block;
+
+/**
+ 设置一组警告信息为已读
+ 
+ @param array 警告数组
+ @param block 结果回调
+ */
++ (void)readAlarmList:(NSArray *)array block:(requestBlock)block;
 
 @end
