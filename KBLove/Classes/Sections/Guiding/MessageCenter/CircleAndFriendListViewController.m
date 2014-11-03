@@ -108,9 +108,16 @@
         }break;
         case 202:{
          //添加好友跳转到添加好友界面
+            UIStoryboard *stb = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:nil];
+            UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"AddFriendViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+
         }break;
         case 203:{
         //创建圈子跳转到创建界面
+            CreateCircleViewController *cvc=[[CreateCircleViewController alloc]init];
+            [self.navigationController pushViewController:cvc animated:YES];
+
         }break;
             
         default:

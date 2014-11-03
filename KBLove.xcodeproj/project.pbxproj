@@ -38,6 +38,9 @@
 		BC256CB41A06196F00EDFFBC /* CCWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = BC256CB31A06196F00EDFFBC /* CCWarning.m */; };
 		BC256CB71A061A8200EDFFBC /* CCReplayAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC256CB61A061A8200EDFFBC /* CCReplayAnnotationView.m */; };
 		BC256CBA1A061AEE00EDFFBC /* CCDeviceStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BC256CB91A061AEE00EDFFBC /* CCDeviceStatus.m */; };
+		BC15E0071A076BE00016FB39 /* CircleAndFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */; };
+		BC15E00A1A077B690016FB39 /* Nav_down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0081A077B690016FB39 /* Nav_down_arrow.png */; };
+		BC15E00B1A077B690016FB39 /* Nav_up_arrow .png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0091A077B690016FB39 /* Nav_up_arrow .png */; };
 		BC44AD7519F166440067764F /* SendMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7419F166440067764F /* SendMessageView.xib */; };
 		BC44AD7D19F169CC0067764F /* chat_bg_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7719F169CC0067764F /* chat_bg_default.jpg */; };
 		BC44AD7E19F169CC0067764F /* chat_bottom_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */; };
@@ -849,6 +852,10 @@
 		BC256CB61A061A8200EDFFBC /* CCReplayAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCReplayAnnotationView.m; sourceTree = "<group>"; };
 		BC256CB81A061AEE00EDFFBC /* CCDeviceStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDeviceStatus.h; sourceTree = "<group>"; };
 		BC256CB91A061AEE00EDFFBC /* CCDeviceStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDeviceStatus.m; sourceTree = "<group>"; };
+		BC15E0051A076BE00016FB39 /* CircleAndFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAndFriendListViewController.h; sourceTree = "<group>"; };
+		BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAndFriendListViewController.m; sourceTree = "<group>"; };
+		BC15E0081A077B690016FB39 /* Nav_down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_down_arrow.png; sourceTree = "<group>"; };
+		BC15E0091A077B690016FB39 /* Nav_up_arrow .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_up_arrow .png"; sourceTree = "<group>"; };
 		BC44AD7419F166440067764F /* SendMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageView.xib; sourceTree = "<group>"; };
 		BC44AD7719F169CC0067764F /* chat_bg_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_bg_default.jpg; sourceTree = "<group>"; };
 		BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bottom_bg@2x.png"; sourceTree = "<group>"; };
@@ -5532,6 +5539,8 @@
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
 				BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */,
 				F9D4C8B319F121A3005B93CA /* AlarmDetailViewController.m in Sources */,
+				BC6ED3E31A0750430037F1D1 /* FriendListCell.m in Sources */,
+				BC777FCB1A0507BC00349CCD /* CCTrackerUtils.m in Sources */,
 				F992464C1A048C5400599E74 /* UIView+Extension.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,

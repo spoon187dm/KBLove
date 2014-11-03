@@ -375,15 +375,17 @@
 }
 
 - (IBAction)click_friends:(id)sender{
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
+//    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
+//    [self.navigationController pushViewController:vc animated:YES];
+    CircleAndFriendListViewController *vc = [[CircleAndFriendListViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-//- (IBAction)click_circle:(id)sender{
-//    CircleViewController *vc = [[CircleViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
-//}
+- (IBAction)click_circle:(id)sender{
+    CircleAndFriendListViewController *vc = [[CircleAndFriendListViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (IBAction)click_devicesList:(id)sender{
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceListViewController"];
