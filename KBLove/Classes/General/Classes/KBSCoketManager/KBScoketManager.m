@@ -86,19 +86,20 @@ static KBScoketManager *manager;
     NSString * msg=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@************",msg);
     [newMsg appendString:msg];
-    NSRange start=[newMsg rangeOfString:@">"];
-    NSRange end  =[newMsg rangeOfString:@"<" options:NSBackwardsSearch];
-    if (start.location==5&&end.location>5) {
+    NSRange start=[newMsg rangeOfString:@"<push>"];
+    NSRange end  =[newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
+    NSLog(@"%ld",start.location);
+    NSLog(@"%ld",end.location);
+    
+    if (start.location==0&&end.length>0) {
         NSMutableArray *array=[[NSMutableArray alloc]init];
-        NSLog(@"%d",start.location);
-        NSLog(@"%d",end.location);
-        
-        NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+1, end.location-start.location-1)];
+                //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
+        NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+start.length, end.location-start.location-start.length)];
         
         NSLog(@"%@",msgdic);
         NSArray *arr=[msgdic componentsSeparatedByString:@"<push>"];
         for (int i=0; i<arr.count; i++) {
-            [array addObjectsFromArray:[arr[i] componentsSeparatedByString:@"</push>"]];
+            [array addObject:[arr[i] componentsSeparatedByString:@"</push>"][0]];
         }
         
         for (int i=0; i<array.count; i++) {
@@ -106,9 +107,9 @@ static KBScoketManager *manager;
             NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:[msgdic dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
             [self analyseMessage:dic];
         }
-        if (newMsg.length>end.location+8) {
+        if (newMsg.length>end.location+end.length) {
             newMsg=[[NSMutableString alloc]init];
-            [newMsg appendString:[NSString stringWithFormat:@"%@",[newMsg substringWithRange:NSMakeRange(end.location+1+6, newMsg.length-end.location-1-6)]]];
+            [newMsg appendString:[NSString stringWithFormat:@"%@",[newMsg substringWithRange:NSMakeRange(end.location+end.length, newMsg.length-end.location-end.length)]]];
         }else
         {
             newMsg=nil;
@@ -140,6 +141,7 @@ static KBScoketManager *manager;
     //创建回执消息数组
     NSMutableArray *msg_idArray=[[NSMutableArray alloc]init];
     //登陆返回信息
+    
     //处理位置信息
     //处理报警信息
     //处理群组信息
@@ -294,7 +296,7 @@ static KBScoketManager *manager;
         
     }
     KBUserInfo *user=[KBUserInfo sharedInfo];
-    NSDictionary *dic=@{@"user_id":user.user_id,@"ios_token":user.ios_token,@"msg_id":msg_id,@"cmd":@"2",@"app_name":@"M2616_BD"};
+    NSDictionary *dic=@{@"user_id":user.user_id,@"ios_token":user.ios_token,@"msg_id":msg_id,@"cmd":@"2",@"app_name":@"M2616_BD",@"duid":[[UIDevice currentDevice] identifierForVendor].UUIDString};
     NSString *str=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     
     NSString *ss=[NSString stringWithFormat:@"<request>%@</request>",str];
