@@ -638,22 +638,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KBLove/Classes/Models/KBDeviceManager.m"
-            timestampString = "436695884.824302"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "+operateAlarmList:mode:block:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -737,12 +721,12 @@
                   symbolName = "-[DeviceListViewController loadData]"
                   moduleName = "KBLove"
                   urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Sections/Main/Controllers/DeviceListViewController.m"
-                  timestampString = "436707225.600109"
+                  timestampString = "436781305.834847"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
                   endingLineNumber = "74"
-                  offsetFromSymbolStart = "60">
+                  offsetFromSymbolStart = "41">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -751,12 +735,12 @@
                   symbolName = "__36-[DeviceListViewController loadData]_block_invoke"
                   moduleName = "KBLove"
                   urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Sections/Main/Controllers/DeviceListViewController.m"
-                  timestampString = "436707225.600219"
+                  timestampString = "436781305.834957"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
                   endingLineNumber = "74"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "47">
                </Location>
             </Locations>
          </BreakpointContent>

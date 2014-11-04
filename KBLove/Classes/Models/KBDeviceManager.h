@@ -10,6 +10,7 @@
 #import "KBDevices.h"
 #import "KBAlarm.h"
 #import "KBDevicesStatus.h"
+#import "KBFence.h"
 @interface KBDeviceManager : NSObject
 
 + (KBDeviceManager *)sharedManager;
@@ -90,5 +91,33 @@
  @param block 结果回调
  */
 + (void)readAlarmList:(NSArray *)array block:(requestBlock)block;
+
+/**
+ 更新围栏信息
+ 
+ @param fence 新的围栏
+ @param block 结果回调
+ */
++ (void)updateFence:(KBFence *)fence block:(requestBlock)block;
+
+/**
+ 获取轨迹回放信息
+ 
+ @param device_sn 设备号
+ @param beginDate 起始时间
+ @param endDate   结束时间
+ @param block     结果回调
+ */
++ (void)getTrack:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block;
+
+/**
+ 获取轨迹分段信息
+ 
+ @param device_sn 设备号
+ @param beginDate 起始时间
+ @param endDate   结束时间
+ @param block     结果回调
+ */
++ (void)getPart:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block;
 
 @end
