@@ -209,4 +209,16 @@ static KBDeviceManager *sharedManager = nil;
     }];
 }
 
++ (void)updateFence:(KBFence *)fence block:(requestBlock)block{
+    
+}
+
++ (void)getDeviceTrack:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block{
+    
+}
+
++ (void)getDevicePart:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block{
+    
+}
+
 @end
