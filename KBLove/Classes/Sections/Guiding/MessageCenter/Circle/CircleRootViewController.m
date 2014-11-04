@@ -16,11 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    UIImageView *BgView=[[UIImageView alloc]initWithFrame:self.view.bounds];
-//    BgView.image=[UIImage imageNamed:@"圈子1"];
-//    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"圈子1"]];
-   // [self.view addSubview:BgView];
-    //[self.view sendSubviewToBack:BgView];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Nav_Circle"] forBarMetrics:UIBarMetricsDefault];
     // Do any additional setup after loading the view.
     

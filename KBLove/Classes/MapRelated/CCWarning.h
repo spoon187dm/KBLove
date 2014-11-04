@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CCJASONObject.h"
-//#import "CCGeoHelper.h"
+#import "ZWL_GeoHelper.h"
 
 @interface CCWarning : NSObject<CCJASONObject>
 
@@ -21,7 +21,7 @@
 @property (nonatomic, assign) float speed;              // 速度
 @property (nonatomic, copy) NSString* info;             // 警报描述信息
 @property (nonatomic, assign) NSInteger level;          // 警报等级（高：0，中：1，低：2）
-//@property (nonatomic, strong) id<CCGeoHelperDelegate> geoDelegate;
+@property (nonatomic, strong) id<CCGeoHelperDelegate> geoDelegate;
 
 //	高：通知栏+铃声+震动
 //	中：通知栏

@@ -85,6 +85,7 @@ static KBScoketManager *manager;
     }
     NSString * msg=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@************",msg);
+    if(msg){
     [newMsg appendString:msg];
     NSRange start=[newMsg rangeOfString:@">"];
     NSRange end  =[newMsg rangeOfString:@"<" options:NSBackwardsSearch];
@@ -98,7 +99,7 @@ static KBScoketManager *manager;
         [self analyseMessage:dic];
         newMsg=nil;
     }
-     [_clientScoket readDataWithTimeout:-1 tag:100];
+    [_clientScoket readDataWithTimeout:-1 tag:100];
 }
 
 - (void)onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag
@@ -116,7 +117,7 @@ static KBScoketManager *manager;
 {
     
     //分析数据存到数据库 发送通知
-    NSLog(@"%@",msgDic);
+    //NSLog(@"%@",msgDic);
     NSArray *arr=[msgDic objectForKey:@"protocol"];
     NSDictionary *dic=arr[0];
     NSNumber *cmd=[dic objectForKey:@"cmd"];
@@ -179,7 +180,7 @@ static KBScoketManager *manager;
             //群组消息
             KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
             msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-        
+            
             msginf.FromUser_id=msgarr[0];
             msginf.Circle_id=msgarr[1];
             msginf.time=[msgarr[2] longLongValue];
@@ -190,6 +191,11 @@ static KBScoketManager *manager;
             KBDBManager *manager=[KBDBManager shareManager];
             [manager insertDataWithModel:msginf];
             //发送通知
+            NSString *myuser_id=[NSString stringWithFormat:@"%@",[KBUserInfo sharedInfo].user_id];
+            NSString *getid=[NSString stringWithFormat:@"%@",msginf.FromUser_id];
+            if ([myuser_id isEqualToString:getid]) {
+                
+            }else{
             [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageTalkNotification object:nil];
             
         }break;
@@ -202,7 +208,7 @@ static KBScoketManager *manager;
             msginf.MessageType=[msgarr[2] integerValue];
             msginf.text=msgarr[3];
             msginf.status=KBMessageStatusUnRead;
-
+            
             //存储消息
             KBDBManager *manager=[KBDBManager shareManager];
             [manager insertDataWithModel:msginf];
@@ -260,7 +266,7 @@ static KBScoketManager *manager;
         default:
             break;
     }
-
+    
 }
 
 //发送回执信息

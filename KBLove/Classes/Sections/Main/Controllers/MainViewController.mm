@@ -12,8 +12,9 @@
 #import "KBUserManager.h"
 #import "CircleViewController.h"
 #import "KBDeviceManager.h"
+#import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>
-
+#import "CircleAndFriendListViewController.h"
 
 @interface MainViewController (){
     //百度地图
@@ -39,12 +40,15 @@
     
 //    地图上点
     NSMutableArray *_pointArray;
+    
+//    下拉菜单选项
+    UIView *_dropListView;
 }
 
-- (NSArray *)getFriendDeviceArray;
-- (NSArray *)getCarDeviceArray;
-- (NSArray *)getPetDeviceArray;
-- (NSArray *)getPersonDeviceArray;
+//- (NSArray *)getFriendDeviceArray;
+//- (NSArray *)getCarDeviceArray;
+//- (NSArray *)getPetDeviceArray;
+//- (NSArray *)getPersonDeviceArray;
 
 
 - (IBAction)click_car:(id)sender;
@@ -52,10 +56,12 @@
 - (IBAction)click_pet:(id)sender;
 - (IBAction)click_allDevices:(id)sender;
 - (IBAction)click_friends:(id)sender;
-- (IBAction)click_circle:(id)sender;
+//- (IBAction)click_circle:(id)sender;
 - (IBAction)click_devicesList:(id)sender;
 - (IBAction)click_message:(id)sender;
 - (IBAction)click_mine:(id)sender;
+- (IBAction)click_dropList:(id)sender;
+- (IBAction)click_alarm:(id)sender;
 
 @end
 
@@ -77,19 +83,18 @@
     //Scoket登陆服务器
     [[KBScoketManager ShareManager]startScoket];
 
-    // Do any additional setup after loading the view.
-    [self.navigationController setNavigationBarHidden:YES];
+    [self changeNavigationBarToClear];
     [self setupData];
     [self setupView];
     [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,7 +104,7 @@
 }
 
 #pragma mark -
-#pragma mark 功能方法
+#pragma mark 界面与数据初始化
 
 //初始化一些界面参数
 - (void)setupData{
@@ -123,6 +128,7 @@
 
 //加载设备数据
 - (void)loadData{
+    [SVProgressHUD showWithStatus:@"设备获取,.."];
     [KBDeviceManager getDeviceList:^(BOOL isSuccess, NSArray *resultArray) {
         if (isSuccess) {
             _allDeviceArray = resultArray;
@@ -135,6 +141,7 @@
 //初始化界面
 - (void)setupView{
     [self setupMapView];
+    [self setupDropListView];
     _petButton.enabled = false;
     [_petButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     _carButton.enabled = false;
@@ -167,6 +174,24 @@
 //    [baidu_mapview setRegion:re];
 }
 
+- (void)setupDropListView{
+    _dropListView = [[UIView alloc]init];
+    _dropListView.frame = CGRectMake(kScreenWidth-100, 64, 100, 30*4);
+    _dropListView.backgroundColor = [UIColor clearColor];
+    
+    NSArray *titles = @[@"所有设备",@"好友设备",@"我的设备",@"绑定设备"];
+    for (NSInteger i = 0; i<4; i++) {
+        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(0, 30*i, 100, 30) title:titles[i] target:self Action:@selector(click_dropListItem:)];
+        btn.backgroundColor = [UIColor clearColor];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"RegisterFisihed2"] forState:UIControlStateNormal];
+        btn.tag = 300+i;
+        [_dropListView addSubview:btn];
+    }
+    [self.view addSubview:_dropListView];
+    _dropListView.hidden = YES;
+}
+
 - (void)setupDeviceArray{
     for (KBDevices *device in _allDeviceArray) {
         if ([device.type isEqualToNumber:@1]) {
@@ -189,7 +214,7 @@
 }
 
 #pragma mark -
-#pragma mark 地图操作
+#pragma mark 私有功能方法
 
 - (void)clearMap{
     
@@ -252,7 +277,7 @@
 //    高德地图
     if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
 //        if (annotation == Point) {
-        MAPinAnnotationView * annView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation
+        MAAnnotationView * annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
                                                                          reuseIdentifier:annotationIdentifier];
         annView.image =  [UIImage imageNamed:@"endPoint.png"];
         return annView;
@@ -264,9 +289,58 @@
 }
 
 
+-(void)addAnnotationViewToMap:(CLLocationCoordinate2D)coordinate titleStr:(NSString *)title subtitle:(NSString *)subtitle  isMyselfLocation:(Boolean)type
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
+        p.coordinate = coordinate;
+        p.title = title;
+        p.subtitle =subtitle;
+        [baidu_MapView addAnnotation:p];
+    }else{
+        MAPointAnnotation *p=[[MAPointAnnotation alloc]init];
+        p.coordinate = coordinate;
+        p.title = title;
+        p.subtitle =subtitle;
+        [gaode_MapView addAnnotation:p];
+    }
+}
 
 #pragma mark -
 #pragma mark 界面点击事件
+
+- (IBAction)click_fresh:(UIButton *)sender
+{
+    
+}
+- (IBAction)click_Location:(UIButton *)sender
+{
+    CLLocationCoordinate2D coor;
+    coor.latitude = 39.615;
+    coor.longitude = 116.344;
+    [self addAnnotationViewToMap:coor titleStr:@"当前位置" subtitle:@"当前位置"  isMyselfLocation:YES];
+}
+- (IBAction)click_zoomin:(UIButton *)sender
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        float zoomlevel=baidu_MapView.zoomLevel;
+        baidu_MapView.zoomLevel=++zoomlevel;
+    }else{
+        float zoomlevel=gaode_MapView.zoomLevel;
+        gaode_MapView.zoomLevel=++zoomlevel;
+    }
+}
+- (IBAction)click_zoomout:(UIButton *)sender
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        float zoomlevel=baidu_MapView.zoomLevel;
+        baidu_MapView.zoomLevel=--zoomlevel;
+    }else{
+        float zoomlevel=gaode_MapView.zoomLevel;
+        gaode_MapView.zoomLevel=--zoomlevel;
+    }
+}
+
 - (IBAction)click_car:(id)sender {
     [self showDevices:_carDeviceArray];
 }
@@ -285,16 +359,15 @@
 }
 
 - (IBAction)click_friends:(id)sender{
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"FriendsStoryBoard" bundle:[NSBundle mainBundle]];
+//    UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"FriendsListTableViewController"];
+//    [self.navigationController pushViewController:vc animated:YES];
+    CircleAndFriendListViewController *vc = [[CircleAndFriendListViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
-//    [self presentViewController:vc animated:YES completion:^{
-//        
-//    }];
 }
 
 - (IBAction)click_circle:(id)sender{
-    CircleViewController *vc = [[CircleViewController alloc]init];
+    CircleAndFriendListViewController *vc = [[CircleAndFriendListViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -310,7 +383,50 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Me_StoryBoardN" bundle:[NSBundle mainBundle]];
     UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"MineViewController"];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)click_dropList:(id)sender {
+    [UIView animateWithDuration:.5 animations:^{
+        _dropListView.hidden = !_dropListView.hidden;
+    }];
+}
+
+- (IBAction)click_alarm:(id)sender {
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AlarmListViewController"];
+//    vc.device = _device;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)click_dropListItem:(UIButton *)button{
     
+    NSInteger index = button.tag-300;
+    switch (index) {
+        case 0:
+        {
+//            所有设备
+            [self showDevices:_allDeviceArray];
+        }
+            break;
+        case 1:{
+//            好友设备
+            
+        }
+            break;
+        case 2:{
+//            我的设备
+        }
+            break;
+        case 3:{
+//            绑定设备
+            UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
+            UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"BoundAddEquipmentController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+    [self hideDropListView];
 }
 
 @end

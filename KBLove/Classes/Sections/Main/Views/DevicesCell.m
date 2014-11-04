@@ -34,25 +34,17 @@
     if (!self) {
         return nil;
     }
-//    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     return self;
 }
 
 - (void)setSelected:(BOOL)selected{
     [super setSelected:selected];
-//    if (selected) {
-//        self.backgroundColor = [UIColor colorWithRed:0.000 green:0.481 blue:0.519 alpha:1.000];
-//    }else{
-//        self.backgroundColor = [UIColor clearColor];
-//    }
 }
 
 - (UIView *)ViewForCellContent{
 
     DeviceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"DeviceInfoView" owner:self options:nil] lastObject];
     infoView.frame = self.bounds;
-//    infoView.backgroundColor = SYSTEM_COLOR;
-
     return infoView;
 }
 
@@ -89,8 +81,6 @@
     [formate setDateFormat:@"hh-mm"];
     NSDate *dateString = [NSDate dateWithTimeIntervalSince1970:[devices.devicesStatus.systime floatValue]];
     view.timeLabel.text = [formate stringFromDate:dateString];
-    
-    
 }
 
 @end

@@ -36,16 +36,16 @@ typedef NS_ENUM(NSInteger, KBTalkEnvironmentType)
 };
 typedef NS_ENUM(NSInteger, KBMessageStatus)
 {
-  //未读
-   KBMessageStatusUnRead=1,
-   //已读
-   KBMessageStatusHaveRead,
-   //好友申请信息
-   KBMessageStatusAgree,
-   //拒绝
-   KBMessageStatusReject,
-   //请求
-   KBMessageStatusRequrest
+    //未读
+    KBMessageStatusUnRead=1,
+    //已读
+    KBMessageStatusHaveRead,
+    //好友申请信息
+    KBMessageStatusAgree,
+    //拒绝
+    KBMessageStatusReject,
+    //请求
+    KBMessageStatusRequrest
 };
 #define KBMessageTalkNotification @"KBMessageTalkNotification"
 #define KBMessageRequestNotification @"KBMessageRequestNotification"

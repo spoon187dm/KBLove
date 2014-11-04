@@ -7,7 +7,7 @@
 //
 
 #import "CCTrackerUtils.h"
-#import "CCUtils.h"
+#import "ZWL_Utils.h"
 
 
 @implementation CCTrackerUtils
@@ -159,8 +159,8 @@
 
 +(void)setCommonButtonBg:(UIButton *)button
 {
-    UIImage* normal = [CCUtils genStretchImage:@"common_btn_nselect.png" scaleIfNotRetina:NO left:5 top:5 right:5 bottom:5];
-    UIImage* hightlighted = [CCUtils genStretchImage:@"common_btn_select.png" scaleIfNotRetina:NO left:5 top:5 right:5 bottom:5];
+    UIImage* normal = [ZWL_Utils genStretchImage:@"common_btn_nselect.png" scaleIfNotRetina:NO left:5 top:5 right:5 bottom:5];
+    UIImage* hightlighted = [ZWL_Utils genStretchImage:@"common_btn_select.png" scaleIfNotRetina:NO left:5 top:5 right:5 bottom:5];
     [button setBackgroundImage:normal forState:UIControlStateNormal];
     [button setBackgroundImage:hightlighted forState:UIControlStateHighlighted];
     [button setBackgroundImage:hightlighted forState:UIControlStateDisabled];
@@ -168,7 +168,7 @@
 
 +(void)setCommonTextFieldBg:(UITextField *)textField
 {
-    [CCUtils setUITextFieldStretchBackgroundImage:textField imageName:@"editview_bg.png" scaleIfNotRetina:YES left:5 top:5 right:5 bottom:5];
+    [ZWL_Utils setUITextFieldStretchBackgroundImage:textField imageName:@"editview_bg.png" scaleIfNotRetina:YES left:5 top:5 right:5 bottom:5];
 }
 
 +(void)setRatioButton:(UIButton*)button selectedImage:(UIImage*)selectedImage unselectedImage:(UIImage*)unselectedImage

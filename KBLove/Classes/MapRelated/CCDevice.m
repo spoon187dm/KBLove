@@ -7,7 +7,7 @@
 //
 
 #import "CCDevice.h"
-#import "CCUtils.h"
+#import "ZWL_Utils.h"
 //#import "CCAccountManager.h"
 
 @implementation CCDevice
@@ -56,7 +56,7 @@
         [dict setObject:_sn forKey:kSN];
     }
     
-    if (![CCUtils isNull:_name]) {
+    if (![ZWL_Utils isNull:_name]) {
         [dict setObject:_name forKey:kNAME];
     }
     
@@ -80,7 +80,7 @@
         [dict setObject:[NSNumber numberWithInt:_type] forKey:kTYPE];
     }
     
-    if (![CCUtils isEmpty:_hardware]) {
+    if (![ZWL_Utils isEmpty:_hardware]) {
         [dict setObject:_hardware forKey:kHARDWARE];
     }
     
@@ -147,7 +147,7 @@
     }
     [dict setObject:warningArray forKey:kWARNINGS];
 
-    if (![CCUtils isNull:_sosNums]) {
+    if (![ZWL_Utils isNull:_sosNums]) {
         NSInteger count = [_sosNums count];
         for (NSInteger i = 0 ; i < count;  i++) {
             [dict setObject:[_sosNums objectAtIndex:i]  forKey:kSOS_NUM];
@@ -171,33 +171,33 @@
     _email = [jason objectForKey:kEMAIL];
     _avatarUrl = [jason objectForKey:kICON];
     
-    _avatarStamp = [CCUtils longLongValue:jason aKey:kSTAMP];
-    _speedThreshold = [CCUtils intValue:jason aKey:kSPEED_THRESHOLD];
+    _avatarStamp = [ZWL_Utils longLongValue:jason aKey:kSTAMP];
+    _speedThreshold = [ZWL_Utils intValue:jason aKey:kSPEED_THRESHOLD];
     _phoneNumber = [jason objectForKey:kPHONE_NUMBER];
-    if ([CCUtils isEmpty:_phoneNumber]) {
+    if ([ZWL_Utils isEmpty:_phoneNumber]) {
         _phoneNumber = [jason objectForKey:kPHONE];
     }
     
     _hardware = [jason objectForKey:kHARDWARE];
-    _type = [CCUtils intValue:jason aKey:kTYPE];
-    _movingSwitch = [CCUtils intValue:jason aKey:kMOVING_SWITCH];
-    _speedingSwitch = [CCUtils intValue:jason aKey:kSPEEDING_SWITCH];
-    _breakAwaySwitch = [CCUtils intValue:jason aKey:kBREAK_AWAY_SWITCH];
-    _fenceWarningSwitch = [CCUtils intValue:jason aKey:kFENCE_SWITCH];
-    _smsWarningSwitch = [CCUtils intValue:jason aKey:kSMS_SWITCH];
+    _type = [ZWL_Utils intValue:jason aKey:kTYPE];
+    _movingSwitch = [ZWL_Utils intValue:jason aKey:kMOVING_SWITCH];
+    _speedingSwitch = [ZWL_Utils intValue:jason aKey:kSPEEDING_SWITCH];
+    _breakAwaySwitch = [ZWL_Utils intValue:jason aKey:kBREAK_AWAY_SWITCH];
+    _fenceWarningSwitch = [ZWL_Utils intValue:jason aKey:kFENCE_SWITCH];
+    _smsWarningSwitch = [ZWL_Utils intValue:jason aKey:kSMS_SWITCH];
     id statusJson = [jason objectForKey:kPOSITION];
     _status = [[CCDeviceStatus alloc]init];
     [_status readFromJason:statusJson];
     
     id sos = [jason objectForKey:kSOS_NUM];
-    if ([sos isKindOfClass:NSArray.class] && ![CCUtils isNull:sos]) {
+    if ([sos isKindOfClass:NSArray.class] && ![ZWL_Utils isNull:sos]) {
         [_sosNums addObjectsFromArray:sos];
     } else if ([sos isKindOfClass:NSString.class]) {
         [_sosNums addObject:sos];
     }
     if (_sosNums.count == 0) {
         id sms = [jason objectForKey:kSMS_NUM];
-        if ([sms isKindOfClass:NSArray.class] && ![CCUtils isNull:sms]) {
+        if ([sms isKindOfClass:NSArray.class] && ![ZWL_Utils isNull:sms]) {
             [_sosNums addObjectsFromArray:sms];
         } else if ([sms isKindOfClass:NSString.class]) {
             [_sosNums addObject:sms];
@@ -205,7 +205,7 @@
     }
 
     id fenceJson = [jason objectForKey:kFENCE];
-    if (![CCUtils isNull:fenceJson]) {
+    if (![ZWL_Utils isNull:fenceJson]) {
         _regionFence = [[CCFence alloc]init];
         [_regionFence readFromJason:fenceJson];
     }
@@ -213,12 +213,12 @@
     _relation = [CCBaseRelation createRelation:_type];
     [_relation readFromJason:jason];
    
-    _tick = [CCUtils intValue:jason aKey:kTICK];
-    _warningBattery = [CCUtils intValue:jason aKey:kWARNING_BATTERY];
-    _warningFlow = [CCUtils intValue:jason aKey:kWARNING_FLOW];
+    _tick = [ZWL_Utils intValue:jason aKey:kTICK];
+    _warningBattery = [ZWL_Utils intValue:jason aKey:kWARNING_BATTERY];
+    _warningFlow = [ZWL_Utils intValue:jason aKey:kWARNING_FLOW];
 
     NSArray* warnArray = [jason objectForKey:kWARNINGS];
-    if (![CCUtils isNull:warnArray]) {
+    if (![ZWL_Utils isNull:warnArray]) {
         NSInteger count = [warnArray count];
         for (NSInteger i = 0; i < count; i++) {
             id tmp = [warnArray objectAtIndex:i];
@@ -264,7 +264,7 @@
 
 -(NSString*) getName
 {
-    if ([CCUtils isEmpty:_name]) {
+    if ([ZWL_Utils isEmpty:_name]) {
         return _sn;
     }
     return _name;
