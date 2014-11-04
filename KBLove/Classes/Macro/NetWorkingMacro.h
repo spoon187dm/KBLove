@@ -10,7 +10,7 @@
 #define KBLove_NetWorkingMacro_h
 
 #define app_name @"m2616_BD"
-#define  SERVER_URL @"http://118.194.192.104:8080"
+#define  SERVER_URL @"http://test.capcare.com.cn:8081"
 
 #define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
 //测试账号 董新加
@@ -20,7 +20,7 @@
 //注册
 static NSString *const REGRSTER_URL = @"http://118.194.192.104:8080/api/register.do?type=%d&name=%@&pwd=%@";
 //登陆
-static NSString *const LOGIN_URL = @"http://118.194.192.104:8080/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d";
+static NSString *const LOGIN_URL = @"http://test.capcare.com.cn:8081/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d";
 //修改密码
 #define ALTER_PASSWORD_URL  NSString stringWithFormat:@"%@/api/update.pwd.do?user_id=%@&password=%@&ts=%@&new_password=%@",SERVER_URL
 //修改昵称

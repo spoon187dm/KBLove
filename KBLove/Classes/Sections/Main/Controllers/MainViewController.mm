@@ -75,7 +75,7 @@
     [super viewDidLoad];
     
     //Scoket登陆服务器
-//    [[KBScoketManager ShareManager]startScoket];
+    [[KBScoketManager ShareManager]startScoket];
 
     // Do any additional setup after loading the view.
     [self.navigationController setNavigationBarHidden:YES];
@@ -127,6 +127,7 @@
         if (isSuccess) {
             _allDeviceArray = resultArray;
             [self setupDeviceArray];
+            [self showDevices:_allDeviceArray];
         }
     }];
 }
@@ -144,52 +145,20 @@
 
 //初始化地图
 - (void)setupMapView{
-    
-    /**
-     百度地图
-     */
 
-    baidu_MapView=[[BMKMapView alloc]init];
-    UIScreen *mainscreen=[UIScreen mainScreen];
-    baidu_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
-    [self.view addSubview:baidu_MapView];
-    baidu_MapView.delegate=self;
-    
-    /**
-     高德地图
-     */
-//    gaode_MapView=[[MAMapView alloc]init];
-//    UIScreen *mainscreen=[UIScreen mainScreen];
-//    gaode_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
-//    [self.view addSubview:gaode_MapView];
-//    gaode_MapView.delegate=self;
-//    
-//    MAPointAnnotation *p=[[MAPointAnnotation alloc]init];
-//    CLLocationCoordinate2D coor;
-//    coor.latitude = 39.915;
-//    coor.longitude = 116.404;
-//    p.coordinate = coor;
-//    p.title = @"test";
-//    p.subtitle = @"此Annotation可拖拽!";
-//    [gaode_MapView addAnnotation:p];
-    
-    
-    
-    BMKPointAnnotation *p=[[BMKPointAnnotation alloc]init];
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
-    p.coordinate = coor;
-    p.title = @"test";
-    p.subtitle = @"此Annotation可拖拽!";
-    [baidu_MapView addAnnotation:p];
-    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
-    BMKPointAnnotation *point=[[BMKPointAnnotation alloc]init];
-    point.coordinate=cl2d;
-    [baidu_MapView addAnnotation:point];
-    
-    
-    
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        baidu_MapView=[[BMKMapView alloc]init];
+        UIScreen *mainscreen=[UIScreen mainScreen];
+        baidu_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
+        [self.view addSubview:baidu_MapView];
+        baidu_MapView.delegate=self;
+    }else{
+        gaode_MapView=[[MAMapView alloc]init];
+        UIScreen *mainscreen=[UIScreen mainScreen];
+        gaode_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
+        [self.view addSubview:gaode_MapView];
+        gaode_MapView.delegate=self;
+    }
     
     //设置地图显示区域
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
@@ -222,31 +191,46 @@
 #pragma mark -
 #pragma mark 地图操作
 
-- (NSArray *)getLastAnnotationArray{
-    return _pointArray;
-}
-
-- (void)setLastAnnotationArray:(NSArray *)array{
-    _pointArray = [NSMutableArray arrayWithArray:array];
-}
-
 - (void)clearMap{
     
-    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:@""]) {
-        
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        [baidu_MapView removeAnnotations:_pointArray];
+    }else{
+        [gaode_MapView removeAnnotations:_pointArray];
     }
+    [_pointArray removeAllObjects];
 }
 
-- (void)addPoints:(NSArray *)array{
-    [_pointArray addObjectsFromArray:array];
-}
-
-- (void)showPoints:(NSArray *)array{
+- (void)showDevices:(NSArray *)array{
     [self clearMap];
+//    [_pointArray addObjectsFromArray:array];
+
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        for (KBDevices *device in array) {
+            BMKPointAnnotation *point = [[BMKPointAnnotation alloc]init];
+            CLLocationCoordinate2D coordination2d = CLLocationCoordinate2DMake([device.devicesStatus.lat floatValue], [device.devicesStatus.lng floatValue]);
+            point.coordinate = coordination2d;
+            point.title = device.name;
+            [_pointArray addObject:point];
+        }
+    }else{
+        for (KBDevices *device in array) {
+            MAPointAnnotation *point = [[MAPointAnnotation alloc]init];
+            CLLocationCoordinate2D coordination2d = CLLocationCoordinate2DMake([device.devicesStatus.lat floatValue], [device.devicesStatus.lng floatValue]);
+            point.coordinate = coordination2d;
+            point.title = device.name;
+            [_pointArray addObject:point];
+        }
+    }
+    [self showPointInMapView];
 }
 
-- (void)addPoint:(CGPoint)point toMap:(id)map{
-    
+- (void)showPointInMapView{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        [baidu_MapView addAnnotations:_pointArray];
+    }else{
+        [gaode_MapView addAnnotations:_pointArray];
+    }
 }
 
 #pragma mammapview Delegate
@@ -284,21 +268,20 @@
 #pragma mark -
 #pragma mark 界面点击事件
 - (IBAction)click_car:(id)sender {
+    [self showDevices:_carDeviceArray];
 }
 
 
 - (IBAction)click_person:(id)sender{
+    [self showDevices:_personDeviceArray];
 }
 
 - (IBAction)click_pet:(id)sender{
+    [self showDevices:_petDeviceArray];
 }
 
 - (IBAction)click_allDevices:(id)sender{
-    
-    [KBDeviceManager getDeviceList:^(BOOL isSuccess, NSArray *resultArray) {
-        
-    }];
-    
+    [self showDevices:_allDeviceArray];
 }
 
 - (IBAction)click_friends:(id)sender{

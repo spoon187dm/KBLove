@@ -98,7 +98,12 @@
         msg.FromUser_id=[KBUserInfo sharedInfo].user_id;
         msg.TalkEnvironmentType=tak;
         msg.time=[NSString TimeJabLong];
-        
+        [_dataArray addObject:msg];
+        [_tableView reloadData];
+        if (_dataArray.count) {
+            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        }
+
         if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeFriend)
         {
             //发送给朋友?user_id=%@&token=%@&friend_id=%@&content=%@&type=%d
@@ -117,19 +122,6 @@
                     if ([ret integerValue]==1) {
                         //发送成功
                         NSLog(@"SendSucess");
-//                        [_dataArray addObject:msg];
-//                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-//                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeFriend;
-//                        msginf.MessageType=KBMessageTypeTalkText;
-//                        msginf.FromUser_id=@"14022";
-//                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-//                        msginf.text=@"朋友测试返回信息";
-//                        [_dataArray addObject:msginf];
-//                        [_tableView reloadData];
-//                        if (_dataArray.count) {
-//                            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-//                        }
-                        
                     }else
                     {
                         NSLog(@"%@",[responseObject objectForKey:@"desc"]);
@@ -168,15 +160,6 @@
                     if ([ret integerValue]==1) {
                         //发送成功
                         NSLog(@"SendSucess");
-//                        [_dataArray addObject:msg];
-//                        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-//                        msginf.TalkEnvironmentType=KBTalkEnvironmentTypeCircle;
-//                        msginf.MessageType=KBMessageTypeTalkText;
-//                        msginf.FromUser_id=@"14022";
-//                        msginf.ToUser_id=[KBUserInfo sharedInfo].user_id;
-//                        msginf.text=@"圈子测试返回信息";
-//                        [_dataArray addObject:msginf];
-                        
                     }else
                     {
                         NSLog(@"%@",[responseObject objectForKey:@"desc"]);
@@ -201,8 +184,6 @@
         
         }
     } AndDelegate:self];
-
-
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-49) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;

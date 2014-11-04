@@ -57,7 +57,8 @@
         }
     }
     [KBUserInfo sharedInfo].token=@"";
-
+    //初始化 ios_token
+    [KBUserInfo sharedInfo].ios_token=[NSString stringWithFormat:@"%@",@" "];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     NSLog(@"%@",NSHomeDirectory());
@@ -117,7 +118,7 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSLog(@"%@",userInfo);
-    [KBScoketManager analyseMessage:userInfo];
+    [[KBScoketManager ShareManager] analyseMessage:userInfo];
     //收到相应消息
 }
 
