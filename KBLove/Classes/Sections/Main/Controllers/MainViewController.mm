@@ -10,7 +10,7 @@
 #import <ReactiveCocoa.h>
 #import "KBDevices.h"
 #import "KBUserManager.h"
-#import "CircleViewController.h"
+//#import "CircleViewController.h"
 #import "KBDeviceManager.h"
 #import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>

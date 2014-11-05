@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self CreateUI];
-    [self loadData];
+    //[self loadData];
     // Do any additional setup after loading the view.
 }
 - (void)CreateUI
@@ -51,40 +51,46 @@
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:[self MakeButtonWithBgImgName:@"Nav_down_arrow" SelectedImg:@"Nav_up_arrow " Frame:CGRectMake(0, 0, 25, 25) target:self Sel:@selector(AddClick:) AndTag:100]];
     //_headerView
     _titleView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 160, 44)];
-//    [_titleView addSubview:[self MakeButtonWithBgImgName:@"" SelectedImg:@"" Frame:CGRectMake(0, 11, 80, 22) target:self Sel:@selector(SelectClick:) AndTag:200]];
     _titleView.userInteractionEnabled=YES;
-    _FriendBtn=[UIButton buttonWithFrame:CGRectMake(0, 11, 80, 22) title:@"朋友" target:self Action:@selector(SelectClick:)];
+    _FriendBtn=[UIButton buttonWithFrame:CGRectMake(0, 10, 80, 30) title:@"朋友" target:self Action:@selector(SelectClick:)];
     _FriendBtn.tag=200;
     _FriendBtn.selected=YES;
-    _circleBtn=[UIButton buttonWithFrame:CGRectMake(80, 11, 80, 22) title:@"圈子" target:self Action:@selector(SelectClick:)];
+    _circleBtn=[UIButton buttonWithFrame:CGRectMake(80, 10, 80, 30) title:@"圈子" target:self Action:@selector(SelectClick:)];
     _circleBtn.tag=201;
+    
+    UIImage *Circle_image=[UIImage imageNamed:@"手机注册_04"];
+    //我们需要把图像翻转180度
+    UIImage *Friend_image=[UIImage imageWithCGImage:Circle_image.CGImage scale:2 orientation:UIImageOrientationUpMirrored];
+    UIImage *friend_selected_image=[UIImage imageNamed:@"手机注册_03"];
+    UIImage *circle_selected_image=[UIImage imageWithCGImage:friend_selected_image.CGImage scale:2 orientation:UIImageOrientationUpMirrored];
+    [_circleBtn setBackgroundImage:Circle_image forState:UIControlStateNormal];
+    [_circleBtn setBackgroundImage:circle_selected_image forState:UIControlStateSelected];
+    [_FriendBtn setBackgroundImage:Friend_image forState:UIControlStateNormal];
+    [_FriendBtn setBackgroundImage:friend_selected_image forState:UIControlStateSelected];
+    //_circleBtn setTitleColor:[uicor] forState:<#(UIControlState)#>
     [_titleView addSubview:_FriendBtn];
     [_titleView addSubview:_circleBtn];
     self.navigationItem.titleView=_titleView;
-    _listView =[[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.frame.size.width , 40)];
+    
+    _listView=[[UIView alloc]initWithFrame:CGRectMake(0,44,self.view.frame.size.width , 40)];
+    _listView.userInteractionEnabled=YES;
+    _addBtn=[UIButton buttonWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 40) title:@"添加朋友" target:self Action:@selector(SelectClick:)];
+    _addBtn.tag=202;
+    _addBtn.selected=YES;
     _createBtn=[UIButton buttonWithFrame:CGRectMake(self.view.frame.size.width/2, 0, self.view.frame.size.width/2, 40) title:@"创建圈子" target:self Action:@selector(SelectClick:)];
-    _createBtn.tag=202;
-    _addBtn=[UIButton buttonWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 40) title:@"添加好友" target:self Action:@selector(SelectClick:)];
-    _addBtn.tag=203;
+    _createBtn.tag=203;
+    _listView.backgroundColor=[UIColor whiteColor];
     [_listView addSubview:_createBtn];
     [_listView addSubview:_addBtn];
-    [self.view addSubview:_listView];
-    _listView.hidden=YES;
-    [self.view addSubview:_listView];
-    [self.view bringSubviewToFront:_listView];
-//    [_titleView addSubview:[self MakeButtonWithBgImgName:@"" SelectedImg:@"" Frame:CGRectMake(80, 11, 80, 22) target:self Sel:@selector(SelectClick:) AndTag:201]];
-    //初始化 Tableview
-    //self.tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
-    //_tableView.delegate=self;
-   // tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
-   // .dataSource=self;
+    
+    //self.tableView.tableHeaderView=_listView;
+
     UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
     bgimgv.frame=self.tableView.bounds;
     self.tableView.backgroundView=bgimgv;
     self.tableView.separatorColor=[UIColor whiteColor];
     self.tableView.backgroundColor=[UIColor clearColor];
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    //[self.view addSubview:_tableView];
 
     
 }
@@ -127,10 +133,13 @@
 - (void)AddClick:(UIButton *)btn
 {
     if (btn.selected) {
-        _listView.hidden=YES;
+        //_listView.hidden=YES;
+        self.tableView.tableHeaderView=nil;
+        [self.tableView reloadData];
     }else
     {
-        _listView.hidden=NO;
+        self.tableView.tableHeaderView=_listView;
+        [self.tableView reloadData];
     }
     btn.selected=!btn.selected;
 }
@@ -149,6 +158,8 @@
     if (!_circle_listArray) {
         _circle_listArray=[[NSMutableArray alloc]init];
     }
+    [_friendsListArray removeAllObjects];
+    [_circle_listArray removeAllObjects];
     //拿到user_id
     NSString *user_id = [KBUserInfo sharedInfo].user_id;
     //拿到token
@@ -335,7 +346,7 @@
 
 - (UIButton *)MakeButtonWithBgImgName:(NSString *)img SelectedImg:(NSString *)simg  Frame:(CGRect)frame target:(id)tar Sel:(SEL)selector AndTag:(NSInteger) tag
 {
-    UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame=frame;
     [btn setBackgroundImage:[UIImage imageNamed:img] forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:simg] forState:UIControlStateSelected];
@@ -348,7 +359,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self loadData];
+  // [self.navigationController.navigationBar addSubview:_listView];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+   // [_listView removeFromSuperview];
+}
 /*
 #pragma mark - Navigation
 

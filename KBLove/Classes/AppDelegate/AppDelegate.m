@@ -26,7 +26,7 @@
         NSLog(@"manager start failed!");
     }
     
-    [MAMapServices sharedServices].apiKey = @"d0818c7e92d2f86978158044c99fb47b";
+    [MAMapServices sharedServices].apiKey = @"16aceaed9c6b89cea04f5eafa17d44de";
     
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
@@ -60,7 +60,8 @@
         }
     }
     [KBUserInfo sharedInfo].token=@"";
-
+    //初始化 ios_token
+    [KBUserInfo sharedInfo].ios_token=[NSString stringWithFormat:@"%@",@" "];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     NSLog(@"%@",NSHomeDirectory());
@@ -120,7 +121,7 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSLog(@"%@",userInfo);
-    [KBScoketManager analyseMessage:userInfo];
+    [[KBScoketManager ShareManager] analyseMessage:userInfo];
     //收到相应消息
 }
 

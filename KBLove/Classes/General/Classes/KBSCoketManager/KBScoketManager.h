@@ -10,8 +10,8 @@
 #import "AsyncSocket.h"
 @interface KBScoketManager : NSObject<AsyncSocketDelegate>
 + (KBScoketManager *)ShareManager;
-+ (void)analyseMessage:(NSDictionary *)msgDic;
-+ (void)analyseOneMessageWithtype:(NSInteger)type AndArray:(NSArray *)msgarr;
+- (void)analyseMessage:(NSDictionary *)msgDic;
+- (void)analyseOneMessageWithtype:(NSInteger)type AndArray:(NSArray *)msgarr;
 - (void)startScoket;
 - (void)stopScoket;
 @end

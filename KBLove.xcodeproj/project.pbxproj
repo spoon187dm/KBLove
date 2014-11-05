@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
-		6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */; };
 		6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647519ECD15D0081EB4C /* FriendsListCell.m */; };
 		6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16647619ECD15D0081EB4C /* FriendsListCell.xib */; };
 		6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */; };
@@ -52,11 +51,9 @@
 		BC45C13919F22AD3000CB559 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC45C13819F22AD3000CB559 /* MessageCell.m */; };
 		BC45C13B19F22D23000CB559 /* chat_send_nor_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC45C13A19F22D23000CB559 /* chat_send_nor_pic@2x.png */; };
 		BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836019ECCE8500DAC76A /* CircleRootViewController.m */; };
-		BC59836419ECCE9800DAC76A /* CircleViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BC59836319ECCE9800DAC76A /* CircleViewController.mm */; };
 		BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */; };
 		BC59836A19ECCF0200DAC76A /* CircleTalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */; };
 		BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */; };
-		BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */; };
 		BC59837419ECE71800DAC76A /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59837219ECE71800DAC76A /* CircleCell.m */; };
 		BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59837319ECE71800DAC76A /* CircleCell.xib */; };
 		BC5A135E19F74DB700DDD36C /* sendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A135D19F74DB700DDD36C /* sendBtn.png */; };
@@ -90,8 +87,6 @@
 		BC9B778A1A04AD6200A666B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77891A04AD6200A666B7 /* CoreLocation.framework */; };
 		BC9B778C1A04AD6A00A666B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B778B1A04AD6A00A666B7 /* SystemConfiguration.framework */; };
 		BC9B77D61A04AEC800A666B7 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC9B77D31A04AEC800A666B7 /* mapapi.bundle */; };
-		BC9B77D71A04C25200A666B7 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77D21A04AEC800A666B7 /* libbaidumapapi.a */; };
-		BC9B77DC1A04D5BF00A666B7 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77DB1A04D5BF00A666B7 /* libbaidumapapi.a */; };
 		BC9B787A1A04DE5900A666B7 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B78741A04DE5900A666B7 /* car.png */; };
 		BC9B787B1A04DE5900A666B7 /* car_offline.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B78751A04DE5900A666B7 /* car_offline.png */; };
 		BC9B787C1A04DE5900A666B7 /* car_warning.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B78761A04DE5900A666B7 /* car_warning.png */; };
@@ -802,8 +797,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E16647119ECD1420081EB4C /* FriendsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewController.h; sourceTree = "<group>"; };
-		6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewController.m; sourceTree = "<group>"; };
 		6E16647419ECD15D0081EB4C /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
 		6E16647519ECD15D0081EB4C /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
 		6E16647619ECD15D0081EB4C /* FriendsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
@@ -872,16 +865,12 @@
 		BC59833319ECB3E600DAC76A /* DXLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXLog.h; sourceTree = "<group>"; };
 		BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRootViewController.h; sourceTree = "<group>"; };
 		BC59836019ECCE8500DAC76A /* CircleRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleRootViewController.m; sourceTree = "<group>"; };
-		BC59836219ECCE9800DAC76A /* CircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
-		BC59836319ECCE9800DAC76A /* CircleViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CircleViewController.mm; sourceTree = "<group>"; };
 		BC59836519ECCEA900DAC76A /* CreateCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCircleViewController.h; sourceTree = "<group>"; };
 		BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCircleViewController.m; sourceTree = "<group>"; };
 		BC59836819ECCF0200DAC76A /* CircleTalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTalkViewController.h; sourceTree = "<group>"; };
 		BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTalkViewController.m; sourceTree = "<group>"; };
 		BC59836B19ECCF1100DAC76A /* CircleSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSettingViewController.h; sourceTree = "<group>"; };
 		BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSettingViewController.m; sourceTree = "<group>"; };
-		BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteCircleManagerViewController.h; sourceTree = "<group>"; };
-		BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteCircleManagerViewController.m; sourceTree = "<group>"; };
 		BC59837119ECE71800DAC76A /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
 		BC59837219ECE71800DAC76A /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		BC59837319ECE71800DAC76A /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
@@ -1838,13 +1827,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3344A91A087B550082A637 /* libbaidumapapi.a in Frameworks */,
 				BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */,
 				BC9B788B1A04E33B00A666B7 /* AMapSearchKit.framework in Frameworks */,
 				BC9B78851A04E2CD00A666B7 /* CoreTelephony.framework in Frameworks */,
 				BC9B78831A04E2B200A666B7 /* libz.dylib in Frameworks */,
 				BC9B78811A04E2A100A666B7 /* libstdc++.6.0.9.dylib in Frameworks */,
-				BC9B77D71A04C25200A666B7 /* libbaidumapapi.a in Frameworks */,
-				BC9B77DC1A04D5BF00A666B7 /* libbaidumapapi.a in Frameworks */,
 				BC9B778C1A04AD6A00A666B7 /* SystemConfiguration.framework in Frameworks */,
 				BC9B778A1A04AD6200A666B7 /* CoreLocation.framework in Frameworks */,
 				BC9B77881A04AD4800A666B7 /* OpenGLES.framework in Frameworks */,
@@ -1900,8 +1888,6 @@
 		6ECC038019ECFC5D0008ACAD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E16647119ECD1420081EB4C /* FriendsListTableViewController.h */,
-				6E16647219ECD1420081EB4C /* FriendsListTableViewController.m */,
 				6E16647919ECD4F90081EB4C /* AddFriendViewController.h */,
 				6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */,
 				6ECC038519ED05030008ACAD /* SearchResultViewController.h */,
@@ -1939,16 +1925,12 @@
 			children = (
 				BC59835F19ECCE8500DAC76A /* CircleRootViewController.h */,
 				BC59836019ECCE8500DAC76A /* CircleRootViewController.m */,
-				BC59836219ECCE9800DAC76A /* CircleViewController.h */,
-				BC59836319ECCE9800DAC76A /* CircleViewController.mm */,
 				BC59836519ECCEA900DAC76A /* CreateCircleViewController.h */,
 				BC59836619ECCEA900DAC76A /* CreateCircleViewController.m */,
 				BC59836819ECCF0200DAC76A /* CircleTalkViewController.h */,
 				BC59836919ECCF0200DAC76A /* CircleTalkViewController.m */,
 				BC59836B19ECCF1100DAC76A /* CircleSettingViewController.h */,
 				BC59836C19ECCF1100DAC76A /* CircleSettingViewController.m */,
-				BC59836E19ECCF5000DAC76A /* DeleteCircleManagerViewController.h */,
-				BC59836F19ECCF5000DAC76A /* DeleteCircleManagerViewController.m */,
 				BC5A136519F7644900DDD36C /* Circle_ShareViewController.h */,
 				BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */,
 			);
@@ -5559,7 +5541,6 @@
 				F90F6F0E19F563E400671113 /* PrivacySettingViewController.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				F9AD8C071A060D44009A55D2 /* TraceCell.m in Sources */,
-				BC59836419ECCE9800DAC76A /* CircleViewController.mm in Sources */,
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				BC256C961A06171A00EDFFBC /* TrackerReplayViewController.mm in Sources */,
@@ -5640,7 +5621,6 @@
 				BCB42E2B19F1425B00A141C3 /* FMDatabaseQueue.m in Sources */,
 				F975FE6A19EE453200D13D86 /* DevicesCell.m in Sources */,
 				F9AD8C0F1A06118F009A55D2 /* TraceListViewController.m in Sources */,
-				BC59837019ECCF5000DAC76A /* DeleteCircleManagerViewController.m in Sources */,
 				F9D4C8BC19F121BC005B93CA /* AlarmCell.m in Sources */,
 				F974109119EC2E2600E12633 /* AppDelegate.m in Sources */,
 				F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */,
@@ -5662,7 +5642,6 @@
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
 				BC45C13919F22AD3000CB559 /* MessageCell.m in Sources */,
 				BC256CB71A061A8200EDFFBC /* CCReplayAnnotationView.m in Sources */,
-				6E16647319ECD1420081EB4C /* FriendsListTableViewController.m in Sources */,
 				F974110219EC389800E12633 /* NSFileManager+pathMethod.m in Sources */,
 				F974110519EC389800E12633 /* UIImageView+WLTool.m in Sources */,
 				F99246481A048C5400599E74 /* TableRefreshHeaderView.m in Sources */,
