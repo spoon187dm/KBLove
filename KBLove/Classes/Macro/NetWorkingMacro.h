@@ -86,10 +86,19 @@ static NSString * const Url_HostName = @"http://test.capcare.com.cn:8081";
 
 #define Url_GetAllAlarmList [NSString stringWithFormat:@"%@/api/alarm.all.do",Url_HostName]
 
-
 /**
  修改警告信息接口
  */
 #define Url_EditAlarmInfo [NSString stringWithFormat:@"%@/api/alarm.edit.do",Url_HostName]
+
+/**
+ 获取轨迹回放信息接口
+ */
+#define Url_GetTrack [NSString stringWithFormat:@"%@/api/get.track.do",Url_HostName]
+
+/**
+ 获取轨迹分段信息
+ */
+#define Url_Getpart [NSString stringWithFormat:@"%@/api/get.part.do",Url_HostName]
 
 #endif

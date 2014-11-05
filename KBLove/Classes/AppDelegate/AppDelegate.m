@@ -31,9 +31,9 @@
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
 //    [[KBDBManager shareManager]insertDataWithModel:msginf];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_Bacground"] forBarMetrics:UIBarMetricsDefault];
-    [[UITableView appearance] setBackgroundColor:SYSTEM_COLOR];
-    [[UITableViewCell appearance]setBackgroundColor:[UIColor colorWithRed:0.000 green:0.569 blue:0.588 alpha:1.000]];
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_Bacground"] forBarMetrics:UIBarMetricsDefault];
+//    [[UITableView appearance] setBackgroundColor:SYSTEM_COLOR];
+//    [[UITableViewCell appearance]setBackgroundColor:[UIColor colorWithRed:0.000 green:0.569 blue:0.588 alpha:1.000]];
     //    [[UIView appearance]setBackgroundColor:SYSTEM_COLOR];
     [[UILabel appearance]setTextColor:[UIColor whiteColor]];
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
