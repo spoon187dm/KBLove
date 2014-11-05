@@ -235,24 +235,22 @@
         [_selectArray removeObject:finf];
         [self refreshBottomWithArray];
         
-    } AndFinishedBlock:^{
-        
-
+    }AndFinishedBlock:^(NSInteger tag) {
         NSLog(@"创建群组");
         KBUserInfo *user=[KBUserInfo sharedInfo];
         NSMutableString *memberStr=[NSMutableString string];
         for (KBFriendInfo *finf in _selectArray) {
             if ([_selectArray indexOfObject:finf]==_selectArray.count-1) {
-              [memberStr appendString:[NSString stringWithFormat:@"%@",finf.id]];
+                [memberStr appendString:[NSString stringWithFormat:@"%@",finf.id]];
             }else
             {
                 [memberStr appendString:[NSString stringWithFormat:@"%@,",finf.id]];
             }
             
         }
-    NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1]);
+        NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1]);
         [[KBHttpRequestTool sharedInstance]request:[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
-
+            
             if (IsSuccess) {
                 if ([result isKindOfClass:[NSDictionary class]]) {
                     if ([[result objectForKey:@"ret"] integerValue]==1) {

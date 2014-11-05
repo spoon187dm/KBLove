@@ -46,6 +46,9 @@
     _tableView.separatorColor=[UIColor whiteColor];
     [self.view addSubview:_tableView];
     _headerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 240)];
+    UIImageView *imagv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子位置1_03"]];
+    imagv.frame=_headerView.bounds;
+    [_headerView addSubview:imagv];
     //加载地图控件
     _tableView.tableHeaderView=_headerView;
 
@@ -65,6 +68,9 @@
 }
 - (void)BackClick:(UIButton *)btn
 {
+    //[self dismissViewControllerAnimated:YES completion:^{
+        
+    //}];
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - UITableViewDataSource

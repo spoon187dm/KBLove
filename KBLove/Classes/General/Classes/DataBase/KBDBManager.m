@@ -45,6 +45,7 @@ static KBDBManager *manager;
 {
     if ([obj isKindOfClass:[KBMessageInfo class]]) {
         KBMessageInfo *msgModel=(KBMessageInfo *)obj;
+        NSLog(@"%lld",msgModel.time);
         NSString *insert=@"insert into KBMessageList values(?,?,?,?,?,?,?,?,?)";
         NSString *imageStr;
        // NSInteger s=1;
@@ -98,7 +99,7 @@ static KBDBManager *manager;
     selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and FromUser_id=? order by time desc";
     }
     FMResultSet *set=[_dataBase executeQuery:selectSQL,[NSNumber numberWithInteger:talkType],user_id];
-    if ([set next]) {
+    if([set next]) {
         KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
         msginf.TalkEnvironmentType=[set intForColumn:@"TalkEnvironmentType"];
         msginf.MessageType=[set intForColumn:@"MessageType"];
@@ -110,17 +111,32 @@ static KBDBManager *manager;
         msginf.image=[UIImage imageWithData:[[set stringForColumn:@"image"] dataUsingEncoding:NSUTF8StringEncoding]];
         msginf.time=[set longLongIntForColumn:@"time"];
         [resultarr addObject:msginf];
-    }
     return  [resultarr lastObject];
-
+    }
+    return nil;
 }
 //获取与某人的聊天信息
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number
 {
+
+    NSLog(@"%d,%d",page,number);
     NSMutableArray *resultarr=[[NSMutableArray alloc]init];
-    NSString *selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and FromUser_id=? limit ?,? in(select * from KBMessageList order by time desc)";
-    FMResultSet *set=[_dataBase executeQuery:selectSQL,talkType,user_id,page*number,number];
-    if ([set next]) {
+    NSMutableArray *allData=[[NSMutableArray alloc]init];
+    NSString *selectSQL;
+    if (talkType==KBTalkEnvironmentTypeCircle) {
+        selectSQL=@"select * from KBMessageList  where TalkEnvironmentType=? and Circle_id=? ";
+    }else{
+        selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and (FromUser_id=? or ToUser_id=? )";
+    }
+    FMResultSet *set;
+    if (talkType==KBTalkEnvironmentTypeCircle) {
+      set=[_dataBase executeQuery:selectSQL,[NSNumber numberWithInteger:talkType],user_id];
+    }else
+    {
+    set=[_dataBase executeQuery:selectSQL,[NSNumber numberWithInteger:talkType],user_id,user_id];
+    }
+    
+    while([set next]) {
         KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
         msginf.TalkEnvironmentType=[set intForColumn:@"TalkEnvironmentType"];
         msginf.MessageType=[set intForColumn:@"MessageType"];
@@ -131,9 +147,27 @@ static KBDBManager *manager;
         msginf.text=[set stringForColumn:@"text"];
         msginf.image=[UIImage imageWithData:[[set stringForColumn:@"image"] dataUsingEncoding:NSUTF8StringEncoding]];
         msginf.time=[set longLongIntForColumn:@"time"];
-        [resultarr addObject:msginf];
+        [allData addObject:msginf];
+        
     }
-    return  resultarr;
+    //返回指定条数信息
+    
+    NSLog(@"%d",allData.count);
+    if (allData.count < (page +1)*number) {
+        if (allData.count >(page)*number) {
+            for (int i=0; i<allData.count-(page)*number; i++) {
+                [resultarr addObject:allData[i]];
+            }
+ 
+        }
+    }else
+    {
+    for (int i=allData.count-(page+1)*number; i<allData.count-(page)*number; i++) {
+        [resultarr addObject:allData[i]];
+    }
+    }
+    NSLog(@"%d",resultarr.count);
+    return  resultarr ;
 }
 
 @end
