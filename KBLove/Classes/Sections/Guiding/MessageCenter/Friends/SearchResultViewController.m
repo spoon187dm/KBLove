@@ -27,7 +27,7 @@
     //获得当前token
     NSString *token = [KBUserInfo sharedInfo].token;
     //拼接urlStr
-    NSString *urlStr = [NSString stringWithFormat:VERIFYMESSAGE_URL,user_id,token,_friendId,51];
+    NSString *urlStr = [NSString stringWithFormat:VERIFYMESSAGE_URL,user_id,token,_friendId,51,app_name];
     NSLog(@"%@",urlStr);
     //发起请求
     [[KBHttpRequestTool sharedInstance] request:urlStr requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {

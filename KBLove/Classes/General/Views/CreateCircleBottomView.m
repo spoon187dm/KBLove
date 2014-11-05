@@ -13,6 +13,7 @@
     NSArray *_viewArray;
     SelectViewBlock _block;
     CreateFinishedBlock _fblock;
+    //NSInteger
 }
 - (id)initWithFrame:(CGRect)frame
 {
@@ -65,10 +66,71 @@
     }
     
 }
+- (void)configUIWithFriendArray:(NSArray *)farray FinishedBtnArray:(NSArray *)finishedArr AndBlock:(SelectViewBlock)block AndFinishedBlock:(CreateFinishedBlock )fblock IsDelete:(BOOL)isdelete AndCircleUser_id:(NSString *)create_id
+{
+    if (_fblock!=fblock) {
+        _fblock=fblock;
+    }
+    if (_block!=block) {
+        _block=block;
+    }
+    for (UIView *view in self.subviews) {
+        [view removeFromSuperview];
+    }
+    for (int i=0; i<farray.count+finishedArr.count; i++) {
+        
+        
+        UIImageView *imgv=[[UIImageView alloc]initWithFrame:CGRectMake((i%4)*70+20, (i/4*70+15), 50, 50)];
+        imgv.userInteractionEnabled=YES;
+        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]init];
+        imgv.tag=i;
+        [tap addTarget:self action:@selector(TapClick:)];
+        [imgv addGestureRecognizer:tap];
+        imgv.layer.cornerRadius=5;
+        imgv.layer.masksToBounds=YES;
+        [self addSubview:imgv];
+        if (i>farray.count-1) {
+          imgv.image=[UIImage imageNamed:finishedArr[i-farray.count]];
+        }else{
+        KBFriendInfo *finf=farray[i];
+        imgv.image=[UIImage imageNamed:@"userimage"];
+        
+        UILabel *la=[[UILabel alloc]initWithFrame:CGRectMake(imgv.frame.origin.x, imgv.frame.origin.y+55, 55, 10)];
+        [self addSubview:la];
+        la.font=[UIFont boldSystemFontOfSize:10];
+        la.text=finf.name;
+        la.textColor=[UIColor whiteColor];
+        la.textAlignment=NSTextAlignmentCenter;
+        if (isdelete) {
+            NSString *fuser_id=finf.id;
+            
+            if ([fuser_id isEqualToString:create_id]) {
+                
+            }else{
+            UIButton *btn=[UIButton buttonWithFrame:CGRectMake(imgv.frame.origin.x-5, imgv.frame.origin.y-5, 20, 20) title:@"" target:self Action:@selector(FinishedClick:)];
+            btn.tag=i;
+            btn.layer.cornerRadius=10;
+            btn.layer.masksToBounds=YES;
+            btn.backgroundColor=[UIColor redColor];
+            [self addSubview:btn];
+            }
+            }
+        }
+        
+    }
+    
+    CGRect fr=self.frame;
+    NSInteger linecount=(farray.count +finishedArr.count)/4+(farray.count +finishedArr.count)%4==0?0:1;
+    self.frame=CGRectMake(fr.origin.x,fr.origin.y,fr.size.width, linecount*70+25);
+    if (farray.count==0) {
+        self.frame=CGRectMake(fr.origin.x,fr.origin.y,fr.size.width, 0);
+    }
+
+}
 - (void)FinishedClick:(UIButton *)btn
 {
     
-    _fblock();
+    _fblock(btn.tag);
 }
 - (void)TapClick:(UITapGestureRecognizer *)tap
 {

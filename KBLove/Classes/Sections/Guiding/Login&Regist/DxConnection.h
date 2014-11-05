@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, RegisterType)
 //删除圈子
 #define  Circle_Delete_URL NSString stringWithFormat:@"%@/api/group.del.do?user_id=%@&token=%@&group_id=%@",SERVER_URL
 //更新圈子信息
-#define  Circle_UpDate_URL NSString stringWithFormat:@"%@/api/group.update.do?user_id=%@&token=%@&group_id=%@&group_name=%@&nick_name=%@",SERVER_URL
+#define  Circle_UpDate_URL NSString stringWithFormat:@"%@/api/group.update.do?user_id=%@&token=%@&group_id=%@&group_name=%@&nick_name=%@,app_name=%@",SERVER_URL
 //添加圈子成员
 #define  Circle_AddMember_URL NSString stringWithFormat:@"%@/api/group.member.add.do?user_id=%@&token=%@&group_id=%@&group_member=%@",SERVER_URL
 //删除成员信息
@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, RegisterType)
 //发送群消息
 #define  Circle_SendCircleMessage_URL NSString stringWithFormat:@"%@/api/group.send.message.do",SERVER_URL
 //是否同意添加好友
-#define  Circle_SendIsAGreeFriendMessage_URL NSString stringWithFormat:@"%@/api/group.send.message.do",SERVER_URL
+#define  Circle_SendIsAGreeFriendMessage_URL NSString stringWithFormat:@"%@/api/friend.verify.pass.do",SERVER_URL
 
 
 #define ScreenWidth  self.view.frame.size.width

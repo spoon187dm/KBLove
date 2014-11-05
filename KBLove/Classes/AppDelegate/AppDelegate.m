@@ -26,7 +26,7 @@
         NSLog(@"manager start failed!");
     }
     
-    [MAMapServices sharedServices].apiKey = @"d0818c7e92d2f86978158044c99fb47b";
+    [MAMapServices sharedServices].apiKey = @"16aceaed9c6b89cea04f5eafa17d44de";
     
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];

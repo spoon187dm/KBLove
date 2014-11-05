@@ -10,7 +10,7 @@
 #import <ReactiveCocoa.h>
 #import "KBDevices.h"
 #import "KBUserManager.h"
-#import "CircleViewController.h"
+//#import "CircleViewController.h"
 #import "KBDeviceManager.h"
 #import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>
@@ -134,6 +134,14 @@
             _allDeviceArray = resultArray;
             [self setupDeviceArray];
             [self showDevices:_allDeviceArray];
+            [SVProgressHUD dismiss];
+        }else{
+            [SVProgressHUD dismiss];
+            [UIAlertView showWithTitle:@"设备获取失败" Message:@"请检查网络连接后重试" cancle:@"取消" otherbutton:@"重试" block:^(NSInteger index) {
+                if (1 == index) {
+                    [self loadData];
+                }
+            }];
         }
     }];
 }
@@ -152,18 +160,17 @@
 
 //初始化地图
 - (void)setupMapView{
-
+    
+    UIView *blank=[self.view viewWithTag:21];
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         baidu_MapView=[[BMKMapView alloc]init];
-        UIScreen *mainscreen=[UIScreen mainScreen];
-        baidu_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
-        [self.view addSubview:baidu_MapView];
+        baidu_MapView.frame=blank.bounds;
+        [blank addSubview:baidu_MapView];
         baidu_MapView.delegate=self;
     }else{
         gaode_MapView=[[MAMapView alloc]init];
-        UIScreen *mainscreen=[UIScreen mainScreen];
-        gaode_MapView.frame=CGRectMake(0, 0,mainscreen.bounds.size.width, mainscreen.bounds.size.height-135);
-        [self.view addSubview:gaode_MapView];
+        gaode_MapView.frame=blank.bounds;
+        [blank addSubview:gaode_MapView];
         gaode_MapView.delegate=self;
     }
     
@@ -215,6 +222,15 @@
 
 #pragma mark -
 #pragma mark 私有功能方法
+
+- (void)hideDropListView{
+    [UIView animateWithDuration:.5 animations:^{
+        _dropListView.hidden = YES;
+    }];
+}
+
+#pragma mark -
+#pragma mark 地图操作
 
 - (void)clearMap{
     

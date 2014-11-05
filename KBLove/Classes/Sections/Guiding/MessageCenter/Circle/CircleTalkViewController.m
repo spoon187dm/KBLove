@@ -12,7 +12,7 @@
 #import "CircleSettingViewController.h"
 #import "KBHttpRequestTool.h"
 #import "AFNetworking.h"
-
+#import "UIScrollView+TableRefresh.h"
 @interface CircleTalkViewController ()
 {
     KBTalkEnvironmentType _talkType;
@@ -20,6 +20,7 @@
     SendMessageView *_sendMsgView;
     KBCircleInfo *_circle_info;
     KBFriendInfo *_friend_info;
+    NSInteger page;
 }
 @end
 
@@ -73,6 +74,7 @@
     //self.automaticallyAdjustsScrollViewInsets=YES;
     //返回
     //添加消息通知
+    page=0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getaMessage:) name:KBMessageTalkNotification object:nil];
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
     switch (_talkType) {
@@ -90,6 +92,7 @@
     
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     _sendMsgView=[[[NSBundle mainBundle]loadNibNamed:@"SendMessageView" owner:self options:nil]lastObject];
+    _sendMsgView.delegate=self;
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
     NSInteger tak=_talkType;
     __weak KBFriendInfo *finf=_friend_info;
@@ -98,11 +101,18 @@
         msg.FromUser_id=[KBUserInfo sharedInfo].user_id;
         msg.TalkEnvironmentType=tak;
         msg.time=[NSString TimeJabLong];
+        if (tak==KBTalkEnvironmentTypeCircle) {
+            msg.Circle_id=[_circle_info.id stringValue];
+        }else
+        {
+            msg.ToUser_id=_friend_info.id;
+        }
         [_dataArray addObject:msg];
+        [[KBDBManager shareManager] insertDataWithModel:msg];
         [_tableView reloadData];
         if (_dataArray.count) {
-            [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-        }
+        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+                                }
 
         if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeFriend)
         {
@@ -122,6 +132,7 @@
                     if ([ret integerValue]==1) {
                         //发送成功
                         NSLog(@"SendSucess");
+                        
                     }else
                     {
                         NSLog(@"%@",[responseObject objectForKey:@"desc"]);
@@ -160,6 +171,7 @@
                     if ([ret integerValue]==1) {
                         //发送成功
                         NSLog(@"SendSucess");
+                        
                     }else
                     {
                         NSLog(@"%@",[responseObject objectForKey:@"desc"]);
@@ -192,7 +204,11 @@
     UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
     bgimgv.frame=_tableView.bounds;
     _tableView.backgroundView=bgimgv;
-
+//    [_tableView addHeaderWithCallback:^{
+//        page+=1;
+//        [_tableView headerBeginRefreshing];
+//        [self loadData];
+//    }];
     [self.view addSubview:_tableView];
     [self.view addSubview:_sendMsgView];
     //注册通知中心接受消息
@@ -279,14 +295,31 @@
         _dataArray=[[NSMutableArray alloc]init];
         
     }
+        NSArray *arr;
     //从数据库读取当期圈子或者朋友；聊天记录存入数据
     if(_talkType==KBTalkEnvironmentTypeCircle)
     {
-        
+      //  [_dataArray addObject:[[KBDBManager shareManager] ]];
+
+    arr=[[KBDBManager shareManager]GetKBTalkMessageWithEnvironment:_talkType FriendID:[_circle_info.id stringValue] AndPage:page Number:10];
+    
     }else if(_talkType==KBTalkEnvironmentTypeFriend)
     {
-        
+      arr=[[KBDBManager shareManager]GetKBTalkMessageWithEnvironment:_talkType FriendID:_friend_info.id AndPage:page Number:10];
     }
+    if (arr.count==0) {
+        [UIAlertView showWithTitle:@"提示" Message:@"已经到头了" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+    }else{
+    [_dataArray addObjectsFromArray:arr];
+    [_tableView reloadData];
+    if (_dataArray.count) {
+        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+    }
+//    [_tableView headerEndRefreshing];
+
 }
 #pragma mark - 收键盘
 - (void)ReceiveKeyBoardClick:(UITapGestureRecognizer *)tap
