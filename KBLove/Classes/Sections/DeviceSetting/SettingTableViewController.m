@@ -22,13 +22,32 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"设置01"]]];
+    [self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"设置01"]]];
+//    [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Table view delegate
+#pragma mark 单元行被选中
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //    取消反选
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark -
+#pragma mark private method
+
+- (BOOL)isZero:(NSNumber *)number{
+    return [number isEqualToNumber:@0];
+}
+
+#pragma mark -
+#pragma mark 点击事件
 
 - (IBAction)click_nav_back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -41,6 +60,18 @@
 
 
 - (IBAction)click_nav_submit:(id)sender{
+    
+}
+
+- (IBAction)click_rebootDevice:(id)sender{
+    
+}
+
+- (IBAction)click_reStartDevice:(id)sender{
+    
+}
+
+- (IBAction)click_settingFence:(id)sender{
     
 }
 

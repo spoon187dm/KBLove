@@ -72,7 +72,7 @@
    
     
   //下方相册
-    UIImageView*scanImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, bgImageView.frame.size.height+64, 320, 100)];
+    UIImageView*scanImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, bgImageView.frame.size.height+64,  320, 100)];
     scanImageView.image=[UIImage imageNamed:@"qrcode_scan_bar.png"];
     scanImageView.userInteractionEnabled=YES;
     [self.view addSubview:scanImageView];

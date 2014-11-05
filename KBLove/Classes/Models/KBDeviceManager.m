@@ -63,7 +63,7 @@ static KBDeviceManager *sharedManager = nil;
                              };
     
     [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params cacheStragety:^WLCacheStrategy *(BOOL isStrategyLegol) {
-        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:60*5 wifiOnly:NO];
+        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:-1 wifiOnly:NO];
     } overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             NSMutableArray *resultArray = [NSMutableArray array];
@@ -205,6 +205,48 @@ static KBDeviceManager *sharedManager = nil;
                              @"alarm_id":alarmIdArray,
                              @"token":[KBUserInfo sharedInfo].token};
     [[KBHttpRequestTool sharedInstance]request:Url_EditAlarmInfo requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+        
+    }];
+}
+
++ (void)updateFence:(KBFence *)fence block:(requestBlock)block{
+    
+}
+
++ (void)getDeviceTrack:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block{
+    NSAssert(device_sn, @"设备号不能为空");
+    NSAssert(beginDate, @"");
+    NSAssert(endDate, @"");
+    
+    NSString *userid = [[KBUserInfo sharedInfo] user_id];
+    NSString *token = [KBUserInfo sharedInfo].token;
+    NSDictionary *params = @{@"user_id":userid,
+                             @"device_sn":device_sn,
+                             @"begin":@(beginDate),
+                             @"end":@(endDate),
+                             @"page_number":@1,
+                             @"page_size":@20,
+                             @"app_name":app_name,
+                             @"token":token};
+    [[KBHttpRequestTool sharedInstance]request:Url_GetTrack requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
+        
+    }];
+}
+
++ (void)getDevicePart:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block{
+    NSAssert(device_sn, @"设备号不能为空");
+    NSAssert(beginDate, @"");
+    NSAssert(endDate, @"");
+    
+    NSString *userid = [[KBUserInfo sharedInfo] user_id];
+    NSString *token = [KBUserInfo sharedInfo].token;
+    NSDictionary *params = @{@"user_id":userid,
+                             @"device_sn":device_sn,
+                             @"begin":@(beginDate),
+                             @"end":@(endDate),
+                             @"app_name":app_name,
+                             @"token":token};
+    [[KBHttpRequestTool sharedInstance]request:Url_Getpart requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
         
     }];
 }

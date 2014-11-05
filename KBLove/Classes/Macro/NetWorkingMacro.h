@@ -10,7 +10,7 @@
 #define KBLove_NetWorkingMacro_h
 
 #define app_name @"m2616_BD"
-#define  SERVER_URL @"http:/test.capcare.com.cn:8081"
+#define  SERVER_URL @"http://test.capcare.com.cn:8081"
 
 #define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
 //测试账号 董新加
@@ -63,27 +63,42 @@ static NSString *const SENDMSGTOFRIEND_URL = @"http://118.194.192.104:8080/api/f
 
 static int const kPageNumber = 1;
 static int const kPageSize = 20;
+static NSString * const Url_HostName = @"http://test.capcare.com.cn:8081";
 /**
  获取设备信息接口
  */
-static NSString * const Url_GetDeviceInfo = @"http://118.194.192.104:8080/api/device.get.do";
+#define Url_GetDeviceInfo [NSString stringWithFormat:@"%@/api/device.get.do",Url_HostName]
+
 /**
  获取设备列表接口
  */
-static NSString * const Url_GetDeviceList = @"http://118.194.192.104:8080/api/device.list.do";
+#define Url_GetDeviceList [NSString stringWithFormat:@"%@/api/device.list.do",Url_HostName]
+
 /**
  获取设备状态接口
  */
-static NSString * const Url_GetDeviceStatus = @"http://118.194.192.104:8080/api//get.status.do";
+#define Url_GetDeviceStatus [NSString stringWithFormat:@"%@/api/get.status.do",Url_HostName]
+
 /**
  获取设备警告接口
  */
-static NSString * const Url_GetAlarmList = @"http://118.194.192.104:8080/api/alarm.list.do";
+#define Url_GetAlarmList [NSString stringWithFormat:@"%@/api/alarm.list.do",Url_HostName]
 
-static NSString * const Url_GetAllAlarmList = @"http://118.194.192.104:8080/api/alarm.all.do";
+#define Url_GetAllAlarmList [NSString stringWithFormat:@"%@/api/alarm.all.do",Url_HostName]
 
 /**
  修改警告信息接口
  */
-static NSString * const Url_EditAlarmInfo = @"http://118.194.192.104:8080/api/alarm.edit.do";
+#define Url_EditAlarmInfo [NSString stringWithFormat:@"%@/api/alarm.edit.do",Url_HostName]
+
+/**
+ 获取轨迹回放信息接口
+ */
+#define Url_GetTrack [NSString stringWithFormat:@"%@/api/get.track.do",Url_HostName]
+
+/**
+ 获取轨迹分段信息
+ */
+#define Url_Getpart [NSString stringWithFormat:@"%@/api/get.part.do",Url_HostName]
+
 #endif

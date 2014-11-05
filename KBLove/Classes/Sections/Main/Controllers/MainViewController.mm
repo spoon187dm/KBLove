@@ -249,7 +249,7 @@
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         for (KBDevices *device in array) {
             BMKPointAnnotation *point = [[BMKPointAnnotation alloc]init];
-            CLLocationCoordinate2D coordination2d = CLLocationCoordinate2DMake([device.devicesStatus.lat floatValue], [device.devicesStatus.lng floatValue]);
+            CLLocationCoordinate2D coordination2d = CLLocationCoordinate2DMake([device.devicesStatus.lat doubleValue], [device.devicesStatus.lng doubleValue]);
             point.coordinate = coordination2d;
             point.title = device.name;
             [_pointArray addObject:point];

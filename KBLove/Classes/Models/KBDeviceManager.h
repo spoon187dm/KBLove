@@ -108,7 +108,7 @@
  @param endDate   结束时间
  @param block     结果回调
  */
-+ (void)getTrack:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block;
++ (void)getDeviceTrack:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block;
 
 /**
  获取轨迹分段信息
@@ -118,6 +118,6 @@
  @param endDate   结束时间
  @param block     结果回调
  */
-+ (void)getPart:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block;
++ (void)getDevicePart:(NSString *)device_sn from:(long)beginDate to:(long)endDate block:(requestBlock)block;
 
 @end
