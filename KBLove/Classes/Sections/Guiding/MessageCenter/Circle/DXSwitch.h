@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class DXSwitch;
-//typedef void (^);
+typedef void (^ValueChangeBlock)(BOOL value);
 
 @protocol DXSwitchDelegate <NSObject>
 
@@ -24,7 +24,7 @@
     UILabel *_offLable;
     // BOOL *isAnimation;
 }
-
+@property (nonatomic, copy)ValueChangeBlock valueChangeBlock;
 //滑动小圆圈选中状态下颜色
 @property (nonatomic,strong)UIColor *slipColor;
 //滑动小圆圈w未选中状态下颜色

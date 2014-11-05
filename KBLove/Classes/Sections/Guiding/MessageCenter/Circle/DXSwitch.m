@@ -99,6 +99,9 @@
     if ([_swdelegate respondsToSelector:@selector(SwitchValueChange:)]) {
         [_swdelegate SwitchValueChange:self];
     }
+    if (_valueChangeBlock) {
+        _valueChangeBlock(ON);
+    }
     NSTimeInterval interval;
     if (anamation) {
         interval=0.3;
