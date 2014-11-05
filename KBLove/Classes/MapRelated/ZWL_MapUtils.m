@@ -13,6 +13,7 @@
 
 @implementation ZWL_MapUtils
 
+static ZWL_MapUtils *maptool;
 
 
 

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchAPI.h>
 
-@interface MainViewController : UIViewController<BMKMapViewDelegate,MAMapViewDelegate>
+@interface MainViewController : UIViewController<BMKMapViewDelegate,MAMapViewDelegate,AMapSearchDelegate>
 //@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 //@property (weak, nonatomic) IBOutlet BMKMapView *baidu_MapView;
 - (IBAction)click_fresh:(UIButton *)sender;

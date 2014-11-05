@@ -11,22 +11,21 @@
 #import "QRCodeTool.h"
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BMKMapManager *_mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"HekPo3DvBn5qiKG3sC3aUpjE"  generalDelegate:nil];
+    BOOL ret = [_mapManager start:BAIDUMAPVIEWKEY  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
     
-    [MAMapServices sharedServices].apiKey = @"d0818c7e92d2f86978158044c99fb47b";
+    [MAMapServices sharedServices].apiKey = GAODEMAOVIEWKEY ;
     
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];

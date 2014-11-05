@@ -7,7 +7,7 @@
 //
 
 #import "CarSettingViewController.h"
-
+#import "FenceSettingViewController.h"
 @interface CarSettingViewController ()
 
 @end
@@ -22,6 +22,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)DeviceFenceSetting:(id)sender
+{
+    NSLog(@"098743");
+    FenceSettingViewController *fence=[[FenceSettingViewController alloc]initWithNibName:@"FenceSettingView" bundle:nil];
+    [self.navigationController pushViewController:fence animated:YES];
 }
 
 /*

@@ -15,6 +15,7 @@
 #import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>
 
+#import "ZWL_ReGeoRecodeTool.h"
 
 @interface MainViewController (){
     //百度地图
@@ -37,7 +38,7 @@
     BOOL _hasCarDevice;
     BOOL _hasPetDevice;
     BOOL _hasPersonDevice;
-    
+    AMapSearchAPI *search ;
 //    地图上点
     NSMutableArray *_pointArray;
 }
@@ -297,8 +298,31 @@
 
 - (IBAction)click_fresh:(UIButton *)sender
 {
-    
+    CLLocationCoordinate2D coor={39.991069, 116.305395};
+    [ZWL_ReGeoRecodeTool GaoDeMapViewReGeocodeWithCoordinate:coor viewController:self response:^(NSMutableArray *resultArray) {
+        NSLog(@"%@",resultArray[1]);
+        
+    }];
 }
+/* 逆地理编码回调. */
+- (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response
+{
+    if (response.regeocode != nil)
+    {
+        NSLog(@"%@",response.regeocode.formattedAddress);
+        NSLog(@"%@",response.regeocode.addressComponent);
+        for (int i=0; i<response.regeocode.roads.count; i++) {
+            NSLog(@"******-------%@",response.regeocode.roads[i]);
+        }
+        for (int i=0; i<response.regeocode.roadinters.count; i++) {
+            NSLog(@"******------%@",response.regeocode.roadinters[i]);
+        }
+        for (int i=0; i<response.regeocode.pois.count; i++) {
+            NSLog(@"----------%@",response.regeocode.pois[i]);
+        }
+    }
+}
+
 - (IBAction)click_Location:(UIButton *)sender
 {
     CLLocationCoordinate2D coor;

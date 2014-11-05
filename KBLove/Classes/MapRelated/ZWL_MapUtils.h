@@ -13,7 +13,10 @@
 #import <MAMapKit/MAMapKit.h>
 #define EARTH_RADIUS 6378.137f
 
+
 @interface ZWL_MapUtils : NSObject
+
+
 
 + (ZWL_MapUtils *)sharedClient;
 +(CLLocationCoordinate2D) geoPoint2Coordinate2D:(BMKGeoPoint)p;

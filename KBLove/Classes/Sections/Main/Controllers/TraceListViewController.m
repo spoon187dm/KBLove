@@ -8,6 +8,7 @@
 
 #import "TraceListViewController.h"
 #import "TraceCell.h"
+#import "TrackerReplayViewController.h"
 
 @interface TraceListViewController (){
     NSMutableArray *_dataArray;
@@ -109,6 +110,9 @@
             return;
         }
     }
+    TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
+    [self.navigationController pushViewController:tracker animated:YES];
+    
 }
 
 

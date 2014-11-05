@@ -376,8 +376,6 @@
 #pragma mark AVCaptureMetadataOutputObjectsDelegate//IOS7下触发
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    
-    
     if (metadataObjects.count>0)
     {
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];

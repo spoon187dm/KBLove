@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -625,7 +625,7 @@
                             <tableViewSection headerTitle="选择" id="kDB-0A-D5q">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1kx-5q-3a4" style="IBUITableViewCellStyleDefault" id="mOe-Yv-7Dn">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOe-Yv-7Dn" id="GU0-ad-4d4">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
@@ -645,7 +645,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fgB-Uf-tom" style="IBUITableViewCellStyleDefault" id="56L-bk-Ahe">
-                                        <rect key="frame" x="0.0" y="156" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="189" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="56L-bk-Ahe" id="Ejd-6r-sAc">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
@@ -669,7 +669,7 @@
                             <tableViewSection headerTitle="字体" id="9mI-md-wcZ">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="H0z-1d-fGb" style="IBUITableViewCellStyleDefault" id="rxV-RU-WKF">
-                                        <rect key="frame" x="0.0" y="248" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="307" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rxV-RU-WKF" id="Gz6-ve-Ohb">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
@@ -686,7 +686,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="muE-pK-yye">
-                                        <rect key="frame" x="0.0" y="318" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="377" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="muE-pK-yye" id="r1Q-gQ-ZQN">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -795,7 +795,7 @@
                             <tableViewSection headerTitle=" " id="OYz-6P-Ubm">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M4o-jw-VWf" style="IBUITableViewCellStyleDefault" id="sWu-RP-Jax">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWu-RP-Jax" id="sM6-i6-pa3">
                                             <rect key="frame" x="0.0" y="0.0" width="281" height="69"/>
@@ -816,7 +816,7 @@
                             <tableViewSection headerTitle=" " id="4Jt-aR-TRh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5QP-fK-0un" style="IBUITableViewCellStyleDefault" id="fHf-mA-4SW">
-                                        <rect key="frame" x="0.0" y="178" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="237" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fHf-mA-4SW" id="mQP-x5-3Md">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -833,7 +833,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="6ej-0P-hyH" style="IBUITableViewCellStyleDefault" id="Zeh-Zm-jOQ">
-                                        <rect key="frame" x="0.0" y="248" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="307" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zeh-Zm-jOQ" id="jUt-h8-R7N">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -1232,14 +1232,14 @@
                             <tableViewSection headerTitle=" " id="ucv-ER-dsP">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sVx-bH-0C5" style="IBUITableViewCellStyleDefault" id="a9H-gf-Jse">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a9H-gf-Jse" id="I0X-DE-i5i">
-                                            <rect key="frame" x="0.0" y="0.0" width="281" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="中文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sVx-bH-0C5">
-                                                    <rect key="frame" x="15" y="0.0" width="266" height="69"/>
+                                                    <rect key="frame" x="15" y="0.0" width="266" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1253,14 +1253,14 @@
                             <tableViewSection headerTitle=" " id="QXT-w2-U1Q">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="cD7-1q-R6g" style="IBUITableViewCellStyleDefault" id="P7a-2v-kxh">
-                                        <rect key="frame" x="0.0" y="178" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="211" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P7a-2v-kxh" id="vg1-HE-C0w">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="英文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cD7-1q-R6g">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="69"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1307,7 +1307,7 @@
                             <tableViewSection headerTitle=" " id="Rtf-nM-jbF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cjs-Qo-feq">
-                                        <rect key="frame" x="0.0" y="104" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cjs-Qo-feq" id="HEM-hG-kyq">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -1328,7 +1328,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Hs1-Ou-Xpn">
-                                        <rect key="frame" x="0.0" y="174" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="189" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hs1-Ou-Xpn" id="hR0-9E-mTY">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -1349,7 +1349,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9A5-Xv-cF1">
-                                        <rect key="frame" x="0.0" y="244" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="259" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9A5-Xv-cF1" id="YgO-R9-aor">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
@@ -1424,14 +1424,14 @@
                             <tableViewSection headerTitle=" " id="7Zv-ZD-fls">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dkx-n1-F1L" style="IBUITableViewCellStyleDefault" id="70V-qH-PHq">
-                                        <rect key="frame" x="0.0" y="286" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="319" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="70V-qH-PHq" id="frg-CH-mUN">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="去评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dkx-n1-F1L">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1441,14 +1441,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="wN3-AE-oqT" style="IBUITableViewCellStyleDefault" id="XWR-pg-0V3">
-                                        <rect key="frame" x="0.0" y="336" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWR-pg-0V3" id="nRR-Gs-902">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="欢迎页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wN3-AE-oqT">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1458,14 +1458,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HUj-E7-REg" style="IBUITableViewCellStyleDefault" id="GU9-gq-FQZ">
-                                        <rect key="frame" x="0.0" y="386" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="407" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GU9-gq-FQZ" id="msa-7l-3K1">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="功能介绍" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HUj-E7-REg">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1479,14 +1479,14 @@
                             <tableViewSection headerTitle=" " id="nEV-jZ-QLR">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eTa-we-Obq" style="IBUITableViewCellStyleDefault" id="i69-Zh-UZF">
-                                        <rect key="frame" x="0.0" y="458" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="499" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i69-Zh-UZF" id="hjf-Ai-PQV">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="常见问题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eTa-we-Obq">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1496,14 +1496,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Vte-3k-nkw" style="IBUITableViewCellStyleDefault" id="vqr-cG-aff">
-                                        <rect key="frame" x="0.0" y="508" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="543" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqr-cG-aff" id="h50-3h-eEo">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="检查更新" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vte-3k-nkw">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
