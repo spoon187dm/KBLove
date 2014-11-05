@@ -224,7 +224,7 @@
                                         </state>
                                         <connections>
                                             <action selector="click_data:" destination="r5l-1J-MQv" eventType="touchUpInside" id="UoW-Tj-Umq"/>
-                                            <segue destination="QWV-X9-6Mz" kind="push" id="gpE-kE-NZi"/>
+                                            <segue destination="QWV-X9-6Mz" kind="push" identifier="toDataViewController" id="gpE-kE-NZi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BDs-LJ-gMu">
@@ -236,7 +236,7 @@
                                         </state>
                                         <connections>
                                             <action selector="click_setting:" destination="r5l-1J-MQv" eventType="touchUpInside" id="aAk-lt-zHB"/>
-                                            <segue destination="92M-ee-DfF" kind="push" id="xcl-nu-MnZ"/>
+                                            <segue destination="92M-ee-DfF" kind="push" identifier="toSettingViewController" id="xcl-nu-MnZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="orC-xa-qqQ">
@@ -259,7 +259,7 @@
                                         </state>
                                         <connections>
                                             <action selector="click_track:" destination="r5l-1J-MQv" eventType="touchUpInside" id="Gnv-qi-Lp1"/>
-                                            <segue destination="Aam-Eu-3Fu" kind="push" id="k3B-UB-B2u"/>
+                                            <segue destination="Aam-Eu-3Fu" kind="push" identifier="toTraceListViewController" id="k3B-UB-B2u"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -729,7 +729,7 @@
         <scene sceneID="4Qu-Q9-egG">
             <objects>
                 <tableViewController storyboardIdentifier="TraceListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aam-Eu-3Fu" userLabel="轨迹" customClass="TraceListViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="N7H-GW-RkR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="N7H-GW-RkR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1181,7 +1181,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LpS-55-5ju">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="9" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="重启设备">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1203,7 +1203,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Evd-Ib-t4f">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="9" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="初始化设备">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

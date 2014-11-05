@@ -283,6 +283,7 @@
 		F92DBDBF19ED5C1900BBE573 /* zgsd.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA419ED5C1900BBE573 /* zgsd.png */; };
 		F92DBDC019ED5C1900BBE573 /* zlc.png in Resources */ = {isa = PBXBuildFile; fileRef = F92DBDA519ED5C1900BBE573 /* zlc.png */; };
 		F93DB8A119F0AC4300196735 /* Me_StoryBoardN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */; };
+		F94330991A0A1C9200777F16 /* UITableViewController+WLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F94330981A0A1C9200777F16 /* UITableViewController+WLTool.m */; };
 		F974108C19EC2C8700E12633 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F974108B19EC2C8700E12633 /* BannerView.m */; };
 		F974109119EC2E2600E12633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109019EC2E2600E12633 /* AppDelegate.m */; };
 		F974109319EC2E4500E12633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F974109219EC2E4500E12633 /* main.m */; };
@@ -1219,6 +1220,8 @@
 		F92DBDA419ED5C1900BBE573 /* zgsd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zgsd.png; sourceTree = "<group>"; };
 		F92DBDA519ED5C1900BBE573 /* zlc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zlc.png; sourceTree = "<group>"; };
 		F93DB8A019F0AC4300196735 /* Me_StoryBoardN.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me_StoryBoardN.storyboard; sourceTree = "<group>"; };
+		F94330971A0A1C9200777F16 /* UITableViewController+WLTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+WLTool.h"; sourceTree = "<group>"; };
+		F94330981A0A1C9200777F16 /* UITableViewController+WLTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+WLTool.m"; sourceTree = "<group>"; };
 		F974108519EC2B0C00E12633 /* VendorsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorsMacro.h; sourceTree = "<group>"; };
 		F974108619EC2B8A00E12633 /* UtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
 		F974108A19EC2C8700E12633 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
@@ -2770,6 +2773,8 @@
 				F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */,
 				F9A262A71A033B7000909E75 /* UIView+WLTool.h */,
 				F9A262A81A033B7000909E75 /* UIView+WLTool.m */,
+				F94330971A0A1C9200777F16 /* UITableViewController+WLTool.h */,
+				F94330981A0A1C9200777F16 /* UITableViewController+WLTool.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -5528,6 +5533,7 @@
 				F9E24F6619ED725900D83FEF /* PinyinHelper.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				F992466D1A048D5500599E74 /* PNColor.m in Sources */,
+				F94330991A0A1C9200777F16 /* UITableViewController+WLTool.m in Sources */,
 				F992464A1A048C5400599E74 /* UIScrollView+Extension.m in Sources */,
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
 				BC256CA81A0618B000EDFFBC /* NYSliderPopover.m in Sources */,

@@ -7,8 +7,10 @@
 //
 
 #import "TableMenuViewController.h"
-
+@class KBDevices;
 @interface TraceListViewController : TableMenuViewController
+
+@property (nonatomic, strong) KBDevices *device;
 
 - (IBAction)click_back:(UIButton *)sender;
 - (IBAction)click_home:(id)sender;

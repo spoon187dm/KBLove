@@ -14,7 +14,7 @@
 #import "UIImageView+WLTool.h"
 #import "UILabel+WLTool.h"
 #import "UIViewController+NavigationItemSettingTool.h"
-
+#import "UITableViewController+WLTool.h"
 
 
 #endif

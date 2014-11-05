@@ -10,6 +10,8 @@
 #import "KBAlarmManager.h"
 #import "AlarmListViewController.h"
 #import "KBDeviceManager.h"
+#import "TraceListViewController.h"
+#import "SettingTableViewController.h"
 
 @interface DeviceDetailViewController ()
 {
@@ -221,6 +223,22 @@
 //设置
 - (IBAction)click_setting:(UIButton *)sender{
     
+}
+
+#pragma mark -
+#pragma mark storyboard 界面跳转
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toTraceListViewController"]) {
+        TraceListViewController *vc = [segue destinationViewController];
+        vc.device = _device;
+    }else if([segue.identifier isEqualToString:@"toDataViewController"]){
+        
+    }else if([segue.identifier isEqualToString:@"toSettingViewController"]){
+        SettingTableViewController *vc = [segue destinationViewController];
+        vc.device = _device;
+    }
 }
 
 @end

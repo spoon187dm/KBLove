@@ -229,7 +229,9 @@ static KBDeviceManager *sharedManager = nil;
                              @"app_name":app_name,
                              @"token":token};
     [[KBHttpRequestTool sharedInstance]request:Url_GetTrack requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
-        
+        if(IsSuccess){
+            
+        }
     }];
 }
 
