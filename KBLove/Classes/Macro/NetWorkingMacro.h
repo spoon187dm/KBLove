@@ -9,7 +9,7 @@
 #ifndef KBLove_NetWorkingMacro_h
 #define KBLove_NetWorkingMacro_h
 
-#define app_name @"m2616_BD"
+#define app_name @"M2616_BD"
 #define  SERVER_URL @"http://test.capcare.com.cn:8081"
 
 #define SYSTEM_COLOR [UIColor colorWithRed:16/255.0 green:127/255.0 blue:136/255.0 alpha:1]
