@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 @class DXSwitch;
+//typedef void (^);
+
 @protocol DXSwitchDelegate <NSObject>
 
 - (void)SwitchValueChange:(DXSwitch *)dx_switch;

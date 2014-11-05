@@ -7,8 +7,17 @@
 //
 
 #import "CarSettingViewController.h"
-
+#import "DXSwitch.h"
+#import "KBDevices.h"
 @interface CarSettingViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UITextField *textField_Frequency;
+@property (weak, nonatomic) IBOutlet UITextField *textField_OverSpeed;
+@property (weak, nonatomic) IBOutlet DXSwitch *switch_MoveAlarm;
+@property (weak, nonatomic) IBOutlet DXSwitch *switch_OverSpeedAlarm;
+@property (weak, nonatomic) IBOutlet DXSwitch *switch_FenceAlarm;
+@property (weak, nonatomic) IBOutlet UIButton *button_FenceSetting;
 
 @end
 
@@ -17,11 +26,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setUpView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark 界面初始化
+- (void)setUpView{
+    [_switch_MoveAlarm setON:![self isZero:self.device.moveing_switch] animation:YES];
+    [_switch_FenceAlarm setON:![self isZero:self.device.fence_warning_switch] animation:YES];
+    [_switch_OverSpeedAlarm setON:![self isZero:self.device.speeding_switch] animation:YES];
 }
 
 /*
