@@ -8,7 +8,7 @@
 
 #import "CircleSettingViewController.h"
 #import "CreateCircleBottomView.h"
-#import "DeleteCircleManagerViewController.h"
+//#import "DeleteCircleManagerViewController.h"
 #import "DXSwitch.h"
 #import "KBCircleInfo.h"
 #import "KBFriendInfo.h"
@@ -24,7 +24,7 @@
     KBCircleInfo *circle_info;
     NSMutableArray *members;
     //UIButton *QuitBtn;
-    
+    BOOL isDelete;
 }
 @end
 
@@ -50,10 +50,11 @@
 #pragma mark - 初始化界面
 - (void)CreateUI
 {
+    isDelete=NO;
     //self.view.backgroundColor=[UIColor redColor];
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
-    [self addBarItemWithImageName:@"Circle_setting" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(SettingClick:) isLeft:NO];
+//    [self addBarItemWithImageName:@"Circle_setting" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(SettingClick:) isLeft:NO];
     self.navigationItem.titleView=[self makeTitleLable:circle_info.name AndFontSize:18 isBold:YES];
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
     _tableView.delegate=self;
@@ -162,18 +163,24 @@
 #pragma mark - 返回
 - (void)BackClick:(UIButton *)btn
 {
+//    if (![Circle_Name_Lable.text isEqualToString:circle_info.name]||![Circle_NickName_Lable.text isEqualToString:circle_info.]) {
+//        
+//    }
+    [[KBHttpRequestTool sharedInstance]request:[Circle_UpDate_URL,[KBUserInfo sharedInfo].user_id,[KBUserInfo sharedInfo].token,[circle_info.id stringValue],Circle_Name_Lable.text,Circle_NickName_Lable.text,app_name] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+        
+    }];
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - 设置
-- (void)SettingClick:(UIButton *)btn
-{
-    //跳转到删除好友界面
-    DeleteCircleManagerViewController *dvc=[[DeleteCircleManagerViewController alloc]init];
-    [dvc setCircleModel:circle_info];
-    [self.navigationController pushViewController:dvc animated:YES];
-    
-    
-}
+//- (void)SettingClick:(UIButton *)btn
+//{
+//    //跳转到删除好友界面
+//    DeleteCircleManagerViewController *dvc=[[DeleteCircleManagerViewController alloc]init];
+//    [dvc setCircleModel:circle_info];
+//    [self.navigationController pushViewController:dvc animated:YES];
+//    
+//    
+//}
 
 #pragma mark - 下载数据
 - (void)loadData
@@ -182,10 +189,12 @@
     if (!members) {
         members=[[NSMutableArray alloc]init];
     }
+    [KBFreash startRefreshWithTitle:@"加载中..." inView:self.view];
     //加载群成员信息
     NSString *urlPath=[Circle_GetAllMember_URL,[KBUserInfo sharedInfo].user_id,[KBUserInfo sharedInfo].token,[circle_info.id stringValue]];
     NSLog(@"%@",urlPath);
    [[KBHttpRequestTool sharedInstance]request:urlPath requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+       [KBFreash StopRefreshinView:self.view];
        if (IsSuccess) {
            if([result isKindOfClass:[NSDictionary class]])
            {
@@ -199,18 +208,12 @@
                        kf.nick=[sdic objectForKey:@"nickName"];
                        kf.name=kf.id;
                        [members addObject:kf];
-                       if (members.count==11) {
-                           break;
-                       }
+                       
+//                       if (members.count==11) {
+//                           break;
+//                       }
                    }
-
-                  [_headerView ConfigUIWith:members AndBlock:^(NSInteger tag) {
-                      
-                  } AndFinishedBlock:^{
-                      
-                  }];
-                   _headerView.frame=CGRectMake(0, 0, ScreenWidth, _headerView.frame.size.height);
-                   [_tableView reloadData];
+                   [self refreashHeaderView];
                }
                
            }else
@@ -227,12 +230,88 @@
    }];
     
 }
+- (void)refreashHeaderView
+{
+    //
+    NSMutableArray *FinishedArr=[[NSMutableArray alloc]init];
+    NSString *createId=[NSString stringWithFormat:@"%@",circle_info.userId];
+    NSString *myid=[NSString stringWithFormat:@"%@",[KBUserInfo sharedInfo].user_id];
+    [FinishedArr addObject:@"圈子3_13"];
+    if ([createId isEqualToString:myid]) {
+      [FinishedArr addObject:@"圈子3_13"];
+    }
+    [_headerView configUIWithFriendArray:members FinishedBtnArray:FinishedArr AndBlock:^(NSInteger tag) {
+        if (tag<=members.count) {
+            //好友详细信息
+        }else
+        {
+            switch (tag-members.count) {
+                case 0:{
+                //添加好友
+                
+                }break;
+                case 1:{
+                //删除好友
+                    isDelete=!isDelete;
+                    [self refreashHeaderView];
+                }break;
+                
+                default:
+                    break;
+            }
+        }
+        
+    } AndFinishedBlock:^(NSInteger tag) {
+        NSLog(@"将要删除%d位好友",tag);
+        KBFriendInfo *finf=members[tag];
+        NSString *deleteUrl=[Circle_DeleteMember_URL,[KBUserInfo sharedInfo].user_id,[KBUserInfo sharedInfo].token,[circle_info.id stringValue],finf.id];
+        NSLog(@"%@",deleteUrl);
+        [KBFreash startRefreshWithTitle:@"删除中...." inView:self.view];
+        [[KBHttpRequestTool sharedInstance]request:deleteUrl requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+            if (IsSuccess) {
+                [KBFreash StopRefreshinView:self.view];
+                if([result isKindOfClass:[NSDictionary class]])
+                {
+                    //  NSDictionary *dic=(NSDictionary *)result;
+                    if ([[result objectForKey:@"ret"] integerValue]==1) {
+                        //删除成功
+                        [members removeObject:finf];
+                        [self refreashHeaderView];
+                        
+                        // [self loadData];
+                    }else
+                    {
+                        [UIAlertView showWithTitle:@"温馨提示" Message:[result objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            
+                        }];
+                        
+                    }
+                    
+                }else
+                {
+                    NSLog(@"非字典类型 in CircleSetting");
+                }
+                
+            }else
+            {
+                NSError *error=(NSError *)result;
+                [UIAlertView showWithTitle:@"温馨提示" Message:error.localizedDescription cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                    
+                }];
+            }
+        }];
+
+    } IsDelete:isDelete AndCircleUser_id:[circle_info.userId stringValue]];
+    [_tableView reloadData];
+ 
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 3;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return section+1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -373,10 +452,10 @@
         lable.font=[UIFont boldSystemFontOfSize:14];
         lable.text=@"圈子成员";
         [view addSubview:lable];
-        UIButton *moreBtn=[UIButton buttonWithFrame:CGRectMake(ScreenWidth-60, 10, 20, 5) title:nil target:self Action:@selector(MoreClick:)];
-        [moreBtn setBackgroundImage:[UIImage imageNamed:@"圈子3_03"] forState:UIControlStateNormal];
-        view.userInteractionEnabled=YES;
-        [view addSubview:moreBtn];
+//        UIButton *moreBtn=[UIButton buttonWithFrame:CGRectMake(ScreenWidth-60, 10, 20, 5) title:nil target:self Action:@selector(MoreClick:)];
+//        [moreBtn setBackgroundImage:[UIImage imageNamed:@"圈子3_03"] forState:UIControlStateNormal];
+//        view.userInteractionEnabled=YES;
+//        [view addSubview:moreBtn];
   
     }else
     {

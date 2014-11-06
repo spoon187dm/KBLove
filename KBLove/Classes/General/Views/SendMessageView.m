@@ -7,7 +7,7 @@
 //
 
 #import "SendMessageView.h"
-
+#import "Circle_ShareViewController.h"
 @implementation SendMessageView
 {
     SendMessageBlock _sendBlock;
@@ -114,6 +114,13 @@
 
 - (IBAction)SendPositionClick:(id)sender {
     //创建位置信息
+    Circle_ShareViewController *cvc=[[Circle_ShareViewController alloc]init];
+    [cvc setBlock:^(KBPositionInfo *pos) {
+       //返回信息 进行 处理
+        NSLog(@"发送 地理 位置 ");
+    }];
+    UIViewController *vc=(UIViewController *)_delegate;
+    [vc.navigationController pushViewController:cvc animated:YES];
 }
 
 - (IBAction)SendTextClick:(id)sender {

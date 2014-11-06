@@ -11,7 +11,8 @@
 #import "DxConnection.h"
 #import "KBHttpRequestTool.h"
 #import "NSString+WLTooll.h"
-#import "CircleViewController.h"
+//#import "CircleViewController.h"
+#import "CircleAndFriendListViewController.h"
 @interface RegisterViewController ()
 {
     RegisterType _registertype;
