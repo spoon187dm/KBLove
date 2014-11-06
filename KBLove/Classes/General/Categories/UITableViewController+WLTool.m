@@ -14,14 +14,15 @@
  将self.view从UITableView修改为uiview。
  */
 - (void)replaceSelfViewToNormal{
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    UIView *tableview = self.tableView;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+    UITableView *tableview = self.tableView;
     UIView *newview = [[UIView alloc]initWithFrame:self.view.frame];
-    newview.backgroundColor = [UIColor blackColor];
     self.view = newview;
+    
     tableview.backgroundColor = [UIColor clearColor];
     tableview.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight-64);
     [newview addSubview:tableview];
+    self.tableView = tableview;
 }
 
 @end

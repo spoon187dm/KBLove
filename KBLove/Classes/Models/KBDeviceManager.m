@@ -64,7 +64,7 @@ static KBDeviceManager *sharedManager = nil;
                              };
     
     [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params cacheStragety:^WLCacheStrategy *(BOOL isStrategyLegol) {
-        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:0 wifiOnly:NO];
+        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:-1 wifiOnly:NO];
     } overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             NSMutableArray *resultArray = [NSMutableArray array];
@@ -225,15 +225,19 @@ static KBDeviceManager *sharedManager = nil;
                              @"device_sn":device_sn,
                              @"begin":@(beginDate*1000),
                              @"end":@(endDate*1000),
-                             @"page_number":@1,
-                             @"page_size":@20,
                              @"app_name":app_name,
                              @"token":token};
     [[KBHttpRequestTool sharedInstance]request:Url_GetTrack requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
         if(IsSuccess){
             NSDictionary *data=(NSDictionary *)result;
             NSArray *data_Array=data[@"track"];
-            NSMutableArray *_statusArray = [NSMutableArray array];
+            NSMutableArray *statusArray = [NSMutableArray array];
+////            时间间隔
+//            long long limitTimeTravel = 20*60*1000;
+////            分割时间线
+//            long long endTimeDate = 0;
+////            用于存储小分组轨迹数据
+//            NSMutableArray *tempGroupArray = [NSMutableArray array];
             for (int i=0; i< data_Array.count; i++) {
                 CCDeviceStatus * device=[[CCDeviceStatus alloc]init];
                 NSString *lngstr=data_Array[i][@"lng"];
@@ -244,7 +248,27 @@ static KBDeviceManager *sharedManager = nil;
                 device.sn=data_Array[i][@"deviceSn"];
                 device.stayed=[data_Array[i][@"stayed"] floatValue];
                 device.heading=[data_Array[i][@"direction"] floatValue];
-                
+//                第一条数据
+//                if (i==0) {
+//                    endTimeDate = device.receive - limitTimeTravel;
+//                    [tempGroupArray addObject:device];
+//                }else{
+//                    if(device.receive > endTimeDate){
+////                        该数据为新分组的数据
+//                        [statusArray addObject:tempGroupArray];
+//                        tempGroupArray = [NSMutableArray array];
+//                        [tempGroupArray addObject:device];
+////                        endTimeDate += limitTimeTravel;
+////                        保证下次分组的结束时间线大于新分组的第一个
+//                        while (endTimeDate<device.receive) {
+//                            endTimeDate+=limitTimeTravel;
+//                        }
+//                    }else{
+//                        [tempGroupArray addObject:device];
+//                    }
+//                    
+//                }
+                [statusArray addObject:device];
             }
         }
     }];
@@ -264,7 +288,18 @@ static KBDeviceManager *sharedManager = nil;
                              @"app_name":app_name,
                              @"token":token};
     [[KBHttpRequestTool sharedInstance]request:Url_Getpart requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
-        
+        if(IsSuccess){
+            NSArray *track = [result objectForKey:@"track"];
+            NSMutableArray *resultArray = [NSMutableArray array];
+            for (NSDictionary *dic in track) {
+                KBTracePart *part = [[KBTracePart alloc]init];
+                [part setValuesForKeysWithDictionary:dic];
+                [resultArray addObject:part];
+            }
+            block(YES, [resultArray copy]);
+        }else{
+            block(IsSuccess, result);
+        }
     }];
 }
 
