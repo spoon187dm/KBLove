@@ -201,8 +201,10 @@
         }
         
         if (IsSuccess) {
+            
             if ([result isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *dic=(NSDictionary *)result;
+                NSLog(@"%@",[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]);
                 NSArray *CircleList=[dic objectForKey:@"group"];
                 for (NSDictionary *sdic in CircleList) {
                     KBCircleInfo *cinf=[[KBCircleInfo alloc]init];
