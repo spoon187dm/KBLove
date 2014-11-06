@@ -839,36 +839,6 @@
             endingLineNumber = "231"
             landmarkName = "+getDeviceTrack:from:to:block:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[KBDeviceManager getDeviceTrack:from:to:block:]"
-                  moduleName = "KBLove"
-                  urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Models/KBDeviceManager.m"
-                  timestampString = "436876410.030863"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "231"
-                  endingLineNumber = "231"
-                  offsetFromSymbolStart = "1328">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__48+[KBDeviceManager getDeviceTrack:from:to:block:]_block_invoke"
-                  moduleName = "KBLove"
-                  urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Models/KBDeviceManager.m"
-                  timestampString = "436876410.030997"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "231"
-                  endingLineNumber = "231"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -917,36 +887,22 @@
             endingLineNumber = "251"
             landmarkName = "+getDevicePart:from:to:block:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[KBDeviceManager getDevicePart:from:to:block:]"
-                  moduleName = "KBLove"
-                  urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Models/KBDeviceManager.m"
-                  timestampString = "436876410.078077"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "251"
-                  endingLineNumber = "251"
-                  offsetFromSymbolStart = "1176">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__47+[KBDeviceManager getDevicePart:from:to:block:]_block_invoke"
-                  moduleName = "KBLove"
-                  urlString = "file:///Users/block/Develop/DevelopCode/OC_Code/Object/KBLove/KBLove/Classes/Models/KBDeviceManager.m"
-                  timestampString = "436876410.07818"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "251"
-                  endingLineNumber = "251"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KBLove/Classes/Sections/DeviceSetting/CarSettingViewController.m"
+            timestampString = "436929484.40118"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-setUpView"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
