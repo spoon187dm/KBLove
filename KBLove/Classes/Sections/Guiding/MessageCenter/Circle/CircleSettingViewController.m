@@ -13,6 +13,7 @@
 #import "KBCircleInfo.h"
 #import "KBFriendInfo.h"
 #import "KBHttpRequestTool.h"
+#import "CreateCircleViewController.h"
 @interface CircleSettingViewController ()
 {
     NSString *_circleId;
@@ -133,6 +134,7 @@
     }];
 
 }
+#pragma mark - 退出方法
 - (void)DeleteSeleFromCirclr
 {
     KBUserInfo *user=[KBUserInfo sharedInfo];
@@ -260,14 +262,16 @@
       [FinishedArr addObject:@"圈子3_13"];
     }
     [_headerView configUIWithFriendArray:members FinishedBtnArray:FinishedArr AndBlock:^(NSInteger tag) {
-        if (tag<=members.count) {
+        if (tag<members.count) {
             //好友详细信息
         }else
         {
             switch (tag-members.count) {
                 case 0:{
                 //添加好友
-                
+                    CreateCircleViewController *cvc=[[CreateCircleViewController alloc]init];
+                    [cvc setMembers:members andCircleID:[circle_info.id stringValue]];
+                    [self.navigationController pushViewController:cvc animated:YES];
                 }break;
                 case 1:{
                 //删除好友

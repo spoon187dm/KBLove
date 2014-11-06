@@ -123,6 +123,7 @@
         case 203:{
         //创建圈子跳转到创建界面
             CreateCircleViewController *cvc=[[CreateCircleViewController alloc]init];
+            [cvc createStart];
             [self.navigationController pushViewController:cvc animated:YES];
 
         }break;

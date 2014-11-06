@@ -9,5 +9,6 @@
 #import "CircleRootViewController.h"
 #import "DXsearchView.h"
 @interface CreateCircleViewController : CircleRootViewController<UISearchBarDelegate,DXSearchDisplayDelegate>
-
+- (void)setMembers:(NSArray *)arr andCircleID:(NSString *)circlr_id;
+- (void)createStart;
 @end

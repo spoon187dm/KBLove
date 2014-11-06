@@ -26,19 +26,38 @@
     NSMutableArray *_selectArray;
     NSMutableArray *_allDataArray;
     CreateCircleBottomView *_bottomView;
+    NSArray *members;
+    BOOL isadd;
+    NSString *_circle_id;
 }
 @end
 
 @implementation CreateCircleViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    
+    // Do any additional setup after loading the view.
+}
+- (void)setMembers:(NSArray *)arr andCircleID:(NSString *)circlr_id
+{
+    members =arr;
+    isadd=YES;
+    _circle_id=circlr_id;
     [self CreateUI];
     [self loadData];
-    // Do any additional setup after loading the view.
+}
+- (void)createStart
+{
+    isadd =NO;
+    [self CreateUI];
+    [self loadData];
 }
 - (void)CreateUI
 {
+    //isadd=NO;
     self.navigationItem.titleView=[self makeTitleLable:@"创建圈子" AndFontSize:18 isBold:NO];
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(BackClick:) isLeft:YES];
@@ -160,6 +179,16 @@
                         [info setValuesForKeysWithDictionary:infoDic];
                         [_allDataArray addObject:info];
                     }
+                    if (isadd) {
+                        for (KBFriendInfo *finf in members) {
+                            KBFriendInfo *tfin=[self isExist:finf inArra:_allDataArray];
+                            
+                            if (tfin) {
+                              [_allDataArray removeObject:tfin];
+                            }
+                            
+                        }
+                    }
                     [self ConfigData:_allDataArray];
                     
                 }else
@@ -183,6 +212,15 @@
         [KBFreash StopRefreshinView:_tableView];
        // [_tableView reloadData];
     }];
+}
+- (KBFriendInfo *)isExist:(KBFriendInfo *)fin inArra:(NSArray *)arr
+{
+    for (KBFriendInfo *kinf in arr) {
+        if ([kinf.id isEqualToString:fin.id]) {
+            return kinf;
+        }
+    }
+    return nil;
 }
 //将数据分类
 #pragma mark - 将数据分类
@@ -282,6 +320,43 @@
             }
             
         }
+        if (isadd) {
+            NSString *updateUrl=[Circle_AddMember_URL,user.user_id,user.token,_circle_id,memberStr,app_name];
+            [KBFreash startRefreshWithTitle:@"成员添加中..." inView:self.view];
+            [[KBHttpRequestTool sharedInstance] request:updateUrl requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+                
+                [KBFreash StopRefreshinView:self.view];
+                if (IsSuccess) {
+                    if ([result isKindOfClass:[NSDictionary class]]) {
+                        if ([[result objectForKey:@"ret"] integerValue]==1) {
+                            //成功后跳转
+                            [self.navigationController popViewControllerAnimated:YES];
+                            
+                        }
+                        else
+                        {
+                            [UIAlertView  showWithTitle:@"提示" Message:[NSString stringWithFormat:@"添加失败%@",[result objectForKey:@"desc"]]cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                                
+                            }];
+                            
+                        }
+                        
+                    }else
+                    {
+                        NSLog(@"非字典数据类型");
+                    }
+                }else
+                {
+                    NSError *error=(NSError *)result;
+                    
+                    [UIAlertView  showWithTitle:@"提示" Message:[NSString stringWithFormat:@"创建失败%@",error.localizedDescription]cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                        
+                    }];
+                    
+                }
+
+            }];
+        }else{
         NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1,app_name]);
         [KBFreash startRefreshWithTitle:@"创建中..." inView:self.view];
         [[KBHttpRequestTool sharedInstance]request:[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
@@ -319,9 +394,10 @@
                 }];
 
             }
-        }];
+        }];}
 
     }];
+    
     _tableView.frame= CGRectMake(0, 0,ScreenWidth,ScreenHeight-_bottomView.frame.size.height);
 }
 #pragma mark - UITableViewDelegate

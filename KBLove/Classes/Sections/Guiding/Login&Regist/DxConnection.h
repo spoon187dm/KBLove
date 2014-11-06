@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, RegisterType)
 //更新圈子信息
 #define  Circle_UpDate_URL NSString stringWithFormat:@"%@/api/group.update.do",SERVER_URL
 //添加圈子成员
-#define  Circle_AddMember_URL NSString stringWithFormat:@"%@/api/group.member.add.do?user_id=%@&token=%@&group_id=%@&group_member=%@",SERVER_URL
+#define  Circle_AddMember_URL NSString stringWithFormat:@"%@/api/group.member.add.do?user_id=%@&token=%@&group_id=%@&group_member=%@&app_name=%@",SERVER_URL
 //删除成员信息
 #define  Circle_DeleteMember_URL NSString stringWithFormat:@"%@/api/group.member.del.do?user_id=%@&token=%@&group_id=%@&group_member=%@",SERVER_URL
 //获得所有群成员
