@@ -65,7 +65,7 @@
     
     long form = [date timeIntervalSince1970];
     long to = [current timeIntervalSince1970];
-    [KBDeviceManager getDevicePart:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
+    [KBDeviceManager getDeviceTrack:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
         
     }];
 }

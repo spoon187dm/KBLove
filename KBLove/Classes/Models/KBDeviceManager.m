@@ -8,6 +8,7 @@
 
 #import "KBDeviceManager.h"
 #import "KBHttpRequestTool.h"
+
 @implementation KBDeviceManager
 
 static KBDeviceManager *sharedManager = nil;
@@ -63,7 +64,7 @@ static KBDeviceManager *sharedManager = nil;
                              };
     
     [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params cacheStragety:^WLCacheStrategy *(BOOL isStrategyLegol) {
-        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:-1 wifiOnly:NO];
+        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:0 wifiOnly:NO];
     } overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             NSMutableArray *resultArray = [NSMutableArray array];
@@ -222,15 +223,29 @@ static KBDeviceManager *sharedManager = nil;
     NSString *token = [KBUserInfo sharedInfo].token;
     NSDictionary *params = @{@"user_id":userid,
                              @"device_sn":device_sn,
-                             @"begin":@(beginDate),
-                             @"end":@(endDate),
+                             @"begin":@(beginDate*1000),
+                             @"end":@(endDate*1000),
                              @"page_number":@1,
                              @"page_size":@20,
                              @"app_name":app_name,
                              @"token":token};
     [[KBHttpRequestTool sharedInstance]request:Url_GetTrack requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
         if(IsSuccess){
-            
+            NSDictionary *data=(NSDictionary *)result;
+            NSArray *data_Array=data[@"track"];
+            NSMutableArray *_statusArray = [NSMutableArray array];
+            for (int i=0; i< data_Array.count; i++) {
+                CCDeviceStatus * device=[[CCDeviceStatus alloc]init];
+                NSString *lngstr=data_Array[i][@"lng"];
+                device.lang=[lngstr doubleValue]*1e6;
+                device.lat=[data_Array[i][@"lat"] doubleValue]*1e6;
+                device.speed=[data_Array[i][@"speed"] floatValue];
+                device.receive=[data_Array[i][@"receive"] longLongValue];
+                device.sn=data_Array[i][@"deviceSn"];
+                device.stayed=[data_Array[i][@"stayed"] floatValue];
+                device.heading=[data_Array[i][@"direction"] floatValue];
+                
+            }
         }
     }];
 }
@@ -244,8 +259,8 @@ static KBDeviceManager *sharedManager = nil;
     NSString *token = [KBUserInfo sharedInfo].token;
     NSDictionary *params = @{@"user_id":userid,
                              @"device_sn":device_sn,
-                             @"begin":@(beginDate),
-                             @"end":@(endDate),
+                             @"begin":@(beginDate*1000),
+                             @"end":@(endDate*1000),
                              @"app_name":app_name,
                              @"token":token};
     [[KBHttpRequestTool sharedInstance]request:Url_Getpart requestType:KBHttpRequestTypePost params:params overBlock:^(BOOL IsSuccess, id result) {
