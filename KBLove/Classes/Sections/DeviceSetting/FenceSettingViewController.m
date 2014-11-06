@@ -21,6 +21,11 @@
     MAMapView *gaode_map;
     
     BOOL isCircle;
+    
+    
+    CLLocationCoordinate2D coor;
+
+
 }
 @end
 
@@ -41,8 +46,36 @@
     [super viewDidLoad];
     [self setupSliderView];
     [self mapviewInit];
+
+    coor.latitude = 39.915;
+    coor.longitude = 116.404;
+
+    
+    UILongPressGestureRecognizer *lp=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressed:)];
+    
+    [baidu_map addGestureRecognizer:lp];
     // Do any additional setup after loading the view.
 }
+
+-(void)longPressed:(UILongPressGestureRecognizer *)lp
+{
+    if(lp.state==UIGestureRecognizerStateBegan||lp.state==UIGestureRecognizerStateChanged)
+    {
+        baidu_map.scrollEnabled=NO;
+        CGPoint pt=[lp locationInView:baidu_map];
+        
+        CLLocationCoordinate2D lc2d=[baidu_map convertPoint:pt toCoordinateFromView:baidu_map];
+        [self removeFenceRegion];
+        coor=lc2d;
+        [self drawFenceRegion:self.fenceSlider.value*1900/100+100 location:lc2d];
+    }
+    if (lp.state==UIGestureRecognizerStateEnded) {
+        if (baidu_map.scrollEnabled==NO) {
+            baidu_map.scrollEnabled=YES;
+        }
+    }
+}
+
 -(void)setupSliderView
 {
     self.fenceSlider.minimumValue=1;
@@ -59,9 +92,6 @@
     UISlider* control = (UISlider*)slider;
     CGFloat value = control.value;
     
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
     [self drawFenceRegion:1900*value/100+100 location:coor];
 }
 
@@ -70,9 +100,6 @@
     NSLog(@"slider end  changing!!");
     UISlider* control = (UISlider*)slider;
     CGFloat value = control.value;
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
     [self drawFenceRegion:1900*value/100+100 location:coor];
 }
 
@@ -96,7 +123,7 @@
 }
 
 //根据overlay生成对应的View
-- (UIView *)mapView:(UIView *)mapView viewForOverlay:(id)overlay
+- (id )mapView:(UIView *)mapView viewForOverlay:(id)overlay
 {
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         if ([overlay isKindOfClass:[BMKCircle class]])
@@ -117,19 +144,52 @@
         }
     }else{
         
-        
-    
+        if ([overlay isKindOfClass:[MACircle class]])
+        {
+            MACircleRenderer *circleRenderer = [[MACircleRenderer alloc] initWithCircle:overlay];
+            
+            circleRenderer.lineWidth   = 5.0;
+            circleRenderer.strokeColor = [UIColor blueColor];
+            circleRenderer.fillColor   = [[UIColor redColor] colorWithAlphaComponent:0.5];
+            
+            return circleRenderer;
+        }
+        else if ([overlay isKindOfClass:[MAPolygon class]])
+        {
+            MAPolygonRenderer *polygonRenderer = [[MAPolygonRenderer alloc] initWithPolygon:overlay];
+            polygonRenderer.lineWidth   = 4.f;
+            polygonRenderer.strokeColor = [UIColor colorWithRed:0 green:1 blue:0 alpha:1];
+            polygonRenderer.fillColor   = [UIColor redColor];
+            
+            return polygonRenderer;
+        }
+       
     }
-	
 	return nil;
 }
 
+-(void)removeFenceRegion
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        if (isCircle) {
+            [baidu_map removeOverlay:baidu_circle];
 
+        }else{
+            [baidu_map removeOverlay:baidu_polygon];
+        }
+    }else{
+        if (isCircle) {
+            [gaode_map removeOverlay:gaode_circle];
+        }else{
+            [gaode_map removeOverlay:gaode_polygon];
+        }
+        
+    }
+}
+
+//调用改方法自动判断地图类型    根据slider值获经纬度    在地图上画障碍物
 -(void)drawFenceRegion:(NSInteger)distence location:(CLLocationCoordinate2D )location
 {
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         if (isCircle) {
             if (baidu_polygon) {
@@ -165,16 +225,35 @@
         }
     }else{
         if (isCircle) {
+            if (gaode_polygon) {
+                [gaode_map removeOverlay:gaode_polygon];
+            }
             if (gaode_circle) {
                 [gaode_map removeOverlay:gaode_circle];
             }
             gaode_circle = [MACircle circleWithCenterCoordinate:coor radius:distence];
             [gaode_map addOverlay:gaode_circle];
         }else{
+            if (gaode_circle) {
+                [gaode_map removeOverlay:gaode_circle];
+            }
+            if (gaode_polygon) {
+                [gaode_map removeOverlay:gaode_polygon];
+            }
+            /* Polygon. */
+            CLLocationCoordinate2D coords[4] = {0};
+            coords[0].latitude = location.latitude+0.8*distence*0.01/1000;
+            coords[0].longitude = location.longitude+distence*0.01/1000;
+            coords[1].latitude = location.latitude+0.8*distence*0.01/1000;
+            coords[1].longitude = location.longitude-distence*0.01/1000;
+            coords[2].latitude =location.latitude-0.8*distence*0.01/1000;
             
-        
+            coords[2].longitude = location.longitude-distence*0.01/1000;
+            coords[3].latitude = location.latitude-0.8*distence*0.01/1000;
+            coords[3].longitude = location.longitude+distence*0.01/1000;
+            gaode_polygon = [MAPolygon polygonWithCoordinates:coords count:4];
+            [gaode_map addOverlay:gaode_polygon];
         }
-       
     }
 }
 - (void)didReceiveMemoryWarning
@@ -200,9 +279,7 @@
         value-=5;
     }
     self.fenceSlider.value=value;
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
+
     [self drawFenceRegion:1900*value/100+100 location:coor];
 }
 
@@ -215,34 +292,24 @@
     }
     self.fenceSlider.value=value;
     
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
-    
     [self drawFenceRegion:1900*value/100+100 location:coor];
 }
 
 - (IBAction)Click_setup:(id)sender {
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
+
     [self drawFenceRegion:1000 location:coor];
 }
 
 - (IBAction)Click_selectRectType:(id)sender {
     isCircle=NO;
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
+    
     float value=self.fenceSlider.value;
     [self drawFenceRegion:1900*value/100+100 location:coor];
 }
 
 - (IBAction)Click_selectCircleType:(id)sender {
     isCircle=YES;
-    CLLocationCoordinate2D coor;
-    coor.latitude = 39.915;
-    coor.longitude = 116.404;
+   
     float value=self.fenceSlider.value;
 
     [self drawFenceRegion:1900*value/100+100 location:coor];
