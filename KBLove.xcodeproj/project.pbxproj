@@ -111,6 +111,8 @@
 		BCB42E2C19F1425B00A141C3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2719F1425B00A141C3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BCB42E2E19F1430F00A141C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */; };
 		BCB824E119F357F900888018 /* chat_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB824E019F357F900888018 /* chat_setting@2x.png */; };
+		BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF1848E1A0B51A0006843D1 /* DXsearchView.m */; };
+		BCF184911A0B5333006843D1 /* DXSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF184901A0B5333006843D1 /* DXSearchView.xib */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -1019,6 +1021,9 @@
 		BCB42E2719F1425B00A141C3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BCB824E019F357F900888018 /* chat_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_setting@2x.png"; sourceTree = "<group>"; };
+		BCF1848D1A0B51A0006843D1 /* DXsearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXsearchView.h; sourceTree = "<group>"; };
+		BCF1848E1A0B51A0006843D1 /* DXsearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXsearchView.m; sourceTree = "<group>"; };
+		BCF184901A0B5333006843D1 /* DXSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DXSearchView.xib; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
@@ -1875,10 +1880,10 @@
 		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
-				BC59833519ECB52800DAC76A /* Circle */,
-				6E16647019ECD1270081EB4C /* Friends */,
 				BC15E0051A076BE00016FB39 /* CircleAndFriendListViewController.h */,
 				BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */,
+				BC59833519ECB52800DAC76A /* Circle */,
+				6E16647019ECD1270081EB4C /* Friends */,
 			);
 			path = MessageCenter;
 			sourceTree = "<group>";
@@ -2233,6 +2238,16 @@
 				BCB42E2719F1425B00A141C3 /* FMResultSet.m */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		BCF1848C1A0B5182006843D1 /* DXSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				BCF1848D1A0B51A0006843D1 /* DXsearchView.h */,
+				BCF1848E1A0B51A0006843D1 /* DXsearchView.m */,
+				BCF184901A0B5333006843D1 /* DXSearchView.xib */,
+			);
+			path = DXSearchView;
 			sourceTree = "<group>";
 		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
@@ -3104,6 +3119,7 @@
 		F9E24F6819ED729700D83FEF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BCF1848C1A0B5182006843D1 /* DXSearchView */,
 				BC5F373D1A025BC30088D0AB /* KBSCoketManager */,
 				BCA6060919FFCBFC00D967ED /* DXSwitch */,
 				BCB42E1619F1415600A141C3 /* DataBase */,
@@ -4967,6 +4983,7 @@
 				F9F3AFE519F63E5800E0A0F9 /* 轨迹06_07.png in Resources */,
 				F9F3AEEC19F63E5800E0A0F9 /* 好友4_30.png in Resources */,
 				F9F3AFD919F63E5800E0A0F9 /* 轨迹02_03.png in Resources */,
+				BCF184911A0B5333006843D1 /* DXSearchView.xib in Resources */,
 				F9F3AFB119F63E5800E0A0F9 /* 页面列表3_09.png in Resources */,
 				F9F3AF3D19F63E5800E0A0F9 /* 数据02_26.png in Resources */,
 				F99F925B1A0755DE00BBE96E /* icon_car.png in Resources */,
@@ -5508,6 +5525,7 @@
 				BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */,
 				F99246701A048D5500599E74 /* PNLineChartDataItem.m in Sources */,
 				BC6ED3E01A0750220037F1D1 /* FriendListView.m in Sources */,
+				BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */,
 				F9E24F6619ED725900D83FEF /* PinyinHelper.m in Sources */,
 				6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */,
 				F992466D1A048D5500599E74 /* PNColor.m in Sources */,

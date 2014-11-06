@@ -7,7 +7,7 @@
 //
 
 #import "CircleRootViewController.h"
-
-@interface CreateCircleViewController : CircleRootViewController<UISearchBarDelegate>
+#import "DXsearchView.h"
+@interface CreateCircleViewController : CircleRootViewController<UISearchBarDelegate,DXSearchDisplayDelegate>
 
 @end

@@ -16,6 +16,7 @@
 #import "CircleTalkViewController.h"
 #import "KBCircleInfo.h"
 #import "SearchView.h"
+
 @interface CreateCircleViewController ()
 {
     SearchView *_searchView;
@@ -41,7 +42,7 @@
     self.navigationItem.titleView=[self makeTitleLable:@"创建圈子" AndFontSize:18 isBold:NO];
     //返回
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(BackClick:) isLeft:YES];
-    
+    [self addBarItemWithImageName:@"圈子创建_06.png" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(SearchClick:) isLeft:NO];
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
@@ -51,21 +52,44 @@
     _tableView.backgroundView=bgimgv;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
-    _searchView=[[[NSBundle mainBundle]loadNibNamed:@"SearchView" owner:self options:nil]lastObject];
-    _searchView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
-    //设置头尾视图，显示在第一行的上方
-    _searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 0, 44)]
-    ;
-    _searchBar.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
-    _searchBar.delegate=self;
-    _tableView.tableHeaderView=_searchView;
-    //创建搜索控制器，传入一个搜索条，点击搜索条，可以触发VC的搜索模式，搜索模式作用在Self上,
+//    _searchView=[[[NSBundle mainBundle]loadNibNamed:@"SearchView" owner:self options:nil]lastObject];
+//    _searchView.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1];
+//    //设置头尾视图，显示在第一行的上方
+//    _searchBar=[[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)]
+//    ;
+//    _searchBar.backgroundColor=[UIColor clearColor];
+//    
+//    for (UIView *subview in _searchBar.subviews)
+//    {
+//        if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")])
+//        {
+//            [subview removeFromSuperview];
+//            break;
+//        }
+//    }
+//    UIImageView *_searchBarBGView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"background.png"]];
+//    _searchBarBGView.frame=_searchBar.bounds;
+//    [_searchBar insertSubview:_searchBarBGView atIndex:1];
+//    _searchBar.delegate=self;
+//    _searchBar.tintAdjustmentMode=UIViewTintAdjustmentModeNormal;
+//    
+//    for(id cc in [_searchBar subviews])
+//    {
+//        if([cc isKindOfClass:[UIButton class]])
+//        {
+//            UIButton *btn = (UIButton *)cc;
+//            [btn setTitle:@"确定" forState:UIControlStateNormal];
+//        }
+//    }
+//    _tableView.tableHeaderView=_searchBar;
+//        //创建搜索控制器，传入一个搜索条，点击搜索条，可以触发VC的搜索模式，搜索模式作用在Self上,
+//    
+//    _playCintroller =[[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
+//    //此时程序中有两个TableView；
+//    _playCintroller.searchResultsDelegate=self;
+//    _playCintroller.searchResultsDataSource=self;
+//    _playCintroller.searchResultsTableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"background.png"]];
     
-    _playCintroller =[[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
-    //此时程序中有两个TableView；
-    _playCintroller.searchResultsDelegate=self;
-    _playCintroller.searchResultsDataSource=self;
-    _playCintroller.searchResultsTableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"background.png"]];
     _selectArray =[[NSMutableArray alloc]init];
     _bottomView=[[CreateCircleBottomView alloc]initWithFrame:CGRectMake(0,_tableView.frame.size.height, ScreenWidth, 0)];
     
@@ -73,9 +97,18 @@
     
     [_bottomView.FinishedBtn setBackgroundImage:[UIImage imageNamed:@"圈子创建_23"] forState:UIControlStateNormal];
     [self.view addSubview:_bottomView];
-    
-}
+    //[self.view addSubview:_searchBar];
 
+}
+- (void)SearchClick:(UIButton *)btn
+{
+    DXsearchView *searchView=[[[NSBundle mainBundle]loadNibNamed:@"DXSearchView" owner:self options:nil]lastObject];
+    [searchView setFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height) AndDelegate:self];
+    searchView.SearchBarBGImageView.image=[UIImage imageNamed:@"Nav_Circle"];
+    searchView.searchResultsTableView.backgroundView=[UIImageView imageViewWithFrame:_tableView.bounds image:[UIImage imageNamed:@"圈子1"]];
+    searchView.searchResultsTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:searchView];
+}
 - (void)BackClick:(UIButton *)btn
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -228,9 +261,10 @@
 //        NSLog(@"%ld",tag);
 //    }];
     
-    [_tableView reloadData];
+    //[_tableView reloadData];
     [_playCintroller.searchResultsTableView reloadData];
     [_bottomView ConfigUIWith:_selectArray AndBlock:^(NSInteger tag) {
+        
         KBFriendInfo *finf=_selectArray[tag];
         [_selectArray removeObject:finf];
         [self refreshBottomWithArray];
@@ -248,9 +282,10 @@
             }
             
         }
-        NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1]);
+        NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1,app_name]);
+        [KBFreash startRefreshWithTitle:@"创建中..." inView:self.view];
         [[KBHttpRequestTool sharedInstance]request:[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
-            
+            [KBFreash StopRefreshinView:self.view];
             if (IsSuccess) {
                 if ([result isKindOfClass:[NSDictionary class]]) {
                     if ([[result objectForKey:@"ret"] integerValue]==1) {
@@ -263,7 +298,13 @@
                         [cvc setTalkEnvironment:KBTalkEnvironmentTypeCircle andModel:kci];
                         [self.navigationController pushViewController:cvc animated:YES];
                     }
-                    
+                    else
+                    {
+                        [UIAlertView  showWithTitle:@"提示" Message:[NSString stringWithFormat:@"创建失败%@",[result objectForKey:@"desc"]]cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            
+                        }];
+
+                    }
                     
                 }else
                 {
@@ -271,7 +312,12 @@
                 }
             }else
             {
+                NSError *error=(NSError *)result;
                 
+                [UIAlertView  showWithTitle:@"提示" Message:[NSString stringWithFormat:@"创建失败%@",error.localizedDescription]cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                    
+                }];
+
             }
         }];
 
@@ -294,6 +340,10 @@
     }else
     {
         [_selectArray addObject:finfo];
+    }
+    [tableView reloadData];
+    if (tableView!=_tableView) {
+        [_tableView reloadData];
     }
     [self refreshBottomWithArray];
 }
@@ -346,17 +396,21 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     
+}
+- (void)SearchView:(DXsearchView *)searchView textDidChange:(NSString *)Searchtext
+{
     if (!_resultArray) {
         _resultArray=[[NSMutableArray alloc]init];
     }
     [_resultArray removeAllObjects];
-    if (_searchBar.text.length>0&&![ChineseInclude isIncludeChineseInString:_searchBar.text]) {
+    if (Searchtext.length>0&&![ChineseInclude isIncludeChineseInString:Searchtext]) {
         for (int i=0; i<_allDataArray.count; i++) {
             KBFriendInfo *info=_allDataArray[i];
+            //与搜索相匹配字符串
             NSString *searchstr=info.name;
             if ([ChineseInclude isIncludeChineseInString:searchstr]) {
                 NSString *tempPinYinStr = [PinYinForObjc chineseConvertToPinYin:searchstr];
-                NSRange titleResult=[tempPinYinStr rangeOfString:_searchBar.text options:NSCaseInsensitiveSearch];
+                NSRange titleResult=[tempPinYinStr rangeOfString:Searchtext options:NSCaseInsensitiveSearch];
                 if (titleResult.length>0) {
                     
                     if (![_resultArray containsObject:info]) {
@@ -364,7 +418,7 @@
                     }
                 }
                 NSString *tempPinYinHeadStr = [PinYinForObjc chineseConvertToPinYinHead:searchstr];
-                NSRange titleHeadResult=[tempPinYinHeadStr rangeOfString:_searchBar.text options:NSCaseInsensitiveSearch];
+                NSRange titleHeadResult=[tempPinYinHeadStr rangeOfString:Searchtext options:NSCaseInsensitiveSearch];
                 if (titleHeadResult.length>0) {
                     if (![_resultArray containsObject:info]) {
                         [_resultArray addObject:info];
@@ -373,21 +427,22 @@
                 }
             }
             else {
-                NSRange titleResult=[searchstr rangeOfString:_searchBar.text options:NSCaseInsensitiveSearch];
+                NSRange titleResult=[searchstr rangeOfString:Searchtext options:NSCaseInsensitiveSearch];
                 if (titleResult.length>0) {
                     [_resultArray addObject:info];
                 }
             }
         }
-    } else if (_searchBar.text.length>0&&[ChineseInclude isIncludeChineseInString:_searchBar.text]) {
+    } else if (Searchtext.length>0&&[ChineseInclude isIncludeChineseInString:Searchtext]) {
         for (KBFriendInfo *info in _allDataArray) {
             NSString *tempStr=info.name;
-            NSRange titleResult=[tempStr rangeOfString:_searchBar.text options:NSCaseInsensitiveSearch];
+            NSRange titleResult=[tempStr rangeOfString:Searchtext options:NSCaseInsensitiveSearch];
             if (titleResult.length>0) {
                 [_resultArray addObject:info];
             }
         }
     }
+
 }
 //- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 //{

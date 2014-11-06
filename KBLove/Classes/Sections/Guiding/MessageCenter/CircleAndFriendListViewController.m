@@ -41,6 +41,7 @@
 }
 - (void)CreateUI
 {
+    self.isAllowScroll=TableIsForbiddenScroll;
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Nav_Circle"] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBarHidden=NO;
     self.navigationItem.titleView=_titleView;
