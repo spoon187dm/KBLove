@@ -11,7 +11,23 @@
 #define CustomNavigationitemtag 983364
 @interface UIViewController (NavigationItemSettingTool)
 
+
+/**
+ 将自身的navigaionbar设置为透明
+ */
 - (void)changeNavigationBarToClear;
+
+/**
+ 使用指定图，截取出适合navigationbar的一部分
+ 
+ @param imageName 图片名
+ */
+- (void)changeNavigationBarFromImage:(NSString *)imagename;
+
+
+
+
+
 
 - (void)addCustomNavigationItemWithImageName:(NSString *)imageName;
 

@@ -40,6 +40,7 @@
         UIImageView *arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:TableRefreshSrcName(@"arrow.png")]];
         arrowImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:_arrowImage = arrowImage];
+        arrowImage.size = CGSizeMake(30, 30);
     }
     return _arrowImage;
 }
@@ -157,14 +158,17 @@
 		case TableRefreshStateNormal: // 普通状态
         {
             // 显示箭头
-            self.arrowImage.hidden = NO;
-            
+            self.arrowImage.hidden = YES;
+            self.statusLabel.hidden = YES;
             // 停止转圈圈
             [self.activityView stopAnimating];
 			break;
         }
             
-        case TableRefreshStatePulling:
+        case TableRefreshStatePulling:{
+            self.statusLabel.hidden = NO;
+            self.arrowImage.hidden = NO;
+        }
             break;
             
 		case TableRefreshStateRefreshing:

@@ -66,12 +66,11 @@
 
     
     
-    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 220, 2)];
+    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 60, 220, 2)];
     _line.image = [UIImage imageNamed:@"qrcode_scan_light_green.png"];
     [bgImageView addSubview:_line];
    
     
-  //下方相册
     UIImageView*scanImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, bgImageView.frame.size.height+64,  320, 100)];
     scanImageView.image=[UIImage imageNamed:@"qrcode_scan_bar.png"];
     scanImageView.userInteractionEnabled=YES;
@@ -95,20 +94,15 @@
         
     }
     
-    
-    //假导航
+
     UIImageView*navImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 64)];
     navImageView.image=[UIImage imageNamed:@"qrcode_scan_bar.png"];
     navImageView.userInteractionEnabled=YES;
     [self.view addSubview:navImageView];
-//    [navImageView release];
     UILabel*titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(320/2-32,20 , 64, 44)];
     titleLabel.textColor=[UIColor whiteColor];
     titleLabel.text=@"扫一扫";
     [navImageView addSubview:titleLabel];
-//    [titleLabel release];
-    
-  
     
     UIButton*button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:@"qrcode_scan_titlebar_back_pressed@2x.png"] forState:UIControlStateHighlighted];
@@ -119,18 +113,18 @@
     [button addTarget:self action:@selector(pressCancelButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 
-   timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
+   timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(moveLine) userInfo:nil repeats:YES];
 }
 
--(void)animation1
+-(void)moveLine
 {
 
     [UIView animateWithDuration:2 animations:^{
         
-         _line.frame = CGRectMake(50, 50+200, 220, 2);
+         _line.frame = CGRectMake(50, 50+250, 220, 2);
     }completion:^(BOOL finished) {
         [UIView animateWithDuration:2 animations:^{
-          _line.frame = CGRectMake(50, 50, 220, 2);
+          _line.frame = CGRectMake(50, 60, 220, 2);
         }];
     
     }];
@@ -166,26 +160,6 @@
     [super viewDidLoad];
     
 }
-#pragma mark 选择相册
-- (void)pressPhotoLibraryButton:(UIButton *)button
-{  if (timer) {
-    [timer invalidate];
-    timer=nil;
-}
-    _line.frame = CGRectMake(50, 50, 220, 2);
-    num = 0;
-    upOrdown = NO;
-    
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.allowsEditing = YES;
-    picker.delegate = self;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentViewController:picker animated:YES completion:^{
-        self.isScanning = NO;
-        [self.captureSession stopRunning];
-    }];
-}
 #pragma mark 点击取消
 - (void)pressCancelButton:(UIButton *)button
 {
@@ -197,7 +171,7 @@
         [timer invalidate];
         timer=nil;
     }
-    _line.frame = CGRectMake(50, 50, 220, 2);
+    _line.frame = CGRectMake(50, 60, 220, 2);
     num = 0;
     upOrdown = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -225,8 +199,17 @@
         
         if (!self.captureVideoPreviewLayer) {
             self.captureVideoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
+#pragma mark -
+#pragma mark 调整输出位置到方框
+//            不会在二维码刚进入屏幕就直接解析出来
+            [self.captureVideoPreviewLayer metadataOutputRectOfInterestForRect:CGRectMake(50, 100+64+60, 220, 240)];
         }
-        // NSLog(@"prev %p %@", self.prevLayer, self.prevLayer);
+        
+#pragma mark -
+#pragma mark
+//        AVCaptureVideoPreviewLayer * backLayer[AVCaptureVideoPreviewLayer layer];
+#pragma mark -
+#pragma mark frame
         self.captureVideoPreviewLayer.frame = self.view.bounds;
         self.captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         [self.view.layer addSublayer: self.captureVideoPreviewLayer];
@@ -234,205 +217,28 @@
         self.isScanning = YES;
         [self.captureSession startRunning];
         
-        
-    }else{
-        [captureOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
-        
-        NSString* key = (NSString *)kCVPixelBufferPixelFormatTypeKey;
-        NSNumber* value = [NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA];
-        NSDictionary *videoSettings = [NSDictionary dictionaryWithObject:value forKey:key];
-        [captureOutput setVideoSettings:videoSettings];
-        [self.captureSession addOutput:captureOutput];
-        
-        NSString* preset = 0;
-        if (NSClassFromString(@"NSOrderedSet") && // Proxy for "is this iOS 5" ...
-            [UIScreen mainScreen].scale > 1 &&
-            [inputDevice
-             supportsAVCaptureSessionPreset:AVCaptureSessionPresetiFrame960x540]) {
-                // NSLog(@"960");
-                preset = AVCaptureSessionPresetiFrame960x540;
-            }
-        if (!preset) {
-            // NSLog(@"MED");
-            preset = AVCaptureSessionPresetMedium;
-        }
-        self.captureSession.sessionPreset = preset;
-        
-        if (!self.captureVideoPreviewLayer) {
-            self.captureVideoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
-        }
-        // NSLog(@"prev %p %@", self.prevLayer, self.prevLayer);
-        self.captureVideoPreviewLayer.frame = self.view.bounds;
-        self.captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        [self.view.layer addSublayer: self.captureVideoPreviewLayer];
-        
-        self.isScanning = YES;
-        [self.captureSession startRunning];
-        
+    
         
     }
     
     
 }
 
-- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer
-{
-    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-    // Lock the base address of the pixel buffer
-    CVPixelBufferLockBaseAddress(imageBuffer,0);
-    
-    // Get the number of bytes per row for the pixel buffer
-    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
-    // Get the pixel buffer width and height
-    size_t width = CVPixelBufferGetWidth(imageBuffer);
-    size_t height = CVPixelBufferGetHeight(imageBuffer);
-    
-    // Create a device-dependent RGB color space
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    if (!colorSpace)
-    {
-        NSLog(@"CGColorSpaceCreateDeviceRGB failure");
-        return nil;
-    }
-    
-    // Get the base address of the pixel buffer
-    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-    // Get the data size for contiguous planes of the pixel buffer.
-    size_t bufferSize = CVPixelBufferGetDataSize(imageBuffer);
-    
-    // Create a Quartz direct-access data provider that uses data we supply
-    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, baseAddress, bufferSize,
-                                                              NULL);
-    // Create a bitmap image from data supplied by our data provider
-    CGImageRef cgImage =
-    CGImageCreate(width,
-                  height,
-                  8,
-                  32,
-                  bytesPerRow,
-                  colorSpace,
-                  kCGImageAlphaNoneSkipFirst | kCGBitmapByteOrder32Little,
-                  provider,
-                  NULL,
-                  true,
-                  kCGRenderingIntentDefault);
-    CGDataProviderRelease(provider);
-    CGColorSpaceRelease(colorSpace);
-    
-    // Create and return an image object representing the specified Quartz image
-    UIImage *image = [UIImage imageWithCGImage:cgImage];
-    
-    
-    return image;
-}
-
-#pragma mark 对图像进行解码
-- (void)decodeImage:(UIImage *)image
-{
-//    
-//    self.isScanning = NO;
-//    ZBarSymbol *symbol = nil;
-//    
-//    ZBarReaderController* read = [ZBarReaderController new];
-//    
-//    read.readerDelegate = self;
-//    
-//    CGImageRef cgImageRef = image.CGImage;
-//    
-//    for(symbol in [read scanImage:cgImageRef])break;
-//    
-//    if (symbol!=nil) {
-//        if (timer) {
-//            [timer invalidate];
-//            timer=nil;
-//        }
-//        
-//        _line.frame = CGRectMake(50, 50, 220, 2);
-//        num = 0;
-//        upOrdown = NO;
-//        self.ScanResult(symbol.data,YES);
-//        [self.captureSession stopRunning];
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//    }else{
-//        timer = [NSTimer scheduledTimerWithTimeInterval:.02 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
-//        num = 0;
-//        upOrdown = NO;
-//        self.isScanning = YES;
-//        [self.captureSession startRunning];
-//
-//    }
-    
-    
-    
-}
-#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
-
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
-{
-    UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
-    
-    [self decodeImage:image];
-}
 #pragma mark AVCaptureMetadataOutputObjectsDelegate//IOS7下触发
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    
-    
     if (metadataObjects.count>0)
     {
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         self.ScanResult(metadataObject.stringValue,YES);
-//        self.ScanResult = nil;
     }
     
     [self.captureSession stopRunning];
-    _line.frame = CGRectMake(50, 50, 220, 2);
+    _line.frame = CGRectMake(50, 60, 220, 2);
     num = 0;
     upOrdown = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    
 }
-
-
-
-#pragma mark - UIImagePickerControllerDelegate
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    if (timer) {
-        [timer invalidate];
-        timer=nil;
-    }
-    _line.frame = CGRectMake(50, 50, 220, 2);
-    num = 0;
-    upOrdown = NO;
-    UIImage *image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
-    [self dismissViewControllerAnimated:YES completion:^{[self decodeImage:image];}];
-    
-    
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    if (timer) {
-        [timer invalidate];
-        timer=nil;
-    }
-    _line.frame = CGRectMake(50, 50, 220, 2);
-    num = 0;
-    upOrdown = NO;
-    timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
-    [self dismissViewControllerAnimated:YES completion:^{
-        self.isScanning = YES;
-        [self.captureSession startRunning];
-    }];
-}
-
-#pragma mark - DecoderDelegate
-
-
-
 +(NSString*)zhengze:(NSString*)str
 {
     
@@ -449,7 +255,6 @@
             NSString *result1 = [str substringWithRange:resultRange];
             NSLog(@"正则表达后的结果%@",result1);
             return result1;
-            
         }
     }
     return nil;

@@ -266,7 +266,7 @@ static KBScoketManager *manager;
             [manager insertDataWithModel:msginf];
             switch (msginf.MessageType) {
                 case KBMessageTypeAddFriend:{
-                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@%@",msgarr[0],msgarr[2]] cancle:@"同意" otherbutton:@"拒绝" block:^(NSInteger index) {
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@",msgarr[3]] cancle:@"同意" otherbutton:@"拒绝" block:^(NSInteger index) {
                         NSLog(@"%d",index);
                         KBUserInfo *user=[KBUserInfo sharedInfo];
                         NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"app_name":app_name,@"friend_id":msginf.FromUser_id,@"is_pass":[NSNumber numberWithInteger:(index+1)]};
@@ -282,11 +282,11 @@ static KBScoketManager *manager;
                     
                 }break;
                 case KBMessageTypeRejectFriend:{
-                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@%@",msgarr[0],msgarr[3]] cancle:@"确定" otherbutton:nil  block:^(NSInteger index) {
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@",msgarr[3]] cancle:@"确定" otherbutton:nil  block:^(NSInteger index) {
                     }];
                 }break;
                 case KBMessageTypeAgreeFriend:{
-                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@%@",msgarr[0],msgarr[3]] cancle:@"确定" otherbutton:nil  block:^(NSInteger index) {
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@",msgarr[3]] cancle:@"确定" otherbutton:nil  block:^(NSInteger index) {
                     }];
                     
                 }break;

@@ -18,8 +18,11 @@
     _Circle_headerImageView.image=[UIImage imageNamed:@"userimage"];
     _Circle_NameLable.text=cModel.name;
     _CircleLastMessageLable.textColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0.6];
+    KBMessageInfo *msg=[[KBDBManager shareManager]getLastMsgWithEnvironment:KBTalkEnvironmentTypeCircle AndFromID:[cModel.id stringValue]];
+    _CircleLastMessageLable.text=msg.text;
     //从数据库读取消息
-    _CircleMessageTimeLable.text=[NSString timeStampWithHM:[NSString stringWithFormat:@"%ld",[cModel.time integerValue]/1000]];
+    _CircleMessageTimeLable.text=[NSString timeStampWithHM:[NSString stringWithFormat:@"%lld",msg.time/1000]];
+    
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
