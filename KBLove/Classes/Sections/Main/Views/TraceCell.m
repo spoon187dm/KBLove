@@ -41,18 +41,36 @@
     return infoView;
 }
 
+//- (UIView *)menuViewForMenuCount:(NSInteger)count{
+//    UIView *view = [[UIView alloc] init];
+//    view.frame = CGRectMake(320 - 80*count, 0, 80*count, self.frame.size.height);
+//    view.backgroundColor = [UIColor clearColor];
+//    
+//    for (int i = 0; i < count; i++) {
+//        UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        menuBtn.tag = i;
+//        [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//        menuBtn.frame = CGRectMake(80*i, 0, 80, 100);
+//        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
+//        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
+//        [view addSubview:menuBtn];
+//    }
+//    
+//    return view;
+//}
+
 - (UIView *)menuViewForMenuCount:(NSInteger)count{
     UIView *view = [[UIView alloc] init];
-    view.frame = CGRectMake(320 - 80*count, 0, 80*count, self.frame.size.height);
+    view.frame = CGRectMake(320 - 80*count, 0, 80, 100);
     view.backgroundColor = [UIColor clearColor];
     
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < 2; i++) {
         UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         menuBtn.tag = i;
         [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        menuBtn.frame = CGRectMake(80*i, 0, 80, 100);
-        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
-        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
+        menuBtn.frame = CGRectMake(0, 50*i, 80, 50);
+        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:0] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
+        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:0] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
         [view addSubview:menuBtn];
     }
     

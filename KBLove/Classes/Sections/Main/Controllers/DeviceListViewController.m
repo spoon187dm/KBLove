@@ -64,7 +64,8 @@
         self.dropListView.hidden = YES;
         
     }];
-    self.view.backgroundColor = SYSTEM_COLOR;
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]];
     
     [self changeNavigationBarToClear];
     

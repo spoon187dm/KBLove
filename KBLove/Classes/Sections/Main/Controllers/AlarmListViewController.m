@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
     self.isAllowScroll = TableIsForbiddenScroll;
     [self loadData];
     [self setUpBottomSelectView];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

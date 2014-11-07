@@ -32,6 +32,8 @@
     // Do any additional setup after loading the view.
     self.isAllowScroll = TableIsForbiddenScroll;
     [self replaceSelfViewToNormal];
+
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
     [self setUpView];
     [self loadData];
 }
@@ -47,8 +49,8 @@
 
 - (void)setUpView{
     UIImageView *imageView = [UIImageView imageViewWithFrame:self.view.bounds image:[UIImage imageNamed:@"bg"]];
-    [self.view addSubview:imageView];
-    [self.view sendSubviewToBack:imageView];
+//    [self.view addSubview:imageView];
+//    [self.view sendSubviewToBack:imageView];
 }
 
 #pragma mark -
@@ -66,7 +68,8 @@
     long form = [date timeIntervalSince1970];
     long to = [current timeIntervalSince1970];
     [KBDeviceManager getDevicePart:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
-        
+        _dataArray = [result mutableCopy];
+        [self.tableView reloadData];
     }];
 }
 
@@ -92,12 +95,12 @@
 
 #pragma mark - UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+    return 200;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return _dataArray.count;
-    return 10;
+    return _dataArray.count;
+//    return 10;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -109,14 +112,14 @@
         cell.menuActionDelegate = self;
     }
     NSMutableArray *menuImgArr = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i <1; i++) {
         NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"icon_trash",@"stateNormal",@"icon_trash",@"stateHighLight", nil];
         [menuImgArr addObject:dic];
     }
     
     //    KBAlarm *device = _dataArray[indexPath.row];
     //    [cell setEditing:YES];
-    [cell configWithData:indexPath menuData:menuImgArr cellFrame:CGRectMake(0, 0, 320, 150)];
+    [cell configWithData:indexPath menuData:menuImgArr cellFrame:CGRectMake(0, 0, 320, 200)];
 //    [cell startMyEdit:_editing];
 //    [cell setMySelected:[_selectedArray[indexPath.row] boolValue]];
     //    [cell setData:device];

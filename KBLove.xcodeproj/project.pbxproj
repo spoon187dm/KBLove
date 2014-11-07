@@ -87,6 +87,8 @@
 		BC9B778A1A04AD6200A666B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77891A04AD6200A666B7 /* CoreLocation.framework */; };
 		BC9B778C1A04AD6A00A666B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B778B1A04AD6A00A666B7 /* SystemConfiguration.framework */; };
 		BC9B77D61A04AEC800A666B7 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC9B77D31A04AEC800A666B7 /* mapapi.bundle */; };
+		BC9B77D71A04C25200A666B7 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77D21A04AEC800A666B7 /* libbaidumapapi.a */; };
+		BC9B77DC1A04D5BF00A666B7 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77DB1A04D5BF00A666B7 /* libbaidumapapi.a */; };
 		BC9B787A1A04DE5900A666B7 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B78741A04DE5900A666B7 /* car.png */; };
 		BC9B787B1A04DE5900A666B7 /* car_offline.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B78751A04DE5900A666B7 /* car_offline.png */; };
 		BC9B787C1A04DE5900A666B7 /* car_warning.png in Resources */ = {isa = PBXBuildFile; fileRef = BC9B78761A04DE5900A666B7 /* car_warning.png */; };
@@ -359,6 +361,8 @@
 		F99246721A048D5500599E74 /* PNPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F99246661A048D5500599E74 /* PNPieChartDataItem.m */; };
 		F99246731A048D5500599E74 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F99246681A048D5500599E74 /* UICountingLabel.m */; };
 		F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */; };
+		F997E3F21A0B59BF00DDF896 /* KBTracePart.m in Sources */ = {isa = PBXBuildFile; fileRef = F997E3F11A0B59BF00DDF896 /* KBTracePart.m */; };
+		F997E3F51A0B5E3000DDF896 /* KBSimpleSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = F997E3F41A0B5E3000DDF896 /* KBSimpleSpot.m */; };
 		F99E76211A00D3A8002FCB1F /* CarDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76141A00D3A8002FCB1F /* CarDetailSettingViewController.m */; };
 		F99E76221A00D3A8002FCB1F /* CarSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76161A00D3A8002FCB1F /* CarSettingViewController.m */; };
 		F99E76231A00D3A8002FCB1F /* PersonDetailSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99E76181A00D3A8002FCB1F /* PersonDetailSettingViewController.m */; };
@@ -1361,6 +1365,10 @@
 		F99246681A048D5500599E74 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		F9972A5719ECC6D800EE0A6D /* UIAlertView+EasyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EasyTool.h"; sourceTree = "<group>"; };
 		F9972A5819ECC6D900EE0A6D /* UIAlertView+EasyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EasyTool.m"; sourceTree = "<group>"; };
+		F997E3F01A0B59BF00DDF896 /* KBTracePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBTracePart.h; sourceTree = "<group>"; };
+		F997E3F11A0B59BF00DDF896 /* KBTracePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBTracePart.m; sourceTree = "<group>"; };
+		F997E3F31A0B5E3000DDF896 /* KBSimpleSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSimpleSpot.h; sourceTree = "<group>"; };
+		F997E3F41A0B5E3000DDF896 /* KBSimpleSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSimpleSpot.m; sourceTree = "<group>"; };
 		F99E76131A00D3A8002FCB1F /* CarDetailSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetailSettingViewController.h; sourceTree = "<group>"; };
 		F99E76141A00D3A8002FCB1F /* CarDetailSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDetailSettingViewController.m; sourceTree = "<group>"; };
 		F99E76151A00D3A8002FCB1F /* CarSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSettingViewController.h; sourceTree = "<group>"; };
@@ -1827,12 +1835,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3344A91A087B550082A637 /* libbaidumapapi.a in Frameworks */,
 				BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */,
 				BC9B788B1A04E33B00A666B7 /* AMapSearchKit.framework in Frameworks */,
 				BC9B78851A04E2CD00A666B7 /* CoreTelephony.framework in Frameworks */,
 				BC9B78831A04E2B200A666B7 /* libz.dylib in Frameworks */,
 				BC9B78811A04E2A100A666B7 /* libstdc++.6.0.9.dylib in Frameworks */,
+				BC9B77D71A04C25200A666B7 /* libbaidumapapi.a in Frameworks */,
+				BC9B77DC1A04D5BF00A666B7 /* libbaidumapapi.a in Frameworks */,
 				BC9B778C1A04AD6A00A666B7 /* SystemConfiguration.framework in Frameworks */,
 				BC9B778A1A04AD6200A666B7 /* CoreLocation.framework in Frameworks */,
 				BC9B77881A04AD4800A666B7 /* OpenGLES.framework in Frameworks */,
@@ -2721,6 +2730,10 @@
 				BC71103E19F62E8400485D6B /* KBCircleInfo.m */,
 				BC71E6E719F96A3000692533 /* KBPositionInfo.h */,
 				BC71E6E819F96A3000692533 /* KBPositionInfo.m */,
+				F997E3F01A0B59BF00DDF896 /* KBTracePart.h */,
+				F997E3F11A0B59BF00DDF896 /* KBTracePart.m */,
+				F997E3F31A0B5E3000DDF896 /* KBSimpleSpot.h */,
+				F997E3F41A0B5E3000DDF896 /* KBSimpleSpot.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -5560,6 +5573,7 @@
 				BC8E2A501A062ADB0075531A /* CCTrackerUtils.m in Sources */,
 				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
 				F9D4C8B419F121A3005B93CA /* AlarmListViewController.m in Sources */,
+				F997E3F21A0B59BF00DDF896 /* KBTracePart.m in Sources */,
 				BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */,
 				F975FE6D19EE45A500D13D86 /* DeviceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
@@ -5659,6 +5673,7 @@
 				F992466C1A048D5500599E74 /* PNCircleChart.m in Sources */,
 				F91A0CFB19E788F5009ADB44 /* UIView+JMFrame.m in Sources */,
 				F97410E219EC322000E12633 /* BoundPetInfoController.m in Sources */,
+				F997E3F51A0B5E3000DDF896 /* KBSimpleSpot.m in Sources */,
 				6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */,
 				F99E76231A00D3A8002FCB1F /* PersonDetailSettingViewController.m in Sources */,
 				F99246491A048C5400599E74 /* TableViewFreshConst.m in Sources */,

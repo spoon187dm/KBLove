@@ -11,6 +11,8 @@
 #import "KBAlarm.h"
 #import "KBDevicesStatus.h"
 #import "KBFence.h"
+#import "KBTracePart.h"
+#import "CCDeviceStatus.h"
 @interface KBDeviceManager : NSObject
 
 + (KBDeviceManager *)sharedManager;
