@@ -13,6 +13,7 @@
 #import "KBCircleInfo.h"
 #import "KBFriendInfo.h"
 #import "KBHttpRequestTool.h"
+#import "CreateCircleViewController.h"
 @interface CircleSettingViewController ()
 {
     NSString *_circleId;
@@ -23,6 +24,7 @@
     DXSwitch *Circle_TalkMessageSwitch;
     KBCircleInfo *circle_info;
     NSMutableArray *members;
+    KBFriendInfo *myinf;
     //UIButton *QuitBtn;
     BOOL isDelete;
 }
@@ -56,7 +58,7 @@
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
 //    [self addBarItemWithImageName:@"Circle_setting" frame:CGRectMake(0, 0, 20, 20) Target:self Selector:@selector(SettingClick:) isLeft:NO];
     self.navigationItem.titleView=[self makeTitleLable:circle_info.name AndFontSize:18 isBold:YES];
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0,ScreenWidth,ScreenHeight) style:UITableViewStyleGrouped];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
@@ -132,6 +134,7 @@
     }];
 
 }
+#pragma mark - 退出方法
 - (void)DeleteSeleFromCirclr
 {
     KBUserInfo *user=[KBUserInfo sharedInfo];
@@ -163,13 +166,26 @@
 #pragma mark - 返回
 - (void)BackClick:(UIButton *)btn
 {
-//    if (![Circle_Name_Lable.text isEqualToString:circle_info.name]||![Circle_NickName_Lable.text isEqualToString:circle_info.]) {
-//        
-//    }
-    [[KBHttpRequestTool sharedInstance]request:[Circle_UpDate_URL,[KBUserInfo sharedInfo].user_id,[KBUserInfo sharedInfo].token,[circle_info.id stringValue],Circle_Name_Lable.text,Circle_NickName_Lable.text,app_name] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+    if (![Circle_Name_Lable.text isEqualToString:circle_info.name]||![Circle_NickName_Lable.text isEqualToString:myinf.nick]) {
         
-    }];
-    [self.navigationController popViewControllerAnimated:YES];
+        KBUserInfo *user=[KBUserInfo sharedInfo];
+        NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[circle_info.id stringValue] ,@"group_name":Circle_Name_Lable.text,@"nick_name":@"Circle_NickName_Lable.text,",@"app_name":@"M2616_BD"};
+        [[KBHttpRequestTool sharedInstance]request:[Circle_UpDate_URL] requestType:KBHttpRequestTypePost params:dic cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+            if (IsSuccess) {
+                NSLog(@"修改成功");
+            }else
+            {
+                //?user_id=%@&token=%@&group_id=%@&group_name=%@&nick_name=%@,app_name=%@
+                NSError *error=(NSError *)result;
+                
+              [UIAlertView  showWithTitle:@"提示" Message:[NSString stringWithFormat:@"信息修改失败%@",error.localizedDescription]cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                  
+              }];
+            }
+        }];
+ 
+    }
+    [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
 }
 #pragma mark - 设置
 //- (void)SettingClick:(UIButton *)btn
@@ -205,6 +221,10 @@
                    for (NSDictionary *sdic in arr) {
                        KBFriendInfo *kf=[[KBFriendInfo alloc]init];
                        kf.id=[[sdic objectForKey:@"userId"] stringValue];
+                       if ([kf.id isEqualToString:[KBUserInfo sharedInfo].user_id]) {
+                           //circle_info
+                           myinf =kf;
+                           }
                        kf.nick=[sdic objectForKey:@"nickName"];
                        kf.name=kf.id;
                        [members addObject:kf];
@@ -213,6 +233,7 @@
 //                           break;
 //                       }
                    }
+                   
                    [self refreashHeaderView];
                }
                
@@ -241,14 +262,16 @@
       [FinishedArr addObject:@"圈子3_13"];
     }
     [_headerView configUIWithFriendArray:members FinishedBtnArray:FinishedArr AndBlock:^(NSInteger tag) {
-        if (tag<=members.count) {
+        if (tag<members.count) {
             //好友详细信息
         }else
         {
             switch (tag-members.count) {
                 case 0:{
                 //添加好友
-                
+                    CreateCircleViewController *cvc=[[CreateCircleViewController alloc]init];
+                    [cvc setMembers:members andCircleID:[circle_info.id stringValue]];
+                    [self.navigationController pushViewController:cvc animated:YES];
                 }break;
                 case 1:{
                 //删除好友
@@ -349,7 +372,7 @@
                 case 1:{
                     cell.textLabel.text=@"我的小名";
                     Circle_NickName_Lable=[[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth-230, 10, 200,30)];
-                    Circle_NickName_Lable.text=[circle_info.userId stringValue];
+                    Circle_NickName_Lable.text=myinf.nick;
                     Circle_NickName_Lable.textAlignment=NSTextAlignmentRight;
                     [Circle_NickName_Lable setTextColor:[UIColor whiteColor]];
                     Circle_NickName_Lable.font=[UIFont boldSystemFontOfSize:16];

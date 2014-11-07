@@ -41,6 +41,7 @@
 }
 - (void)CreateUI
 {
+    self.isAllowScroll=TableIsForbiddenScroll;
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Nav_Circle"] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBarHidden=NO;
     self.navigationItem.titleView=_titleView;
@@ -122,6 +123,7 @@
         case 203:{
         //创建圈子跳转到创建界面
             CreateCircleViewController *cvc=[[CreateCircleViewController alloc]init];
+            [cvc createStart];
             [self.navigationController pushViewController:cvc animated:YES];
 
         }break;
@@ -201,8 +203,10 @@
         }
         
         if (IsSuccess) {
+            
             if ([result isKindOfClass:[NSDictionary class]]) {
                 NSDictionary *dic=(NSDictionary *)result;
+                NSLog(@"%@",[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]);
                 NSArray *CircleList=[dic objectForKey:@"group"];
                 for (NSDictionary *sdic in CircleList) {
                     KBCircleInfo *cinf=[[KBCircleInfo alloc]init];
