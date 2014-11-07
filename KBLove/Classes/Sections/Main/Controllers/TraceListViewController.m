@@ -141,6 +141,9 @@
             return;
         }
     }
+    TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
+    [self.navigationController pushViewController:tracker animated:YES];
+    
 }
 
 

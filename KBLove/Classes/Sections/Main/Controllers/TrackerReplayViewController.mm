@@ -156,7 +156,8 @@
                 device.sn=data_Array[i][@"deviceSn"];
                 device.stayed=[data_Array[i][@"stayed"] floatValue];
                 device.heading=[data_Array[i][@"direction"] floatValue];
-//                device.point={device.lat,device.lang};
+                BMKGeoPoint point={device.lat,device.lang};
+                device.point=point;
                 [_statusArray addObject:device];
                 
             }
@@ -861,6 +862,26 @@
     }
 }
 
+- (IBAction)zoomInMap:(id)sender
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        float zoomlevel=_mapView.zoomLevel;
+        _mapView.zoomLevel=++zoomlevel;
+    }else{
+        float zoomlevel=_mapView.zoomLevel;
+        _mapView.zoomLevel=++zoomlevel;
+    }
+}
+- (IBAction)zoomOutMap:(id)sender
+{
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        float zoomlevel=_mapView.zoomLevel;
+        _mapView.zoomLevel=--zoomlevel;
+    }else{
+        float zoomlevel=_mapView.zoomLevel;
+        _mapView.zoomLevel=--zoomlevel;
+    }
+}
 
 
 #pragma BKMapView delegate

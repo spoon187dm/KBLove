@@ -40,6 +40,7 @@
 		BC256CB41A06196F00EDFFBC /* CCWarning.m in Sources */ = {isa = PBXBuildFile; fileRef = BC256CB31A06196F00EDFFBC /* CCWarning.m */; };
 		BC256CB71A061A8200EDFFBC /* CCReplayAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC256CB61A061A8200EDFFBC /* CCReplayAnnotationView.m */; };
 		BC256CBA1A061AEE00EDFFBC /* CCDeviceStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BC256CB91A061AEE00EDFFBC /* CCDeviceStatus.m */; };
+		BC33DFDD1A07B9E7001D6829 /* ZWL_MapViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC33DFDC1A07B9E7001D6829 /* ZWL_MapViewTool.m */; };
 		BC44AD7519F166440067764F /* SendMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7419F166440067764F /* SendMessageView.xib */; };
 		BC44AD7D19F169CC0067764F /* chat_bg_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7719F169CC0067764F /* chat_bg_default.jpg */; };
 		BC44AD7E19F169CC0067764F /* chat_bottom_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */; };
@@ -856,6 +857,8 @@
 		BC256CB61A061A8200EDFFBC /* CCReplayAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCReplayAnnotationView.m; sourceTree = "<group>"; };
 		BC256CB81A061AEE00EDFFBC /* CCDeviceStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDeviceStatus.h; sourceTree = "<group>"; };
 		BC256CB91A061AEE00EDFFBC /* CCDeviceStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDeviceStatus.m; sourceTree = "<group>"; };
+		BC33DFDB1A07B9E7001D6829 /* ZWL_MapViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWL_MapViewTool.h; sourceTree = "<group>"; };
+		BC33DFDC1A07B9E7001D6829 /* ZWL_MapViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWL_MapViewTool.m; sourceTree = "<group>"; };
 		BC44AD7419F166440067764F /* SendMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageView.xib; sourceTree = "<group>"; };
 		BC44AD7719F169CC0067764F /* chat_bg_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_bg_default.jpg; sourceTree = "<group>"; };
 		BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bottom_bg@2x.png"; sourceTree = "<group>"; };
@@ -1840,8 +1843,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */,
 				BC9B788B1A04E33B00A666B7 /* AMapSearchKit.framework in Frameworks */,
+				BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */,
 				BC9B78851A04E2CD00A666B7 /* CoreTelephony.framework in Frameworks */,
 				BC9B78831A04E2B200A666B7 /* libz.dylib in Frameworks */,
 				BC9B78811A04E2A100A666B7 /* libstdc++.6.0.9.dylib in Frameworks */,
@@ -1918,6 +1921,14 @@
 				6ECC038319ECFCC60008ACAD /* AddFriendButton.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		BC1C8A6F1A08C5BB00689676 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C8A701A08C5E900689676 /* FenceSettingView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BC44AD7619F169CC0067764F /* ChatTestImage */ = {
@@ -2018,6 +2029,10 @@
 				BC256C9C1A06183500EDFFBC /* ZWL_TimeUtils.m */,
 				BC777FBD1A0507BB00349CCD /* MapUtils.h */,
 				BC777FBE1A0507BB00349CCD /* MapUtils.m */,
+				BCE240CC1A076408006B29D1 /* ZWL_ReGeoRecodeTool.h */,
+				BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */,
+				BC33DFDB1A07B9E7001D6829 /* ZWL_MapViewTool.h */,
+				BC33DFDC1A07B9E7001D6829 /* ZWL_MapViewTool.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -3078,6 +3093,7 @@
 		F99E76121A00D3A8002FCB1F /* DeviceSetting */ = {
 			isa = PBXGroup;
 			children = (
+				BC1C8A6F1A08C5BB00689676 /* View */,
 				F99E76131A00D3A8002FCB1F /* CarDetailSettingViewController.h */,
 				F99E76141A00D3A8002FCB1F /* CarDetailSettingViewController.m */,
 				F99E76151A00D3A8002FCB1F /* CarSettingViewController.h */,
@@ -3092,6 +3108,8 @@
 				F99E761E1A00D3A8002FCB1F /* PetSettingViewController.m */,
 				F99E761F1A00D3A8002FCB1F /* SettingTableViewController.h */,
 				F99E76201A00D3A8002FCB1F /* SettingTableViewController.m */,
+				BC1C8A6C1A08C59100689676 /* FenceSettingViewController.h */,
+				BC1C8A6D1A08C59100689676 /* FenceSettingViewController.m */,
 			);
 			path = DeviceSetting;
 			sourceTree = "<group>";
@@ -4998,6 +5016,7 @@
 				F9F3AEA819F63E5800E0A0F9 /* 图标_51.png in Resources */,
 				F9F3AFBB19F63E5800E0A0F9 /* 设置01_28.png in Resources */,
 				F91A0C9519E7880C009ADB44 /* InfoPlist.strings in Resources */,
+				BC1C8A711A08C5E900689676 /* FenceSettingView.xib in Resources */,
 				BC256C901A05F59000EDFFBC /* zoomout_select.png in Resources */,
 				F92DBDAF19ED5C1900BBE573 /* graycircle3.png in Resources */,
 				F9F3AEE519F63E5800E0A0F9 /* 好友4_06.png in Resources */,
@@ -5571,6 +5590,7 @@
 				F992464C1A048C5400599E74 /* UIView+Extension.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,
+				BC33DFDD1A07B9E7001D6829 /* ZWL_MapViewTool.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
@@ -5583,6 +5603,7 @@
 				F9AD8C071A060D44009A55D2 /* TraceCell.m in Sources */,
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				BCE240CE1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m in Sources */,
 				BC256C961A06171A00EDFFBC /* TrackerReplayViewController.mm in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
@@ -5616,6 +5637,7 @@
 				F99246461A048C5400599E74 /* TableRefreshBaseView.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
 				BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */,
+				BC1C8A6E1A08C59100689676 /* FenceSettingViewController.m in Sources */,
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				F975FE7919EE5FCF00D13D86 /* DeviceTableHeadView.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,

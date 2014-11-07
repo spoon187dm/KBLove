@@ -16,4 +16,9 @@
  */
 
 
+static NSString *const BAIDUMAPVIEWKEY = @"HekPo3DvBn5qiKG3sC3aUpjE";
+static NSString *const GAODEMAOVIEWKEY = @"16aceaed9c6b89cea04f5eafa17d44de";
+
+
+
 #endif
