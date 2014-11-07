@@ -24,13 +24,13 @@
     [dict setValue:[NSNumber numberWithFloat:_speed] forKey:kSPEED];
     [dict setValue:[NSNumber numberWithFloat:_flowTotal] forKey:kFLOW_TOTLE];
     [dict setValue:[NSNumber numberWithFloat:_flow] forKey:kFLOW];
-    [dict setValue:[NSNumber numberWithInt:_battery] forKey:kBATTERY];
-    [dict setValue:[NSNumber numberWithInt:_status] forKey:kSTATUS];
+    [dict setValue:[NSNumber numberWithInteger:_battery] forKey:kBATTERY];
+    [dict setValue:[NSNumber numberWithInteger:_status] forKey:kSTATUS];
     // TODO 到底用的是哪个？
 //    [dict setValue:[NSNumber numberWithFloat:_heading] forKey:kHEAD];
     [dict setValue:[NSNumber numberWithFloat:_heading] forKey:kDIRECTION];
     [dict setValue:[NSNumber numberWithLongLong:_receive] forKey:kRECEIVE];
-    [dict setValue:[NSNumber numberWithInt:_stayed] forKey:kSTAYED];
+    [dict setValue:[NSNumber numberWithInteger:_stayed] forKey:kSTAYED];
     [dict setValue:[NSNumber numberWithLongLong:_stamp] forKey:kSTAMP];
 
     if (_address) {

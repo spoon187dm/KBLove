@@ -39,7 +39,7 @@
     if ([jason isEqual:[NSNull null]]) {
         return;
     }
-    _age = [ZWL_Utils intValue:jason aKey:kAGE];
+    _age = (int)[ZWL_Utils intValue:jason aKey:kAGE];
     _description = [jason objectForKey:kDESC];
 }
 

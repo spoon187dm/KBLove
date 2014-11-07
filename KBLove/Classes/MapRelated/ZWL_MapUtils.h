@@ -18,7 +18,7 @@
 
 
 
-+ (ZWL_MapUtils *)sharedClient;
+//+ (ZWL_MapUtils *)sharedClient;
 +(CLLocationCoordinate2D) geoPoint2Coordinate2D:(BMKGeoPoint)p;
 +(CLLocationCoordinate2D)geoGaoDePoint2Coordinate2D:(MAMapPoint)p;
 

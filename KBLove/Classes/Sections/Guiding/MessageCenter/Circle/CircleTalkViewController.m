@@ -96,22 +96,26 @@
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
     NSInteger tak=_talkType;
     __weak KBFriendInfo *finf=_friend_info;
+    __weak typeof(_circle_info)weak_circle_info = _circle_info;
+    __weak typeof(_friend_info)weak_friend_info = _friend_info;
+    __weak typeof(_dataArray)weak_dataArray = _dataArray;
+    __weak typeof(_tableView)weak_tableView = _tableView;
     [_sendMsgView setBlock:^(KBMessageInfo *msg) {
         //发送相应消息
         msg.FromUser_id=[KBUserInfo sharedInfo].user_id;
         msg.TalkEnvironmentType=tak;
         msg.time=[NSString TimeJabLong];
         if (tak==KBTalkEnvironmentTypeCircle) {
-            msg.Circle_id=[_circle_info.id stringValue];
+            msg.Circle_id=[weak_circle_info.id stringValue];
         }else
         {
-            msg.ToUser_id=_friend_info.id;
+            msg.ToUser_id=weak_friend_info.id;
         }
-        [_dataArray addObject:msg];
+        [weak_dataArray addObject:msg];
         [[KBDBManager shareManager] insertDataWithModel:msg];
-        [_tableView reloadData];
-        if (_dataArray.count) {
-        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        [weak_tableView reloadData];
+        if (weak_dataArray.count) {
+        [weak_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:weak_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
                                 }
 
         if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeFriend)
@@ -159,7 +163,7 @@
         {
             //发送给圈子
             KBUserInfo *user=[KBUserInfo sharedInfo];
-            NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[_circle_info.id stringValue],@"content":msg.text,@"type":@"1",@"app_name":@"M2616_BD"};
+            NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[weak_circle_info.id stringValue],@"content":msg.text,@"type":@"1",@"app_name":@"M2616_BD"};
 
             AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
             [manager POST:[Circle_SendCircleMessage_URL] parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {

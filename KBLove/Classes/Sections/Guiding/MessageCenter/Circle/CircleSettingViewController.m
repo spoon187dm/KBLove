@@ -285,7 +285,7 @@
         }
         
     } AndFinishedBlock:^(NSInteger tag) {
-        NSLog(@"将要删除%d位好友",tag);
+        NSLog(@"将要删除%ld位好友",(long)tag);
         KBFriendInfo *finf=members[tag];
         NSString *deleteUrl=[Circle_DeleteMember_URL,[KBUserInfo sharedInfo].user_id,[KBUserInfo sharedInfo].token,[circle_info.id stringValue],finf.id];
         NSLog(@"%@",deleteUrl);

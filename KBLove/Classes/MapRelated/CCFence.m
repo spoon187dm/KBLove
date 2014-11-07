@@ -27,23 +27,23 @@
 {
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
-    [dict setValue:[NSNumber numberWithInt:_type] forKey:kTYPE];
+    [dict setValue:[NSNumber numberWithInteger:_type] forKey:kTYPE];
     if (_name) {
         [dict setObject:_name forKey:kNAME];
     }
-    [dict setValue:[NSNumber numberWithInt:_outType] forKey:kOUTSTR];
+    [dict setValue:[NSNumber numberWithInteger:_outType] forKey:kOUTSTR];
     if (_sn) {
         [dict setObject:_sn forKey:kDEVICE_SN];
     }
     
     if (_type == CIRCLE) {
     
-        [dict setValue:[NSNumber numberWithInt:_radius] forKey:kRADIUS];
+        [dict setValue:[NSNumber numberWithInteger:_radius] forKey:kRADIUS];
         NSMutableArray* array = [[NSMutableArray alloc] init];
         NSInteger lang = (_lang / 1e6);
-        [array addObject:[NSNumber numberWithInt:lang]];
+        [array addObject:[NSNumber numberWithInteger:lang]];
         NSInteger lat = (_lat / 1e6);
-        [array addObject:[NSNumber numberWithInt:lat]];
+        [array addObject:[NSNumber numberWithInteger:lat]];
         [dict setObject:array forKey:kCENTER];
     }
     else
@@ -61,9 +61,9 @@
                 
 //                [[array objectAtIndex:i] getValue:&point];
                 NSInteger lang = point.longitudeE6 / 1e6;
-                [p setValue:[NSNumber numberWithInt:lang] forKey:kLANG];
+                [p setValue:[NSNumber numberWithInteger:lang] forKey:kLANG];
                 NSInteger lat = point.latitudeE6 / 1e6;
-                [p setValue:[NSNumber numberWithInt:lat] forKey:kLAT];
+                [p setValue:[NSNumber numberWithInteger:lat] forKey:kLAT];
 
                 [array addObject:p];
             }

@@ -77,7 +77,7 @@
     }
 
     if (_type != DEVICE_UNKNOW) {
-        [dict setObject:[NSNumber numberWithInt:_type] forKey:kTYPE];
+        [dict setObject:[NSNumber numberWithInteger:_type] forKey:kTYPE];
     }
     
     if (![ZWL_Utils isEmpty:_hardware]) {
@@ -99,35 +99,35 @@
     }
     
     if (_tick != INVALID_ID) {
-        [dict setValue:[NSNumber numberWithInt:_tick] forKey:kTICK];
+        [dict setValue:[NSNumber numberWithInteger:_tick] forKey:kTICK];
     }
     
     if (_warningBattery != INVALID_ID) {
-        [dict setValue:[NSNumber numberWithInt:_warningBattery] forKey:kWARNING_BATTERY];
+        [dict setValue:[NSNumber numberWithInteger:_warningBattery] forKey:kWARNING_BATTERY];
     }
     
     if (_warningFlow != INVALID_ID) {
-        [dict setValue:[NSNumber numberWithInt:_warningFlow] forKey:kWARNING_FLOW];
+        [dict setValue:[NSNumber numberWithInteger:_warningFlow] forKey:kWARNING_FLOW];
     }
     
     if (_speedThreshold != INVALID_ID) {
-        [dict setValue:[NSNumber numberWithInt:_speedThreshold] forKey:kSPEED_THRESHOLD];
+        [dict setValue:[NSNumber numberWithInteger:_speedThreshold] forKey:kSPEED_THRESHOLD];
     }
     
     if (_speedingSwitch != INVALID_SWITCH) {
-        [dict setValue:[NSNumber numberWithInt:_speedingSwitch] forKey:kSPEEDING_SWITCH];
+        [dict setValue:[NSNumber numberWithInteger:_speedingSwitch] forKey:kSPEEDING_SWITCH];
     }
     
     if (_movingSwitch != INVALID_SWITCH) {
-        [dict setValue:[NSNumber numberWithInt:_movingSwitch] forKey:kMOVING_SWITCH];
+        [dict setValue:[NSNumber numberWithInteger:_movingSwitch] forKey:kMOVING_SWITCH];
     }
     
     if (_breakAwaySwitch != INVALID_SWITCH) {
-        [dict setValue:[NSNumber numberWithInt:_breakAwaySwitch] forKey:kBREAK_AWAY_SWITCH];
+        [dict setValue:[NSNumber numberWithInteger:_breakAwaySwitch] forKey:kBREAK_AWAY_SWITCH];
     }
     
     if (_fenceWarningSwitch != INVALID_SWITCH) {
-        [dict setValue:[NSNumber numberWithInt:_fenceWarningSwitch] forKey:kSMS_SWITCH];
+        [dict setValue:[NSNumber numberWithInteger:_fenceWarningSwitch] forKey:kSMS_SWITCH];
     }
     
     if (_status) {

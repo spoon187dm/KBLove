@@ -412,7 +412,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFe-I8-WbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="802"/>
+            <point key="canvasLocation" x="660" y="858"/>
         </scene>
         <!--报警列表-->
         <scene sceneID="csz-8w-I4h">
@@ -994,7 +994,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUU-GV-rwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="802"/>
+            <point key="canvasLocation" x="989" y="858"/>
         </scene>
         <!--车辆设置-->
         <scene sceneID="Xae-RU-r6b">
@@ -1033,7 +1033,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fUE-9g-pAV">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 >">
+                                    <state key="normal" title="信息修改 &gt;">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1304,7 +1304,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="btl-AF-KKy">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 >">
+                                    <state key="normal" title="信息修改 &gt;">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1530,7 +1530,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1dM-PR-ejR">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="信息修改 >">
+                                    <state key="normal" title="信息修改 &gt;">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -1655,7 +1655,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zwa-XU-imw">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="9.5" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="重启设备">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1677,7 +1677,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7pG-xX-4sE">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
+                                                    <rect key="frame" x="9.5" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="初始化设备">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2026,7 +2026,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hA1-9d-2YA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="802"/>
+            <point key="canvasLocation" x="1320" y="858"/>
         </scene>
         <!--人员信息详细-->
         <scene sceneID="mQJ-gp-9hG">
@@ -2274,7 +2274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29q-fj-QpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="802"/>
+            <point key="canvasLocation" x="1654" y="858"/>
         </scene>
     </scenes>
     <resources>

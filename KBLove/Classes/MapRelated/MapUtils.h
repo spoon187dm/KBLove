@@ -15,7 +15,7 @@
 
 @interface MapUtils : NSObject
 
-+ (MapUtils *)sharedClient;
+//+ (MapUtils *)sharedClient;
 +(CLLocationCoordinate2D) geoPoint2Coordinate2D:(BMKGeoPoint)p;
 +(BMKGeoPoint) coordinate2D2geoPoint:(CLLocationCoordinate2D)coor;
 

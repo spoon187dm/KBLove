@@ -359,7 +359,7 @@
         }else{
         NSLog(@"%@",[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1,app_name]);
         [KBFreash startRefreshWithTitle:@"创建中..." inView:self.view];
-        [[KBHttpRequestTool sharedInstance]request:[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+        [[KBHttpRequestTool sharedInstance]request:[Circle_Create_URL,user.user_id,user.token,memberStr,2,2,1,app_name] requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
             [KBFreash StopRefreshinView:self.view];
             if (IsSuccess) {
                 if ([result isKindOfClass:[NSDictionary class]]) {

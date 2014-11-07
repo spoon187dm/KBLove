@@ -345,7 +345,7 @@
 #pragma mark - menuActionDelegate
 - (void)menuChooseIndex:(NSInteger)cellIndexNum menuIndexNum:(NSInteger)menuIndexNum
 {
-    NSLog(@"%d",menuIndexNum);
+    NSLog(@"%ld",(long)menuIndexNum);
 }
 
 - (UIButton *)MakeButtonWithBgImgName:(NSString *)img SelectedImg:(NSString *)simg  Frame:(CGRect)frame target:(id)tar Sel:(SEL)selector AndTag:(NSInteger) tag

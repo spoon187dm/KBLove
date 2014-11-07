@@ -105,14 +105,14 @@
 +(NSString*)getAppleTimeFormat:(long long)aTime
 {
     NSDate* time = [NSDate dateWithTimeIntervalSince1970:aTime / 1000.0];
-    int year = [ZWL_TimeUtils year:time];
+    int year = (int)[ZWL_TimeUtils year:time];
 //    int month = [CCTimeUtils month:time];
-    int dayY = [ZWL_TimeUtils dayOfYear:time];
+    int dayY = (int)[ZWL_TimeUtils dayOfYear:time];
 //    int dayM = [CCTimeUtils dayOfMonth:time];
 
     NSDate *today = [NSDate date];
-    int yearN = [ZWL_TimeUtils year:today];
-    int dayN = [ZWL_TimeUtils dayOfYear:today];
+    int yearN =(int)[ZWL_TimeUtils year:today];
+    int dayN = (int)[ZWL_TimeUtils dayOfYear:today];
     
     NSMutableString* ret = [[NSMutableString alloc]init];
     if (yearN > year) {

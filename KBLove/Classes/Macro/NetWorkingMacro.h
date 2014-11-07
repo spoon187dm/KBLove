@@ -18,7 +18,7 @@
 #define kTRIAL_ACCOUNT_PWD @"123456"
 
 //注册
-static NSString *const REGRSTER_URL = @"http://test.capcare.com.cn:8081/api/register.do?type=%d&name=%@&pwd=%@";
+static NSString *const REGRSTER_URL = @"http://test.capcare.com.cn:8081/api/register.do?type=%ld&name=%@&pwd=%@";
 //登陆
 static NSString *const LOGIN_URL = @"http://test.capcare.com.cn:8081/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d";
 //修改密码

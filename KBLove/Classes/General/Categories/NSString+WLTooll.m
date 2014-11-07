@@ -193,7 +193,7 @@
     NSInteger yearsAgo = timeInterval / YEARS;
     if (1 < yearsAgo) {
         
-        return [NSString stringWithFormat:@"%d 年以前", yearsAgo];
+        return [NSString stringWithFormat:@"%ld 年以前", (long)yearsAgo];
     } else if (1 == yearsAgo) {
         
         return @"1 年以前";
@@ -202,7 +202,7 @@
     NSInteger monthsAgo = timeInterval / MONTHS;
     if (1 < monthsAgo) {
         
-        return [NSString stringWithFormat:@"%d 月以前", monthsAgo];;
+        return [NSString stringWithFormat:@"%ld 月以前", (long)monthsAgo];;
     } else if (1 == monthsAgo) {
         
         return [NSString stringWithFormat:@"1 月以前"];
@@ -211,7 +211,7 @@
     NSInteger daysAgo = timeInterval / DAYS;
     if (1 < daysAgo) {
         
-        return [NSString stringWithFormat:@"%d 天以前", daysAgo];
+        return [NSString stringWithFormat:@"%ld 天以前", (long)daysAgo];
     } else if (1 == daysAgo) {
         
         return @"1 天以前";

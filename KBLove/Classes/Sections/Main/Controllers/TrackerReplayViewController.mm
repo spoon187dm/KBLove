@@ -156,7 +156,7 @@
                 device.sn=data_Array[i][@"deviceSn"];
                 device.stayed=[data_Array[i][@"stayed"] floatValue];
                 device.heading=[data_Array[i][@"direction"] floatValue];
-                BMKGeoPoint point={device.lat,device.lang};
+                BMKGeoPoint point={(int)device.lat,(int)device.lang};
                 device.point=point;
                 [_statusArray addObject:device];
                 
@@ -210,7 +210,7 @@
         NSInteger size = _statusArray.count;
         CLLocationCoordinate2D* points = new CLLocationCoordinate2D[size];
         
-        for(int idx = size - 1; idx >= 0; idx--)
+        for(int idx = (int)size - 1; idx >= 0; idx--)
         {
             CCDeviceStatus* current = [_statusArray objectAtIndex:idx];
             points[idx] = [ZWL_MapUtils geoPoint2Coordinate2D:current.point];
@@ -377,8 +377,8 @@
     NSInteger lastIndex = statusArray.count - 1;
     CCDeviceStatus* start = [statusArray objectAtIndex:lastIndex];
     BMKGeoPoint point;
-    point.longitudeE6 = start.lang;
-    point.latitudeE6 = start.lat;
+    point.longitudeE6 = (int)start.lang;
+    point.latitudeE6 = (int)start.lat;
     _currentPointView.content = [self getStatusInfo:lastIndex];
     
     // 初始化角度
@@ -421,17 +421,17 @@
     NSMutableString* str = [NSMutableString stringWithString:@"停留:"];
     NSInteger hour = stayed / 60 / 60;
     if (hour > 0) {
-        [str appendFormat:@"%d小时", hour];
+        [str appendFormat:@"%ld小时", (long)hour];
     }
     
     NSInteger min = stayed / 60 %60;
     if (min > 0) {
-        [str appendFormat:@"%d分", min];
+        [str appendFormat:@"%ld分", (long)min];
     }
     
     NSInteger sec = stayed % 60;
     if (sec > 0) {
-        [str appendFormat:@"%d秒", sec];
+        [str appendFormat:@"%ld秒", (long)sec];
     }
     return [NSString stringWithString:str];
 }
@@ -578,7 +578,7 @@
 {
     NSInteger lastIndex = _currentIndex;
     _currentIndex = [self calcCurrentIndex];//根据currentTime  而currentTime由slider滑动设置
-    NSLog(@"%d",_currentIndex);
+    NSLog(@"%ld",(long)_currentIndex);
     [self updateSliderPopover:_currentTime];
     
     NSArray* statusArray = [self getCurrentStatusArray];
@@ -633,7 +633,7 @@
 -(void) addColorTrack:(NSInteger)fromIndex toIndex:(NSInteger)toIndex
 {
     NSArray* statusArray = [self getCurrentStatusArray];
-    for (int i = fromIndex; i > toIndex; i--) {
+    for (int i = (int)fromIndex; i > toIndex; i--) {
         CCDeviceStatus* current = [statusArray objectAtIndex:i];
         CCDeviceStatus* next = [statusArray objectAtIndex:i - 1];
         if (current && next) {
@@ -708,7 +708,7 @@
     long long currentTime = _currentStartTime + _currentTime;
     if (currentTime < nextStatus.receive) {
         // 停留时间的单位是秒，需要转成毫秒
-        NSInteger stayedTime = currentStatus.stayed * 1000;
+//        NSInteger stayedTime = currentStatus.stayed * 1000;
         /**
          *   自定义调试stayedTime=200
          */
@@ -774,7 +774,7 @@
     long long currentTime = _currentStartTime + _currentTime;
     NSArray* statusArray = [self getCurrentStatusArray];
     NSInteger size = statusArray.count;
-    for (int i = size - 1; i >= 1; i--) {
+    for (int i = (int)size - 1; i >= 1; i--) {
         CCDeviceStatus* first = [statusArray objectAtIndex:i];
         CCDeviceStatus* second = [statusArray objectAtIndex:i - 1];
         if (currentTime >= first.receive && currentTime < second.receive) {

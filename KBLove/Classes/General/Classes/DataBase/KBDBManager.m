@@ -122,7 +122,7 @@ static KBDBManager *manager;
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number
 {
 
-    NSLog(@"%d,%d",page,number);
+    NSLog(@"%ld,%ld",(long)page,(long)number);
     NSMutableArray *resultarr=[[NSMutableArray alloc]init];
     NSMutableArray *allData=[[NSMutableArray alloc]init];
     NSString *selectSQL;
@@ -155,21 +155,20 @@ static KBDBManager *manager;
     }
     //返回指定条数信息
     
-    NSLog(@"%d",allData.count);
+    NSLog(@"%lu",(unsigned long)allData.count);
     if (allData.count < (page +1)*number) {
         if (allData.count >(page)*number) {
             for (int i=0; i<allData.count-(page)*number; i++) {
                 [resultarr addObject:allData[i]];
             }
- 
         }
     }else
     {
-    for (int i=allData.count-(page+1)*number; i<allData.count-(page)*number; i++) {
+    for (int i=(int)(allData.count-(page+1)*number); i<allData.count-(page)*number; i++) {
         [resultarr addObject:allData[i]];
     }
     }
-    NSLog(@"%d",resultarr.count);
+    NSLog(@"%lu",(unsigned long)resultarr.count);
     return  resultarr ;
 }
 - (NSString *)getListName

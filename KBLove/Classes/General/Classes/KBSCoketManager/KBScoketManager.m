@@ -89,8 +89,8 @@ static KBScoketManager *manager;
     [newMsg appendString:msg];
     NSRange start=[newMsg rangeOfString:@"<push>"];
     NSRange end  =[newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
-    NSLog(@"%d",start.location);
-    NSLog(@"%d",end.location);
+    NSLog(@"%lu",(unsigned long)start.location);
+    NSLog(@"%lu",(unsigned long)end.location);
     
     if (start.location==0&&end.length>0) {
         NSMutableArray *array=[[NSMutableArray alloc]init];
@@ -183,7 +183,7 @@ static KBScoketManager *manager;
             
             NSArray *msgArr=friend_verifys[i];
             NSLog(@"%@",msgArr);
-            NSLog(@"%d",msgArr.count);
+            NSLog(@"%lu",(unsigned long)msgArr.count);
             [msg_idArray addObject:[msgArr lastObject]];
             [self analyseOneMessageWithtype:6 AndArray:msgArr];
         }
@@ -267,7 +267,7 @@ static KBScoketManager *manager;
             switch (msginf.MessageType) {
                 case KBMessageTypeAddFriend:{
                     [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@",msgarr[3]] cancle:@"同意" otherbutton:@"拒绝" block:^(NSInteger index) {
-                        NSLog(@"%d",index);
+                        NSLog(@"%ld",(long)index);
                         KBUserInfo *user=[KBUserInfo sharedInfo];
                         NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"app_name":app_name,@"friend_id":msginf.FromUser_id,@"is_pass":[NSNumber numberWithInteger:(index+1)]};
                         [[KBHttpRequestTool sharedInstance] request:[Circle_SendIsAGreeFriendMessage_URL] requestType:KBHttpRequestTypePost params:dic cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {

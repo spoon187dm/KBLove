@@ -16,7 +16,7 @@
 -(id)generateJasonObj
 {
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
-    [dict setValue:[NSNumber numberWithInt:_type] forKey:kTYPE];
+    [dict setValue:[NSNumber numberWithInteger:_type] forKey:kTYPE];
     [dict setValue:[NSNumber numberWithLongLong:_serialNum] forKey:kSERIALNUM];
     [dict setValue:[NSNumber numberWithLongLong:_uid] forKey:kID];
     [dict setValue:[NSNumber numberWithDouble:_lang / 1e6] forKey:kLANG];
@@ -27,15 +27,15 @@
         [dict setObject:_info forKey:kINFO];
     }
     
-    [dict setValue:[NSNumber numberWithInt:_level] forKey:kLEVEL];
-    [dict setValue:[NSNumber numberWithInt:_readState] forKey:kREADED];
+    [dict setValue:[NSNumber numberWithInteger:_level] forKey:kLEVEL];
+    [dict setValue:[NSNumber numberWithInteger:_readState] forKey:kREADED];
     [dict setValue:[NSNumber numberWithLongLong:_time] forKey:kTIME];
     
     if (_sn) {
         [dict setObject:_sn forKey:kDEVICESN];
     }
-    [dict setValue:[NSNumber numberWithInt:_battery] forKey:kBATTERY];
-    [dict setValue:[NSNumber numberWithInt:_flow] forKey:kFLOW];
+    [dict setValue:[NSNumber numberWithInteger:_battery] forKey:kBATTERY];
+    [dict setValue:[NSNumber numberWithInteger:_flow] forKey:kFLOW];
     
     if (_address) {
         [dict setObject:_address forKey:kADDR];
@@ -150,7 +150,7 @@
 			break;
             
 		case ALARM_LOW_BATTERY:
-			[ret appendFormat:@"电量剩余：%d%%, 请注意充电", _battery];
+			[ret appendFormat:@"电量剩余：%ld%%, 请注意充电", _battery];
 			break;
             
 		case ALARM_SPDHI:

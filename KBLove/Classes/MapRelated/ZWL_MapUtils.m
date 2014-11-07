@@ -280,23 +280,27 @@ static ZWL_MapUtils *maptool;
     for (NSInteger i = 1; i < size; i++) {
         status = [statusInfo objectAtIndex:i];
         if (status.lat < topLeft.latitudeE6) {
-            topLeft.latitudeE6 = status.lat;
+            topLeft.latitudeE6 = (int)status.lat;
         }
         
         if (status.lang < topLeft.longitudeE6) {
-            topLeft.longitudeE6 = status.lang;
+            topLeft.longitudeE6 = (int)status.lang;
         }
         
         if (status.lat > bottomRight.latitudeE6) {
-            bottomRight.latitudeE6 = status.lat;
+            bottomRight.latitudeE6 = (int)status.lat;
         }
         
         if (status.lang > bottomRight.longitudeE6) {
-            bottomRight.longitudeE6 = status.lang;
+            bottomRight.longitudeE6 = (int)status.lang;
         }
     }
     
     [ZWL_MapUtils adjustMapCenterAndSpan:mapView start:[ZWL_MapUtils geoPoint2Coordinate2D:topLeft] end:[ZWL_MapUtils geoPoint2Coordinate2D:bottomRight]];
+}
+
++(void) adjustGaoDeMapCenterAndSpan:(MAMapView*)mapView statusInfo:(NSArray*) statusInfo{
+    
 }
 //
 //+(void) adjustGaoDeMapCenterAndSpan:(MAMapView*)mapView statusInfo:(NSArray*) statusInfo // CCDeviceStatus

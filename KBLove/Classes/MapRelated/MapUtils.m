@@ -12,9 +12,6 @@
 
 @implementation MapUtils
 
-
-
-
 +(CLLocationCoordinate2D)geoPoint2Coordinate2D:(BMKGeoPoint)p
 {
     CLLocationCoordinate2D coor;
@@ -207,19 +204,19 @@
     for (NSInteger i = 1; i < size; i++) {
         status = [statusInfo objectAtIndex:i];
         if (status.lat < topLeft.latitudeE6) {
-            topLeft.latitudeE6 = status.lat;
+            topLeft.latitudeE6 = (int)status.lat;
         }
         
         if (status.lang < topLeft.longitudeE6) {
-            topLeft.longitudeE6 = status.lang;
+            topLeft.longitudeE6 = (int)status.lang;
         }
         
         if (status.lat > bottomRight.latitudeE6) {
-            bottomRight.latitudeE6 = status.lat;
+            bottomRight.latitudeE6 = (int)status.lat;
         }
         
         if (status.lang > bottomRight.longitudeE6) {
-            bottomRight.longitudeE6 = status.lang;
+            bottomRight.longitudeE6 = (int)status.lang;
         }
     }
     
