@@ -33,7 +33,8 @@
     self.isAllowScroll = TableIsForbiddenScroll;
     [self replaceSelfViewToNormal];
 
-//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
+    [self changeNavigationBarFromImage:@"bg1"];
     [self setUpView];
     [self loadData];
 }

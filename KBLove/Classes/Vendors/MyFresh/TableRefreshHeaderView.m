@@ -173,7 +173,7 @@
         {
             // 设置文字
 			self.statusLabel.text = TableRefreshHeaderPullToRefresh;
-            
+            self.lastUpdateTimeLabel.hidden = YES;
             // 刷新完毕
             if (TableRefreshStateRefreshing == oldState) {
                 self.arrowImage.transform = CGAffineTransformIdentity;
@@ -196,6 +196,7 @@
         {
             // 设置文字
             self.statusLabel.text = TableRefreshHeaderReleaseToRefresh;
+            self.lastUpdateTimeLabel.hidden = NO;
             // 执行动画
             [UIView animateWithDuration:TableRefreshFastAnimationDuration animations:^{
                 self.arrowImage.transform = CGAffineTransformMakeRotation(M_PI);
@@ -207,7 +208,7 @@
         {
             // 设置文字
             self.statusLabel.text = TableRefreshHeaderRefreshing;
-            
+            self.lastUpdateTimeLabel.hidden = NO;
             // 执行动画
             [UIView animateWithDuration:TableRefreshFastAnimationDuration animations:^{
                 // 1.增加65的滚动区域

@@ -47,6 +47,7 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
     [self loadData];
     [self setUpBottomSelectView];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
+    [self changeNavigationBarFromImage:@"bg1"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

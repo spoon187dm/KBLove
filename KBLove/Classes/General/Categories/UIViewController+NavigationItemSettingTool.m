@@ -22,6 +22,15 @@
     }
 }
 
+- (void)changeNavigationBarFromImage:(NSString *)imagename{
+    UIImage *image = [UIImage imageNamed:imagename];
+    //    获取目标图片指定区域内容
+    CGImageRef imageref = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, 0, image.size.width, 64));
+    //    转化为新图片
+    UIImage *imageStar = [UIImage imageWithCGImage:imageref];
+    [self.navigationController.navigationBar setBackgroundImage:imageStar forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)addCustomNavigationItemWithImageName:(NSString *)imageName{
     [self.navigationController setNavigationBarHidden:YES];
     

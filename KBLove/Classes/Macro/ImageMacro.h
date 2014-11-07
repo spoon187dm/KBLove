@@ -9,6 +9,9 @@
 #ifndef KBLove_ImageMacro_h
 #define KBLove_ImageMacro_h
 
+#define ClearColor [UIColor clearColor]
+
+
 #define kImageUrlForName(x) [NSString stringWithFormat:@"http://118.194.192.104:1045/api/upload//api/upload/%@",x]
 
 #define kImage_car [UIImage imageNamed:@"图标_97"]

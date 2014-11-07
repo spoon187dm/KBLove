@@ -14,6 +14,7 @@
 #import "DropListView.h"
 #import "DeviceDetailViewController.h"
 #import "KBDeviceManager.h"
+#import "TableRefresh.h"
 @interface DeviceListViewController (){
     NSMutableArray *_dataArray;
     DeviceTableHeadView *_headView;
@@ -65,16 +66,20 @@
         
     }];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+    [self changeNavigationBarFromImage:@"bg"];
     
-    [self changeNavigationBarToClear];
-    
+    __weak typeof(self)weakSelf = self;
+    [self.tableView addHeaderWithCallback:^{
+        [weakSelf loadData];
+    }];
 }
 
 - (void)loadData{
     [KBDeviceManager getDeviceList:^(BOOL isSuccess, NSArray *resultArray) {
         if (isSuccess) {
             _dataArray = [resultArray mutableCopy];
+            [self.tableView headerEndRefreshing];
             [self.tableView reloadData];
         }
     }];
@@ -111,7 +116,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (!_headView) {
         _headView = [[[NSBundle mainBundle]loadNibNamed:@"DeviceTableHeadView" owner:self options:nil] lastObject];
-        _headView.backgroundColor = SYSTEM_COLOR;
+        _headView.backgroundColor = ClearColor;
         [RACObserve(_headView, selectedIndex) subscribeNext:^(NSNumber *index){
             NSLog(@"%@",index);
         }];
