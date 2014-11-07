@@ -1880,6 +1880,7 @@
 		6EA2BFED19ECB4E50024E6A2 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
+				BCDB329D1A0BBE0000288C2C /* Message */,
 				BC15E0051A076BE00016FB39 /* CircleAndFriendListViewController.h */,
 				BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */,
 				BC59833519ECB52800DAC76A /* Circle */,
@@ -2238,6 +2239,14 @@
 				BCB42E2719F1425B00A141C3 /* FMResultSet.m */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		BCDB329D1A0BBE0000288C2C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Message;
+			path = Friends/Message;
 			sourceTree = "<group>";
 		};
 		BCF1848C1A0B5182006843D1 /* DXSearchView */ = {
