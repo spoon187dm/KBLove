@@ -7,9 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface NSString (Localized)
+/**
+ 获取本地化的字符串
+ 
+ @param key 本地化字符串对应的key
+ 
+ @return 对应的字符
+ */
 + (NSString *)stringForLocalizedKey:(NSString *)key;
+@end
+
+@interface NSString (wldate)
++ (NSString *)stringFromDateNumber:(NSNumber *)number;
 @end
 
 @interface NSString (Font)
@@ -49,6 +60,7 @@
 - (NSString *)MD5Hash;
 
 @end
+
 /*董新扩展2014-10-16*/
 @interface NSString (WMString_Utilities)
 /*!

@@ -7,7 +7,9 @@
 //
 
 #import "TableMenuCell.h"
-
+@class KBTracePart;
 @interface TraceCell : TableMenuCell
+
+- (void)setUpViewWithModel:(KBTracePart *)part;
 
 @end

@@ -66,6 +66,21 @@
 @end
 
 #pragma mark -
+#pragma mark Date
+
+@implementation NSString (wldate)
+
++ (NSString *)stringFromDateNumber:(NSNumber *)number{
+    long long timetravel = [number longLongValue];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    NSString *str = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:timetravel/1000]];
+    return str;
+}
+
+@end
+
+#pragma mark -
 #pragma mark HashMD5
 @implementation NSString (NSString_Hashing)
 

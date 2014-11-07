@@ -9,6 +9,7 @@
 #import "TraceListViewController.h"
 #import "TraceCell.h"
 #import "KBDeviceManager.h"
+#import "TableRefresh.h"
 @interface TraceListViewController (){
     NSMutableArray *_dataArray;
 }
@@ -33,10 +34,14 @@
     self.isAllowScroll = TableIsForbiddenScroll;
     [self replaceSelfViewToNormal];
 
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
-    [self changeNavigationBarFromImage:@"bg1"];
+    
     [self setUpView];
-    [self loadData];
+    
+    __weak typeof(self) weakSelf = self;
+    [self.tableView addHeaderWithCallback:^{
+        [weakSelf loadData];
+    }];
+    [self.tableView headerBeginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,9 +54,8 @@
 #pragma mark View 操作
 
 - (void)setUpView{
-    UIImageView *imageView = [UIImageView imageViewWithFrame:self.view.bounds image:[UIImage imageNamed:@"bg"]];
-//    [self.view addSubview:imageView];
-//    [self.view sendSubviewToBack:imageView];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
+    [self changeNavigationBarFromImage:@"bg1"];
 }
 
 #pragma mark -
@@ -70,6 +74,7 @@
     long to = [current timeIntervalSince1970];
     [KBDeviceManager getDevicePart:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
         _dataArray = [result mutableCopy];
+        [self.tableView headerEndRefreshing];
         [self.tableView reloadData];
     }];
 }
@@ -118,12 +123,9 @@
         [menuImgArr addObject:dic];
     }
     
-    //    KBAlarm *device = _dataArray[indexPath.row];
-    //    [cell setEditing:YES];
+    KBTracePart *part = _dataArray[indexPath.row];
     [cell configWithData:indexPath menuData:menuImgArr cellFrame:CGRectMake(0, 0, 320, 200)];
-//    [cell startMyEdit:_editing];
-//    [cell setMySelected:[_selectedArray[indexPath.row] boolValue]];
-    //    [cell setData:device];
+    [cell setUpViewWithModel:part];
     
     return cell;
 }

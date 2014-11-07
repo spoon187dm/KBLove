@@ -10,7 +10,6 @@
 
 @interface TraceInfoView : UIView
 
-@property (weak, nonatomic) IBOutlet UIImageView *customHeadImageView;
 @property (weak, nonatomic) IBOutlet UILabel *startPlaceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *startTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endPlaceLabel;

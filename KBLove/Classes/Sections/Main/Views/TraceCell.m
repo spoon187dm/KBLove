@@ -9,6 +9,7 @@
 #import "TraceCell.h"
 #import <UIImageView+AFNetworking.h>
 #import "TraceInfoView.h"
+#import "KBTracePart.h"
 @implementation TraceCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -41,24 +42,6 @@
     return infoView;
 }
 
-//- (UIView *)menuViewForMenuCount:(NSInteger)count{
-//    UIView *view = [[UIView alloc] init];
-//    view.frame = CGRectMake(320 - 80*count, 0, 80*count, self.frame.size.height);
-//    view.backgroundColor = [UIColor clearColor];
-//    
-//    for (int i = 0; i < count; i++) {
-//        UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        menuBtn.tag = i;
-//        [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//        menuBtn.frame = CGRectMake(80*i, 0, 80, 100);
-//        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
-//        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:i] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
-//        [view addSubview:menuBtn];
-//    }
-//    
-//    return view;
-//}
-
 - (UIView *)menuViewForMenuCount:(NSInteger)count{
     UIView *view = [[UIView alloc] init];
     view.frame = CGRectMake(320 - 80*count, 0, 80, 100);
@@ -75,6 +58,27 @@
     }
     
     return view;
+}
+
+- (void)configWithData:(NSIndexPath *)indexPath menuData:(NSArray *)menuData cellFrame:(CGRect)cellFrame{
+    [super configWithData:indexPath menuData:menuData cellFrame:cellFrame];
+    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 100, kScreenWidth, 100)];
+    [imageview setBackgroundColor:[UIColor lightGrayColor]];
+    [self.contentView addSubview:imageview];
+}
+
+- (void)setUpViewWithModel:(KBTracePart *)part{
+    TraceInfoView *view = (TraceInfoView *)self.cellView;
+    view.startPlaceLabel.text = part.startSpot.addr;
+    view.endPlaceLabel.text = part.endSpot.addr;
+    
+    view.startTimeLabel.text = [NSString stringFromDateNumber:part.startTime];
+    view.endTimeLabel.text = [NSString stringFromDateNumber:part.endTime];
+    
+    view.travelDistanceLabel.text = [NSString stringWithFormat:@"%@ km",part.distance];
+    float traveltravel = (-[part.endTime floatValue]+[part.startTime floatValue])/1000.0;
+    traveltravel /=60.0*60.0;
+    view.travelLastTimeLabel.text = [NSString stringWithFormat:@"%.1f 小时",traveltravel];
 }
 
 @end
