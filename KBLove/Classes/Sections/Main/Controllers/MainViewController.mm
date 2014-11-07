@@ -16,6 +16,8 @@
 #import <MAMapKit/MAMapKit.h>
 #import "CircleAndFriendListViewController.h"
 
+#import "ZWL_ReGeoRecodeTool.h"
+
 @interface MainViewController (){
     //百度地图
     BMKMapView *baidu_MapView;

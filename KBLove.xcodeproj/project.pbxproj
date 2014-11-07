@@ -21,6 +21,8 @@
 		BC15E0071A076BE00016FB39 /* CircleAndFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */; };
 		BC15E00A1A077B690016FB39 /* Nav_down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0081A077B690016FB39 /* Nav_down_arrow.png */; };
 		BC15E00B1A077B690016FB39 /* Nav_up_arrow .png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0091A077B690016FB39 /* Nav_up_arrow .png */; };
+		BC1C8A6E1A08C59100689676 /* FenceSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1C8A6D1A08C59100689676 /* FenceSettingViewController.m */; };
+		BC1C8A711A08C5E900689676 /* FenceSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1C8A701A08C5E900689676 /* FenceSettingView.xib */; };
 		BC256C881A05F56C00EDFFBC /* device_op3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC256C861A05F56C00EDFFBC /* device_op3.png */; };
 		BC256C891A05F56C00EDFFBC /* device_op4.png in Resources */ = {isa = PBXBuildFile; fileRef = BC256C871A05F56C00EDFFBC /* device_op4.png */; };
 		BC256C8E1A05F59000EDFFBC /* zoomin_select.png in Resources */ = {isa = PBXBuildFile; fileRef = BC256C8A1A05F59000EDFFBC /* zoomin_select.png */; };
@@ -115,6 +117,7 @@
 		BCB824E119F357F900888018 /* chat_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB824E019F357F900888018 /* chat_setting@2x.png */; };
 		BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF1848E1A0B51A0006843D1 /* DXsearchView.m */; };
 		BCF184911A0B5333006843D1 /* DXSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF184901A0B5333006843D1 /* DXSearchView.xib */; };
+		BCE240CE1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -826,6 +829,9 @@
 		BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAndFriendListViewController.m; sourceTree = "<group>"; };
 		BC15E0081A077B690016FB39 /* Nav_down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_down_arrow.png; sourceTree = "<group>"; };
 		BC15E0091A077B690016FB39 /* Nav_up_arrow .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_up_arrow .png"; sourceTree = "<group>"; };
+		BC1C8A6C1A08C59100689676 /* FenceSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenceSettingViewController.h; sourceTree = "<group>"; };
+		BC1C8A6D1A08C59100689676 /* FenceSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenceSettingViewController.m; sourceTree = "<group>"; };
+		BC1C8A701A08C5E900689676 /* FenceSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FenceSettingView.xib; sourceTree = "<group>"; };
 		BC256C861A05F56C00EDFFBC /* device_op3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_op3.png; sourceTree = "<group>"; };
 		BC256C871A05F56C00EDFFBC /* device_op4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_op4.png; sourceTree = "<group>"; };
 		BC256C8A1A05F59000EDFFBC /* zoomin_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoomin_select.png; sourceTree = "<group>"; };
@@ -1031,6 +1037,8 @@
 		BCF1848D1A0B51A0006843D1 /* DXsearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXsearchView.h; sourceTree = "<group>"; };
 		BCF1848E1A0B51A0006843D1 /* DXsearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXsearchView.m; sourceTree = "<group>"; };
 		BCF184901A0B5333006843D1 /* DXSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DXSearchView.xib; sourceTree = "<group>"; };
+		BCE240CC1A076408006B29D1 /* ZWL_ReGeoRecodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWL_ReGeoRecodeTool.h; sourceTree = "<group>"; };
+		BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWL_ReGeoRecodeTool.m; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };

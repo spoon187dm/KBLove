@@ -10,6 +10,7 @@
 #import <ReactiveCocoa.h>
 #import "DXSwitch.h"
 #import "KBDevices.h"
+#import "FenceSettingViewController.h"
 @interface CarSettingViewController (){
     BOOL _hasValueChanged;
 }

@@ -10,6 +10,8 @@
 #import "TraceCell.h"
 #import "KBDeviceManager.h"
 #import "TableRefresh.h"
+#import "TrackerReplayViewController.h"
+
 @interface TraceListViewController (){
     NSMutableArray *_dataArray;
 }
