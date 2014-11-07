@@ -7,6 +7,8 @@
 //
 
 #import "KBDBManager.h"
+//表名定义宏，每个用户又不同的 表
+#define MessageListName [NSString stringWithFormat:@"KB%@MessageList",[KBUserInfo sharedInfo].user_id]
 @implementation KBDBManager
 {
     FMDatabase *_dataBase;
@@ -26,11 +28,12 @@ static KBDBManager *manager;
 {
     self=[super init];
     if (self) {
-        NSString *path=[NSHomeDirectory() stringByAppendingFormat:@"/Documents/KB.db"];
+        NSString *path=[NSHomeDirectory() stringByAppendingFormat:@"/Library/KB.db"];
         _dataBase=[[FMDatabase alloc]initWithPath:path];
         if ([_dataBase open]) {
             //创建消息表
-            NSString *createMsgTable=@"create table if not exists KBMessageList(TalkEnvironmentType integer,MessageType integer,status integer,Circle_id char(255),FromUser_id char(255),ToUser_id char(255),text char(255),image varchar(2000),time  bigint primary key)";
+            NSLog(@"%@",MessageListName);
+            NSString *createMsgTable=[NSString stringWithFormat: @"create table if not exists %@(TalkEnvironmentType integer,MessageType integer,status integer,Circle_id char(255),FromUser_id char(255),ToUser_id char(255),text char(255),image varchar(2000),time  bigint primary key)",MessageListName];
             NSLog(@"%@",createMsgTable);
             if(![_dataBase executeUpdate:createMsgTable]){
                 NSLog(@"create KBMessageList error:%@!",_dataBase.lastErrorMessage);
@@ -46,7 +49,7 @@ static KBDBManager *manager;
     if ([obj isKindOfClass:[KBMessageInfo class]]) {
         KBMessageInfo *msgModel=(KBMessageInfo *)obj;
         NSLog(@"%lld",msgModel.time);
-        NSString *insert=@"insert into KBMessageList values(?,?,?,?,?,?,?,?,?)";
+        NSString *insert=[NSString stringWithFormat:@"insert into %@ values(?,?,?,?,?,?,?,?,?)",MessageListName];
         NSString *imageStr;
        // NSInteger s=1;
         if (msgModel.image) {
@@ -63,7 +66,7 @@ static KBDBManager *manager;
 //删除指定类型数据
 - (void)DeleteKBMessageWithType:(KBMessageType)msgtype
 {
-    NSString *deleteCmd=@"delete from KBMessageList where MessageType=?";
+    NSString *deleteCmd=[NSString stringWithFormat:@"delete from %@ where MessageType=?",MessageListName];
     if (![_dataBase executeUpdate:deleteCmd,msgtype]) {
         NSLog(@"delete from KBMessageList error:%@!",_dataBase.lastErrorMessage);
     }
@@ -71,7 +74,7 @@ static KBDBManager *manager;
 //删除与某人的聊天记录
 - (void)DeleteKBMessageWithEnvironment:(KBTalkEnvironmentType)talkType AndUserID:(NSString *)user_id
 {
-    NSString *deleteCmd=@"delete from KBMessageList where TalkEnvironmentType=? and FromUser_id=?";
+    NSString *deleteCmd=[NSString stringWithFormat:@"delete from %@ where TalkEnvironmentType=? and FromUser_id=?",MessageListName];
     if (![_dataBase executeUpdate:deleteCmd,talkType,user_id]) {
         NSLog(@"delete from KBMessageList error:%@!",_dataBase.lastErrorMessage);
     }
@@ -80,7 +83,7 @@ static KBDBManager *manager;
 - (void)updateKBMessageWithModel:(KBMessageInfo *)msg
 {
     NSString *imgStr=[[NSString alloc]initWithData:UIImagePNGRepresentation(msg.image) encoding:NSUTF8StringEncoding];
-    NSString *updateSQL=@"update KBMessageList set TalkEnvironmentType=?,MessageType=?,status=?,Circle_id=?,FromUser_id=?,ToUser_id=?,text=?,image=? where time=?";
+    NSString *updateSQL=[NSString stringWithFormat:@"update %@ set TalkEnvironmentType=?,MessageType=?,status=?,Circle_id=?,FromUser_id=?,ToUser_id=?,text=?,image=? where time=?",MessageListName];
     if(![_dataBase executeUpdate:updateSQL,msg.TalkEnvironmentType,msg.MessageType,msg.status,msg.Circle_id,msg.FromUser_id,msg.ToUser_id,msg.text,imgStr,msg.time])
     {
         NSLog(@"update KBMessageList error:%@",_dataBase.lastErrorMessage);
@@ -94,9 +97,9 @@ static KBDBManager *manager;
     
     NSString *selectSQL;
     if (talkType==KBTalkEnvironmentTypeCircle) {
-    selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and Circle_id=? order by time desc";
+    selectSQL=[NSString stringWithFormat:@"select * from %@ where TalkEnvironmentType=? and Circle_id=? order by time desc",MessageListName ];
     }else{
-    selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and FromUser_id=? order by time desc";
+    selectSQL=[NSString stringWithFormat:@"select * from %@ where TalkEnvironmentType=? and FromUser_id=? order by time desc",MessageListName ];
     }
     FMResultSet *set=[_dataBase executeQuery:selectSQL,[NSNumber numberWithInteger:talkType],user_id];
     if([set next]) {
@@ -124,9 +127,9 @@ static KBDBManager *manager;
     NSMutableArray *allData=[[NSMutableArray alloc]init];
     NSString *selectSQL;
     if (talkType==KBTalkEnvironmentTypeCircle) {
-        selectSQL=@"select * from KBMessageList  where TalkEnvironmentType=? and Circle_id=? ";
+        selectSQL=[NSString stringWithFormat:@"select * from %@  where TalkEnvironmentType=? and Circle_id=? ",MessageListName ];
     }else{
-        selectSQL=@"select * from KBMessageList where TalkEnvironmentType=? and (FromUser_id=? or ToUser_id=? )";
+        selectSQL=[NSString stringWithFormat:@"select * from %@ where TalkEnvironmentType=? and (FromUser_id=? or ToUser_id=? )",MessageListName];
     }
     FMResultSet *set;
     if (talkType==KBTalkEnvironmentTypeCircle) {
@@ -169,5 +172,8 @@ static KBDBManager *manager;
     NSLog(@"%d",resultarr.count);
     return  resultarr ;
 }
-
+- (NSString *)getListName
+{
+    return  [NSString stringWithFormat:@"%@_MessageList",[KBUserInfo sharedInfo].user_id];
+}
 @end
