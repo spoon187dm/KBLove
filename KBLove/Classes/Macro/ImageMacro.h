@@ -13,6 +13,8 @@
 
 
 #define kImageUrlForName(x) [NSString stringWithFormat:@"http://118.194.192.104:1045/api/upload//api/upload/%@",x]
+//获取 头像 链接
+#define kUserImageFromName(x)[NSString stringWithFormat:@"http://test.capcare.com.cn:1045/api/upload/user_%@.jpg",x]
 
 #define kImage_car [UIImage imageNamed:@"图标_97"]
 #define kImage_person [UIImage imageNamed:@"图标_96"]

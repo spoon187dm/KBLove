@@ -418,6 +418,8 @@
 }
 
 - (IBAction)click_message:(id)sender{
+    MessageViewController *mvc=[[MessageViewController alloc]init];
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 - (IBAction)click_mine:(id)sender{

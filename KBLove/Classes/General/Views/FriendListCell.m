@@ -55,8 +55,8 @@
 - (void)configDateWithModel:(KBFriendInfo *)kbFinfo
 {
     FriendListView *view=(FriendListView *)self.cellView;
-    NSString *urlstr=[NSString stringWithFormat:@"user_%@",kbFinfo.id];
-    [view.FriendImageView setImageWithURL:[NSURL URLWithString:kImageUrlForName(urlstr)] placeholderImage:[UIImage imageNamed:@"页面列表1_22"]];
+   // NSString *urlstr=[NSString stringWithFormat:@"user_%@",kbFinfo.id];
+    [view.FriendImageView setImageWithURL:[NSURL URLWithString:kUserImageFromName(kbFinfo.id)] placeholderImage:[UIImage imageNamed:@"页面列表1_22"]];
     view.FriendNickName.text=kbFinfo.name;
     //设置分享界面
     //view.FriendShareLable.text=kbFinfo.

@@ -14,7 +14,7 @@
 #import "KBCircleInfo.h"
 #import "CircleCell.h"
 #import "CircleTalkViewController.h"
-
+#import "FriendSettingViewController.h"
 @interface CircleAndFriendListViewController ()
 {
     UIView *_titleView;
@@ -42,9 +42,8 @@
 - (void)CreateUI
 {
     self.isAllowScroll=TableIsForbiddenScroll;
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Nav_Circle"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"Nav_Circle"] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBarHidden=NO;
-    self.navigationItem.titleView=_titleView;
     //返回
     
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
@@ -168,6 +167,8 @@
     NSString *token = [KBUserInfo sharedInfo].token;
     //请求好友列表
     [KBFreash startRefreshWithTitle:@"加载..." inView:self.view];
+    NSString *friendlisturl=[NSString stringWithFormat:FriendList_URL,user_id,token,53];
+    NSLog(@"%@",friendlisturl);
     [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:FriendList_URL,user_id,token,53] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
         isloadfriend=YES;
         if (isloadfriend&&isloadCircle) {
@@ -289,10 +290,12 @@
         FriendListCell *fcell=(FriendListCell *)cell;
         KBFriendInfo *friendInfo = _friendsListArray[indexPath.row];
         NSMutableArray *menuImgArr = [[NSMutableArray alloc] init];
-        for (int i = 0; i < 2; i++) {
+        
             NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"icon_trash",@"stateNormal",@"icon_trash",@"stateHighLight", nil];
+        NSMutableDictionary *dic1 = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Circle_setting",@"stateNormal",@"Circle_setting",@"stateHighLight", nil];
             [menuImgArr addObject:dic];
-        }
+            [menuImgArr addObject:dic1];
+        
         
         //KBDevices *device = _dataArray[indexPath.row];
         

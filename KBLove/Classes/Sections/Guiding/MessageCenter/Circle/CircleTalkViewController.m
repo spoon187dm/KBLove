@@ -12,7 +12,8 @@
 #import "CircleSettingViewController.h"
 #import "KBHttpRequestTool.h"
 #import "AFNetworking.h"
-#import "UIScrollView+TableRefresh.h"
+#import "TableRefresh.h"
+//#import "UIScrollView+TableRefresh.h"
 @interface CircleTalkViewController ()
 {
     KBTalkEnvironmentType _talkType;
@@ -75,7 +76,13 @@
     //返回
     //添加消息通知
     page=0;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getaMessage:) name:KBMessageTalkNotification object:nil];
+    if (_talkType==KBTalkEnvironmentTypeCircle) {
+      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getaMessage:) name:KBMessageCircle_TalkNotification object:nil];
+    }else
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getaMessage:) name:KBMessageFriend_TalkNotification object:nil];
+    }
+    
     [self addBarItemWithImageName:@"NVBar_arrow_left.png" frame:CGRectMake(0, 0, 25, 25) Target:self Selector:@selector(BackClick:) isLeft:YES];
     switch (_talkType) {
         case KBTalkEnvironmentTypeCircle:
@@ -105,6 +112,7 @@
         msg.FromUser_id=[KBUserInfo sharedInfo].user_id;
         msg.TalkEnvironmentType=tak;
         msg.time=[NSString TimeJabLong];
+        msg.status=KBMessageStatusHaveRead;
         if (tak==KBTalkEnvironmentTypeCircle) {
             msg.Circle_id=[weak_circle_info.id stringValue];
         }else
@@ -207,12 +215,15 @@
     //_tableView.backgroundColor=[UIColor clearColor];
     UIImageView *bgimgv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子1"]];
     bgimgv.frame=_tableView.bounds;
+    NSInteger tag=page;
+    __weak typeof(self)weakself = self;
+    __weak typeof(_tableView)weak_tableView = _tableView;
     _tableView.backgroundView=bgimgv;
-//    [_tableView addHeaderWithCallback:^{
-//        page+=1;
-//        [_tableView headerBeginRefreshing];
-//        [self loadData];
-//    }];
+    [_tableView addHeaderWithCallback:^{
+        page+=1;
+        //[weak_tableView headerBeginRefreshing];
+        [weakself loadData];
+    }];
     [self.view addSubview:_tableView];
     [self.view addSubview:_sendMsgView];
     //注册通知中心接受消息
@@ -251,7 +262,13 @@
 - (void)dealloc
 {
     [_sendMsgView removeObserver:self forKeyPath:@"frame"];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:KBMessageTalkNotification object:nil];
+    if (_talkType==KBTalkEnvironmentTypeCircle) {
+       [[NSNotificationCenter defaultCenter] removeObserver:self name:KBMessageCircle_TalkNotification object:nil];
+    }else
+    {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:KBMessageFriend_TalkNotification object:nil];
+    }
+    
 }
 #pragma mark - 设置界面
 - (void)SettingClick:(UIButton *)btn
@@ -299,7 +316,7 @@
         _dataArray=[[NSMutableArray alloc]init];
         
     }
-        NSArray *arr;
+    NSArray *arr;
     //从数据库读取当期圈子或者朋友；聊天记录存入数据
     if(_talkType==KBTalkEnvironmentTypeCircle)
     {
@@ -316,13 +333,18 @@
             
         }];
     }else{
-    [_dataArray addObjectsFromArray:arr];
+        for (int i=arr.count-1; i>=0; i--) {
+            KBMessageInfo *msginf=arr[i];
+            msginf.status=KBMessageStatusHaveRead;
+            [[KBDBManager shareManager]updateKBMessageWithModel:msginf];
+            [_dataArray insertObject:arr[i] atIndex:0];
+        }
     [_tableView reloadData];
     if (_dataArray.count) {
         [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     }
     }
-//    [_tableView headerEndRefreshing];
+    [_tableView headerEndRefreshing];
 
 }
 #pragma mark - 收键盘
