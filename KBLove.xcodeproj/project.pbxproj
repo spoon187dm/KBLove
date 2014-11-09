@@ -84,6 +84,7 @@
 		BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B788A1A04E33B00A666B7 /* MAMapKit.framework */; };
 		BC8E2A4D1A0629D90075531A /* ZWL_Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E2A4C1A0629D90075531A /* ZWL_Utils.m */; };
 		BC8E2A501A062ADB0075531A /* CCTrackerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E2A4F1A062ADB0075531A /* CCTrackerUtils.m */; };
+		BC9098301A0CEB120081FD84 /* dt_replay_start.png in Resources */ = {isa = PBXBuildFile; fileRef = BC90982F1A0CEB120081FD84 /* dt_replay_start.png */; };
 		BC9B77841A04AD3400A666B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77831A04AD3400A666B7 /* Security.framework */; };
 		BC9B77861A04AD4100A666B7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77851A04AD4100A666B7 /* MessageUI.framework */; };
 		BC9B77881A04AD4800A666B7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77871A04AD4800A666B7 /* OpenGLES.framework */; };
@@ -115,9 +116,9 @@
 		BCB42E2C19F1425B00A141C3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2719F1425B00A141C3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BCB42E2E19F1430F00A141C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */; };
 		BCB824E119F357F900888018 /* chat_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB824E019F357F900888018 /* chat_setting@2x.png */; };
+		BCE240CE1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */; };
 		BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF1848E1A0B51A0006843D1 /* DXsearchView.m */; };
 		BCF184911A0B5333006843D1 /* DXSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF184901A0B5333006843D1 /* DXSearchView.xib */; };
-		BCE240CE1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -932,6 +933,7 @@
 		BC8E2A4C1A0629D90075531A /* ZWL_Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWL_Utils.m; sourceTree = "<group>"; };
 		BC8E2A4E1A062ADB0075531A /* CCTrackerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTrackerUtils.h; sourceTree = "<group>"; };
 		BC8E2A4F1A062ADB0075531A /* CCTrackerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTrackerUtils.m; sourceTree = "<group>"; };
+		BC90982F1A0CEB120081FD84 /* dt_replay_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dt_replay_start.png; sourceTree = "<group>"; };
 		BC9B77831A04AD3400A666B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BC9B77851A04AD4100A666B7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BC9B77871A04AD4800A666B7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1034,11 +1036,11 @@
 		BCB42E2719F1425B00A141C3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BCB824E019F357F900888018 /* chat_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_setting@2x.png"; sourceTree = "<group>"; };
+		BCE240CC1A076408006B29D1 /* ZWL_ReGeoRecodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWL_ReGeoRecodeTool.h; sourceTree = "<group>"; };
+		BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWL_ReGeoRecodeTool.m; sourceTree = "<group>"; };
 		BCF1848D1A0B51A0006843D1 /* DXsearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXsearchView.h; sourceTree = "<group>"; };
 		BCF1848E1A0B51A0006843D1 /* DXsearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXsearchView.m; sourceTree = "<group>"; };
 		BCF184901A0B5333006843D1 /* DXSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DXSearchView.xib; sourceTree = "<group>"; };
-		BCE240CC1A076408006B29D1 /* ZWL_ReGeoRecodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWL_ReGeoRecodeTool.h; sourceTree = "<group>"; };
-		BCE240CD1A076409006B29D1 /* ZWL_ReGeoRecodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWL_ReGeoRecodeTool.m; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
@@ -2176,6 +2178,7 @@
 		BC9B78731A04DE5900A666B7 /* MapViewImage */ = {
 			isa = PBXGroup;
 			children = (
+				BC90982F1A0CEB120081FD84 /* dt_replay_start.png */,
 				F99F925E1A07591300BBE96E /* icon_alarm.png */,
 				F99F92581A0755DE00BBE96E /* icon_car.png */,
 				F99F92591A0755DE00BBE96E /* icon_person.png */,
@@ -5050,6 +5053,7 @@
 				F9F3AF7C19F63E5800E0A0F9 /* 绑定邮箱_03.png in Resources */,
 				F9F3AF7819F63E5800E0A0F9 /* 消息报警_03.png in Resources */,
 				F9E24F6719ED725900D83FEF /* unicode_to_hanyu_pinyin.txt in Resources */,
+				BC9098301A0CEB120081FD84 /* dt_replay_start.png in Resources */,
 				F91A0E5819E7AACF009ADB44 /* lgtextfield@2x.png in Resources */,
 				F9F3AFB319F63E5800E0A0F9 /* 设置011_02.png in Resources */,
 				F91A0E6219E7AACF009ADB44 /* clearNavItemSelected.png in Resources */,

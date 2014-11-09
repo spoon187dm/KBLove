@@ -31,7 +31,8 @@ static NSString *const LOGIN_URL = @"http://test.capcare.com.cn:8081/api/logon.d
 #define BACKENT_USER_MODE_URL NSString stringWithFormat:@"%@/api/backend.mode.do?user_id=%@&user_mode=%d",SERVER
 //设置用户类型
 #define BACKENT_USER_TYPE_URL NSString stringWithFormat:@"%@/api/backend.type.do?user_id=%@&user_type=%d",SERVER
-
+//轨迹回放信息
+//#define TRACKERREPLAY_LIST_URL NSString stringWithFormat:@"http://118.194.192.104:8080/api/get.track.do"
 
 
 //企业用户获取下属用户目录树

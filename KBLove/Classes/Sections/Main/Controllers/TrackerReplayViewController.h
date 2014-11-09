@@ -80,12 +80,14 @@
 }
 @property (weak, nonatomic) IBOutlet BMKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
-
+@property (nonatomic,copy)  NSString *device_sn;
+@property (nonatomic,strong)  NSArray *dataarray;
+@property (nonatomic,assign)  NSInteger selectIndex;
+@property (nonatomic,assign) BOOL isAllPlayTracker;
 @property (weak, nonatomic) IBOutlet UIButton *zoomOutBtn;
 @property (weak, nonatomic) IBOutlet UIButton *zoomInBtn;
 @property (weak, nonatomic) IBOutlet UIView *replayCtrl;
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
-
 
 @property (weak, nonatomic) IBOutlet UIButton *startBtn;
 
@@ -101,9 +103,11 @@
 @property (nonatomic, assign) long long endTime;
 @property (nonatomic, assign) BOOL isViewAllTrack;
 @property (nonatomic, strong) CCDevice* device;
-- (IBAction)switchToNormalSpeed:(id)sender;
-- (IBAction)switchToFasterSpeed:(id)sender;
-- (IBAction)switchToFatestSpeed:(id)sender;
+
+- (IBAction)playfrontItem:(id)sender;
+- (IBAction)playnextItem:(id)sender;
+
+
 
 - (IBAction)zoomInMap:(id)sender;
 - (IBAction)zoomOutMap:(id)sender;
