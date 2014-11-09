@@ -348,7 +348,58 @@
 #pragma mark - menuActionDelegate
 - (void)menuChooseIndex:(NSInteger)cellIndexNum menuIndexNum:(NSInteger)menuIndexNum
 {
-    NSLog(@"%ld",(long)menuIndexNum);
+    NSLog(@"%d",menuIndexNum);
+    switch (menuIndexNum) {
+        case 0:{
+        //删除好友
+        KBUserInfo *user=[KBUserInfo sharedInfo];
+            
+        KBFriendInfo *finf= _friendsListArray[cellIndexNum];
+            NSDictionary *deldic=@{@"user_id":user.user_id,@"token":user.token,@"friend_id":finf.id,@"app_name":app_name};
+        [[KBHttpRequestTool sharedInstance]request:[DeleteFriendUrl] requestType:KBHttpRequestTypePost params:deldic cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
+            if (IsSuccess) {
+                if([result isKindOfClass:[NSDictionary class]])
+                {
+                    NSNumber *ret=[result objectForKey:@"ret"];
+                    if ([ret integerValue]==1) {
+                        //成功
+                        [UIAlertView showWithTitle:@"提示" Message:@"删除成功!" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            
+                        }];
+                        [_friendsListArray removeObjectAtIndex:cellIndexNum];
+                        [self.tableView reloadData];
+                    }else
+                    {
+                        [UIAlertView showWithTitle:@"警告" Message:@"删除失败!" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                            
+                        }];
+  
+                    }
+                }else
+                {
+                    NSLog(@"非字典类型");
+                }
+            }else
+            {
+                NSError *error=(NSError *)result;
+                [UIAlertView showWithTitle:@"警告" Message:error.localizedDescription cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                    
+                }];
+            }
+        }];
+        }break;
+        case 1:{
+        //好友设置
+            FriendSettingViewController *fvc=[[FriendSettingViewController alloc]init];
+            [fvc setModel:_friendsListArray[menuIndexNum]];
+            [self.navigationController pushViewController:fvc animated:YES];
+            
+        }break;
+
+            
+        default:
+            break;
+    }
 }
 
 - (UIButton *)MakeButtonWithBgImgName:(NSString *)img SelectedImg:(NSString *)simg  Frame:(CGRect)frame target:(id)tar Sel:(SEL)selector AndTag:(NSInteger) tag

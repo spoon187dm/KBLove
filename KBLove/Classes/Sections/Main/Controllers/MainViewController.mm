@@ -18,6 +18,7 @@
 
 #import "ZWL_ReGeoRecodeTool.h"
 
+#import "MessageViewController.h"
 @interface MainViewController (){
     //百度地图
     BMKMapView *baidu_MapView;

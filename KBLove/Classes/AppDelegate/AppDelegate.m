@@ -11,7 +11,7 @@
 #import "QRCodeTool.h"
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
-
+#import "UMSocial.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

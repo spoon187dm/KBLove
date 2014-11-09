@@ -217,7 +217,7 @@
     bgimgv.frame=_tableView.bounds;
     NSInteger tag=page;
     __weak typeof(self)weakself = self;
-    __weak typeof(_tableView)weak_tableView = _tableView;
+//    __weak typeof(_tableView)weak_tableView = _tableView;
     _tableView.backgroundView=bgimgv;
     [_tableView addHeaderWithCallback:^{
         page+=1;
