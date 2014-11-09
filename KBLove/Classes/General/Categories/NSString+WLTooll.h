@@ -20,7 +20,18 @@
 @end
 
 @interface NSString (wldate)
+
+/**
+ @Author block
+ 
+ 获取某一timetravel的时间戳
+ 
+ @param number 时间的timetravrl
+ 
+ @return 时间戳字符串
+ */
 + (NSString *)stringFromDateNumber:(NSNumber *)number;
+
 @end
 
 @interface NSString (Font)

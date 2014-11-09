@@ -47,7 +47,7 @@
 {
     _bgView.frame=view.bounds;
     _activityView.center=CGPointMake(view.bounds.size.width/2, view.bounds.size.height/2-60);
-    CGSize size=[title sizeWithFont:_titleLble.font];
+    CGSize size=[title sizeToFont:_titleLble.font WithWidth:kScreenWidth];
     CGRect fr=_activityView.frame;
     _titleLble.text=title;
     //_titleLble.backgroundColor=[UIColor redColor];

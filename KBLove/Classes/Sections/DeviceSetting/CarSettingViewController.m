@@ -11,9 +11,7 @@
 #import "DXSwitch.h"
 #import "KBDevices.h"
 #import "FenceSettingViewController.h"
-@interface CarSettingViewController (){
-    BOOL _hasValueChanged;
-}
+@interface CarSettingViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UITextField *textField_Frequency;
@@ -82,14 +80,6 @@
         self.device.fence_warning_switch = value?@1:@0;
         _hasValueChanged = YES;
     }];
-    
-//    [[_button_FenceSetting rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-//#pragma mark -
-//#pragma mark 跳转到设置
-//    }];
-//    [RACObserve(self.device, moveing_switch) subscribeNext:^(NSNumber *value) {
-//        NSLog(@"calue cahnge %@",value);
-//    }];
 }
 
 /*

@@ -13,6 +13,7 @@
 #import "KBAlarmManager.h"
 #import "KBDeviceManager.h"
 #import "BottomSelectView.h"
+#import "TableRefresh.h"
 typedef NS_ENUM(NSInteger, AlarmOperationMode) {
     AlarmOperationModeRead   =  1,
     AlarmOperationModeDelete =  2
@@ -44,14 +45,20 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.isAllowScroll = TableIsForbiddenScroll;
-    [self loadData];
     [self setUpBottomSelectView];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
-    [self changeNavigationBarFromImage:@"bg1"];
+    
+    __weak typeof(self)weakSelf = self;
+    [self.tableView addHeaderWithCallback:^{
+        [weakSelf loadData];
+    }];
+    
+    [self.tableView headerBeginRefreshing];
+    
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    
+- (void)viewWillAppear:(BOOL)animated{
+    [self.tableView setBackgroundView:[UIImageView imageViewWithFrame:self.view.bounds image:[UIImage imageNamed:@"bg1"]]];
+    [self changeNavigationBarFromImage:@"bg1"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,15 +73,19 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
     if (_device) {
 //        存在设备，获取对应设备的警报
 //        [[KBAlarmManager sharedManager] getAlarmInfoForDevice:_device finishblock:^(BOOL isSuccess, id result) {
-//            //        _dataArray = [NSMutableArray arrayWithArray:result];
+            //        _dataArray = [NSMutableArray arrayWithArray:result];
 //        }];
         [KBDeviceManager getAlarmListForDevice:_device.sn finishBlock:^(BOOL isSuccess, NSArray *resultArray) {
-            
+            _dataArray = [NSMutableArray arrayWithArray:resultArray];
+            [self.tableView reloadData];
+            [self.tableView headerEndRefreshing];
         }];
     }else{
 //        不存在设备，直接获取所有的警报信息
         [KBDeviceManager getAllAlarmList:^(BOOL isSuccess, NSArray *resultArray) {
-            
+            _dataArray = [NSMutableArray arrayWithArray:resultArray];
+            [self.tableView reloadData];
+            [self.tableView headerEndRefreshing];
         }];
     }
     

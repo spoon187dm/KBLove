@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class KBDevices;
-@interface SettingTableViewController : UITableViewController
+@interface SettingTableViewController : UITableViewController{
+    BOOL _hasValueChanged;
+}
 
 @property (nonatomic, strong) KBDevices *device;
 

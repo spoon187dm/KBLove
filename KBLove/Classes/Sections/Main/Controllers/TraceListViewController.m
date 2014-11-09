@@ -34,7 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.isAllowScroll = TableIsForbiddenScroll;
-    [self replaceSelfViewToNormal];
+//    [self replaceSelfViewToNormal];
 
     
     [self setUpView];
