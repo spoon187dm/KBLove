@@ -10,6 +10,7 @@
 #import "BMapKit.h"
 #import "CCDeviceStatus.h"
 #import "ZWL_MapUtils.h"
+#import "KBTracePart.h"
 #import "ZWL_Utils.h"
 #import "ZWL_TimeUtils.h"
 #import "ZWL_TimeUtils.h"
@@ -68,7 +69,7 @@
     [super viewDidLoad];
     _mapView.delegate=self;
     
-    [self requestData];
+   
     //    [self prepareData];
     //    NSLog(@"------*****-----%@",_statusArray);
     //    [self loadDataOnMap];
@@ -83,10 +84,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    //    _startTime=1413246352000;
-    //    _endTime=  1413251944000;
-    _startTime=1413245974000;
-    _endTime=  1413246372000;
+    [self requestData];
     [self setStartAndEndTime:_startTime endTime:_endTime];
 }
 
@@ -95,52 +93,18 @@
 {
     AFHTTPRequestOperationManager *manager=[[AFHTTPRequestOperationManager alloc]init];
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/json"];
-    NSString *str=@"http://118.194.192.104:8080/api/get.track.do";
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     [dic setObject:@"14" forKey:@"cmd"];
-    [dic setObject:@"48DBDB74-BBA6-48EE-9FBF-EF8D8CA4FE0F" forKey:@"token"];
-    [dic setObject:@"11399" forKey:@"user_id"];
-    //请求数据
-    //    NSLog(@"-----%@",[ZWL_TimeUtils formateTime:1411690000000 aFormater:@"HH:mm"]);    token = "48DBDB74-BBA6-48EE-9FBF-EF8D8CA4FE0F";
-    //    NSLog(@"-----%@",[ZWL_TimeUtils formateTime:1411729944000 aFormater:@"yyyy/MM/dd"]);
-    //
-    //    token = "";
-    
-    [dic setObject:@"666666666666660" forKey:@"device_sn"];
-    //    [dic setObject:@"354188047171579" forKey:@"device_sn"];
-    
-    NSDateFormatter *format=[[NSDateFormatter alloc] init];
-    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *date1=[format dateFromString:@"2014-10-30 00:00:00"];
-    NSDate *date2=[format dateFromString:@"2014-11-1 00:00:00"];
-    [dic setObject:[NSNumber numberWithDouble:([date1 timeIntervalSince1970] *1000)] forKey:@"begin"];
-    [dic setObject:[NSNumber numberWithDouble:([date2 timeIntervalSince1970]*1000)] forKey:@"end"];
+    [dic setObject:[KBUserInfo sharedInfo].token forKey:@"token"];
+    [dic setObject:[KBUserInfo sharedInfo].user_id forKey:@"user_id"];
+    [dic setObject:self.device_sn forKey:@"device_sn"];
+    [dic setObject:[NSNumber numberWithDouble:self.startTime] forKey:@"begin"];
+    [dic setObject:[NSNumber numberWithDouble:self.endTime] forKey:@"end"];
     [dic setObject:@"1" forKey:@"page_number"];
     [dic setObject:@"20" forKey:@"page_size"];
     [dic setObject:@"M2616_BD" forKey:@"app_name"];
     //
-    /**
-     accMode = 1;
-     cell = "";
-     deviceSn = 666666666666660;
-     direction = "274.14";
-     distance = 1;
-     info = "<null>";
-     lat = "39.580038";
-     lng = "116.518705";
-     mode = A;
-     mode433 = 0;
-     receive = 1414737772087;
-     speed = "214.67";
-     stayed = 0;
-     systime = 1414737826929;
-     
-     http://118.194.192.104:8080/api/get.track.do?token=48DBDB74-BBA6-48EE-9FBF-EF8D8CA4FE0F&cmd=14&user_id=11399&device_sn=666666666666660&begin=1414598400000&end=1414871200000&page_number=1&page_size=20&app_name=M2616_BD
-     
-     *  http://118.194.192.104:8080/api/get.track.do?token=48DBDB74-BBA6-48EE-9FBF-EF8D8CA4FE0F&cmd=14&user_id=11399&device_sn=666666666666661&begin=1414598400000&end=1414871200000&page_number=1&page_size=20&app_name=M2616_BD
-     
-     */   //
-    [manager GET:str parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:Url_GetTrack parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if([responseObject isKindOfClass:[NSDictionary class]])
         {
             NSLog(@"%@",responseObject);
@@ -163,7 +127,6 @@
             }
             [self loadDataOnMap];
         }
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error :%@",error.localizedDescription);
         
@@ -712,7 +675,7 @@
         /**
          *   自定义调试stayedTime=200
          */
-        if (currentTime <= currentStatus.receive + 200) {
+        if (currentTime <= currentStatus.receive + currentStatus.stayed) {
             return point;
         }
         /**
@@ -777,6 +740,11 @@
     for (int i = (int)size - 1; i >= 1; i--) {
         CCDeviceStatus* first = [statusArray objectAtIndex:i];
         CCDeviceStatus* second = [statusArray objectAtIndex:i - 1];
+        if(second.receive-first.receive>1200000)
+        {
+            _currentTime=second.receive;
+            return i-1;
+        }
         if (currentTime >= first.receive && currentTime < second.receive) {
             return i;
         }
@@ -810,7 +778,7 @@
     
     if (!_hasSetMapZoom) {
         _hasSetMapZoom = YES;
-        _mapView.zoomLevel = 19;
+        _mapView.zoomLevel = 16;
     }
 }
 
@@ -860,6 +828,33 @@
         [self resumePlay];
         _pauseBeforeDeactive = NO;
     }
+}
+
+- (IBAction)playfrontItem:(id)sender {
+//    if (self.selectIndex==0) {
+//        [UIAlertView showWithTitle:@"提示" Message:@"当前已经是第一条数据了！" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+//            
+//        }];
+//        return;
+//    }
+    KBTracePart *part = self.dataarray[self.selectIndex];
+    self.startTime=[part.endSpot.receive longLongValue];
+    self.endTime=[part.startSpot.receive longLongValue];
+    [self viewWillAppear:YES];
+}
+
+- (IBAction)playnextItem:(id)sender {
+    if (self.selectIndex==self.dataarray.count-1) {
+        [UIAlertView showWithTitle:@"提示" Message:@"当前已经是最后一条数据了！" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+        return;
+    }
+    KBTracePart *part = self.dataarray[--self.selectIndex];
+    self.startTime=[part.endSpot.receive longLongValue];
+    self.endTime=[part.startSpot.receive longLongValue];
+    [self viewWillAppear:YES];
+
 }
 
 - (IBAction)zoomInMap:(id)sender

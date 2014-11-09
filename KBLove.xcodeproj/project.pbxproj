@@ -84,6 +84,7 @@
 		BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B788A1A04E33B00A666B7 /* MAMapKit.framework */; };
 		BC8E2A4D1A0629D90075531A /* ZWL_Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E2A4C1A0629D90075531A /* ZWL_Utils.m */; };
 		BC8E2A501A062ADB0075531A /* CCTrackerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E2A4F1A062ADB0075531A /* CCTrackerUtils.m */; };
+		BC9098301A0CEB120081FD84 /* dt_replay_start.png in Resources */ = {isa = PBXBuildFile; fileRef = BC90982F1A0CEB120081FD84 /* dt_replay_start.png */; };
 		BC9B77841A04AD3400A666B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77831A04AD3400A666B7 /* Security.framework */; };
 		BC9B77861A04AD4100A666B7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77851A04AD4100A666B7 /* MessageUI.framework */; };
 		BC9B77881A04AD4800A666B7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77871A04AD4800A666B7 /* OpenGLES.framework */; };
@@ -925,6 +926,7 @@
 		BC8E2A4C1A0629D90075531A /* ZWL_Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWL_Utils.m; sourceTree = "<group>"; };
 		BC8E2A4E1A062ADB0075531A /* CCTrackerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTrackerUtils.h; sourceTree = "<group>"; };
 		BC8E2A4F1A062ADB0075531A /* CCTrackerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTrackerUtils.m; sourceTree = "<group>"; };
+		BC90982F1A0CEB120081FD84 /* dt_replay_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dt_replay_start.png; sourceTree = "<group>"; };
 		BC9B77831A04AD3400A666B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BC9B77851A04AD4100A666B7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BC9B77871A04AD4800A666B7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2168,6 +2170,7 @@
 		BC9B78731A04DE5900A666B7 /* MapViewImage */ = {
 			isa = PBXGroup;
 			children = (
+				BC90982F1A0CEB120081FD84 /* dt_replay_start.png */,
 				F99F925E1A07591300BBE96E /* icon_alarm.png */,
 				F99F92581A0755DE00BBE96E /* icon_car.png */,
 				F99F92591A0755DE00BBE96E /* icon_person.png */,
@@ -5041,6 +5044,7 @@
 				F9F3AF7C19F63E5800E0A0F9 /* 绑定邮箱_03.png in Resources */,
 				F9F3AF7819F63E5800E0A0F9 /* 消息报警_03.png in Resources */,
 				F9E24F6719ED725900D83FEF /* unicode_to_hanyu_pinyin.txt in Resources */,
+				BC9098301A0CEB120081FD84 /* dt_replay_start.png in Resources */,
 				F91A0E5819E7AACF009ADB44 /* lgtextfield@2x.png in Resources */,
 				F9F3AFB319F63E5800E0A0F9 /* 设置011_02.png in Resources */,
 				F91A0E6219E7AACF009ADB44 /* clearNavItemSelected.png in Resources */,

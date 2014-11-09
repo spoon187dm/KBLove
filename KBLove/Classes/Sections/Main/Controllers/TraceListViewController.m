@@ -14,6 +14,7 @@
 
 @interface TraceListViewController (){
     NSMutableArray *_dataArray;
+    UIButton *selectAllbutton;
 }
 
 @end
@@ -46,6 +47,16 @@
     [self.tableView headerBeginRefreshing];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[UIApplication sharedApplication].keyWindow addSubview:selectAllbutton];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [selectAllbutton removeFromSuperview];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -58,7 +69,10 @@
 - (void)setUpView{
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg1"]]];
     [self changeNavigationBarFromImage:@"bg1"];
+    
+    selectAllbutton=[UIButton buttonWithFrame:CGRectMake(5, kScreenHeight-45, kScreenWidth-10, 45) title:@"显示全部轨迹" target:self Action:@selector(click_showAllTracker)];
 }
+
 
 #pragma mark -
 #pragma mark Data 操作
@@ -87,6 +101,22 @@
     NSLog(@"你选择了第 %ld 行第 %ld 个菜单",cellIndexNum+1,menuIndexNum+1);
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"你选择了第 %ld 行第 %ld 个菜单",cellIndexNum+1,menuIndexNum+1] delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
     [alert show];
+}
+
+//显示全部轨迹信息
+-(void)click_showAllTracker
+{
+    TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
+    tracker.dataarray=_dataArray;
+    
+    KBTracePart *endpart = [_dataArray firstObject];
+    KBTracePart *beginpart=[_dataArray lastObject];
+    tracker.endTime=[endpart.startSpot.receive longLongValue];
+    tracker.startTime=[beginpart.endSpot.receive longLongValue];
+    tracker.device_sn=self.device.sn;
+    tracker.isAllPlayTracker=YES;
+    [self.navigationController pushViewController:tracker animated:YES];
+    
 }
 
 - (void)deleteCell:(TableMenuCell *)cell{
@@ -144,6 +174,14 @@
         }
     }
     TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
+    tracker.dataarray=_dataArray;
+    tracker.selectIndex=indexPath.row;
+    
+    KBTracePart *part = _dataArray[indexPath.row];
+    NSLog(@"%@",part.startSpot.receive);
+    tracker.startTime=[part.endSpot.receive longLongValue];
+    tracker.endTime=[part.startSpot.receive longLongValue];
+    tracker.device_sn=self.device.sn;
     [self.navigationController pushViewController:tracker animated:YES];
     
 }
