@@ -10,7 +10,7 @@
 #import "LoginRequest.h"
 #import <SVProgressHUD.h>
 #import "RegisterViewController.h"
-
+#import "UMSocial.h"
 @interface LoginViewController ()
 {
     BOOL _isRemBtnPressed;//记录 记录密码按键是否被点击
@@ -81,11 +81,61 @@
 }
 
 - (IBAction)qqLoginBtnClicked:(id)sender {
- 
+    //判断是否授权到某个微博平台，并且Token没有过期，例如有没有授权到新浪微博
+    BOOL b = [UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToQQ];
+    NSLog(@"判断是否授权到某个微博平台，并且Token没有过期:%d",b);
+    
+    if (b == 1) {
+        
+        //包括各平台的uid和accestoken，各个平台不一样，腾讯微博有openid。得到的数据在回调Block对象形参respone的data属性。
+        [[UMSocialDataService defaultDataService] requestSnsInformation:UMShareToQQ  completion:^(UMSocialResponseEntity *response){
+            NSLog(@"SnsInformation is %@",response.data);
+        }];
+        
+        //判断是否已经登录友盟账号。
+        BOOL isLoginWithSnsAccount = [UMSocialAccountManager isLoginWithSnsAccount];
+        NSLog(@"判断是否已经登录友盟账号---isLoginWithSnsAccount:%d",isLoginWithSnsAccount);
+        
+        //登录友盟账号，选择登录的平台一定为已经授权的微博平台，否则无法正常登录。下面是选择新浪微博作为友盟账号。
+        //[[UMSocialDataService defaultDataService] requestBindToSnsWithType:UMShareToSina completion:nil];
+        
+        [[UMSocialDataService defaultDataService] requestBindToSnsWithType:UMShareToQQ completion:^(UMSocialResponseEntity *response) {
+            NSLog(@"使用友盟登录成功！！！！！！");
+            if (response.data) {
+                NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:response.data options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"%@",dic);
+            }
+        }];
+        
+        //判断新浪微博账号的token是否有效
+        [[UMSocialDataService defaultDataService] requestIsTokenValid:@[UMShareToQQ] completion:^(UMSocialResponseEntity *response) {
+            NSLog(@"判断新浪微博账号的token是否有效---is token valid is %@",[response.data.allValues objectAtIndex:0]);
+        }];
+        //如果已经授权，打印信息
+        NSDictionary *snsAccountDic = [UMSocialAccountManager socialAccountDictionary];
+        UMSocialAccountEntity *sinaAccount = [snsAccountDic valueForKey:UMShareToQQ];
+        NSLog(@"sina nickName is %@, iconURL is %@",sinaAccount.userName,sinaAccount.iconURL);
+        
+       
+        
+    }
+    else
+    {
+        NSLog(@"没有授权!");
+        UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
+        snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)
+                                      {
+                                          NSLog(@"response is %@",response);
+                                          
+                                          
+                                      });
+        
+    };
+
 }
 
 - (IBAction)weiBoLoginClicked:(id)sender {
-
+    
 }
 
 - (IBAction)demoLoginClicked:(id)sender {

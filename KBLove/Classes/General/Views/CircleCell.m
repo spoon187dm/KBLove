@@ -22,7 +22,15 @@
     _CircleLastMessageLable.text=msg.text;
     //从数据库读取消息
     _CircleMessageTimeLable.text=[NSString timeStampWithHM:[NSString stringWithFormat:@"%lld",msg.time/1000]];
-    
+    NSInteger count=[[KBDBManager shareManager]getUnreadMessageCountWithTalkEnvironment:KBTalkEnvironmentTypeCircle TalkID:[cModel.id stringValue] andMessageType:nil];
+    if (count==0) {
+        _UnReadView.hidden=YES;
+    }else{
+        _UnReadView.hidden=NO;
+        _UnReadView.layer.cornerRadius=7.5;
+        _UnReadView.layer.masksToBounds=YES;
+    _UnReadCountLable.text=[NSString stringWithFormat:@"%ld",count];
+    }
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

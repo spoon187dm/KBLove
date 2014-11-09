@@ -230,7 +230,7 @@ static KBScoketManager *manager;
                 //存储消息
                 KBDBManager *manager=[KBDBManager shareManager];
                 [manager insertDataWithModel:msginf];
-            [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageTalkNotification object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageCircle_TalkNotification object:nil];
             }
             
         }break;
@@ -248,7 +248,7 @@ static KBScoketManager *manager;
             KBDBManager *manager=[KBDBManager shareManager];
             [manager insertDataWithModel:msginf];
             //发送通知
-            [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageTalkNotification object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:KBMessageFriend_TalkNotification object:nil];
             
         }break;
         case 6:{

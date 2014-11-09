@@ -15,7 +15,7 @@
 #import <SVProgressHUD.h>
 #import <MAMapKit/MAMapKit.h>
 #import "CircleAndFriendListViewController.h"
-
+#import "MessageViewController.h"
 @interface MainViewController (){
     //百度地图
     BMKMapView *baidu_MapView;
@@ -393,6 +393,8 @@
 }
 
 - (IBAction)click_message:(id)sender{
+    MessageViewController *mvc=[[MessageViewController alloc]init];
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 - (IBAction)click_mine:(id)sender{

@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *Circle_NameLable;
 @property (weak, nonatomic) IBOutlet UILabel *CircleLastMessageLable;
 @property (weak, nonatomic) IBOutlet UILabel *CircleMessageTimeLable;
+@property (weak, nonatomic) IBOutlet UIView *UnReadView;
+@property (weak, nonatomic) IBOutlet UILabel *UnReadCountLable;
 - (void)ConfigWithModel:(KBCircleInfo *)cModel;
 @end

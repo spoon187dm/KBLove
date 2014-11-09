@@ -216,7 +216,9 @@
 - (KBFriendInfo *)isExist:(KBFriendInfo *)fin inArra:(NSArray *)arr
 {
     for (KBFriendInfo *kinf in arr) {
-        if ([kinf.id isEqualToString:fin.id]) {
+        NSString *fid=[NSString stringWithFormat:@"%@",kinf.id];
+        NSString *sfid=[NSString stringWithFormat:@"%@",fin.id];
+        if ([fid isEqualToString:sfid]) {
             return kinf;
         }
     }

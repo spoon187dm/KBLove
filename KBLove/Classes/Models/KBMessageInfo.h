@@ -47,7 +47,8 @@ typedef NS_ENUM(NSInteger, KBMessageStatus)
     //请求
     KBMessageStatusRequrest
 };
-#define KBMessageTalkNotification @"KBMessageTalkNotification"
+#define KBMessageFriend_TalkNotification @"KBMessageFriend_TalkNotification"
+#define KBMessageCircle_TalkNotification @"KBMessageCircle_TalkNotification"
 #define KBMessageRequestNotification @"KBMessageRequestNotification"
 #define KBMessageNotification @"KBMessageNotification"
 
