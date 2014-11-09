@@ -12,6 +12,13 @@
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
 #import "UMSocial.h"
+#import "UMSocialSinaHandler.h"
+#import "UMSocialQQHandler.h"
+//#import "UMSocialRenrenHandler.h"
+//#import "UMSocialTencentWeiboHandler.h"
+#import "UMSocialWechatHandler.h"
+
+#define myAppKey @"507fcab25270157b37000010"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
