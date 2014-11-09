@@ -257,7 +257,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="fmS-v0-qkd">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Rok-Hf-3fC">
+                        <barButtonItem key="leftBarButtonItem" id="Rok-Hf-3fC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lEA-dP-USW">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -427,7 +427,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="个人资料" id="Rhe-Ga-sFv">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="oPa-fY-vYH">
+                        <barButtonItem key="leftBarButtonItem" id="oPa-fY-vYH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yOD-5c-0S8">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -439,7 +439,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="QwK-Xv-jcv">
+                        <barButtonItem key="rightBarButtonItem" id="QwK-Xv-jcv">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xbb-l6-1i7">
                                 <rect key="frame" x="282" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -597,7 +597,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="消息提醒" id="Q2A-sa-xz7">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="FGv-AL-A8Z">
+                        <barButtonItem key="leftBarButtonItem" id="FGv-AL-A8Z">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P50-Vk-hx7">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -715,7 +715,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="设置" id="OQo-e0-M61">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="F18-bQ-5fv">
+                        <barButtonItem key="leftBarButtonItem" id="F18-bQ-5fv">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NDC-Eb-wC8">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -765,7 +765,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="意见反馈" id="n7Q-qm-RP8">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="W9v-p0-kJ3">
+                        <barButtonItem key="leftBarButtonItem" id="W9v-p0-kJ3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uWj-4T-4NK">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -858,7 +858,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="地图选择" id="uoO-8Q-DNf">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Mtg-5d-HWV">
+                        <barButtonItem key="leftBarButtonItem" id="Mtg-5d-HWV">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Se-3e-Idj">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -949,7 +949,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="密码修改" id="Qsp-Pm-egb">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="dcx-Mu-n1C">
+                        <barButtonItem key="leftBarButtonItem" id="dcx-Mu-n1C">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uvf-Kd-JSb">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -958,7 +958,7 @@
                                 </state>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="8gP-3M-pQO">
+                        <barButtonItem key="rightBarButtonItem" id="8gP-3M-pQO">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gYq-UO-wN6">
                                 <rect key="frame" x="274" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1126,7 +1126,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="账号管理" id="ffg-Zi-1xy">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="HYB-Ry-Gkc">
+                        <barButtonItem key="leftBarButtonItem" id="HYB-Ry-Gkc">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jTZ-e9-6l8">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1194,7 +1194,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="绑定邮箱" id="ceF-PQ-FZN">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="UF3-hz-I6P">
+                        <barButtonItem key="leftBarButtonItem" id="UF3-hz-I6P">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bb5-FW-cvg">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1203,7 +1203,7 @@
                                 </state>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Yc8-ea-sxK">
+                        <barButtonItem key="rightBarButtonItem" id="Yc8-ea-sxK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wdS-ov-hp0">
                                 <rect key="frame" x="274" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1278,7 +1278,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="语言选择" id="GzG-mw-zTr">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="E7y-Hk-ZCr">
+                        <barButtonItem key="leftBarButtonItem" id="E7y-Hk-ZCr">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7uM-UB-l5R">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1378,7 +1378,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="隐私设置" id="GgL-Ut-dbL">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="yvC-99-TnY">
+                        <barButtonItem key="leftBarButtonItem" id="yvC-99-TnY">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nqf-77-vuV">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1521,7 +1521,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="关于凯步" id="Hjn-CK-lBB">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="9wT-so-TTy">
+                        <barButtonItem key="leftBarButtonItem" id="9wT-so-TTy">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3cn-VY-f6K">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

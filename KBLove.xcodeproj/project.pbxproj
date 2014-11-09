@@ -667,9 +667,6 @@
 		F9F3AF7919F63E5800E0A0F9 /* 消息报警_07.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADC719F63E5700E0A0F9 /* 消息报警_07.png */; };
 		F9F3AF7A19F63E5800E0A0F9 /* 消息报警_10.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADC819F63E5700E0A0F9 /* 消息报警_10.png */; };
 		F9F3AF7B19F63E5800E0A0F9 /* 消息报警_14.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADC919F63E5700E0A0F9 /* 消息报警_14.png */; };
-		F9F3AF7C19F63E5800E0A0F9 /* 绑定邮箱_03.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADCC19F63E5700E0A0F9 /* 绑定邮箱_03.png */; };
-		F9F3AF7E19F63E5800E0A0F9 /* 绑定邮箱_10.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADCE19F63E5700E0A0F9 /* 绑定邮箱_10.png */; };
-		F9F3AF7F19F63E5800E0A0F9 /* 绑定邮箱bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADCF19F63E5700E0A0F9 /* 绑定邮箱bg.png */; };
 		F9F3AF8019F63E5800E0A0F9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADD119F63E5700E0A0F9 /* bg.png */; };
 		F9F3AF8119F63E5800E0A0F9 /* 登录1_07.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADD319F63E5700E0A0F9 /* 登录1_07.png */; };
 		F9F3AF8219F63E5800E0A0F9 /* 登录1_14.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F3ADD419F63E5700E0A0F9 /* 登录1_14.png */; };
@@ -1716,10 +1713,6 @@
 		F9F3ADC719F63E5700E0A0F9 /* 消息报警_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息报警_07.png"; sourceTree = "<group>"; };
 		F9F3ADC819F63E5700E0A0F9 /* 消息报警_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息报警_10.png"; sourceTree = "<group>"; };
 		F9F3ADC919F63E5700E0A0F9 /* 消息报警_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息报警_14.png"; sourceTree = "<group>"; };
-		F9F3ADCC19F63E5700E0A0F9 /* 绑定邮箱_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定邮箱_03.png"; sourceTree = "<group>"; };
-		F9F3ADCD19F63E5700E0A0F9 /* 绑定邮箱_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定邮箱_06.png"; sourceTree = "<group>"; };
-		F9F3ADCE19F63E5700E0A0F9 /* 绑定邮箱_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定邮箱_10.png"; sourceTree = "<group>"; };
-		F9F3ADCF19F63E5700E0A0F9 /* 绑定邮箱bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定邮箱bg.png"; sourceTree = "<group>"; };
 		F9F3ADD119F63E5700E0A0F9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		F9F3ADD319F63E5700E0A0F9 /* 登录1_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录1_07.png"; sourceTree = "<group>"; };
 		F9F3ADD419F63E5700E0A0F9 /* 登录1_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录1_14.png"; sourceTree = "<group>"; };
@@ -4248,7 +4241,6 @@
 			children = (
 				F9F3ADBE19F63E5700E0A0F9 /* 好友申请1 */,
 				F9F3ADC419F63E5700E0A0F9 /* 消息报警 */,
-				F9F3ADCA19F63E5700E0A0F9 /* 绑定邮箱 */,
 			);
 			path = "消息";
 			sourceTree = "<group>";
@@ -4287,25 +4279,6 @@
 				F9F3ADC719F63E5700E0A0F9 /* 消息报警_07.png */,
 				F9F3ADC819F63E5700E0A0F9 /* 消息报警_10.png */,
 				F9F3ADC919F63E5700E0A0F9 /* 消息报警_14.png */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		F9F3ADCA19F63E5700E0A0F9 /* 绑定邮箱 */ = {
-			isa = PBXGroup;
-			children = (
-				F9F3ADCB19F63E5700E0A0F9 /* images */,
-				F9F3ADCF19F63E5700E0A0F9 /* 绑定邮箱bg.png */,
-			);
-			path = "绑定邮箱";
-			sourceTree = "<group>";
-		};
-		F9F3ADCB19F63E5700E0A0F9 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				F9F3ADCC19F63E5700E0A0F9 /* 绑定邮箱_03.png */,
-				F9F3ADCD19F63E5700E0A0F9 /* 绑定邮箱_06.png */,
-				F9F3ADCE19F63E5700E0A0F9 /* 绑定邮箱_10.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -5041,7 +5014,6 @@
 				F9F3AEB919F63E5800E0A0F9 /* 圈子2_14.png in Resources */,
 				F91A0E8219E7AACF009ADB44 /* mineItemSelected.png in Resources */,
 				F9F3AEFC19F63E5800E0A0F9 /* 分享个人设置_29.png in Resources */,
-				F9F3AF7C19F63E5800E0A0F9 /* 绑定邮箱_03.png in Resources */,
 				F9F3AF7819F63E5800E0A0F9 /* 消息报警_03.png in Resources */,
 				F9E24F6719ED725900D83FEF /* unicode_to_hanyu_pinyin.txt in Resources */,
 				BC9098301A0CEB120081FD84 /* dt_replay_start.png in Resources */,
@@ -5142,7 +5114,6 @@
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
 				F9F3AF3819F63E5800E0A0F9 /* 数据02_12.png in Resources */,
 				F9F3AF7319F63E5800E0A0F9 /* 注册完成_03.png in Resources */,
-				F9F3AF7E19F63E5800E0A0F9 /* 绑定邮箱_10.png in Resources */,
 				F9748CF119EFA5CD0064FCC7 /* qrcode_scan_bar@2x.png in Resources */,
 				F9F3AFB919F63E5800E0A0F9 /* 设置01_20.png in Resources */,
 				F91A0E4619E7AACF009ADB44 /* login.png in Resources */,
@@ -5246,7 +5217,6 @@
 				F9F3AFBF19F63E5800E0A0F9 /* 设置02车_02.png in Resources */,
 				BC256C881A05F56C00EDFFBC /* device_op3.png in Resources */,
 				F91A0E8119E7AACF009ADB44 /* mineItemNormal.png in Resources */,
-				F9F3AF7F19F63E5800E0A0F9 /* 绑定邮箱bg.png in Resources */,
 				F9F3AFB019F63E5800E0A0F9 /* 页面列表3_06.png in Resources */,
 				F9F3AEFF19F63E5800E0A0F9 /* 密码修改_03.png in Resources */,
 				F9F3AFCB19F63E5800E0A0F9 /* 设置04创建围栏_03.png in Resources */,

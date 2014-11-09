@@ -30,7 +30,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="好友" id="3Iz-Vo-Ibm">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Gnw-LG-JS1">
+                        <barButtonItem key="leftBarButtonItem" id="Gnw-LG-JS1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gWd-cZ-Kp7">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="9PJ-Xj-yN0">
+                        <barButtonItem key="rightBarButtonItem" id="9PJ-Xj-yN0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u63-u2-XhC">
                                 <rect key="frame" x="264" y="7" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -142,7 +142,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="添加好友" id="rYH-zL-9CZ">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="5u7-yx-kMF">
+                        <barButtonItem key="leftBarButtonItem" id="5u7-yx-kMF">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9gw-PD-mjG">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -230,7 +230,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="搜索结果" id="QIa-wi-vT7">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Y2L-gg-XQo">
+                        <barButtonItem key="leftBarButtonItem" id="Y2L-gg-XQo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EzD-ex-Zhe">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
