@@ -14,8 +14,6 @@
 #import "UMSocial.h"
 #import "UMSocialSinaHandler.h"
 #import "UMSocialQQHandler.h"
-//#import "UMSocialRenrenHandler.h"
-//#import "UMSocialTencentWeiboHandler.h"
 #import "UMSocialWechatHandler.h"
 
 #define myAppKey @"507fcab25270157b37000010"
@@ -44,14 +42,13 @@
     [[UILabel appearance]setTextColor:[UIColor whiteColor]];
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
-    
+
     //    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     //    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"AlarmListViewController"];
     //    [self presentViewController:vc animated:YES completion:^{
     //
     //    }];
-    
-    
+
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     //链接APNS服务器
@@ -65,6 +62,7 @@
             [UIApplication sharedApplication].applicationIconBadgeNumber = badge;
         }
     }
+    
     [KBUserInfo sharedInfo].token=@"";
     //初始化 ios_token
     [KBUserInfo sharedInfo].ios_token=[NSString stringWithFormat:@"%@",@" "];

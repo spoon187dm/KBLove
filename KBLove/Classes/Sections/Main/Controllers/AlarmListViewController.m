@@ -115,6 +115,7 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
         _isAllSelected = !_isAllSelected;
         _bottomSelectView.allSelectImageView.backgroundColor = _isAllSelected?[UIColor whiteColor]:[UIColor clearColor];
     }];
+    
     [[_bottomSelectView.readButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(UIButton *sender){
         _bottomSelectView.readImageView.backgroundColor = [UIColor whiteColor];
         _bottomSelectView.deleteImageView.backgroundColor = [UIColor clearColor];
@@ -125,6 +126,7 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
         _bottomSelectView.deleteImageView.backgroundColor = [UIColor whiteColor];
         _alarmOperationMode = @(AlarmOperationModeRead);
     }];
+
 }
 
 #pragma mark -

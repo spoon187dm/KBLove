@@ -65,6 +65,7 @@
     UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 100, kScreenWidth, 100)];
     [imageview setBackgroundColor:[UIColor lightGrayColor]];
     [self.contentView addSubview:imageview];
+    _bottomImageview = imageview;
 }
 
 - (void)setUpViewWithModel:(KBTracePart *)part{

@@ -10,6 +10,8 @@
 @class KBTracePart;
 @interface TraceCell : TableMenuCell
 
+@property (nonatomic ,strong) UIImageView *bottomImageview;
+
 - (void)setUpViewWithModel:(KBTracePart *)part;
 
 @end

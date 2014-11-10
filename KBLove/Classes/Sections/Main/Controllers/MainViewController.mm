@@ -59,7 +59,6 @@
 - (IBAction)click_pet:(id)sender;
 - (IBAction)click_allDevices:(id)sender;
 - (IBAction)click_friends:(id)sender;
-//- (IBAction)click_circle:(id)sender;
 - (IBAction)click_devicesList:(id)sender;
 - (IBAction)click_message:(id)sender;
 - (IBAction)click_mine:(id)sender;
