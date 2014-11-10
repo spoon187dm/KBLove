@@ -631,8 +631,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
             endingLineNumber = "133"
-            landmarkName = "-setAllCellSelected:"
-            landmarkType = "5">
+            landmarkName = "@implementation AlarmListViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
