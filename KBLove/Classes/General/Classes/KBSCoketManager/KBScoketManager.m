@@ -33,6 +33,7 @@ static KBScoketManager *manager;
     
     if (![_clientScoket isConnected]) {
         //链接对应接口
+        
         _clientScoket=[[AsyncSocket alloc]initWithDelegate:self];
         [_clientScoket connectToHost:@"demo.capcare.com.cn" onPort:60006 error:nil];
     }
@@ -130,6 +131,13 @@ static KBScoketManager *manager;
 - (void)onSocketDidDisconnect:(AsyncSocket *)sock
 {
     //断开连接
+    [UIAlertView showWithTitle:@"聊天服务器断开是否重新连接" Message:@"连接" cancle:@"确定" otherbutton:@"取消" block:^(NSInteger index) {
+        if (index==0) {
+            _clientScoket=nil;
+            [self startScoket];
+        }
+    }];
+
     
 }
 #pragma mark - 消息处理
@@ -151,7 +159,9 @@ static KBScoketManager *manager;
     //登陆返回信息
     
     //处理位置信息
+    
     //处理报警信息
+    
     //处理群组信息
     NSArray *textarr=[dic objectForKey:@"texts"];
     if(textarr){

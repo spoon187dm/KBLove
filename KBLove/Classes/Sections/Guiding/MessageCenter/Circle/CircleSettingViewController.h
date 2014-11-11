@@ -8,13 +8,14 @@
 
 #import "CircleRootViewController.h"
 #import "KBCircleInfo.h"
+#import "DXSwitch.h"
 @protocol DeleteCircleDelegate <NSObject>
 
 - (void)deleteCircleWithId:(NSString *)circle_id;
 
 
 @end
-@interface CircleSettingViewController : CircleRootViewController<UIAlertViewDelegate>
+@interface CircleSettingViewController : CircleRootViewController<UIAlertViewDelegate,DXSwitchDelegate>
 @property (nonatomic,weak) id<DeleteCircleDelegate>  delegate;
 - (void)setCircle_id:(NSString *)cid;
 - (void)setCircleModel:(KBCircleInfo *)model;

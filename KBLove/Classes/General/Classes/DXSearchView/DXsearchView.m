@@ -48,13 +48,15 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSLog(@"%@",string);
-    NSLog(@"%d,%d",range.location,range.length);
+    NSLog(@"%ld,%ld",range.location,range.length);
     NSString *Allstr=[NSString stringWithFormat:@"%@%@",textField.text,string];
     NSString *resultstr;
     if (range.length>0) {
+        //减
         resultstr=[Allstr substringToIndex:range.location-range.length+1];
     }else
     {
+        //加
         resultstr=Allstr;
     }
     NSLog(@"%@",resultstr);

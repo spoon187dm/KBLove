@@ -388,7 +388,8 @@
             if (indexPath.row==0) {
               cell.textLabel.text=@"消息免打扰";
                 Circle_Switch=[DXSwitch SwitchWithSlipColor:[UIColor colorWithRed:58/255.0 green:200/255.0 blue:204/255.0 alpha:1] OffSlipColor:[UIColor whiteColor] OnTintColor:[UIColor whiteColor] OffTintColor:[UIColor whiteColor] OnText:nil OffText:nil AndFrame:CGRectMake(ScreenWidth-70, 15, 40, 20)];
-                [self AddLineToCell:cell];
+                Circle_Switch.swdelegate=self;
+                 [self AddLineToCell:cell];
 //                Circle_Switch.onImage=[UIImage imageNamed:@"圈子3_21"];
 //                Circle_Switch.offImage=[UIImage imageNamed:@"圈子3_25"];
                 [cell.contentView addSubview:Circle_Switch];
@@ -418,6 +419,17 @@
     [cell.textLabel setTextColor:[UIColor whiteColor]];
     
     return cell;
+}
+#pragma  mark - DXSwitchDelegate
+- (void)SwitchValueChange:(DXSwitch *)dx_switch
+{
+    if (dx_switch.ON) {
+        NSLog(@"1");
+    }
+    else
+    {
+        NSLog(@"0");
+    }
 }
 - (void)AddLineToCell:(UITableViewCell *)cell
 {
@@ -475,10 +487,6 @@
         lable.font=[UIFont boldSystemFontOfSize:14];
         lable.text=@"圈子成员";
         [view addSubview:lable];
-//        UIButton *moreBtn=[UIButton buttonWithFrame:CGRectMake(ScreenWidth-60, 10, 20, 5) title:nil target:self Action:@selector(MoreClick:)];
-//        [moreBtn setBackgroundImage:[UIImage imageNamed:@"圈子3_03"] forState:UIControlStateNormal];
-//        view.userInteractionEnabled=YES;
-//        [view addSubview:moreBtn];
   
     }else
     {

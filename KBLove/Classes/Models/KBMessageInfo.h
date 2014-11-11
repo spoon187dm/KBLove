@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, KBMessageType)
     //同意好友消息
     KBMessageTypeAgreeFriend
     //可扩展警告等其他信息类型
+
     
 };
 typedef NS_ENUM(NSInteger, KBTalkEnvironmentType)
@@ -47,8 +48,11 @@ typedef NS_ENUM(NSInteger, KBMessageStatus)
     //请求
     KBMessageStatusRequrest
 };
+//朋友通知
 #define KBMessageFriend_TalkNotification @"KBMessageFriend_TalkNotification"
+//圈子聊天通知
 #define KBMessageCircle_TalkNotification @"KBMessageCircle_TalkNotification"
+
 #define KBMessageRequestNotification @"KBMessageRequestNotification"
 #define KBMessageNotification @"KBMessageNotification"
 
