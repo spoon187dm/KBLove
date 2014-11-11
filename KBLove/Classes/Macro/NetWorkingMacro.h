@@ -52,7 +52,7 @@ static NSString *const FriendList_URL = @"http://test.capcare.com.cn:8081/api/fr
 static NSString *const SEARCHFRIEND_URL = @"http://test.capcare.com.cn:8081/api/friend.res.do?user_id=%@&token=%@&friend_name=%@&cmd=%d";
 //发送验证信息
 static NSString *const VERIFYMESSAGE_URL = @"http://test.capcare.com.cn:8081/api/friend.verify.message.do?user_id=%@&token=%@&friend_id=%@&is_pass=1&cmd=%d&app_name=%@";
-static NSString *const SENDMSGTOFRIEND_URL = @"http://118.194.192.104:8080/api/friend.send.message.do";
+static NSString *const SENDMSGTOFRIEND_URL = @"http://test.capcare.com.cn:8081/api/friend.send.message.do";
 //删除好友
 #define  DeleteFriendUrl NSString stringWithFormat:@"%@/api/friend.del.do",SERVER_URL
 /**

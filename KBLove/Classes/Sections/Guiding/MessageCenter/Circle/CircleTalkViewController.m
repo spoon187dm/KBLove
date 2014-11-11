@@ -204,7 +204,7 @@
         
         }
     } AndDelegate:self];
-    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-49) style:UITableViewStylePlain];
+    _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-49-64) style:UITableViewStylePlain];
     _tableView.delegate=self;
     _tableView.dataSource=self;
     _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
@@ -282,7 +282,7 @@
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    _tableView.frame=CGRectMake(0, 0, self.view.frame.size.width, _sendMsgView.frame.origin.y);
+    _tableView.frame=CGRectMake(0, 64, self.view.frame.size.width, _sendMsgView.frame.origin.y-64);
    // [_tableView reloadData];
     if (_dataArray.count) {
         [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
