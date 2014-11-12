@@ -48,7 +48,7 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSLog(@"%@",string);
-    NSLog(@"%lu,%lu",(unsigned long)range.location,(unsigned long)range.length);
+    NSLog(@"%ld,%ld",range.location,range.length);
     NSString *Allstr=[NSString stringWithFormat:@"%@%@",textField.text,string];
     NSString *resultstr;
     if (range.length>0) {
