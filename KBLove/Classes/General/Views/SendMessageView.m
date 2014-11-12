@@ -8,10 +8,18 @@
 
 #import "SendMessageView.h"
 #import "Circle_ShareViewController.h"
+static void *facesScrollerContext=&facesScrollerContext;
+#import "FaceView.h"
 @implementation SendMessageView
 {
     SendMessageBlock _sendBlock;
     CGRect _frame;
+    FaceView *_facesView;
+    NSDictionary *_faceDic;
+   // NSMutableString *_sendStr;
+    NSMutableArray *namearr;
+    NSMutableArray *DisPlayArr;
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -31,13 +39,33 @@
     if (self) {
                 [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keybordShow:) name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyBoardHide:) name:UIKeyboardWillHideNotification object:nil];
+        _facesView=[[[NSBundle mainBundle]loadNibNamed:@"FaceView" owner:self options:nil]lastObject];
+       // [self addSubview:_facesView];
+        [_facesView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:facesScrollerContext];
+        //初始化名称列表
+        namearr=[[NSMutableArray alloc]init];
+        for (int i=0; i<105; i++) {
+            NSString *str=[NSString stringWithFormat:@"%d",1000+i];
+            [namearr addObject:[str substringFromIndex:1]];
+        }
+        //初始化对应字典
+        NSString *path=[[NSBundle mainBundle]pathForResource:@"Face" ofType:@"plist"];
+        _faceDic=[NSDictionary dictionaryWithContentsOfFile:path];
+        DisPlayArr =[[NSMutableArray alloc]init];
+        for (int i=0; i<namearr.count; i++) {
+            [DisPlayArr addObject:[_faceDic objectForKey:namearr[i]]];
+            
+        }
+        //初始化发送字符串
+       // _sendStr=[[NSMutableString alloc]init];
+        //_SendMsgTextFiled.textColor=[UIColor blackColor];
         
     }
     return self;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    textField.textColor=[UIColor blackColor];
+    
     _SendTextBtn.hidden=NO;
     _SendPositionBtn.hidden=YES;
 }
@@ -45,8 +73,12 @@
 {
     _SendTextBtn.hidden=YES;
     _SendPositionBtn.hidden=NO;
+    _SendMsgTextFiled.textColor=[UIColor blackColor];
 }
-
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    self.frame=CGRectMake(_frame.origin.x, _frame.origin.y-_facesView.frame.size.height, _frame.size.width, _frame.size.height);
+}
 - (void)keybordShow:(NSNotification *)notification
 {
     CGFloat animationTime = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
@@ -58,12 +90,6 @@
             self.frame = CGRectMake(0, keyBoardFrame.origin.y-45,_frame.size.width,49);
         }
     }];
-//    NSInteger y=[[not.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey]CGRectValue].size.height;
-//    [UIView animateWithDuration:0.3 animations:^{
-//        
-//        self.frame=CGRectMake(_frame.origin.x, _frame.origin.y-y, _frame.size.width, 49)
-//        ;
-//    }];
 }
 - (void)KeyBoardHide:(NSNotification *)not
 {
@@ -79,8 +105,50 @@
     }
 
     _SendMsgTextFiled.delegate=self;
+    //[_SendMsgTextFiled setTextColor:[UIColor blackColor]];
+    _SendMsgTextFiled.textColor=[UIColor blackColor];
+   // _SendMsgTextFiled.textInputMode=
     _SendTextBtn.hidden=YES;
     _frame=self.frame;
+    _facesView.frame=CGRectMake(0, _frame.size.height, _frame.size.width, 170);
+    
+    
+
+    [_facesView configUIWithNameArray:namearr AndBlock:^(NSInteger selecttag) {
+       //点击表情回掉函数
+        NSLog(@"%d",selecttag);
+        _SendMsgTextFiled.text=[NSString stringWithFormat:@"%@[%@]",_SendMsgTextFiled.text,DisPlayArr[selecttag]];
+        _SendTextBtn.hidden=NO;
+        _SendPositionBtn.hidden=YES;
+        
+    } isAutoLayout:_delegate.automaticallyAdjustsScrollViewInsets];
+    _facesView.frame=CGRectMake(_frame.origin.x, _frame.size.height+_frame.origin.y, _frame.size.width, 0);
+    
+    [_delegate.view addSubview:_facesView];
+    
+}
+- (void)FaceClick:(UIButton *)btn
+{
+    
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+   // NSLog(@"%d,%d",range.location,range.length);
+    if (range.length>0) {
+        //减
+        NSString *lastchar=[textField.text substringWithRange:NSMakeRange(textField.text.length-1, 1)];
+        if ([lastchar isEqualToString:@"]"]) {
+            NSRange range=[textField.text rangeOfString:@"[" options:NSBackwardsSearch];
+            NSString *str=[textField.text substringWithRange:NSMakeRange(range.location+1, textField.text.length-range.location-2)];
+          //  NSLog(@"%@",str);
+            if ([DisPlayArr containsObject:str]) {
+                textField.text =[textField.text substringToIndex:range.location];
+                return NO;
+            }
+            
+        }
+    }
+    return YES;
 }
 - (void)TextChange:(UITextField *)textfile
 {
@@ -94,21 +162,30 @@
 }
 - (IBAction)SendImageBtnClick:(id)sender {
         
-        [[ImagePickerTool sharedInstance] pickImageWithType:WLImagePickerTypeLocal context:_delegate finishBlock:^(BOOL isSuccess, UIImage *image) {
-        if (isSuccess) {
-        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
-            msginf.image=image;
-            msginf.MessageType=KBMessageTypeTalkImage;
-            _sendBlock(msginf);
-            
-        }else {
-            [UIAlertView showWithTitle:@"温馨提示" Message:@"调取本地相册失败" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-                
-            }];
-        }
+//        [[ImagePickerTool sharedInstance] pickImageWithType:WLImagePickerTypeLocal context:_delegate finishBlock:^(BOOL isSuccess, UIImage *image) {
+//        if (isSuccess) {
+//        KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
+//            msginf.image=image;
+//            msginf.MessageType=KBMessageTypeTalkImage;
+//            _sendBlock(msginf);
+//            
+//        }else {
+//            [UIAlertView showWithTitle:@"温馨提示" Message:@"调取本地相册失败" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+//                
+//            }];
+//        }
 
-    }];
-
+  //  }];
+    [_SendMsgTextFiled resignFirstResponder];
+    if(_facesView.frame.size.height>0)
+    {
+      _facesView.frame=CGRectMake(_frame.origin.x, _frame.size.height+_frame.origin.y, _frame.size.width, 0);
+    }else
+    {
+        _facesView.frame=CGRectMake(_frame.origin.x,_frame.origin.y-170+_frame.size.height, _frame.size.width,170);
+    }
+    
+    
     
 }
 

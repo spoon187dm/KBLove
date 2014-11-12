@@ -52,9 +52,11 @@
     NSString *Allstr=[NSString stringWithFormat:@"%@%@",textField.text,string];
     NSString *resultstr;
     if (range.length>0) {
+        //减
         resultstr=[Allstr substringToIndex:range.location-range.length+1];
     }else
     {
+        //加
         resultstr=Allstr;
     }
     NSLog(@"%@",resultstr);

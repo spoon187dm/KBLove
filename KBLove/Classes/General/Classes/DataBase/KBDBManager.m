@@ -87,7 +87,7 @@ static KBDBManager *manager;
                 {
                     if (!ishaveFriendRequest) {
                         ishaveFriendRequest=YES;
-                        [Resultarray insertObject:msg atIndex:0];
+                        [Resultarray addObject:msg];
                     }
                 }else
                 {
