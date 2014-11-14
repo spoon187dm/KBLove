@@ -60,7 +60,17 @@ static KBScoketManager *manager;
     NSString *pversion=[UIDevice currentDevice].systemVersion;
     NSString *ptype=[UIDevice currentDevice].model;
     KBUserInfo *user=[KBUserInfo sharedInfo];
-    NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"ios_token":user.ios_token,@"cmd":@"1",@"duid":udid,@"app_name":@"M2616_BD",@"pversion":pversion,@"ptype":ptype,@"app_version":@"2.0.0",@"platform":@"ios"};
+    NSDictionary *dic=@{@"user_id":user.user_id,
+                        @"token":user.token,
+                        @"ios_token":user.ios_token,
+                        @"cmd":@"1",
+                        @"duid":udid,
+                        @"app_name":@"M2616_BD",
+                        @"pversion":pversion,
+                        @"ptype":ptype,
+                        @"app_version":@"2.0.0",
+                        @"platform":@"ios"
+                        };
     
     NSString *str=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     
@@ -88,14 +98,14 @@ static KBScoketManager *manager;
     NSLog(@"%@************",msg);
     if(msg){
     [newMsg appendString:msg];
-    NSRange start=[newMsg rangeOfString:@"<push>"];
-    NSRange end  =[newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
-    NSLog(@"%lu",(unsigned long)start.location);
-    NSLog(@"%lu",(unsigned long)end.location);
+    NSRange start = [newMsg rangeOfString:@"<push>"];
+    NSRange end = [newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
+    NSLog(@"%lu", (unsigned long)start.location);
+    NSLog(@"%lu", (unsigned long)end.location);
     
     if (start.location==0&&end.length>0) {
         NSMutableArray *array=[[NSMutableArray alloc]init];
-                //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
+            //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
         NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+start.length, end.location-start.location-start.length)];
         
       //  NSLog(@"%@",msgdic);
@@ -155,7 +165,7 @@ static KBScoketManager *manager;
         return;
     }
     //创建回执消息数组
-    NSMutableArray *msg_idArray=[[NSMutableArray alloc]init];
+    NSMutableArray *msg_idArray = [[NSMutableArray alloc]init];
     //登陆返回信息
     
     //处理位置信息
