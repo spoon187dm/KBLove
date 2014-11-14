@@ -14,6 +14,7 @@
 #import "CircleCell.h"
 #import "MessageListCell.h"
 #import "CircleTalkViewController.h"
+#import "AddListViewController.h"
 @interface MessageViewController ()
 {
     NSMutableArray *_friendsListArray;
@@ -274,6 +275,8 @@
     {
         if (msginf.MessageType==KBMessageTypeAddFriend||msginf.MessageType==KBMessageTypeAgreeFriend||msginf.MessageType==KBMessageTypeRejectFriend) {
             //跳转到请求消息界面
+            AddListViewController *avc=[[AddListViewController alloc]init];
+            [self.navigationController pushViewController:avc animated:YES];
         }else
         {
             NSString *fromId=[NSString stringWithFormat:@"%@",msginf.FromUser_id];

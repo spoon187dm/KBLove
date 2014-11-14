@@ -103,10 +103,6 @@
     _sendMsgView.frame=CGRectMake(0, ScreenHeight-49, ScreenWidth, 49);
     NSInteger tak=_talkType;
     __weak KBFriendInfo *finf=_friend_info;
-    __weak typeof(_circle_info)weak_circle_info = _circle_info;
-    __weak typeof(_friend_info)weak_friend_info = _friend_info;
-    __weak typeof(_dataArray)weak_dataArray = _dataArray;
-    __weak typeof(_tableView)weak_tableView = _tableView;
     [_sendMsgView setBlock:^(KBMessageInfo *msg) {
         //发送相应消息
         msg.FromUser_id=[KBUserInfo sharedInfo].user_id;
@@ -114,16 +110,16 @@
         msg.time=[NSString TimeJabLong];
         msg.status=KBMessageStatusHaveRead;
         if (tak==KBTalkEnvironmentTypeCircle) {
-            msg.Circle_id=[weak_circle_info.id stringValue];
+            msg.Circle_id=[_circle_info.id stringValue];
         }else
         {
-            msg.ToUser_id=weak_friend_info.id;
+            msg.ToUser_id=_friend_info.id;
         }
-        [weak_dataArray addObject:msg];
+        [_dataArray addObject:msg];
         [[KBDBManager shareManager] insertDataWithModel:msg];
-        [weak_tableView reloadData];
-        if (weak_dataArray.count) {
-        [weak_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:weak_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        [_tableView reloadData];
+        if (_dataArray.count) {
+        [_tableView  scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_dataArray.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
                                 }
 
         if(msg.TalkEnvironmentType==KBTalkEnvironmentTypeFriend)
@@ -132,7 +128,7 @@
             KBUserInfo *user=[KBUserInfo sharedInfo];
            // NSLog(@"%@",user.user_id);
             __strong KBFriendInfo *sfinf=finf;
-            NSDictionary *dic1=@{@"user_id":user.user_id,@"token":user.token,@"friend_id":sfinf.id ,@"content":msg.text,@"type":@"1",@"app_name":@"M2616_BD"};
+            NSDictionary *dic1=@{@"user_id":user.user_id,@"token":user.token,@"friend_id":sfinf.id ,@"content":msg.text,@"type":[NSString stringWithFormat:@"%d",msg.MessageType],@"app_name":@"M2616_BD"};
             NSLog(@"%@",[dic1 objectForKey:@"user_id"]);
             AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
             [manager POST:SENDMSGTOFRIEND_URL parameters:dic1 constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
@@ -171,7 +167,7 @@
         {
             //发送给圈子
             KBUserInfo *user=[KBUserInfo sharedInfo];
-            NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[weak_circle_info.id stringValue],@"content":msg.text,@"type":@"1",@"app_name":@"M2616_BD"};
+            NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[_circle_info.id stringValue],@"content":msg.text,@"type":[NSString stringWithFormat:@"%d",msg.MessageType],@"app_name":@"M2616_BD"};
 
             AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
             [manager POST:[Circle_SendCircleMessage_URL] parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
@@ -217,7 +213,7 @@
     bgimgv.frame=_tableView.bounds;
     NSInteger tag=page;
     __weak typeof(self)weakself = self;
-//    __weak typeof(_tableView)weak_tableView = _tableView;
+    __weak typeof(_tableView)weak_tableView = _tableView;
     _tableView.backgroundView=bgimgv;
     [_tableView addHeaderWithCallback:^{
         page+=1;
@@ -376,6 +372,9 @@
         }else if(msgin.MessageType==KBMessageTypeTalkImage)
         {
             NSLog(@"图片");
+        }else if (msgin.MessageType==KBMessageTypeTalkPosition)
+        {
+            NSLog(@"地理位置");
         }
     }];
     

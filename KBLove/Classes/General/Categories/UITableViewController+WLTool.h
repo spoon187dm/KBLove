@@ -13,6 +13,6 @@
 /**
  将self.view从UITableView修改为uiview。
  */
-//- (void)replaceSelfViewToNormal;
+- (void)replaceSelfViewToNormal;
 
 @end

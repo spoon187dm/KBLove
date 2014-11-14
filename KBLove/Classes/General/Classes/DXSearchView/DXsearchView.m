@@ -20,6 +20,7 @@
 {
     self=[super initWithCoder:aDecoder];
     if (self) {
+
         
 //        self addObserver:self forKeyPath:@"frame" options:<#(NSKeyValueObservingOptions)#> context:<#(void *)#>
     }

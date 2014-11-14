@@ -10,6 +10,4 @@
 
 @interface CarSettingViewController : SettingTableViewController
 
-- (IBAction)DeviceFenceSetting:(id)sender;
-
 @end

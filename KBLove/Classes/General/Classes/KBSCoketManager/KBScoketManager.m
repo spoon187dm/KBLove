@@ -60,17 +60,7 @@ static KBScoketManager *manager;
     NSString *pversion=[UIDevice currentDevice].systemVersion;
     NSString *ptype=[UIDevice currentDevice].model;
     KBUserInfo *user=[KBUserInfo sharedInfo];
-    NSDictionary *dic=@{@"user_id":user.user_id,
-                        @"token":user.token,
-                        @"ios_token":user.ios_token,
-                        @"cmd":@"1",
-                        @"duid":udid,
-                        @"app_name":@"M2616_BD",
-                        @"pversion":pversion,
-                        @"ptype":ptype,
-                        @"app_version":@"2.0.0",
-                        @"platform":@"ios"
-                        };
+    NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"ios_token":user.ios_token,@"cmd":@"1",@"duid":udid,@"app_name":@"M2616_BD",@"pversion":pversion,@"ptype":ptype,@"app_version":@"2.0.0",@"platform":@"ios"};
     
     NSString *str=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     
@@ -98,14 +88,14 @@ static KBScoketManager *manager;
     NSLog(@"%@************",msg);
     if(msg){
     [newMsg appendString:msg];
-    NSRange start = [newMsg rangeOfString:@"<push>"];
-    NSRange end = [newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
-    NSLog(@"%lu", (unsigned long)start.location);
-    NSLog(@"%lu", (unsigned long)end.location);
+    NSRange start=[newMsg rangeOfString:@"<push>"];
+    NSRange end  =[newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
+    NSLog(@"%d",start.location);
+    NSLog(@"%d",end.location);
     
     if (start.location==0&&end.length>0) {
         NSMutableArray *array=[[NSMutableArray alloc]init];
-            //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
+                //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
         NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+start.length, end.location-start.location-start.length)];
         
       //  NSLog(@"%@",msgdic);
@@ -165,7 +155,7 @@ static KBScoketManager *manager;
         return;
     }
     //创建回执消息数组
-    NSMutableArray *msg_idArray = [[NSMutableArray alloc]init];
+    NSMutableArray *msg_idArray=[[NSMutableArray alloc]init];
     //登陆返回信息
     
     //处理位置信息
@@ -203,7 +193,7 @@ static KBScoketManager *manager;
             
             NSArray *msgArr=friend_verifys[i];
             NSLog(@"%@",msgArr);
-            NSLog(@"%lu",(unsigned long)msgArr.count);
+            NSLog(@"%d",msgArr.count);
             [msg_idArray addObject:[msgArr lastObject]];
             [self analyseOneMessageWithtype:6 AndArray:msgArr];
         }
@@ -286,18 +276,9 @@ static KBScoketManager *manager;
             [manager insertDataWithModel:msginf];
             switch (msginf.MessageType) {
                 case KBMessageTypeAddFriend:{
-                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@",msgarr[3]] cancle:@"同意" otherbutton:@"拒绝" block:^(NSInteger index) {
-                        NSLog(@"%ld",(long)index);
-                        KBUserInfo *user=[KBUserInfo sharedInfo];
-                        NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"app_name":app_name,@"friend_id":msginf.FromUser_id,@"is_pass":[NSNumber numberWithInteger:(index+1)]};
-                        [[KBHttpRequestTool sharedInstance] request:[Circle_SendIsAGreeFriendMessage_URL] requestType:KBHttpRequestTypePost params:dic cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
-                            if (IsSuccess) {
-                                //已经同意修改信息状态
-                            }else
-                            {
-                                
-                            }
-                        }];
+                    [UIAlertView showWithTitle:@"好友请求" Message:[NSString stringWithFormat:@"%@",msgarr[3]] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+                        NSLog(@"%ld",index);
+                       
                     }];
                     
                 }break;

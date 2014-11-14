@@ -41,5 +41,7 @@ typedef void (^FinishedBlock)(id result,BOOL isSuccess);
 - (NSInteger)getUnreadMessageCountWithTalkEnvironment:(KBTalkEnvironmentType)talktype TalkID:(NSString *)tagid andMessageType:(KBMessageType)msgtype;
 //获取消息列表
 - (NSArray *)getMessageList;
+//获取·所有好友添加信息
+- (NSArray *)getAllRequestList;
 
 @end

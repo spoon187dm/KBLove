@@ -9,5 +9,8 @@
 #import "KBPositionInfo.h"
 
 @implementation KBPositionInfo
-
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

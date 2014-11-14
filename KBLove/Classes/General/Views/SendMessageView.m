@@ -195,6 +195,19 @@ static void *facesScrollerContext=&facesScrollerContext;
     [cvc setBlock:^(KBPositionInfo *pos) {
        //返回信息 进行 处理
         NSLog(@"发送 地理 位置 ");
+        
+        NSMutableDictionary *senddic=[[NSMutableDictionary alloc]init];
+        [senddic setObject:pos.positionname forKey:@"positionname"];
+        [senddic setObject:pos.latitudeNumber forKey:@"latitudeNumber"];
+        [senddic setObject:pos.longitudeNumber forKey:@"longitudeNumber"];
+        [senddic setObject:pos.positionDes forKey:@"positionDes"];
+        NSString *str=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:senddic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",str);
+        //创建消息
+        KBMessageInfo *msg=[[KBMessageInfo alloc]init];
+        msg.MessageType=KBMessageTypeTalkPosition;
+        msg.text=str;
+        _sendBlock(msg);
     }];
     UIViewController *vc=(UIViewController *)_delegate;
     [vc.navigationController pushViewController:cvc animated:YES];

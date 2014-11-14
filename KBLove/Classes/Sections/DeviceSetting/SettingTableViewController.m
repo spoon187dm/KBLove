@@ -7,7 +7,7 @@
 //
 
 #import "SettingTableViewController.h"
-#import "FenceSettingViewController.h"
+
 @interface SettingTableViewController ()
 
 @end
@@ -22,15 +22,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    [self.view setBackgroundColor:[UIColor clearColor]];
-}
-
-- (void)viewDidAppear:(BOOL)animated{
     [self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"设置01"]]];
-    UIImageView *imageview = [UIImageView imageViewWithFrame:self.view.bounds image:[UIImage imageNamed:@"设置01"]];
-    [self.tableView setBackgroundView:imageview];
-    
-    [self changeNavigationBarFromImage:@"设置01"];
+//    [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,10 +72,7 @@
 }
 
 - (IBAction)click_settingFence:(id)sender{
-    NSLog(@"098743");
-    FenceSettingViewController *fence=[[FenceSettingViewController alloc]initWithNibName:@"FenceSettingView" bundle:nil];
-//    KBDevices *device = self.device;
-    [self.navigationController pushViewController:fence animated:YES];
+    
 }
 
 @end

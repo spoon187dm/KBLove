@@ -54,6 +54,7 @@ static KBDBManager *manager;
     }
     return self;
 }
+
 //获取消息列表
 - (NSArray *)getMessageList
 {
@@ -146,6 +147,16 @@ static KBDBManager *manager;
 //    NSInvocationOperation *opr=[[NSInvocationOperation alloc]initWithTarget:self selector:@selector(insertDataWithModel:) object:obj];
 //    [_operationQueue addOperation:opr];
 //}
+//获取·所有好友添加信息
+
+- (NSArray *)getAllRequestList
+{
+    NSMutableArray *resultarr=[[NSMutableArray alloc]init];
+    NSString *exquteStr=[NSString stringWithFormat:@"select * from %@ where MessageType=?",MessageListName];
+    FMResultSet *set=[ _dataBase executeQuery:exquteStr,[NSNumber numberWithInteger:KBMessageTypeAddFriend]];
+    [resultarr addObjectsFromArray:[self getMessageFromSet:set]];
+    return  resultarr;
+}
 -(void)insertDataWithModel:(id)obj
 {
     
@@ -270,7 +281,7 @@ static KBDBManager *manager;
 - (NSArray *)GetKBTalkMessageWithEnvironment:(KBTalkEnvironmentType)talkType FriendID:(NSString *)user_id AndPage:(NSInteger)page Number:(NSInteger)number
 {
 
-    NSLog(@"%ld,%ld",(long)page,(long)number);
+    NSLog(@"%d,%d",page,number);
     NSMutableArray *resultarr=[[NSMutableArray alloc]init];
     NSMutableArray *allData=[[NSMutableArray alloc]init];
     NSString *selectSQL;
@@ -288,21 +299,22 @@ static KBDBManager *manager;
     }
     [allData addObjectsFromArray:[self getMessageFromSet:set]];
     //返回指定条数信息
-    
-    NSLog(@"%lu",(unsigned long)allData.count);
+    NSLog(@"%d",allData.count);
+    NSLog(@"%d",page);
     if (allData.count < (page +1)*number) {
         if (allData.count >(page)*number) {
             for (int i=0; i<allData.count-(page)*number; i++) {
                 [resultarr addObject:allData[i]];
             }
+ 
         }
     }else
     {
-    for (int i=(int)(allData.count-(page+1)*number); i<allData.count-(page)*number; i++) {
+    for (int i=allData.count-(page+1)*number; i<allData.count-(page)*number; i++) {
         [resultarr addObject:allData[i]];
     }
     }
-    NSLog(@"%lu",(unsigned long)resultarr.count);
+    NSLog(@"%d",resultarr.count);
     return  resultarr ;
 }
 - (BOOL)isExistInDateBase:(id)model

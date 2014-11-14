@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface KBPositionInfo : NSObject
-
+@property(nonatomic,copy)   NSString *positionname;
+@property(nonatomic,strong) NSNumber *latitudeNumber;
+@property(nonatomic,strong) NSNumber *longitudeNumber;
+@property(nonatomic,strong) NSString *positionDes;
 @end

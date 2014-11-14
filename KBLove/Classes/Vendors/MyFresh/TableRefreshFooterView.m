@@ -67,7 +67,7 @@
         // 调整frame
         [self adjustFrameWithContentSize];
     } else if ([TableRefreshContentOffset isEqualToString:keyPath]) {
-//#warning 这个返回一定要放这个位置
+#warning 这个返回一定要放这个位置
         // 如果正在刷新，直接返回
         if (self.state == TableRefreshStateRefreshing) return;
         

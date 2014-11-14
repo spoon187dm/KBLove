@@ -10,8 +10,9 @@
 #import <ReactiveCocoa.h>
 #import "DXSwitch.h"
 #import "KBDevices.h"
-#import "FenceSettingViewController.h"
-@interface CarSettingViewController ()
+@interface CarSettingViewController (){
+    BOOL _hasValueChanged;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UITextField *textField_Frequency;
@@ -35,12 +36,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)DeviceFenceSetting:(id)sender
-{
-    NSLog(@"098743");
-    FenceSettingViewController *fence=[[FenceSettingViewController alloc]initWithNibName:@"FenceSettingView" bundle:nil];
-    [self.navigationController pushViewController:fence animated:YES];
 }
 
 #pragma mark -
@@ -80,6 +75,14 @@
         self.device.fence_warning_switch = value?@1:@0;
         _hasValueChanged = YES;
     }];
+    
+//    [[_button_FenceSetting rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+//#pragma mark -
+//#pragma mark 跳转到设置
+//    }];
+//    [RACObserve(self.device, moveing_switch) subscribeNext:^(NSNumber *value) {
+//        NSLog(@"calue cahnge %@",value);
+//    }];
 }
 
 /*

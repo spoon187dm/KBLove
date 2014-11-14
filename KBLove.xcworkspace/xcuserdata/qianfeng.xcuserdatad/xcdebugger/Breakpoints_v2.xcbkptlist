@@ -54,16 +54,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KBLove/Classes/Sections/Main/Controllers/MainViewController.mm"
-            timestampString = "436711210.45982"
+            filePath = "KBLove/Classes/Vendors/MyFresh/TableRefreshBaseView.m"
+            timestampString = "437057903.582563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
-            landmarkName = "-onReGeocodeSearchDone:response:"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-setState:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -216,8 +216,12 @@
         
         self.isScanning = YES;
         [self.captureSession startRunning];
+        
+    
+        
     }
-
+    
+    
 }
 
 #pragma mark AVCaptureMetadataOutputObjectsDelegate//IOS7下触发

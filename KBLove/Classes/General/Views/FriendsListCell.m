@@ -22,8 +22,4 @@
     // Configure the view for the selected state
 }
 
-- (void)setMoreOptionsButtonBg:(NSString *)moreOptionsButtonBg anddeleteButtonBg:(NSString *)deleteButtonBg{
-    
-}
-
 @end

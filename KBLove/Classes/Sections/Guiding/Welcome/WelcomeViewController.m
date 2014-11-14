@@ -29,14 +29,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *btn = [UIButton buttonWithFrame:CGRectMake(100, 100, 200, 200) title:@"click" clickBlock:^(UIButton *button) {
-        NSLog(@"clicked");
-    }];
-    [btn setBackgroundColor:[UIColor blackColor]];
-    [btn setClickBlock:^(UIButton *button) {
-        NSLog(@"click2");
-    }];
-    [self.view addSubview:btn];
 }
 
 - (void)didReceiveMemoryWarning

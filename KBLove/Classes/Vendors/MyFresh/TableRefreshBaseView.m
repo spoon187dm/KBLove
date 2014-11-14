@@ -127,7 +127,7 @@
     if (self.window) {
         self.state = TableRefreshStateRefreshing;
     } else {
-//#warning 不能调用set方法
+#warning 不能调用set方法
         _state = TableRefreshStateWillRefreshing;
     }
 }

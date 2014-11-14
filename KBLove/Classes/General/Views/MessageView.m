@@ -53,12 +53,12 @@
     if (_contentString) {
         for (int i=0; i<_contentString.length; i++) {
             NSString *onestr=[_contentString substringWithRange:startran];
-            NSLog(@"%@",onestr);
+            //NSLog(@"%@",onestr);
             size=[onestr sizeWithAttributes:_sDic];
             if ([onestr isEqualToString:@"["]) {
                 NSRange ran=[_contentString rangeOfString:@"]" options:NSCaseInsensitiveSearch range:NSMakeRange(startran.location+1, _contentString.length-startran.location-1)];
                 NSString *smileStr=[_contentString substringWithRange:NSMakeRange(startran.location+1, ran.location-startran.location-1)];
-                NSLog(@"%@",smileStr);
+                //NSLog(@"%@",smileStr);
                 if ([_nameArr containsObject:smileStr]) {
                     
                     NSString *imagename=_imageArr[[_nameArr indexOfObject:smileStr]];
@@ -144,16 +144,15 @@
     if (_contentString) {
         for (int i=0; i<_contentString.length; i++) {
             NSString *onestr=[_contentString substringWithRange:startran];
-            NSLog(@"%@",onestr);
+           // NSLog(@"%@",onestr);
             size=[onestr sizeWithAttributes:_sDic];
             if ([onestr isEqualToString:@"["]) {
                 NSRange ran=[_contentString rangeOfString:@"]" options:NSCaseInsensitiveSearch range:NSMakeRange(startran.location+1, _contentString.length-startran.location-1)];
                 NSString *smileStr=[_contentString substringWithRange:NSMakeRange(startran.location+1, ran.location-startran.location-1)];
-                NSLog(@"%@",smileStr);
+                //NSLog(@"%@",smileStr);
                 if ([_nameArr containsObject:smileStr]) {
                     
-                    //                    NSString *imagename=_imageArr[[_nameArr indexOfObject:smileStr]];
-                    //                    UIImage *image=[UIImage imageNamed:imagename];
+                    
                     size=imageSize;
                     if ((currentpoint.x+size.width)>_maxwidth) {
                         if (size.height>imageSize.height) {

@@ -64,7 +64,7 @@ static KBDeviceManager *sharedManager = nil;
                              };
     
     [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceList requestType:KBHttpRequestTypePost params:params cacheStragety:^WLCacheStrategy *(BOOL isStrategyLegol) {
-        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:-1 wifiOnly:NO];
+        return [WLCacheStrategy cacheStrategyWithEffectTimeTravel:0 wifiOnly:NO];
     } overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             NSMutableArray *resultArray = [NSMutableArray array];

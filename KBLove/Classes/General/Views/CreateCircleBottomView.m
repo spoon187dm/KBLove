@@ -120,9 +120,9 @@
     }
     
     CGRect fr=self.frame;
-    NSLog(@"%lu",(unsigned long)farray.count);
+    NSLog(@"%d",farray.count);
     NSInteger linecount=(farray.count +finishedArr.count)/4+(((farray.count +finishedArr.count)%4)>0?1:0);
-    NSLog(@"%ld",(long)linecount);
+    NSLog(@"%d",linecount);
     self.frame=CGRectMake(fr.origin.x,fr.origin.y,fr.size.width, linecount*70+15);
     if (farray.count==0) {
         self.frame=CGRectMake(fr.origin.x,fr.origin.y,fr.size.width, 0);

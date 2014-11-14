@@ -65,6 +65,13 @@
 - (void)FinishedClick:(UIButton *)btn
 {
     //创建地理位置模型，回调函数
+    KBPositionInfo *pos=[[KBPositionInfo alloc]init];
+    pos.positionname=@"知春路";
+    pos.latitudeNumber=[NSNumber numberWithDouble:98.9999726];
+    pos.longitudeNumber=[NSNumber numberWithDouble:78.888632728];
+    pos.positionDes=@"知春路描述";
+    _sblock(pos);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)BackClick:(UIButton *)btn
 {
@@ -72,6 +79,7 @@
         
     //}];
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

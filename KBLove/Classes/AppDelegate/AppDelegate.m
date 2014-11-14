@@ -11,26 +11,34 @@
 #import "QRCodeTool.h"
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
+
 #import "UMSocial.h"
+//#import "LoginViewController.h"
+
 #import "UMSocialSinaHandler.h"
 #import "UMSocialQQHandler.h"
+//#import "UMSocialRenrenHandler.h"
+//#import "UMSocialTencentWeiboHandler.h"
 #import "UMSocialWechatHandler.h"
 
 #define myAppKey @"507fcab25270157b37000010"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BMKMapManager *_mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:BAIDUMAPVIEWKEY  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"HekPo3DvBn5qiKG3sC3aUpjE"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
     
-    [MAMapServices sharedServices].apiKey = GAODEMAOVIEWKEY ;
+    [MAMapServices sharedServices].apiKey = @"16aceaed9c6b89cea04f5eafa17d44de";
     
     // Override point for customization after application launch.
 //    KBMessageInfo *msginf=[[KBMessageInfo alloc]init];
@@ -41,14 +49,15 @@
     //    [[UIView appearance]setBackgroun dColor:SYSTEM_COLOR];
 //    [[UILabel appearance]setTextColor:[UIColor whiteColor]];
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
-    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
-
+//    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+    UIViewController *vc = [stb instantiateInitialViewController];
     //    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     //    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"AlarmListViewController"];
     //    [self presentViewController:vc animated:YES completion:^{
     //
     //    }];
-
+    
+    
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     //链接APNS服务器
@@ -62,7 +71,6 @@
             [UIApplication sharedApplication].applicationIconBadgeNumber = badge;
         }
     }
-    
     [KBUserInfo sharedInfo].token=@"";
     //初始化 ios_token
     [KBUserInfo sharedInfo].ios_token=[NSString stringWithFormat:@"%@",@" "];
@@ -98,7 +106,7 @@
     //设置支持没有客户端情况下使用SSO授权
     [UMSocialQQHandler setSupportWebView:YES];
 
-    
+    [KBUserInfo sharedInfo].mapTypeName=kMapTypeGaodeMap;
     return YES;
 }
 

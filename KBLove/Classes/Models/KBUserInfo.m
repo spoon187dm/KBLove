@@ -42,7 +42,7 @@ KBUserInfo *info = nil;
     
     _mapTypeName = [ud objectForKey:@"maptypename"];
     if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] || ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
-        _mapTypeName = kMapTypeBaiduMap;
+        _mapTypeName = kMapTypeGaodeMap;
     }
 }
 
@@ -62,7 +62,7 @@ KBUserInfo *info = nil;
     
     
     if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] || ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
-        _mapTypeName = kMapTypeBaiduMap;
+        _mapTypeName = kMapTypeGaodeMap;
     }
     [ud setObject:_mapTypeName forKey:@"maptypename"];
     [ud synchronize];

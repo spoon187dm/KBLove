@@ -7,7 +7,7 @@
 //
 
 #import "CarDetailSettingViewController.h"
-#import <SVProgressHUD.h>
+
 @interface CarDetailSettingViewController ()
 
 @end

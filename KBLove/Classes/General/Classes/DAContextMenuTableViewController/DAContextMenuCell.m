@@ -84,7 +84,7 @@
 - (CGFloat)menuOptionButtonWidth
 {
     NSString *string = ([self.deleteButtonTitle length] > [self.moreOptionsButtonTitle length]) ? self.deleteButtonTitle : self.moreOptionsButtonTitle;
-    CGFloat width = roundf([string sizeToFont:self.moreOptionsButton.titleLabel.font WithWidth:kScreenWidth].width + 2. * self.menuOptionButtonTitlePadding);
+    CGFloat width = roundf([string sizeWithFont:self.moreOptionsButton.titleLabel.font].width + 2. * self.menuOptionButtonTitlePadding);
     width = MIN(width, CGRectGetWidth(self.bounds) / 2. - 10.);
     if ((NSInteger)width % 2) {
         width += 1.;
