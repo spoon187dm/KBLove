@@ -33,6 +33,7 @@ static KBScoketManager *manager;
     
     if (![_clientScoket isConnected]) {
         //链接对应接口
+        
         _clientScoket=[[AsyncSocket alloc]initWithDelegate:self];
         [_clientScoket connectToHost:@"demo.capcare.com.cn" onPort:60006 error:nil];
     }
@@ -59,7 +60,17 @@ static KBScoketManager *manager;
     NSString *pversion=[UIDevice currentDevice].systemVersion;
     NSString *ptype=[UIDevice currentDevice].model;
     KBUserInfo *user=[KBUserInfo sharedInfo];
-    NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"ios_token":user.ios_token,@"cmd":@"1",@"duid":udid,@"app_name":@"M2616_BD",@"pversion":pversion,@"ptype":ptype,@"app_version":@"2.0.0",@"platform":@"ios"};
+    NSDictionary *dic=@{@"user_id":user.user_id,
+                        @"token":user.token,
+                        @"ios_token":user.ios_token,
+                        @"cmd":@"1",
+                        @"duid":udid,
+                        @"app_name":@"M2616_BD",
+                        @"pversion":pversion,
+                        @"ptype":ptype,
+                        @"app_version":@"2.0.0",
+                        @"platform":@"ios"
+                        };
     
     NSString *str=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     
@@ -87,14 +98,14 @@ static KBScoketManager *manager;
     NSLog(@"%@************",msg);
     if(msg){
     [newMsg appendString:msg];
-    NSRange start=[newMsg rangeOfString:@"<push>"];
-    NSRange end  =[newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
-    NSLog(@"%lu",(unsigned long)start.location);
-    NSLog(@"%lu",(unsigned long)end.location);
+    NSRange start = [newMsg rangeOfString:@"<push>"];
+    NSRange end = [newMsg rangeOfString:@"</push>" options:NSBackwardsSearch];
+    NSLog(@"%lu", (unsigned long)start.location);
+    NSLog(@"%lu", (unsigned long)end.location);
     
     if (start.location==0&&end.length>0) {
         NSMutableArray *array=[[NSMutableArray alloc]init];
-                //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
+            //取得整块信息<push>hhh</push><push>dddd</push><push>dddd</push><push>dddd
         NSString *msgdic=[newMsg substringWithRange:NSMakeRange(start.location+start.length, end.location-start.location-start.length)];
         
       //  NSLog(@"%@",msgdic);
@@ -130,6 +141,13 @@ static KBScoketManager *manager;
 - (void)onSocketDidDisconnect:(AsyncSocket *)sock
 {
     //断开连接
+    [UIAlertView showWithTitle:@"聊天服务器断开是否重新连接" Message:@"连接" cancle:@"确定" otherbutton:@"取消" block:^(NSInteger index) {
+        if (index==0) {
+            _clientScoket=nil;
+            [self startScoket];
+        }
+    }];
+
     
 }
 #pragma mark - 消息处理
@@ -147,11 +165,13 @@ static KBScoketManager *manager;
         return;
     }
     //创建回执消息数组
-    NSMutableArray *msg_idArray=[[NSMutableArray alloc]init];
+    NSMutableArray *msg_idArray = [[NSMutableArray alloc]init];
     //登陆返回信息
     
     //处理位置信息
+    
     //处理报警信息
+    
     //处理群组信息
     NSArray *textarr=[dic objectForKey:@"texts"];
     if(textarr){

@@ -7,7 +7,7 @@
 //
 
 #import "MessageCell.h"
-
+#import "MessageView.h"
 @implementation MessageCell
 {
     //左边
@@ -18,7 +18,7 @@
     //左边位置
     //StickerImageView *leftBigImageView;
     //左边文字
-    UILabel *leftTitle;
+    MessageView *leftTitleView;
     //左边图片
     UIImageView *leftphotoImageView;
     //右边
@@ -28,7 +28,7 @@
     //右边位置
    // StickerImageView *rightBigImageView;
     //右边文字
-    UILabel *rightTitle;
+    MessageView *rightTitleView;
     //右边图片
     UIImageView *rightphotoImageView;
     MessageClickBlock _msgBlock;
@@ -79,8 +79,8 @@
     [leftBubbleImageView addSubview:leftphotoImageView];
   
     //文子
-    leftTitle=[UILabel labelWithFrame:CGRectZero text:nil];
-    [leftBubbleImageView addSubview:leftTitle];
+    leftTitleView=[[MessageView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+    [leftBubbleImageView addSubview:leftTitleView];
     //图片
     
     
@@ -106,8 +106,8 @@
     rightphotoImageView=[UIImageView imageViewWithFrame:CGRectZero image:nil];
     [rightBubbleImageView addSubview:rightphotoImageView];
     //文子
-    rightTitle=[UILabel labelWithFrame:CGRectZero text:nil];
-    [rightBubbleImageView addSubview:rightTitle];
+    rightTitleView=[[MessageView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+    [rightBubbleImageView addSubview:rightTitleView];
     
 }
 - (void)configleftImage:(UIImage *)leftimage rightImage:(UIImage *)rightimage Message:(KBMessageInfo *)obj WithPath:(NSIndexPath *)path AndBlock:(MessageClickBlock)block
@@ -132,19 +132,19 @@
         if (obj.MessageType==KBMessageTypeTalkText) {
            
             rightphotoImageView.hidden=YES;
-            rightTitle.hidden=NO;
-            rightTitle.text=obj.text;
+            rightTitleView.hidden=NO;
+            //rightTitle.text=obj.text;
+            [rightTitleView setString:obj.text WithMaxWidth:200 AndAttributris:@{NSFontAttributeName:[UIFont systemFontOfSize:18]}];
+            
             NSLog(@"%@",obj.text);
-            CGSize size=[UILabel SizeWithText:obj.text Width:200 andFont:[UIFont systemFontOfSize:15]];
-            rightTitle.frame=CGRectMake(10, 10,size.width,size.height);
-            rightTitle.font=[UIFont systemFontOfSize:15];
-            [rightTitle AdjustCurrentFont];
+            CGSize size=rightTitleView.frame.size;
+            rightTitleView.frame=CGRectMake(5, 10,size.width,size.height);
             //设置气泡大小
-            rightBubbleImageView.frame=CGRectMake(y-40-size.width-30, 5, size.width+30, size.height+20);
+            rightBubbleImageView.frame=CGRectMake(y-40-size.width-25, 5, size.width+25, size.height+20);
         }else if(obj.MessageType==KBMessageTypeTalkImage)
         {
             rightphotoImageView.hidden=NO;
-            rightTitle.hidden=YES;
+            rightTitleView.hidden=YES;
             UIImage *photoimage=obj.image;
             //计算大小
             rightphotoImageView.frame=CGRectMake(10, 15, photoimage.size.width>200?200:photoimage.size.width, photoimage.size.height>200?200:photoimage.size.height);
@@ -164,18 +164,18 @@
        // NSLog(@"%ld",obj.MessageType);
         if (obj.MessageType==KBMessageTypeTalkText) {
             leftphotoImageView.hidden=YES;
-            leftTitle.hidden=NO;
-            leftTitle.text=obj.text;
-            CGSize size=[UILabel SizeWithText:obj.text Width:200 andFont:[UIFont systemFontOfSize:15]];
-            leftTitle.font=[UIFont systemFontOfSize:15];
-            leftTitle.frame=CGRectMake(15, 10, size.width, size.height);
-            [leftTitle AdjustCurrentFont];
+            leftTitleView.hidden=NO;
+            [leftTitleView setString:obj.text WithMaxWidth:200 AndAttributris:@{NSFontAttributeName:[UIFont systemFontOfSize:18]}];
+            CGSize size=leftTitleView.frame.size;
+            //leftTitle.font=[UIFont systemFontOfSize:15];
+            leftTitleView.frame=CGRectMake(15, 10, size.width, size.height);
+            //[leftTitle AdjustCurrentFont];
             //设置气泡大小
             leftBubbleImageView.frame=CGRectMake(40, 5, size.width+30, size.height+20);
         }else if(obj.MessageType==KBMessageTypeTalkImage)
         {
             leftphotoImageView.hidden=NO;
-            leftTitle.hidden=YES;
+            leftTitleView.hidden=YES;
             UIImage *photoimage=obj.image;
             //计算大小
             leftphotoImageView.frame=CGRectMake(15, 15, photoimage.size.width>200?200:photoimage.size.width, photoimage.size.height>200?200:photoimage.size.height);

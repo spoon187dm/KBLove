@@ -38,8 +38,8 @@
 //    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_Bacground"] forBarMetrics:UIBarMetricsDefault];
 //    [[UITableView appearance] setBackgroundColor:SYSTEM_COLOR];
 //    [[UITableViewCell appearance]setBackgroundColor:[UIColor colorWithRed:0.000 green:0.569 blue:0.588 alpha:1.000]];
-    //    [[UIView appearance]setBackgroundColor:SYSTEM_COLOR];
-    [[UILabel appearance]setTextColor:[UIColor whiteColor]];
+    //    [[UIView appearance]setBackgroun dColor:SYSTEM_COLOR];
+//    [[UILabel appearance]setTextColor:[UIColor whiteColor]];
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
 
@@ -66,7 +66,7 @@
     [KBUserInfo sharedInfo].token=@"";
     //初始化 ios_token
     [KBUserInfo sharedInfo].ios_token=[NSString stringWithFormat:@"%@",@" "];
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_8_0
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     NSLog(@"%@",NSHomeDirectory());
     UIUserNotificationSettings *s=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert categories:nil];
