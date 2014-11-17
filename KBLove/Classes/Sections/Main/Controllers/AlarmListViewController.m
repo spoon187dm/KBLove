@@ -57,6 +57,7 @@ typedef NS_ENUM(NSInteger, AlarmOperationMode) {
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self.tableView setBackgroundView:[UIImageView imageViewWithFrame:self.view.bounds image:[UIImage imageNamed:@"bg1"]]];
     [self changeNavigationBarFromImage:@"bg1"];
 }

@@ -46,6 +46,15 @@
     }
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    for (UIView *view in self.view.subviews) {
+        [view removeFromSuperview];
+
+    }
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }

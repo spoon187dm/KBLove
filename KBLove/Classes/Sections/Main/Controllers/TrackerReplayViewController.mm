@@ -84,6 +84,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self requestData];
     [self setStartAndEndTime:_startTime endTime:_endTime];
 }

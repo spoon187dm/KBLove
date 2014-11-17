@@ -278,7 +278,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     //从网络请求相应圈子信息，设置标题
-    
+    [super viewWillAppear:animated];
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {

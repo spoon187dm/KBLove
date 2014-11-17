@@ -49,11 +49,13 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [[UIApplication sharedApplication].keyWindow addSubview:selectAllbutton];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [selectAllbutton removeFromSuperview];
 }
 

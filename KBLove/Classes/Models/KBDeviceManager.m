@@ -38,6 +38,7 @@ static KBDeviceManager *sharedManager = nil;
                 WLLog(@"~~获取设备信息成功");
                 KBDevices *device = [[KBDevices alloc]init];
                 [device setValuesForKeysWithDictionary:result[@"device"]];
+                WLLog(@" 设备信息 ---- %@", result[@"device"]);
                 block(YES, device);
             }else{
                 WLLog(@"!!获取设备信息出错");
