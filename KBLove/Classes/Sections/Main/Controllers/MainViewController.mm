@@ -190,14 +190,18 @@
 
 - (void)setupDropListView{
     _dropListView = [[UIView alloc]init];
-    _dropListView.frame = CGRectMake(kScreenWidth-100, 64, 100, 30*4);
+    _dropListView.frame = CGRectMake(kScreenWidth-100, 64, 100, 35*4);
     _dropListView.backgroundColor = [UIColor clearColor];
     
     NSArray *titles = @[@"所有设备",@"好友设备",@"我的设备",@"绑定设备"];
     for (NSInteger i = 0; i<4; i++) {
-        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(0, 30*i, 100, 30) title:titles[i] target:self Action:@selector(click_dropListItem:)];
-        btn.backgroundColor = [UIColor clearColor];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(0, 35*i, 100, 35) title:titles[i] target:self Action:@selector(click_dropListItem:)];
+        
+        // 设置按钮的背景 84 149 159
+        [btn setBackgroundColor:KBColor(84, 149, 159, 0.85)];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:16];
+        
         [btn setBackgroundImage:[UIImage imageNamed:@"RegisterFisihed2"] forState:UIControlStateNormal];
         btn.tag = 300+i;
         [_dropListView addSubview:btn];

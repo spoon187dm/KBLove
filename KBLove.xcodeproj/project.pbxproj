@@ -1484,6 +1484,7 @@
 		DA8242311A19E6B100F72CDD /* telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telephone@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/telephone@2x.png"; sourceTree = "<group>"; };
 		DA8242321A19E6B100F72CDD /* telregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtn@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/telregisterbtn@2x.png"; sourceTree = "<group>"; };
 		DA8242331A19E6B100F72CDD /* telregisterbtnNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtnNormal@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/telregisterbtnNormal@2x.png"; sourceTree = "<group>"; };
+		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
 		F90F6EFE19F563E400671113 /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
@@ -3656,6 +3657,7 @@
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
 				BC59833319ECB3E600DAC76A /* DXLog.h */,
+				DA82423C1A1A04AC00F72CDD /* xiexufeng.h */,
 			);
 			path = WorkLog;
 			sourceTree = "<group>";
