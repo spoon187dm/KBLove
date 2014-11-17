@@ -18,6 +18,8 @@
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
+		BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */; };
+		BC09CD811A1A01D8005F92F5 /* 数据01_15.png in Resources */ = {isa = PBXBuildFile; fileRef = BC09CD801A1A01D8005F92F5 /* 数据01_15.png */; };
 		BC15E0071A076BE00016FB39 /* CircleAndFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */; };
 		BC15E00A1A077B690016FB39 /* Nav_down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0081A077B690016FB39 /* Nav_down_arrow.png */; };
 		BC15E00B1A077B690016FB39 /* Nav_up_arrow .png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0091A077B690016FB39 /* Nav_up_arrow .png */; };
@@ -76,6 +78,7 @@
 		BC71E6E919F96A3000692533 /* KBPositionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6E819F96A3000692533 /* KBPositionInfo.m */; };
 		BC7910D419F6BE24000EEA0C /* userimage.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7910D319F6BE24000EEA0C /* userimage.png */; };
 		BC7910D619F6C362000EEA0C /* Nav_Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7910D519F6C362000EEA0C /* Nav_Circle.png */; };
+		BC836E3B1A19C4A2009E85A5 /* DeviceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */; };
 		BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B788A1A04E33B00A666B7 /* MAMapKit.framework */; };
 		BC9B77841A04AD3400A666B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77831A04AD3400A666B7 /* Security.framework */; };
 		BC9B77861A04AD4100A666B7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77851A04AD4100A666B7 /* MessageUI.framework */; };
@@ -1068,6 +1071,9 @@
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
 		BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleFriendCell.xib; sourceTree = "<group>"; };
+		BC09CD491A19C95B005F92F5 /* CarDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarDataViewController.h; path = data/CarDataViewController.h; sourceTree = "<group>"; };
+		BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarDataViewController.m; path = data/CarDataViewController.m; sourceTree = "<group>"; };
+		BC09CD801A1A01D8005F92F5 /* 数据01_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数据01_15.png"; sourceTree = "<group>"; };
 		BC15E0051A076BE00016FB39 /* CircleAndFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAndFriendListViewController.h; sourceTree = "<group>"; };
 		BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAndFriendListViewController.m; sourceTree = "<group>"; };
 		BC15E0081A077B690016FB39 /* Nav_down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_down_arrow.png; sourceTree = "<group>"; };
@@ -1154,6 +1160,8 @@
 		BC777FD71A0508BA00349CCD /* ZhangWenLong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhangWenLong.h; sourceTree = "<group>"; };
 		BC7910D319F6BE24000EEA0C /* userimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userimage.png; path = ../../../Classes/Helpers/userimage.png; sourceTree = "<group>"; };
 		BC7910D519F6C362000EEA0C /* Nav_Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_Circle.png; sourceTree = "<group>"; };
+		BC836E391A19C4A2009E85A5 /* DeviceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDataViewController.h; path = data/DeviceDataViewController.h; sourceTree = "<group>"; };
+		BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDataViewController.m; path = data/DeviceDataViewController.m; sourceTree = "<group>"; };
 		BC9B77831A04AD3400A666B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BC9B77851A04AD4100A666B7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BC9B77871A04AD4800A666B7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2508,6 +2516,17 @@
 				BC5F373F1A025BC30088D0AB /* KBScoketManager.m */,
 			);
 			path = KBSCoketManager;
+			sourceTree = "<group>";
+		};
+		BC836E3C1A19C4A8009E85A5 /* Devicedata */ = {
+			isa = PBXGroup;
+			children = (
+				BC836E391A19C4A2009E85A5 /* DeviceDataViewController.h */,
+				BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */,
+				BC09CD491A19C95B005F92F5 /* CarDataViewController.h */,
+				BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */,
+			);
+			name = Devicedata;
 			sourceTree = "<group>";
 		};
 		BC9B778F1A04AEC700A666B7 /* MAPLibs */ = {
@@ -3905,6 +3924,7 @@
 		F9C91F9F1A15C587003DF07A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC836E3C1A19C4A8009E85A5 /* Devicedata */,
 				F9C91FA01A15C587003DF07A /* AlarmDetailViewController.h */,
 				F9C91FA11A15C587003DF07A /* AlarmDetailViewController.m */,
 				F9C91FA21A15C587003DF07A /* AlarmListViewController.h */,
@@ -4885,6 +4905,7 @@
 		F9F3AD6019F63E5700E0A0F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BC09CD801A1A01D8005F92F5 /* 数据01_15.png */,
 				F9F3AD6119F63E5700E0A0F9 /* 数据011_07.png */,
 				F9F3AD6219F63E5700E0A0F9 /* 数据01_03.png */,
 				F9F3AD6319F63E5700E0A0F9 /* 数据01_07.png */,
@@ -6190,6 +6211,7 @@
 				F9F3AEC119F63E5800E0A0F9 /* 圈子3_18.png in Resources */,
 				F9F3AED819F63E5800E0A0F9 /* 好友1_16.png in Resources */,
 				F9F3AEF719F63E5800E0A0F9 /* 分享个人设置_10.png in Resources */,
+				BC09CD811A1A01D8005F92F5 /* 数据01_15.png in Resources */,
 				F9F3AFBF19F63E5800E0A0F9 /* 设置02车_02.png in Resources */,
 				BC256C881A05F56C00EDFFBC /* device_op3.png in Resources */,
 				BCCE86611A11B0350014AF29 /* 001@2x.png in Resources */,
@@ -6793,7 +6815,9 @@
 				F99E76231A00D3A8002FCB1F /* PersonDetailSettingViewController.m in Sources */,
 				F99246491A048C5400599E74 /* TableViewFreshConst.m in Sources */,
 				F9E24F6119ED725900D83FEF /* ChineseToPinyinResource.m in Sources */,
+				BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */,
 				6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */,
+				BC836E3B1A19C4A2009E85A5 /* DeviceDataViewController.m in Sources */,
 				BC633B601A0CE52D00E5A6E9 /* FriendSetHeadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

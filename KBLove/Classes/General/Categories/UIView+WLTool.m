@@ -10,4 +10,14 @@
 
 @implementation UIView (WLTool)
 
+-(void)setBackgroundImage:(NSString *)imagename
+{
+    UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    UIImage *image = [UIImage imageNamed:imagename];
+    //    获取目标图片指定区域内容
+    CGImageRef imageref = CGImageCreateWithImageInRect([image CGImage], self.bounds);
+    //    转化为新图片}
+    imageView.image = [UIImage imageWithCGImage:imageref];
+    [self addSubview:imageView];
+}
 @end
