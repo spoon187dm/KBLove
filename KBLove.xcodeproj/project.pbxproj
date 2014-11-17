@@ -324,6 +324,13 @@
 		BCCE87331A11BCC20014AF29 /* FaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCE87321A11BCC20014AF29 /* FaceView.xib */; };
 		BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF1848E1A0B51A0006843D1 /* DXsearchView.m */; };
 		BCF184911A0B5333006843D1 /* DXSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF184901A0B5333006843D1 /* DXSearchView.xib */; };
+		DA8242351A19E6B100F72CDD /* mailregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA82422D1A19E6B100F72CDD /* mailregisterbtn@2x.png */; };
+		DA8242361A19E6B100F72CDD /* mailregisterbtnSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA82422E1A19E6B100F72CDD /* mailregisterbtnSelected@2x.png */; };
+		DA8242371A19E6B100F72CDD /* RegisterFisihed1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA82422F1A19E6B100F72CDD /* RegisterFisihed1.png */; };
+		DA8242381A19E6B100F72CDD /* RegisterFisihed2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8242301A19E6B100F72CDD /* RegisterFisihed2.png */; };
+		DA8242391A19E6B100F72CDD /* telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8242311A19E6B100F72CDD /* telephone@2x.png */; };
+		DA82423A1A19E6B100F72CDD /* telregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8242321A19E6B100F72CDD /* telregisterbtn@2x.png */; };
+		DA82423B1A19E6B100F72CDD /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8242331A19E6B100F72CDD /* telregisterbtnNormal@2x.png */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -407,13 +414,6 @@
 		F91A0E6619E7AACF009ADB44 /* moreNavItemSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF319E7AACF009ADB44 /* moreNavItemSelected.png */; };
 		F91A0E6719E7AACF009ADB44 /* ReturnItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF419E7AACF009ADB44 /* ReturnItem.png */; };
 		F91A0E6819E7AACF009ADB44 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF619E7AACF009ADB44 /* arrow.png */; };
-		F91A0E6919E7AACF009ADB44 /* mailregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF819E7AACF009ADB44 /* mailregisterbtn@2x.png */; };
-		F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF919E7AACF009ADB44 /* mailregisterbtnSelected@2x.png */; };
-		F91A0E6B19E7AACF009ADB44 /* RegisterFisihed1.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFA19E7AACF009ADB44 /* RegisterFisihed1.png */; };
-		F91A0E6C19E7AACF009ADB44 /* RegisterFisihed2.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFB19E7AACF009ADB44 /* RegisterFisihed2.png */; };
-		F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFC19E7AACF009ADB44 /* telephone@2x.png */; };
-		F91A0E6E19E7AACF009ADB44 /* telregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFD19E7AACF009ADB44 /* telregisterbtn@2x.png */; };
-		F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFE19E7AACF009ADB44 /* telregisterbtnNormal@2x.png */; };
 		F91A0E7019E7AACF009ADB44 /* cutEquipment.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E0019E7AACF009ADB44 /* cutEquipment.png */; };
 		F91A0E7119E7AACF009ADB44 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E0119E7AACF009ADB44 /* end.png */; };
 		F91A0E7219E7AACF009ADB44 /* notEquipment.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E0219E7AACF009ADB44 /* notEquipment.png */; };
@@ -1477,6 +1477,13 @@
 		BCF1848E1A0B51A0006843D1 /* DXsearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXsearchView.m; sourceTree = "<group>"; };
 		BCF184901A0B5333006843D1 /* DXSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DXSearchView.xib; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA82422D1A19E6B100F72CDD /* mailregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailregisterbtn@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/mailregisterbtn@2x.png"; sourceTree = "<group>"; };
+		DA82422E1A19E6B100F72CDD /* mailregisterbtnSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailregisterbtnSelected@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/mailregisterbtnSelected@2x.png"; sourceTree = "<group>"; };
+		DA82422F1A19E6B100F72CDD /* RegisterFisihed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RegisterFisihed1.png; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/RegisterFisihed1.png"; sourceTree = "<group>"; };
+		DA8242301A19E6B100F72CDD /* RegisterFisihed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RegisterFisihed2.png; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/RegisterFisihed2.png"; sourceTree = "<group>"; };
+		DA8242311A19E6B100F72CDD /* telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telephone@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/telephone@2x.png"; sourceTree = "<group>"; };
+		DA8242321A19E6B100F72CDD /* telregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtn@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/telregisterbtn@2x.png"; sourceTree = "<group>"; };
+		DA8242331A19E6B100F72CDD /* telregisterbtnNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtnNormal@2x.png"; path = "../../../../../../../../Volumes/yuri 1/.Trashes/501/KBLove/KBLove/images/Register/telregisterbtnNormal@2x.png"; sourceTree = "<group>"; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
 		F90F6EFE19F563E400671113 /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
@@ -1576,13 +1583,6 @@
 		F91A0DF319E7AACF009ADB44 /* moreNavItemSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreNavItemSelected.png; sourceTree = "<group>"; };
 		F91A0DF419E7AACF009ADB44 /* ReturnItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReturnItem.png; sourceTree = "<group>"; };
 		F91A0DF619E7AACF009ADB44 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		F91A0DF819E7AACF009ADB44 /* mailregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mailregisterbtn@2x.png"; sourceTree = "<group>"; };
-		F91A0DF919E7AACF009ADB44 /* mailregisterbtnSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mailregisterbtnSelected@2x.png"; sourceTree = "<group>"; };
-		F91A0DFA19E7AACF009ADB44 /* RegisterFisihed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterFisihed1.png; sourceTree = "<group>"; };
-		F91A0DFB19E7AACF009ADB44 /* RegisterFisihed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterFisihed2.png; sourceTree = "<group>"; };
-		F91A0DFC19E7AACF009ADB44 /* telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telephone@2x.png"; sourceTree = "<group>"; };
-		F91A0DFD19E7AACF009ADB44 /* telregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telregisterbtn@2x.png"; sourceTree = "<group>"; };
-		F91A0DFE19E7AACF009ADB44 /* telregisterbtnNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telregisterbtnNormal@2x.png"; sourceTree = "<group>"; };
 		F91A0E0019E7AACF009ADB44 /* cutEquipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutEquipment.png; sourceTree = "<group>"; };
 		F91A0E0119E7AACF009ADB44 /* end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = end.png; sourceTree = "<group>"; };
 		F91A0E0219E7AACF009ADB44 /* notEquipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notEquipment.png; sourceTree = "<group>"; };
@@ -3294,13 +3294,6 @@
 			children = (
 				F91A0DF619E7AACF009ADB44 /* arrow.png */,
 				F91A0DF719E7AACF009ADB44 /* images */,
-				F91A0DF819E7AACF009ADB44 /* mailregisterbtn@2x.png */,
-				F91A0DF919E7AACF009ADB44 /* mailregisterbtnSelected@2x.png */,
-				F91A0DFA19E7AACF009ADB44 /* RegisterFisihed1.png */,
-				F91A0DFB19E7AACF009ADB44 /* RegisterFisihed2.png */,
-				F91A0DFC19E7AACF009ADB44 /* telephone@2x.png */,
-				F91A0DFD19E7AACF009ADB44 /* telregisterbtn@2x.png */,
-				F91A0DFE19E7AACF009ADB44 /* telregisterbtnNormal@2x.png */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -3308,6 +3301,13 @@
 		F91A0DF719E7AACF009ADB44 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DA82422D1A19E6B100F72CDD /* mailregisterbtn@2x.png */,
+				DA82422E1A19E6B100F72CDD /* mailregisterbtnSelected@2x.png */,
+				DA82422F1A19E6B100F72CDD /* RegisterFisihed1.png */,
+				DA8242301A19E6B100F72CDD /* RegisterFisihed2.png */,
+				DA8242311A19E6B100F72CDD /* telephone@2x.png */,
+				DA8242321A19E6B100F72CDD /* telregisterbtn@2x.png */,
+				DA8242331A19E6B100F72CDD /* telregisterbtnNormal@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -5781,7 +5781,6 @@
 				F91A0E9B19E7AACF009ADB44 /* red_tabbar@2x.png in Resources */,
 				F9F3AFF219F63E5800E0A0F9 /* 意见反馈_03.png in Resources */,
 				BCCE87051A11B0350014AF29 /* 084.png in Resources */,
-				F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */,
 				BC9B787F1A04DE5900A666B7 /* replay_pos.png in Resources */,
 				F9F3AFDD19F63E5800E0A0F9 /* 轨迹032_17.png in Resources */,
 				F9F3AFF419F63E5800E0A0F9 /* 语言选择1_06.png in Resources */,
@@ -5826,6 +5825,7 @@
 				BCCE86E21A11B0350014AF29 /* 066@2x.png in Resources */,
 				F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */,
 				BCCE86771A11B0350014AF29 /* 012@2x.png in Resources */,
+				DA8242381A19E6B100F72CDD /* RegisterFisihed2.png in Resources */,
 				BCCE87241A11B0350014AF29 /* 099@2x.png in Resources */,
 				F9F3AF5F19F63E5800E0A0F9 /* 数据061_30.png in Resources */,
 				BCCE86721A11B0350014AF29 /* 010.png in Resources */,
@@ -5858,6 +5858,7 @@
 				F9A262A41A03357800909E75 /* bg1.png in Resources */,
 				F9F3AF8519F63E5800E0A0F9 /* 登录_04.png in Resources */,
 				F9F3AEAD19F63E5800E0A0F9 /* 图标_72.png in Resources */,
+				DA8242371A19E6B100F72CDD /* RegisterFisihed1.png in Resources */,
 				F9F3AF4619F63E5800E0A0F9 /* 数据031_20.png in Resources */,
 				BCCE86CB1A11B0350014AF29 /* 055.png in Resources */,
 				F9F3AFB419F63E5800E0A0F9 /* 设置01_03.png in Resources */,
@@ -6071,7 +6072,6 @@
 				BCCE86CF1A11B0350014AF29 /* 057.png in Resources */,
 				BCCE86B61A11B0350014AF29 /* 044@2x.png in Resources */,
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
-				F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */,
 				BCCE86731A11B0350014AF29 /* 010@2x.png in Resources */,
 				BCCE868B1A11B0350014AF29 /* 023.png in Resources */,
 				F9F3AF9E19F63E5800E0A0F9 /* 绑定设备4_03.png in Resources */,
@@ -6087,8 +6087,10 @@
 				F9F3AF4C19F63E5800E0A0F9 /* 数据03_35.png in Resources */,
 				F9C91FD91A15C587003DF07A /* ReplayMapView.xib in Resources */,
 				F9748CF819EFA5CD0064FCC7 /* qrcode_scan_btn_photo_down@2x.png in Resources */,
+				DA8242361A19E6B100F72CDD /* mailregisterbtnSelected@2x.png in Resources */,
 				F9F3AF7B19F63E5800E0A0F9 /* 消息报警_14.png in Resources */,
 				F9F3AF0819F63E5800E0A0F9 /* 绑定邮箱_10.png in Resources */,
+				DA82423A1A19E6B100F72CDD /* telregisterbtn@2x.png in Resources */,
 				F9F3AF5019F63E5800E0A0F9 /* 数据03_43.png in Resources */,
 				BCCE86901A11B0350014AF29 /* 025@2x.png in Resources */,
 				F9F3AF6C19F63E5800E0A0F9 /* 数据07_37.png in Resources */,
@@ -6099,7 +6101,6 @@
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
 				F9F3AEC319F63E5800E0A0F9 /* 圈子3_25.png in Resources */,
 				BCCE869A1A11B0350014AF29 /* 030@2x.png in Resources */,
-				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
 				BCCE86BC1A11B0350014AF29 /* 047@2x.png in Resources */,
 				F9F3AFE119F63E5800E0A0F9 /* 轨迹04_03.png in Resources */,
 				F9F3AFF519F63E5800E0A0F9 /* 通用设置1_03.png in Resources */,
@@ -6165,6 +6166,7 @@
 				BCCE86CD1A11B0350014AF29 /* 056.png in Resources */,
 				F9F3AFE419F63E5800E0A0F9 /* 轨迹06_06.png in Resources */,
 				F9F3AEDA19F63E5800E0A0F9 /* 好友1删除_03.png in Resources */,
+				DA8242391A19E6B100F72CDD /* telephone@2x.png in Resources */,
 				F9F3AF6419F63E5800E0A0F9 /* 数据071_11.png in Resources */,
 				F91A0E3219E7AACF009ADB44 /* BoundEquipment_round_1.png in Resources */,
 				F9F3AECB19F63E5800E0A0F9 /* 圈子创建1_24.png in Resources */,
@@ -6184,13 +6186,13 @@
 				F92DBDB019ED5C1900BBE573 /* graystar.png in Resources */,
 				F91A0E6819E7AACF009ADB44 /* arrow.png in Resources */,
 				BC9B787C1A04DE5900A666B7 /* car_warning.png in Resources */,
-				F91A0E6919E7AACF009ADB44 /* mailregisterbtn@2x.png in Resources */,
 				F9F3AE9C19F63E5800E0A0F9 /* 图标_103.png in Resources */,
 				F9F3AEF019F63E5800E0A0F9 /* 个人资料_06.png in Resources */,
 				F9F3AEC119F63E5800E0A0F9 /* 圈子3_18.png in Resources */,
 				F9F3AED819F63E5800E0A0F9 /* 好友1_16.png in Resources */,
 				F9F3AEF719F63E5800E0A0F9 /* 分享个人设置_10.png in Resources */,
 				F9F3AFBF19F63E5800E0A0F9 /* 设置02车_02.png in Resources */,
+				DA8242351A19E6B100F72CDD /* mailregisterbtn@2x.png in Resources */,
 				BC256C881A05F56C00EDFFBC /* device_op3.png in Resources */,
 				BCCE86611A11B0350014AF29 /* 001@2x.png in Resources */,
 				F91A0E8119E7AACF009ADB44 /* mineItemNormal.png in Resources */,
@@ -6282,7 +6284,6 @@
 				F9F3AF9419F63E5800E0A0F9 /* 绑定设备1_16.png in Resources */,
 				F91A0E6419E7AACF009ADB44 /* GroupNavItemSelected.png in Resources */,
 				F91A0E5A19E7AACF009ADB44 /* lgtop@2x.png in Resources */,
-				F91A0E6E19E7AACF009ADB44 /* telregisterbtn@2x.png in Resources */,
 				F9F3AFBD19F63E5800E0A0F9 /* 设置02宠物01_03.png in Resources */,
 				BCCE86B71A11B0350014AF29 /* 045.png in Resources */,
 				F91A0E9219E7AACF009ADB44 /* blue_tabbar.png in Resources */,
@@ -6434,6 +6435,7 @@
 				BCCE87211A11B0350014AF29 /* 098.png in Resources */,
 				F9F3AFE019F63E5800E0A0F9 /* 轨迹03_06.png in Resources */,
 				F91A0E6619E7AACF009ADB44 /* moreNavItemSelected.png in Resources */,
+				DA82423B1A19E6B100F72CDD /* telregisterbtnNormal@2x.png in Resources */,
 				BCCE87191A11B0350014AF29 /* 094.png in Resources */,
 				F91A0E3319E7AACF009ADB44 /* NVBar_arrow_left.png in Resources */,
 				F9F3AEBB19F63E5800E0A0F9 /* 圈子2-未输入_03.png in Resources */,
@@ -6476,7 +6478,6 @@
 				F975FE8019EE741D00D13D86 /* icon_menu.png in Resources */,
 				BCCE86AB1A11B0350014AF29 /* 039.png in Resources */,
 				F9F3AF4219F63E5800E0A0F9 /* 数据031_05.png in Resources */,
-				F91A0E6B19E7AACF009ADB44 /* RegisterFisihed1.png in Resources */,
 				BCCE86B01A11B0350014AF29 /* 041@2x.png in Resources */,
 				F91A0E5B19E7AACF009ADB44 /* lgusername@2x.png in Resources */,
 				BCCE86841A11B0350014AF29 /* 019@2x.png in Resources */,
@@ -6540,7 +6541,6 @@
 				F9F3AFD719F63E5800E0A0F9 /* 轨迹01_03.png in Resources */,
 				F9F3AF5D19F63E5800E0A0F9 /* 数据061_19.png in Resources */,
 				BCCE86971A11B0350014AF29 /* 029.png in Resources */,
-				F91A0E6C19E7AACF009ADB44 /* RegisterFisihed2.png in Resources */,
 				F9A262A61A0338A900909E75 /* TMD.png in Resources */,
 				F9F3AEE119F63E5800E0A0F9 /* 好友2_19.png in Resources */,
 				F9E24F9419ED733200D83FEF /* Regist_Login_Storyboard.storyboard in Resources */,

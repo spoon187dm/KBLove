@@ -85,7 +85,7 @@
     //Scoket登陆服务器
     [[KBScoketManager ShareManager]startScoket];
 
-    [self changeNavigationBarToClear];
+//    [self changeNavigationBarToClear];
     [self setupData];
     [self setupView];
     [self loadData];
@@ -93,6 +93,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    // 设置导航栏的背景
+    [self changeNavigationBarFromImage:@"bg"];
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
