@@ -53,24 +53,25 @@
 
 #pragma mark - 登陆
 - (IBAction)loginBtnClicked:(id)sender {
+    
     //判断是否用户名是否合法
     if ([_userNameTF.text isValidateEmail] || [_userNameTF.text isValidateMobile]) {
         //发起登陆请求
         [SVProgressHUD showWithStatus:@"登录中..." maskType:SVProgressHUDMaskTypeBlack];
         
-        [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
-            //成功后跳转
-            
-            [SVProgressHUD dismiss];
+//        [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
+//            //成功后跳转
+//            
+//            [SVProgressHUD dismiss];
             [self gotoMainVireController];
             NSLog(@"登陆成功");
-        } andLoginFaildeBlock:^(NSString *desc) {
-            [SVProgressHUD dismiss];
-            //展示错误信息
-            [UIAlertView showWithTitle:@"温馨提示" Message:desc cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-                
-            }];
-        }];
+//        } andLoginFaildeBlock:^(NSString *desc) {
+//            [SVProgressHUD dismiss];
+//            //展示错误信息
+//            [UIAlertView showWithTitle:@"温馨提示" Message:desc cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+//                
+//            }];
+//        }];
 
     } else {
         [SVProgressHUD dismiss];

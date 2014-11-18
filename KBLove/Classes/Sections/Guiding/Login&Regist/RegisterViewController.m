@@ -93,58 +93,63 @@
         
         
         //信息没有错误 进行注册
-        NSLog(@"---%@", [NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]]);
-        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
-            [KBFreash StopRefreshinView:self.view];
-            if (IsSuccess) {
-               //注册成功
-                if ([result isKindOfClass:[NSDictionary class]]) {
-                    NSLog(@"resultDic:%@",result);
-                    NSDictionary *dic=result;
-                    NSNumber *ret=[dic objectForKey:@"ret"];
-                    NSString *des=[dic objectForKey:@"desc"];
-                    NSString *token=[dic objectForKey:@"token"];
-                    NSString *user_id=[dic objectForKey:@"user_id"];
-                    if ([ret intValue]) {
-                        if([ret intValue]==2)
-                        {
-                            [UIAlertView showWithTitle:@"提示" Message:[result objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-                                
-                            }];
-                            return ;
-                        }
-                        //注册成功 存储信息 跳转到 成功界面
-                        KBUserInfo *user=[KBUserInfo sharedInfo];
-                        user.token=token;
-                        user.userName=_userNameTextfiled.text;
-                        user.user_id=user_id;
-                        user.passWord=_passwordTextFiled.text;
-                        
-                        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistFinishNavigationController"];
-
-                        
-                        [self presentViewController:vc animated:YES completion:^{
-                            
-                        }];
-                        
-                    }else
-                    {
-                        //失败 打印 描述信息
-//                        NSLog(@"%@",des);
-                        [self showAlertWithTitle:@"温馨提示" AndMessage:des];
-                    }
-                }else if ([result isKindOfClass:[NSData class]]){
-//                    NSLog(@"resultData:%@",result);
-                }
-                
-                
-            }else{
-            
-                
-                [self showAlertWithTitle:@"温馨提示" AndMessage:[(NSError *)result localizedDescription] ];
-            }
+//        NSLog(@"---%@", [NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]]);
+        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegisterAffirmViewController"];
+        [self presentViewController:vc animated:YES completion:^{
             
         }];
+        
+//        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+//            [KBFreash StopRefreshinView:self.view];
+//            if (IsSuccess) {
+//               //注册成功
+//                if ([result isKindOfClass:[NSDictionary class]]) {
+//                    NSLog(@"resultDic:%@",result);
+//                    NSDictionary *dic=result;
+//                    NSNumber *ret=[dic objectForKey:@"ret"];
+//                    NSString *des=[dic objectForKey:@"desc"];
+//                    NSString *token=[dic objectForKey:@"token"];
+//                    NSString *user_id=[dic objectForKey:@"user_id"];
+//                    if ([ret intValue]) {
+//                        if([ret intValue]==2)
+//                        {
+//                            [UIAlertView showWithTitle:@"提示" Message:[result objectForKey:@"desc"] cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+//                                
+//                            }];
+//                            return ;
+//                        }
+//                        //注册成功 存储信息 跳转到 成功界面
+//                        KBUserInfo *user=[KBUserInfo sharedInfo];
+//                        user.token=token;
+//                        user.userName=_userNameTextfiled.text;
+//                        user.user_id=user_id;
+//                        user.passWord=_passwordTextFiled.text;
+//                        
+//                        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegisterAffirmViewController"];
+//
+//                        
+//                        [self presentViewController:vc animated:YES completion:^{
+//                            
+//                        }];
+//                        
+//                    }else
+//                    {
+//                        //失败 打印 描述信息
+////                        NSLog(@"%@",des);
+//                        [self showAlertWithTitle:@"温馨提示" AndMessage:des];
+//                    }
+//                }else if ([result isKindOfClass:[NSData class]]){
+////                    NSLog(@"resultData:%@",result);
+//                }
+//                
+//                
+//            }else{
+//            
+//                
+//                [self showAlertWithTitle:@"温馨提示" AndMessage:[(NSError *)result localizedDescription] ];
+//            }
+//            
+//        }];
     }else
     {
         [self showAlertWithTitle:@"温馨提示" AndMessage:@"信息填写不完整"];

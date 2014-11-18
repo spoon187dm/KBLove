@@ -12,10 +12,13 @@
 
 //@property (nonatomic,strong)NSString *EquipmentIMEINumString;
 
+/** 设备号*/
 @property (weak, nonatomic) IBOutlet UILabel *EquipmentIMEINum;
 
+/** sim卡号*/
 @property (weak, nonatomic) IBOutlet UITextField *EquipmentSIMNum;
 
+/** 联系人*/
 @property (weak, nonatomic) IBOutlet UITextField *LinkmanPhoneNum;
 
 //右上方 点击事件

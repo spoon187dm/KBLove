@@ -334,6 +334,7 @@
 		DA3AE0FF1A1ADD6400DF0968 /* telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F81A1ADD6400DF0968 /* telephone@2x.png */; };
 		DA3AE1001A1ADD6400DF0968 /* telregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F91A1ADD6400DF0968 /* telregisterbtn@2x.png */; };
 		DA3AE1011A1ADD6400DF0968 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */; };
+		DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -1492,6 +1493,8 @@
 		DA3AE0F81A1ADD6400DF0968 /* telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telephone@2x.png"; path = "KBLove/images/Register/telephone@2x.png"; sourceTree = SOURCE_ROOT; };
 		DA3AE0F91A1ADD6400DF0968 /* telregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtn@2x.png"; path = "KBLove/images/Register/telregisterbtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtnNormal@2x.png"; path = "KBLove/images/Register/telregisterbtnNormal@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA3AE1021A1AFA9500DF0968 /* RegisterAffirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAffirmViewController.h; sourceTree = "<group>"; };
+		DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAffirmViewController.m; sourceTree = "<group>"; };
 		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
@@ -2989,6 +2992,13 @@
 			path = DXSearchView;
 			sourceTree = "<group>";
 		};
+		DA3AE1051A1B3A8900DF0968 /* Choose */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Choose;
+			sourceTree = "<group>";
+		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3722,6 +3732,9 @@
 				F97410D419EC322000E12633 /* LoginViewController.m */,
 				F97410D519EC322000E12633 /* RegisterViewController.h */,
 				F97410D619EC322000E12633 /* RegisterViewController.m */,
+				DA3AE1021A1AFA9500DF0968 /* RegisterAffirmViewController.h */,
+				DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */,
+				DA3AE1051A1B3A8900DF0968 /* Choose */,
 			);
 			path = "Login&Regist";
 			sourceTree = "<group>";
@@ -6716,6 +6729,7 @@
 				F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */,
 				F99246461A048C5400599E74 /* TableRefreshBaseView.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
+				DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */,
 				BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */,
 				BCCDD7351A0C7B6A008A9795 /* FriendSettingViewController.m in Sources */,
 				F9C91F921A15C576003DF07A /* CCWarning.m in Sources */,

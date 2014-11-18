@@ -14,6 +14,9 @@
 @interface MainViewController : UIViewController<BMKMapViewDelegate,MAMapViewDelegate,AMapSearchDelegate>
 //@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 //@property (weak, nonatomic) IBOutlet BMKMapView *baidu_MapView;
+/** 是否第一次登陆*/
+@property (nonatomic, assign, getter=isFirstLogin) BOOL firstLogin;
+
 - (IBAction)click_fresh:(UIButton *)sender;
 - (IBAction)click_Location:(UIButton *)sender;
 - (IBAction)click_zoomin:(UIButton *)sender;

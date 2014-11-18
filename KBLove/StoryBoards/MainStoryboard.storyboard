@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="amM-zK-BbY">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fIh-PB-heh" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JrO-0d-u7j"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jyh-6H-d2v"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zvq-uH-pnT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,10 +189,6 @@
         <scene sceneID="Ku5-Hq-UMg">
             <objects>
                 <viewController storyboardIdentifier="DeviceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r5l-1J-MQv" customClass="DeviceDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wJ9-9n-D5f"/>
-                        <viewControllerLayoutGuide type="bottom" id="QaI-K5-NSM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="346-jD-ad6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -453,10 +446,6 @@
         <scene sceneID="9tL-lC-w7e">
             <objects>
                 <viewController storyboardIdentifier="ETSliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lUt-Tg-qUm" customClass="ETSliderViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KpX-GV-YLr"/>
-                        <viewControllerLayoutGuide type="bottom" id="L0A-i1-HaH"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jIY-Sb-PKG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,10 +460,6 @@
         <scene sceneID="wDy-dy-cNy">
             <objects>
                 <viewController storyboardIdentifier="LeftSliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dBp-em-hY8" customClass="LeftSliderViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cpo-8C-4QG"/>
-                        <viewControllerLayoutGuide type="bottom" id="How-Jk-XEo"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5oo-37-p4R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,10 +549,6 @@
         <scene sceneID="BDQ-fF-ap9">
             <objects>
                 <viewController storyboardIdentifier="AlarmDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RFH-p8-LP5" customClass="AlarmDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="thw-hy-FUM"/>
-                        <viewControllerLayoutGuide type="bottom" id="jLt-H9-dh9"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tG8-cr-Nm6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

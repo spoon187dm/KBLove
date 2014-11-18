@@ -82,6 +82,10 @@
 {
     [super viewDidLoad];
     
+    if (self.isFirstLogin) {
+        NSLog(@"------isFirstLogin");
+    }
+    
     //Scoket登陆服务器
     [[KBScoketManager ShareManager]startScoket];
 
@@ -340,7 +344,7 @@
 {
     CLLocationCoordinate2D coor={39.991069, 116.305395};
     [ZWL_ReGeoRecodeTool GaoDeMapViewReGeocodeWithCoordinate:coor viewController:self response:^(NSMutableArray *resultArray) {
-        NSLog(@"%@",resultArray[1]);
+//        NSLog(@"%@",resultArray[1]);
         
     }];
 }
