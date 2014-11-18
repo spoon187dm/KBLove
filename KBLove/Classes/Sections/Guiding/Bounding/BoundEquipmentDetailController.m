@@ -62,6 +62,11 @@
     vc = [self.storyboard instantiateViewControllerWithIdentifier:aimController];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 

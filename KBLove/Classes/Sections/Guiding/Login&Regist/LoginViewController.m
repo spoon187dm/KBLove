@@ -53,6 +53,7 @@
 
 #pragma mark - 登陆
 - (IBAction)loginBtnClicked:(id)sender {
+    
     //判断是否用户名是否合法
     if ([_userNameTF.text isValidateEmail] || [_userNameTF.text isValidateMobile]) {
         //发起登陆请求

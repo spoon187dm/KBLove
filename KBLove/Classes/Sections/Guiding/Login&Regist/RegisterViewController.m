@@ -93,7 +93,12 @@
         
         
         //信息没有错误 进行注册
-        NSLog(@"---%@", [NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]]);
+//        NSLog(@"---%@", [NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]]);
+        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegisterAffirmViewController"];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+        
         [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
             [KBFreash StopRefreshinView:self.view];
             if (IsSuccess) {
@@ -120,7 +125,7 @@
                         user.user_id=user_id;
                         user.passWord=_passwordTextFiled.text;
                         
-                        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegistFinishNavigationController"];
+                        UINavigationController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RegisterAffirmViewController"];
 
                         
                         [self presentViewController:vc animated:YES completion:^{
