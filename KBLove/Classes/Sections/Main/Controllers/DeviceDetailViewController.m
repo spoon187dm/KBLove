@@ -13,6 +13,7 @@
 #import "TraceListViewController.h"
 #import "SettingTableViewController.h"
 #import "CarDataViewController.h"
+#import "PetAndPersonDataViewController.h"
 
 @interface DeviceDetailViewController ()
 {
@@ -209,11 +210,23 @@
 //数据
 - (IBAction)click_data:(UIButton *)sender{
     UIStoryboard * std  = [UIStoryboard storyboardWithName:@"Device_data" bundle:nil];
-    CarDataViewController * carData = [std instantiateViewControllerWithIdentifier:@"CarDataViewController"];
-    carData.device = _device;
-    carData.deviceStatus = _deviceStatus;
     
-    [self.navigationController pushViewController:carData animated:YES];
+    if ([_device.type isEqualToNumber:@(DEVICE_CAR)]) {
+        CarDataViewController * carData = [std instantiateViewControllerWithIdentifier:@"CarDataViewController"];
+        carData.device = _device;
+        carData.deviceStatus = _deviceStatus;
+        
+        [self.navigationController pushViewController:carData animated:YES];
+    }else{
+        PetAndPersonDataViewController * petAndPerson = [std instantiateViewControllerWithIdentifier:@"PetAndPersonDataViewController"];
+        petAndPerson.device = _device;
+        petAndPerson.deviceStatus = _deviceStatus;
+        [self.navigationController pushViewController:petAndPerson animated:YES];
+    }
+    
+    
+    
+   
     
 }
 

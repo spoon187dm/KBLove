@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Oi8-16-FWF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Oi8-16-FWF">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -9,8 +10,8 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fIh-PB-heh" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JrO-0d-u7j"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jyh-6H-d2v"/>
+                        <viewControllerLayoutGuide type="top" id="FnJ-wR-yzI"/>
+                        <viewControllerLayoutGuide type="bottom" id="mQZ-yS-aOd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zvq-uH-pnT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -31,9 +32,8 @@
                                     <action selector="click_message:" destination="fIh-PB-heh" eventType="touchUpInside" id="OyC-09-Zxz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cr2-vM-Tl3" userLabel="Button - 宠物">
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr2-vM-Tl3" userLabel="Button - 宠物">
                                 <rect key="frame" x="12" y="320" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="icon_pet.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,9 +42,8 @@
                                     <action selector="click_pet:" destination="fIh-PB-heh" eventType="touchUpInside" id="GlK-Ea-Rrh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TkN-d8-RO3" userLabel="Button - 人">
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-d8-RO3" userLabel="Button - 人">
                                 <rect key="frame" x="12" y="370" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="icon_person.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,9 +52,8 @@
                                     <action selector="click_person:" destination="fIh-PB-heh" eventType="touchUpInside" id="2iG-RO-N9h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rkb-Do-hKu" userLabel="Button - 车">
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-Do-hKu" userLabel="Button - 车">
                                 <rect key="frame" x="12" y="420" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="icon_car.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,7 +95,7 @@
                                     <action selector="click_devicesList:" destination="fIh-PB-heh" eventType="touchUpInside" id="3Nr-7p-nnu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e9A-ec-bDV">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-ec-bDV">
                                 <rect key="frame" x="268" y="471" width="30" height="28"/>
                                 <state key="normal" backgroundImage="zoomout.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,9 +113,8 @@
                                     <action selector="click_zoomin:" destination="fIh-PB-heh" eventType="touchUpInside" id="g8o-YN-U16"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TOm-Tc-hi5" userLabel="Button - 刷新">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-Tc-hi5" userLabel="Button - 刷新">
                                 <rect key="frame" x="270" y="355" width="26" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="device_op4.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -125,9 +122,8 @@
                                     <action selector="click_fresh:" destination="fIh-PB-heh" eventType="touchUpInside" id="uH5-S2-Xy6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OU8-Jq-zDu" userLabel="Button - 定位自己">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU8-Jq-zDu" userLabel="Button - 定位自己">
                                 <rect key="frame" x="267" y="393" width="32" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="device_op3.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -155,9 +151,8 @@
                                 <rect key="frame" x="234" y="7" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aOS-aR-Gw1">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOS-aR-Gw1">
                                         <rect key="frame" x="40" y="0.0" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="图标_57.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -165,9 +160,8 @@
                                             <action selector="click_dropList:" destination="fIh-PB-heh" eventType="touchUpInside" id="DKE-Ay-EMQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hpo-n9-Pgt">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-n9-Pgt">
                                         <rect key="frame" x="-2" y="2" width="34" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="icon_alarm.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -193,8 +187,8 @@
             <objects>
                 <viewController storyboardIdentifier="DeviceDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r5l-1J-MQv" customClass="DeviceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wJ9-9n-D5f"/>
-                        <viewControllerLayoutGuide type="bottom" id="QaI-K5-NSM"/>
+                        <viewControllerLayoutGuide type="top" id="Kbz-IU-F5v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wl1-as-jGM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="346-jD-ad6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -202,7 +196,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsI-dc-CeA">
                                 <rect key="frame" x="0.0" y="522" width="320" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SZ-Xg-Rf8">
                                         <rect key="frame" x="0.0" y="6" width="64" height="40"/>
@@ -454,8 +447,8 @@
             <objects>
                 <viewController storyboardIdentifier="ETSliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lUt-Tg-qUm" customClass="ETSliderViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KpX-GV-YLr"/>
-                        <viewControllerLayoutGuide type="bottom" id="L0A-i1-HaH"/>
+                        <viewControllerLayoutGuide type="top" id="Kk6-Gk-Oxu"/>
+                        <viewControllerLayoutGuide type="bottom" id="e2I-LI-4XL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jIY-Sb-PKG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -472,8 +465,8 @@
             <objects>
                 <viewController storyboardIdentifier="LeftSliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dBp-em-hY8" customClass="LeftSliderViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cpo-8C-4QG"/>
-                        <viewControllerLayoutGuide type="bottom" id="How-Jk-XEo"/>
+                        <viewControllerLayoutGuide type="top" id="SH5-R7-CcK"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQA-AT-drt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5oo-37-p4R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -565,8 +558,8 @@
             <objects>
                 <viewController storyboardIdentifier="AlarmDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RFH-p8-LP5" customClass="AlarmDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="thw-hy-FUM"/>
-                        <viewControllerLayoutGuide type="bottom" id="jLt-H9-dh9"/>
+                        <viewControllerLayoutGuide type="top" id="Mto-If-jYo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fF1-f0-cfN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tG8-cr-Nm6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -931,7 +924,6 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-9g-pAV">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="信息修改 >">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1185,7 +1177,6 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btl-AF-KKy">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="信息修改 >">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1399,7 +1390,6 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-PR-ejR">
                                     <rect key="frame" x="207" y="125" width="74" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="信息修改 >">
                                         <color key="titleColor" red="0.25490196079999999" green="0.80000000000000004" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

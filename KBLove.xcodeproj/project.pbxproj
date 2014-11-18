@@ -29,6 +29,10 @@
 		BC256C8F1A05F59000EDFFBC /* zoomin.png in Resources */ = {isa = PBXBuildFile; fileRef = BC256C8B1A05F59000EDFFBC /* zoomin.png */; };
 		BC256C901A05F59000EDFFBC /* zoomout_select.png in Resources */ = {isa = PBXBuildFile; fileRef = BC256C8C1A05F59000EDFFBC /* zoomout_select.png */; };
 		BC256C911A05F59000EDFFBC /* zoomout.png in Resources */ = {isa = PBXBuildFile; fileRef = BC256C8D1A05F59000EDFFBC /* zoomout.png */; };
+		BC29C94A1A1B405D009C7A92 /* CarDataMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29C9491A1B405D009C7A92 /* CarDataMoreViewController.m */; };
+		BC29C94D1A1B4350009C7A92 /* CarDataDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29C94C1A1B4350009C7A92 /* CarDataDetailViewController.m */; };
+		BC29C9501A1B43DA009C7A92 /* CarOBDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29C94F1A1B43DA009C7A92 /* CarOBDViewController.m */; };
+		BC29C9531A1B551D009C7A92 /* PetAndPersonDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC29C9521A1B551D009C7A92 /* PetAndPersonDataViewController.m */; };
 		BC44AD7519F166440067764F /* SendMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7419F166440067764F /* SendMessageView.xib */; };
 		BC44AD7D19F169CC0067764F /* chat_bg_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7719F169CC0067764F /* chat_bg_default.jpg */; };
 		BC44AD7E19F169CC0067764F /* chat_bottom_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */; };
@@ -1084,6 +1088,14 @@
 		BC256C8B1A05F59000EDFFBC /* zoomin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoomin.png; sourceTree = "<group>"; };
 		BC256C8C1A05F59000EDFFBC /* zoomout_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoomout_select.png; sourceTree = "<group>"; };
 		BC256C8D1A05F59000EDFFBC /* zoomout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoomout.png; sourceTree = "<group>"; };
+		BC29C9481A1B405D009C7A92 /* CarDataMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarDataMoreViewController.h; path = data/CarDataMoreViewController.h; sourceTree = "<group>"; };
+		BC29C9491A1B405D009C7A92 /* CarDataMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarDataMoreViewController.m; path = data/CarDataMoreViewController.m; sourceTree = "<group>"; };
+		BC29C94B1A1B4350009C7A92 /* CarDataDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDataDetailViewController.h; sourceTree = "<group>"; };
+		BC29C94C1A1B4350009C7A92 /* CarDataDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDataDetailViewController.m; sourceTree = "<group>"; };
+		BC29C94E1A1B43DA009C7A92 /* CarOBDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarOBDViewController.h; path = data/CarOBDViewController.h; sourceTree = "<group>"; };
+		BC29C94F1A1B43DA009C7A92 /* CarOBDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarOBDViewController.m; path = data/CarOBDViewController.m; sourceTree = "<group>"; };
+		BC29C9511A1B551D009C7A92 /* PetAndPersonDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetAndPersonDataViewController.h; path = data/PetAndPersonDataViewController.h; sourceTree = "<group>"; };
+		BC29C9521A1B551D009C7A92 /* PetAndPersonDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetAndPersonDataViewController.m; path = data/PetAndPersonDataViewController.m; sourceTree = "<group>"; };
 		BC44AD7419F166440067764F /* SendMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageView.xib; sourceTree = "<group>"; };
 		BC44AD7719F169CC0067764F /* chat_bg_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_bg_default.jpg; sourceTree = "<group>"; };
 		BC44AD7819F169CC0067764F /* chat_bottom_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bottom_bg@2x.png"; sourceTree = "<group>"; };
@@ -2526,6 +2538,14 @@
 				BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */,
 				BC09CD491A19C95B005F92F5 /* CarDataViewController.h */,
 				BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */,
+				BC29C9481A1B405D009C7A92 /* CarDataMoreViewController.h */,
+				BC29C9491A1B405D009C7A92 /* CarDataMoreViewController.m */,
+				BC29C94B1A1B4350009C7A92 /* CarDataDetailViewController.h */,
+				BC29C94C1A1B4350009C7A92 /* CarDataDetailViewController.m */,
+				BC29C94E1A1B43DA009C7A92 /* CarOBDViewController.h */,
+				BC29C94F1A1B43DA009C7A92 /* CarOBDViewController.m */,
+				BC29C9511A1B551D009C7A92 /* PetAndPersonDataViewController.h */,
+				BC29C9521A1B551D009C7A92 /* PetAndPersonDataViewController.m */,
 			);
 			name = Devicedata;
 			sourceTree = "<group>";
@@ -6669,6 +6689,7 @@
 				BC6ED3E31A0750430037F1D1 /* FriendListCell.m in Sources */,
 				F992464C1A048C5400599E74 /* UIView+Extension.m in Sources */,
 				F9C91F991A15C576003DF07A /* ZWL_MapUtils.m in Sources */,
+				BC29C9531A1B551D009C7A92 /* PetAndPersonDataViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
@@ -6771,6 +6792,7 @@
 				F9E24F6519ED725900D83FEF /* PinYinForObjc.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
+				BC29C9501A1B43DA009C7A92 /* CarOBDViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F9C91FCE1A15C587003DF07A /* AlarmCell.m in Sources */,
 				F9C91F911A15C576003DF07A /* CCTrackerUtils.m in Sources */,
@@ -6786,6 +6808,7 @@
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */,
 				F9C91F951A15C576003DF07A /* MapUtils.m in Sources */,
+				BC29C94D1A1B4350009C7A92 /* CarDataDetailViewController.m in Sources */,
 				BC69DF391A13853900238245 /* AddListTableViewCell.m in Sources */,
 				F97410E619EC322000E12633 /* WelcomeViewController.m in Sources */,
 				F97410DD19EC322000E12633 /* BoundAddEquipmentController.m in Sources */,
@@ -6798,6 +6821,7 @@
 				BC5F37401A025BC30088D0AB /* KBScoketManager.m in Sources */,
 				BC59836719ECCEA900DAC76A /* CreateCircleViewController.m in Sources */,
 				BC5D8C2419F8B1D7005AEC7C /* DXSwitch.m in Sources */,
+				BC29C94A1A1B405D009C7A92 /* CarDataMoreViewController.m in Sources */,
 				BC5A136819F7644900DDD36C /* Circle_ShareViewController.m in Sources */,
 				F9E24F7819ED729700D83FEF /* FreashManager.m in Sources */,
 				F9C91FCF1A15C587003DF07A /* BottomSelectView.m in Sources */,
