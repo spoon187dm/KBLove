@@ -10,4 +10,5 @@
 
 @interface UIView (WLTool)
 
+-(void)setBackgroundImage:(NSString *)imagename;
 @end
