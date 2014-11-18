@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--数据 - 小小酥-->
@@ -398,7 +397,7 @@
             </objects>
             <point key="canvasLocation" x="-446" y="623"/>
         </scene>
-        <!--OBD检测-->
+        <!--CarOBD View Controller - OBD检测-->
         <scene sceneID="7DK-eC-5kR">
             <objects>
                 <viewController id="xC7-Do-9HA" customClass="CarOBDViewController" sceneMemberID="viewController">
@@ -1256,7 +1255,7 @@
             </objects>
             <point key="canvasLocation" x="-53" y="-66"/>
         </scene>
-        <!--详情-->
+        <!--Car Data Detail View Controller - 详情-->
         <scene sceneID="C7c-Ay-mCr">
             <objects>
                 <viewController title="详情" id="E3Q-F0-pTr" customClass="CarDataDetailViewController" sceneMemberID="viewController">
