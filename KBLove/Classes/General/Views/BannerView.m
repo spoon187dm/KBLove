@@ -66,7 +66,12 @@
     }
     // 在后面多加一页 实现循环滚动
     UIImageView *fristImageView = [[UIImageView alloc] initWithFrame:CGRectMake([_imageArray count] * w, 0, w, h)];
-    fristImageView.image = [UIImage imageNamed:[_imageArray objectAtIndex:0]];
+    
+#warning 滚动视图图片优化
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:_imageArray.firstObject ofType:nil];
+    fristImageView.image = [UIImage imageWithContentsOfFile:imagePath];
+    
+//    fristImageView.image = [UIImage imageNamed:[_imageArray objectAtIndex:0]];
     
     [_scrollView addSubview:fristImageView];
     // 设置ScrollView属性 contentSize 加上最后多加的那一页
@@ -77,9 +82,16 @@
     
     //是否自动滚动
     if (isAutoScroll) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoScroll:) userInfo:_scrollView repeats:YES];
+        [self addTimer];
     }
     
+}
+
+/** 添加计时器*/
+- (void)addTimer
+{
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoScroll:) userInfo:_scrollView repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
 // 定时器响应方法，实现自动滚动
@@ -92,6 +104,16 @@
 }
 
 #pragma mark - UIScrollView Delegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [_timer invalidate];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self addTimer];
+}
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat width = _scrollView.frame.size.width;
     // 循环滚动
@@ -104,7 +126,7 @@
         [_scrollView setContentOffset:CGPointMake(320 * 5 + 300, 0) animated:NO];
     }
     // 根据偏移量计算页码
-    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    int page = (scrollView.contentOffset.x + self.bounds.size.width * 0.5) / scrollView.frame.size.width;
     _pageControl.currentPage = page%[_imageArray count];
     if (page >= 6) {
         page = 0;

@@ -24,6 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //为banner赋值
+    NSArray *imageArray = @[@"bj.png",@"bj.png",@"bj.png",@"bj.png",@"bj.png"];
+    [_bannerView setImageWithArray:imageArray andIsAutoScroll:YES];
+    
     //默认电话注册
     _registertype=phone;
     _verifyPasswordTextfiled.secureTextEntry=YES;
@@ -55,31 +60,41 @@
 {
     if (_userNameTextfiled.text.length&&_passwordTextFiled.text.length&&_verifyPasswordTextfiled.text) {
         
-        switch (_registertype) {
-            case phone:{
-                if (![_userNameTextfiled.text isValidateMobile]) {
-                    [self showAlertWithTitle:@"温馨提示" AndMessage:@"手机号不合法"];
-                     return;
-                }
-               
-                
-            }break;
-            case email:{
-                if (![_userNameTextfiled.text isValidateEmail]) {
-                    [self showAlertWithTitle:@"温馨提示" AndMessage:@"邮箱不合法"];
-                    return;
-                }
-            }break;
-            default:
-                break;
+        
+        /**
+         *  现在的需要不需要判断手机或者邮箱
+         */
+//        switch (_registertype) {
+//            case phone:{
+        if (![_userNameTextfiled.text isValidateMobile]) {
+            [self showAlertWithTitle:@"温馨提示" AndMessage:@"手机号不合法"];
+             return;
         }
-        if (![_passwordTextFiled.text isEqualToString:_verifyPasswordTextfiled.text]) {
+//
+//                
+//            }break;
+//            case email:{
+//                if (![_userNameTextfiled.text isValidateEmail]) {
+//                    [self showAlertWithTitle:@"温馨提示" AndMessage:@"邮箱不合法"];
+//                    return;
+//                }
+//            }break;
+//            default:
+//                break;
+//        }
+        
+        if (![_passwordTextFiled.text isEqualToString:_verifyPasswordTextfiled.text])
+        {
             [self showAlertWithTitle:@"温馨提示" AndMessage:@"两次输入密码不一致"];
             return;
-            }
+        }
+        
         [KBFreash startRefreshWithTitle:@"注册中..." inView:self.view];
-        //信息没有错误 进行 注册
-        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
+        
+        
+        //信息没有错误 进行注册
+        NSLog(@"---%@", [NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]]);
+        [[KBHttpRequestTool sharedInstance] request:[NSString stringWithFormat:REGRSTER_URL,(int)_registertype,_userNameTextfiled.text,[_passwordTextFiled.text MD5Hash]] requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
             [KBFreash StopRefreshinView:self.view];
             if (IsSuccess) {
                //注册成功
@@ -115,11 +130,11 @@
                     }else
                     {
                         //失败 打印 描述信息
-                        NSLog(@"%@",des);
+//                        NSLog(@"%@",des);
                         [self showAlertWithTitle:@"温馨提示" AndMessage:des];
                     }
                 }else if ([result isKindOfClass:[NSData class]]){
-                    NSLog(@"resultData:%@",result);
+//                    NSLog(@"resultData:%@",result);
                 }
                 
                 

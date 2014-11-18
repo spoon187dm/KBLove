@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jPO-8L-cUE">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--欢迎引导界面-->
@@ -75,34 +74,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jef-2g-P3e">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ir-Bs-Cs5">
-                                <rect key="frame" x="10" y="95" width="300" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ji-hS-xeK">
-                                        <rect key="frame" x="50" y="5" width="100" height="30"/>
-                                        <state key="normal" title="手机注册" backgroundImage="telregisterbtn.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="phoneRegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="bUP-nl-JIy"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h3-Dd-NTm">
-                                        <rect key="frame" x="150" y="5" width="100" height="30"/>
-                                        <state key="normal" title="邮箱注册" backgroundImage="mailregisterbtn.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="mailRegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="1ci-DA-aoi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pif-HD-bR5" userLabel="Button - 登陆">
+                                <rect key="frame" x="0.0" y="520" width="320" height="48"/>
+                                <state key="normal" backgroundImage="zhuce.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnClicked:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="QGP-Yn-RU7"/>
+                                    <action selector="registerBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="9Gg-AV-9ze"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-Mb-jwz">
-                                <rect key="frame" x="10" y="162" width="300" height="40"/>
+                                <rect key="frame" x="10" y="180" width="300" height="40"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lgtextfield.png" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-1m-5Hs">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -119,7 +102,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRT-YA-4Sb">
-                                <rect key="frame" x="10" y="233" width="300" height="40"/>
+                                <rect key="frame" x="10" y="251" width="300" height="40"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lgtextfield.png" translatesAutoresizingMaskIntoConstraints="NO" id="YFO-mV-IfP">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -136,7 +119,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-TW-K2t">
-                                <rect key="frame" x="10" y="309" width="300" height="40"/>
+                                <rect key="frame" x="10" y="327" width="300" height="40"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lgtextfield.png" translatesAutoresizingMaskIntoConstraints="NO" id="DRo-La-ifJ">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -152,6 +135,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPn-TU-r1q" customClass="BannerView">
+                                <rect key="frame" x="0.0" y="61" width="320" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy1-v5-fDD">
                                 <rect key="frame" x="10" y="392" width="300" height="40"/>
                                 <state key="normal" title="注册" backgroundImage="lgloginbg.png">
@@ -162,25 +149,13 @@
                                     <action selector="RegisterButton:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="l28-i3-V70"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGn-A0-Mpf">
-                                <rect key="frame" x="10" y="440" width="300" height="40"/>
-                                <state key="normal" title="登陆" backgroundImage="lgloginbg.png">
-                                    <color key="titleColor" red="0.062745098039215685" green="0.49803921568627452" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginBtnClicked:" destination="Mkb-Tj-0ME" eventType="touchUpInside" id="g5E-Y2-5fV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="RegisterButton" destination="Vy1-v5-fDD" id="mv5-xO-pLJ"/>
-                        <outlet property="loginButton" destination="XGn-A0-Mpf" id="gSg-5U-hUt"/>
-                        <outlet property="mailRegisterButton" destination="9h3-Dd-NTm" id="ldM-Oh-kgD"/>
+                        <outlet property="bannerView" destination="zPn-TU-r1q" id="s7e-qZ-dQ0"/>
                         <outlet property="passwordTextFiled" destination="0fq-9k-cVD" id="4Rm-tX-c5H"/>
-                        <outlet property="phoneRegisterButton" destination="7ji-hS-xeK" id="F58-Pm-K0s"/>
                         <outlet property="userNameTextfiled" destination="aFQ-qM-vz3" id="BZr-7S-Edc"/>
                         <outlet property="verifyPasswordTextfiled" destination="Ojo-Pb-GgM" id="2Nl-fy-TmQ"/>
                     </connections>
@@ -278,16 +253,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDf-1U-IzA">
-                                <rect key="frame" x="10" y="357" width="300" height="44"/>
-                                <state key="normal" backgroundImage="login.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="Hro-8i-77y"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNa-u8-KcX">
                                 <rect key="frame" x="19" y="317" width="20" height="19"/>
                                 <state key="normal" backgroundImage="pwd.png">
@@ -315,12 +280,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf7-3x-5Z5">
-                                <rect key="frame" x="0.0" y="522" width="320" height="48"/>
-                                <state key="normal" backgroundImage="Register.png">
+                                <rect key="frame" x="0.0" y="520" width="320" height="48"/>
+                                <state key="normal" backgroundImage="zhuce.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="registerBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="GI5-Oy-uAW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDf-1U-IzA">
+                                <rect key="frame" x="10" y="357" width="300" height="44"/>
+                                <state key="normal" backgroundImage="login.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnClicked:" destination="jPO-8L-cUE" eventType="touchUpInside" id="Hro-8i-77y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -355,9 +330,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-pQ-nN8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tt-SY-yAp">
                                 <rect key="frame" x="160" y="519" width="160" height="49"/>
                                 <state key="normal" title="查看好友设备" backgroundImage="RegisterFisihed2.png">
@@ -375,6 +347,9 @@
                                     <segue destination="sFa-1H-aMC" kind="push" id="mg5-Pd-YTW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-pQ-nN8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -396,31 +371,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="4rq-Py-lOc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGi-C6-d1L">
                                 <rect key="frame" x="10" y="110" width="300" height="40"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lgtextfield.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-CA-n3q">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入产品15位IMEI码添加设备" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2C-ms-yJf">
-                                        <rect key="frame" x="20" y="5" width="267" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入产品15位IMEI码添加设备" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X2C-ms-yJf">
+                                        <rect key="frame" x="17" y="5" width="267" height="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteline.png" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-6f-8Iv">
-                                <rect key="frame" x="10" y="170" width="300" height="2"/>
+                                <rect key="frame" x="10" y="225" width="300" height="2"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="or.png" translatesAutoresizingMaskIntoConstraints="NO" id="25Y-ms-ckX">
-                                <rect key="frame" x="150" y="161" width="20" height="20"/>
+                                <rect key="frame" x="150" y="215" width="20" height="20"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDP-Mo-Iu7">
-                                <rect key="frame" x="10" y="206" width="300" height="40"/>
+                                <rect key="frame" x="10" y="243" width="300" height="40"/>
                                 <state key="normal" title="扫描二维码添加设备" backgroundImage="circleframe.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -430,8 +403,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tq-oL-V7Q">
-                                <rect key="frame" x="26" y="260" width="105" height="30"/>
+                                <rect key="frame" x="0.0" y="290" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.3921568627" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="titleEdgeInsets" minX="-180" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="！添加设备帮助">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -439,17 +415,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlT-ww-buO">
-                                <rect key="frame" x="20" y="320" width="100" height="30"/>
+                                <rect key="frame" x="16" y="337" width="120" height="30"/>
                                 <state key="normal" title="没有设备" backgroundImage="buttonbackground.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="click_missDevice:" destination="sFa-1H-aMC" eventType="touchUpInside" id="5K4-Jv-t9J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJT-F6-7GZ">
-                                <rect key="frame" x="181" y="320" width="107" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJT-F6-7GZ">
+                                <rect key="frame" x="184" y="337" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="切换账户" backgroundImage="buttonbackground.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -458,8 +437,18 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="typefaceimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="BXB-V0-Ekq">
-                                <rect key="frame" x="187" y="327" width="20" height="15"/>
+                                <rect key="frame" x="200" y="344" width="20" height="15"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-e6-7rS" userLabel="Button - 登陆">
+                                <rect key="frame" x="10" y="163" width="300" height="44"/>
+                                <state key="normal" backgroundImage="login.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="suerBtnClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="xqN-74-yud"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -474,19 +463,6 @@
                                 </state>
                                 <connections>
                                     <action selector="backNavBarButtonClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="W1a-Wf-ghh"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" id="gVd-l9-IHz">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ep2-Nu-WzV">
-                                <rect key="frame" x="274" y="7" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" backgroundImage="NVBar_arrow_right.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rightNavBarButtonClick:" destination="sFa-1H-aMC" eventType="touchUpInside" id="aMI-wL-ITr"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -511,9 +487,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2cQ-TR-gK9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteline.png" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-ls-GHH">
                                 <rect key="frame" x="10" y="80" width="300" height="1"/>
                             </imageView>
@@ -575,6 +548,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2cQ-TR-gK9">
+                                <rect key="frame" x="0.0" y="7" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -971,9 +947,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-b5-Pe9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-qe-hAA">
                                 <rect key="frame" x="15" y="143" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1069,6 +1042,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-b5-Pe9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1117,7 +1093,6 @@
     <resources>
         <image name="NVBar_arrow_left.png" width="51" height="51"/>
         <image name="NVBar_arrow_right.png" width="51" height="51"/>
-        <image name="Register.png" width="641" height="108"/>
         <image name="RegisterFisihed1.png" width="319" height="98"/>
         <image name="RegisterFisihed2.png" width="320" height="98"/>
         <image name="background.png" width="320" height="568"/>
@@ -1131,13 +1106,12 @@
         <image name="login.png" width="288" height="46"/>
         <image name="loginQQ.png" width="42" height="42"/>
         <image name="loginsina.png" width="42" height="42"/>
-        <image name="mailregisterbtn.png" width="121" height="38"/>
         <image name="or.png" width="44" height="44"/>
         <image name="pwd.png" width="39" height="39"/>
-        <image name="telregisterbtn.png" width="121" height="38"/>
         <image name="tickoff.png" width="50" height="50"/>
         <image name="typefaceimage.png" width="36" height="23"/>
         <image name="whiteline.png" width="260" height="1"/>
+        <image name="zhuce.png" width="640" height="99"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

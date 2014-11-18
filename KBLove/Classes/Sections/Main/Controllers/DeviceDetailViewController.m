@@ -12,6 +12,7 @@
 #import "KBDeviceManager.h"
 #import "TraceListViewController.h"
 #import "SettingTableViewController.h"
+#import "CarDataViewController.h"
 
 @interface DeviceDetailViewController ()
 {
@@ -207,6 +208,12 @@
 
 //数据
 - (IBAction)click_data:(UIButton *)sender{
+    UIStoryboard * std  = [UIStoryboard storyboardWithName:@"Device_data" bundle:nil];
+    CarDataViewController * carData = [std instantiateViewControllerWithIdentifier:@"CarDataViewController"];
+    carData.device = _device;
+    carData.deviceStatus = _deviceStatus;
+    
+    [self.navigationController pushViewController:carData animated:YES];
     
 }
 
@@ -233,8 +240,6 @@
     if ([segue.identifier isEqualToString:@"toTraceListViewController"]) {
         TraceListViewController *vc = [segue destinationViewController];
         vc.device = _device;
-    }else if([segue.identifier isEqualToString:@"toDataViewController"]){
-        
     }else if([segue.identifier isEqualToString:@"toSettingViewController"]){
         SettingTableViewController *vc = [segue destinationViewController];
         vc.device = _device;

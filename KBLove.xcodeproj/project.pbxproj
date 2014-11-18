@@ -20,6 +20,8 @@
 		87A927E01A1A32710059C5E2 /* shareLocationGaodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
+		BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */; };
+		BC09CD811A1A01D8005F92F5 /* 数据01_15.png in Resources */ = {isa = PBXBuildFile; fileRef = BC09CD801A1A01D8005F92F5 /* 数据01_15.png */; };
 		BC15E0071A076BE00016FB39 /* CircleAndFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */; };
 		BC15E00A1A077B690016FB39 /* Nav_down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0081A077B690016FB39 /* Nav_down_arrow.png */; };
 		BC15E00B1A077B690016FB39 /* Nav_up_arrow .png in Resources */ = {isa = PBXBuildFile; fileRef = BC15E0091A077B690016FB39 /* Nav_up_arrow .png */; };
@@ -78,6 +80,7 @@
 		BC71E6E919F96A3000692533 /* KBPositionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BC71E6E819F96A3000692533 /* KBPositionInfo.m */; };
 		BC7910D419F6BE24000EEA0C /* userimage.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7910D319F6BE24000EEA0C /* userimage.png */; };
 		BC7910D619F6C362000EEA0C /* Nav_Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7910D519F6C362000EEA0C /* Nav_Circle.png */; };
+		BC836E3B1A19C4A2009E85A5 /* DeviceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */; };
 		BC8E2A4A1A0626BD0075531A /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B788A1A04E33B00A666B7 /* MAMapKit.framework */; };
 		BC9B77841A04AD3400A666B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77831A04AD3400A666B7 /* Security.framework */; };
 		BC9B77861A04AD4100A666B7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B77851A04AD4100A666B7 /* MessageUI.framework */; };
@@ -326,6 +329,13 @@
 		BCCE87331A11BCC20014AF29 /* FaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCE87321A11BCC20014AF29 /* FaceView.xib */; };
 		BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF1848E1A0B51A0006843D1 /* DXsearchView.m */; };
 		BCF184911A0B5333006843D1 /* DXSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF184901A0B5333006843D1 /* DXSearchView.xib */; };
+		DA3AE0FB1A1ADD6400DF0968 /* mailregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F41A1ADD6400DF0968 /* mailregisterbtn@2x.png */; };
+		DA3AE0FC1A1ADD6400DF0968 /* mailregisterbtnSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F51A1ADD6400DF0968 /* mailregisterbtnSelected@2x.png */; };
+		DA3AE0FD1A1ADD6400DF0968 /* RegisterFisihed1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F61A1ADD6400DF0968 /* RegisterFisihed1.png */; };
+		DA3AE0FE1A1ADD6400DF0968 /* RegisterFisihed2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F71A1ADD6400DF0968 /* RegisterFisihed2.png */; };
+		DA3AE0FF1A1ADD6400DF0968 /* telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F81A1ADD6400DF0968 /* telephone@2x.png */; };
+		DA3AE1001A1ADD6400DF0968 /* telregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0F91A1ADD6400DF0968 /* telregisterbtn@2x.png */; };
+		DA3AE1011A1ADD6400DF0968 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -409,13 +419,6 @@
 		F91A0E6619E7AACF009ADB44 /* moreNavItemSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF319E7AACF009ADB44 /* moreNavItemSelected.png */; };
 		F91A0E6719E7AACF009ADB44 /* ReturnItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF419E7AACF009ADB44 /* ReturnItem.png */; };
 		F91A0E6819E7AACF009ADB44 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF619E7AACF009ADB44 /* arrow.png */; };
-		F91A0E6919E7AACF009ADB44 /* mailregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF819E7AACF009ADB44 /* mailregisterbtn@2x.png */; };
-		F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DF919E7AACF009ADB44 /* mailregisterbtnSelected@2x.png */; };
-		F91A0E6B19E7AACF009ADB44 /* RegisterFisihed1.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFA19E7AACF009ADB44 /* RegisterFisihed1.png */; };
-		F91A0E6C19E7AACF009ADB44 /* RegisterFisihed2.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFB19E7AACF009ADB44 /* RegisterFisihed2.png */; };
-		F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFC19E7AACF009ADB44 /* telephone@2x.png */; };
-		F91A0E6E19E7AACF009ADB44 /* telregisterbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFD19E7AACF009ADB44 /* telregisterbtn@2x.png */; };
-		F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0DFE19E7AACF009ADB44 /* telregisterbtnNormal@2x.png */; };
 		F91A0E7019E7AACF009ADB44 /* cutEquipment.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E0019E7AACF009ADB44 /* cutEquipment.png */; };
 		F91A0E7119E7AACF009ADB44 /* end.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E0119E7AACF009ADB44 /* end.png */; };
 		F91A0E7219E7AACF009ADB44 /* notEquipment.png in Resources */ = {isa = PBXBuildFile; fileRef = F91A0E0219E7AACF009ADB44 /* notEquipment.png */; };
@@ -1074,6 +1077,9 @@
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
 		BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleFriendCell.xib; sourceTree = "<group>"; };
+		BC09CD491A19C95B005F92F5 /* CarDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarDataViewController.h; path = data/CarDataViewController.h; sourceTree = "<group>"; };
+		BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarDataViewController.m; path = data/CarDataViewController.m; sourceTree = "<group>"; };
+		BC09CD801A1A01D8005F92F5 /* 数据01_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数据01_15.png"; sourceTree = "<group>"; };
 		BC15E0051A076BE00016FB39 /* CircleAndFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleAndFriendListViewController.h; sourceTree = "<group>"; };
 		BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleAndFriendListViewController.m; sourceTree = "<group>"; };
 		BC15E0081A077B690016FB39 /* Nav_down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_down_arrow.png; sourceTree = "<group>"; };
@@ -1160,6 +1166,8 @@
 		BC777FD71A0508BA00349CCD /* ZhangWenLong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhangWenLong.h; sourceTree = "<group>"; };
 		BC7910D319F6BE24000EEA0C /* userimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userimage.png; path = ../../../Classes/Helpers/userimage.png; sourceTree = "<group>"; };
 		BC7910D519F6C362000EEA0C /* Nav_Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nav_Circle.png; sourceTree = "<group>"; };
+		BC836E391A19C4A2009E85A5 /* DeviceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDataViewController.h; path = data/DeviceDataViewController.h; sourceTree = "<group>"; };
+		BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDataViewController.m; path = data/DeviceDataViewController.m; sourceTree = "<group>"; };
 		BC9B77831A04AD3400A666B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BC9B77851A04AD4100A666B7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BC9B77871A04AD4800A666B7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1483,6 +1491,14 @@
 		BCF1848E1A0B51A0006843D1 /* DXsearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXsearchView.m; sourceTree = "<group>"; };
 		BCF184901A0B5333006843D1 /* DXSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DXSearchView.xib; sourceTree = "<group>"; };
 		C40FF82525B6752351E2B8FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3AE0F41A1ADD6400DF0968 /* mailregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailregisterbtn@2x.png"; path = "KBLove/images/Register/mailregisterbtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA3AE0F51A1ADD6400DF0968 /* mailregisterbtnSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailregisterbtnSelected@2x.png"; path = "KBLove/images/Register/mailregisterbtnSelected@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA3AE0F61A1ADD6400DF0968 /* RegisterFisihed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RegisterFisihed1.png; path = KBLove/images/Register/RegisterFisihed1.png; sourceTree = SOURCE_ROOT; };
+		DA3AE0F71A1ADD6400DF0968 /* RegisterFisihed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RegisterFisihed2.png; path = KBLove/images/Register/RegisterFisihed2.png; sourceTree = SOURCE_ROOT; };
+		DA3AE0F81A1ADD6400DF0968 /* telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telephone@2x.png"; path = "KBLove/images/Register/telephone@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA3AE0F91A1ADD6400DF0968 /* telregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtn@2x.png"; path = "KBLove/images/Register/telregisterbtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "telregisterbtnNormal@2x.png"; path = "KBLove/images/Register/telregisterbtnNormal@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
 		F90F6EFE19F563E400671113 /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
@@ -1582,13 +1598,6 @@
 		F91A0DF319E7AACF009ADB44 /* moreNavItemSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreNavItemSelected.png; sourceTree = "<group>"; };
 		F91A0DF419E7AACF009ADB44 /* ReturnItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReturnItem.png; sourceTree = "<group>"; };
 		F91A0DF619E7AACF009ADB44 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		F91A0DF819E7AACF009ADB44 /* mailregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mailregisterbtn@2x.png"; sourceTree = "<group>"; };
-		F91A0DF919E7AACF009ADB44 /* mailregisterbtnSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mailregisterbtnSelected@2x.png"; sourceTree = "<group>"; };
-		F91A0DFA19E7AACF009ADB44 /* RegisterFisihed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterFisihed1.png; sourceTree = "<group>"; };
-		F91A0DFB19E7AACF009ADB44 /* RegisterFisihed2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterFisihed2.png; sourceTree = "<group>"; };
-		F91A0DFC19E7AACF009ADB44 /* telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telephone@2x.png"; sourceTree = "<group>"; };
-		F91A0DFD19E7AACF009ADB44 /* telregisterbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telregisterbtn@2x.png"; sourceTree = "<group>"; };
-		F91A0DFE19E7AACF009ADB44 /* telregisterbtnNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "telregisterbtnNormal@2x.png"; sourceTree = "<group>"; };
 		F91A0E0019E7AACF009ADB44 /* cutEquipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutEquipment.png; sourceTree = "<group>"; };
 		F91A0E0119E7AACF009ADB44 /* end.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = end.png; sourceTree = "<group>"; };
 		F91A0E0219E7AACF009ADB44 /* notEquipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notEquipment.png; sourceTree = "<group>"; };
@@ -2527,6 +2536,17 @@
 			path = KBSCoketManager;
 			sourceTree = "<group>";
 		};
+		BC836E3C1A19C4A8009E85A5 /* Devicedata */ = {
+			isa = PBXGroup;
+			children = (
+				BC836E391A19C4A2009E85A5 /* DeviceDataViewController.h */,
+				BC836E3A1A19C4A2009E85A5 /* DeviceDataViewController.m */,
+				BC09CD491A19C95B005F92F5 /* CarDataViewController.h */,
+				BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */,
+			);
+			name = Devicedata;
+			sourceTree = "<group>";
+		};
 		BC9B778F1A04AEC700A666B7 /* MAPLibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -3311,13 +3331,6 @@
 			children = (
 				F91A0DF619E7AACF009ADB44 /* arrow.png */,
 				F91A0DF719E7AACF009ADB44 /* images */,
-				F91A0DF819E7AACF009ADB44 /* mailregisterbtn@2x.png */,
-				F91A0DF919E7AACF009ADB44 /* mailregisterbtnSelected@2x.png */,
-				F91A0DFA19E7AACF009ADB44 /* RegisterFisihed1.png */,
-				F91A0DFB19E7AACF009ADB44 /* RegisterFisihed2.png */,
-				F91A0DFC19E7AACF009ADB44 /* telephone@2x.png */,
-				F91A0DFD19E7AACF009ADB44 /* telregisterbtn@2x.png */,
-				F91A0DFE19E7AACF009ADB44 /* telregisterbtnNormal@2x.png */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -3325,6 +3338,13 @@
 		F91A0DF719E7AACF009ADB44 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DA3AE0F41A1ADD6400DF0968 /* mailregisterbtn@2x.png */,
+				DA3AE0F51A1ADD6400DF0968 /* mailregisterbtnSelected@2x.png */,
+				DA3AE0F61A1ADD6400DF0968 /* RegisterFisihed1.png */,
+				DA3AE0F71A1ADD6400DF0968 /* RegisterFisihed2.png */,
+				DA3AE0F81A1ADD6400DF0968 /* telephone@2x.png */,
+				DA3AE0F91A1ADD6400DF0968 /* telregisterbtn@2x.png */,
+				DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -3674,6 +3694,7 @@
 				F974109419EC2E7500E12633 /* WMBLog.h */,
 				F974109519EC2E8900E12633 /* wulei.h */,
 				BC59833319ECB3E600DAC76A /* DXLog.h */,
+				DA82423C1A1A04AC00F72CDD /* xiexufeng.h */,
 			);
 			path = WorkLog;
 			sourceTree = "<group>";
@@ -3923,6 +3944,7 @@
 		F9C91F9F1A15C587003DF07A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC836E3C1A19C4A8009E85A5 /* Devicedata */,
 				F9C91FA01A15C587003DF07A /* AlarmDetailViewController.h */,
 				F9C91FA11A15C587003DF07A /* AlarmDetailViewController.m */,
 				F9C91FA21A15C587003DF07A /* AlarmListViewController.h */,
@@ -4903,6 +4925,7 @@
 		F9F3AD6019F63E5700E0A0F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BC09CD801A1A01D8005F92F5 /* 数据01_15.png */,
 				F9F3AD6119F63E5700E0A0F9 /* 数据011_07.png */,
 				F9F3AD6219F63E5700E0A0F9 /* 数据01_03.png */,
 				F9F3AD6319F63E5700E0A0F9 /* 数据01_07.png */,
@@ -5799,7 +5822,6 @@
 				F91A0E9B19E7AACF009ADB44 /* red_tabbar@2x.png in Resources */,
 				F9F3AFF219F63E5800E0A0F9 /* 意见反馈_03.png in Resources */,
 				BCCE87051A11B0350014AF29 /* 084.png in Resources */,
-				F91A0E6F19E7AACF009ADB44 /* telregisterbtnNormal@2x.png in Resources */,
 				BC9B787F1A04DE5900A666B7 /* replay_pos.png in Resources */,
 				F9F3AFDD19F63E5800E0A0F9 /* 轨迹032_17.png in Resources */,
 				F9F3AFF419F63E5800E0A0F9 /* 语言选择1_06.png in Resources */,
@@ -5852,6 +5874,7 @@
 				BC256C891A05F56C00EDFFBC /* device_op4.png in Resources */,
 				BCCE86F11A11B0350014AF29 /* 074.png in Resources */,
 				BCCE868F1A11B0350014AF29 /* 025.png in Resources */,
+				DA3AE0FF1A1ADD6400DF0968 /* telephone@2x.png in Resources */,
 				BCCE872D1A11B0350014AF29 /* 104.png in Resources */,
 				BCCE86621A11B0350014AF29 /* 002.png in Resources */,
 				BC9B787B1A04DE5900A666B7 /* car_offline.png in Resources */,
@@ -5947,7 +5970,9 @@
 				F91A0E5819E7AACF009ADB44 /* lgtextfield@2x.png in Resources */,
 				F9F3AFB319F63E5800E0A0F9 /* 设置011_02.png in Resources */,
 				F91A0E6219E7AACF009ADB44 /* clearNavItemSelected.png in Resources */,
+				DA3AE0FC1A1ADD6400DF0968 /* mailregisterbtnSelected@2x.png in Resources */,
 				F9F3AE8719F63E5800E0A0F9 /* 主界面03_02.png in Resources */,
+				DA3AE0FD1A1ADD6400DF0968 /* RegisterFisihed1.png in Resources */,
 				F9F3AFF019F63E5800E0A0F9 /* 地图选择1_03.png in Resources */,
 				F91A0E5419E7AACF009ADB44 /* lgcode@2x.png in Resources */,
 				F92DBDBE19ED5C1900BBE573 /* yellowstar.png in Resources */,
@@ -5973,6 +5998,7 @@
 				BCCE86BF1A11B0350014AF29 /* 049.png in Resources */,
 				F9F3AFB619F63E5800E0A0F9 /* 设置01_09.png in Resources */,
 				BC44AD7E19F169CC0067764F /* chat_bottom_bg@2x.png in Resources */,
+				DA3AE0FE1A1ADD6400DF0968 /* RegisterFisihed2.png in Resources */,
 				F9E24F9119ED733200D83FEF /* DeviceConfiguration.storyboard in Resources */,
 				F9F3AF3F19F63E5800E0A0F9 /* 绿.png in Resources */,
 				BC15E00B1A077B690016FB39 /* Nav_up_arrow .png in Resources */,
@@ -6089,13 +6115,13 @@
 				BCCE86CF1A11B0350014AF29 /* 057.png in Resources */,
 				BCCE86B61A11B0350014AF29 /* 044@2x.png in Resources */,
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
-				F91A0E6A19E7AACF009ADB44 /* mailregisterbtnSelected@2x.png in Resources */,
 				BCCE86731A11B0350014AF29 /* 010@2x.png in Resources */,
 				BCCE868B1A11B0350014AF29 /* 023.png in Resources */,
 				F9F3AF9E19F63E5800E0A0F9 /* 绑定设备4_03.png in Resources */,
 				BCCE86791A11B0350014AF29 /* 013@2x.png in Resources */,
 				F9F3AFC219F63E5800E0A0F9 /* 设置04修改围栏2_03.png in Resources */,
 				F9F3AFB719F63E5800E0A0F9 /* 设置01_11.png in Resources */,
+				DA3AE1011A1ADD6400DF0968 /* telregisterbtnNormal@2x.png in Resources */,
 				F9F3AECE19F63E5800E0A0F9 /* 圈子创建_10.png in Resources */,
 				BCCE86C51A11B0350014AF29 /* 052.png in Resources */,
 				BCCE86C91A11B0350014AF29 /* 054.png in Resources */,
@@ -6117,7 +6143,6 @@
 				F91A0E4D19E7AACF009ADB44 /* Text.png in Resources */,
 				F9F3AEC319F63E5800E0A0F9 /* 圈子3_25.png in Resources */,
 				BCCE869A1A11B0350014AF29 /* 030@2x.png in Resources */,
-				F91A0E6D19E7AACF009ADB44 /* telephone@2x.png in Resources */,
 				BCCE86BC1A11B0350014AF29 /* 047@2x.png in Resources */,
 				F9F3AFE119F63E5800E0A0F9 /* 轨迹04_03.png in Resources */,
 				F9F3AFF519F63E5800E0A0F9 /* 通用设置1_03.png in Resources */,
@@ -6202,12 +6227,12 @@
 				F92DBDB019ED5C1900BBE573 /* graystar.png in Resources */,
 				F91A0E6819E7AACF009ADB44 /* arrow.png in Resources */,
 				BC9B787C1A04DE5900A666B7 /* car_warning.png in Resources */,
-				F91A0E6919E7AACF009ADB44 /* mailregisterbtn@2x.png in Resources */,
 				F9F3AE9C19F63E5800E0A0F9 /* 图标_103.png in Resources */,
 				F9F3AEF019F63E5800E0A0F9 /* 个人资料_06.png in Resources */,
 				F9F3AEC119F63E5800E0A0F9 /* 圈子3_18.png in Resources */,
 				F9F3AED819F63E5800E0A0F9 /* 好友1_16.png in Resources */,
 				F9F3AEF719F63E5800E0A0F9 /* 分享个人设置_10.png in Resources */,
+				BC09CD811A1A01D8005F92F5 /* 数据01_15.png in Resources */,
 				F9F3AFBF19F63E5800E0A0F9 /* 设置02车_02.png in Resources */,
 				BC256C881A05F56C00EDFFBC /* device_op3.png in Resources */,
 				BCCE86611A11B0350014AF29 /* 001@2x.png in Resources */,
@@ -6300,7 +6325,6 @@
 				F9F3AF9419F63E5800E0A0F9 /* 绑定设备1_16.png in Resources */,
 				F91A0E6419E7AACF009ADB44 /* GroupNavItemSelected.png in Resources */,
 				F91A0E5A19E7AACF009ADB44 /* lgtop@2x.png in Resources */,
-				F91A0E6E19E7AACF009ADB44 /* telregisterbtn@2x.png in Resources */,
 				F9F3AFBD19F63E5800E0A0F9 /* 设置02宠物01_03.png in Resources */,
 				BCCE86B71A11B0350014AF29 /* 045.png in Resources */,
 				F91A0E9219E7AACF009ADB44 /* blue_tabbar.png in Resources */,
@@ -6494,8 +6518,8 @@
 				F975FE8019EE741D00D13D86 /* icon_menu.png in Resources */,
 				BCCE86AB1A11B0350014AF29 /* 039.png in Resources */,
 				F9F3AF4219F63E5800E0A0F9 /* 数据031_05.png in Resources */,
-				F91A0E6B19E7AACF009ADB44 /* RegisterFisihed1.png in Resources */,
 				BCCE86B01A11B0350014AF29 /* 041@2x.png in Resources */,
+				DA3AE1001A1ADD6400DF0968 /* telregisterbtn@2x.png in Resources */,
 				F91A0E5B19E7AACF009ADB44 /* lgusername@2x.png in Resources */,
 				BCCE86841A11B0350014AF29 /* 019@2x.png in Resources */,
 				BCCE86891A11B0350014AF29 /* 022.png in Resources */,
@@ -6558,13 +6582,13 @@
 				F9F3AFD719F63E5800E0A0F9 /* 轨迹01_03.png in Resources */,
 				F9F3AF5D19F63E5800E0A0F9 /* 数据061_19.png in Resources */,
 				BCCE86971A11B0350014AF29 /* 029.png in Resources */,
-				F91A0E6C19E7AACF009ADB44 /* RegisterFisihed2.png in Resources */,
 				F9A262A61A0338A900909E75 /* TMD.png in Resources */,
 				F9F3AEE119F63E5800E0A0F9 /* 好友2_19.png in Resources */,
 				F9E24F9419ED733200D83FEF /* Regist_Login_Storyboard.storyboard in Resources */,
 				F9F3AFCA19F63E5800E0A0F9 /* 设置04创建围栏1_27.png in Resources */,
 				F9F3AEB719F63E5800E0A0F9 /* 圈子2_07.png in Resources */,
 				F91A0E4219E7AACF009ADB44 /* roundLoadimg.png in Resources */,
+				DA3AE0FB1A1ADD6400DF0968 /* mailregisterbtn@2x.png in Resources */,
 				F9F3AFAA19F63E5800E0A0F9 /* 页面列表2_03.png in Resources */,
 				F9F3AF2619F63E5800E0A0F9 /* 数据011_07.png in Resources */,
 				F9F3AF5619F63E5800E0A0F9 /* 数据04_05.png in Resources */,
@@ -6813,7 +6837,9 @@
 				F99E76231A00D3A8002FCB1F /* PersonDetailSettingViewController.m in Sources */,
 				F99246491A048C5400599E74 /* TableViewFreshConst.m in Sources */,
 				F9E24F6119ED725900D83FEF /* ChineseToPinyinResource.m in Sources */,
+				BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */,
 				6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */,
+				BC836E3B1A19C4A2009E85A5 /* DeviceDataViewController.m in Sources */,
 				BC633B601A0CE52D00E5A6E9 /* FriendSetHeadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

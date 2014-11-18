@@ -46,6 +46,7 @@
     }
 }
 
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
@@ -163,7 +164,12 @@
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:[NSBundle mainBundle]];
     UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
     [self presentViewController:vc animated:YES completion:^{
-        
+#warning 进入主界面时清除所有view
+        for (UIView *view in self.view.subviews) {
+            [view removeFromSuperview];
+            
+        }
+        self.view = nil;
     }];
 }
 

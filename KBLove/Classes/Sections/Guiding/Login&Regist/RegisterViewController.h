@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BannerView;
 
 @interface RegisterViewController : UIViewController
 
@@ -26,6 +27,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextFiled;
 //重复密码
 @property (weak, nonatomic) IBOutlet UITextField *verifyPasswordTextfiled;
+/** 广告view*/
+@property (weak, nonatomic) IBOutlet BannerView *bannerView;
+
 //对应点击事件
 - (IBAction)phoneRegisterButton:(id)sender;
 - (IBAction)mailRegisterButton:(id)sender;

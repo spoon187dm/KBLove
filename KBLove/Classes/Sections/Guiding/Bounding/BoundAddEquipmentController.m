@@ -19,7 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
+    // 设置输出框的白色placeholder
+    NSDictionary *attr = @{ NSForegroundColorAttributeName : [UIColor whiteColor]};
+    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:self.EquipmentIMEINum.placeholder attributes:attr];
+    [self.EquipmentIMEINum setAttributedPlaceholder:attrStr];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)rightNavBarButtonClick:(id)sender
+- (IBAction)suerBtnClick:(id)sender
 {
     //
     if (_EquipmentIMEINum.text.length!=15) {
@@ -63,6 +66,7 @@
 
 - (IBAction)click_changeUser:(id)sender {
 }
+
 /*
 #pragma mark - Navigation
 

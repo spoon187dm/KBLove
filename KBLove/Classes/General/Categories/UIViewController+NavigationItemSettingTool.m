@@ -29,6 +29,8 @@
     //    转化为新图片
     UIImage *imageStar = [UIImage imageWithCGImage:imageref];
     [self.navigationController.navigationBar setBackgroundImage:imageStar forBarMetrics:UIBarMetricsDefault];
+#warning CGImage释放
+    CGImageRelease(imageref);
 }
 
 - (void)addCustomNavigationItemWithImageName:(NSString *)imageName{
