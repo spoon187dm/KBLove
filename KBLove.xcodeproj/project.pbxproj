@@ -16,6 +16,8 @@
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
+		87A927DC1A1A322B0059C5E2 /* shareLocationBaiduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A927DB1A1A322B0059C5E2 /* shareLocationBaiduViewController.m */; };
+		87A927E01A1A32710059C5E2 /* shareLocationGaodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
 		BC15E0071A076BE00016FB39 /* CircleAndFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC15E0061A076BE00016FB39 /* CircleAndFriendListViewController.m */; };
@@ -1064,6 +1066,10 @@
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		87A927DA1A1A322B0059C5E2 /* shareLocationBaiduViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shareLocationBaiduViewController.h; path = ShareLocation/shareLocationBaiduViewController.h; sourceTree = "<group>"; };
+		87A927DB1A1A322B0059C5E2 /* shareLocationBaiduViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shareLocationBaiduViewController.m; path = ShareLocation/shareLocationBaiduViewController.m; sourceTree = "<group>"; };
+		87A927DE1A1A32710059C5E2 /* shareLocationGaodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shareLocationGaodeViewController.h; path = ShareLocation/shareLocationGaodeViewController.h; sourceTree = "<group>"; };
+		87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shareLocationGaodeViewController.m; path = ShareLocation/shareLocationGaodeViewController.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
@@ -2460,6 +2466,17 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		87A927DD1A1A32410059C5E2 /* shareLocation */ = {
+			isa = PBXGroup;
+			children = (
+				87A927DA1A1A322B0059C5E2 /* shareLocationBaiduViewController.h */,
+				87A927DB1A1A322B0059C5E2 /* shareLocationBaiduViewController.m */,
+				87A927DE1A1A32710059C5E2 /* shareLocationGaodeViewController.h */,
+				87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */,
+			);
+			name = shareLocation;
+			sourceTree = "<group>";
+		};
 		BC44AD7619F169CC0067764F /* ChatTestImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -3555,6 +3572,7 @@
 		F974108319EC280200E12633 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				87A927DD1A1A32410059C5E2 /* shareLocation */,
 				F9C91F9E1A15C587003DF07A /* Main */,
 				F99E76121A00D3A8002FCB1F /* DeviceSetting */,
 				F97410C119EC322000E12633 /* Guiding */,
@@ -6637,6 +6655,7 @@
 				F992464A1A048C5400599E74 /* UIScrollView+Extension.m in Sources */,
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
 				F9E24F7619ED729700D83FEF /* DAContextMenuTableViewController.m in Sources */,
+				87A927DC1A1A322B0059C5E2 /* shareLocationBaiduViewController.m in Sources */,
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F9C91F971A15C576003DF07A /* NYSliderPopover.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
@@ -6682,6 +6701,7 @@
 				F9C91F8F1A15C576003DF07A /* CCFence.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				F99246731A048D5500599E74 /* UICountingLabel.m in Sources */,
+				87A927E01A1A32710059C5E2 /* shareLocationGaodeViewController.m in Sources */,
 				F9C91FDA1A15C587003DF07A /* TraceCell.m in Sources */,
 				F99E76261A00D3A8002FCB1F /* PetSettingViewController.m in Sources */,
 				F9C91FD31A15C587003DF07A /* DevicesCell.m in Sources */,
