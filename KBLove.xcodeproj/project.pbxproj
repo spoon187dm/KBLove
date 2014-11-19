@@ -340,6 +340,7 @@
 		DA3AE1011A1ADD6400DF0968 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */; };
 		DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */; };
 		DA3AE10B1A1B3AF900DF0968 /* IconChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */; };
+		DAA47FB81A1C8D48004ADC26 /* InfoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -1511,6 +1512,8 @@
 		DA3AE1091A1B3AF900DF0968 /* IconChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconChooseViewController.h; sourceTree = "<group>"; };
 		DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconChooseViewController.m; sourceTree = "<group>"; };
 		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
+		DAA47FB61A1C8D48004ADC26 /* InfoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoChooseViewController.h; sourceTree = "<group>"; };
+		DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoChooseViewController.m; sourceTree = "<group>"; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
 		F90F6EFE19F563E400671113 /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
@@ -3020,6 +3023,8 @@
 			children = (
 				DA3AE1091A1B3AF900DF0968 /* IconChooseViewController.h */,
 				DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */,
+				DAA47FB61A1C8D48004ADC26 /* InfoChooseViewController.h */,
+				DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */,
 			);
 			name = Choose;
 			sourceTree = "<group>";
@@ -6739,6 +6744,7 @@
 				F9748CE219EF87CD0064FCC7 /* KBAlarmManager.m in Sources */,
 				F997E3F21A0B59BF00DDF896 /* KBTracePart.m in Sources */,
 				F9C91FC81A15C587003DF07A /* AlarmListViewController.m in Sources */,
+				DAA47FB81A1C8D48004ADC26 /* InfoChooseViewController.m in Sources */,
 				BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */,
 				F9C91F941A15C576003DF07A /* HexColor.m in Sources */,
 				F9C91FD81A15C587003DF07A /* KBAlarmInfoView.m in Sources */,

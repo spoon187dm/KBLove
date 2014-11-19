@@ -49,18 +49,22 @@
     NSInteger num=[imeiNum_sub2 integerValue];
     if ((num>=1&&num<=20)||(num>=51&&num<=54))
     {//车辆
-        aimController = @"BoundCarInfoController";
+        [self performSegueWithIdentifier:@"2BoundCarInfoController" sender:nil];
+//        aimController = @"BoundCarInfoController";
     }else if ((num>=21&&num<=35)||(num>=55&&num<=57))
     {//个人
-        aimController = @"BoundPersonInfoController";
+        [self performSegueWithIdentifier:@"2BoundPersonInfoController" sender:nil];
+//        aimController = @"BoundPersonInfoController";
     }else if ((num>=36&&num<=50)||(num>=58&&num<=60))
     {//宠物
-        aimController = @"BoundPetInfoController";
+        [self performSegueWithIdentifier:@"2BoundPetInfoController" sender:nil];
+//        aimController = @"BoundPetInfoController";
     }else{
-        aimController = @"BoundCarInfoController";
+        [self performSegueWithIdentifier:@"2BoundCarInfoController" sender:nil];
+//        aimController = @"BoundCarInfoController";
     }
-    vc = [self.storyboard instantiateViewControllerWithIdentifier:aimController];
-    [self.navigationController pushViewController:vc animated:YES];
+//    vc = [self.storyboard instantiateViewControllerWithIdentifier:aimController];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

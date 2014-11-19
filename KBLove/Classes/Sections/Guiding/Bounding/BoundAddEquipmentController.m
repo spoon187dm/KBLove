@@ -38,12 +38,16 @@
             
         }];
     }else{
-    BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
-    BoundEquipmentDetailController *boundEquipment= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
-    _equipment.EquipmentIMEINum=self.EquipmentIMEINum.text;
-//    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
-    [self.navigationController pushViewController:boundEquipment animated:YES];
+        BoundEquipmentInfo *_equipment=[BoundEquipmentInfo sharedInstance];
+        
+        _equipment.EquipmentIMEINum=self.EquipmentIMEINum.text;
+        //    boundEquipment.EquipmentIMEINumString=self.EquipmentIMEINum.text;
+        
+//        BoundEquipmentDetailController *boundEquipment= [self.storyboard instantiateViewControllerWithIdentifier:@"BoundEquipmentDetailController"];
+//        [self.navigationController pushViewController:boundEquipment animated:YES];
+        [self performSegueWithIdentifier:@"AddEquipment2BoundEquipment" sender:nil];
     }
+    
 }
 
 - (IBAction)backNavBarButtonClick:(id)sender{
@@ -71,6 +75,8 @@
 {
     [self.view endEditing:YES];
 }
+
+
 
 /*
 #pragma mark - Navigation
