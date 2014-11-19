@@ -9,14 +9,27 @@
 #import "CarDataMoreViewController.h"
 
 @interface CarDataMoreViewController ()
-
+{
+    WLPieView * tpieView;
+}
 @end
 
 @implementation CarDataMoreViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    tpieView = [[WLPieView alloc] initWithFrame:_TpieView.bounds andTotal:@(100) andCurrent:@(89) andClockwise:YES andShadow:NO andBgColor:[UIColor redColor] andStart:-45.00f andEnd:-45.01f andredius:(_TpieView.bounds.size.width-5)/2 andWidth:3 andLabel:YES];
+    [tpieView strokeChart];
+    [_TpieView addSubview:tpieView];
+    
+    WLPieView *tpieView1 = [[WLPieView alloc] initWithFrame:_WpieView.bounds andTotal:@(100) andCurrent:@(89) andClockwise:YES andShadow:NO andBgColor:[UIColor redColor] andStart:-45.00f andEnd:-45.01f andredius:(_WpieView.bounds.size.width-5)/2 andWidth:3 andLabel:YES];
+    [tpieView1 strokeChart];
+    [_WpieView addSubview:tpieView1];
+    
+    WLPieView *tpieView2 = [[WLPieView alloc] initWithFrame:_MpieView.bounds andTotal:@(100) andCurrent:@(89) andClockwise:YES andShadow:NO andBgColor:[UIColor redColor] andStart:-45.00f andEnd:-45.01f andredius:(_MpieView.bounds.size.width-5)/2 andWidth:3 andLabel:YES];
+    [tpieView2 strokeChart];
+    [_MpieView addSubview:tpieView2];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +47,7 @@
 }
 */
 
+
 - (IBAction)back_btn:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -44,5 +58,17 @@
 
 //搜索
 - (IBAction)search_btn:(UIButton *)sender {
+}
+//今日详情
+- (IBAction)todayDetail_btn:(id)sender {
+    
+}
+//本周详情
+- (IBAction)weekDetail_btn:(id)sender {
+    
+}
+//本月详情
+- (IBAction)monthDetail_btn:(id)sender {
+    
 }
 @end

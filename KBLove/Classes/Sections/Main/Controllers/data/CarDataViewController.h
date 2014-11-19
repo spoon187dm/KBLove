@@ -7,6 +7,7 @@
 //
 
 #import "DeviceDataViewController.h"
+#import "WLStartView.h"
 
 @interface CarDataViewController : DeviceDataViewController
 
@@ -17,7 +18,8 @@
 //根据百分比图颜色设置提示
 @property (strong, nonatomic) IBOutlet UILabel *promptLabel;
 //评分星级
-@property (strong, nonatomic) IBOutlet UIView *startView;
+@property (strong, nonatomic) IBOutlet WLStartView *startView;
+
 //OBD检测按钮
 @property (strong, nonatomic) IBOutlet UIButton *OBDButton;
 //今日里程

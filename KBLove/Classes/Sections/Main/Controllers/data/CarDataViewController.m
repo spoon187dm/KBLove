@@ -8,8 +8,11 @@
 
 #import "CarDataViewController.h"
 #import "UIViewController+NavigationItemSettingTool.h"
+#import "WLPieView.h"
 @interface CarDataViewController ()
-
+{
+    WLPieView * _pieView;
+}
 @end
 
 @implementation CarDataViewController
@@ -18,6 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self changeNavigationBarFromImage:@"数据01.png"];
+    
+    //画图
+    _pieView = [[WLPieView alloc] initWithFrame:_carPie.bounds andTotal:@(100) andCurrent:@(89) andClockwise:NO andShadow:NO andBgColor:[UIColor orangeColor] andStart:-90.00f andEnd:-89.99f andredius:(_carPie.bounds.size.width-15)/2 andWidth:13 andLabel:YES];
+    
+    [_pieView strokeChart];
+    [_carPie addSubview:_pieView];
+    
+    [_startView setStart:3];
     
 }
 
