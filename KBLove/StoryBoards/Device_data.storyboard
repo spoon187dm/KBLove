@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pUR-SV-WGJ">
+            <objects>
+                <navigationController id="60l-3I-v8J" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cSy-0y-uV7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DaW-go-Rhr" kind="relationship" relationship="rootViewController" id="gOh-DF-Ym4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZr-fV-KKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1034" y="-54"/>
+        </scene>
         <!--数据 - 小小酥-->
         <scene sceneID="8TB-qE-JQ7">
             <objects>
@@ -16,8 +32,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="O1q-SG-8sV" userLabel="View－星级图">
-                                <rect key="frame" x="0.0" y="236" width="320" height="45"/>
+                            <view contentMode="scaleToFill" id="O1q-SG-8sV" userLabel="View－星级图" customClass="WLStartView">
+                                <rect key="frame" x="85" y="243" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -218,7 +234,7 @@
                         <outlet property="averageLabel" destination="nyd-p7-qAg" id="aw1-4o-2M7"/>
                         <outlet property="carPie" destination="ocK-Qh-5z6" id="tS5-1f-8T9"/>
                         <outlet property="promptLabel" destination="aKu-BN-XyJ" id="Ibk-AI-gQh"/>
-                        <outlet property="startView" destination="O1q-SG-8sV" id="wMN-zl-Lk3"/>
+                        <outlet property="startView" destination="O1q-SG-8sV" id="dWh-gU-QDf"/>
                         <outlet property="todayCourse" destination="Izf-q3-2o5" id="9pr-YI-7ck"/>
                         <outlet property="totalCourseLabel" destination="vHo-nr-yRd" id="F6B-1E-3BF"/>
                         <outlet property="travelTimeLabel" destination="d1W-Vv-W27" id="oCA-YM-Iic"/>
@@ -227,6 +243,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkB-7z-pGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-446" y="-66"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sGh-qx-luf">
+            <objects>
+                <navigationController id="fdL-AT-ybG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m1X-uJ-yTH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="38c-Cs-7xZ" kind="relationship" relationship="rootViewController" id="FiM-EY-bvA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2c-sE-jjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1034" y="623"/>
         </scene>
         <!--View Controller-宠物-->
         <scene sceneID="pNr-NG-Lqf">
@@ -329,38 +361,6 @@
                                     <action selector="calendarButton:" destination="38c-Cs-7xZ" eventType="touchUpInside" id="PdK-6q-JFg"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" id="IX1-t9-YRq">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="小迪" id="psv-xU-I1J">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="woO-jd-naZ">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6cp-25-qIu">
-                                                <rect key="frame" x="16" y="7" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="navileft.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="back_btn:" destination="38c-Cs-7xZ" eventType="touchUpInside" id="9JJ-q3-kbC"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="o58-jU-d7c">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gzA-EC-kcW">
-                                                <rect key="frame" x="274" y="7" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="icon_home.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="home_btn:" destination="38c-Cs-7xZ" eventType="touchUpInside" id="3gG-qm-RiR"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" id="Uul-b1-QBd" userLabel="View-饼状图父试图">
                                 <rect key="frame" x="0.0" y="183" width="320" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -384,6 +384,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="小迪" id="psv-xU-I1J">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="woO-jd-naZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6cp-25-qIu">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="navileft.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back_btn:" destination="38c-Cs-7xZ" eventType="touchUpInside" id="9JJ-q3-kbC"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="o58-jU-d7c">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gzA-EC-kcW">
+                                <rect key="frame" x="274" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="icon_home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="home_btn:" destination="38c-Cs-7xZ" eventType="touchUpInside" id="3gG-qm-RiR"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="averageExerciseLabel" destination="zgY-5V-Ecx" id="BKG-Vl-JE0"/>
                         <outlet property="countPngView" destination="zvW-47-qfN" id="a6G-eY-1rN"/>
@@ -397,7 +423,7 @@
             </objects>
             <point key="canvasLocation" x="-446" y="623"/>
         </scene>
-        <!--CarOBD View Controller - OBD检测-->
+        <!--OBD检测-->
         <scene sceneID="7DK-eC-5kR">
             <objects>
                 <viewController id="xC7-Do-9HA" customClass="CarOBDViewController" sceneMemberID="viewController">
@@ -924,6 +950,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="todayDetail_btn:" destination="Dkv-zh-ogV" eventType="touchUpInside" id="kmz-E5-aNi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17254902422428131" green="0.5372549295425415" blue="0.72549021244049072" alpha="1" colorSpace="deviceRGB"/>
@@ -1046,6 +1075,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="weekDetail_btn:" destination="Dkv-zh-ogV" eventType="touchUpInside" id="gpa-nR-5zg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17254902420000001" green="0.53725492949999998" blue="0.7254902124" alpha="1" colorSpace="deviceRGB"/>
@@ -1066,11 +1098,6 @@
                                 <rect key="frame" x="0.0" y="401" width="320" height="169"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="dRw-ww-AuZ" userLabel="View-饼状图]">
-                                        <rect key="frame" x="115" y="54" width="90" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="里程" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kgl-TD-Fw3">
                                         <rect key="frame" x="32" y="41" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1169,6 +1196,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="monthDetail_btn:" destination="Dkv-zh-ogV" eventType="touchUpInside" id="AkN-LL-o1h"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17254902420000001" green="0.53725492949999998" blue="0.7254902124" alpha="1" colorSpace="deviceRGB"/>
@@ -1181,6 +1211,11 @@
                                         <rect key="frame" x="92" y="117" width="50" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" id="dRw-ww-AuZ" userLabel="View-饼状图]">
+                                        <rect key="frame" x="115" y="57" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1234,17 +1269,17 @@
                         <outlet property="MaverageSpeedLabel" destination="gHV-RK-WlZ" id="qrY-Kk-dM9"/>
                         <outlet property="McourseLabel" destination="hkL-Ge-ysd" id="b22-XO-nIC"/>
                         <outlet property="MoverSpeedLabel" destination="QGu-Ug-hil" id="Bw6-jU-C56"/>
-                        <outlet property="MpieView" destination="dRw-ww-AuZ" id="I1O-No-AK0"/>
+                        <outlet property="MpieView" destination="dRw-ww-AuZ" id="s57-i4-Sfs"/>
                         <outlet property="MtravelTimeLabel" destination="42Y-0B-22v" id="9lD-az-X2z"/>
                         <outlet property="TaverageSpeedLabel" destination="Ixj-zD-6Pk" id="uhx-w7-U1m"/>
                         <outlet property="TcourseLabel" destination="O7S-KB-atX" id="nOj-A1-PPk"/>
                         <outlet property="ToverSpeedLabel" destination="GLZ-Dx-d7j" id="07r-Jp-sYQ"/>
-                        <outlet property="TpieView" destination="rIh-2p-IDx" id="eEL-pE-zK2"/>
+                        <outlet property="TpieView" destination="rIh-2p-IDx" id="gEP-sF-a3k"/>
                         <outlet property="TtravelTimeLabel" destination="CcT-yX-AZr" id="e5O-aM-q3x"/>
                         <outlet property="WaverageSpeedLabel" destination="FO5-g1-n4m" id="Bf5-SB-AvZ"/>
                         <outlet property="WcourseLabel" destination="Ac0-iG-l9o" id="kao-YO-NSa"/>
                         <outlet property="WoverSpeedLabel" destination="8gl-Ht-gd9" id="q2a-Nu-MHG"/>
-                        <outlet property="WpieView" destination="Hvn-VE-zEA" id="7w0-OL-UWS"/>
+                        <outlet property="WpieView" destination="Hvn-VE-zEA" id="kXI-NV-gMJ"/>
                         <outlet property="WtravelTimeLabel" destination="gf0-PA-Otw" id="hv0-cC-9aG"/>
                         <outlet property="monthView" destination="Qeu-Q3-xaV" id="FaT-PX-dAh"/>
                         <outlet property="todayVIew" destination="kQJ-CA-Fht" id="7DO-9B-Yf8"/>
@@ -1255,7 +1290,7 @@
             </objects>
             <point key="canvasLocation" x="-53" y="-66"/>
         </scene>
-        <!--Car Data Detail View Controller - 详情-->
+        <!--详情-->
         <scene sceneID="C7c-Ay-mCr">
             <objects>
                 <viewController title="详情" id="E3Q-F0-pTr" customClass="CarDataDetailViewController" sceneMemberID="viewController">

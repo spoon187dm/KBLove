@@ -115,6 +115,8 @@
 		BCB42E2C19F1425B00A141C3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB42E2719F1425B00A141C3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BCB42E2E19F1430F00A141C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */; };
 		BCB824E119F357F900888018 /* chat_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB824E019F357F900888018 /* chat_setting@2x.png */; };
+		BCC936CC1A1C940F00CAFCE6 /* WLPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC936CB1A1C940F00CAFCE6 /* WLPieView.m */; };
+		BCC936D21A1C9A2500CAFCE6 /* WLStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC936D11A1C9A2500CAFCE6 /* WLStartView.m */; };
 		BCCDD7351A0C7B6A008A9795 /* FriendSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCDD7341A0C7B6A008A9795 /* FriendSettingViewController.m */; };
 		BCCE85871A11ABD40014AF29 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE85861A11ABD40014AF29 /* MessageView.m */; };
 		BCCE865D1A11B0350014AF29 /* 000.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCE858B1A11B0340014AF29 /* 000.png */; };
@@ -1278,6 +1280,10 @@
 		BCB42E2719F1425B00A141C3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		BCB42E2D19F1430F00A141C3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BCB824E019F357F900888018 /* chat_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_setting@2x.png"; sourceTree = "<group>"; };
+		BCC936CA1A1C940F00CAFCE6 /* WLPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLPieView.h; sourceTree = "<group>"; };
+		BCC936CB1A1C940F00CAFCE6 /* WLPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLPieView.m; sourceTree = "<group>"; };
+		BCC936D01A1C9A2500CAFCE6 /* WLStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLStartView.h; sourceTree = "<group>"; };
+		BCC936D11A1C9A2500CAFCE6 /* WLStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLStartView.m; sourceTree = "<group>"; };
 		BCCDD7331A0C7B6A008A9795 /* FriendSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendSettingViewController.h; path = Message/FriendSettingViewController.h; sourceTree = "<group>"; };
 		BCCDD7341A0C7B6A008A9795 /* FriendSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendSettingViewController.m; path = Message/FriendSettingViewController.m; sourceTree = "<group>"; };
 		BCCE85851A11ABD40014AF29 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
@@ -4010,6 +4016,10 @@
 				F9C91FC41A15C587003DF07A /* TraceInfoView.h */,
 				F9C91FC51A15C587003DF07A /* TraceInfoView.m */,
 				F9C91FC61A15C587003DF07A /* TraceInfoView.xib */,
+				BCC936CA1A1C940F00CAFCE6 /* WLPieView.h */,
+				BCC936CB1A1C940F00CAFCE6 /* WLPieView.m */,
+				BCC936D01A1C9A2500CAFCE6 /* WLStartView.h */,
+				BCC936D11A1C9A2500CAFCE6 /* WLStartView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -6719,6 +6729,7 @@
 				F975FE6219EE44DA00D13D86 /* TableMenuViewController.m in Sources */,
 				BC71E6E219F9666A00692533 /* PositionCell.m in Sources */,
 				F90F6F0E19F563E400671113 /* PrivacySettingViewController.m in Sources */,
+				BCC936D21A1C9A2500CAFCE6 /* WLStartView.m in Sources */,
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
@@ -6820,6 +6831,7 @@
 				F99246691A048D5500599E74 /* PNBar.m in Sources */,
 				BCA4B3A619F67FC100B2AAAC /* SearchView.m in Sources */,
 				F9C91F961A15C576003DF07A /* NYPopover.m in Sources */,
+				BCC936CC1A1C940F00CAFCE6 /* WLPieView.m in Sources */,
 				F9C91F8C1A15C576003DF07A /* CCBaseRelation.m in Sources */,
 				F9C91F9D1A15C576003DF07A /* ZWL_Utils.m in Sources */,
 				BCCE87311A11BCAB0014AF29 /* FaceView.m in Sources */,
