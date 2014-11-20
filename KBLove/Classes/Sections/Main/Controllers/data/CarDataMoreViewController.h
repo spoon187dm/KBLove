@@ -11,7 +11,7 @@
 @interface CarDataMoreViewController : UIViewController
 
 //今日行驶情况
-- (IBAction)todayDetail_btn:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UILabel *TcourseLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *TaverageSpeedLabel;
@@ -24,7 +24,7 @@
 
 
 //本周行驶情况
-- (IBAction)weekDetail_btn:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UILabel *WcourseLabel;
 @property (strong, nonatomic) IBOutlet UILabel *WaverageSpeedLabel;
 @property (strong, nonatomic) IBOutlet UILabel *WtravelTimeLabel;
@@ -36,7 +36,7 @@
 
 //本月行驶情况
 
-- (IBAction)monthDetail_btn:(id)sender;
+
 
 @property (strong, nonatomic) IBOutlet UILabel *McourseLabel;
 @property (strong, nonatomic) IBOutlet UILabel *MaverageSpeedLabel;

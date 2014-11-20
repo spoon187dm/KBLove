@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "DeviceDataViewController.h"
+#import "WLPieView.h"
+
 @interface PetAndPersonDataViewController : DeviceDataViewController
 - (IBAction)back_btn:(id)sender;
 - (IBAction)home_btn:(id)sender;
 
 //人或者宠物的头像
 @property (strong, nonatomic) IBOutlet UIImageView *iconImageVIew;
+@property (strong, nonatomic) IBOutlet UIButton *calendar;
 
 //日历按钮点击
 - (IBAction)calendarButton:(id)sender;
@@ -28,4 +31,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *yesterdayExerciseLabel;
 //折线图
 @property (strong, nonatomic) IBOutlet UIView *countPngView;
+//饼状图
+@property (strong, nonatomic) IBOutlet WLPieView *piePngView;
+
 @end

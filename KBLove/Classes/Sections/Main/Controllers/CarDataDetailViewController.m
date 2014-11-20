@@ -19,6 +19,10 @@
     
     
     _scrollerVIew.contentSize = CGSizeMake(self.view.bounds.size.width, _countView.frame.size.height + self.view.bounds.size.height);
+    
+    if (_str) {
+        NSLog(@"str======================%@",_str);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +42,7 @@
 
 - (IBAction)back_btn:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (IBAction)search_btn:(id)sender {
