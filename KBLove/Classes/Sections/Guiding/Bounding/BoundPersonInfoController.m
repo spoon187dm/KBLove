@@ -9,7 +9,7 @@
 #import "BoundPersonInfoController.h"
 #import "BoundEquipmentInfo.h"
 #import "KBHttpRequestTool.h"
-@interface BoundPersonInfoController () <TTCheckBoxesDelegate>
+@interface BoundPersonInfoController ()
 
 @property (nonatomic, copy) NSString *sexStr;
 
@@ -36,11 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - TTCheckBoxes 代理方法
-- (void)checkBoxes:(TTCheckBoxes *)boxes didClickButton:(int)index buttonTitle:(NSString *)title
-{
-    self.sexStr = title;
-}
 
 - (IBAction)rightNavBarButtonClick:(id)sender
 {
@@ -56,16 +51,16 @@
     //头像
 //    [dic setObject:@"" forKey:@"icon"];//尚未添加
     [dic setObject:self.PersonName.text forKey:@"name"];
-    [dic setObject:self.PersonBirthday.text forKey:@"birth"];
-    [dic setObject:self.sexStr forKey:@"gender"];
+    [dic setObject:self.birthdayBtn.currentTitle forKey:@"birth"];
+    [dic setObject:self.sexCheckBoxes.selectedTitle forKey:@"gender"];
     [dic setObject:self.PersonHeight.text forKey:@"height"];
     [dic setObject:self.PersonWeight.text forKey:@"weight"];
     NSString *urlstr=@"http://118.194.192.104:8080/api/device.edit.do?";
-    NSLog(@"%@",dic);
+//    NSLog(@"%@",dic);
     [httptool request:urlstr requestType:0 params:dic overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
            // NSLog(@"%@",result);
-            NSLog(@"%@",result);
+//            NSLog(@"%@",result);
             
             NSNumber *ret=[result objectForKey:@"ret"];
             switch ([ret integerValue]) {

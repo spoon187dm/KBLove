@@ -47,7 +47,6 @@
 //        [self.navigationController pushViewController:boundEquipment animated:YES];
         [self performSegueWithIdentifier:@"AddEquipment2BoundEquipment" sender:nil];
     }
-    
 }
 
 

@@ -19,6 +19,10 @@
 #import "ZWL_ReGeoRecodeTool.h"
 
 #import "MessageViewController.h"
+
+#import "Reachability.h"
+#import "TTAlertView.h"
+
 @interface MainViewController (){
     //百度地图
     BMKMapView *baidu_MapView;
@@ -82,6 +86,8 @@
 {
     [super viewDidLoad];
     
+    [self checkCurrentWLAN];
+    
     if (self.isFirstLogin) {
         NSLog(@"------isFirstLogin");
     }
@@ -93,6 +99,30 @@
     [self setupData];
     [self setupView];
     [self loadData];
+}
+
+/** 检测当前是否开启WLAN并alertView提示*/
+- (void)checkCurrentWLAN
+{
+    if (![Reachability reachabilityForLocalWiFi]) {
+        NSLog(@"无线不可用");
+        
+        TTAlertView *alert = [TTAlertView alertViewWithHeight:120];
+        alert.alertBackgroundColor = KBColor(19, 128, 147, 1);
+        alert.messageColor = [UIColor whiteColor];
+        alert.message = @"您的手机尚未开启WLAN功能，开启之后定位会更加准确，是否现在开启?";
+        [alert addButtonWithTitle:@"立即开启" option:^(TTAlertView *alertView) {
+            NSLog(@"立即开启");
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+        }];
+        [alert addButtonWithTitle:@"稍后处理" option:^(TTAlertView *alertView) {
+            NSLog(@"稍后处理");
+            [alertView closeAlertView];
+        }];
+        [alert showWithSupview:self.view];
+    }
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -161,11 +191,11 @@
 - (void)setupView{
     [self setupMapView];
     [self setupDropListView];
-    _petButton.enabled = false;
+    _petButton.enabled = NO;
     [_petButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    _carButton.enabled = false;
+    _carButton.enabled = NO;
     [_carButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    _personButton.enabled = false;
+    _personButton.enabled = NO;
     [_personButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 }
 
@@ -194,7 +224,7 @@
 
 - (void)setupDropListView{
     _dropListView = [[UIView alloc]init];
-    _dropListView.frame = CGRectMake(kScreenWidth-100, 64, 100, 35*4);
+    _dropListView.frame = CGRectMake(kScreenWidth-120, 64, 120, 35*4);
     _dropListView.backgroundColor = [UIColor clearColor];
     
     NSArray *titles = @[@"所有设备",@"好友设备",@"我的设备",@"绑定设备"];
@@ -204,7 +234,7 @@
         // 设置按钮的背景 84 149 159
         [btn setBackgroundColor:KBColor(84, 149, 159, 0.85)];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        btn.titleLabel.font = [UIFont systemFontOfSize:16];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
         
         [btn setBackgroundImage:[UIImage imageNamed:@"RegisterFisihed2"] forState:UIControlStateNormal];
         btn.tag = 300+i;
@@ -239,7 +269,7 @@
 #pragma mark 私有功能方法
 
 - (void)hideDropListView{
-    [UIView animateWithDuration:.5 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         _dropListView.hidden = YES;
     }];
 }
@@ -378,20 +408,20 @@
 {
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         float zoomlevel=baidu_MapView.zoomLevel;
-        baidu_MapView.zoomLevel=++zoomlevel;
+        baidu_MapView.zoomLevel = ++zoomlevel;
     }else{
         float zoomlevel=gaode_MapView.zoomLevel;
-        gaode_MapView.zoomLevel=++zoomlevel;
+        gaode_MapView.zoomLevel = ++zoomlevel;
     }
 }
 - (IBAction)click_zoomout:(UIButton *)sender
 {
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         float zoomlevel=baidu_MapView.zoomLevel;
-        baidu_MapView.zoomLevel=--zoomlevel;
+        baidu_MapView.zoomLevel = --zoomlevel;
     }else{
         float zoomlevel=gaode_MapView.zoomLevel;
-        gaode_MapView.zoomLevel=--zoomlevel;
+        gaode_MapView.zoomLevel = --zoomlevel;
     }
 }
 

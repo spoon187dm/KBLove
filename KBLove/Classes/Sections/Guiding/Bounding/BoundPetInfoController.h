@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTCheckBoxes.h"
 
 @interface BoundPetInfoController : UIViewController
 
@@ -19,11 +20,15 @@
  //宠物品种
 @property (weak, nonatomic) IBOutlet UITextField *PetBreed;
 //宠物类型
-@property (weak, nonatomic) IBOutlet UITextField *PetType;
+@property (weak, nonatomic) IBOutlet TTCheckBoxes *PetType;
+
 //宠物生日
-@property (weak, nonatomic) IBOutlet UITextField *PetBithday;
+@property (weak, nonatomic) IBOutlet UIButton *PetBithday;
+
 //宠物性别
-@property (weak, nonatomic) IBOutlet UITextField *PetSex;
+@property (weak, nonatomic) IBOutlet TTCheckBoxes *PetSex;
+
+
 //宠物肩高
 @property (weak, nonatomic) IBOutlet UITextField *PetHeight;
 //体重

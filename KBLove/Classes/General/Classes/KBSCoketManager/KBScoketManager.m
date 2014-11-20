@@ -50,11 +50,12 @@ static KBScoketManager *manager;
 }
 - (void)LoginToScoket
 {
-    if ([KBUserInfo sharedInfo].ios_token.length<5) {
-        [UIAlertView showWithTitle:@"提示" Message:@"虚拟机无法启用推送功能" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-            
-        }];
-    }
+#warning 虚拟机无法启用推送功能
+//    if ([KBUserInfo sharedInfo].ios_token.length<5) {
+//        [UIAlertView showWithTitle:@"提示" Message:@"虚拟机无法启用推送功能" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+//            
+//        }];
+//    }
     
     NSString *udid=[[UIDevice currentDevice] identifierForVendor].UUIDString;
     NSString *pversion=[UIDevice currentDevice].systemVersion;

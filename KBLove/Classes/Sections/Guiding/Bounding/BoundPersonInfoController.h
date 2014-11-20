@@ -18,7 +18,8 @@
 //人物名称
 @property (weak, nonatomic) IBOutlet UITextField *PersonName;
 //生日
-@property (weak, nonatomic) IBOutlet UITextField *PersonBirthday;
+@property (weak, nonatomic) IBOutlet UIButton *birthdayBtn;
+
 //性别
 @property (weak, nonatomic) IBOutlet TTCheckBoxes *sexCheckBoxes;
 

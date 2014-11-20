@@ -41,18 +41,18 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"toregist"]) {
-        RegisterViewController *vc = segue.destinationViewController;
-        vc.isModalFromLogin = NO;
-    }else{
-        LoginViewController *vc = segue.destinationViewController;
-        vc.isModalFromRegist = NO;
-    }
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"toregist"]) {
+//        RegisterViewController *vc = segue.destinationViewController;
+//        vc.isModalFromLogin = NO;
+//    }else{
+//        LoginViewController *vc = segue.destinationViewController;
+//        vc.isModalFromRegist = NO;
+//    }
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//}
 
 
 @end

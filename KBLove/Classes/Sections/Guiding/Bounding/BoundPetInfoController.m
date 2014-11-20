@@ -9,6 +9,7 @@
 #import "BoundPetInfoController.h"
 #import "BoundEquipmentInfo.h"
 #import "KBHttpRequestTool.h"
+
 @interface BoundPetInfoController ()
 
 @end
@@ -17,7 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 设置宠物类型的checkBoxes
+    self.PetType.titleArray = @[@"大型", @"中型", @"小型"];
+    self.PetType.normalImage = @"登录_20";
+    self.PetType.selectedImage = @"登录_23";
+    
+    // 设置宠物性别的checkBoxes
+    self.PetSex.titleArray = @[@"男", @"女"];
+    self.PetSex.normalImage = @"登录_20";
+    self.PetSex.selectedImage = @"登录_23";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +52,13 @@
 //    [dic setObject:@"" forKey:@"icon"];//尚未添加
     [dic setObject:self.PetName.text forKey:@"name"];
     [dic setObject:self.PetBreed.text forKey:@"dog_breed"];
-    [dic setObject:self.PetType.text forKey:@"dog_figure"];
-    [dic setObject:self.PetBithday.text forKey:@"birth"];
-    [dic setObject:self.PetSex.text forKey:@"gender"];
+    [dic setObject:self.PetType.selectedTitle forKey:@"dog_figure"];
+    [dic setObject:self.PetBithday.currentTitle forKey:@"birth"];
+    [dic setObject:self.PetSex.selectedTitle forKey:@"gender"];
     [dic setObject:self.PetHeight.text forKey:@"height"];
     [dic setObject:self.PetWeight.text forKey:@"weight"];
+    
+    NSLog(@"-- %@ - %@", self.PetSex.selectedTitle, self.PetType.selectedTitle);
     NSString *urlstr=@"http://118.194.192.104:8080/api/device.edit.do?";
     NSLog(@"%@",dic);
     [httptool request:urlstr requestType:0 params:dic overBlock:^(BOOL IsSuccess, id result) {

@@ -342,6 +342,8 @@
 		DA3AE1011A1ADD6400DF0968 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */; };
 		DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */; };
 		DA3AE10B1A1B3AF900DF0968 /* IconChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */; };
+		DA6A5E501A1D9BBC00357BAD /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6A5E4F1A1D9BBC00357BAD /* ForgetPasswordViewController.m */; };
+		DAA320631A1DE2D00010E1C6 /* TTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA320621A1DE2D00010E1C6 /* TTAlertView.m */; };
 		DAA47FB81A1C8D48004ADC26 /* InfoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */; };
 		DADA02A41A1CE8EC002B31BC /* TTCheckBoxes.m in Sources */ = {isa = PBXBuildFile; fileRef = DADA02A31A1CE8EC002B31BC /* TTCheckBoxes.m */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
@@ -1518,7 +1520,11 @@
 		DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAffirmViewController.m; sourceTree = "<group>"; };
 		DA3AE1091A1B3AF900DF0968 /* IconChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconChooseViewController.h; sourceTree = "<group>"; };
 		DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconChooseViewController.m; sourceTree = "<group>"; };
+		DA6A5E4E1A1D9BBC00357BAD /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		DA6A5E4F1A1D9BBC00357BAD /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
+		DAA320611A1DE2D00010E1C6 /* TTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertView.h; sourceTree = "<group>"; };
+		DAA320621A1DE2D00010E1C6 /* TTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertView.m; sourceTree = "<group>"; };
 		DAA47FB61A1C8D48004ADC26 /* InfoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoChooseViewController.h; sourceTree = "<group>"; };
 		DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoChooseViewController.m; sourceTree = "<group>"; };
 		DADA02A21A1CE8EC002B31BC /* TTCheckBoxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCheckBoxes.h; sourceTree = "<group>"; };
@@ -3043,6 +3049,8 @@
 			children = (
 				DADA02A21A1CE8EC002B31BC /* TTCheckBoxes.h */,
 				DADA02A31A1CE8EC002B31BC /* TTCheckBoxes.m */,
+				DAA320611A1DE2D00010E1C6 /* TTAlertView.h */,
+				DAA320621A1DE2D00010E1C6 /* TTAlertView.m */,
 			);
 			name = XxfView;
 			sourceTree = "<group>";
@@ -3783,6 +3791,8 @@
 				F97410D619EC322000E12633 /* RegisterViewController.m */,
 				DA3AE1021A1AFA9500DF0968 /* RegisterAffirmViewController.h */,
 				DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */,
+				DA6A5E4E1A1D9BBC00357BAD /* ForgetPasswordViewController.h */,
+				DA6A5E4F1A1D9BBC00357BAD /* ForgetPasswordViewController.m */,
 				DA3AE1051A1B3A8900DF0968 /* Choose */,
 			);
 			path = "Login&Regist";
@@ -5804,9 +5814,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = block;
 				TargetAttributes = {
-					F91A0C8619E7880C009ADB44 = {
-						DevelopmentTeam = W2QU362M8R;
-					};
 					F91A0CA119E7880C009ADB44 = {
 						DevelopmentTeam = W2QU362M8R;
 						TestTargetID = F91A0C8619E7880C009ADB44;
@@ -6815,6 +6822,7 @@
 				F9C91F981A15C576003DF07A /* ZWL_GeoHelper.m in Sources */,
 				F99E76221A00D3A8002FCB1F /* CarSettingViewController.m in Sources */,
 				F975FE6019EE44DA00D13D86 /* RecteView.m in Sources */,
+				DAA320631A1DE2D00010E1C6 /* TTAlertView.m in Sources */,
 				F974109819EC2EFA00E12633 /* LoginRequest.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
 				F9C91FD41A15C587003DF07A /* DeviceTableHeadView.m in Sources */,
@@ -6845,6 +6853,7 @@
 				BC29C9501A1B43DA009C7A92 /* CarOBDViewController.m in Sources */,
 				F91A0D7A19E78E0A009ADB44 /* KBHttpRequestTool.m in Sources */,
 				F9C91FCE1A15C587003DF07A /* AlarmCell.m in Sources */,
+				DA6A5E501A1D9BBC00357BAD /* ForgetPasswordViewController.m in Sources */,
 				F9C91F911A15C576003DF07A /* CCTrackerUtils.m in Sources */,
 				F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */,
 				F9748CD919EF84FF0064FCC7 /* KBAlarm.m in Sources */,
@@ -6965,8 +6974,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -6984,7 +6993,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -7005,8 +7014,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -7017,7 +7026,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -7030,8 +7039,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7094,7 +7103,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eace7f5c-3c8d-4a99-ad4e-d5ae988cfc0b";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -7107,8 +7116,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7171,7 +7180,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eace7f5c-3c8d-4a99-ad4e-d5ae988cfc0b";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
