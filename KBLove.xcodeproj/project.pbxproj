@@ -343,6 +343,7 @@
 		DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */; };
 		DA3AE10B1A1B3AF900DF0968 /* IconChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */; };
 		DAA47FB81A1C8D48004ADC26 /* InfoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */; };
+		DADA02A41A1CE8EC002B31BC /* TTCheckBoxes.m in Sources */ = {isa = PBXBuildFile; fileRef = DADA02A31A1CE8EC002B31BC /* TTCheckBoxes.m */; };
 		F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6EFE19F563E400671113 /* AccountManagerViewController.m */; };
 		F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0019F563E400671113 /* AlterUserDataViewController.m */; };
 		F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90F6F0219F563E400671113 /* CommonSettingViewController.m */; };
@@ -1520,6 +1521,8 @@
 		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
 		DAA47FB61A1C8D48004ADC26 /* InfoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoChooseViewController.h; sourceTree = "<group>"; };
 		DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoChooseViewController.m; sourceTree = "<group>"; };
+		DADA02A21A1CE8EC002B31BC /* TTCheckBoxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCheckBoxes.h; sourceTree = "<group>"; };
+		DADA02A31A1CE8EC002B31BC /* TTCheckBoxes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCheckBoxes.m; sourceTree = "<group>"; };
 		DFA4035F23728AFEFBE9D5A2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F90F6EFD19F563E400671113 /* AccountManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManagerViewController.h; sourceTree = "<group>"; };
 		F90F6EFE19F563E400671113 /* AccountManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManagerViewController.m; sourceTree = "<group>"; };
@@ -3035,6 +3038,15 @@
 			name = Choose;
 			sourceTree = "<group>";
 		};
+		DADA02A11A1CE8C3002B31BC /* XxfView */ = {
+			isa = PBXGroup;
+			children = (
+				DADA02A21A1CE8EC002B31BC /* TTCheckBoxes.h */,
+				DADA02A31A1CE8EC002B31BC /* TTCheckBoxes.m */,
+			);
+			name = XxfView;
+			sourceTree = "<group>";
+		};
 		E06891EEE703D1572E805BEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3657,6 +3669,7 @@
 		F974108919EC2C8700E12633 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DADA02A11A1CE8C3002B31BC /* XxfView */,
 				BCCE85851A11ABD40014AF29 /* MessageView.h */,
 				BCCE85861A11ABD40014AF29 /* MessageView.m */,
 				F9A38FCC19F61B0D0043594F /* Chart */,
@@ -6771,6 +6784,7 @@
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */,
 				F99246461A048C5400599E74 /* TableRefreshBaseView.m in Sources */,
+				DADA02A41A1CE8EC002B31BC /* TTCheckBoxes.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
 				DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */,
 				BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTCheckBoxes.h"
 
 @interface BoundPersonInfoController : UIViewController
 
@@ -19,7 +20,8 @@
 //生日
 @property (weak, nonatomic) IBOutlet UITextField *PersonBirthday;
 //性别
-@property (weak, nonatomic) IBOutlet UITextField *PersonSex;
+@property (weak, nonatomic) IBOutlet TTCheckBoxes *sexCheckBoxes;
+
 //身高
 @property (weak, nonatomic) IBOutlet UITextField *PersonHeight;
 //体重

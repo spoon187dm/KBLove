@@ -43,8 +43,7 @@
     _equipment.EquipmentSIMNum=self.EquipmentSIMNum.text;
     _equipment.EquipmentIponeNum=self.LinkmanPhoneNum.text;
     
-    NSString *aimController ;
-    UIViewController *vc;
+
     NSString *imeiNum_sub2=[_equipment.EquipmentIMEINum substringToIndex:2];
     NSInteger num=[imeiNum_sub2 integerValue];
     if ((num>=1&&num<=20)||(num>=51&&num<=54))

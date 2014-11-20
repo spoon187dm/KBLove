@@ -9,20 +9,37 @@
 #import "BoundPersonInfoController.h"
 #import "BoundEquipmentInfo.h"
 #import "KBHttpRequestTool.h"
-@interface BoundPersonInfoController ()
+@interface BoundPersonInfoController () <TTCheckBoxesDelegate>
+
+@property (nonatomic, copy) NSString *sexStr;
 
 @end
 
 @implementation BoundPersonInfoController
 
+- (void)awakeFromNib
+{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSArray *array = [NSArray arrayWithObjects:@"男", @"女", nil];
+    NSLog(@"%@", NSStringFromCGRect(self.sexCheckBoxes.frame));
+    self.sexCheckBoxes.titleArray = array;
+    self.sexCheckBoxes.normalImage = @"登录_20";
+    self.sexCheckBoxes.selectedImage = @"登录_23";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - TTCheckBoxes 代理方法
+- (void)checkBoxes:(TTCheckBoxes *)boxes didClickButton:(int)index buttonTitle:(NSString *)title
+{
+    self.sexStr = title;
 }
 
 - (IBAction)rightNavBarButtonClick:(id)sender
@@ -40,7 +57,7 @@
 //    [dic setObject:@"" forKey:@"icon"];//尚未添加
     [dic setObject:self.PersonName.text forKey:@"name"];
     [dic setObject:self.PersonBirthday.text forKey:@"birth"];
-    [dic setObject:self.PersonSex.text forKey:@"gender"];
+    [dic setObject:self.sexStr forKey:@"gender"];
     [dic setObject:self.PersonHeight.text forKey:@"height"];
     [dic setObject:self.PersonWeight.text forKey:@"weight"];
     NSString *urlstr=@"http://118.194.192.104:8080/api/device.edit.do?";
