@@ -229,7 +229,7 @@
     
     NSArray *titles = @[@"所有设备",@"好友设备",@"我的设备",@"绑定设备"];
     for (NSInteger i = 0; i<4; i++) {
-        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(0, 35*i, 100, 35) title:titles[i] target:self Action:@selector(click_dropListItem:)];
+        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(0, 35*i, 120, 35) title:titles[i] target:self Action:@selector(click_dropListItem:)];
         
         // 设置按钮的背景 84 149 159
         [btn setBackgroundColor:KBColor(84, 149, 159, 0.85)];
