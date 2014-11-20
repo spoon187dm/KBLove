@@ -169,7 +169,7 @@
     if (![Circle_Name_Lable.text isEqualToString:circle_info.name]||![Circle_NickName_Lable.text isEqualToString:myinf.nick]) {
         
         KBUserInfo *user=[KBUserInfo sharedInfo];
-        NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[circle_info.id stringValue] ,@"group_name":Circle_Name_Lable.text,@"nick_name":@"Circle_NickName_Lable.text,",@"app_name":@"M2616_BD"};
+        NSDictionary *dic=@{@"user_id":user.user_id,@"token":user.token,@"group_id":[circle_info.id stringValue] ,@"group_name":Circle_Name_Lable.text,@"nick_name":Circle_NickName_Lable.text,@"app_name":@"M2616_BD"};
         [[KBHttpRequestTool sharedInstance]request:[Circle_UpDate_URL] requestType:KBHttpRequestTypePost params:dic cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
             if (IsSuccess) {
                 NSLog(@"修改成功");
@@ -209,6 +209,7 @@
     //加载群成员信息
     NSString *urlPath=[Circle_GetAllMember_URL,[KBUserInfo sharedInfo].user_id,[KBUserInfo sharedInfo].token,[circle_info.id stringValue]];
     NSLog(@"%@",urlPath);
+    myinf = [[KBFriendInfo alloc] init];
    [[KBHttpRequestTool sharedInstance]request:urlPath requestType:KBHttpRequestTypeGet params:nil cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
        [KBFreash StopRefreshinView:self.view];
        if (IsSuccess) {
@@ -216,17 +217,23 @@
            {
              //  NSDictionary *dic=(NSDictionary *)result;
                if ([[result objectForKey:@"ret"] integerValue]==1) {
+                   NSString * uid = [KBUserInfo sharedInfo].user_id;
+                   NSInteger uidInt = [uid integerValue];
                    
                    NSArray *arr=[result objectForKey:@"member"];
+                   NSLog(@"arr===========%@",arr);
                    for (NSDictionary *sdic in arr) {
                        KBFriendInfo *kf=[[KBFriendInfo alloc]init];
                        kf.id=[[sdic objectForKey:@"userId"] stringValue];
-                       if ([kf.id isEqualToString:[KBUserInfo sharedInfo].user_id]) {
-                           //circle_info
-                           myinf =kf;
-                           }
+                       NSInteger kid = [kf.id integerValue];
                        kf.nick=[sdic objectForKey:@"nickName"];
                        kf.name=kf.id;
+                       if (kid == uidInt) {
+                           //circle_info
+                           myinf.nick = kf.nick;
+                           NSLog(@"myinfo___nick%@",myinf.nick);
+                           }
+
                        [members addObject:kf];
                        
 //                       if (members.count==11) {
@@ -373,10 +380,12 @@
                     cell.textLabel.text=@"我的小名";
                     Circle_NickName_Lable=[[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth-230, 10, 200,30)];
                     Circle_NickName_Lable.text=myinf.nick;
+                    NSLog(@"myinf--------%@",myinf.nick);
                     Circle_NickName_Lable.textAlignment=NSTextAlignmentRight;
                     [Circle_NickName_Lable setTextColor:[UIColor whiteColor]];
                     Circle_NickName_Lable.font=[UIFont boldSystemFontOfSize:16];
                     [cell.contentView addSubview:Circle_NickName_Lable];
+                    [self AddLineToCell:cell];
                 }break;
 
                     

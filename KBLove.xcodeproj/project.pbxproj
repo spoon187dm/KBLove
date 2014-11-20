@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
+		6351AB551A1DDFDC0079665E /* UsualSettinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */; };
+		6351AB581A1DE04C0079665E /* PriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB571A1DE04C0079665E /* PriteTableViewController.m */; };
+		6351AB5B1A1DE09D0079665E /* SugesstionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB5A1A1DE09D0079665E /* SugesstionViewController.m */; };
+		6351AB5E1A1DE0EA0079665E /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB5D1A1DE0EA0079665E /* AboutTableViewController.m */; };
+		6351AB611A1DE63E0079665E /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB601A1DE63E0079665E /* MapTableViewController.m */; };
+		6351AB641A1DE6950079665E /* LanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB631A1DE6950079665E /* LanguageTableViewController.m */; };
+		6351AB671A1DE8940079665E /* UpdatePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB661A1DE8940079665E /* UpdatePwdViewController.m */; };
+		6351AB6A1A1DE8B20079665E /* BindPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB691A1DE8B20079665E /* BindPhoneViewController.m */; };
+		6351AB6D1A1DE8C20079665E /* BindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB6C1A1DE8C20079665E /* BindEmailViewController.m */; };
 		6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647519ECD15D0081EB4C /* FriendsListCell.m */; };
 		6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16647619ECD15D0081EB4C /* FriendsListCell.xib */; };
 		6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647A19ECD4F90081EB4C /* AddFriendViewController.m */; };
@@ -1062,6 +1071,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6351AB531A1DDFDC0079665E /* UsualSettinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsualSettinViewController.h; sourceTree = "<group>"; };
+		6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsualSettinViewController.m; sourceTree = "<group>"; };
+		6351AB561A1DE04C0079665E /* PriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriteTableViewController.h; sourceTree = "<group>"; };
+		6351AB571A1DE04C0079665E /* PriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriteTableViewController.m; sourceTree = "<group>"; };
+		6351AB591A1DE09D0079665E /* SugesstionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SugesstionViewController.h; sourceTree = "<group>"; };
+		6351AB5A1A1DE09D0079665E /* SugesstionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SugesstionViewController.m; sourceTree = "<group>"; };
+		6351AB5C1A1DE0EA0079665E /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
+		6351AB5D1A1DE0EA0079665E /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
+		6351AB5F1A1DE63E0079665E /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
+		6351AB601A1DE63E0079665E /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
+		6351AB621A1DE6950079665E /* LanguageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageTableViewController.h; sourceTree = "<group>"; };
+		6351AB631A1DE6950079665E /* LanguageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTableViewController.m; sourceTree = "<group>"; };
+		6351AB651A1DE8940079665E /* UpdatePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePwdViewController.h; sourceTree = "<group>"; };
+		6351AB661A1DE8940079665E /* UpdatePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdViewController.m; sourceTree = "<group>"; };
+		6351AB681A1DE8B20079665E /* BindPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindPhoneViewController.h; sourceTree = "<group>"; };
+		6351AB691A1DE8B20079665E /* BindPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindPhoneViewController.m; sourceTree = "<group>"; };
+		6351AB6B1A1DE8C20079665E /* BindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindEmailViewController.h; sourceTree = "<group>"; };
+		6351AB6C1A1DE8C20079665E /* BindEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindEmailViewController.m; sourceTree = "<group>"; };
 		6E16647419ECD15D0081EB4C /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
 		6E16647519ECD15D0081EB4C /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
 		6E16647619ECD15D0081EB4C /* FriendsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
@@ -3059,6 +3086,24 @@
 				F90F6F0619F563E400671113 /* MineViewController.m */,
 				F90F6F0719F563E400671113 /* PrivacySettingViewController.h */,
 				F90F6F0819F563E400671113 /* PrivacySettingViewController.m */,
+				6351AB531A1DDFDC0079665E /* UsualSettinViewController.h */,
+				6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */,
+				6351AB561A1DE04C0079665E /* PriteTableViewController.h */,
+				6351AB571A1DE04C0079665E /* PriteTableViewController.m */,
+				6351AB591A1DE09D0079665E /* SugesstionViewController.h */,
+				6351AB5A1A1DE09D0079665E /* SugesstionViewController.m */,
+				6351AB5C1A1DE0EA0079665E /* AboutTableViewController.h */,
+				6351AB5D1A1DE0EA0079665E /* AboutTableViewController.m */,
+				6351AB5F1A1DE63E0079665E /* MapTableViewController.h */,
+				6351AB601A1DE63E0079665E /* MapTableViewController.m */,
+				6351AB621A1DE6950079665E /* LanguageTableViewController.h */,
+				6351AB631A1DE6950079665E /* LanguageTableViewController.m */,
+				6351AB651A1DE8940079665E /* UpdatePwdViewController.h */,
+				6351AB661A1DE8940079665E /* UpdatePwdViewController.m */,
+				6351AB681A1DE8B20079665E /* BindPhoneViewController.h */,
+				6351AB691A1DE8B20079665E /* BindPhoneViewController.m */,
+				6351AB6B1A1DE8C20079665E /* BindEmailViewController.h */,
+				6351AB6C1A1DE8C20079665E /* BindEmailViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -5795,7 +5840,7 @@
 						DevelopmentTeam = W2QU362M8R;
 					};
 					F91A0CA119E7880C009ADB44 = {
-						DevelopmentTeam = W2QU362M8R;
+						DevelopmentTeam = PK2BP7Y25V;
 						TestTargetID = F91A0C8619E7880C009ADB44;
 					};
 				};
@@ -6717,14 +6762,18 @@
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F9C91F971A15C576003DF07A /* NYSliderPopover.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
+				6351AB6D1A1DE8C20079665E /* BindEmailViewController.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
 				BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */,
 				BC6ED3E31A0750430037F1D1 /* FriendListCell.m in Sources */,
 				F992464C1A048C5400599E74 /* UIView+Extension.m in Sources */,
+				6351AB6A1A1DE8B20079665E /* BindPhoneViewController.m in Sources */,
 				F9C91F991A15C576003DF07A /* ZWL_MapUtils.m in Sources */,
 				BC29C9531A1B551D009C7A92 /* PetAndPersonDataViewController.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,
+				6351AB581A1DE04C0079665E /* PriteTableViewController.m in Sources */,
+				6351AB671A1DE8940079665E /* UpdatePwdViewController.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
 				F9C91FCC1A15C587003DF07A /* TraceListViewController.m in Sources */,
@@ -6739,6 +6788,7 @@
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
 				F9C91FC71A15C587003DF07A /* AlarmDetailViewController.m in Sources */,
+				6351AB641A1DE6950079665E /* LanguageTableViewController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
 				BC15E0071A076BE00016FB39 /* CircleAndFriendListViewController.m in Sources */,
@@ -6767,6 +6817,7 @@
 				F9C91FD31A15C587003DF07A /* DevicesCell.m in Sources */,
 				F992466F1A048D5500599E74 /* PNLineChartData.m in Sources */,
 				BC59836119ECCE8500DAC76A /* CircleRootViewController.m in Sources */,
+				6351AB551A1DDFDC0079665E /* UsualSettinViewController.m in Sources */,
 				F9E24F6419ED725900D83FEF /* PinyinFormatter.m in Sources */,
 				F97410E019EC322000E12633 /* BoundEquipmentInfo.m in Sources */,
 				F90F6F0A19F563E400671113 /* AlterUserDataViewController.m in Sources */,
@@ -6779,11 +6830,13 @@
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				BC6F5C581A0DD61C00C4201F /* MessageListCell.m in Sources */,
 				F97410EA19EC33CE00E12633 /* KBUserInfo.m in Sources */,
+				6351AB611A1DE63E0079665E /* MapTableViewController.m in Sources */,
 				F9C91FD11A15C587003DF07A /* DeviceInfoView.m in Sources */,
 				F99E76251A00D3A8002FCB1F /* PetDetailSettingViewController.m in Sources */,
 				BCCE85871A11ABD40014AF29 /* MessageView.m in Sources */,
 				F9C91F9A1A15C576003DF07A /* ZWL_MapViewTool.m in Sources */,
 				F97410F419EC385800E12633 /* QRCodeTool.m in Sources */,
+				6351AB5E1A1DE0EA0079665E /* AboutTableViewController.m in Sources */,
 				F99246711A048D5500599E74 /* PNPieChart.m in Sources */,
 				F9A3BBD11A01DA4400C2461F /* KBDeviceManager.m in Sources */,
 				F974110419EC389800E12633 /* UIButton+WLTool.m in Sources */,
@@ -6817,6 +6870,7 @@
 				F99E76211A00D3A8002FCB1F /* CarDetailSettingViewController.m in Sources */,
 				F9E24F7919ED729700D83FEF /* KBFreash.m in Sources */,
 				F9748CDF19EF861E0064FCC7 /* KBHardWare.m in Sources */,
+				6351AB5B1A1DE09D0079665E /* SugesstionViewController.m in Sources */,
 				F9C91FD61A15C587003DF07A /* DropListView.m in Sources */,
 				F91A0D7919E78E0A009ADB44 /* WLCacheStrategy.m in Sources */,
 				F9C91F901A15C576003DF07A /* CCReplayAnnotationView.m in Sources */,
@@ -6951,8 +7005,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -6970,7 +7024,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -6991,8 +7045,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -7003,7 +7057,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -7016,8 +7070,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7080,7 +7134,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eace7f5c-3c8d-4a99-ad4e-d5ae988cfc0b";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -7093,8 +7147,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7157,7 +7211,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eace7f5c-3c8d-4a99-ad4e-d5ae988cfc0b";
+				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
