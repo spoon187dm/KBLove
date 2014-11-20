@@ -210,6 +210,7 @@
 //数据
 - (IBAction)click_data:(UIButton *)sender{
     UIStoryboard * std  = [UIStoryboard storyboardWithName:@"Device_data" bundle:nil];
+    //[_device.type isEqualToNumber:@(DEVICE_CAR)]
     
     if ([_device.type isEqualToNumber:@(DEVICE_CAR)]) {
         CarDataViewController * carData = [std instantiateViewControllerWithIdentifier:@"CarDataViewController"];
@@ -223,10 +224,6 @@
         petAndPerson.deviceStatus = _deviceStatus;
         [self.navigationController pushViewController:petAndPerson animated:YES];
     }
-    
-    
-    
-   
     
 }
 

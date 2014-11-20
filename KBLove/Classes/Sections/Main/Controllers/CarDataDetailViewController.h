@@ -24,4 +24,5 @@
 @property (strong, nonatomic) IBOutlet UIView *countView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollerVIew;
 
+@property (nonatomic,copy) NSString * str;
 @end

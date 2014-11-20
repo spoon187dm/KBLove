@@ -50,7 +50,7 @@
         _circleBG.lineCap     = kCALineCapRound;
         _circleBG.fillColor   = [UIColor clearColor].CGColor;
         _circleBG.lineWidth   = [_lineWidth floatValue];
-        _circleBG.strokeColor = (hasBackgroundShadow ? PNLightYellow.CGColor : [UIColor clearColor].CGColor);
+        _circleBG.strokeColor = (hasBackgroundShadow ? [UIColor darkGrayColor].CGColor : [UIColor clearColor].CGColor);
         _circleBG.strokeEnd   = 1.0;
         _circleBG.zPosition   = -1;
         
