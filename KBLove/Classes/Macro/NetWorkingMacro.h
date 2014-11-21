@@ -22,7 +22,7 @@ static NSString *const REGRSTER_URL = @"http://test.capcare.com.cn:8081/api/regi
 //登陆
 static NSString *const LOGIN_URL = @"http://test.capcare.com.cn:8081/api/logon.do?username=%@&pwd=%@&ts=%@&cmd=%d";
 //修改密码
-#define ALTER_PASSWORD_URL  NSString stringWithFormat:@"%@/api/update.pwd.do?user_id=%@&password=%@&ts=%@&new_password=%@",SERVER_URL
+#define ALTER_PASSWORD_URL  NSString stringWithFormat:@"%@/api/update.pwd.do?user_id=%@&password=%@&ts=%@&new_password=%@&token=%@",SERVER_URL
 //修改昵称
 #define ALTER_NAME_URL  NSString stringWithFormat:@"%@/api/update.nick.do?user_id=%@&nick=%@",SERVER_URL
 //忘记密码

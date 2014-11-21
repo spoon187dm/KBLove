@@ -40,6 +40,7 @@
 - (IBAction)backClicked:(UIButton *)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"password------%@",[KBUserInfo sharedInfo].passWord);
 }
 
 - (IBAction)ContainClicked:(UIButton *)sender {
@@ -70,7 +71,7 @@
         [[KBHttpRequestTool sharedInstance] request:url requestType:KBHttpRequestTypeGet params:nil overBlock:^(BOOL IsSuccess, id result) {
             if (IsSuccess) {
                 if ([result isKindOfClass:[NSDictionary class]]) {
-                    NSLog(@"request=========%@,tollen======%@",result,[KBUserInfo sharedInfo].ios_token);
+                    NSLog(@"request=========%@,tollen======%@",result[@"desc"],[KBUserInfo sharedInfo].token);
                 }
             }
             
@@ -87,8 +88,12 @@
     //对密码进行加密
     NSString *twoEncrypt = [[password MD5Hash] MD5Hash];
     //和时间进行拼接
-    NSString *timeEncrypt = [NSString stringWithFormat:@"%@%@",twoEncrypt,[self getTime]];
-    NSString * url = [ALTER_PASSWORD_URL,userInfo.user_id,userInfo.passWord,[self getTime],timeEncrypt];
+//    NSString *timeEncrypt = [NSString stringWithFormat:@"%@",twoEncrypt];
+    NSString *getPwdStr = [[[KBUserInfo sharedInfo].passWord MD5Hash] MD5Hash];
+    NSString *oldPwd = [NSString stringWithFormat:@"%@%@",getPwdStr,[KBUserInfo sharedInfo].time];
+    NSString *oldPass = [oldPwd MD5Hash];
+    
+    NSString * url = [ALTER_PASSWORD_URL,userInfo.user_id,oldPass,[self getTime],twoEncrypt,[KBUserInfo sharedInfo].token];
     return url;
 }
 
