@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A063AFC1A1F90D1001ED8F6 /* TraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A063AFB1A1F90D1001ED8F6 /* TraceCell.m */; };
+		3A063AFE1A203E88001ED8F6 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A063AFD1A203E88001ED8F6 /* delete.png */; };
+		3A063B001A203EC4001ED8F6 /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A063AFF1A203EC4001ED8F6 /* search2.png */; };
+		3A063B021A205F37001ED8F6 /* sliderbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A063B011A205F37001ED8F6 /* sliderbg.png */; };
+		3A7CD1FA1A1E29E000591D20 /* TraceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CD1F91A1E29E000591D20 /* TraceListViewController.m */; };
+		3A7CD2341A1E515B00591D20 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CD22F1A1E515B00591D20 /* DatePickerView.m */; };
+		3A7CD2351A1E515B00591D20 /* JudgeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CD2311A1E515B00591D20 /* JudgeDate.m */; };
+		3A7CD2361A1E515B00591D20 /* pickerviewhmbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A7CD2321A1E515B00591D20 /* pickerviewhmbg.png */; };
+		3A7CD2371A1E515B00591D20 /* pickerviewymdbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A7CD2331A1E515B00591D20 /* pickerviewymdbg.png */; };
+		3ACF57991A203CC5001C2091 /* bgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF57941A203CC5001C2091 /* bgcolor.png */; };
+		3ACF579B1A203CC5001C2091 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF57961A203CC5001C2091 /* player.png */; };
+		3ACF579C1A203CC5001C2091 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF57971A203CC5001C2091 /* search.png */; };
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
 		6E16647719ECD15D0081EB4C /* FriendsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16647519ECD15D0081EB4C /* FriendsListCell.m */; };
 		6E16647819ECD15D0081EB4C /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E16647619ECD15D0081EB4C /* FriendsListCell.xib */; };
@@ -16,8 +28,9 @@
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
-		87A927DC1A1A322B0059C5E2 /* shareLocationBaiduViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A927DB1A1A322B0059C5E2 /* shareLocationBaiduViewController.m */; };
-		87A927E01A1A32710059C5E2 /* shareLocationGaodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */; };
+		87A927E71A1B1AAC0059C5E2 /* ShareLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A927E61A1B1AAC0059C5E2 /* ShareLocationViewController.m */; };
+		87AB511A1A20836500661EF0 /* GaoDeMap_TrackerReplayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87AB51191A20836500661EF0 /* GaoDeMap_TrackerReplayViewController.mm */; };
+		87AB511D1A20880000661EF0 /* CCReplayGaoDeAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AB511C1A20880000661EF0 /* CCReplayGaoDeAnnotationView.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
 		BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */; };
@@ -628,7 +641,6 @@
 		F9C91FC91A15C587003DF07A /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FA51A15C587003DF07A /* DeviceDetailViewController.m */; };
 		F9C91FCA1A15C587003DF07A /* DeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FA71A15C587003DF07A /* DeviceListViewController.m */; };
 		F9C91FCB1A15C587003DF07A /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FA91A15C587003DF07A /* MainViewController.mm */; };
-		F9C91FCC1A15C587003DF07A /* TraceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FAB1A15C587003DF07A /* TraceListViewController.m */; };
 		F9C91FCD1A15C587003DF07A /* TrackerReplayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FAD1A15C587003DF07A /* TrackerReplayViewController.mm */; };
 		F9C91FCE1A15C587003DF07A /* AlarmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FB01A15C587003DF07A /* AlarmCell.m */; };
 		F9C91FCF1A15C587003DF07A /* BottomSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FB21A15C587003DF07A /* BottomSelectView.m */; };
@@ -642,7 +654,6 @@
 		F9C91FD71A15C587003DF07A /* DropListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C91FBE1A15C587003DF07A /* DropListView.xib */; };
 		F9C91FD81A15C587003DF07A /* KBAlarmInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FC01A15C587003DF07A /* KBAlarmInfoView.m */; };
 		F9C91FD91A15C587003DF07A /* ReplayMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C91FC11A15C587003DF07A /* ReplayMapView.xib */; };
-		F9C91FDA1A15C587003DF07A /* TraceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FC31A15C587003DF07A /* TraceCell.m */; };
 		F9C91FDB1A15C587003DF07A /* TraceInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C91FC51A15C587003DF07A /* TraceInfoView.m */; };
 		F9C91FDC1A15C587003DF07A /* TraceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C91FC61A15C587003DF07A /* TraceInfoView.xib */; };
 		F9D4C8B719F121B0005B93CA /* KBMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D4C8B619F121B0005B93CA /* KBMessageInfo.m */; };
@@ -1055,6 +1066,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A063AFA1A1F90D1001ED8F6 /* TraceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceCell.h; sourceTree = "<group>"; };
+		3A063AFB1A1F90D1001ED8F6 /* TraceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceCell.m; sourceTree = "<group>"; };
+		3A063AFD1A203E88001ED8F6 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		3A063AFF1A203EC4001ED8F6 /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
+		3A063B011A205F37001ED8F6 /* sliderbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderbg.png; sourceTree = "<group>"; };
+		3A7CD1F81A1E29E000591D20 /* TraceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceListViewController.h; sourceTree = "<group>"; };
+		3A7CD1F91A1E29E000591D20 /* TraceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceListViewController.m; sourceTree = "<group>"; };
+		3A7CD22E1A1E515B00591D20 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		3A7CD22F1A1E515B00591D20 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		3A7CD2301A1E515B00591D20 /* JudgeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JudgeDate.h; sourceTree = "<group>"; };
+		3A7CD2311A1E515B00591D20 /* JudgeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JudgeDate.m; sourceTree = "<group>"; };
+		3A7CD2321A1E515B00591D20 /* pickerviewhmbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerviewhmbg.png; sourceTree = "<group>"; };
+		3A7CD2331A1E515B00591D20 /* pickerviewymdbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerviewymdbg.png; sourceTree = "<group>"; };
+		3ACF57941A203CC5001C2091 /* bgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgcolor.png; sourceTree = "<group>"; };
+		3ACF57961A203CC5001C2091 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		3ACF57971A203CC5001C2091 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		6E16647419ECD15D0081EB4C /* FriendsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListCell.h; sourceTree = "<group>"; };
 		6E16647519ECD15D0081EB4C /* FriendsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListCell.m; sourceTree = "<group>"; };
 		6E16647619ECD15D0081EB4C /* FriendsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
@@ -1069,10 +1096,12 @@
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
-		87A927DA1A1A322B0059C5E2 /* shareLocationBaiduViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shareLocationBaiduViewController.h; path = ShareLocation/shareLocationBaiduViewController.h; sourceTree = "<group>"; };
-		87A927DB1A1A322B0059C5E2 /* shareLocationBaiduViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shareLocationBaiduViewController.m; path = ShareLocation/shareLocationBaiduViewController.m; sourceTree = "<group>"; };
-		87A927DE1A1A32710059C5E2 /* shareLocationGaodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shareLocationGaodeViewController.h; path = ShareLocation/shareLocationGaodeViewController.h; sourceTree = "<group>"; };
-		87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shareLocationGaodeViewController.m; path = ShareLocation/shareLocationGaodeViewController.m; sourceTree = "<group>"; };
+		87A927E51A1B1AAC0059C5E2 /* ShareLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareLocationViewController.h; path = ShareLocation/ShareLocationViewController.h; sourceTree = "<group>"; };
+		87A927E61A1B1AAC0059C5E2 /* ShareLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareLocationViewController.m; path = ShareLocation/ShareLocationViewController.m; sourceTree = "<group>"; };
+		87AB51181A20835700661EF0 /* GaoDeMap_TrackerReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDeMap_TrackerReplayViewController.h; sourceTree = "<group>"; };
+		87AB51191A20836500661EF0 /* GaoDeMap_TrackerReplayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GaoDeMap_TrackerReplayViewController.mm; sourceTree = "<group>"; };
+		87AB511B1A2087F400661EF0 /* CCReplayGaoDeAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCReplayGaoDeAnnotationView.h; sourceTree = "<group>"; };
+		87AB511C1A20880000661EF0 /* CCReplayGaoDeAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCReplayGaoDeAnnotationView.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
@@ -1933,8 +1962,6 @@
 		F9C91FA71A15C587003DF07A /* DeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceListViewController.m; sourceTree = "<group>"; };
 		F9C91FA81A15C587003DF07A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F9C91FA91A15C587003DF07A /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
-		F9C91FAA1A15C587003DF07A /* TraceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceListViewController.h; sourceTree = "<group>"; };
-		F9C91FAB1A15C587003DF07A /* TraceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceListViewController.m; sourceTree = "<group>"; };
 		F9C91FAC1A15C587003DF07A /* TrackerReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackerReplayViewController.h; sourceTree = "<group>"; };
 		F9C91FAD1A15C587003DF07A /* TrackerReplayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TrackerReplayViewController.mm; sourceTree = "<group>"; };
 		F9C91FAF1A15C587003DF07A /* AlarmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmCell.h; sourceTree = "<group>"; };
@@ -1956,8 +1983,6 @@
 		F9C91FBF1A15C587003DF07A /* KBAlarmInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAlarmInfoView.h; sourceTree = "<group>"; };
 		F9C91FC01A15C587003DF07A /* KBAlarmInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBAlarmInfoView.m; sourceTree = "<group>"; };
 		F9C91FC11A15C587003DF07A /* ReplayMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplayMapView.xib; sourceTree = "<group>"; };
-		F9C91FC21A15C587003DF07A /* TraceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceCell.h; sourceTree = "<group>"; };
-		F9C91FC31A15C587003DF07A /* TraceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceCell.m; sourceTree = "<group>"; };
 		F9C91FC41A15C587003DF07A /* TraceInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceInfoView.h; sourceTree = "<group>"; };
 		F9C91FC51A15C587003DF07A /* TraceInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceInfoView.m; sourceTree = "<group>"; };
 		F9C91FC61A15C587003DF07A /* TraceInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TraceInfoView.xib; sourceTree = "<group>"; };
@@ -2424,6 +2449,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A7CD22D1A1E515B00591D20 /* YJPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				3A7CD22E1A1E515B00591D20 /* DatePickerView.h */,
+				3A7CD22F1A1E515B00591D20 /* DatePickerView.m */,
+				3A7CD2301A1E515B00591D20 /* JudgeDate.h */,
+				3A7CD2311A1E515B00591D20 /* JudgeDate.m */,
+				3A7CD2321A1E515B00591D20 /* pickerviewhmbg.png */,
+				3A7CD2331A1E515B00591D20 /* pickerviewymdbg.png */,
+			);
+			path = YJPickerView;
+			sourceTree = "<group>";
+		};
 		6E16647019ECD1270081EB4C /* Friends */ = {
 			isa = PBXGroup;
 			children = (
@@ -2478,10 +2516,8 @@
 		87A927DD1A1A32410059C5E2 /* shareLocation */ = {
 			isa = PBXGroup;
 			children = (
-				87A927DA1A1A322B0059C5E2 /* shareLocationBaiduViewController.h */,
-				87A927DB1A1A322B0059C5E2 /* shareLocationBaiduViewController.m */,
-				87A927DE1A1A32710059C5E2 /* shareLocationGaodeViewController.h */,
-				87A927DF1A1A32710059C5E2 /* shareLocationGaodeViewController.m */,
+				87A927E51A1B1AAC0059C5E2 /* ShareLocationViewController.h */,
+				87A927E61A1B1AAC0059C5E2 /* ShareLocationViewController.m */,
 			);
 			name = shareLocation;
 			sourceTree = "<group>";
@@ -3889,6 +3925,8 @@
 		F9C91F641A15C576003DF07A /* MapRelated */ = {
 			isa = PBXGroup;
 			children = (
+				87AB511B1A2087F400661EF0 /* CCReplayGaoDeAnnotationView.h */,
+				87AB511C1A20880000661EF0 /* CCReplayGaoDeAnnotationView.m */,
 				F9C91F651A15C576003DF07A /* CCBaseRelation.h */,
 				F9C91F661A15C576003DF07A /* CCBaseRelation.m */,
 				F9C91F671A15C576003DF07A /* CCDevice.h */,
@@ -3955,10 +3993,13 @@
 				F9C91FA71A15C587003DF07A /* DeviceListViewController.m */,
 				F9C91FA81A15C587003DF07A /* MainViewController.h */,
 				F9C91FA91A15C587003DF07A /* MainViewController.mm */,
-				F9C91FAA1A15C587003DF07A /* TraceListViewController.h */,
-				F9C91FAB1A15C587003DF07A /* TraceListViewController.m */,
+				3A7CD1F81A1E29E000591D20 /* TraceListViewController.h */,
+				3A7CD1F91A1E29E000591D20 /* TraceListViewController.m */,
+				3A7CD22D1A1E515B00591D20 /* YJPickerView */,
 				F9C91FAC1A15C587003DF07A /* TrackerReplayViewController.h */,
 				F9C91FAD1A15C587003DF07A /* TrackerReplayViewController.mm */,
+				87AB51181A20835700661EF0 /* GaoDeMap_TrackerReplayViewController.h */,
+				87AB51191A20836500661EF0 /* GaoDeMap_TrackerReplayViewController.mm */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3985,8 +4026,8 @@
 				F9C91FBF1A15C587003DF07A /* KBAlarmInfoView.h */,
 				F9C91FC01A15C587003DF07A /* KBAlarmInfoView.m */,
 				F9C91FC11A15C587003DF07A /* ReplayMapView.xib */,
-				F9C91FC21A15C587003DF07A /* TraceCell.h */,
-				F9C91FC31A15C587003DF07A /* TraceCell.m */,
+				3A063AFA1A1F90D1001ED8F6 /* TraceCell.h */,
+				3A063AFB1A1F90D1001ED8F6 /* TraceCell.m */,
 				F9C91FC41A15C587003DF07A /* TraceInfoView.h */,
 				F9C91FC51A15C587003DF07A /* TraceInfoView.m */,
 				F9C91FC61A15C587003DF07A /* TraceInfoView.xib */,
@@ -5510,6 +5551,12 @@
 		F9F3AE4619F63E5700E0A0F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3A063B011A205F37001ED8F6 /* sliderbg.png */,
+				3A063AFF1A203EC4001ED8F6 /* search2.png */,
+				3A063AFD1A203E88001ED8F6 /* delete.png */,
+				3ACF57941A203CC5001C2091 /* bgcolor.png */,
+				3ACF57961A203CC5001C2091 /* player.png */,
+				3ACF57971A203CC5001C2091 /* search.png */,
 				F9F3AE4719F63E5700E0A0F9 /* 轨迹01_03.png */,
 			);
 			path = images;
@@ -5890,6 +5937,7 @@
 				BCCE86CE1A11B0350014AF29 /* 056@2x.png in Resources */,
 				BCCE871E1A11B0350014AF29 /* 096@2x.png in Resources */,
 				F9F3AFA719F63E5800E0A0F9 /* 页面列表1_22.png in Resources */,
+				3ACF57991A203CC5001C2091 /* bgcolor.png in Resources */,
 				BCCE87171A11B0350014AF29 /* 093.png in Resources */,
 				F9F3AF1119F63E5800E0A0F9 /* 报警模块1_06.png in Resources */,
 				F9F3AF7719F63E5800E0A0F9 /* 好友申请1_08.png in Resources */,
@@ -6085,6 +6133,7 @@
 				F9F3AEE419F63E5800E0A0F9 /* 好友4_03.png in Resources */,
 				F9F3AFA519F63E5800E0A0F9 /* 页面列表1_12.png in Resources */,
 				F9F3AEC919F63E5800E0A0F9 /* 圈子位置2_03.png in Resources */,
+				3A063B021A205F37001ED8F6 /* sliderbg.png in Resources */,
 				F9F3AE8919F63E5800E0A0F9 /* 总1_07.png in Resources */,
 				BCCE86741A11B0350014AF29 /* 011.png in Resources */,
 				F9F3AF8219F63E5800E0A0F9 /* 登录1_14.png in Resources */,
@@ -6094,6 +6143,7 @@
 				F9F3AF2819F63E5800E0A0F9 /* 数据01_07.png in Resources */,
 				F9F3AF5C19F63E5800E0A0F9 /* 数据061_16.png in Resources */,
 				BCCE86AC1A11B0350014AF29 /* 039@2x.png in Resources */,
+				3ACF579C1A203CC5001C2091 /* search.png in Resources */,
 				F91A0E5319E7AACF009ADB44 /* lgblankspace@2x.png in Resources */,
 				F9F3AF3819F63E5800E0A0F9 /* 数据02_12.png in Resources */,
 				F9F3AF7319F63E5800E0A0F9 /* 注册完成_03.png in Resources */,
@@ -6114,6 +6164,7 @@
 				F91A0E4E19E7AACF009ADB44 /* xz.png in Resources */,
 				BCCE86CF1A11B0350014AF29 /* 057.png in Resources */,
 				BCCE86B61A11B0350014AF29 /* 044@2x.png in Resources */,
+				3A063B001A203EC4001ED8F6 /* search2.png in Resources */,
 				F91A0E8A19E7AACF009ADB44 /* black_tabbar.png in Resources */,
 				BCCE86731A11B0350014AF29 /* 010@2x.png in Resources */,
 				BCCE868B1A11B0350014AF29 /* 023.png in Resources */,
@@ -6167,6 +6218,7 @@
 				BCCE87261A11B0350014AF29 /* 100@2x.png in Resources */,
 				F9748CF919EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png in Resources */,
 				F9F3AFC719F63E5800E0A0F9 /* 设置04创建围栏1_24.png in Resources */,
+				3ACF579B1A203CC5001C2091 /* player.png in Resources */,
 				F91A0E4319E7AACF009ADB44 /* roundLoadingBg.png in Resources */,
 				BCCE86EB1A11B0350014AF29 /* 071.png in Resources */,
 				F9F3AF2D19F63E5800E0A0F9 /* 数据01_22.png in Resources */,
@@ -6188,6 +6240,7 @@
 				F9F3AF8719F63E5800E0A0F9 /* 登录_15.png in Resources */,
 				BCCE87201A11B0350014AF29 /* 097@2x.png in Resources */,
 				F9F3AF8019F63E5800E0A0F9 /* bg.png in Resources */,
+				3A063AFE1A203E88001ED8F6 /* delete.png in Resources */,
 				F91A0E7719E7AACF009ADB44 /* appItemNormal.png in Resources */,
 				F9F3AFE619F63E5800E0A0F9 /* 轨迹06_10.png in Resources */,
 				F9F3AFAE19F63E5800E0A0F9 /* 页面列表31_17.png in Resources */,
@@ -6247,6 +6300,7 @@
 				F91A0E7E19E7AACF009ADB44 /* image1.png in Resources */,
 				BCCE86681A11B0350014AF29 /* 005.png in Resources */,
 				F9F3AF3719F63E5800E0A0F9 /* 数据02_10.png in Resources */,
+				3A7CD2371A1E515B00591D20 /* pickerviewymdbg.png in Resources */,
 				F92DBDB719ED5C1900BBE573 /* pjsd.png in Resources */,
 				F9F3AEFA19F63E5800E0A0F9 /* 分享个人设置_23.png in Resources */,
 				F91A0E6119E7AACF009ADB44 /* clearNavItemNormal.png in Resources */,
@@ -6456,6 +6510,7 @@
 				BCCE870C1A11B0350014AF29 /* 087@2x.png in Resources */,
 				F91A0E7819E7AACF009ADB44 /* appItemSelected.png in Resources */,
 				F9C91FD51A15C587003DF07A /* DeviceTableHeadView.xib in Resources */,
+				3A7CD2361A1E515B00591D20 /* pickerviewhmbg.png in Resources */,
 				F9F3AF2219F63E5800E0A0F9 /* 报警模块5_07.png in Resources */,
 				F9F3AF6819F63E5800E0A0F9 /* 数据071_25.png in Resources */,
 				BCCE86A81A11B0350014AF29 /* 037@2x.png in Resources */,
@@ -6669,6 +6724,10 @@
 				BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */,
 				F99246701A048D5500599E74 /* PNLineChartDataItem.m in Sources */,
 				BC6ED3E01A0750220037F1D1 /* FriendListView.m in Sources */,
+				87AB511D1A20880000661EF0 /* CCReplayGaoDeAnnotationView.m in Sources */,
+				87AB511A1A20836500661EF0 /* GaoDeMap_TrackerReplayViewController.mm in Sources */,
+				3A7CD2351A1E515B00591D20 /* JudgeDate.m in Sources */,
+				87A927E71A1B1AAC0059C5E2 /* ShareLocationViewController.m in Sources */,
 				F9C91FDB1A15C587003DF07A /* TraceInfoView.m in Sources */,
 				BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */,
 				F9E24F6619ED725900D83FEF /* PinyinHelper.m in Sources */,
@@ -6679,20 +6738,19 @@
 				F992464A1A048C5400599E74 /* UIScrollView+Extension.m in Sources */,
 				F9E24F6319ED725900D83FEF /* NSString+PinYin4Cocoa.m in Sources */,
 				F9E24F7619ED729700D83FEF /* DAContextMenuTableViewController.m in Sources */,
-				87A927DC1A1A322B0059C5E2 /* shareLocationBaiduViewController.m in Sources */,
 				BC59836D19ECCF1100DAC76A /* CircleSettingViewController.m in Sources */,
 				F9C91F971A15C576003DF07A /* NYSliderPopover.m in Sources */,
 				F92DBD8619ED3FAE00BBE573 /* KBDevicesStatus.m in Sources */,
 				F91C0C1019EF766200F4F8CE /* CreateCircleBottomView.m in Sources */,
 				BCB42E2A19F1425B00A141C3 /* FMDatabasePool.m in Sources */,
 				BC6ED3E31A0750430037F1D1 /* FriendListCell.m in Sources */,
+				3A063AFC1A1F90D1001ED8F6 /* TraceCell.m in Sources */,
 				F992464C1A048C5400599E74 /* UIView+Extension.m in Sources */,
 				F9C91F991A15C576003DF07A /* ZWL_MapUtils.m in Sources */,
 				F9E24F7519ED729700D83FEF /* DAContextMenuCell.m in Sources */,
 				BC71E6DD19F9538C00692533 /* CircledeleteFriendCell.m in Sources */,
 				BC59837419ECE71800DAC76A /* CircleCell.m in Sources */,
 				F9E24F6219ED725900D83FEF /* HanyuPinyinOutputFormat.m in Sources */,
-				F9C91FCC1A15C587003DF07A /* TraceListViewController.m in Sources */,
 				F97410F319EC385800E12633 /* ImagePickerTool.m in Sources */,
 				F9C91F931A15C576003DF07A /* CSLinearLayoutView.m in Sources */,
 				F91A0D7B19E78E0A009ADB44 /* Reachability.m in Sources */,
@@ -6702,6 +6760,7 @@
 				F97410DF19EC322000E12633 /* BoundEquipmentDetailController.m in Sources */,
 				F9A262A91A033B7000909E75 /* UIView+WLTool.m in Sources */,
 				F97410E319EC322000E12633 /* HeaderImageSelecterController.m in Sources */,
+				3A7CD2341A1E515B00591D20 /* DatePickerView.m in Sources */,
 				F9C91FC71A15C587003DF07A /* AlarmDetailViewController.m in Sources */,
 				6E16647B19ECD4F90081EB4C /* AddFriendViewController.m in Sources */,
 				F975FE5F19EE44DA00D13D86 /* OverLayView.m in Sources */,
@@ -6723,10 +6782,9 @@
 				F9C91F941A15C576003DF07A /* HexColor.m in Sources */,
 				F9C91FD81A15C587003DF07A /* KBAlarmInfoView.m in Sources */,
 				F9C91F8F1A15C576003DF07A /* CCFence.m in Sources */,
+				3A7CD1FA1A1E29E000591D20 /* TraceListViewController.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				F99246731A048D5500599E74 /* UICountingLabel.m in Sources */,
-				87A927E01A1A32710059C5E2 /* shareLocationGaodeViewController.m in Sources */,
-				F9C91FDA1A15C587003DF07A /* TraceCell.m in Sources */,
 				F99E76261A00D3A8002FCB1F /* PetSettingViewController.m in Sources */,
 				F9C91FD31A15C587003DF07A /* DevicesCell.m in Sources */,
 				F992466F1A048D5500599E74 /* PNLineChartData.m in Sources */,
@@ -6909,8 +6967,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -6926,9 +6984,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -6949,8 +7007,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -6960,8 +7018,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -6974,8 +7032,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -6986,7 +7044,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/libs/Release-iphonesimulator",
@@ -7038,7 +7096,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eace7f5c-3c8d-4a99-ad4e-d5ae988cfc0b";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -7051,8 +7109,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: jiang zhilei (QT782K6VC2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jiang zhilei (QT782K6VC2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7063,7 +7121,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/libs/Release-iphonesimulator",
@@ -7115,7 +7173,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eace7f5c-3c8d-4a99-ad4e-d5ae988cfc0b";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

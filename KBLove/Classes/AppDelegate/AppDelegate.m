@@ -49,10 +49,10 @@
     //    [[UIView appearance]setBackgroun dColor:SYSTEM_COLOR];
 //    [[UILabel appearance]setTextColor:[UIColor whiteColor]];
     UIStoryboard *stb = [UIStoryboard storyboardWithName:@"Regist_Login_Storyboard" bundle:nil];
-//    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+//    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"MainNavigationViewController"];
     UIViewController *vc = [stb instantiateInitialViewController];
-    //    UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    //    UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"AlarmListViewController"];
+//        UIStoryboard *stb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//        UIViewController *vc = [stb instantiateViewControllerWithIdentifier:@"AlarmListViewController"];
     //    [self presentViewController:vc animated:YES completion:^{
     //
     //    }];

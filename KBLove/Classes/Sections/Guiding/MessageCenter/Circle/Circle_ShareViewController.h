@@ -11,4 +11,5 @@
 typedef void (^SharePositionBlock)(KBPositionInfo *pos);
 @interface Circle_ShareViewController : CircleRootViewController
 - (void)setBlock:(SharePositionBlock)block;
+@property (nonatomic,copy) NSMutableDictionary *locationDic;
 @end

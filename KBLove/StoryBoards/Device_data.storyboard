@@ -24,10 +24,6 @@
         <scene sceneID="8TB-qE-JQ7">
             <objects>
                 <viewController storyboardIdentifier="CarDataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DaW-go-Rhr" userLabel="数据 - 小小酥" customClass="CarDataViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NWG-7W-k5C"/>
-                        <viewControllerLayoutGuide type="bottom" id="RTT-IA-rOi"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I0g-HH-w0V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,10 +131,6 @@
         <scene sceneID="pNr-NG-Lqf">
             <objects>
                 <viewController id="38c-Cs-7xZ" userLabel="View Controller-宠物" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zZl-cD-uXv"/>
-                        <viewControllerLayoutGuide type="bottom" id="hiS-TB-bI1"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9LJ-zC-uEl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,10 +187,6 @@
         <scene sceneID="7DK-eC-5kR">
             <objects>
                 <viewController id="xC7-Do-9HA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5cY-T2-5Uz"/>
-                        <viewControllerLayoutGuide type="bottom" id="jaU-0f-eEG"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bL6-Sv-Jdf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,10 +525,6 @@
         <scene sceneID="1Gk-eF-1FI">
             <objects>
                 <viewController id="Dkv-zh-ogV" userLabel="行驶情况 - 小小酥" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pMS-Kd-koR"/>
-                        <viewControllerLayoutGuide type="bottom" id="gno-HC-F7M"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="u0F-Dn-sqs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -895,10 +879,6 @@
         <scene sceneID="C7c-Ay-mCr">
             <objects>
                 <viewController title="详情" id="E3Q-F0-pTr" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HDN-4h-XSM"/>
-                        <viewControllerLayoutGuide type="bottom" id="2QQ-za-43s"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9JT-Sk-T0k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

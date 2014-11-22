@@ -68,6 +68,9 @@
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="2By-0U-xGz" kind="push" id="e9c-8k-8ER"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改资料" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o41-hR-J6Y">
                                         <rect key="frame" x="20" y="11" width="68" height="21"/>
@@ -139,9 +142,6 @@
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="7FJ-uT-iCA" kind="push" id="DY8-Jw-hLC"/>
-                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" id="ePp-u4-6ZR">
                                         <rect key="frame" x="256" y="49" width="9" height="22"/>
@@ -274,6 +274,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypf-mX-cbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1128" y="-719"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gqg-5D-pkt">
+            <objects>
+                <viewController id="2By-0U-xGz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yEx-Vp-wnb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GqR-pn-xvR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oz3-xh-G9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="-810"/>
         </scene>
         <!--个人资料-->
         <scene sceneID="29g-Wi-gxQ">
@@ -610,7 +625,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xN5-2h-nrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-656" y="-47"/>
+            <point key="canvasLocation" x="-722" y="116"/>
         </scene>
         <!--设置-->
         <scene sceneID="b3t-Qb-aGB">
@@ -871,7 +886,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaN-2q-eTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495" y="719"/>
+            <point key="canvasLocation" x="233" y="713"/>
         </scene>
         <!--密码修改-->
         <scene sceneID="StA-6g-cEz">
@@ -1146,7 +1161,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5x-vI-TIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1120" y="-40"/>
+            <point key="canvasLocation" x="-1152" y="116"/>
         </scene>
         <!--绑定邮箱-->
         <scene sceneID="9wc-Ma-S7F">
