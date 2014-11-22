@@ -29,7 +29,7 @@ static KBDeviceManager *sharedManager = nil;
                              @"device_sn":device_sn,
                              @"token":token
                              };
-    WLLog(@"开始获取设备信息:%@",device_sn);
+    WLLog(@" %@开始获取设备信息:%@",Url_GetDeviceInfo,device_sn);
     [[KBHttpRequestTool sharedInstance]request:Url_GetDeviceInfo requestType:KBHttpRequestTypePost params:params cacheType:WLHttpCacheTypeNO overBlock:^(BOOL IsSuccess, id result) {
         if (IsSuccess) {
             WLLog(@"设备获取信息网络成功");

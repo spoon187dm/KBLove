@@ -30,7 +30,7 @@ static LoginRequest *login = nil;
     
     AFHTTPRequestOperationManager * manager = [[AFHTTPRequestOperationManager alloc]init];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", nil];
-    
+
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError * error = nil;
         id object = [NSJSONSerialization JSONObjectWithData:operation.responseData options:NSJSONReadingMutableContainers error:&error];
@@ -87,7 +87,7 @@ static LoginRequest *login = nil;
     //拼接时间后加密
     NSString * lastMD5 = [addTime MD5Hash];
     //得到url
-    NSString * url = [NSString stringWithFormat:LOGIN_URL,userName, lastMD5, [self TimeJab], 3];
+    NSString * url = [NSString stringWithFormat:LOGIN_URL,userName, lastMD5, [self TimeJab], 2003];
     //NSLog(@"pwd:%@",lastMD5);
     NSLog(@"%@",url);
     return url;

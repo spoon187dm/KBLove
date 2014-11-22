@@ -42,6 +42,7 @@
     // Do any additional setup after loading the view.
 #pragma mark -
 #pragma mark 获取设备信息
+    
     [KBDeviceManager getDeviceInfo:_device.sn finishBlock:^(BOOL isSuccess, id result) {
         if (isSuccess) {
             _device = result;
@@ -49,14 +50,16 @@
     }];
 
 #pragma mark 获取设备状态
+    NSLog(@"device_sn = %@", _device.sn);
     [KBDeviceManager getDeviceStatus:_device.sn finishBlock:^(BOOL isSuccess, id result) {
         if (isSuccess) {
             _deviceStatus = result;
         }
     }];
-    
+
     [self mapViewLoad];
 }
+
 -(void)mapViewLoad
 {
     UIView *blank=[self.view viewWithTag:123];

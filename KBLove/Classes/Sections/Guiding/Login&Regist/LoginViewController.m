@@ -29,8 +29,8 @@
     _isRemBtnPressed = NO;//默认为no
     
     
-    _userNameTF.clearButtonMode=UITextFieldViewModeAlways;
-    _passWordTF.clearButtonMode=UITextFieldViewModeAlways;
+    _userNameTF.clearButtonMode = UITextFieldViewModeAlways;
+    _passWordTF.clearButtonMode = UITextFieldViewModeAlways;
     
     //判断是否记录密码
     _userInfo = [KBUserInfo sharedInfo];

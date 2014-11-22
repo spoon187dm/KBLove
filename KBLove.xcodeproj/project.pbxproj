@@ -356,6 +356,7 @@
 		DA3AE1011A1ADD6400DF0968 /* telregisterbtnNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3AE0FA1A1ADD6400DF0968 /* telregisterbtnNormal@2x.png */; };
 		DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */; };
 		DA3AE10B1A1B3AF900DF0968 /* IconChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */; };
+		DA4247621A1F1F42005A3EB3 /* KBStatisticsNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4247611A1F1F42005A3EB3 /* KBStatisticsNetTool.m */; };
 		DA6A5E501A1D9BBC00357BAD /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6A5E4F1A1D9BBC00357BAD /* ForgetPasswordViewController.m */; };
 		DAA320631A1DE2D00010E1C6 /* TTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA320621A1DE2D00010E1C6 /* TTAlertView.m */; };
 		DAA47FB81A1C8D48004ADC26 /* InfoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA47FB71A1C8D48004ADC26 /* InfoChooseViewController.m */; };
@@ -1568,6 +1569,8 @@
 		DA3AE1031A1AFA9500DF0968 /* RegisterAffirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAffirmViewController.m; sourceTree = "<group>"; };
 		DA3AE1091A1B3AF900DF0968 /* IconChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconChooseViewController.h; sourceTree = "<group>"; };
 		DA3AE10A1A1B3AF900DF0968 /* IconChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconChooseViewController.m; sourceTree = "<group>"; };
+		DA4247601A1F1F42005A3EB3 /* KBStatisticsNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBStatisticsNetTool.h; sourceTree = "<group>"; };
+		DA4247611A1F1F42005A3EB3 /* KBStatisticsNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBStatisticsNetTool.m; sourceTree = "<group>"; };
 		DA6A5E4E1A1D9BBC00357BAD /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		DA6A5E4F1A1D9BBC00357BAD /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		DA82423C1A1A04AC00F72CDD /* xiexufeng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xiexufeng.h; sourceTree = "<group>"; };
@@ -3197,6 +3200,15 @@
 			name = Choose;
 			sourceTree = "<group>";
 		};
+		DA42475F1A1F1E83005A3EB3 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				DA4247601A1F1F42005A3EB3 /* KBStatisticsNetTool.h */,
+				DA4247611A1F1F42005A3EB3 /* KBStatisticsNetTool.m */,
+			);
+			name = NetworkTool;
+			sourceTree = "<group>";
+		};
 		DADA02A11A1CE8C3002B31BC /* XxfView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3737,7 +3749,8 @@
 				F974109619EC2EFA00E12633 /* LoginRequest.h */,
 				F974109719EC2EFA00E12633 /* LoginRequest.m */,
 			);
-			path = Helpers;
+			name = Helpers;
+			path = ../Helpers;
 			sourceTree = "<group>";
 		};
 		F974108119EC280200E12633 /* Macro */ = {
@@ -3755,6 +3768,7 @@
 		F974108219EC280200E12633 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F974108019EC280200E12633 /* Helpers */,
 				F97410EB19EC34CA00E12633 /* KBUserManager.h */,
 				F97410EC19EC34CA00E12633 /* KBUserManager.m */,
 				F9A3BBCF1A01DA4400C2461F /* KBDeviceManager.h */,
@@ -3999,7 +4013,6 @@
 				F974107E19EC280200E12633 /* AppDelegate */,
 				F974108119EC280200E12633 /* Macro */,
 				F974107F19EC280200E12633 /* General */,
-				F974108019EC280200E12633 /* Helpers */,
 				F974108219EC280200E12633 /* Models */,
 				F974108319EC280200E12633 /* Sections */,
 				F9E24F4F19ED725900D83FEF /* Vendors */,
@@ -4142,6 +4155,7 @@
 		F9C91F9E1A15C587003DF07A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DA42475F1A1F1E83005A3EB3 /* NetworkTool */,
 				F9C91F9F1A15C587003DF07A /* Controllers */,
 				F9C91FAE1A15C587003DF07A /* Views */,
 			);
@@ -7008,6 +7022,7 @@
 				BCE757F81A1DEB9D001539DD /* NSDateComponents+AllComponents.m in Sources */,
 				F90F6F0B19F563E400671113 /* CommonSettingViewController.m in Sources */,
 				F90F6F0919F563E400671113 /* AccountManagerViewController.m in Sources */,
+				DA4247621A1F1F42005A3EB3 /* KBStatisticsNetTool.m in Sources */,
 				F9E24F6519ED725900D83FEF /* PinYinForObjc.m in Sources */,
 				F911505919EB70FE004F679A /* QRCodeGenerator.m in Sources */,
 				F911505619EB70ED004F679A /* QRCodeScanViewController.m in Sources */,
