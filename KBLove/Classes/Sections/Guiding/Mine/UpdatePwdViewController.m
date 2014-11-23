@@ -86,11 +86,11 @@
     //得到用户信息
     KBUserInfo *userInfo = [KBUserInfo sharedInfo];
     //对密码进行加密
-    NSString *twoEncrypt = [[password MD5Hash] MD5Hash];
+    NSString *twoEncrypt = [password MD5Hash];
     //和时间进行拼接
 //    NSString *timeEncrypt = [NSString stringWithFormat:@"%@",twoEncrypt];
     NSString *getPwdStr = [[[KBUserInfo sharedInfo].passWord MD5Hash] MD5Hash];
-    NSString *oldPwd = [NSString stringWithFormat:@"%@%@",getPwdStr,[KBUserInfo sharedInfo].time];
+    NSString *oldPwd = [NSString stringWithFormat:@"%@%@",getPwdStr,[self getTime]];
     NSString *oldPass = [oldPwd MD5Hash];
     
     NSString * url = [ALTER_PASSWORD_URL,userInfo.user_id,oldPass,[self getTime],twoEncrypt,[KBUserInfo sharedInfo].token];

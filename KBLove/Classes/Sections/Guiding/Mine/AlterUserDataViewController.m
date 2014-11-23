@@ -67,6 +67,7 @@
     [UIView animateWithDuration:0.5f animations:^{
        _birthdayPicker.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - _birthdayPicker.bounds.size.height, _birthdayPicker.bounds.size.width, _birthdayPicker.bounds.size.height);
         _alertBirthdayBtn.frame = CGRectMake(_alertBirthdayBtn.frame.origin.x, [UIScreen mainScreen].bounds.size.height - _birthdayPicker.bounds.size.height - _alertBirthdayBtn.bounds.size.height, _alertBirthdayBtn.bounds.size.width, _alertBirthdayBtn.bounds.size.height);
+        self.sexView.hidden = YES;
     }];
 }
 
@@ -89,6 +90,7 @@
     [UIView animateWithDuration:0.5f animations:^{
         _birthdayPicker.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height + _alertBirthdayBtn.bounds.size.height, _birthdayPicker.bounds.size.width, _birthdayPicker.bounds.size.height);
         _alertBirthdayBtn.frame = CGRectMake(_alertBirthdayBtn.frame.origin.x, [UIScreen mainScreen].bounds.size.height, _alertBirthdayBtn.bounds.size.width, _alertBirthdayBtn.bounds.size.height);
+        self.sexView.hidden = NO;
     }];
 }
 
@@ -99,5 +101,11 @@
     } else if (buttonIndex == 1) {
         [_sexBtn setTitle:@"女" forState:UIControlStateNormal];    
     }
+}
+
+#pragma mark 收键盘
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 @end

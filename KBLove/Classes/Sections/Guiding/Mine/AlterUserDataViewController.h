@@ -22,6 +22,8 @@
 //确定生日选择
 @property (weak, nonatomic) IBOutlet UIButton *alertBirthdayBtn;
 
+@property (weak, nonatomic) IBOutlet UIView *sexView;
+
 
 //头像的点击事件
 - (IBAction)headPortraitBtnClicked:(id)sender;
