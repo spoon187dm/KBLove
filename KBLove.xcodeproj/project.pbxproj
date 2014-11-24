@@ -57,6 +57,8 @@
 		BC5A136419F759CE00DDD36C /* Bullue.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136319F759CE00DDD36C /* Bullue.png */; };
 		BC5A136819F7644900DDD36C /* Circle_ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */; };
 		BC5A136B19F7D1BE00DDD36C /* Circle_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5A136A19F7D1BE00DDD36C /* Circle_setting.png */; };
+		BC5C42481A22C16C005DDC54 /* PetAndPersonDataVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C42471A22C16C005DDC54 /* PetAndPersonDataVIew.m */; };
+		BC5C424A1A22C180005DDC54 /* PetAndPersonDataVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5C42491A22C180005DDC54 /* PetAndPersonDataVIew.xib */; };
 		BC5D8C2419F8B1D7005AEC7C /* DXSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */; };
 		BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5F373B1A025AE20088D0AB /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BC5F37401A025BC30088D0AB /* KBScoketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5F373F1A025BC30088D0AB /* KBScoketManager.m */; };
@@ -1152,6 +1154,10 @@
 		BC5A136519F7644900DDD36C /* Circle_ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle_ShareViewController.h; sourceTree = "<group>"; };
 		BC5A136619F7644900DDD36C /* Circle_ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle_ShareViewController.m; sourceTree = "<group>"; };
 		BC5A136A19F7D1BE00DDD36C /* Circle_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle_setting.png; sourceTree = "<group>"; };
+		BC5C42451A22BD61005DDC54 /* wanglei.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wanglei.h; sourceTree = "<group>"; };
+		BC5C42461A22C16C005DDC54 /* PetAndPersonDataVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetAndPersonDataVIew.h; sourceTree = "<group>"; };
+		BC5C42471A22C16C005DDC54 /* PetAndPersonDataVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetAndPersonDataVIew.m; sourceTree = "<group>"; };
+		BC5C42491A22C180005DDC54 /* PetAndPersonDataVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetAndPersonDataVIew.xib; sourceTree = "<group>"; };
 		BC5D8C2219F8B1D7005AEC7C /* DXSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXSwitch.h; path = ../../Sections/Guiding/MessageCenter/Circle/DXSwitch.h; sourceTree = "<group>"; };
 		BC5D8C2319F8B1D7005AEC7C /* DXSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXSwitch.m; path = ../../Sections/Guiding/MessageCenter/Circle/DXSwitch.m; sourceTree = "<group>"; };
 		BC5F373A1A025AE20088D0AB /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
@@ -2616,6 +2622,7 @@
 				BC29C94C1A1B4350009C7A92 /* CarDataDetailViewController.m */,
 				BC29C94E1A1B43DA009C7A92 /* CarOBDViewController.h */,
 				BC29C94F1A1B43DA009C7A92 /* CarOBDViewController.m */,
+				F9C91FA51A15C587003DF07A /* DeviceDetailViewController.m */,
 				BC29C9511A1B551D009C7A92 /* PetAndPersonDataViewController.h */,
 				BC29C9521A1B551D009C7A92 /* PetAndPersonDataViewController.m */,
 			);
@@ -3897,6 +3904,7 @@
 				F974109519EC2E8900E12633 /* wulei.h */,
 				BC59833319ECB3E600DAC76A /* DXLog.h */,
 				DA82423C1A1A04AC00F72CDD /* xiexufeng.h */,
+				BC5C42451A22BD61005DDC54 /* wanglei.h */,
 			);
 			path = WorkLog;
 			sourceTree = "<group>";
@@ -4157,7 +4165,6 @@
 				F9C91FA21A15C587003DF07A /* AlarmListViewController.h */,
 				F9C91FA31A15C587003DF07A /* AlarmListViewController.m */,
 				F9C91FA41A15C587003DF07A /* DeviceDetailViewController.h */,
-				F9C91FA51A15C587003DF07A /* DeviceDetailViewController.m */,
 				F9C91FA61A15C587003DF07A /* DeviceListViewController.h */,
 				F9C91FA71A15C587003DF07A /* DeviceListViewController.m */,
 				F9C91FA81A15C587003DF07A /* MainViewController.h */,
@@ -4201,6 +4208,9 @@
 				BCC936CB1A1C940F00CAFCE6 /* WLPieView.m */,
 				BCC936D01A1C9A2500CAFCE6 /* WLStartView.h */,
 				BCC936D11A1C9A2500CAFCE6 /* WLStartView.m */,
+				BC5C42461A22C16C005DDC54 /* PetAndPersonDataVIew.h */,
+				BC5C42471A22C16C005DDC54 /* PetAndPersonDataVIew.m */,
+				BC5C42491A22C180005DDC54 /* PetAndPersonDataVIew.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -6053,6 +6063,7 @@
 				BCCE86B11A11B0350014AF29 /* 042.png in Resources */,
 				F9F3AEF419F63E5800E0A0F9 /* 个人资料_23.png in Resources */,
 				BCCE87071A11B0350014AF29 /* 085.png in Resources */,
+				BC5C424A1A22C180005DDC54 /* PetAndPersonDataVIew.xib in Resources */,
 				F9F3AF6119F63E5800E0A0F9 /* 数据06_27.png in Resources */,
 				F9F3AED719F63E5800E0A0F9 /* 好友1_13.png in Resources */,
 				BCCE87281A11B0350014AF29 /* 101@2x.png in Resources */,
@@ -7052,6 +7063,7 @@
 				BCB42E1919F1416200A141C3 /* KBDBManager.m in Sources */,
 				F97410E119EC322000E12633 /* BoundPersonInfoController.m in Sources */,
 				F99E76241A00D3A8002FCB1F /* PersonSettingViewController.m in Sources */,
+				BC5C42481A22C16C005DDC54 /* PetAndPersonDataVIew.m in Sources */,
 				F9972A5919ECC6D900EE0A6D /* UIAlertView+EasyTool.m in Sources */,
 				F9E24F7719ED729700D83FEF /* DAOverlayView.m in Sources */,
 				F9C91F9B1A15C576003DF07A /* ZWL_ReGeoRecodeTool.m in Sources */,
