@@ -298,7 +298,8 @@
     if (0 != self.isSelected) {
         return;
     }
-    
+//    TrackerReplayViewController *tracker = [[TrackerReplayViewController alloc] init];
+
     TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
     tracker.dataarray=_dataArray;
     tracker.selectIndex=indexPath.row;
@@ -308,6 +309,7 @@
     tracker.startTime=[part.endSpot.receive longLongValue];
     tracker.endTime=[part.startSpot.receive longLongValue];
     tracker.device_sn=self.device.sn;
+    
     [self.navigationController pushViewController:tracker animated:YES];
     
 }
