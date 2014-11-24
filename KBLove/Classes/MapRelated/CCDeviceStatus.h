@@ -31,7 +31,7 @@
 @property (nonatomic, assign) long long stamp;
 
 @property (nonatomic, assign) BMKGeoPoint point;
-//@property (nonatomic, assign) MAMapPoint gaode_point;
+@property (nonatomic, assign) MAMapPoint gaode_point;
 @property (nonatomic, assign) BOOL addressRequested;
 
 @property (nonatomic, strong) id<CCGeoHelperDelegate> geoDelegate;
