@@ -55,7 +55,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
-}
+}//Users/qianfeng/Desktop/凯步2.0说明.ppt
 
 #pragma mark - 登陆
 - (IBAction)loginBtnClicked:(id)sender {
@@ -67,7 +67,7 @@
         
         [[LoginRequest shareInstance] requestWithUserName:_userNameTF.text andPassWord:_passWordTF.text andLoginFinishedBlock:^{
             //成功后跳转
-            
+            //NSLog(@"%@",[KBUserInfo sharedInfo].passWord);
             [SVProgressHUD dismiss];
             [self gotoMainVireController];
             NSLog(@"登陆成功");

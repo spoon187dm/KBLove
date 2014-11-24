@@ -44,9 +44,7 @@
     [_WpieView addSubview:tpieView26];
     
     /** mmm */
-    WLPieView *tpieView2 = [[WLPieView alloc] initWithFrame:_MpieView.bounds andTotal:@(100) andCurrent:@(100) andClockwise:YES andShadow:NO andBgColor:[UIColor grayColor] andStart:-45.00f andEnd:-45.01f andredius:(_MpieView.bounds.size.width)/2-7 andWidth:17 andLabel:NO];
-    [tpieView2 strokeChart];
-    [_MpieView addSubview:tpieView2];
+   
     WLPieView *tpieView3 = [[WLPieView alloc] initWithFrame:_MpieView.bounds andTotal:@(100) andCurrent:@(89) andClockwise:YES andShadow:NO andBgColor:[UIColor redColor] andStart:-90.00f andEnd:-90.01f andredius:(_MpieView.bounds.size.width)/2-1 andWidth:2 andLabel:NO];
     [tpieView3 strokeChart];
     [_MpieView addSubview:tpieView3];

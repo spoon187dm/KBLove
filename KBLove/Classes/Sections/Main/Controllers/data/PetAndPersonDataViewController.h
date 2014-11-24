@@ -25,13 +25,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *todayExerciseLabel;
 //30天平均运动量
 @property (strong, nonatomic) IBOutlet UILabel *averageExerciseLabel;
-//饼状图的父视图
-@property (strong, nonatomic) IBOutlet UIView *pieView;
-//昨日运动量
-@property (strong, nonatomic) IBOutlet UILabel *yesterdayExerciseLabel;
-//折线图
-@property (strong, nonatomic) IBOutlet UIView *countPngView;
-//饼状图
-@property (strong, nonatomic) IBOutlet WLPieView *piePngView;
+//底部scrollView
+@property (strong, nonatomic) IBOutlet UIScrollView *petScrollVIew;
 
 @end

@@ -312,47 +312,13 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="G1x-8f-8qz">
-                                <rect key="frame" x="0.0" y="333" width="320" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.17254902420000001" green="0.53725492949999998" blue="0.7254902124" alpha="1" colorSpace="deviceRGB"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" id="zvW-47-qfN" userLabel="View-折线图">
-                                <rect key="frame" x="0.0" y="373" width="320" height="200"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="z3v-tl-qD0">
+                                <rect key="frame" x="0.0" y="170" width="320" height="398"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.062745098040000002" green="0.49803921569999998" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨日运动量:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SfC-on-yNn">
-                                <rect key="frame" x="16" y="343" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="930" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6PT-ZF-KqM">
-                                <rect key="frame" x="91" y="342" width="42" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zgY-5V-Ecx">
-                                <rect key="frame" x="264" y="341" width="42" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30天平均运动量:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z2j-tA-rdC">
-                                <rect key="frame" x="159" y="343" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4FI-4i-aaG">
-                                <rect key="frame" x="274" y="107" width="25" height="30"/>
+                                <rect key="frame" x="266" y="107" width="25" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="数据071_14.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -361,18 +327,6 @@
                                     <action selector="calendarButton:" destination="38c-Cs-7xZ" eventType="touchUpInside" id="PdK-6q-JFg"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="Uul-b1-QBd" userLabel="View-饼状图父试图">
-                                <rect key="frame" x="0.0" y="170" width="320" height="151"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" id="8ma-HN-YPu" userLabel="View-饼状图" customClass="WLPieView">
-                                        <rect key="frame" x="105" y="12" width="110" height="110"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -403,14 +357,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="averageExerciseLabel" destination="zgY-5V-Ecx" id="BKG-Vl-JE0"/>
+                        <outlet property="averageExerciseLabel" destination="fle-Ps-0Wa" id="y32-xy-Dat"/>
                         <outlet property="calendar" destination="4FI-4i-aaG" id="nlr-0i-yN2"/>
-                        <outlet property="countPngView" destination="zvW-47-qfN" id="a6G-eY-1rN"/>
                         <outlet property="iconImageVIew" destination="1gY-Jq-6qg" id="yFC-F0-pWH"/>
-                        <outlet property="piePngView" destination="8ma-HN-YPu" id="vEF-gE-R05"/>
-                        <outlet property="pieView" destination="Uul-b1-QBd" id="Uti-9A-oTr"/>
+                        <outlet property="petScrollVIew" destination="z3v-tl-qD0" id="LWO-Bf-AI4"/>
                         <outlet property="todayExerciseLabel" destination="pxe-az-9m1" id="CAy-Hl-QqE"/>
-                        <outlet property="yesterdayExerciseLabel" destination="6PT-ZF-KqM" id="hu5-Jg-xwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoM-i1-kPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -765,11 +716,11 @@
                                 <color key="backgroundColor" red="0.42352944609999998" green="0.71372550729999995" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="NOn-o4-xTD">
-                                <rect key="frame" x="164" y="401" width="121" height="30"/>
+                                <rect key="frame" x="165" y="401" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0g/s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rfo-eF-IVs">
-                                        <rect key="frame" x="5" y="0.0" width="110" height="30"/>
+                                        <rect key="frame" x="5" y="0.0" width="109" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -916,6 +867,12 @@
                                     <view contentMode="scaleToFill" id="dRw-ww-AuZ" userLabel="View-饼状图]">
                                         <rect key="frame" x="115" y="57" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="数据024_03.png" id="adb-NN-DdB">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="数据02_21.png" id="ZQa-nl-8PA">
@@ -1034,6 +991,12 @@
                                     <view contentMode="scaleToFill" id="Emg-pp-iYp" userLabel="View-饼状图]">
                                         <rect key="frame" x="115" y="57" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="数据024_03.png" id="Ljs-Sw-XpV">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="数据02_21.png" id="Rne-vW-g7K">
@@ -1166,6 +1129,12 @@
                                     <view contentMode="scaleToFill" id="FYL-kQ-SW8" userLabel="View-饼状图]">
                                         <rect key="frame" x="115" y="57" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="数据024_03.png" id="Exf-Qb-qSs">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="数据02_21.png" id="ejj-GP-CgM">
@@ -1426,6 +1395,7 @@
         <image name="数据01_29.png" width="139" height="139"/>
         <image name="数据01_30.png" width="139" height="139"/>
         <image name="数据01_31.png" width="139" height="139"/>
+        <image name="数据024_03.png" width="180" height="180"/>
         <image name="数据02_03.png" width="24" height="26"/>
         <image name="数据02_06.png" width="36" height="18"/>
         <image name="数据02_10.png" width="26" height="26"/>

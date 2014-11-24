@@ -1096,9 +1096,9 @@
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
 {
     
-//    CGRect bounds = [self bounds];
-//    bounds.origin.y += [self headerView].frame.size.height;
-//    bounds.size.height -= [self headerView].frame.size.height;
+    CGRect bounds = [self bounds];
+    bounds.origin.y += [self headerView].frame.size.height;
+    bounds.size.height -= [self headerView].frame.size.height;
     
     if(CGRectContainsPoint([self _rectForCellsForDisplayMode:_displayMode], point)){
         /* Highlight and select the appropriate cell */
