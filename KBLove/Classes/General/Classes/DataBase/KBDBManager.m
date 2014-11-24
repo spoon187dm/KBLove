@@ -159,8 +159,6 @@ static KBDBManager *manager;
 }
 -(void)insertDataWithModel:(id)obj
 {
-    
-    
         if ([obj isKindOfClass:[KBMessageInfo class]]) {
             KBMessageInfo *msgModel=(KBMessageInfo *)obj;
             if (![self isExistInDateBase:msgModel]) {

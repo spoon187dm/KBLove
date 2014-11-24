@@ -8,5 +8,6 @@
 
 #import "TableMenuViewController.h"
 @interface MessageViewController : TableMenuViewController
+- (IBAction)backClicked:(UIButton *)sender;
 
 @end

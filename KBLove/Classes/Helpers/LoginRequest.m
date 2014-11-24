@@ -86,6 +86,7 @@ static LoginRequest *login = nil;
     NSString * addTime = [NSString stringWithFormat:@"%@%@", twiceMD5, [self TimeJab]];
     //拼接时间后加密
     NSString * lastMD5 = [addTime MD5Hash];
+    NSLog(@"不加密：%@-------加密-------%@------时间-------%@",passwd,lastMD5,[self TimeJab]);
     //得到url
     NSString * url = [NSString stringWithFormat:LOGIN_URL,userName, lastMD5, [self TimeJab], 2003];
     //NSLog(@"pwd:%@",lastMD5);

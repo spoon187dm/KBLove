@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2a9-k0-BaU">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -130,7 +130,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MWE-Nd-TEm" kind="push" id="yk9-Du-DCO"/>
+                                            <segue destination="MWE-Nd-TEm" kind="push" id="YB4-eS-sem"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yHy-9k-uP1">
@@ -140,7 +140,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="7FJ-uT-iCA" kind="push" id="DY8-Jw-hLC"/>
+                                            <segue destination="7FJ-uT-iCA" kind="push" id="83J-ts-dUU"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" id="ePp-u4-6ZR">
@@ -154,7 +154,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="wrl-9n-ZUb" kind="push" id="XfD-B3-awV"/>
+                                            <segue destination="wrl-9n-ZUb" kind="push" id="EZL-ow-gJu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通用设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CHc-Kt-W4p">
@@ -204,7 +204,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tQJ-rX-bLW" kind="push" id="pm8-Ur-I6K"/>
+                                            <segue destination="tQJ-rX-bLW" kind="push" id="qhL-HT-WZK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pZy-7u-Grs">
@@ -299,13 +299,6 @@
                                         <rect key="frame" x="20" y="8" width="27" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="肥仔" textAlignment="right" minimumFontSize="17" id="hvo-Cm-t3j">
-                                        <rect key="frame" x="178" y="7" width="89" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bsW-In-gUi">
                                         <rect key="frame" x="55" y="10" width="36" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -313,6 +306,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="肥仔" textAlignment="right" minimumFontSize="17" id="hvo-Cm-t3j">
+                                        <rect key="frame" x="8" y="3" width="259" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -329,18 +329,17 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uSr-Bf-Lga">
-                                        <rect key="frame" x="55" y="10" width="34" height="21"/>
+                                        <rect key="frame" x="55" y="10" width="320" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U8k-OH-7c0">
-                                        <rect key="frame" x="194" y="6" width="90" height="30"/>
+                                    <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U8k-OH-7c0">
+                                        <rect key="frame" x="0.0" y="-1" width="287" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -400,7 +399,7 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" id="M9Q-xi-GWm">
-                                <rect key="frame" x="0.0" y="406" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="403" width="320" height="151"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="435208178.63512498">
                                     <!--2014-10-17 03:09:38 +0000-->
@@ -413,7 +412,7 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B6R-zX-x0z">
-                                <rect key="frame" x="207" y="368" width="91" height="30"/>
+                                <rect key="frame" x="234" y="365" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="确定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -460,16 +459,17 @@
                         <outlet property="headPortrait" destination="Wa2-41-5o9" id="dM6-4b-Zlg"/>
                         <outlet property="nickNameTextField" destination="hvo-Cm-t3j" id="0Xy-Dx-nPh"/>
                         <outlet property="sexBtn" destination="t5N-pg-Ik6" id="Hm9-yw-6kE"/>
+                        <outlet property="sexView" destination="giz-Q8-Sg1" id="vyd-5g-N4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipm-Ai-v3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1619" y="-47"/>
+            <point key="canvasLocation" x="-1928" y="-60"/>
         </scene>
         <!--消息提醒-->
         <scene sceneID="LQv-NI-sJA">
             <objects>
-                <tableViewController id="7FJ-uT-iCA" sceneMemberID="viewController">
+                <tableViewController id="7FJ-uT-iCA" customClass="MessageViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="LCw-V4-xt6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -604,18 +604,21 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="7FJ-uT-iCA" eventType="touchUpInside" id="p1Z-zE-Hgw"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xN5-2h-nrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-656" y="-47"/>
+            <point key="canvasLocation" x="-736" y="-52"/>
         </scene>
         <!--设置-->
         <scene sceneID="b3t-Qb-aGB">
             <objects>
-                <tableViewController storyboardIdentifier="CommonSettingViewController" id="MWE-Nd-TEm" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommonSettingViewController" id="MWE-Nd-TEm" customClass="UsualSettinViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="Ace-oI-PZH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -641,7 +644,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="pAX-1F-6Mr" kind="push" id="QgF-Ds-dS9"/>
+                                            <segue destination="pAX-1F-6Mr" kind="push" id="mQN-Nl-eH7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fgB-Uf-tom" style="IBUITableViewCellStyleDefault" id="56L-bk-Ahe">
@@ -661,7 +664,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hxG-4p-C7I" kind="push" id="SXO-ng-5E3"/>
+                                            <segue destination="hxG-4p-C7I" kind="push" id="pHu-pd-lx4"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -722,6 +725,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="MWE-Nd-TEm" eventType="touchUpInside" id="7L3-5S-7ay"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -733,7 +739,7 @@
         <!--意见反馈-->
         <scene sceneID="gZ9-lv-LCG">
             <objects>
-                <viewController id="tQJ-rX-bLW" sceneMemberID="viewController">
+                <viewController id="tQJ-rX-bLW" customClass="SugesstionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4o4-Vx-rmc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -772,6 +778,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="tQJ-rX-bLW" eventType="touchUpInside" id="P7E-m1-L6C"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -784,7 +793,7 @@
         <!--地图选择-->
         <scene sceneID="6Jl-tf-2OI">
             <objects>
-                <tableViewController id="pAX-1F-6Mr" sceneMemberID="viewController">
+                <tableViewController id="pAX-1F-6Mr" customClass="MapTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="cNm-Tp-f7r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -865,6 +874,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="pAX-1F-6Mr" eventType="touchUpInside" id="BS1-gD-ddC"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -876,7 +888,7 @@
         <!--密码修改-->
         <scene sceneID="StA-6g-cEz">
             <objects>
-                <viewController id="5OD-ag-eig" sceneMemberID="viewController">
+                <viewController id="5OD-ag-eig" customClass="UpdatePwdViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MI4-HG-F3h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -956,6 +968,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="5OD-ag-eig" eventType="touchUpInside" id="7XX-2Q-Is4"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="8gP-3M-pQO">
@@ -965,14 +980,23 @@
                                 <state key="normal" backgroundImage="tickoff.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ContainClicked:" destination="5OD-ag-eig" eventType="touchUpInside" id="qg3-S0-TT5"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ConfirmPassword" destination="tLc-G8-MRs" id="9f8-Wa-zNQ"/>
+                        <outlet property="YesItem" destination="8gP-3M-pQO" id="5eA-BK-XGA"/>
+                        <outlet property="newtext" destination="2HT-OB-dbx" id="YUB-Dt-llL"/>
+                        <outlet property="oldPassword" destination="N34-47-wdN" id="YYU-Fd-WbT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8v-ib-2l2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="713"/>
+            <point key="canvasLocation" x="-1807" y="713"/>
         </scene>
         <!--账号管理-->
         <scene sceneID="GI0-AA-CKD">
@@ -1011,7 +1035,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="sPV-qd-eV1" kind="push" id="qKY-Eg-NBi"/>
+                                            <segue destination="sPV-qd-eV1" kind="push" id="SAc-bA-8lJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PU2-FO-ULh" detailTextLabel="zsE-Lo-GjA" style="IBUITableViewCellStyleValue1" id="ty2-qF-zPM">
@@ -1062,7 +1086,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5OD-ag-eig" kind="push" id="ohL-2s-3sV"/>
+                                            <segue destination="5OD-ag-eig" kind="push" id="uXt-xq-lmA"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1151,7 +1175,7 @@
         <!--绑定邮箱-->
         <scene sceneID="9wc-Ma-S7F">
             <objects>
-                <viewController id="sPV-qd-eV1" sceneMemberID="viewController">
+                <viewController id="sPV-qd-eV1" customClass="BindEmailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lwl-pV-kgK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1201,6 +1225,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="sPV-qd-eV1" eventType="touchUpInside" id="WEG-ax-xxq"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Yc8-ea-sxK">
@@ -1216,12 +1243,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3g-Zn-t7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="713"/>
+            <point key="canvasLocation" x="-845" y="687"/>
         </scene>
         <!--语言选择-->
         <scene sceneID="AjM-V1-aVV">
             <objects>
-                <tableViewController id="hxG-4p-C7I" sceneMemberID="viewController">
+                <tableViewController id="hxG-4p-C7I" customClass="LanguageTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="sh6-O5-dyh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1285,6 +1312,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="hxG-4p-C7I" eventType="touchUpInside" id="QKO-PE-lVy"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1296,7 +1326,7 @@
         <!--隐私设置-->
         <scene sceneID="KTK-5L-j5a">
             <objects>
-                <tableViewController storyboardIdentifier="PrivacySettingViewController" id="wrl-9n-ZUb" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PrivacySettingViewController" id="wrl-9n-ZUb" customClass="PriteTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" id="NUF-8l-pu1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1385,6 +1415,9 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="wrl-9n-ZUb" eventType="touchUpInside" id="PSY-0a-6EB"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1396,7 +1429,7 @@
         <!--关于凯步-->
         <scene sceneID="4TO-80-2rb">
             <objects>
-                <tableViewController id="pdN-Nw-roz" sceneMemberID="viewController">
+                <tableViewController id="pdN-Nw-roz" customClass="AboutTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="iyd-Ez-5sS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1528,13 +1561,16 @@
                                 <state key="normal" backgroundImage="NVBar_arrow_left.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backClicked:" destination="pdN-Nw-roz" eventType="touchUpInside" id="ZPk-7h-U0f"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fx-el-aEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="-22"/>
+            <point key="canvasLocation" x="1043" y="-40"/>
         </scene>
     </scenes>
     <resources>
