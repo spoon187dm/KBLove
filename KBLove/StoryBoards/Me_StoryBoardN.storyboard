@@ -464,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipm-Ai-v3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1892" y="-69"/>
+            <point key="canvasLocation" x="-1928" y="-60"/>
         </scene>
         <!--消息提醒-->
         <scene sceneID="LQv-NI-sJA">
