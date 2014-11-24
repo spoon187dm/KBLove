@@ -31,6 +31,8 @@
 		87B32FF51A2313A100B9A8E9 /* pickerviewymdbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B32FF11A2313A100B9A8E9 /* pickerviewymdbg.png */; };
 		87B32FF91A2313F400B9A8E9 /* TrackSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */; };
 		87B32FFA1A2313F400B9A8E9 /* TrackSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */; };
+		87B32FFE1A23302600B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87B32FFD1A23302600B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.mm */; };
+		87B330011A23307E00B9A8E9 /* CCReplayGaoDeAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B330001A23307E00B9A8E9 /* CCReplayGaoDeAnnotationView.m */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
 		BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */; };
@@ -1138,6 +1140,10 @@
 		87B32FF61A2313F400B9A8E9 /* TrackSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackSearchViewController.h; sourceTree = "<group>"; };
 		87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackSearchViewController.m; sourceTree = "<group>"; };
 		87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackSearchViewController.xib; sourceTree = "<group>"; };
+		87B32FFC1A23301400B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWLGaoDeMap_TrackerReplayViewController.h; sourceTree = "<group>"; };
+		87B32FFD1A23302600B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZWLGaoDeMap_TrackerReplayViewController.mm; sourceTree = "<group>"; };
+		87B32FFF1A23306800B9A8E9 /* CCReplayGaoDeAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCReplayGaoDeAnnotationView.h; sourceTree = "<group>"; };
+		87B330001A23307E00B9A8E9 /* CCReplayGaoDeAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCReplayGaoDeAnnotationView.m; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
@@ -4261,6 +4267,8 @@
 				87B32FEB1A2313A100B9A8E9 /* YJPickerView */,
 				F9C91FAC1A15C587003DF07A /* TrackerReplayViewController.h */,
 				F9C91FAD1A15C587003DF07A /* TrackerReplayViewController.mm */,
+				87B32FFC1A23301400B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.h */,
+				87B32FFD1A23302600B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.mm */,
 				87B32FF61A2313F400B9A8E9 /* TrackSearchViewController.h */,
 				87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */,
 				87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */,
@@ -4271,6 +4279,8 @@
 		F9C91FAE1A15C587003DF07A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87B32FFF1A23306800B9A8E9 /* CCReplayGaoDeAnnotationView.h */,
+				87B330001A23307E00B9A8E9 /* CCReplayGaoDeAnnotationView.m */,
 				F9C91FAF1A15C587003DF07A /* AlarmCell.h */,
 				F9C91FB01A15C587003DF07A /* AlarmCell.m */,
 				F9C91FB11A15C587003DF07A /* BottomSelectView.h */,
@@ -7101,6 +7111,7 @@
 				BCE757F61A1DEB9D001539DD /* NSDate+Components.m in Sources */,
 				F97410E519EC322000E12633 /* RegisterViewController.m in Sources */,
 				F9C91FD41A15C587003DF07A /* DeviceTableHeadView.m in Sources */,
+				87B330011A23307E00B9A8E9 /* CCReplayGaoDeAnnotationView.m in Sources */,
 				F974110719EC389800E12633 /* UIViewController+NavigationItemSettingTool.m in Sources */,
 				BC6F5C501A0DCFE900C4201F /* MessageViewController.m in Sources */,
 				F992464B1A048C5400599E74 /* UIScrollView+TableRefresh.m in Sources */,
@@ -7146,6 +7157,7 @@
 				BCCE87311A11BCAB0014AF29 /* FaceView.m in Sources */,
 				F974110319EC389800E12633 /* NSString+WLTooll.m in Sources */,
 				BCE757FA1A1DEB9D001539DD /* CKCalendarCell.m in Sources */,
+				87B32FFE1A23302600B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.mm in Sources */,
 				F92DBD8319ECFDAA00BBE573 /* KBDevices.m in Sources */,
 				F99E76271A00D3A8002FCB1F /* SettingTableViewController.m in Sources */,
 				F9C91F951A15C576003DF07A /* MapUtils.m in Sources */,

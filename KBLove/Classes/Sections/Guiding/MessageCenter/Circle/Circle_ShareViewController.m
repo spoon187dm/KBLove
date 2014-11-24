@@ -9,6 +9,9 @@
 #import "Circle_ShareViewController.h"
 #import "PositionCell.h"
 #import "KBPositionInfo.h"
+#import "ZWL_MapViewTool.h"
+#import "ZWL_ReGeoRecodeTool.h"
+
 @interface Circle_ShareViewController ()
 {
     SharePositionBlock _sblock;
@@ -46,6 +49,20 @@
     _tableView.separatorColor=[UIColor whiteColor];
     [self.view addSubview:_tableView];
     _headerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 240)];
+    
+    
+    ZWL_MapViewTool *tool = [[ZWL_MapViewTool alloc]init];
+    NSString *lat = self.locationDic[@"latitudeNumber"];
+    NSString *lon = self.locationDic[@"longitudeNumber"];
+    NSString *title = self.locationDic[@"positionname"];
+    NSString *subtitle = self.locationDic[@"positionDes"];
+    [ tool addMapViewToViewController:_headerView frame:_headerView.frame location:CLLocationCoordinate2DMake([lat floatValue],[lon floatValue]) title:title subtitle:subtitle image:@""];
+    
+    [ZWL_ReGeoRecodeTool GaoDeMapViewReGeocodeWithCoordinate:CLLocationCoordinate2DMake([lat floatValue],[lon floatValue]) viewController:self response:^(NSMutableArray *resultArray) {
+        [_dataArray addObjectsFromArray:resultArray];
+        [_tableView reloadData];
+    }];
+
     UIImageView *imagv=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"圈子位置1_03"]];
     imagv.frame=_headerView.bounds;
     [_headerView addSubview:imagv];
