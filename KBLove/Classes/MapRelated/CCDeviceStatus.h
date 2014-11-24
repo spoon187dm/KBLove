@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 //#import "
 #import "BMapKit.h"
+#import <MAMapKit/MAMapKit.h>
 #import "CCJASONObject.h"
 #import "ZWL_GeoHelper.h"
-//#import <MAMapKit/MAMapKit.h>
 
 @interface CCDeviceStatus : NSObject<CCJASONObject, CCGeoHelperDelegate>
 
