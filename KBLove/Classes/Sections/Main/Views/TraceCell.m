@@ -2,7 +2,7 @@
 //  TraceCell.m
 //  KBLove
 //
-//  Created by block on 14/11/2.
+//  Created by Ming on 14-11-21.
 //  Copyright (c) 2014年 block. All rights reserved.
 //
 
@@ -10,76 +10,80 @@
 #import <UIImageView+AFNetworking.h>
 #import "TraceInfoView.h"
 #import "KBTracePart.h"
+#import "BMapKit.h"
+
 @implementation TraceCell
 
-- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    TraceInfoView *infoView;
+}
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    // Configure the view for the selected state
+}
+
+-(void)createImageView
+{
+    self.bottomImageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 65, kScreenWidth, 135)];
+    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    mapView.delegate = self;
+    mapView.scrollEnabled = NO;
+    [self.bottomImageview addSubview:mapView];
+    [self.contentView insertSubview:self.bottomImageview atIndex:0];
+}
+
+-(void)addLocusListViewSwipe
+{
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeClick:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [infoView.locusListView addGestureRecognizer:leftSwipe];
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeClick:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [infoView.locusListView addGestureRecognizer:rightSwipe];
+}
+
+-(void)swipeClick:(UISwipeGestureRecognizer *)swipe
+{
+    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+        [UIView animateWithDuration:0.3 animations:^{
+            infoView.locusListView.frame = CGRectMake(-160, 0, kScreenWidth, 65);
+            selectBlock(-1);
+        }];
+    } else if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+        [UIView animateWithDuration:0.3 animations:^{
+            infoView.locusListView.frame = CGRectMake(0, 0, kScreenWidth, 65);
+            selectBlock(1);
+        }];
     }
-    return self;
 }
 
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (!self) {
-        return nil;
-    }
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected{
-    [super setSelected:selected];
-}
-
-- (UIView *)ViewForCellContent{
+- (void)setUpViewWithModel:(KBTracePart *)part selectedBlock:(void (^)(BOOL))block{
     
-    TraceInfoView *infoView = [[[NSBundle mainBundle]loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
-    infoView.frame = self.bounds;
-    self.backgroundColor = [UIColor clearColor];
-    return infoView;
-}
-
-- (UIView *)menuViewForMenuCount:(NSInteger)count{
-    UIView *view = [[UIView alloc] init];
-    view.frame = CGRectMake(320 - 80*count, 0, 80, 100);
-    view.backgroundColor = [UIColor clearColor];
+    infoView = [[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
+    [self.contentView addSubview:infoView];
     
-    for (int i = 0; i < 2; i++) {
-        UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        menuBtn.tag = i;
-        [menuBtn addTarget:self action:@selector(menuBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        menuBtn.frame = CGRectMake(0, 50*i, 80, 50);
-        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:0] objectForKey:@"stateNormal"]]] forState:UIControlStateNormal];
-        [menuBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",[[_menuData objectAtIndex:0] objectForKey:@"stateHighLight"]]] forState:UIControlStateHighlighted];
-        [view addSubview:menuBtn];
-    }
+    [self addLocusListViewSwipe];
     
-    return view;
-}
-
-- (void)configWithData:(NSIndexPath *)indexPath menuData:(NSArray *)menuData cellFrame:(CGRect)cellFrame{
-    [super configWithData:indexPath menuData:menuData cellFrame:cellFrame];
-    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 100, kScreenWidth, 100)];
-    [imageview setBackgroundColor:[UIColor lightGrayColor]];
-    [self.contentView addSubview:imageview];
-    _bottomImageview = imageview;
-}
-
-- (void)setUpViewWithModel:(KBTracePart *)part{
-    TraceInfoView *view = (TraceInfoView *)self.cellView;
-    view.startPlaceLabel.text = part.startSpot.addr;
-    view.endPlaceLabel.text = part.endSpot.addr;
+    [self createImageView];
     
-    view.startTimeLabel.text = [NSString stringFromDateNumber:part.startTime];
-    view.endTimeLabel.text = [NSString stringFromDateNumber:part.endTime];
+    selectBlock = [block copy];
     
-    view.travelDistanceLabel.text = [NSString stringWithFormat:@"%@ km",part.distance];
-    float traveltravel = (-[part.endTime floatValue]+[part.startTime floatValue])/1000.0;
-    traveltravel /=60.0*60.0;
-    view.travelLastTimeLabel.text = [NSString stringWithFormat:@"%.1f 小时",traveltravel];
+    //        infoView.startPlaceLabel.text = part.startSpot.addr;
+    //        infoView.endPlaceLabel.text = part.endSpot.addr;
+    //
+    //        infoView.startTimeLabel.text = [NSString stringFromDateNumber:part.startTime];
+    //        infoView.endTimeLabel.text = [NSString stringFromDateNumber:part.endTime];
+    //
+    //        infoView.travelDistanceLabel.text = [NSString stringWithFormat:@"%@ km",part.distance];
+    //        float traveltravel = (-[part.endTime floatValue]+[part.startTime floatValue])/1000.0;
+    //        traveltravel /=60.0*60.0;
+    //        infoView.travelLastTimeLabel.text = [NSString stringWithFormat:@"%.1f 小时",traveltravel];
 }
 
 @end

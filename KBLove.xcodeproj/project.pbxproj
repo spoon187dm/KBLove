@@ -25,6 +25,12 @@
 		6EA2C01719ECBC060024E6A2 /* KBFriendInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C01619ECBC060024E6A2 /* KBFriendInfo.m */; };
 		6ECC038419ECFCC60008ACAD /* AddFriendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038319ECFCC60008ACAD /* AddFriendButton.m */; };
 		6ECC038719ED05030008ACAD /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC038619ED05030008ACAD /* SearchResultViewController.m */; };
+		87B32FF21A2313A100B9A8E9 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B32FED1A2313A100B9A8E9 /* DatePickerView.m */; };
+		87B32FF31A2313A100B9A8E9 /* JudgeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B32FEF1A2313A100B9A8E9 /* JudgeDate.m */; };
+		87B32FF41A2313A100B9A8E9 /* pickerviewhmbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B32FF01A2313A100B9A8E9 /* pickerviewhmbg.png */; };
+		87B32FF51A2313A100B9A8E9 /* pickerviewymdbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B32FF11A2313A100B9A8E9 /* pickerviewymdbg.png */; };
+		87B32FF91A2313F400B9A8E9 /* TrackSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */; };
+		87B32FFA1A2313F400B9A8E9 /* TrackSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */; };
 		BC0112ED19ED53DD0073EE48 /* CircleFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */; };
 		BC0112EE19ED53DD0073EE48 /* CircleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0112EC19ED53DD0073EE48 /* CircleFriendCell.xib */; };
 		BC09CD4B1A19C95B005F92F5 /* CarDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC09CD4A1A19C95B005F92F5 /* CarDataViewController.m */; };
@@ -1123,6 +1129,15 @@
 		6ECC038319ECFCC60008ACAD /* AddFriendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendButton.m; sourceTree = "<group>"; };
 		6ECC038519ED05030008ACAD /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		6ECC038619ED05030008ACAD /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		87B32FEC1A2313A100B9A8E9 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		87B32FED1A2313A100B9A8E9 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		87B32FEE1A2313A100B9A8E9 /* JudgeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JudgeDate.h; sourceTree = "<group>"; };
+		87B32FEF1A2313A100B9A8E9 /* JudgeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JudgeDate.m; sourceTree = "<group>"; };
+		87B32FF01A2313A100B9A8E9 /* pickerviewhmbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerviewhmbg.png; sourceTree = "<group>"; };
+		87B32FF11A2313A100B9A8E9 /* pickerviewymdbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerviewymdbg.png; sourceTree = "<group>"; };
+		87B32FF61A2313F400B9A8E9 /* TrackSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackSearchViewController.h; sourceTree = "<group>"; };
+		87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackSearchViewController.m; sourceTree = "<group>"; };
+		87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackSearchViewController.xib; sourceTree = "<group>"; };
 		9DCAD3F9533BA412DD3757AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0112EA19ED53DD0073EE48 /* CircleFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFriendCell.h; sourceTree = "<group>"; };
 		BC0112EB19ED53DD0073EE48 /* CircleFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleFriendCell.m; sourceTree = "<group>"; };
@@ -2587,6 +2602,19 @@
 				BC6F5C571A0DD61C00C4201F /* MessageListCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		87B32FEB1A2313A100B9A8E9 /* YJPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				87B32FEC1A2313A100B9A8E9 /* DatePickerView.h */,
+				87B32FED1A2313A100B9A8E9 /* DatePickerView.m */,
+				87B32FEE1A2313A100B9A8E9 /* JudgeDate.h */,
+				87B32FEF1A2313A100B9A8E9 /* JudgeDate.m */,
+				87B32FF01A2313A100B9A8E9 /* pickerviewhmbg.png */,
+				87B32FF11A2313A100B9A8E9 /* pickerviewymdbg.png */,
+			);
+			path = YJPickerView;
 			sourceTree = "<group>";
 		};
 		BC44AD7619F169CC0067764F /* ChatTestImage */ = {
@@ -4230,8 +4258,12 @@
 				F9C91FA91A15C587003DF07A /* MainViewController.mm */,
 				F9C91FAA1A15C587003DF07A /* TraceListViewController.h */,
 				F9C91FAB1A15C587003DF07A /* TraceListViewController.m */,
+				87B32FEB1A2313A100B9A8E9 /* YJPickerView */,
 				F9C91FAC1A15C587003DF07A /* TrackerReplayViewController.h */,
 				F9C91FAD1A15C587003DF07A /* TrackerReplayViewController.mm */,
+				87B32FF61A2313F400B9A8E9 /* TrackSearchViewController.h */,
+				87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */,
+				87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -6091,6 +6123,7 @@
 				F91A0E7B19E7AACF009ADB44 /* dynamicItemNormal.png in Resources */,
 				F9F3AEDF19F63E5800E0A0F9 /* 好友2_12.png in Resources */,
 				BCCE867F1A11B0350014AF29 /* 017.png in Resources */,
+				87B32FF41A2313A100B9A8E9 /* pickerviewhmbg.png in Resources */,
 				F9F3AF9D19F63E5800E0A0F9 /* 绑定设备3_04.png in Resources */,
 				F9F3AFE719F63E5800E0A0F9 /* 轨迹06_14.png in Resources */,
 				F9F3AE9619F63E5800E0A0F9 /* 设备分享4psd_03.png in Resources */,
@@ -6442,6 +6475,7 @@
 				BC7910D419F6BE24000EEA0C /* userimage.png in Resources */,
 				F9F3AF5719F63E5800E0A0F9 /* 数据04_07.png in Resources */,
 				F91A0E3619E7AACF009ADB44 /* SIM_2.png in Resources */,
+				87B32FFA1A2313F400B9A8E9 /* TrackSearchViewController.xib in Resources */,
 				F91A0E3119E7AACF009ADB44 /* BoundEquipment_round.png in Resources */,
 				BCCE87261A11B0350014AF29 /* 100@2x.png in Resources */,
 				F9748CF919EFA5CD0064FCC7 /* qrcode_scan_btn_photo_nor@2x.png in Resources */,
@@ -6743,6 +6777,7 @@
 				F9F3AFF119F63E5800E0A0F9 /* 地图选择1.png in Resources */,
 				F9F3AEA719F63E5800E0A0F9 /* 图标_49.png in Resources */,
 				F944A7D21A14D55800877017 /* UMSCommentInputController.xib in Resources */,
+				87B32FF51A2313A100B9A8E9 /* pickerviewymdbg.png in Resources */,
 				F944A7D51A14D55800877017 /* UMShareEditViewControlleriPad.xib in Resources */,
 				F91A0E9E19E7AACF009ADB44 /* themeSelected.png in Resources */,
 				BCCE868A1A11B0350014AF29 /* 022@2x.png in Resources */,
@@ -6948,6 +6983,7 @@
 				BC44AD8519F16BFE0067764F /* SendMessageView.m in Sources */,
 				F99246701A048D5500599E74 /* PNLineChartDataItem.m in Sources */,
 				BC6ED3E01A0750220037F1D1 /* FriendListView.m in Sources */,
+				87B32FF31A2313A100B9A8E9 /* JudgeDate.m in Sources */,
 				F9C91FDB1A15C587003DF07A /* TraceInfoView.m in Sources */,
 				BCE757FE1A1DEB9D001539DD /* MBPolygonView.m in Sources */,
 				BCF1848F1A0B51A0006843D1 /* DXsearchView.m in Sources */,
@@ -7012,6 +7048,7 @@
 				BCB42E2919F1425B00A141C3 /* FMDatabaseAdditions.m in Sources */,
 				F9C91F941A15C576003DF07A /* HexColor.m in Sources */,
 				F9C91FD81A15C587003DF07A /* KBAlarmInfoView.m in Sources */,
+				87B32FF91A2313F400B9A8E9 /* TrackSearchViewController.m in Sources */,
 				F9C91F8F1A15C576003DF07A /* CCFence.m in Sources */,
 				F9748CD619EF83AF0064FCC7 /* KBFence.m in Sources */,
 				F99246731A048D5500599E74 /* UICountingLabel.m in Sources */,
@@ -7030,6 +7067,7 @@
 				DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */,
 				BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */,
 				BCCDD7351A0C7B6A008A9795 /* FriendSettingViewController.m in Sources */,
+				87B32FF21A2313A100B9A8E9 /* DatePickerView.m in Sources */,
 				F9C91F921A15C576003DF07A /* CCWarning.m in Sources */,
 				F975FE6119EE44DA00D13D86 /* TableMenuCell.m in Sources */,
 				BC6F5C581A0DD61C00C4201F /* MessageListCell.m in Sources */,

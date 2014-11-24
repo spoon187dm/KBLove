@@ -15,6 +15,7 @@
 #import "ZWL_TimeUtils.h"
 #import "ZWL_TimeUtils.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
+#import "TrackSearchViewController.h"
 
 @interface TrackerReplayViewController ()
 
@@ -67,12 +68,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _mapView.delegate=self;
     
-   
-    //    [self prepareData];
+    
+    //        [self prepareData];
     //    NSLog(@"------*****-----%@",_statusArray);
-    //    [self loadDataOnMap];
+    //        [self loadDataOnMap];
     
     [_slider setMinimumValue:0];
     [_slider setMaximumValue:100];
@@ -85,8 +87,27 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self requestData];
+    //    [self requestData];
     [self setStartAndEndTime:_startTime endTime:_endTime];
+    
+    [self createNav];
+}
+
+-(void)createNav
+{
+    self.navigationItem.title = @"轨迹播放";
+    
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftButton.frame = CGRectMake(0, 0, 30, 30);
+    [leftButton setBackgroundImage:[UIImage imageNamed:@"NVBar_arrow_left.png"] forState:UIControlStateNormal];
+    [leftButton addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton.frame = CGRectMake(0, 0, 30, 30);
+    [rightButton setBackgroundImage:[UIImage imageNamed:@"icon_home.png"] forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
 
 
@@ -183,6 +204,18 @@
         _trackPath = [BMKPolyline polylineWithCoordinates:points count:size];
         [_mapView addOverlay:_trackPath];
     }
+}
+
+#pragma mark navClick
+
+-(void)leftItemClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)rightItemClick
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma  mark  addDevicePoint
@@ -640,20 +673,20 @@
 {
     NSInteger size = _allReplayInfo.count;
     for (NSInteger i = size - 1; i > _allReplayIndex; i--) {
-        //        CCSeqReplayInfo* replayInfo = [_allReplayInfo objectAtIndex:i];
-        //        NSArray* statusList = replayInfo.statusList;
-        //        NSInteger statusCount = statusList.count;
-        //        for (int i = statusCount - 1; i > 0; i--) {
-        //            CCDeviceStatus* current = [statusList objectAtIndex:i];
-        //            CCDeviceStatus* next = [statusList objectAtIndex:i - 1];
-        //            if (current && next) {
-        //                CLLocationCoordinate2D* coords = new CLLocationCoordinate2D[2];
-        //                coords[0] = [MapUtils geoPoint2Coordinate2D:current.point];
-        //                coords[1] = [MapUtils geoPoint2Coordinate2D:next.point];
-        //                BMKPolyline* trackLine = [BMKPolyline polylineWithCoordinates:coords count:2];
-        //                [self addTrackLine:trackLine status:current addToMap:YES];
-        //            }
-        //        }
+        //                CCSeqReplayInfo* replayInfo = [_allReplayInfo objectAtIndex:i];
+        //                NSArray* statusList = replayInfo.statusList;
+        //                NSInteger statusCount = statusList.count;
+        //                for (int i = statusCount - 1; i > 0; i--) {
+        //                    CCDeviceStatus* current = [statusList objectAtIndex:i];
+        //                    CCDeviceStatus* next = [statusList objectAtIndex:i - 1];
+        //                    if (current && next) {
+        //                        CLLocationCoordinate2D* coords = new CLLocationCoordinate2D[2];
+        //                        coords[0] = [MapUtils geoPoint2Coordinate2D:current.point];
+        //                        coords[1] = [MapUtils geoPoint2Coordinate2D:next.point];
+        //                        BMKPolyline* trackLine = [BMKPolyline polylineWithCoordinates:coords count:2];
+        //                        [self addTrackLine:trackLine status:current addToMap:YES];
+        //                    }
+        //                }
     }
 }
 
@@ -672,7 +705,7 @@
     long long currentTime = _currentStartTime + _currentTime;
     if (currentTime < nextStatus.receive) {
         // 停留时间的单位是秒，需要转成毫秒
-//        NSInteger stayedTime = currentStatus.stayed * 1000;
+        //        NSInteger stayedTime = currentStatus.stayed * 1000;
         /**
          *   自定义调试stayedTime=200
          */
@@ -832,12 +865,12 @@
 }
 
 - (IBAction)playfrontItem:(id)sender {
-//    if (self.selectIndex==0) {
-//        [UIAlertView showWithTitle:@"提示" Message:@"当前已经是第一条数据了！" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-//            
-//        }];
-//        return;
-//    }
+    if (self.selectIndex==0) {
+        [UIAlertView showWithTitle:@"提示" Message:@"当前已经是第一条数据了！" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
+            
+        }];
+        return;
+    }
     KBTracePart *part = self.dataarray[self.selectIndex];
     self.startTime=[part.endSpot.receive longLongValue];
     self.endTime=[part.startSpot.receive longLongValue];
@@ -855,7 +888,7 @@
     self.startTime=[part.endSpot.receive longLongValue];
     self.endTime=[part.startSpot.receive longLongValue];
     [self viewWillAppear:YES];
-
+    
 }
 
 - (IBAction)zoomInMap:(id)sender
@@ -965,22 +998,22 @@
         BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = GRAY_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
-		return polylineView;
+        return polylineView;
     } else if ([_redTrack containsObject:overlay]){
         BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = RED_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
-		return polylineView;
+        return polylineView;
     } else if ([_greenTrack containsObject:overlay]){
         BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = GREEN_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
-		return polylineView;
+        return polylineView;
     } else if ([_yellowTrack containsObject:overlay]){
         BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = YELLOW_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
-		return polylineView;
+        return polylineView;
     }
     return nil;
 }
@@ -1000,14 +1033,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }/*
-#pragma mark - Navigation
+  #pragma mark - Navigation
+  
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+  {
+  // Get the new view controller using [segue destinationViewController].
+  // Pass the selected object to the new view controller.
+  }
+  */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)search_click:(id)sender {
+    TrackSearchViewController *trackSearch = [[TrackSearchViewController alloc] init];
+    [self.navigationController pushViewController:trackSearch animated:YES];
 }
-*/
-
 @end

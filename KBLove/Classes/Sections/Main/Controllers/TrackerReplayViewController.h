@@ -113,5 +113,6 @@
 - (IBAction)zoomOutMap:(id)sender;
 - (IBAction)startPlay:(id)sender;
 - (IBAction)share:(id)sender;
+- (IBAction)search_click:(id)sender;
 
 @end

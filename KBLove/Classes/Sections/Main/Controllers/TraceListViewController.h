@@ -8,11 +8,14 @@
 
 #import "TableMenuViewController.h"
 @class KBDevices;
-@interface TraceListViewController : TableMenuViewController
+@interface TraceListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) KBDevices *device;
+@property(nonatomic,assign) int isSelected;
 
-- (IBAction)click_back:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *click_back;
 - (IBAction)click_home:(id)sender;
+- (IBAction)click_search:(id)sender;
 
 @end
