@@ -12,6 +12,7 @@
 #import "TableRefresh.h"
 #import "TrackerReplayViewController.h"
 #import "DatePickerView.h"
+#import "BMapKit.h"
 
 @interface TraceListViewController ()
 
@@ -70,7 +71,7 @@
 -(void)createSearchView
 {
     searchView = [[UIView alloc] init];
-    searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
+    searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 64);
     searchView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"总_02.png"]];
     
     for (int i = 0; i < 2; i++) {
@@ -108,7 +109,6 @@
         }
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        button.tag = i + 1;
         [button addTarget:self action:@selector(ymdButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         //        button setBackgroundImage:[UIImage imageNamed:] forState:<#(UIControlState)#>
         button.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -133,8 +133,6 @@
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:13];
-        button.titleLabel.font = [UIFont systemFontOfSize:13];
-        button.tag = i + 100;
         [button addTarget:self action:@selector(hmButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [searchView addSubview:button];
     }
@@ -242,27 +240,23 @@
     if (isShowSearch) {
         isShowSearch = !isShowSearch;
         [UIView animateWithDuration:0.3 animations:^{
-            searchView.frame = CGRectMake(0, 64, kScreenWidth  *1.5, 64);
+//            searchView.frame = CGRectMake(0, 64, kScreenWidth  *1.5, 64);
             self.tableView.frame = CGRectMake(0, 64 * 2, kScreenWidth, kScreenHeight - 45 - 64 * 2);
         } completion:^(BOOL finished) {
         }];
     } else {
         isShowSearch = !isShowSearch;
-        [UIView animateWithDuration:0.3 animations:^{
             [UIView animateWithDuration:0.3 animations:^{
-                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
+//                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
                 self.tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
             }];
-        } completion:^(BOOL finished) {
-            //            searchView.hidden = YES;
-        }];
     }
 }
 
 -(void)searchClick
 {
     //    BMKPolyline polylineWithPoints:<#(BMKMapPoint *)#> count:<#(NSUInteger)#>
-    [_tableView reloadData];
+//    [_tableView reloadData];
 }
 
 #pragma mark - UITableViewDelegate
@@ -271,7 +265,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    //    return _dataArray.count;
+//    return _dataArray.count;
     return 3;
 }
 
@@ -286,10 +280,11 @@
     [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
         self.isSelected += isSelected;
     }];
-    //    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
-    ////    mapView.delegate = cell;
-    //    cell.bottomImageview.image = [UIImage imageNamed:@"bj.png"];
-    //    [cell.bottomImageview addSubview:mapView];
+        BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+        mapView.delegate = cell;
+//        cell.bottomImageview.image = [UIImage imageNamed:@"bj.png"];
+//    [mapView ]
+        [cell.bottomImageview addSubview:mapView];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -298,7 +293,6 @@
     if (0 != self.isSelected) {
         return;
     }
-//    TrackerReplayViewController *tracker = [[TrackerReplayViewController alloc] init];
 
     TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
     tracker.dataarray=_dataArray;

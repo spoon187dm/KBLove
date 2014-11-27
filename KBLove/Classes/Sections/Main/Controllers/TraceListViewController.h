@@ -8,6 +8,7 @@
 
 #import "TableMenuViewController.h"
 @class KBDevices;
+
 @interface TraceListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) KBDevices *device;

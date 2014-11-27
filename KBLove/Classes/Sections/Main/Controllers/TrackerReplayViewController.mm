@@ -72,9 +72,9 @@
     _mapView.delegate=self;
     
     
-    //        [self prepareData];
+            [self prepareData];
     //    NSLog(@"------*****-----%@",_statusArray);
-    //        [self loadDataOnMap];
+            [self loadDataOnMap];
     
     [_slider setMinimumValue:0];
     [_slider setMaximumValue:100];
@@ -84,10 +84,35 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)prepareData
+{
+    double lan=112514697;
+    double lat=35670865;
+    long long recevie=1413246372000;
+    for (int i=0; i<200; i++) {
+        CCDeviceStatus *device=[[CCDeviceStatus alloc]init];
+        lan+=1800;
+        device.lang=lan;
+        lat+=1800;
+        
+        device.lat=lat;
+        device.speed=arc4random()*2;
+        device.heading=335;
+        device.sn=@"354188047171579";
+        device.stayed=2513;
+        device.receive=	recevie;
+        recevie-=2000;
+        //        NSLog(@"%lf" , device.receive);
+        MAMapPoint po={lat,lan};
+        device.gaode_point=po;
+        [_statusArray addObject:device];
+    }
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //    [self requestData];
+//        [self requestData];
     [self setStartAndEndTime:_startTime endTime:_endTime];
     
     [self createNav];
