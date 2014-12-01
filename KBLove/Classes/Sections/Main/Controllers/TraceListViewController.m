@@ -13,6 +13,7 @@
 #import "TrackerReplayViewController.h"
 #import "DatePickerView.h"
 #import "BMapKit.h"
+#import <MAMapKit/MAMapKit.h>
 
 @interface TraceListViewController ()
 
@@ -280,8 +281,9 @@
     [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
         self.isSelected += isSelected;
     }];
-        BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-        mapView.delegate = cell;
+        MAMapView *mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    
+//        mapView.delegate = cell;
 //        cell.bottomImageview.image = [UIImage imageNamed:@"bj.png"];
 //    [mapView ]
         [cell.bottomImageview addSubview:mapView];

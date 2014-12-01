@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0E7B031A284CEE00F86B12 /* 未标题-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E7B021A284CEE00F86B12 /* 未标题-1.png */; };
 		3A14F69B1A26FB2C00B03698 /* bgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6951A26FB2C00B03698 /* bgcolor.png */; };
 		3A14F69C1A26FB2C00B03698 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6961A26FB2C00B03698 /* delete.png */; };
 		3A14F69D1A26FB2C00B03698 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6971A26FB2C00B03698 /* player.png */; };
@@ -1105,6 +1106,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A0E7B021A284CEE00F86B12 /* 未标题-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未标题-1.png"; sourceTree = "<group>"; };
 		3A14F6951A26FB2C00B03698 /* bgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgcolor.png; sourceTree = "<group>"; };
 		3A14F6961A26FB2C00B03698 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		3A14F6971A26FB2C00B03698 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
@@ -5845,6 +5847,7 @@
 		F9F3AE4619F63E5700E0A0F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3A0E7B021A284CEE00F86B12 /* 未标题-1.png */,
 				3A14F6951A26FB2C00B03698 /* bgcolor.png */,
 				3A14F6961A26FB2C00B03698 /* delete.png */,
 				3A14F6971A26FB2C00B03698 /* player.png */,
@@ -6367,6 +6370,7 @@
 				F9F3AFD019F63E5800E0A0F9 /* 设置04创建围栏_21.png in Resources */,
 				F91A0E7519E7AACF009ADB44 /* savepass_uncheck.png in Resources */,
 				BCCE86921A11B0350014AF29 /* 026@2x.png in Resources */,
+				3A0E7B031A284CEE00F86B12 /* 未标题-1.png in Resources */,
 				BCCE867A1A11B0350014AF29 /* 014.png in Resources */,
 				F9F3AF6F19F63E5800E0A0F9 /* 数据07_43.png in Resources */,
 				3A14F69C1A26FB2C00B03698 /* delete.png in Resources */,
@@ -7297,8 +7301,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -7314,9 +7318,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -7337,8 +7341,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -7348,8 +7352,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -7363,7 +7367,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7374,7 +7378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/libs/Release-iphonesimulator",
@@ -7426,7 +7430,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -7440,7 +7444,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7451,7 +7455,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/libs/Release-iphonesimulator",
@@ -7503,7 +7507,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
