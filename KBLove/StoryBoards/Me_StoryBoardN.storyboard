@@ -802,7 +802,7 @@
                         <sections>
                             <tableViewSection headerTitle=" " id="OYz-6P-Ubm">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="M4o-jw-VWf" style="IBUITableViewCellStyleDefault" id="sWu-RP-Jax">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="M4o-jw-VWf" style="IBUITableViewCellStyleDefault" id="sWu-RP-Jax">
                                         <rect key="frame" x="0.0" y="86" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWu-RP-Jax" id="sM6-i6-pa3">
@@ -823,7 +823,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="4Jt-aR-TRh">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5QP-fK-0un" style="IBUITableViewCellStyleDefault" id="fHf-mA-4SW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="5QP-fK-0un" style="IBUITableViewCellStyleDefault" id="fHf-mA-4SW">
                                         <rect key="frame" x="0.0" y="178" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fHf-mA-4SW" id="mQP-x5-3Md">

@@ -233,12 +233,12 @@ static KBDeviceManager *sharedManager = nil;
             NSDictionary *data=(NSDictionary *)result;
             NSArray *data_Array=data[@"track"];
             NSMutableArray *statusArray = [NSMutableArray array];
-////            时间间隔
-//            long long limitTimeTravel = 20*60*1000;
-////            分割时间线
-//            long long endTimeDate = 0;
-////            用于存储小分组轨迹数据
-//            NSMutableArray *tempGroupArray = [NSMutableArray array];
+//            时间间隔
+            long long limitTimeTravel = 20*60*1000;
+//            分割时间线
+            long long endTimeDate = 0;
+//            用于存储小分组轨迹数据
+            NSMutableArray *tempGroupArray = [NSMutableArray array];
             for (int i=0; i< data_Array.count; i++) {
                 CCDeviceStatus * device=[[CCDeviceStatus alloc]init];
                 NSString *lngstr=data_Array[i][@"lng"];
@@ -250,25 +250,25 @@ static KBDeviceManager *sharedManager = nil;
                 device.stayed=[data_Array[i][@"stayed"] floatValue];
                 device.heading=[data_Array[i][@"direction"] floatValue];
 //                第一条数据
-//                if (i==0) {
-//                    endTimeDate = device.receive - limitTimeTravel;
-//                    [tempGroupArray addObject:device];
-//                }else{
-//                    if(device.receive > endTimeDate){
-////                        该数据为新分组的数据
-//                        [statusArray addObject:tempGroupArray];
-//                        tempGroupArray = [NSMutableArray array];
-//                        [tempGroupArray addObject:device];
-////                        endTimeDate += limitTimeTravel;
-////                        保证下次分组的结束时间线大于新分组的第一个
-//                        while (endTimeDate<device.receive) {
-//                            endTimeDate+=limitTimeTravel;
-//                        }
-//                    }else{
-//                        [tempGroupArray addObject:device];
-//                    }
-//                    
-//                }
+                if (i==0) {
+                    endTimeDate = device.receive - limitTimeTravel;
+                    [tempGroupArray addObject:device];
+                }else{
+                    if(device.receive > endTimeDate){
+//                        该数据为新分组的数据
+                        [statusArray addObject:tempGroupArray];
+                        tempGroupArray = [NSMutableArray array];
+                        [tempGroupArray addObject:device];
+//                        endTimeDate += limitTimeTravel;
+//                        保证下次分组的结束时间线大于新分组的第一个
+                        while (endTimeDate<device.receive) {
+                            endTimeDate+=limitTimeTravel;
+                        }
+                    }else{
+                        [tempGroupArray addObject:device];
+                    }
+                    
+                }
                 [statusArray addObject:device];
             }
         }
@@ -281,7 +281,7 @@ static KBDeviceManager *sharedManager = nil;
     NSAssert(endDate, @"");
     
     NSString *userid = [[KBUserInfo sharedInfo] user_id];
-    NSString *token = [KBUserInfo sharedInfo].token;
+    NSString *token = [[KBUserInfo sharedInfo] token];
     NSDictionary *params = @{@"user_id":userid,
                              @"device_sn":device_sn,
                              @"begin":@(beginDate*1000),

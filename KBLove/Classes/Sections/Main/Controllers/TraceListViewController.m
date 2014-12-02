@@ -22,6 +22,11 @@
     UIButton *selectAllbutton;
     UIView *searchView;
     UIView *pickerViewbgView;
+    UITableView *_tableView;
+    NSString *startTimeTitleYMD;
+    NSString *startTimeTitleHM;
+    NSString *endTimeTitleYMD;
+    NSString *endTimeTitleHM;
 }
 
 @end
@@ -33,6 +38,7 @@
     // Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setUpView];
     
     //    __weak typeof(self) weakSelf = self;
@@ -50,14 +56,17 @@
     
     [self createSearchView];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+//    _dataArray = [[NSMutableArray alloc] init];
+//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+//    [self.view addSubview:_tableView];
+    [self loadData];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    //    [selectAllbutton removeFromSuperview];
 }
 
 #pragma mark -
@@ -71,6 +80,11 @@
 
 -(void)createSearchView
 {
+    startTimeTitleYMD = @"2014-08-16";
+    startTimeTitleHM = @"1992-12-26";
+    endTimeTitleYMD = @"10:30";
+    endTimeTitleHM = @"12:00";
+    
     searchView = [[UIView alloc] init];
     searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 64);
     searchView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"总_02.png"]];
@@ -99,10 +113,10 @@
         NSString *title;
         switch (i) {
             case 0:
-                title = @"2014-08-16";
+                title = startTimeTitleYMD;
                 break;
             case 1:
-                title = @"1992-12-26";
+                title = startTimeTitleHM;
                 break;
                 
             default:
@@ -110,6 +124,7 @@
         }
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button.tag = 100 + i;
         [button addTarget:self action:@selector(ymdButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         //        button setBackgroundImage:[UIImage imageNamed:] forState:<#(UIControlState)#>
         button.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -122,10 +137,10 @@
         NSString *title;
         switch (i) {
             case 0:
-                title = @"10:30";
+                title = endTimeTitleYMD;
                 break;
             case 1:
-                title = @"12:00";
+                title = endTimeTitleHM;
                 break;
                 
             default:
@@ -133,6 +148,7 @@
         }
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button.tag = 1000 + i;
         button.titleLabel.font = [UIFont systemFontOfSize:13];
         [button addTarget:self action:@selector(hmButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [searchView addSubview:button];
@@ -153,8 +169,13 @@
     DatePickerView *picker = [[DatePickerView alloc] init];
     [picker setType:YMD dateBlock:^(NSArray *dateArray) {
         [pickerViewbgView removeFromSuperview];
-        NSString *title = [NSString stringWithFormat:@"%@-%@-%@",dateArray[0],dateArray[1],dateArray[2]];
-        [button setTitle:title forState:UIControlStateNormal];
+        if (100 == button.tag) {
+            startTimeTitleYMD = [NSString stringWithFormat:@"%@-%@-%@",dateArray[0],dateArray[1],dateArray[2]];
+            [button setTitle:startTimeTitleYMD forState:UIControlStateNormal];
+        } else {
+            endTimeTitleYMD = [NSString stringWithFormat:@"%@-%@-%@",dateArray[0],dateArray[1],dateArray[2]];
+            [button setTitle:endTimeTitleYMD forState:UIControlStateNormal];
+        }
     }];
     [self.view addSubview:picker];
 }
@@ -165,8 +186,13 @@
     DatePickerView *picker = [[DatePickerView alloc] init];
     [picker setType:HM dateBlock:^(NSArray *dateArray) {
         [pickerViewbgView removeFromSuperview];
-        NSString *title = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
-        [button setTitle:title forState:UIControlStateNormal];
+        if (101 == button.tag) {
+            startTimeTitleHM = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
+            [button setTitle:startTimeTitleHM forState:UIControlStateNormal];
+        } else {
+            endTimeTitleHM = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
+            [button setTitle:endTimeTitleHM forState:UIControlStateNormal];
+        }
     }];
     [self.view addSubview:picker];
 }
@@ -185,18 +211,20 @@
 
 - (void)loadData{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    //    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+//    [formatter setDateFormat:@"yyyy-MM-dd hh:mm"];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSDate *current = [NSDate date];
-    NSString *currentDate = [formatter stringFromDate:current];
-    
-    NSDate *date = [formatter dateFromString:currentDate];
-    
+//    NSDate *current = [NSDate date];
+//    NSString *currentDate = [formatter stringFromDate:current];
+
+//    NSDate *date = [formatter dateFromString:currentDate];
+    NSDate *current = [formatter dateFromString:@"2014-11-28"];
+    NSDate *date = [formatter dateFromString:@"2014-11-27"];
     long form = [date timeIntervalSince1970];
     long to = [current timeIntervalSince1970];
     [KBDeviceManager getDevicePart:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
         _dataArray = [result mutableCopy];
-        [self.tableView reloadData];
+        NSLog(@"qqqq%@",result);
+        [_tableView reloadData];
     }];
 }
 
@@ -242,22 +270,21 @@
         isShowSearch = !isShowSearch;
         [UIView animateWithDuration:0.3 animations:^{
 //            searchView.frame = CGRectMake(0, 64, kScreenWidth  *1.5, 64);
-            self.tableView.frame = CGRectMake(0, 64 * 2, kScreenWidth, kScreenHeight - 45 - 64 * 2);
+            _tableView.frame = CGRectMake(0, 64 * 2, kScreenWidth, kScreenHeight - 45 - 64 * 2);
         } completion:^(BOOL finished) {
         }];
     } else {
         isShowSearch = !isShowSearch;
             [UIView animateWithDuration:0.3 animations:^{
 //                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
-                self.tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
+                _tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
             }];
     }
 }
 
 -(void)searchClick
 {
-    //    BMKPolyline polylineWithPoints:<#(BMKMapPoint *)#> count:<#(NSUInteger)#>
-//    [_tableView reloadData];
+    [self loadData];
 }
 
 #pragma mark - UITableViewDelegate
@@ -266,8 +293,8 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return _dataArray.count;
-    return 3;
+    return _dataArray.count;
+//    return 3;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
