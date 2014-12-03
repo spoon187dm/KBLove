@@ -27,6 +27,7 @@
     NSString *startTimeTitleHM;
     NSString *endTimeTitleYMD;
     NSString *endTimeTitleHM;
+    BOOL isShowSearch;
 }
 
 @end
@@ -80,9 +81,9 @@
 
 -(void)createSearchView
 {
-    startTimeTitleYMD = @"2014-08-16";
-    startTimeTitleHM = @"1992-12-26";
-    endTimeTitleYMD = @"10:30";
+    startTimeTitleYMD = @"2014-11-27";
+    startTimeTitleHM = @"10:30";
+    endTimeTitleYMD = @"2014-11-28";
     endTimeTitleHM = @"12:00";
     
     searchView = [[UIView alloc] init];
@@ -116,7 +117,7 @@
                 title = startTimeTitleYMD;
                 break;
             case 1:
-                title = startTimeTitleHM;
+                title = endTimeTitleYMD;
                 break;
                 
             default:
@@ -137,7 +138,7 @@
         NSString *title;
         switch (i) {
             case 0:
-                title = endTimeTitleYMD;
+                title = startTimeTitleHM;
                 break;
             case 1:
                 title = endTimeTitleHM;
@@ -186,7 +187,7 @@
     DatePickerView *picker = [[DatePickerView alloc] init];
     [picker setType:HM dateBlock:^(NSArray *dateArray) {
         [pickerViewbgView removeFromSuperview];
-        if (101 == button.tag) {
+        if (1000 == button.tag) {
             startTimeTitleHM = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
             [button setTitle:startTimeTitleHM forState:UIControlStateNormal];
         } else {
@@ -211,14 +212,10 @@
 
 - (void)loadData{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"yyyy-MM-dd hh:mm"];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-//    NSDate *current = [NSDate date];
-//    NSString *currentDate = [formatter stringFromDate:current];
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm"];
 
-//    NSDate *date = [formatter dateFromString:currentDate];
-    NSDate *current = [formatter dateFromString:@"2014-11-28"];
-    NSDate *date = [formatter dateFromString:@"2014-11-27"];
+    NSDate *date = [formatter dateFromString:[NSString stringWithFormat:@"%@ %@",startTimeTitleYMD,startTimeTitleHM]];
+    NSDate *current = [formatter dateFromString:[NSString stringWithFormat:@"%@ %@",endTimeTitleYMD,endTimeTitleHM]];
     long form = [date timeIntervalSince1970];
     long to = [current timeIntervalSince1970];
     [KBDeviceManager getDevicePart:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
@@ -265,8 +262,7 @@
 }
 
 - (IBAction)click_search:(id)sender {
-    static BOOL isShowSearch = YES;
-    if (isShowSearch) {
+    if (!isShowSearch) {
         isShowSearch = !isShowSearch;
         [UIView animateWithDuration:0.3 animations:^{
 //            searchView.frame = CGRectMake(0, 64, kScreenWidth  *1.5, 64);
@@ -284,6 +280,11 @@
 
 -(void)searchClick
 {
+    isShowSearch = !isShowSearch;
+    [UIView animateWithDuration:0.3 animations:^{
+        //                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
+        _tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
+    }];
     [self loadData];
 }
 
@@ -329,8 +330,8 @@
     
     KBTracePart *part = _dataArray[indexPath.row];
     NSLog(@"%@",part.startSpot.receive);
-    tracker.startTime=[part.endSpot.receive longLongValue];
-    tracker.endTime=[part.startSpot.receive longLongValue];
+    tracker.startTime =[part.endSpot.receive longLongValue];
+    tracker.endTime =[part.startSpot.receive longLongValue];
     tracker.device_sn=self.device.sn;
     
     [self.navigationController pushViewController:tracker animated:YES];

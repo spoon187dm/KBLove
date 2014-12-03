@@ -71,12 +71,9 @@
     _mapView.delegate=self;
     
     
-//            [self prepareData];
-    //    NSLog(@"------*****-----%@",_statusArray);
     [self requestData];
 //    [self loadDataOnMap];
     
-//    [_slider popover];
     [_slider setThumbImage:[UIImage imageNamed:@"未标题-1.png"] forState:UIControlStateNormal];
     [_slider setMinimumValue:0];
     [_slider setMaximumValue:100];
@@ -84,39 +81,6 @@
     [_slider addTarget:self action:@selector(sliderDidStartSliding:) forControlEvents:UIControlEventTouchDown];
     [_slider addTarget:self action:@selector(sliderDidEndSliding:) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
-}
-
--(void)prepareData
-{
-    NSInteger lan=112514697;
-    NSInteger lat=35670865;
-    long long recevie=1413246372000;
-    for (int i=0; i<200; i++) {
-        //model
-        CCDeviceStatus *device=[[CCDeviceStatus alloc]init];
-        lan+=1800;
-        //精度
-        device.lang=lan;
-        lat+=1800;
-        //维度
-        device.lat=lat;
-        //速度
-        device.speed=arc4random()*2;
-        
-        device.heading=335;
-        //
-        device.sn=@"354188047171579";
-        //小车停留的时间
-        device.stayed=2513;
-        //到达经纬度的时间
-        device.receive=	recevie;
-        recevie-=2000;
-        
-        //        NSLog(@"%lf" , device.receive);
-        BMKGeoPoint po={lat,lan};
-        device.point=po;
-        [_statusArray addObject:device];
-    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -196,13 +160,13 @@
     [self updateStartAndEndTime];
 
     [self updateSliderPopover:_currentTime];
-    
+
     [self addAllStayedPoints];
-    
+
     [self addStartAndEnd];
     
     [self addDevicePoint];
-    
+
     // 添加轨迹
     [self addTrackPath];
 }
