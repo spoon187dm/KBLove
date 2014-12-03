@@ -214,7 +214,7 @@
         [blank addSubview:gaode_MapView];
         gaode_MapView.delegate=self;
     }
-    
+
     //设置地图显示区域
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
 //    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);

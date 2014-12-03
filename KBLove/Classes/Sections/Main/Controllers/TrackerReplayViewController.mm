@@ -68,14 +68,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     _mapView.delegate=self;
     
     
-    //        [self prepareData];
-    //    NSLog(@"------*****-----%@",_statusArray);
-    //        [self loadDataOnMap];
+    [self requestData];
+//    [self loadDataOnMap];
     
+    [_slider setThumbImage:[UIImage imageNamed:@"未标题-1.png"] forState:UIControlStateNormal];
     [_slider setMinimumValue:0];
     [_slider setMaximumValue:100];
     [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -87,7 +86,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //    [self requestData];
     [self setStartAndEndTime:_startTime endTime:_endTime];
     
     [self createNav];
@@ -158,17 +156,17 @@
 -(void) loadDataOnMap
 {
     [self reset];
-    
+
     [self updateStartAndEndTime];
-    
+
     [self updateSliderPopover:_currentTime];
-    
+
     [self addAllStayedPoints];
-    
+
     [self addStartAndEnd];
     
     [self addDevicePoint];
-    
+
     // 添加轨迹
     [self addTrackPath];
 }
@@ -348,10 +346,10 @@
 -(void) reset
 {
     _currentTime = 0;
-    
+
     NSArray* statusArray = [self getCurrentStatusArray];
     _currentIndex = statusArray.count - 1;
-    
+
     _startStatus = [statusArray lastObject];
     _endStatus = [statusArray objectAtIndex:0];
     
@@ -361,7 +359,7 @@
     
     //    [_mapView removeAnnotations:_allStayedPoints];
     //    [_allStayedPoints removeAllObjects];
-    
+
     [self resetDevicePoint];
     
     [self cleanColorTrackLine];

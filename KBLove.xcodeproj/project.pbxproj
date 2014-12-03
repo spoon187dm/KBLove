@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0E7B031A284CEE00F86B12 /* 未标题-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E7B021A284CEE00F86B12 /* 未标题-1.png */; };
+		3A14F69B1A26FB2C00B03698 /* bgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6951A26FB2C00B03698 /* bgcolor.png */; };
+		3A14F69C1A26FB2C00B03698 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6961A26FB2C00B03698 /* delete.png */; };
+		3A14F69D1A26FB2C00B03698 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6971A26FB2C00B03698 /* player.png */; };
+		3A14F69E1A26FB2C00B03698 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6981A26FB2C00B03698 /* search.png */; };
+		3A14F69F1A26FB2C00B03698 /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6991A26FB2C00B03698 /* search2.png */; };
+		3A14F6A01A26FB2C00B03698 /* sliderbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F69A1A26FB2C00B03698 /* sliderbg.png */; };
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
 		6351AB551A1DDFDC0079665E /* UsualSettinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */; };
 		6351AB581A1DE04C0079665E /* PriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB571A1DE04C0079665E /* PriteTableViewController.m */; };
@@ -1099,6 +1106,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A0E7B021A284CEE00F86B12 /* 未标题-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未标题-1.png"; sourceTree = "<group>"; };
+		3A14F6951A26FB2C00B03698 /* bgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgcolor.png; sourceTree = "<group>"; };
+		3A14F6961A26FB2C00B03698 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		3A14F6971A26FB2C00B03698 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		3A14F6981A26FB2C00B03698 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		3A14F6991A26FB2C00B03698 /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
+		3A14F69A1A26FB2C00B03698 /* sliderbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderbg.png; sourceTree = "<group>"; };
 		6351AB531A1DDFDC0079665E /* UsualSettinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsualSettinViewController.h; sourceTree = "<group>"; };
 		6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsualSettinViewController.m; sourceTree = "<group>"; };
 		6351AB561A1DE04C0079665E /* PriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriteTableViewController.h; sourceTree = "<group>"; };
@@ -5833,6 +5847,13 @@
 		F9F3AE4619F63E5700E0A0F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3A0E7B021A284CEE00F86B12 /* 未标题-1.png */,
+				3A14F6951A26FB2C00B03698 /* bgcolor.png */,
+				3A14F6961A26FB2C00B03698 /* delete.png */,
+				3A14F6971A26FB2C00B03698 /* player.png */,
+				3A14F6981A26FB2C00B03698 /* search.png */,
+				3A14F6991A26FB2C00B03698 /* search2.png */,
+				3A14F69A1A26FB2C00B03698 /* sliderbg.png */,
 				F9F3AE4719F63E5700E0A0F9 /* 轨迹01_03.png */,
 			);
 			path = images;
@@ -6158,6 +6179,7 @@
 				F9F3AF6D19F63E5800E0A0F9 /* 数据07_39.png in Resources */,
 				F9F3AFC619F63E5800E0A0F9 /* 设置04创建围栏1_23.png in Resources */,
 				F9F3AEC419F63E5800E0A0F9 /* 圈子位置11_02.png in Resources */,
+				3A14F69E1A26FB2C00B03698 /* search.png in Resources */,
 				BCCE86991A11B0350014AF29 /* 030.png in Resources */,
 				BCCE865D1A11B0350014AF29 /* 000.png in Resources */,
 				F9F3AF0419F63E5800E0A0F9 /* 我的1_05.png in Resources */,
@@ -6186,6 +6208,7 @@
 				F9F3AE8119F63E5800E0A0F9 /* 主界面011_26.png in Resources */,
 				F9F3AFDF19F63E5800E0A0F9 /* 轨迹03_03.png in Resources */,
 				BCCE86E21A11B0350014AF29 /* 066@2x.png in Resources */,
+				3A14F69D1A26FB2C00B03698 /* player.png in Resources */,
 				F91A0E9D19E7AACF009ADB44 /* red_theme@2x.png in Resources */,
 				BCCE86771A11B0350014AF29 /* 012@2x.png in Resources */,
 				BCCE87241A11B0350014AF29 /* 099@2x.png in Resources */,
@@ -6347,8 +6370,10 @@
 				F9F3AFD019F63E5800E0A0F9 /* 设置04创建围栏_21.png in Resources */,
 				F91A0E7519E7AACF009ADB44 /* savepass_uncheck.png in Resources */,
 				BCCE86921A11B0350014AF29 /* 026@2x.png in Resources */,
+				3A0E7B031A284CEE00F86B12 /* 未标题-1.png in Resources */,
 				BCCE867A1A11B0350014AF29 /* 014.png in Resources */,
 				F9F3AF6F19F63E5800E0A0F9 /* 数据07_43.png in Resources */,
+				3A14F69C1A26FB2C00B03698 /* delete.png in Resources */,
 				F9F3AEDC19F63E5800E0A0F9 /* 好友2_03.png in Resources */,
 				F9C91FDC1A15C587003DF07A /* TraceInfoView.xib in Resources */,
 				F91A0E3A19E7AACF009ADB44 /* circleframe.png in Resources */,
@@ -6382,6 +6407,7 @@
 				F91A0E5919E7AACF009ADB44 /* lgtoolbar@2x.png in Resources */,
 				BCCE86651A11B0350014AF29 /* 003@2x.png in Resources */,
 				F9F3AF0219F63E5800E0A0F9 /* 总_07.png in Resources */,
+				3A14F69B1A26FB2C00B03698 /* bgcolor.png in Resources */,
 				F9F3AF8919F63E5800E0A0F9 /* 登录_23.png in Resources */,
 				F9F3AF3019F63E5800E0A0F9 /* 数据01_30.png in Resources */,
 				F9F3AEA019F63E5800E0A0F9 /* 图标_26.png in Resources */,
@@ -6400,6 +6426,7 @@
 				F9F3AF9119F63E5800E0A0F9 /* 绑定设备1_05.png in Resources */,
 				F91A0E6319E7AACF009ADB44 /* GroupNavItemNormal.png in Resources */,
 				F9F3AFDA19F63E5800E0A0F9 /* 轨迹02_06.png in Resources */,
+				3A14F6A01A26FB2C00B03698 /* sliderbg.png in Resources */,
 				F9F3AFCD19F63E5800E0A0F9 /* 设置04创建围栏_11.png in Resources */,
 				6EA222DD19E90EEB0073274D /* pwd.png in Resources */,
 				BCCE86BA1A11B0350014AF29 /* 046@2x.png in Resources */,
@@ -6719,6 +6746,7 @@
 				BC59837519ECE71800DAC76A /* CircleCell.xib in Resources */,
 				F9F3AFA019F63E5800E0A0F9 /* 绑定设备4_11.png in Resources */,
 				BCCE86701A11B0350014AF29 /* 009.png in Resources */,
+				3A14F69F1A26FB2C00B03698 /* search2.png in Resources */,
 				F9F3AF4F19F63E5800E0A0F9 /* 数据03_41.png in Resources */,
 				BCCE86CA1A11B0350014AF29 /* 054@2x.png in Resources */,
 				BCCE86CC1A11B0350014AF29 /* 055@2x.png in Resources */,
@@ -7273,8 +7301,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -7290,9 +7318,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -7313,8 +7341,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -7324,8 +7352,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -7339,7 +7367,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7350,7 +7378,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/libs/Release-iphonesimulator",
@@ -7402,7 +7430,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -7416,7 +7444,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -7427,7 +7455,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KBLove/KBLove-Prefix.pch";
 				INFOPLIST_FILE = "KBLove/KBLove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/libs/Release-iphonesimulator",
@@ -7479,7 +7507,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6273a91a-835c-4bf9-94e3-9bebc0477d2e";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
