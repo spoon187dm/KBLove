@@ -433,10 +433,10 @@
 
 -(NSArray*) getCurrentStatusArray
 {
-    //    if (_isViewAllTrack) {
-    //        CCSeqReplayInfo* currPlayInfo = [_allReplayInfo objectAtIndex:_allReplayIndex];
-    //        return currPlayInfo.statusList;
-    //    }
+//        if (_isViewAllTrack) {
+//            CCSeqReplayInfo* currPlayInfo = [_allReplayInfo objectAtIndex:_allReplayIndex];
+//            return currPlayInfo.statusList;
+//        }
     return _statusArray;
 }
 
