@@ -12,6 +12,8 @@
 #import "TableRefresh.h"
 #import "TrackerReplayViewController.h"
 #import "DatePickerView.h"
+#import "BMapKit.h"
+#import <MAMapKit/MAMapKit.h>
 
 @interface TraceListViewController ()
 
@@ -20,6 +22,12 @@
     UIButton *selectAllbutton;
     UIView *searchView;
     UIView *pickerViewbgView;
+    UITableView *_tableView;
+    NSString *startTimeTitleYMD;
+    NSString *startTimeTitleHM;
+    NSString *endTimeTitleYMD;
+    NSString *endTimeTitleHM;
+    BOOL isShowSearch;
 }
 
 @end
@@ -31,6 +39,7 @@
     // Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setUpView];
     
     //    __weak typeof(self) weakSelf = self;
@@ -48,14 +57,17 @@
     
     [self createSearchView];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+//    _dataArray = [[NSMutableArray alloc] init];
+//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+//    [self.view addSubview:_tableView];
+    [self loadData];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    //    [selectAllbutton removeFromSuperview];
 }
 
 #pragma mark -
@@ -69,8 +81,13 @@
 
 -(void)createSearchView
 {
+    startTimeTitleYMD = @"2014-11-27";
+    startTimeTitleHM = @"10:30";
+    endTimeTitleYMD = @"2014-11-28";
+    endTimeTitleHM = @"12:00";
+    
     searchView = [[UIView alloc] init];
-    searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
+    searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 64);
     searchView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"总_02.png"]];
     
     for (int i = 0; i < 2; i++) {
@@ -97,10 +114,10 @@
         NSString *title;
         switch (i) {
             case 0:
-                title = @"2014-08-16";
+                title = startTimeTitleYMD;
                 break;
             case 1:
-                title = @"1992-12-26";
+                title = endTimeTitleYMD;
                 break;
                 
             default:
@@ -108,7 +125,7 @@
         }
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        button.tag = i + 1;
+        button.tag = 100 + i;
         [button addTarget:self action:@selector(ymdButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         //        button setBackgroundImage:[UIImage imageNamed:] forState:<#(UIControlState)#>
         button.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -121,10 +138,10 @@
         NSString *title;
         switch (i) {
             case 0:
-                title = @"10:30";
+                title = startTimeTitleHM;
                 break;
             case 1:
-                title = @"12:00";
+                title = endTimeTitleHM;
                 break;
                 
             default:
@@ -132,9 +149,8 @@
         }
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button.tag = 1000 + i;
         button.titleLabel.font = [UIFont systemFontOfSize:13];
-        button.titleLabel.font = [UIFont systemFontOfSize:13];
-        button.tag = i + 100;
         [button addTarget:self action:@selector(hmButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [searchView addSubview:button];
     }
@@ -154,8 +170,13 @@
     DatePickerView *picker = [[DatePickerView alloc] init];
     [picker setType:YMD dateBlock:^(NSArray *dateArray) {
         [pickerViewbgView removeFromSuperview];
-        NSString *title = [NSString stringWithFormat:@"%@-%@-%@",dateArray[0],dateArray[1],dateArray[2]];
-        [button setTitle:title forState:UIControlStateNormal];
+        if (100 == button.tag) {
+            startTimeTitleYMD = [NSString stringWithFormat:@"%@-%@-%@",dateArray[0],dateArray[1],dateArray[2]];
+            [button setTitle:startTimeTitleYMD forState:UIControlStateNormal];
+        } else {
+            endTimeTitleYMD = [NSString stringWithFormat:@"%@-%@-%@",dateArray[0],dateArray[1],dateArray[2]];
+            [button setTitle:endTimeTitleYMD forState:UIControlStateNormal];
+        }
     }];
     [self.view addSubview:picker];
 }
@@ -166,8 +187,13 @@
     DatePickerView *picker = [[DatePickerView alloc] init];
     [picker setType:HM dateBlock:^(NSArray *dateArray) {
         [pickerViewbgView removeFromSuperview];
-        NSString *title = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
-        [button setTitle:title forState:UIControlStateNormal];
+        if (1000 == button.tag) {
+            startTimeTitleHM = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
+            [button setTitle:startTimeTitleHM forState:UIControlStateNormal];
+        } else {
+            endTimeTitleHM = [NSString stringWithFormat:@"%@:%@",dateArray[0],dateArray[1]];
+            [button setTitle:endTimeTitleHM forState:UIControlStateNormal];
+        }
     }];
     [self.view addSubview:picker];
 }
@@ -186,18 +212,16 @@
 
 - (void)loadData{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    //    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSDate *current = [NSDate date];
-    NSString *currentDate = [formatter stringFromDate:current];
-    
-    NSDate *date = [formatter dateFromString:currentDate];
-    
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm"];
+
+    NSDate *date = [formatter dateFromString:[NSString stringWithFormat:@"%@ %@",startTimeTitleYMD,startTimeTitleHM]];
+    NSDate *current = [formatter dateFromString:[NSString stringWithFormat:@"%@ %@",endTimeTitleYMD,endTimeTitleHM]];
     long form = [date timeIntervalSince1970];
     long to = [current timeIntervalSince1970];
     [KBDeviceManager getDevicePart:_device.sn from:form to:to block:^(BOOL isSuccess, id result) {
         _dataArray = [result mutableCopy];
-        [self.tableView reloadData];
+        NSLog(@"qqqq%@",result);
+        [_tableView reloadData];
     }];
 }
 
@@ -238,31 +262,30 @@
 }
 
 - (IBAction)click_search:(id)sender {
-    static BOOL isShowSearch = YES;
-    if (isShowSearch) {
+    if (!isShowSearch) {
         isShowSearch = !isShowSearch;
         [UIView animateWithDuration:0.3 animations:^{
-            searchView.frame = CGRectMake(0, 64, kScreenWidth  *1.5, 64);
-            self.tableView.frame = CGRectMake(0, 64 * 2, kScreenWidth, kScreenHeight - 45 - 64 * 2);
+//            searchView.frame = CGRectMake(0, 64, kScreenWidth  *1.5, 64);
+            _tableView.frame = CGRectMake(0, 64 * 2, kScreenWidth, kScreenHeight - 45 - 64 * 2);
         } completion:^(BOOL finished) {
         }];
     } else {
         isShowSearch = !isShowSearch;
-        [UIView animateWithDuration:0.3 animations:^{
             [UIView animateWithDuration:0.3 animations:^{
-                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
-                self.tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
+//                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
+                _tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
             }];
-        } completion:^(BOOL finished) {
-            //            searchView.hidden = YES;
-        }];
     }
 }
 
 -(void)searchClick
 {
-    //    BMKPolyline polylineWithPoints:<#(BMKMapPoint *)#> count:<#(NSUInteger)#>
-    [_tableView reloadData];
+    isShowSearch = !isShowSearch;
+    [UIView animateWithDuration:0.3 animations:^{
+        //                searchView.frame = CGRectMake(0, 64, kScreenWidth * 1.5, 0);
+        _tableView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64);
+    }];
+    [self loadData];
 }
 
 #pragma mark - UITableViewDelegate
@@ -271,8 +294,8 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    //    return _dataArray.count;
-    return 3;
+    return _dataArray.count;
+//    return 3;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -286,10 +309,12 @@
     [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
         self.isSelected += isSelected;
     }];
-    //    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
-    ////    mapView.delegate = cell;
-    //    cell.bottomImageview.image = [UIImage imageNamed:@"bj.png"];
-    //    [cell.bottomImageview addSubview:mapView];
+        MAMapView *mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    
+//        mapView.delegate = cell;
+//        cell.bottomImageview.image = [UIImage imageNamed:@"bj.png"];
+//    [mapView ]
+        [cell.bottomImageview addSubview:mapView];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -298,7 +323,6 @@
     if (0 != self.isSelected) {
         return;
     }
-//    TrackerReplayViewController *tracker = [[TrackerReplayViewController alloc] init];
 
     TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
     tracker.dataarray=_dataArray;
@@ -306,8 +330,8 @@
     
     KBTracePart *part = _dataArray[indexPath.row];
     NSLog(@"%@",part.startSpot.receive);
-    tracker.startTime=[part.endSpot.receive longLongValue];
-    tracker.endTime=[part.startSpot.receive longLongValue];
+    tracker.startTime =[part.endSpot.receive longLongValue];
+    tracker.endTime =[part.startSpot.receive longLongValue];
     tracker.device_sn=self.device.sn;
     
     [self.navigationController pushViewController:tracker animated:YES];

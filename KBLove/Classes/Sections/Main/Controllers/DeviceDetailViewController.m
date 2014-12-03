@@ -64,7 +64,7 @@
 {
     UIView *blank=[self.view viewWithTag:123];
 
-    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+    if ([[[KBUserInfo sharedInfo] mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         //百度地图
         baidu_MapView=[[BMKMapView alloc]init];
         UIScreen *screen=[UIScreen mainScreen];
@@ -232,7 +232,9 @@
 
 //轨迹
 - (IBAction)click_track:(UIButton *)sender{
-    
+    TraceListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TraceListViewController"];
+    vc.device = _device;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //删除

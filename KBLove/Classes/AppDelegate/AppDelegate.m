@@ -32,8 +32,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    BMKMapManager *_mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"HekPo3DvBn5qiKG3sC3aUpjE"  generalDelegate:nil];
+    _mapManager = [[BMKMapManager alloc]init];
+    BOOL ret = [_mapManager start:@"HL26duxOHEaXLapmSMNGfvrp"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }

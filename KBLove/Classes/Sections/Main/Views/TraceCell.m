@@ -30,10 +30,10 @@
 -(void)createImageView
 {
     self.bottomImageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 65, kScreenWidth, 135)];
-    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-    mapView.delegate = self;
-    mapView.scrollEnabled = NO;
-    [self.bottomImageview addSubview:mapView];
+//    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+//    mapView.delegate = self;
+//    mapView.scrollEnabled = NO;
+//    [self.bottomImageview addSubview:mapView];
     [self.contentView insertSubview:self.bottomImageview atIndex:0];
 }
 
