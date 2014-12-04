@@ -33,7 +33,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     _mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"HL26duxOHEaXLapmSMNGfvrp"  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"11ThaQc46iMQsnybLVOGXQAs"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }
@@ -110,7 +110,6 @@
     //设置支持没有客户端情况下使用SSO授权
     [UMSocialQQHandler setSupportWebView:YES];
 
-    [KBUserInfo sharedInfo].mapTypeName=kMapTypeGaodeMap;
     return YES;
 }
 
