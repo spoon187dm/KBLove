@@ -22,12 +22,22 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (0 == indexPath.row) {
+        [[KBUserInfo sharedInfo] setValue:kMapTypeGaodeMap forUndefinedKey:@"maptypename"];
+    } else if (1 == indexPath.row) {
+        [[KBUserInfo sharedInfo] setValue:kMapTypeBaiduMap forUndefinedKey:@"maptypename"];
+    }
+    
 }
 
 /*

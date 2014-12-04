@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KBLove/Classes/Sections/Main/Controllers/ZWLGaoDeMap_TrackerReplayViewController.mm"
-            timestampString = "438837091.314836"
+            filePath = "KBLove/Classes/Models/KBUserInfo.m"
+            timestampString = "439366118.312771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-save"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

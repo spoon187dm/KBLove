@@ -41,7 +41,7 @@ KBUserInfo *info = nil;
     _user_id = [ud objectForKey:@"user_id"];
     
     _mapTypeName = [ud objectForKey:@"maptypename"];
-    if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] || ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
+    if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] && ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
         _mapTypeName = kMapTypeGaodeMap;
     }
 }
@@ -61,7 +61,7 @@ KBUserInfo *info = nil;
     [ud setObject:_rrId forKey:@"rrId"];
     
     
-    if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] || ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
+    if (![_mapTypeName isEqualToString:kMapTypeBaiduMap] && ![_mapTypeName isEqualToString:kMapTypeGaodeMap]) {
         _mapTypeName = kMapTypeGaodeMap;
     }
     [ud setObject:_mapTypeName forKey:@"maptypename"];
@@ -70,7 +70,10 @@ KBUserInfo *info = nil;
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:value forKey:key];
+    [ud synchronize];
+    [self read];
 }
 
 @end

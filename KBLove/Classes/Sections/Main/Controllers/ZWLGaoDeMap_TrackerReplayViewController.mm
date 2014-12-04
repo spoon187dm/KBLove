@@ -186,12 +186,11 @@
     
     if (_isViewAllTrack) {
         [_mapView addOverlays:_allTrackPath];
-        
     } else {
         NSInteger size = _statusArray.count;
         CLLocationCoordinate2D* points = new CLLocationCoordinate2D[size];
         
-        for(int idx = size - 1; idx >= 0; idx--)
+        for(int idx = (int)size - 1; idx >= 0; idx--)
         {
             CCDeviceStatus* current = [_statusArray objectAtIndex:idx];
             points[idx] = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:current.gaode_point];

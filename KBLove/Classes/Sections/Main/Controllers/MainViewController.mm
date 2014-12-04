@@ -97,7 +97,6 @@
 
 //    [self changeNavigationBarToClear];
     [self setupData];
-    [self setupView];
     [self loadData];
 }
 
@@ -131,6 +130,7 @@
     // 设置导航栏的背景
     [self changeNavigationBarFromImage:@"bg"];
 //    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self setupView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -203,7 +203,7 @@
 - (void)setupMapView{
     
     UIView *blank=[self.view viewWithTag:21];
-    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+    if ([[[KBUserInfo sharedInfo] mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
         baidu_MapView=[[BMKMapView alloc]init];
         baidu_MapView.frame=blank.bounds;
         [blank addSubview:baidu_MapView];
@@ -215,7 +215,7 @@
         gaode_MapView.delegate=self;
     }
 
-    //设置地图显示区域
+//    设置地图显示区域
 //    CLLocationCoordinate2D cl2d = CLLocationCoordinate2DMake(40.035139, 116.311655);
 //    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
 //    MKCoordinateRegion re = MKCoordinateRegionMake(cl2d, span);
