@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MapTableViewController : UITableViewController
+
 - (IBAction)backClicked:(UIButton *)sender;
 
 @end

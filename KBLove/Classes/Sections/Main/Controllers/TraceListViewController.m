@@ -28,6 +28,9 @@
     NSString *endTimeTitleYMD;
     NSString *endTimeTitleHM;
     BOOL isShowSearch;
+    
+    long long           _currentTime;
+
 }
 
 @end
@@ -57,11 +60,9 @@
     
     [self createSearchView];
     
-//    _dataArray = [[NSMutableArray alloc] init];
-//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 45 - 64) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-//    [self.view addSubview:_tableView];
+
     [self loadData];
 }
 
@@ -305,16 +306,32 @@
     if (cell == nil) {
         cell = [[TraceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
     }
+    
     KBTracePart *part = _dataArray[indexPath.row];
+    cell.device_sn = self.device.sn;
     [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
         self.isSelected += isSelected;
     }];
-        MAMapView *mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    //    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    //    }else{
+    //        MAMapView *mapView=[[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    //        [cell.bottomImageview addSubview:mapView];
+    //    }
     
-//        mapView.delegate = cell;
-//        cell.bottomImageview.image = [UIImage imageNamed:@"bj.png"];
-//    [mapView ]
-        [cell.bottomImageview addSubview:mapView];
+    cell.baidu_MapView = mapView;
+    
+    [cell.bottomImageview addSubview:mapView];
+
+    
+//    [self addStartAndEnd];
+//    // 添加轨迹
+//    [self addTrackPath];
+    
+    
+    
+    
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -341,6 +358,80 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) addStartAndEnd
+{
+//    if (_statusArray.count <= 0 && _allReplayInfo.count <= 0) {
+//        return;
+//    }
+    
+    BMKGeoPoint start;
+    BMKGeoPoint end;
+    
+//    _startStatus = [_statusArray lastObject];
+//    start = _startStatus.point;
+//    _endStatus = [_statusArray objectAtIndex:0];
+//    end = _endStatus.point;
+//    
+//    
+//    [ZWL_MapUtils adjustMapCenterAndSpan:_mapView statusInfo:_statusArray];
+//    //    }
+//    
+//    if (_startPoint) {
+//        [_mapView removeAnnotation:_startPoint];
+//    }
+//    
+//    _startPoint = [[BMKPointAnnotation alloc] init];
+//    _startPoint.coordinate =[ZWL_MapUtils geoPoint2Coordinate2D:start];
+//    _startPoint.title= [NSString stringWithFormat:@"%f %f",_startPoint.coordinate.latitude,_startPoint.coordinate.longitude];
+//    _startPoint.subtitle=@"2sdvc24";
+//    [_mapView addAnnotation:_startPoint];
+//    
+//    if (_endPoint) {
+//        [_mapView removeAnnotation:_endPoint];
+//    }
+//    
+//    _endPoint = [[BMKPointAnnotation alloc] init];
+//    
+//    _endPoint.subtitle=@"sjdfklwje";
+//    _endPoint.coordinate =[ZWL_MapUtils geoPoint2Coordinate2D:end];
+//    _endPoint.title=[NSString stringWithFormat:@"%f %f",_endPoint.coordinate.latitude,_endPoint.coordinate.longitude];
+//    [_mapView addAnnotation:_endPoint];
+}
+
+-(void) addTrackPath
+{
+//    _lastPoint = _startStatus.point;
+//    
+//    [_mapView removeOverlay:_trackPath];
+//    [_mapView removeOverlays:_allTrackPath];
+//    [_mapView removeOverlays:_colorsTrack];
+//    
+//    [_allTrackPath removeAllObjects];
+//    
+//    [_colorsTrack removeAllObjects];
+//    [_redTrack removeAllObjects];
+//    [_greenTrack removeAllObjects];
+//    [_yellowTrack removeAllObjects];
+    
+//    if (_isViewAllTrack) {
+//        [_mapView addOverlays:_allTrackPath];
+//        
+//    } else {
+//        NSInteger size = _statusArray.count;
+//        CLLocationCoordinate2D* points = new CLLocationCoordinate2D[size];
+//        
+//        for(int idx = (int)size - 1; idx >= 0; idx--)
+//        {
+//            CCDeviceStatus* current = [_statusArray objectAtIndex:idx];
+//            points[idx] = [ZWL_MapUtils geoPoint2Coordinate2D:current.point];
+//        }
+//        //添加
+//        _trackPath = [BMKPolyline polylineWithCoordinates:points count:size];
+//        [_mapView addOverlay:_trackPath];
+//        
+//    }
 }
 
 /*

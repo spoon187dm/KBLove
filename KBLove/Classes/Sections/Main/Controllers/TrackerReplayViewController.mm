@@ -162,9 +162,9 @@
     [self updateSliderPopover:_currentTime];
 
     [self addAllStayedPoints];
-
-    [self addStartAndEnd];
     
+    [self addStartAndEnd];
+
     [self addDevicePoint];
 
     // 添加轨迹
@@ -201,6 +201,7 @@
         //添加
         _trackPath = [BMKPolyline polylineWithCoordinates:points count:size];
         [_mapView addOverlay:_trackPath];
+        
     }
 }
 
