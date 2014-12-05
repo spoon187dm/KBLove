@@ -152,6 +152,7 @@
 
 -(void) loadDataOnMap
 {
+    _gaode_MapView.delegate = self;
     _baidu_MapView.delegate = self;
 
     [self addStartAndEnd];
