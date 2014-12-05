@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0C9C2E1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9C2C1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m */; };
+		3A0C9C2F1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C9C2D1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib */; };
 		3A0E7B031A284CEE00F86B12 /* 未标题-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E7B021A284CEE00F86B12 /* 未标题-1.png */; };
 		3A14F69B1A26FB2C00B03698 /* bgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6951A26FB2C00B03698 /* bgcolor.png */; };
 		3A14F69C1A26FB2C00B03698 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A14F6961A26FB2C00B03698 /* delete.png */; };
@@ -1106,6 +1108,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A0C9C2B1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDeMap_TrackerReplayViewController.h; sourceTree = "<group>"; };
+		3A0C9C2C1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaoDeMap_TrackerReplayViewController.m; sourceTree = "<group>"; };
+		3A0C9C2D1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GaoDeMap_TrackerReplayViewController.xib; sourceTree = "<group>"; };
 		3A0E7B021A284CEE00F86B12 /* 未标题-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未标题-1.png"; sourceTree = "<group>"; };
 		3A14F6951A26FB2C00B03698 /* bgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgcolor.png; sourceTree = "<group>"; };
 		3A14F6961A26FB2C00B03698 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
@@ -4283,6 +4288,9 @@
 				F9C91FAD1A15C587003DF07A /* TrackerReplayViewController.mm */,
 				87B32FFC1A23301400B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.h */,
 				87B32FFD1A23302600B9A8E9 /* ZWLGaoDeMap_TrackerReplayViewController.mm */,
+				3A0C9C2B1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.h */,
+				3A0C9C2C1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m */,
+				3A0C9C2D1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib */,
 				87B32FF61A2313F400B9A8E9 /* TrackSearchViewController.h */,
 				87B32FF71A2313F400B9A8E9 /* TrackSearchViewController.m */,
 				87B32FF81A2313F400B9A8E9 /* TrackSearchViewController.xib */,
@@ -6793,6 +6801,7 @@
 				F9F3AF0E19F63E5800E0A0F9 /* 找回密码_06.png in Resources */,
 				BCCE86C41A11B0350014AF29 /* 051@2x.png in Resources */,
 				F9F3AFDB19F63E5800E0A0F9 /* 轨迹031_03.png in Resources */,
+				3A0C9C2F1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib in Resources */,
 				F9F3AE9B19F63E5800E0A0F9 /* 图标_100.png in Resources */,
 				F91A0E9119E7AACF009ADB44 /* blue_iOS7_navBar@2x.png in Resources */,
 				F9F3AEC819F63E5800E0A0F9 /* 圈子位置1_13.png in Resources */,
@@ -7147,6 +7156,7 @@
 				BC6F5C501A0DCFE900C4201F /* MessageViewController.m in Sources */,
 				F992464B1A048C5400599E74 /* UIScrollView+TableRefresh.m in Sources */,
 				F974108C19EC2C8700E12633 /* BannerView.m in Sources */,
+				3A0C9C2E1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m in Sources */,
 				F9E24F6019ED725900D83FEF /* ChineseInclude.m in Sources */,
 				F9C91FCB1A15C587003DF07A /* MainViewController.mm in Sources */,
 				F99246721A048D5500599E74 /* PNPieChartDataItem.m in Sources */,

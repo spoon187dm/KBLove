@@ -11,7 +11,7 @@
 #import "BMKMapView.h"
 #import <MAMapKit/MAMapKit.h>
 
-@interface TraceCell : UITableViewCell <BMKMapViewDelegate>
+@interface TraceCell : UITableViewCell <BMKMapViewDelegate,MAMapViewDelegate>
 
 {
     void (^selectBlock)(int);
