@@ -14,6 +14,7 @@
 #import "DatePickerView.h"
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
+#import "GaoDeMap_TrackerReplayViewController.h"
 
 @interface TraceListViewController ()
 
@@ -312,25 +313,21 @@
     [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
         self.isSelected += isSelected;
     }];
-    //    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+    
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        
     BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-    //    }else{
-    //        MAMapView *mapView=[[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-    //        [cell.bottomImageview addSubview:mapView];
-    //    }
-    
-    cell.baidu_MapView = mapView;
-    
+        cell.baidu_MapView = mapView;
+        [cell.bottomImageview addSubview:mapView];
+        
+    }else{
+        
+    MAMapView *mapView=[[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
     [cell.bottomImageview addSubview:mapView];
-
-    
-//    [self addStartAndEnd];
-//    // 添加轨迹
-//    [self addTrackPath];
-    
-    
-    
-    
+    cell.gaode_MapView = mapView;
+    [cell.bottomImageview addSubview:mapView];
+        
+    }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -341,17 +338,36 @@
         return;
     }
 
-    TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
-    tracker.dataarray=_dataArray;
-    tracker.selectIndex=indexPath.row;
+    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        
+        TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
+        tracker.dataarray=_dataArray;
+        tracker.selectIndex=indexPath.row;
+        
+        KBTracePart *part = _dataArray[indexPath.row];
+        NSLog(@"%@",part.startSpot.receive);
+        tracker.startTime =[part.endSpot.receive longLongValue];
+        tracker.endTime =[part.startSpot.receive longLongValue];
+        tracker.device_sn=self.device.sn;
+        
+        [self.navigationController pushViewController:tracker animated:YES];
+        
+    }else{
+        
+        GaoDeMap_TrackerReplayViewController *tracker=[[GaoDeMap_TrackerReplayViewController alloc] init];
+        tracker.dataarray=_dataArray;
+        tracker.selectIndex=indexPath.row;
+        
+        KBTracePart *part = _dataArray[indexPath.row];
+        NSLog(@"%@",part.startSpot.receive);
+        tracker.startTime =[part.endSpot.receive longLongValue];
+        tracker.endTime =[part.startSpot.receive longLongValue];
+        tracker.device_sn=self.device.sn;
+        
+        [self.navigationController pushViewController:tracker animated:YES];
+        
+    }
     
-    KBTracePart *part = _dataArray[indexPath.row];
-    NSLog(@"%@",part.startSpot.receive);
-    tracker.startTime =[part.endSpot.receive longLongValue];
-    tracker.endTime =[part.startSpot.receive longLongValue];
-    tracker.device_sn=self.device.sn;
-    
-    [self.navigationController pushViewController:tracker animated:YES];
     
 }
 

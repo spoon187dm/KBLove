@@ -1,23 +1,22 @@
 //
-//  TrackerReplayViewController.m
-//  KBLove
+//  ZWLGaoDeMap_TrackerReplayViewController.m
+//  baiDuTest
 //
-//  Created by qianfeng on 14-11-2.
-//  Copyright (c) 2014年 block. All rights reserved.
+//  Created by qianfeng on 14-10-20.
+//  Copyright (c) 2014年 zhangwenlong. All rights reserved.
 //
 
-#import "TrackerReplayViewController.h"
-#import "BMapKit.h"
+#import "GaoDeMap_TrackerReplayViewController.h"
+
 #import "CCDeviceStatus.h"
+#import <MAMapKit/MAMapKit.h>
 #import "ZWL_MapUtils.h"
-#import "KBTracePart.h"
 #import "ZWL_Utils.h"
 #import "ZWL_TimeUtils.h"
-#import "ZWL_TimeUtils.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
-#import "TrackSearchViewController.h"
+#import "BMapKit.h"
 
-@interface TrackerReplayViewController ()
+@interface GaoDeMap_TrackerReplayViewController ()
 
 @property (nonatomic, assign) NSInteger speedMode;
 
@@ -42,7 +41,8 @@
 @property (nonatomic, assign) NSInteger mapZoomLevel;
 @end
 
-@implementation TrackerReplayViewController
+@implementation GaoDeMap_TrackerReplayViewController
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -63,6 +63,7 @@
         _hasSetup = NO;
     }
     return self;
+    
 }
 
 - (void)viewDidLoad
@@ -70,11 +71,11 @@
     [super viewDidLoad];
     _mapView.delegate=self;
     
-    
     [self requestData];
+//    [self prepareData];
+    NSLog(@"------*****-----%@",_statusArray);
 //    [self loadDataOnMap];
     
-    [_slider setThumbImage:[UIImage imageNamed:@"未标题-1.png"] forState:UIControlStateNormal];
     [_slider setMinimumValue:0];
     [_slider setMaximumValue:100];
     [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -85,9 +86,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewWillAppear:YES];
     [self setStartAndEndTime:_startTime endTime:_endTime];
-    
     [self createNav];
 }
 
@@ -106,6 +106,18 @@
     [rightButton setBackgroundImage:[UIImage imageNamed:@"icon_home.png"] forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+}
+
+#pragma mark navClick
+
+-(void)leftItemClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)rightItemClick
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
@@ -140,8 +152,8 @@
                 device.sn=data_Array[i][@"deviceSn"];
                 device.stayed=[data_Array[i][@"stayed"] floatValue];
                 device.heading=[data_Array[i][@"direction"] floatValue];
-                BMKGeoPoint point={(int)device.lat,(int)device.lang};
-                device.point=point;
+                MAMapPoint point={(int)device.lat,(int)device.lang};
+                device.gaode_point=point;
                 [_statusArray addObject:device];
                 
             }
@@ -156,24 +168,24 @@
 -(void) loadDataOnMap
 {
     [self reset];
-
+    
     [self updateStartAndEndTime];
-
+    
     [self updateSliderPopover:_currentTime];
-
+    
     [self addAllStayedPoints];
     
     [self addStartAndEnd];
-
+    
     [self addDevicePoint];
-
+    
     // 添加轨迹
     [self addTrackPath];
 }
 
 -(void) addTrackPath
 {
-    _lastPoint = _startStatus.point;
+    _lastPoint = _startStatus.gaode_point;
     
     [_mapView removeOverlay:_trackPath];
     [_mapView removeOverlays:_allTrackPath];
@@ -188,42 +200,30 @@
     
     if (_isViewAllTrack) {
         [_mapView addOverlays:_allTrackPath];
-        
     } else {
         NSInteger size = _statusArray.count;
-        CLLocationCoordinate2D* points = new CLLocationCoordinate2D[size];
-        
+//        CLLocationCoordinate2D* points = new CLLocationCoordinate2D[size];
+        CLLocationCoordinate2D points[10000] = {0};
         for(int idx = (int)size - 1; idx >= 0; idx--)
         {
             CCDeviceStatus* current = [_statusArray objectAtIndex:idx];
-            points[idx] = [ZWL_MapUtils geoPoint2Coordinate2D:current.point];
+            points[idx] = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:current.gaode_point];
         }
         //添加
-        _trackPath = [BMKPolyline polylineWithCoordinates:points count:size];
+        //        _trackPath =  [MAPolyline polylineWithPoints:points count:size];
+        _trackPath =  [MAPolyline polylineWithCoordinates:points count:size];
         [_mapView addOverlay:_trackPath];
-        delete [] points;
     }
-}
-
-#pragma mark navClick
-
--(void)leftItemClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)rightItemClick
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma  mark  addDevicePoint
 
 -(void) addDevicePoint
 {
-    _currentPoint = [[BMKPointAnnotation alloc] init];
+    
+    _currentPoint = [[MAPointAnnotation alloc] init];
     CCDeviceStatus* status = [_statusArray lastObject];
-    _currentPoint.coordinate = [ZWL_MapUtils geoPoint2Coordinate2D:status.point];
+    _currentPoint.coordinate = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:status.gaode_point];
     [_mapView addAnnotation:_currentPoint];
 }
 
@@ -235,8 +235,8 @@
         return;
     }
     
-    BMKGeoPoint start;
-    BMKGeoPoint end;
+    MAMapPoint start;
+    MAMapPoint end;
     // 查看全部记录
     //    if (_isViewAllTrack) {
     //        CCSeqReplayInfo* replayInfoStart = [_allReplayInfo lastObject];
@@ -252,20 +252,19 @@
     
     //    } else {
     _startStatus = [_statusArray lastObject];
-    start = _startStatus.point;
+    start = _startStatus.gaode_point;
     _endStatus = [_statusArray objectAtIndex:0];
-    end = _endStatus.point;
+    end = _endStatus.gaode_point;
     
-    
-    [ZWL_MapUtils adjustMapCenterAndSpan:_mapView statusInfo:_statusArray];
+    [ZWL_MapUtils  adjustGaoDeMapCenterAndSpan:_mapView statusInfo:_statusArray];
     //    }
     
     if (_startPoint) {
         [_mapView removeAnnotation:_startPoint];
     }
     
-    _startPoint = [[BMKPointAnnotation alloc] init];
-    _startPoint.coordinate =[ZWL_MapUtils geoPoint2Coordinate2D:start];
+    _startPoint = [[MAPointAnnotation alloc] init];
+    _startPoint.coordinate =[ZWL_MapUtils geoGaoDePoint2Coordinate2D:start];
     _startPoint.title= [NSString stringWithFormat:@"%f %f",_startPoint.coordinate.latitude,_startPoint.coordinate.longitude];
     _startPoint.subtitle=@"2sdvc24";
     [_mapView addAnnotation:_startPoint];
@@ -274,10 +273,10 @@
         [_mapView removeAnnotation:_endPoint];
     }
     
-    _endPoint = [[BMKPointAnnotation alloc] init];
+    _endPoint = [[MAPointAnnotation alloc] init];
     
     _endPoint.subtitle=@"sjdfklwje";
-    _endPoint.coordinate =[ZWL_MapUtils geoPoint2Coordinate2D:end];
+    _endPoint.coordinate =[ZWL_MapUtils geoGaoDePoint2Coordinate2D:end];
     _endPoint.title=[NSString stringWithFormat:@"%f %f",_endPoint.coordinate.latitude,_endPoint.coordinate.longitude];
     [_mapView addAnnotation:_endPoint];
 }
@@ -347,20 +346,22 @@
 -(void) reset
 {
     _currentTime = 0;
-
+    
     NSArray* statusArray = [self getCurrentStatusArray];
     _currentIndex = statusArray.count - 1;
-
+    
     _startStatus = [statusArray lastObject];
     _endStatus = [statusArray objectAtIndex:0];
     
-    _lastPoint = _startStatus.point;
-    _currentPoint.coordinate = [ZWL_MapUtils geoPoint2Coordinate2D:_lastPoint];
-    [_mapView setCenterCoordinate:[ZWL_MapUtils geoPoint2Coordinate2D:_lastPoint] animated:YES];
+    _lastPoint = _startStatus.gaode_point;
+    _currentPoint.coordinate =  [ZWL_MapUtils  geoGaoDePoint2Coordinate2D:_lastPoint];
+    
+    [_mapView setCenterCoordinate: [ZWL_MapUtils  geoGaoDePoint2Coordinate2D:_lastPoint] animated:YES];
+    
     
     //    [_mapView removeAnnotations:_allStayedPoints];
     //    [_allStayedPoints removeAllObjects];
-
+    
     [self resetDevicePoint];
     
     [self cleanColorTrackLine];
@@ -372,15 +373,15 @@
     NSArray* statusArray = [self getCurrentStatusArray];
     NSInteger lastIndex = statusArray.count - 1;
     CCDeviceStatus* start = [statusArray objectAtIndex:lastIndex];
-    BMKGeoPoint point;
-    point.longitudeE6 = (int)start.lang;
-    point.latitudeE6 = (int)start.lat;
+    MAMapPoint point;
+    point.y = start.lang;
+    point.x = start.lat;
     _currentPointView.content = [self getStatusInfo:lastIndex];
     
     // 初始化角度
     CCDeviceStatus* next = [statusArray objectAtIndex:lastIndex - 1];
     CCDeviceStatus* current = [statusArray objectAtIndex:lastIndex];
-    _currentPointView.angle = [ZWL_MapUtils getAngel:next.point p2:current.point];
+    _currentPointView.angle = [ZWL_MapUtils getGaoDeAngel:next.gaode_point p2:current.gaode_point];
     
     NSString* iconName = @"replay_pos";
     if (_device.type == DEVICE_PERSON) {
@@ -417,17 +418,17 @@
     NSMutableString* str = [NSMutableString stringWithString:@"停留:"];
     NSInteger hour = stayed / 60 / 60;
     if (hour > 0) {
-        [str appendFormat:@"%ld小时", (long)hour];
+        [str appendFormat:@"%d小时", hour];
     }
     
     NSInteger min = stayed / 60 %60;
     if (min > 0) {
-        [str appendFormat:@"%ld分", (long)min];
+        [str appendFormat:@"%d分", min];
     }
     
     NSInteger sec = stayed % 60;
     if (sec > 0) {
-        [str appendFormat:@"%ld秒", (long)sec];
+        [str appendFormat:@"%d秒", sec];
     }
     return [NSString stringWithString:str];
 }
@@ -478,13 +479,14 @@
         [_mapView removeAnnotation:_currentPoint];
     }
     
-    _currentPoint = [[BMKPointAnnotation alloc] init];
+    _currentPoint = [[MAPointAnnotation alloc] init];
     NSArray* statusArray = [self getCurrentStatusArray];
     CCDeviceStatus* status = [statusArray objectAtIndex:_currentIndex];
-    _currentPoint.coordinate = [ZWL_MapUtils geoPoint2Coordinate2D:status.point];
+    _currentPoint.coordinate = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:status.gaode_point];
     
     [_mapView addAnnotation:_currentPoint];
-    [_mapView setCenterCoordinate:_currentPoint.coordinate];
+    
+    [_mapView setCenterCoordinate:_currentPoint.coordinate animated:YES];
     
     [self checkTimerAndMapZoom];
 }
@@ -503,6 +505,7 @@
     [_startBtn setImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
     /**
      *  currentTime	long long	1413246555250	1413246555250
+     *
      *  @return _r	long long	1413246750000	1413246750000
      */
 }
@@ -530,7 +533,7 @@
 {
     [self stopTimer];
     
-    __weak TrackerReplayViewController *vc = self;
+    __weak GaoDeMap_TrackerReplayViewController *vc = self;
     self.playTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
     dispatch_source_set_timer(_playTimer, DISPATCH_TIME_NOW,  0.05* NSEC_PER_SEC, 0 * NSEC_PER_SEC);
     dispatch_source_set_event_handler(_playTimer, ^{
@@ -546,7 +549,7 @@
 {
     if (_playState == PLAY && _currentTime < _totalTime) {
         //        long long currentTime = [CCTimeUtils getCurrentTime];
-        _currentTime += 900;//[self getTimeInterval];
+        _currentTime += 100;//[self getTimeInterval];
         
         if (_currentTime >= _totalTime) {
             _currentTime = _totalTime;
@@ -574,19 +577,19 @@
 {
     NSInteger lastIndex = _currentIndex;
     _currentIndex = [self calcCurrentIndex];//根据currentTime  而currentTime由slider滑动设置
-    NSLog(@"%ld",(long)_currentIndex);
+    NSLog(@"%d",_currentIndex);
     [self updateSliderPopover:_currentTime];
     
     NSArray* statusArray = [self getCurrentStatusArray];
     BOOL shouldCleanColorTrack = NO;
-    if (cleanLastTrack || lastIndex < _currentIndex) {
+    if (cleanLastTrack || lastIndex > _currentIndex) {
         [self cleanColorTrackLine];
         lastIndex = statusArray.count - 1;
-        _lastPoint = ((CCDeviceStatus*)[statusArray objectAtIndex:_currentIndex]).point;
+        _lastPoint = ((CCDeviceStatus*)[statusArray objectAtIndex:_currentIndex]).gaode_point;
         shouldCleanColorTrack = YES;
     }
     
-    BMKGeoPoint currentPoint = [self getCurrentPoint];
+    MAMapPoint current = [self getCurrentPoint];
     if (!_useSingleColor) {
         // 对于多轨迹显示的情况需要重新添加颜色轨迹
         if (shouldCleanColorTrack) {
@@ -598,9 +601,9 @@
             
         }else{
             CCDeviceStatus *currentD=statusArray[_currentIndex];
-            BMKGeoPoint  p=currentD.point;
-            if ((currentPoint.latitudeE6!=p.latitudeE6)||(currentPoint.longitudeE6!=p.longitudeE6)) {
-                [self addColorPointTrack:currentPoint toIndex:p status:currentD];
+            MAMapPoint  p=currentD.gaode_point;
+            if ((current.x!=p.x)||(current.y!=p.y)) {
+                [self addColorPointTrack:current toIndex:p status:currentD];
             }
         }
     }
@@ -608,15 +611,15 @@
     if (_currentIndex > 0 && lastIndex != _currentIndex) {
         CCDeviceStatus* next = [statusArray objectAtIndex:_currentIndex - 1];
         CCDeviceStatus* current = [statusArray objectAtIndex:_currentIndex];
-        CGFloat angle = [ZWL_MapUtils getAngel:next.point p2:current.point];
+        CGFloat angle = [ZWL_MapUtils getGaoDeAngel:next.gaode_point p2:current.gaode_point];
         _currentPointView.angle = angle;
         NSString* content = [self getStatusInfo:_currentIndex];
         _currentPointView.content = content;
         
     }
     
-    _lastPoint = currentPoint;
-    CLLocationCoordinate2D coord = [ZWL_MapUtils geoPoint2Coordinate2D:currentPoint];
+    _lastPoint = current;
+    CLLocationCoordinate2D coord = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:current];
     [self moveMapTo:coord];
     
     // 更新位置
@@ -629,25 +632,27 @@
 -(void) addColorTrack:(NSInteger)fromIndex toIndex:(NSInteger)toIndex
 {
     NSArray* statusArray = [self getCurrentStatusArray];
-    for (int i = (int)fromIndex; i > toIndex; i--) {
+    for (int i = fromIndex; i > toIndex; i--) {
         CCDeviceStatus* current = [statusArray objectAtIndex:i];
         CCDeviceStatus* next = [statusArray objectAtIndex:i - 1];
         if (current && next) {
-            [self addColorPointTrack:current.point toIndex:next.point status:current];
+            [self addColorPointTrack:current.gaode_point toIndex:next.gaode_point status:current];
         }
     }
 }
 // 从一个BMKGeoPoint 到另一个BMKGeoPoint 的连线    点与点之间的
--(void)addColorPointTrack:(BMKGeoPoint )beginPoint toIndex:(BMKGeoPoint )endPoint status:(CCDeviceStatus *)current
+-(void)addColorPointTrack:(MAMapPoint )beginPoint toIndex:(MAMapPoint )endPoint status:(CCDeviceStatus *)current
 {
-    CLLocationCoordinate2D* coords = new CLLocationCoordinate2D[2];
-    coords[0] = [ZWL_MapUtils geoPoint2Coordinate2D:beginPoint];
-    coords[1] = [ZWL_MapUtils geoPoint2Coordinate2D:endPoint];
-    BMKPolyline* trackLine = [BMKPolyline polylineWithCoordinates:coords count:2];
+//    CLLocationCoordinate2D* coords = new CLLocationCoordinate2D[2];
+    CLLocationCoordinate2D coords[2] = {0};
+
+    coords[0] = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:beginPoint];
+    coords[1] = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:endPoint];
+    MAPolyline *trackLine=[MAPolyline polylineWithCoordinates:coords count:2];
     [self addTrackLine:trackLine status:current addToMap:YES];
 }
 
--(void) addTrackLine:(BMKPolyline*) line status:(CCDeviceStatus*)status addToMap:(BOOL)addToMap
+-(void) addTrackLine:(MAPolyline*) line status:(CCDeviceStatus*)status addToMap:(BOOL)addToMap
 {
     if ([_colorsTrack containsObject:line]) {
         return;
@@ -672,29 +677,29 @@
 {
     NSInteger size = _allReplayInfo.count;
     for (NSInteger i = size - 1; i > _allReplayIndex; i--) {
-        //                CCSeqReplayInfo* replayInfo = [_allReplayInfo objectAtIndex:i];
-        //                NSArray* statusList = replayInfo.statusList;
-        //                NSInteger statusCount = statusList.count;
-        //                for (int i = statusCount - 1; i > 0; i--) {
-        //                    CCDeviceStatus* current = [statusList objectAtIndex:i];
-        //                    CCDeviceStatus* next = [statusList objectAtIndex:i - 1];
-        //                    if (current && next) {
-        //                        CLLocationCoordinate2D* coords = new CLLocationCoordinate2D[2];
-        //                        coords[0] = [MapUtils geoPoint2Coordinate2D:current.point];
-        //                        coords[1] = [MapUtils geoPoint2Coordinate2D:next.point];
-        //                        BMKPolyline* trackLine = [BMKPolyline polylineWithCoordinates:coords count:2];
-        //                        [self addTrackLine:trackLine status:current addToMap:YES];
-        //                    }
-        //                }
+        //        CCSeqReplayInfo* replayInfo = [_allReplayInfo objectAtIndex:i];
+        //        NSArray* statusList = replayInfo.statusList;
+        //        NSInteger statusCount = statusList.count;
+        //        for (int i = statusCount - 1; i > 0; i--) {
+        //            CCDeviceStatus* current = [statusList objectAtIndex:i];
+        //            CCDeviceStatus* next = [statusList objectAtIndex:i - 1];
+        //            if (current && next) {
+        //                CLLocationCoordinate2D* coords = new CLLocationCoordinate2D[2];
+        //                coords[0] = [MapUtils geoPoint2Coordinate2D:current.point];
+        //                coords[1] = [MapUtils geoPoint2Coordinate2D:next.point];
+        //                BMKPolyline* trackLine = [BMKPolyline polylineWithCoordinates:coords count:2];
+        //                [self addTrackLine:trackLine status:current addToMap:YES];
+        //            }
+        //        }
     }
 }
 
--(BMKGeoPoint) getCurrentPoint
+-(MAMapPoint) getCurrentPoint
 {
     
     NSArray* statusArray = [self getCurrentStatusArray];
     CCDeviceStatus* currentStatus = [statusArray objectAtIndex:_currentIndex];
-    BMKGeoPoint point = currentStatus.point;
+    MAMapPoint point = currentStatus.gaode_point;
     // 终点
     if (_currentIndex == 0) {
         return point;
@@ -704,11 +709,11 @@
     long long currentTime = _currentStartTime + _currentTime;
     if (currentTime < nextStatus.receive) {
         // 停留时间的单位是秒，需要转成毫秒
-        //        NSInteger stayedTime = currentStatus.stayed * 1000;
+        NSInteger stayedTime = currentStatus.stayed * 1000;
         /**
          *   自定义调试stayedTime=200
          */
-        if (currentTime <= currentStatus.receive + currentStatus.stayed) {
+        if (currentTime <= currentStatus.receive + 200) {
             return point;
         }
         /**
@@ -722,18 +727,18 @@
         }
         
         float percent = (float) offset / duration;
-        point = [ZWL_MapUtils getPositionByRatio:currentStatus.point end:nextStatus.point ratio:percent];
+        point = [ZWL_MapUtils getGaoDePositionByRatio:currentStatus.gaode_point end:nextStatus.gaode_point ratio:percent];
         //        debugLog(@"getCurrentPoint percent = %f, [%d, %d]", percent, point.latitudeE6, point.longitudeE6);
         return point;
     }
     
-    return  nextStatus.point;
+    return  nextStatus.gaode_point;
 }
 
 -(void) moveMapTo:(CLLocationCoordinate2D)point
 {
     
-    BMKCoordinateRegion regon = _mapView.region;
+    MACoordinateRegion regon = _mapView.region;
     CGFloat spanX = regon.span.longitudeDelta;
     CGFloat spanY = regon.span.latitudeDelta;
     
@@ -752,7 +757,7 @@
         //        [_mapView setRegion:regon animated:YES];
         [_mapView setCenterCoordinate:point animated:YES];
         
-        // FIXME: regionDidChangeAnimated 无效，所以在此延迟一定时间重新启动播放轨迹
+        // FIXME: regionDidChangeAnimated 无效，所以在此延迟30毫秒重新启动播放轨迹
         [ZWL_Utils postBlock:^{
             if (_pauseForMoveMap) {
                 _pauseForMoveMap = NO;
@@ -770,14 +775,9 @@
     long long currentTime = _currentStartTime + _currentTime;
     NSArray* statusArray = [self getCurrentStatusArray];
     NSInteger size = statusArray.count;
-    for (int i = (int)size - 1; i >= 1; i--) {
+    for (int i = size - 1; i >= 1; i--) {
         CCDeviceStatus* first = [statusArray objectAtIndex:i];
         CCDeviceStatus* second = [statusArray objectAtIndex:i - 1];
-        if(second.receive-first.receive>1200000)
-        {
-            _currentTime=second.receive;
-            return i-1;
-        }
         if (currentTime >= first.receive && currentTime < second.receive) {
             return i;
         }
@@ -811,7 +811,7 @@
     
     if (!_hasSetMapZoom) {
         _hasSetMapZoom = YES;
-        _mapView.zoomLevel = 16;
+        _mapView.zoomLevel = 14;
     }
 }
 
@@ -838,7 +838,8 @@
 
 -(void)onPause
 {
-    [_mapView viewWillDisappear];
+    //    [_mapView viewWillDisappear];
+    //    _mapView disap
     _mapView.delegate = nil;
     self.mapZoomLevel = _mapView.zoomLevel;
     
@@ -850,7 +851,7 @@
 
 -(void)onResume
 {
-    [_mapView viewWillAppear];
+    //    [_mapView viewWillAppear];
     _mapView.delegate = self;
     _mapView.zoomLevel = self.mapZoomLevel;
     
@@ -863,105 +864,28 @@
     }
 }
 
-- (IBAction)playfrontItem:(id)sender {
-    if (self.selectIndex==0) {
-        [UIAlertView showWithTitle:@"提示" Message:@"当前已经是第一条数据了！" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-            
-        }];
-        return;
-    }
-    KBTracePart *part = self.dataarray[self.selectIndex];
-    self.startTime=[part.endSpot.receive longLongValue];
-    self.endTime=[part.startSpot.receive longLongValue];
-    [self viewWillAppear:YES];
-}
 
-- (IBAction)playnextItem:(id)sender {
-    if (self.selectIndex==self.dataarray.count-1) {
-        [UIAlertView showWithTitle:@"提示" Message:@"当前已经是最后一条数据了！" cancle:@"确定" otherbutton:nil block:^(NSInteger index) {
-            
-        }];
-        return;
-    }
-    KBTracePart *part = self.dataarray[--self.selectIndex];
-    self.startTime=[part.endSpot.receive longLongValue];
-    self.endTime=[part.startSpot.receive longLongValue];
-    [self viewWillAppear:YES];
-    
-}
 
-- (IBAction)zoomInMap:(id)sender
+#pragma mammaoview delegate
+
+-(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
-    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
-        float zoomlevel=_mapView.zoomLevel;
-        _mapView.zoomLevel=++zoomlevel;
-    }else{
-        float zoomlevel=_mapView.zoomLevel;
-        _mapView.zoomLevel=++zoomlevel;
-    }
-}
-- (IBAction)zoomOutMap:(id)sender
-{
-    if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
-        float zoomlevel=_mapView.zoomLevel;
-        _mapView.zoomLevel=--zoomlevel;
-    }else{
-        float zoomlevel=_mapView.zoomLevel;
-        _mapView.zoomLevel=--zoomlevel;
-    }
-}
-
-
-#pragma BKMapView delegate
-
-- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
-{
-    
-    //    // 检查是否有重用的缓存
-    //    BMKAnnotationView* newAnnotation = [mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
-    /**
-     
-     */
-    //    if (newAnnotation == nil) {
-    //        newAnnotation = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID] ;
-    //        // 设置颜色
-    //		((BMKPinAnnotationView*)newAnnotation).pinColor = BMKPinAnnotationColorPurple;
-    //        // 从天上掉下效果
-    //		((BMKPinAnnotationView*)newAnnotation).animatesDrop = YES;
-    //        // 设置可拖拽
-    //		((BMKPinAnnotationView*)newAnnotation).draggable = YES;
-    //		return newAnnotation;
-    //    }
-    
-    //	return nil;
-    
     static NSString* annotationIdentifier = @"warningPin";
-    //    if ([annotation isKindOfClass:[CCStayedPointAnnotation class]]) {
-    //        CCStayedPointAnnotationView* annView = [[CCStayedPointAnnotationView alloc] initWithAnnotation:annotation
-    //                                                                                       reuseIdentifier:annotationIdentifier];
-    //
-    //        CCStayedPointAnnotation* point =  (CCStayedPointAnnotation*)annotation;
-    //        annView.text = point.text;
-    //        annView.coord = point.coordinate;
-    //        annView.content = [self getStayedTime:point.status.stayed];
-    //        return annView;
-    //    }
-    //    else
-    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
         if (annotation == _startPoint) {
-            BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
-                                                                             reuseIdentifier:annotationIdentifier];
+            MAAnnotationView* annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                                     reuseIdentifier:annotationIdentifier];
             annView.image =  [UIImage imageNamed:@"dt_start.png"];
             return annView;
             
         } else if (annotation == _endPoint) {
-            BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
-                                                                             reuseIdentifier:annotationIdentifier];
+            MAAnnotationView* annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                                     reuseIdentifier:annotationIdentifier];
             annView.image =  [UIImage imageNamed:@"dt_end.png"];
             return annView;
         } else if (annotation == _currentPoint) {
-            _currentPointView = [[CCReplayAnnotationView alloc] initWithAnnotation:annotation
-                                                                   reuseIdentifier:annotationIdentifier];
+            _currentPointView = [[CCReplayGaoDeAnnotationView alloc] initWithAnnotation:annotation
+                                                                        reuseIdentifier:annotationIdentifier];
             
             [self resetDevicePoint];
             return _currentPointView;
@@ -970,51 +894,47 @@
     return nil;
 }
 
--(void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
-{
-    //    if ([view isKindOfClass:[CCStayedPointAnnotationView class]]) {
-    //        CCStayedPointAnnotationView* annView = (CCStayedPointAnnotationView*)view;
-    //        annView.showPopup = YES;
-    //        [_mapView setCenterCoordinate:view.annotation.coordinate animated:YES];
-    //    }
-}
 
--(void)mapView:(BMKMapView *)mapView didDeselectAnnotationView:(BMKAnnotationView *)view
-{
-    //    if ([view isKindOfClass:[CCStayedPointAnnotationView class]]) {
-    //        CCStayedPointAnnotationView* annView = (CCStayedPointAnnotationView*)view;
-    //        annView.showPopup = NO;
-    //    }
-}
-
--(void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view
-{
-}
-
-- (BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id )overlay
+-(MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id<MAOverlay>)overlay
 {
     if (overlay == _trackPath || [_allTrackPath containsObject:overlay]) {
-        BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
+        MAPolylineView* polylineView = [[MAPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = GRAY_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
         return polylineView;
     } else if ([_redTrack containsObject:overlay]){
-        BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
+        MAPolylineView* polylineView = [[MAPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = RED_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
         return polylineView;
     } else if ([_greenTrack containsObject:overlay]){
-        BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
+        MAPolylineView* polylineView = [[MAPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = GREEN_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
         return polylineView;
     } else if ([_yellowTrack containsObject:overlay]){
-        BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
+        MAPolylineView* polylineView = [[MAPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = YELLOW_LINE_COLOR;
         polylineView.lineWidth = TRACK_LINE_SIZE;
         return polylineView;
     }
     return nil;
+}
+
+#pragma BKMapView delegate
+
+-(void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
+{
+    
+}
+
+-(void)mapView:(BMKMapView *)mapView didDeselectAnnotationView:(BMKAnnotationView *)view
+{
+    
+}
+
+-(void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view
+{
 }
 
 -(void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
@@ -1031,19 +951,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}/*
-  #pragma mark - Navigation
-  
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-  {
-  // Get the new view controller using [segue destinationViewController].
-  // Pass the selected object to the new view controller.
-  }
-  */
-
-- (IBAction)search_click:(id)sender {
-    TrackSearchViewController *trackSearch = [[TrackSearchViewController alloc] init];
-    [self.navigationController pushViewController:trackSearch animated:YES];
 }
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
 @end
