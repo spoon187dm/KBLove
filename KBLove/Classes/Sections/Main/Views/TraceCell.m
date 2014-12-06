@@ -392,7 +392,7 @@
         return polylineView;
 }
 
-#elif isBMap == N0
+#else
 
 -(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
