@@ -134,6 +134,9 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
+//    if ([[[KBUserInfo sharedInfo] mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+//        [BMKMapView viewWillDisappear:YES];
+//    }
     [super viewWillDisappear:animated];
 //    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
