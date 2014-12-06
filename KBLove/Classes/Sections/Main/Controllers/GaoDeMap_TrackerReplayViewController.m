@@ -14,7 +14,7 @@
 #import "ZWL_Utils.h"
 #import "ZWL_TimeUtils.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
-#import "BMapKit.h"
+//#import "BMapKit.h"
 
 @interface GaoDeMap_TrackerReplayViewController ()
 
@@ -163,23 +163,23 @@
         NSLog(@"error :%@",error.localizedDescription);
         
     }];
-    
 }
+
 -(void) loadDataOnMap
 {
     [self reset];
-    
+//
     [self updateStartAndEndTime];
-    
+//
     [self updateSliderPopover:_currentTime];
-    
+//
     [self addAllStayedPoints];
-    
+//
     [self addStartAndEnd];
-    
+//
     [self addDevicePoint];
-    
-    // 添加轨迹
+//
+//    // 添加轨迹
     [self addTrackPath];
 }
 
@@ -418,17 +418,17 @@
     NSMutableString* str = [NSMutableString stringWithString:@"停留:"];
     NSInteger hour = stayed / 60 / 60;
     if (hour > 0) {
-        [str appendFormat:@"%d小时", hour];
+        [str appendFormat:@"%ld小时", hour];
     }
     
     NSInteger min = stayed / 60 %60;
     if (min > 0) {
-        [str appendFormat:@"%d分", min];
+        [str appendFormat:@"%ld分", min];
     }
     
     NSInteger sec = stayed % 60;
     if (sec > 0) {
-        [str appendFormat:@"%d秒", sec];
+        [str appendFormat:@"%ld秒", sec];
     }
     return [NSString stringWithString:str];
 }
@@ -577,7 +577,7 @@
 {
     NSInteger lastIndex = _currentIndex;
     _currentIndex = [self calcCurrentIndex];//根据currentTime  而currentTime由slider滑动设置
-    NSLog(@"%d",_currentIndex);
+    NSLog(@"%ld",_currentIndex);
     [self updateSliderPopover:_currentTime];
     
     NSArray* statusArray = [self getCurrentStatusArray];
@@ -632,7 +632,7 @@
 -(void) addColorTrack:(NSInteger)fromIndex toIndex:(NSInteger)toIndex
 {
     NSArray* statusArray = [self getCurrentStatusArray];
-    for (int i = fromIndex; i > toIndex; i--) {
+    for (int i = (int)fromIndex; i > toIndex; i--) {
         CCDeviceStatus* current = [statusArray objectAtIndex:i];
         CCDeviceStatus* next = [statusArray objectAtIndex:i - 1];
         if (current && next) {
@@ -775,7 +775,7 @@
     long long currentTime = _currentStartTime + _currentTime;
     NSArray* statusArray = [self getCurrentStatusArray];
     NSInteger size = statusArray.count;
-    for (int i = size - 1; i >= 1; i--) {
+    for (int i = (int)size - 1; i >= 1; i--) {
         CCDeviceStatus* first = [statusArray objectAtIndex:i];
         CCDeviceStatus* second = [statusArray objectAtIndex:i - 1];
         if (currentTime >= first.receive && currentTime < second.receive) {
