@@ -101,9 +101,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oi-y8-npG">
-                                <rect key="frame" x="244" y="119" width="46" height="20"/>
-                                <state key="normal" title="查找">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oi-y8-npG">
+                                <rect key="frame" x="270" y="115" width="27" height="27"/>
+                                <state key="normal" image="好友2_08_02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -112,7 +112,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXn-Mj-N2T" customClass="AddFriendButton">
                                 <rect key="frame" x="16" y="202" width="288" height="40"/>
-                                <state key="normal" title="从通讯录添加好友" image="pwdRem.png" backgroundImage="lgtextfield.png">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="-90" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="从通讯录添加好友" image="好友2_11_02.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -121,16 +123,17 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZh-Jh-2Gh" customClass="AddFriendButton">
                                 <rect key="frame" x="16" y="263" width="288" height="40"/>
-                                <state key="normal" title="邀请QQ好友" image="pwdRem.png" backgroundImage="lgtextfield.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="邀请QQ好友" image="好友2_11_02.png"/>
                                 <connections>
                                     <action selector="addFromQQBtnClicked:" destination="5Y7-DB-6Of" eventType="touchUpInside" id="nAw-QB-Xbo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7v-hd-cTs" customClass="AddFriendButton">
                                 <rect key="frame" x="16" y="324" width="288" height="40"/>
-                                <state key="normal" title="邀请微博好友" image="pwdRem.png" backgroundImage="lgtextfield.png">
+                                <inset key="contentEdgeInsets" minX="-143" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="邀请微博好友" image="好友2_11_02.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -163,7 +166,7 @@
             </objects>
             <point key="canvasLocation" x="466" y="-376"/>
         </scene>
-        <!--搜索结果-->
+        <!--添加好友-->
         <scene sceneID="Vuu-Eg-Clk">
             <objects>
                 <viewController storyboardIdentifier="SearchResultViewController" id="fRU-Dn-h7P" customClass="SearchResultViewController" sceneMemberID="viewController">
@@ -228,7 +231,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="搜索结果" id="QIa-wi-vT7">
+                    <navigationItem key="navigationItem" title="添加好友" id="QIa-wi-vT7">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Y2L-gg-XQo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EzD-ex-Zhe">
                                 <rect key="frame" x="16" y="7" width="30" height="30"/>
@@ -258,7 +261,8 @@
         <image name="background.png" width="320" height="568"/>
         <image name="lgtextfield.png" width="487" height="79"/>
         <image name="lgusername.png" width="20" height="16"/>
-        <image name="pwdRem.png" width="31" height="31"/>
+        <image name="好友2_08_02.png" width="47" height="48"/>
+        <image name="好友2_11_02.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

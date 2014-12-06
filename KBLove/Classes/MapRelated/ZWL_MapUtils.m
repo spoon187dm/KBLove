@@ -299,38 +299,38 @@ static ZWL_MapUtils *maptool;
     [ZWL_MapUtils adjustMapCenterAndSpan:mapView start:[ZWL_MapUtils geoPoint2Coordinate2D:topLeft] end:[ZWL_MapUtils geoPoint2Coordinate2D:bottomRight]];
 }
 
-+(void) adjustGaoDeMapCenterAndSpan:(MAMapView*)mapView statusInfo:(NSArray*) statusInfo{
-    
-}
-//
-//+(void) adjustGaoDeMapCenterAndSpan:(MAMapView*)mapView statusInfo:(NSArray*) statusInfo // CCDeviceStatus
-//{
-//    NSInteger size = statusInfo.count;
-//    CCDeviceStatus* status =  [statusInfo objectAtIndex:0];
-//    MAMapPoint topLeft =  status.gaode_point;
-//    MAMapPoint bottomRight = status.gaode_point;
+//+(void) adjustGaoDeMapCenterAndSpan:(MAMapView*)mapView statusInfo:(NSArray*) statusInfo{
 //    
-//    for (NSInteger i = 1; i < size; i++) {
-//        status = [statusInfo objectAtIndex:i];
-//        if (status.lat < topLeft.x) {
-//            topLeft.x = status.lat;
-//        }
-//        
-//        if (status.lang < topLeft.y) {
-//            topLeft.y = status.lang;
-//        }
-//        
-//        if (status.lat > bottomRight.x) {
-//            bottomRight.x = status.lat;
-//        }
-//        
-//        if (status.lang > bottomRight.y) {
-//            bottomRight.y = status.lang;
-//        }
-//    }
-//    
-//    [ZWL_MapUtils adjustGaoDeMapCenterAndSpan:mapView start:[ZWL_MapUtils geoGaoDePoint2Coordinate2D:topLeft] end:[ZWL_MapUtils geoGaoDePoint2Coordinate2D:bottomRight]];
 //}
+
++(void) adjustGaoDeMapCenterAndSpan:(MAMapView*)mapView statusInfo:(NSArray*) statusInfo // CCDeviceStatus
+{
+    NSInteger size = statusInfo.count;
+    CCDeviceStatus* status =  [statusInfo objectAtIndex:0];
+    MAMapPoint topLeft =  status.gaode_point;
+    MAMapPoint bottomRight = status.gaode_point;
+    
+    for (NSInteger i = 1; i < size; i++) {
+        status = [statusInfo objectAtIndex:i];
+        if (status.lat < topLeft.x) {
+            topLeft.x = status.lat;
+        }
+        
+        if (status.lang < topLeft.y) {
+            topLeft.y = status.lang;
+        }
+        
+        if (status.lat > bottomRight.x) {
+            bottomRight.x = status.lat;
+        }
+        
+        if (status.lang > bottomRight.y) {
+            bottomRight.y = status.lang;
+        }
+    }
+    
+    [ZWL_MapUtils adjustGaoDeMapCenterAndSpan:mapView start:[ZWL_MapUtils geoGaoDePoint2Coordinate2D:topLeft] end:[ZWL_MapUtils geoGaoDePoint2Coordinate2D:bottomRight]];
+}
 
 
 //在地图上增加区域

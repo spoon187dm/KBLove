@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DeviceDataViewController.h"
 #import "WLPieView.h"
+#import "CalendarView.h"
 
 @interface PetAndPersonDataViewController : DeviceDataViewController
 - (IBAction)back_btn:(id)sender;
@@ -27,5 +28,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *averageExerciseLabel;
 //底部scrollView
 @property (strong, nonatomic) IBOutlet UIScrollView *petScrollVIew;
+/** 日历 */
+@property (strong, nonatomic) CalendarView *calen;
 
 @end

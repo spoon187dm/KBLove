@@ -39,7 +39,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" id="Zkw-Gc-RZf" customClass="RecteView">
-                                <rect key="frame" x="20" y="250.00000091708728" width="280" height="306"/>
+                                <rect key="frame" x="20" y="250.00000060484132" width="280" height="306"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="ujr-kd-aXb">
@@ -503,7 +503,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" id="7qR-PF-pIk" customClass="RecteView">
-                                <rect key="frame" x="20" y="250.00000091708728" width="280" height="306"/>
+                                <rect key="frame" x="20" y="250.00000060484132" width="280" height="306"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteline.png" id="frH-i6-1as">
