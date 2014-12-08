@@ -2144,7 +2144,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="click_back" destination="rwb-8S-hVp" id="Zn1-CB-xLZ"/>
-                        <outlet property="tableView" destination="DAL-8L-6QF" id="aGk-8t-I0Q"/>
+                        <outlet property="tableView" destination="DAL-8L-6QF" id="OmY-sl-ZAl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNe-qc-TgI" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -103,8 +103,7 @@
         [self requestMAMapData];
     }
     
-    infoView = [[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
-    [self.contentView addSubview:infoView];
+    [self createInfo];
     
     [self addLocusListViewSwipe];
     
@@ -124,6 +123,18 @@
     float traveltravel = (-[part.endTime floatValue]+[part.startTime floatValue])/1000.0;
     traveltravel /=60.0*60.0;
     infoView.travelLastTimeLabel.text = [NSString stringWithFormat:@"%.1f 小时",traveltravel];
+}
+
+-(void)createInfo
+{
+    NSArray *subArray = [self.contentView subviews];
+    for (id obj in subArray) {
+        if ([obj class] == [[[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject] class]) {
+            return;
+        }
+    }
+    infoView = [[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
+    [self.contentView addSubview:infoView];
 }
 
 -(void)requestBMapData

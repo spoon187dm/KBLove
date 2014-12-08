@@ -23,7 +23,6 @@
     UIButton *selectAllbutton;
     UIView *searchView;
     UIView *pickerViewbgView;
-    UITableView *_tableView;
     NSString *startTimeTitleYMD;
     NSString *startTimeTitleHM;
     NSString *endTimeTitleYMD;
@@ -43,7 +42,7 @@
     // Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
     [self setUpView];
     
     //    __weak typeof(self) weakSelf = self;
