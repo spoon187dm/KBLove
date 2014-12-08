@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0AF58F1A3569AD005745D1 /* bgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AF5891A3569AD005745D1 /* bgcolor.png */; };
+		3A0AF5901A3569AD005745D1 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AF58A1A3569AD005745D1 /* delete.png */; };
+		3A0AF5911A3569AD005745D1 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AF58B1A3569AD005745D1 /* player.png */; };
+		3A0AF5921A3569AD005745D1 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AF58C1A3569AD005745D1 /* search.png */; };
+		3A0AF5931A3569AD005745D1 /* search2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AF58D1A3569AD005745D1 /* search2.png */; };
+		3A0AF5941A3569AD005745D1 /* sliderbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0AF58E1A3569AD005745D1 /* sliderbg.png */; };
 		3A0C9C2E1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9C2C1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m */; };
 		3A0C9C2F1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C9C2D1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib */; };
 		3A1B23241A31AE06002661F6 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B23231A31AE06002661F6 /* CalendarView.m */; };
@@ -1304,6 +1310,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A0AF5891A3569AD005745D1 /* bgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgcolor.png; sourceTree = "<group>"; };
+		3A0AF58A1A3569AD005745D1 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		3A0AF58B1A3569AD005745D1 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		3A0AF58C1A3569AD005745D1 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		3A0AF58D1A3569AD005745D1 /* search2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search2.png; sourceTree = "<group>"; };
+		3A0AF58E1A3569AD005745D1 /* sliderbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderbg.png; sourceTree = "<group>"; };
 		3A0C9C2B1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaoDeMap_TrackerReplayViewController.h; sourceTree = "<group>"; };
 		3A0C9C2C1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaoDeMap_TrackerReplayViewController.m; sourceTree = "<group>"; };
 		3A0C9C2D1A305373003BB23B /* GaoDeMap_TrackerReplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GaoDeMap_TrackerReplayViewController.xib; sourceTree = "<group>"; };
@@ -4740,6 +4752,12 @@
 		3A1B2A321A31BE94002661F6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3A0AF5891A3569AD005745D1 /* bgcolor.png */,
+				3A0AF58A1A3569AD005745D1 /* delete.png */,
+				3A0AF58B1A3569AD005745D1 /* player.png */,
+				3A0AF58C1A3569AD005745D1 /* search.png */,
+				3A0AF58D1A3569AD005745D1 /* search2.png */,
+				3A0AF58E1A3569AD005745D1 /* sliderbg.png */,
 				3A1B2A331A31BE94002661F6 /* 轨迹01_03.png */,
 			);
 			path = images;
@@ -7706,6 +7724,7 @@
 				3A1B2B3D1A31BE94002661F6 /* 报警模块31_11.png in Resources */,
 				3A1B2BF11A31BE94002661F6 /* 设置04修改围栏2_03.png in Resources */,
 				3A1B2B2A1A31BE94002661F6 /* 绑定邮箱_10.png in Resources */,
+				3A0AF5901A3569AD005745D1 /* delete.png in Resources */,
 				F91A0E5919E7AACF009ADB44 /* lgtoolbar@2x.png in Resources */,
 				BCCE86651A11B0350014AF29 /* 003@2x.png in Resources */,
 				3A1B2CA11A31BFC1002661F6 /* 消息提醒1_01_1.png in Resources */,
@@ -7834,6 +7853,7 @@
 				3A1B2BFF1A31BE94002661F6 /* 设置04创建围栏_21.png in Resources */,
 				F91A0E8619E7AACF009ADB44 /* black_iOS6_navBar.png in Resources */,
 				3A1B2A681A31BE94002661F6 /* 主界面011_0311_05_02.png in Resources */,
+				3A0AF58F1A3569AD005745D1 /* bgcolor.png in Resources */,
 				3A1B2AF01A31BE94002661F6 /* 好友信息_30_02.png in Resources */,
 				3A1B2B941A31BE94002661F6 /* 数据08_02.png in Resources */,
 				F91A0E9C19E7AACF009ADB44 /* red_theme.png in Resources */,
@@ -8034,6 +8054,7 @@
 				3A1B2B7A1A31BE94002661F6 /* 数据04_07.png in Resources */,
 				3A1B27CC1A31BDE3002661F6 /* Me_StoryBoardN.storyboard in Resources */,
 				BCCE86DB1A11B0350014AF29 /* 063.png in Resources */,
+				3A0AF5931A3569AD005745D1 /* search2.png in Resources */,
 				3A1B2D301A31BFEC002661F6 /* 我的11_02_1.png in Resources */,
 				3A1B2D381A31BFEC002661F6 /* 绑定设备1_09.png in Resources */,
 				BCCE86C61A11B0350014AF29 /* 052@2x.png in Resources */,
@@ -8124,6 +8145,7 @@
 				3A1B2BD91A31BE94002661F6 /* 设备界面_03_02.png in Resources */,
 				3A1B2A731A31BE94002661F6 /* 主界面01_33_02.png in Resources */,
 				3A1B2B911A31BE94002661F6 /* 数据07_41.png in Resources */,
+				3A0AF5941A3569AD005745D1 /* sliderbg.png in Resources */,
 				3A1B2B3B1A31BE94002661F6 /* 报警模块31_03.png in Resources */,
 				BC44AD7519F166440067764F /* SendMessageView.xib in Resources */,
 				BCCE871B1A11B0350014AF29 /* 095.png in Resources */,
@@ -8240,6 +8262,7 @@
 				3A1B2BA91A31BE94002661F6 /* 登录_10.png in Resources */,
 				3A1B2B611A31BE94002661F6 /* 红.png in Resources */,
 				3A1B2B7B1A31BE94002661F6 /* 数据04_09.png in Resources */,
+				3A0AF5911A3569AD005745D1 /* player.png in Resources */,
 				F944A7D51A14D55800877017 /* UMShareEditViewControlleriPad.xib in Resources */,
 				3A1B2B321A31BE94002661F6 /* 报警模块1_03.png in Resources */,
 				3A1B2C891A31BFC1002661F6 /* 地图选择11_06_1.png in Resources */,
@@ -8357,6 +8380,7 @@
 				F91A0E8519E7AACF009ADB44 /* unreadRedIndicator.png in Resources */,
 				F944A7D61A14D55800877017 /* UMSLoginViewController.xib in Resources */,
 				3A1B2C9B1A31BFC1002661F6 /* 密码修改_1.png in Resources */,
+				3A0AF5921A3569AD005745D1 /* search.png in Resources */,
 				F91A0E8819E7AACF009ADB44 /* black_iOS7_navBar.png in Resources */,
 				3A1B2C8B1A31BFC1002661F6 /* 地图选择1_03_1.png in Resources */,
 				F91A0E5119E7AACF009ADB44 /* lgtextfield.png in Resources */,
