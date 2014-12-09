@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class KBTracePart;
-#import "BMKMapView.h"
+#import <MAMapKit/MAMapKit.h>
 
-@interface TraceCell : UITableViewCell <BMKMapViewDelegate>
+@interface MAMapCell : UITableViewCell <MAMapViewDelegate>
 
 {
     void (^selectBlock)(int);
@@ -22,7 +22,7 @@
 @property (nonatomic ,strong) UIImageView *bottomImageview;
 @property (nonatomic, strong) NSMutableArray* statusArray;      //
 
-@property (nonatomic,strong) BMKMapView *baidu_MapView;
+@property (nonatomic,strong) MAMapView *gaode_MapView;
 
 - (void)setUpViewWithModel:(KBTracePart *)part selectedBlock:(void (^)(int))block;
 

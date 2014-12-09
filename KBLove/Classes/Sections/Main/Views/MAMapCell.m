@@ -6,32 +6,33 @@
 //  Copyright (c) 2014年 block. All rights reserved.
 //
 
-#import "TraceCell.h"
+#import "MAMapCell.h"
 #import <UIImageView+AFNetworking.h>
 #import "TraceInfoView.h"
 #import "KBTracePart.h"
-#import "BMapKit.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import "CCDeviceStatus.h"
 #import "ZWL_MapUtils.h"
 #import "TrackerReplayViewController.h"
 #import "CCReplayGaoDeAnnotationView.h"
 
-@implementation TraceCell
+@implementation MAMapCell
 
 {
     TraceInfoView *infoView;
     
-    BMKGeoPoint         _lastBMapPoint;
     CCDeviceStatus*     _startStatus;
-    BMKPolyline*        _trackBMapPath;
-    BMKPointAnnotation* _startBMapPoint;
     NSMutableArray*     _colorsTrack;
     
-    BMKPointAnnotation* _endBMapPoint;
-    BMKPointAnnotation* _currentBMapPoint;
-    CCReplayAnnotationView* _currentPointBMapView;
     CCDeviceStatus*     _endStatus;
+    
+    MAMapPoint         _lastMAMapPoint;
+    MAPolyline*        _trackMAmapPath;
+    MAPointAnnotation* _startMAMapPoint;
+    
+    MAPointAnnotation* _endMAMapPoint;
+    MAPointAnnotation* _currentMAMapPoint;
+    CCReplayGaoDeAnnotationView *_currentPointMAMapView;
     
 }
 
@@ -65,8 +66,8 @@
 -(void)createImageView
 {
     self.bottomImageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 65, kScreenWidth, 135)];
-    _baidu_MapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-    [_bottomImageview addSubview:_baidu_MapView];
+    _gaode_MapView =[[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
+    [_bottomImageview addSubview:_gaode_MapView];
     [self.contentView insertSubview:_bottomImageview atIndex:0];
 }
 
@@ -100,7 +101,7 @@
     _startTime =[part.endSpot.receive longLongValue];
     _endTime =[part.startSpot.receive longLongValue];
     
-    [self requestBMapData];
+    [self requestMAMapData];
     
     selectBlock = [block copy];
     
@@ -119,17 +120,18 @@
 
 -(void)createInfo
 {
-//    NSArray *subArray = [self.contentView subviews];
-//    for (id obj in subArray) {
-//        if ([obj class] == [[[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject] class]) {
-//            return;
-//        }
-//    }
+    //    NSArray *subArray = [self.contentView subviews];
+    //    for (id obj in subArray) {
+    //        if ([obj class] == [[[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject] class]) {
+    //            return;
+    //        }
+    //    }
     infoView = [[[NSBundle mainBundle] loadNibNamed:@"TraceInfoView" owner:self options:nil] lastObject];
     [self.contentView addSubview:infoView];
 }
 
--(void)requestBMapData
+
+-(void)requestMAMapData
 {
     AFHTTPRequestOperationManager *manager=[[AFHTTPRequestOperationManager alloc]init];
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/json"];
@@ -160,13 +162,13 @@
                 device.sn=data_Array[i][@"deviceSn"];
                 device.stayed=[data_Array[i][@"stayed"] floatValue];
                 device.heading=[data_Array[i][@"direction"] floatValue];
-                BMKGeoPoint point={(int)device.lat,(int)device.lang};
-                device.point=point;
+                MAMapPoint point={(int)device.lat,(int)device.lang};
+                device.gaode_point=point;
                 [_statusArray addObject:device];
                 
             }
             
-                [self loadDataOnBMap];
+            [self loadDataOnMAMap];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error :%@",error.localizedDescription);
@@ -174,110 +176,106 @@
     }];
 }
 
--(void) loadDataOnBMap
+-(void)loadDataOnMAMap
 {
-    _baidu_MapView.delegate = self;
-
-    [self addStartAndEndBMap];
-
+    _gaode_MapView.delegate = self;
+    
+    [self addStartAndEndMAMap];
+    
     // 添加轨迹
-    [self addTrackPathBMap];
+    [self addTrackPathMAMap];
 }
 
-
--(void) addStartAndEndBMap
+-(void) addStartAndEndMAMap
 {
-    BMKGeoPoint start;
-    BMKGeoPoint end;
+    MAMapPoint start;
+    MAMapPoint end;
     
     _startStatus = [_statusArray lastObject];
-    start = _startStatus.point;
+    start = _startStatus.gaode_point;
     _endStatus = [_statusArray objectAtIndex:0];
-    end = _endStatus.point;
+    end = _endStatus.gaode_point;
     
+    [ZWL_MapUtils  adjustGaoDeMapCenterAndSpan:_gaode_MapView statusInfo:_statusArray];
     
-    [ZWL_MapUtils adjustMapCenterAndSpan:_baidu_MapView statusInfo:_statusArray];
-
-    
-    if (_startBMapPoint) {
-        [_baidu_MapView removeAnnotation:_startBMapPoint];
+    if (_startMAMapPoint) {
+        [_gaode_MapView removeAnnotation:_startMAMapPoint];
     }
     
-    _startBMapPoint = [[BMKPointAnnotation alloc] init];
-    _startBMapPoint.coordinate =[ZWL_MapUtils geoPoint2Coordinate2D:start];
-    _startBMapPoint.title= [NSString stringWithFormat:@"%f %f",_startBMapPoint.coordinate.latitude,_startBMapPoint.coordinate.longitude];
-    _startBMapPoint.subtitle=@"2sdvc24";
-    [_baidu_MapView addAnnotation:_startBMapPoint];
+    _startMAMapPoint = [[MAPointAnnotation alloc] init];
+    _startMAMapPoint.coordinate =[ZWL_MapUtils geoGaoDePoint2Coordinate2D:start];
+    _startMAMapPoint.title= [NSString stringWithFormat:@"%f %f",_startMAMapPoint.coordinate.latitude,_startMAMapPoint.coordinate.longitude];
+    _startMAMapPoint.subtitle=@"2sdvc24";
+    [_gaode_MapView addAnnotation:_startMAMapPoint];
     
-    if (_endBMapPoint) {
-        [_baidu_MapView removeAnnotation:_endBMapPoint];
+    if (_endMAMapPoint) {
+        [_gaode_MapView removeAnnotation:_endMAMapPoint];
     }
     
-    _endBMapPoint = [[BMKPointAnnotation alloc] init];
+    _endMAMapPoint = [[MAPointAnnotation alloc] init];
     
-    _endBMapPoint.subtitle=@"sjdfklwje";
-    _endBMapPoint.coordinate =[ZWL_MapUtils geoPoint2Coordinate2D:end];
-    _endBMapPoint.title=[NSString stringWithFormat:@"%f %f",_endBMapPoint.coordinate.latitude,_endBMapPoint.coordinate.longitude];
-    [_baidu_MapView addAnnotation:_endBMapPoint];
+    _endMAMapPoint.subtitle=@"sjdfklwje";
+    _endMAMapPoint.coordinate =[ZWL_MapUtils geoGaoDePoint2Coordinate2D:end];
+    _endMAMapPoint.title=[NSString stringWithFormat:@"%f %f",_endMAMapPoint.coordinate.latitude,_endMAMapPoint.coordinate.longitude];
+    [_gaode_MapView addAnnotation:_endMAMapPoint];
 }
 
--(void) addTrackPathBMap
+-(void) addTrackPathMAMap
 {
-    _lastBMapPoint = _startStatus.point;
+    _lastMAMapPoint = _startStatus.gaode_point;
     
-    [_baidu_MapView removeOverlay:_trackBMapPath];
+    [_gaode_MapView removeOverlay:_trackMAmapPath];
+    [_gaode_MapView removeOverlays:_colorsTrack];
     
-    [_baidu_MapView removeOverlays:_colorsTrack];
     
     [_colorsTrack removeAllObjects];
-
-
-        NSInteger size = _statusArray.count;
-
-    CLLocationCoordinate2D points[10000] = {0};
     
-        for(int idx = (int)size - 1; idx >= 0; idx--)
-        {
-            CCDeviceStatus* current = [_statusArray objectAtIndex:idx];
-            points[idx] = [ZWL_MapUtils geoPoint2Coordinate2D:current.point];
-        }
-        //添加
-        _trackBMapPath = [BMKPolyline polylineWithCoordinates:points count:size];
-        [_baidu_MapView addOverlay:_trackBMapPath];
+    NSInteger size = _statusArray.count;
+    //        CLLocationCoordinate2D* points = new CLLocationCoordinate2D[size];
+    CLLocationCoordinate2D points[10000] = {0};
+    for(int idx = (int)size - 1; idx >= 0; idx--)
+    {
+        CCDeviceStatus* current = [_statusArray objectAtIndex:idx];
+        points[idx] = [ZWL_MapUtils geoGaoDePoint2Coordinate2D:current.gaode_point];
+    }
+    //添加
+    //        _trackPath =  [MAPolyline polylineWithPoints:points count:size];
+    _trackMAmapPath =  [MAPolyline polylineWithCoordinates:points count:size];
+    [_gaode_MapView addOverlay:_trackMAmapPath];
 }
 
-- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
+-(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
     static NSString* annotationIdentifier = @"warningPin";
-
-    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
-        if (annotation == _startBMapPoint) {
-            BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
-                                                                             reuseIdentifier:annotationIdentifier];
+    
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+        if (annotation == _startMAMapPoint) {
+            MAAnnotationView* annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                                     reuseIdentifier:annotationIdentifier];
             annView.image =  [UIImage imageNamed:@"dt_start.png"];
             return annView;
             
-        } else if (annotation == _endBMapPoint) {
-            BMKPinAnnotationView* annView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
-                                                                             reuseIdentifier:annotationIdentifier];
+        } else if (annotation == _endMAMapPoint) {
+            MAAnnotationView* annView = [[MAAnnotationView alloc] initWithAnnotation:annotation
+                                                                     reuseIdentifier:annotationIdentifier];
             annView.image =  [UIImage imageNamed:@"dt_end.png"];
             return annView;
-        } else if (annotation == _currentBMapPoint) {
-            _currentPointBMapView = [[CCReplayAnnotationView alloc] initWithAnnotation:annotation
-                                                                   reuseIdentifier:annotationIdentifier];
-            
-            return _currentPointBMapView;
+        } else if (annotation == _currentMAMapPoint) {
+            _currentPointMAMapView = [[CCReplayGaoDeAnnotationView alloc] initWithAnnotation:annotation
+                                                                             reuseIdentifier:annotationIdentifier];
+            return _currentPointMAMapView;
         }
     }
     return nil;
 }
 
-- (BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id )overlay
+
+-(MAOverlayView *)mapView:(MAMapView *)mapView viewForOverlay:(id<MAOverlay>)overlay
 {
-        BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
-        polylineView.strokeColor = GRAY_LINE_COLOR;
-        polylineView.lineWidth = TRACK_LINE_SIZE;
-        return polylineView;
+    MAPolylineView* polylineView = [[MAPolylineView alloc] initWithOverlay:overlay];
+    polylineView.strokeColor = GRAY_LINE_COLOR;
+    polylineView.lineWidth = TRACK_LINE_SIZE;
+    return polylineView;
 }
 
 @end

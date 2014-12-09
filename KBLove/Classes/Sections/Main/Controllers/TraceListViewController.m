@@ -15,6 +15,7 @@
 #import "BMapKit.h"
 #import <MAMapKit/MAMapKit.h>
 #import "GaoDeMap_TrackerReplayViewController.h"
+#import "MAMapCell.h"
 
 @interface TraceListViewController ()
 
@@ -237,6 +238,9 @@
 //显示全部轨迹信息
 -(void)click_showAllTracker
 {
+    if (0 == _dataArray.count) {
+        return;
+    }
     TrackerReplayViewController *tracker=[[TrackerReplayViewController alloc]initWithNibName:@"ReplayMapView" bundle:nil];
     tracker.dataarray=_dataArray;
     
@@ -296,40 +300,45 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataArray.count;
-//    return 3;
+//    return 10;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifer = @"alarmcell";
-    
-    TraceCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
-    if (cell == nil) {
-        cell = [[TraceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
-    }
-    
-    KBTracePart *part = _dataArray[indexPath.row];
-    cell.device_sn = self.device.sn;
-    [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
-        self.isSelected += isSelected;
-    }];
+    static NSString *identifer = nil;
     
     if ([[[KBUserInfo sharedInfo]mapTypeName] isEqualToString:kMapTypeBaiduMap]) {
+        identifer = @"alarmcell";
+        TraceCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+        if (cell == nil) {
+            cell = [[TraceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+        }
         
-    BMKMapView *mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-        cell.baidu_MapView = mapView;
-        [cell.bottomImageview addSubview:mapView];
+        KBTracePart *part = _dataArray[indexPath.row];
+        cell.device_sn = self.device.sn;
+        [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
+            self.isSelected += isSelected;
+        }];
         
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }else{
+        identifer = @"mamapcell";
+        MAMapCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+        if (cell == nil) {
+            cell = [[MAMapCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+        }
         
-    MAMapView *mapView=[[MAMapView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 135)];
-    [cell.bottomImageview addSubview:mapView];
-    cell.gaode_MapView = mapView;
-    [cell.bottomImageview addSubview:mapView];
         
+        KBTracePart *part = _dataArray[indexPath.row];
+        cell.device_sn = self.device.sn;
+        [cell setUpViewWithModel:part selectedBlock:^(int isSelected) {
+            self.isSelected += isSelected;
+        }];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
-    
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+    return 0;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

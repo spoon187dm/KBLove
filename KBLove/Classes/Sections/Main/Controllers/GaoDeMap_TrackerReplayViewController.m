@@ -549,7 +549,7 @@
 {
     if (_playState == PLAY && _currentTime < _totalTime) {
         //        long long currentTime = [CCTimeUtils getCurrentTime];
-        _currentTime += 100;//[self getTimeInterval];
+        _currentTime += 900;//[self getTimeInterval];
         
         if (_currentTime >= _totalTime) {
             _currentTime = _totalTime;
@@ -709,11 +709,11 @@
     long long currentTime = _currentStartTime + _currentTime;
     if (currentTime < nextStatus.receive) {
         // 停留时间的单位是秒，需要转成毫秒
-        NSInteger stayedTime = currentStatus.stayed * 1000;
+//        NSInteger stayedTime = currentStatus.stayed * 1000;
         /**
          *   自定义调试stayedTime=200
          */
-        if (currentTime <= currentStatus.receive + 200) {
+        if (currentTime <= currentStatus.receive + currentStatus.stayed) {
             return point;
         }
         /**
@@ -778,6 +778,10 @@
     for (int i = (int)size - 1; i >= 1; i--) {
         CCDeviceStatus* first = [statusArray objectAtIndex:i];
         CCDeviceStatus* second = [statusArray objectAtIndex:i - 1];
+        if (second.receive - first.receive > 1200000) {
+            _currentTime = second.receive;
+            return i - 1;
+        }
         if (currentTime >= first.receive && currentTime < second.receive) {
             return i;
         }

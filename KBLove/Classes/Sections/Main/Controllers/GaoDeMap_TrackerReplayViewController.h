@@ -109,14 +109,10 @@
 @property (nonatomic, assign) long long endTime;
 @property (nonatomic, assign) BOOL isViewAllTrack;
 @property (nonatomic, strong) CCDevice* device;
-- (IBAction)switchToNormalSpeed:(id)sender;
-- (IBAction)switchToFasterSpeed:(id)sender;
-- (IBAction)switchToFatestSpeed:(id)sender;
 
 - (IBAction)changeLineColorState:(id)sender;
 - (IBAction)zoomInMap:(id)sender;
 - (IBAction)zoomOutMap:(id)sender;
 - (IBAction)startPlay:(id)sender;
-- (IBAction)stopPlay:(id)sender;
 - (IBAction)share:(id)sender;
 @end

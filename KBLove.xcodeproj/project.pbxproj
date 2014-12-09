@@ -612,6 +612,7 @@
 		3A1B2D551A31BFEC002661F6 /* 绑定设备8_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1B2D111A31BFEC002661F6 /* 绑定设备8_10.png */; };
 		3A1B2D561A31BFEC002661F6 /* 绑定设备8_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1B2D121A31BFEC002661F6 /* 绑定设备8_15.png */; };
 		3A1B2D571A31BFEC002661F6 /* 绑定设备8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1B2D131A31BFEC002661F6 /* 绑定设备8.png */; };
+		3AA6D5151A36B3D7003A8218 /* MAMapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6D5141A36B3D7003A8218 /* MAMapCell.m */; };
 		47D95A22A7FCA3CEA43A1D0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40FF82525B6752351E2B8FF /* libPods.a */; };
 		6351AB551A1DDFDC0079665E /* UsualSettinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */; };
 		6351AB581A1DE04C0079665E /* PriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351AB571A1DE04C0079665E /* PriteTableViewController.m */; };
@@ -1917,6 +1918,8 @@
 		3A1B2D111A31BFEC002661F6 /* 绑定设备8_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备8_10.png"; sourceTree = "<group>"; };
 		3A1B2D121A31BFEC002661F6 /* 绑定设备8_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备8_15.png"; sourceTree = "<group>"; };
 		3A1B2D131A31BFEC002661F6 /* 绑定设备8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "绑定设备8.png"; sourceTree = "<group>"; };
+		3AA6D5131A36B3D7003A8218 /* MAMapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMapCell.h; sourceTree = "<group>"; };
+		3AA6D5141A36B3D7003A8218 /* MAMapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMapCell.m; sourceTree = "<group>"; };
 		6351AB531A1DDFDC0079665E /* UsualSettinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsualSettinViewController.h; sourceTree = "<group>"; };
 		6351AB541A1DDFDC0079665E /* UsualSettinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsualSettinViewController.m; sourceTree = "<group>"; };
 		6351AB561A1DE04C0079665E /* PriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriteTableViewController.h; sourceTree = "<group>"; };
@@ -7223,6 +7226,8 @@
 				F9C91FC11A15C587003DF07A /* ReplayMapView.xib */,
 				F9C91FC21A15C587003DF07A /* TraceCell.h */,
 				F9C91FC31A15C587003DF07A /* TraceCell.m */,
+				3AA6D5131A36B3D7003A8218 /* MAMapCell.h */,
+				3AA6D5141A36B3D7003A8218 /* MAMapCell.m */,
 				F9C91FC41A15C587003DF07A /* TraceInfoView.h */,
 				F9C91FC51A15C587003DF07A /* TraceInfoView.m */,
 				F9C91FC61A15C587003DF07A /* TraceInfoView.xib */,
@@ -8580,6 +8585,7 @@
 				F99246461A048C5400599E74 /* TableRefreshBaseView.m in Sources */,
 				DADA02A41A1CE8EC002B31BC /* TTCheckBoxes.m in Sources */,
 				F97410ED19EC34CA00E12633 /* KBUserManager.m in Sources */,
+				3AA6D5151A36B3D7003A8218 /* MAMapCell.m in Sources */,
 				DA3AE1041A1AFA9500DF0968 /* RegisterAffirmViewController.m in Sources */,
 				BC5F373C1A025AE20088D0AB /* AsyncSocket.m in Sources */,
 				BCCDD7351A0C7B6A008A9795 /* FriendSettingViewController.m in Sources */,
@@ -8851,8 +8857,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -8915,7 +8921,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c1828fd-4a5a-48a7-a00b-01fb7acdee9a";
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -8933,8 +8939,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tao Yun (H965585CYT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tao Yun (H965585CYT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 1000phone";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 1000phone";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KBLove/Classes/Vendors/MAPLibs/Extern",
@@ -8997,7 +9003,7 @@
 					"\"SystemConfiguration\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c1828fd-4a5a-48a7-a00b-01fb7acdee9a";
+				PROVISIONING_PROFILE = "B5E805A1-6763-4516-BC0E-1D01B2912F25";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
